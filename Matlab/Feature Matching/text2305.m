@@ -1,4 +1,5 @@
     clean;
+    close all;
 %% load 2 image
 % yuv image
 
@@ -24,7 +25,7 @@ end
     
     diffc_Uo = yuv(1).U - yuv(2).U;
     figure,imshow(-diffc_Uo),title('original data diff in U');
-    
+    save diffc_Uo diffc_Uo;
     I1 = yuv(1).Y/255;   % grayscale image
     I2 = yuv(2).Y/255;
     
@@ -41,12 +42,13 @@ end
     %% Registration app
     
     %% weiter
-    figure,imshow(movingRegSURF.RegisteredImage);
-    tformY = movingRegSURF.Transformation;
+    figure,imshow(movingReg.RegisteredImage);
+    tformY = movingReg.Transformation;
     % U teil
     U_teil1new = imwarp(yuv(1).U, tformY,'OutputView', imref2d(size(yuv(1).U)));
     diffc_U = yuv(2).U - U_teil1new;
-    figure,imshow(-diffc_U),title('after transform data diffc in U');
+    figure,imshow(diffc_U),title('after transform data diffc in U');
+    save diffc_U diffc_U;
     diffc_Uself = yuv(1).U - U_teil1new;
     figure,imshow(diffc_Uself),title('U after transform selfchange');
     % V teil

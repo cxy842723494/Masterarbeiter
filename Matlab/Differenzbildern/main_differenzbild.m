@@ -45,7 +45,7 @@
     [FiPx,FiPy,ux,vx,cr] = detectFIP(Handles.img);
    
 %% plot results Differenzbild
-    cr = [cr].';
+    cr = cr.';
     [y,i] = sort(cr(2,:));
     x = cr(1,i);
     [x(1:2),i] = sort(x(1:2));
