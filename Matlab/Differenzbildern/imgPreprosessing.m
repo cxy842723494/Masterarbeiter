@@ -25,7 +25,7 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
 %% Binary of the image (default global binay mit ostu or local binary or method from christian)
     
     % global binariserung Ostu
-%     handles.Bw = imbinarize(handles.Img_gefiltered); 
+    handles.Bw = imbinarize(handles.Img_gefiltered,6); 
 %     figure,imshow(handles.Bw),title('Image after binary');
 %     handles.Bw1= not(handles.Bw);   % bw image, i.e 1 is object and 0
 %     figure,imshow(handles.Bw1);     % background here we want to know, es
@@ -46,7 +46,7 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
     % modulated area, but large enough to avoid large gaps in weakly
     % modulated regions.
     
-    handles.Bw = abs(handles.Img_gefiltered)>std(double(handles.Img_gefiltered(:)))*threshold;
+%     handles.Bw = abs(handles.Img_gefiltered)>std(double(handles.Img_gefiltered(:)))*threshold;
 %     figure,imshow(handles.Bw),title('BW of Chri');
 %     handles.Bw1= not(handles.Bw);
 %     figure,imshow(handles.Bw1);

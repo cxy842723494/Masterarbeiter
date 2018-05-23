@@ -28,8 +28,8 @@ function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)
     % im real we don't need to analyse the whole pixels in the image, we
     % just
     s.offset = 0;
-    s.sizeH = 250;192*2*(uint16(w/1920)); % 250:450 d.h. the ratio of the tv 3:4
-    s.sizeW = 450;256*2*(uint16(w/1920)); % 192:256 d.h. the ratio of the tv 9:16
+    s.sizeH = 192*5*(uint16(w/1920));250; % 250:450 d.h. the ratio of the tv 3:4
+    s.sizeW = 256*5*(uint16(w/1920));450; % 192:256 d.h. the ratio of the tv 9:16
     s.warpRatio = 1;0.9;
     s.FIPsize = 108;36*(w/1920); % 4 pixels per module
     PatternAreaBW = zeros(s.sizeH, s.sizeW, 4);
@@ -74,7 +74,7 @@ function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)
 
 
     FIPx = zeros(1, 4);
-    FIPy = zeros(1, 4);
+    FIPy = zeros(1, 4); 
     
         for p = 1 : 4
         patternInfo = FinderPatternFinder(not(PatternAreaBW(:,:,p)),true);

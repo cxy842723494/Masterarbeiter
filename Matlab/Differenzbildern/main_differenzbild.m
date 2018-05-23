@@ -28,15 +28,16 @@
 %     diff_Y = yuv(1).Y - yuv(2).Y;
 %     diff_U = yuv(1).U - yuv(2).U;
 %     diff_V = yuv(1).V - yuv(2).V;
-%     
-%     Img = diff_V;
+     
+    load('diffc_Uo.mat');
+    Img = diffc_Uo;
 %     figure,imshow(Img,[]),title('Differenzbild');
     
 %% Bild Pretreat
 
     threshold = graythresh(Img);
-    grain = 6;
-    tic;
+    grain = 3;
+%     tic;
     Handles.img = imgPreprosessing(Img,threshold,grain);
 %     toc;
     
