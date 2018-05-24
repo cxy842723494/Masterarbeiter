@@ -34,7 +34,7 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
                                     % differenz image ,which have not deal
                                     % with the sythro-Process, the above
                                     % section of the differenzbild can be
-                                    % white and under section can be the opposite.
+                                    % white andunder section can be theopposite.
 
     % local binariesierung Ostu                                    
 %     fun = @(block_struct) imbinarize(block_struct.data,'adaptive');  % or 'global'
@@ -73,13 +73,11 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
 %     handles.Bw_morpho = imopen(handles.Bw_close,ones(5));
 %     figure,imshow(handles.Bw_morpho),title('Image after open');    
     
-    handles.Bw_morpho =imopen(imclose(handles.Bw,ones(grain)),ones(grain));
+    handles.Bw_morpho =  imopen(imclose(handles.Bw,ones(grain)),ones(grain));
 %     figure,imshow(handles.Bw_morpho),title('Image after morpho');
-
-%     figure,imshow(imclose(handles.Bw_morpho,ones(5)))
-%     imerode
-%     imdilate
-    
+    figure,imshow(imclose(handles.Bw_morpho,ones(5)))
+    imerode
+    imdilate
     Text_data = handles.Bw_morpho;
 %     save Text_data Text_data;
 %     
