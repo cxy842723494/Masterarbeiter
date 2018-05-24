@@ -2,7 +2,7 @@ function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)
 
 %     Fn1 = 'YUV_2018_04_20_09_33_51_995.yuv';
 %     Fn1 = 'YUV_2018_04_20_09_33_51_995.yuv';
-
+%     Img_handle=Handles.img;
 %     load('Text_data.mat');
      addpath QRFIP
     
@@ -76,9 +76,9 @@ function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)
     FIPx = zeros(1, 4);
     FIPy = zeros(1, 4); 
     
-        for p = 1 : 4
+        for p = 1 : 4 %1:4
         patternInfo = FinderPatternFinder(not(PatternAreaBW(:,:,p)),true);
-        patternInfo = FinderPatternFinder(PatternAreaBW(:,:,p),true);
+%         patternInfo = FinderPatternFinder(PatternAreaBW(:,:,p),true);
         FIPx(p) = patternInfo.posX;
         FIPy(p) = patternInfo.posY;
         

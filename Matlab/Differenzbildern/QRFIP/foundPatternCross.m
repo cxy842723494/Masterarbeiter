@@ -16,7 +16,8 @@ end
 moduleSize = totalModuleSize / 7;
 % Allow less than 50% variance from 1-1-3-1-1 proportions
 % maxVariance = moduleSize / 2;
-maxVariance = moduleSize / 1.6; 
+% maxVariance = moduleSize / 1.6; 
+maxVariance = moduleSize / 1.5; 
 result = (abs(moduleSize   - stateCount(1)) <   maxVariance) && ...
     (abs(moduleSize   - stateCount(2)) <   maxVariance) && ...
     (abs(3*moduleSize - stateCount(3)) < 3*maxVariance) && ...

@@ -1,19 +1,18 @@
 % close all;
 clean;
-
  %% read YUV images and calculate differential images
-for k = 1:2
-    [filename,filepath] = uigetfile('*.*','Select the image');
-    if isequal(filename,0)||isequal(filepath,0)
-        return;
-    else
-        filefullpath = [filepath,filename];
-    end
-%     img = imread(filefullpath);
-%     fn(:,:,:,k) = img;
-    [yuv(k).Y, yuv(k).U, yuv(k).V] = readYUV(filefullpath);
-    
-end
+% for k = 1:2
+%     [filename,filepath] = uigetfile('*.*','Select the image');
+%     if isequal(filename,0)||isequal(filepath,0)
+%         return;
+%     else
+%         filefullpath = [filepath,filename];
+%     end
+% %     img = imread(filefullpath);
+% %     fn(:,:,:,k) = img;
+%     [yuv(k).Y, yuv(k).U, yuv(k).V] = readYUV(filefullpath);
+%     
+% end
 
 % fn1 = 'YUV_2018_04_20_09_34_44_823.yuv';
 % fn2 = 'YUV_2018_04_20_09_34_44_795.yuv';
@@ -21,12 +20,16 @@ end
 
 % [yuv(1).Y, yuv(1).U, yuv(1).V] = readYUV(fn1);
 % [yuv(2).Y, yuv(2).U, yuv(2).V] = readYUV(fn2);
+% 
+% tic;
+% diff(:,:,1) = yuv(1).V - yuv(2).V;
+% % figure, imshow(diff(:,:,1),[])
+% diff(:,:,3) = yuv(1).U - yuv(2).U;
 
-tic;
-diff(:,:,1) = yuv(1).V - yuv(2).V;
-% figure, imshow(diff(:,:,1),[])
-diff(:,:,3) = yuv(1).U - yuv(2).U;
-
+ load('diffc_U.mat');
+   diff(:,:,1) = diffc_U;
+   figure, imshow(diff(:,:,1),[]);
+   
 %% read single image 
 % fn1 = 'yuv_1_bs8_2.yuv';
 % fn2 = 'yuv_2_bs8_2.yuv';

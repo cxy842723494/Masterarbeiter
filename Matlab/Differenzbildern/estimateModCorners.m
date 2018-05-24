@@ -4,7 +4,7 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     % modulated area, but large enough to avoid large gaps in weakly
     % modulated regions.
     select = abs(im)>std(double(im(:)))*threshold;
-    
+    figure, imshow(select);
 %    select = AdaptiveThreshold(im, 15, 15);
 
     %% Use morphological filters to eliminate spurious holes and points
@@ -15,7 +15,9 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     % modulated data.
     selectf = imclose(imopen(select,ones(grain)),ones(grain));
     selectf2 = imopen(imclose(select,ones(grain)),ones(grain));
+    figure, imshow(selectf2);
     edges = edge(selectf2); % Sobel edge detection
+     figure, imshow(edges);
     %% Hough transform
     % We want to get the boundaries of the modulated rectangle as lines. To
     % do that, we must detect edges residing on a straight line through the

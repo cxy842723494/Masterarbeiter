@@ -65,8 +65,9 @@ if (stateCount(5) >= maxCount)
     return;
 end
 
-% If we found a finder-pattern-like section, but its size is more than 40%
-% different than the original, assume it's a false positive
+% If we found a finder-pattern-like section, but its size is more than
+% 40%(50%) different than the original, assume it's a false positive
+
 stateCountTotal = sum(stateCount);
 if (5 * abs(stateCountTotal - originalStateCountTotal) >= ...
         2 * originalStateCountTotal)

@@ -11,7 +11,7 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
 %     handel.gray = rgb2gray(handles.Img);  % or gibt es noch good idea for grayscalying
 %     figure, imshow(handel.gray);
     handles.gray = Img;
-%     figure, imshow(handel.gray);
+%     figure, imshow(handles.gray,[]);
     
 %% Noise filter (median filter gaus filter filter the salz or gaus noise)
 

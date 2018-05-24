@@ -2,7 +2,7 @@ function patternInfo = FinderPatternFinder(bw, tryHarder)
 
 % figure, imshow(bw); hold on
 
-MIN_SKIP = 6; %3; % 1 pixel/module times 3 modules/center
+MIN_SKIP = 3; %3; % 1 pixel/module times 3 modules/center
 MAX_MODULES = 57; % support up to version 10
 
 maxI = size(bw, 1);
@@ -25,20 +25,20 @@ end
 
 done = false;
 stateCount = zeros(1, 5);
-for i = iSkip : iSkip : maxI
+for i = 1 : iSkip : maxI
     if done
         break;
     end
     stateCount = zeros(1, 5);
     currentState = 0;
     for j = 1 : maxJ
-        if bw(i, j) % Black pixel
+        if bw(i, j)% v                                                   v   Black pixel
 %             if (bitand(currentState, 1) == 1) % Counting white pixels
             if (mod(currentState, 2) == 1)
                 currentState = currentState + 1;
             end
             stateCount(currentState+1) = stateCount(currentState+1) + 1;
-        else % White pixel
+        else %                                                                White pixel
 %             if (bitand(currentState, 1) == 0) % Counting black pixels
             if (mod(currentState, 2) == 0)
                 if (currentState == 4) % A winner?
