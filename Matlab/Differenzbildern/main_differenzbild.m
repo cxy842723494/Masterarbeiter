@@ -63,4 +63,4 @@
     plot(x(2:3), y(2:3), 'r', 'LineWidth', 2)
     plot(x(3:4), y(3:4), 'r', 'LineWidth', 2)
     plot([x(1) x(4)], [y(1) y(4)], 'r', 'LineWidth', 2)
-    toc;
+%     toc;
