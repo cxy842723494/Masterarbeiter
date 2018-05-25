@@ -25,11 +25,53 @@ clean;
 % diff(:,:,1) = yuv(1).V - yuv(2).V;
 % % figure, imshow(diff(:,:,1),[])
 % diff(:,:,3) = yuv(1).U - yuv(2).U;
+target = 'ohne registration';
+% target = 'mit registration';
+switch target
+    case 'ohne registration'
+        load('diffc_Uo1.mat');
+        diff = diffc_Uo;
+        figure,subplot(1,2,1),imshow(diff,[]),title('ohne registration'),hold on;
+        subplot(1,2,2),histogram(diff),title('ohne registration');
+    case 'mit registration'
+        load('diffc_U1.mat');
+        diff = imcrop(diffc_U,[10 10 1899 1059]);
+        figure,subplot(1,2,1),imshow(diff,[]),title('mit registration'),hold on;
+        subplot(1,2,2),histogram(diff),title('mit registration');
+end
+% A = abs(diff)>std(double(diff(:)));
+% A = imcrop(diff,[95 95 149 149]);
+% B = imcrop(diff,[1537 112 149 149]);
+% C = imcrop(diff,[180 858 149 149]);
+% D = imcrop(diff,[1499 822 149 149]);
 
- load('diffc_U.mat');
-   diff(:,:,1) = diffc_U;
-   figure, imshow(diff(:,:,1),[]);
-   
+% A = imcrop(diff,[435 194 74 74]);
+% B = imcrop(diff,[1318 211 74 74]);
+% C = imcrop(diff,[450 653 74 74]);
+% D = imcrop(diff,[1292 671 74 74]);
+figure,histogram(A);figure,imshow(B,[]);
+
+threshold = graythresh(diff);
+
+threshold = mean2(diff);
+
+graythresh(E);
+BW = AdaptiveThreshold(diff,80,80);
+fun = @(block_struct) imbinarize(block_struct.data);
+BW = blockproc(diff,[80 80],fun); 
+BW = imbinarize(diff,4);
+BW = imbinarize(abs(diff),6);
+BW = imbinarize(A,'adaptive');%,'adaptive'
+BW = imbinarize(abs(A),'adaptive');%,'adaptive'
+figure,imshow(BW),[],title('Sensitivity 0.2');
+Mopho = imopen(BW,ones(6));
+Mopho = imclose(BW,ones(6));
+figure,imshow(Mopho),title('mophologi');
+ otsuthresh(diff)
+[counts,x] = imhist(diff);
+figure,stem(x,counts)
+T = otsuthresh(counts);
+
 %% read single image 
 % fn1 = 'yuv_1_bs8_2.yuv';
 % fn2 = 'yuv_2_bs8_2.yuv';
@@ -78,4 +120,4 @@ plot(x(2:3), y(2:3), 'r', 'LineWidth', 2)
 plot(x(3:4), y(3:4), 'r', 'LineWidth', 2)
 plot([x(1) x(4)], [y(1) y(4)], 'r', 'LineWidth', 2)
 
-toc;
+% toc;

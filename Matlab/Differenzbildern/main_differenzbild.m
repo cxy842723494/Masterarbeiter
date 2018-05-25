@@ -4,18 +4,18 @@
 %% load the image from the camera
         
     % load image from the file
-% for k = 1:2
-%     [filename,filepath] = uigetfile('*.*','Select the image');
-%     if isequal(filename,0)||isequal(filepath,0)
-%         return;
-%     else
-%         filefullpath = [filepath,filename];
-%     end
-% %     img = imread(filefullpath);
-% %     fn(:,:,:,k) = img;
-%     [yuv(k).Y, yuv(k).U, yuv(k).V] = readYUV(filefullpath);
-%     
-% end
+for k = 1:2
+    [filename,filepath] = uigetfile('*.*','Select the image');
+    if isequal(filename,0)||isequal(filepath,0)
+        return;
+    else
+        filefullpath = [filepath,filename];
+    end
+%     img = imread(filefullpath);
+%     fn(:,:,:,k) = img;
+    [yuv(k).Y, yuv(k).U, yuv(k).V] = readYUV(filefullpath);
+    
+end
 
 %     tic;
     % test sample
@@ -26,8 +26,10 @@
 %     [yuv(2).Y, yuv(2).U, yuv(2).V] = readYUV(fn2);
     
 %     diff_Y = yuv(1).Y - yuv(2).Y;
-%     diff_U = yuv(1).U - yuv(2).U;
+    diff_U = yuv(1).U - yuv(2).U;
 %     diff_V = yuv(1).V - yuv(2).V;
+figure, imshow(diff_U,[]);
+
      
 %     load('diffc_Uo.mat');
 %     diff_U = diffc_Uo;
