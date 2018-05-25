@@ -17,7 +17,9 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     selectf2 = imopen(imclose(select,ones(grain)),ones(grain));
     figure, imshow(selectf2);
     edges = edge(selectf2); % Sobel edge detection
-     figure, imshow(edges);
+    figure, imshow(edges);  % crop the image due to the registrtion transform
+    edgescrop = imcrop(edges,[11 11 1899 1059]);
+    figure, imshow(edgescrop);
     %% Hough transform
     % We want to get the boundaries of the modulated rectangle as lines. To
     % do that, we must detect edges residing on a straight line through the
@@ -34,7 +36,7 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     %% With separate Hough transforms for horizontal and vertical edges,
     %  we prevent accidential detection of three or more (almost) parallel
     %  lines.
-    [Hh,Th,Rh] = hough(edges,'Theta',thetah);
+    [Hh,Th,Rh] = hough(edgescrop,'Theta',thetah);
     Th = fftshift(Th);
     Hh = fftshift(Hh,2);
     subzero = Th<0;
@@ -43,7 +45,7 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     %Hh = round(imgaussfilt(Hh,1));
     Ph = houghpeaks(Hh,2,'Threshold',mean(Hh(:)),...
         'NHoodSize',[ceil(length(Rh)/20)*2+1,floor(length(Th)/4)*2+1]);
-    [Hv,Tv,Rv] = hough(edges,'Theta',thetav);
+    [Hv,Tv,Rv] = hough(edgescrop,'Theta',thetav);
     %Hv = round(imgaussfilt(Hv,1));
     Pv = houghpeaks(Hv,2,'Threshold',mean(Hv(:)),...
         'NHoodSize',[ceil(length(Rv)/20)*2+1,floor(length(Tv)/4)*2+1]);
@@ -70,4 +72,12 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
                    (1-mh(p(1,:)).*imv(p(2,:)));
     corners(2,:) = (mh(p(1,:)).*x0v(p(2,:))+y0h(p(1,:)))./...
                    (1-imv(p(2,:)).*mh(p(1,:)));
+    corners(1,:) = corners(1,:)+10;         % add crop return
+    corners(2,:) = corners(2,:)+10;
+%     figure, imshow(im,[]);
+%     hold on;
+%     plot(corners(1,1),corners(2,1), 'r.');
+%     plot(corners(1,2),corners(2,2), 'r.');
+%     plot(corners(1,3),corners(2,3), 'r.');
+%     plot(corners(1,4),corners(2,4), 'r.');
 end

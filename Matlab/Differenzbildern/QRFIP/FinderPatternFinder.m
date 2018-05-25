@@ -1,5 +1,6 @@
 function patternInfo = FinderPatternFinder(bw, tryHarder)
 
+
 % figure, imshow(bw); hold on
 
 MIN_SKIP = 3; %3; % 1 pixel/module times 3 modules/center
@@ -25,7 +26,7 @@ end
 
 done = false;
 stateCount = zeros(1, 5);
-for i = 1 : iSkip : maxI
+for i = iSkip : iSkip : maxI
     if done
         break;
     end
