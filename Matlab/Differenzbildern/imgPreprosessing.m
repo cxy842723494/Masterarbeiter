@@ -23,7 +23,19 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
 %     figure, imshow(handles.Img_gefiltered,[]),title('Image after Median gilter [5 5]');
     
 %% Binary of the image (default global binay mit ostu or local binary or method from christian)
-    
+% Normalize input data to range in [0,1].
+    Xmin = min(handles.Img_gefiltered(:));
+    Xmax = max(handles.Img_gefiltered(:));
+    if isequal(Xmax,Xmin)
+        X = 0*Xhandles.Img_gefiltered;
+    else
+        X = (handles.Img_gefiltered - Xmin) ./ (Xmax - Xmin);
+    end
+
+% Threshold image - adaptive threshold
+%     handles.Bw = imbinarize(X, 'adaptive', 'Sensitivity', 0.350000, 'ForegroundPolarity', 'bright');    
+    handles.Bw = imbinarize(X, 'adaptive', 'Sensitivity', 0.450000, 'ForegroundPolarity', 'bright');    
+
     % global binariserung Ostu
 %     handles.Bw = imbinarize(handles.Img_gefiltered,'adaptive','Sensitivity',0.35);
 %     handles.Bw = imbinarize(handles.Img_gefiltered,6);
@@ -47,7 +59,7 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
     % modulated area, but large enough to avoid large gaps in weakly
     % modulated regions.
     
-    handles.Bw = abs(handles.Img_gefiltered)>std(double(handles.Img_gefiltered(:)))*threshold;
+%     handles.Bw = abs(handles.Img_gefiltered)>std(double(handles.Img_gefiltered(:)))*threshold;
 %     figure,imshow(handles.Bw),title('BW of Chri');
 %     handles.Bw1= not(handles.Bw);
 %     figure,imshow(handles.Bw1);
@@ -71,9 +83,10 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
 %     handles.Bw_close = imclose(handles.Bw,ones(5));
 %     figure,imshow(handles.Bw_close),title('Binary Image after close');
 %     handles.Bw_morpho = imopen(handles.Bw_close,ones(5));
-%     figure,imshow(handles.Bw_morpho),title('Image after open');    
-    
-    handles.Bw_morpho =imopen(imclose(handles.Bw,ones(grain)),ones(grain));
+%     figure,imshow(handles.Bw_morpho),title('Image after open');   
+
+    handles.Bw_morpho =imopen(imclose(handles.Bw,ones(10)),ones(10));   
+%     handles.Bw_morpho =imopen(imclose(handles.Bw,ones(grain)),ones(grain));
 %     figure,imshow(handles.Bw_morpho),title('Image after morpho');
 
 %     figure,imshow(imclose(handles.Bw_morpho,ones(5)))

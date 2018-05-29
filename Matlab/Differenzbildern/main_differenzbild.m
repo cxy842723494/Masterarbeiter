@@ -14,7 +14,8 @@ for k = 1:2
 %     img = imread(filefullpath);
 %     fn(:,:,:,k) = img;
     [yuv(k).Y, yuv(k).U, yuv(k).V] = readYUV(filefullpath);
-    
+    Image1= yuv2rgb(yuv(1).Y, yuv(1).U, yuv(1).V,'YUV420_8','BT709_l');
+    figure, imshow(Image1),hold on;
 end
 
 %     tic;
@@ -59,7 +60,7 @@ figure, imshow(diff_U,[]);
     [x(4:-1:3),i] = sort(x(3:4));
     y(3:4) = y(5-i);
 
-    figure, imshow(diff_U,[]),hold on
+    figure, imshow(Img,[]),hold on
 
     plot(x(1:2), y(1:2), 'r', 'LineWidth', 2)
     plot(x(2:3), y(2:3), 'r', 'LineWidth', 2)

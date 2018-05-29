@@ -62,13 +62,13 @@ clean;
     idy=zeros(1,4);
     for i=1:4
         [idx(i),idy(i)]=find(Energie==v(i));
-        [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(strcat(file_path,img_path_list(idx(i)).name));  
-        [yuv(2).Y,yuv(2).U,yuv(2).V] =  readYUV(strcat(file_path,img_path_list(idy(i)).name));  
-        diff(:,:,i)=  abs(yuv(1).U - yuv(2).U);  
-        str = ['The biggest text image ',num2str(i)];
-        figure,imshow( diff(:,:,i),[] ),title(str);
-        str1 = ['The histogram of biggest differenzbild',num2str(j)];
-        figure,histogram(diff(:,:,i)),title(str1);
+%         [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(strcat(file_path,img_path_list(idx(i)).name));  
+%         [yuv(2).Y,yuv(2).U,yuv(2).V] =  readYUV(strcat(file_path,img_path_list(idy(i)).name));  
+%         diff(:,:,i)=  abs(yuv(1).U - yuv(2).U);  
+%         str = ['The biggest text image ',num2str(i)];
+%         figure,imshow( diff(:,:,i),[] ),title(str);
+%         str1 = ['The histogram of biggest differenzbild',num2str(j)];
+%         figure,histogram(diff(:,:,i)),title(str1);
     end
 %     A = diff(:,:,1);
 %     B = diff(:,:,2);
