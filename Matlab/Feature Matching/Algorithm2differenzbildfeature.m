@@ -30,7 +30,7 @@ clean;
                 MOVINGREG = registerImages(I1,I2);
                 
                 figure,imshow(MOVINGREG.RegisteredImage);
-                tformY = MOVINGREG.Transformation;  
+                tformY = MOVINGREG.Transformation;    
                 
                 U_teil1new = imwarp(yuv(1).U, tformY,'OutputView', imref2d(size(yuv(1).U)));
                 diffc_U = U_teil1new - yuv(2).U;
