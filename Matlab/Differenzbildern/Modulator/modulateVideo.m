@@ -1,13 +1,13 @@
-%% 
+%% clean
 %% Define the modulation parameters
 modAmp = 9;
 blocksize = 4;
 
 inputName = 'Campus.mp4'
-outputName = 'newMatrixAmp3'
+outputName = 'newMatrix25'
 v = VideoReader(['input/', inputName]);
 nbFrames = 300;
-outputFramerate = 50;
+outputFramerate = 25;
 
 %%
 

@@ -3,11 +3,11 @@
 modAmp = 9;
 blocksize = 4;
 
-inputName = 'windmill.png'
-outputName = 'textohnepattern15'
+inputName = 'windmill.png';
+outputName = 'textpattern25';
 v = imread(['input/', inputName]);
 nbFrames = 300;
-outputFramerate = 15;
+outputFramerate = 25;
 size(v,1)
 %%
 

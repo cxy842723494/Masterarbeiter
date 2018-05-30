@@ -50,16 +50,16 @@ v = size(qr,1);
 h = size(qr,2);
 
 % Pattern at the corner
-% img(1:v,         1:h,        :) = qr;  
-% img(end-v+1:end, 1:h,        :) = qr;
-% img(1:v,         end-h+1:end,:) = qr;
-% img(end-v+1:end, end-h+1:end,:) = qr;
+img(1:v,         1:h,        :) = qr;  
+img(end-v+1:end, 1:h,        :) = qr;
+img(1:v,         end-h+1:end,:) = qr;
+img(end-v+1:end, end-h+1:end,:) = qr;
 
 %Pattern move sth to the mittel of the image
-img(11:v+10,         11:h+10,        :) = qr;
-img(end-v-10+1:end-10, 11:h+10,        :) = qr;
-img(11:v+10,         end-h-10+1:end-10,:) = qr;
-img(end-v-10+1:end-10, end-h-10+1:end-10,:) = qr;
+% img(11:v+10,         11:h+10,        :) = qr;
+% img(end-v-10+1:end-10, 11:h+10,        :) = qr;
+% img(11:v+10,         end-h-10+1:end-10,:) = qr;
+% img(end-v-10+1:end-10, end-h-10+1:end-10,:) = qr;
 
 % img(1:v,         1:h,        :) = qr;
 % img(end-v+1:end, 1:h,        :) = rot90(qr,1);
