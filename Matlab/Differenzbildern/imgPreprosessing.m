@@ -34,7 +34,7 @@ function [Text_data] = imgPreprosessing(Img,threshold,grain)
 
 % Threshold image - adaptive threshold
 %     handles.Bw = imbinarize(X, 'adaptive', 'Sensitivity', 0.350000, 'ForegroundPolarity', 'bright');    
-    handles.Bw = imbinarize(X, 'adaptive', 'Sensitivity', 0.450000, 'ForegroundPolarity', 'bright');    
+    handles.Bw = imbinarize(X, 'adaptive', 'Sensitivity', 0.400000, 'ForegroundPolarity', 'bright');    
 
     % global binariserung Ostu
 %     handles.Bw = imbinarize(handles.Img_gefiltered,'adaptive','Sensitivity',0.35);

@@ -43,7 +43,7 @@ clean;
                 Energie(i,j) = energie;
 %                 figure,imshow(diffc_U,[]),title('after transform data diffc in U');figure,histogram(diffc_U)
 %                 figure,imshow(abs(yuv(1).U- yuv(2).U),[]),title('ohne transform data diffc in U');
-                imwrite(E,[[cd,'\difftrans\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
+%                 imwrite(E,[[cd,'\difftrans\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
                 end
             end
     end
@@ -74,7 +74,7 @@ clean;
         
         Img = imresize(diffreturn,2);
         figure,imshow(diffsum,[])
-        figure,imshow(Img,[]);
+        figure,imshow(abs(Img),[]);
 
         
         
@@ -83,46 +83,15 @@ clean;
         
         
 %% Single Differnzbild mit Registration      
-    Index1 = 12;
-    Index2 = 15;
+    Index1 = 11;
+    Index2 = 13;
     [diff,Ohnediff] =  registerSingeltransform(img_path_list,file_path,Index1,Index2) ; 
     figure,imshow( diff,[]),title('mit transform');
     figure,imshow( abs(diff),[]),title('mit transform');
     figure,imshow( Ohnediff,[]),title('ohne transform');
-    figure,imshow( imbinarize(diff,10));
+%     figure,imshow( imbinarize(diff,10));
     figure,histogram(diff);
     
                 %% weiter
                 
-                
-                points1 = detectSURFFeatures(I1);
-                points2 = detectSURFFeatures(I2);
-                [f1,vpts1] = extractFeatures(I1,points1);
-                [f2,vpts2] = extractFeatures(I2,points2);
-                indexPairs = matchFeatures(f1,f2) ;
-                tform = MOVINGREG.Transformation;
-                Yw(:,:,k) = imwarp(Y(:,:,k), tformY, 'OutputView', imref2d(size(Y(:,:,k))));
-                estimateGeometricTransform
-                
-                energie = meansqr(diffc_U);
-                
-                matchedPoints1 = vpts1(indexPairs(:,1));Transformation
-                matchedPoints2 = vpts2(indexPairs(:,2));
-                
-                % Retrieve the locations of matched points.
-                indexPairs = matchFeatures(f1,f2) ;
-                matchedPoints1 = vpts1(indexPairs(:,1));
-                matchedPoints2 = vpts2(indexPairs(:,2));
-                
-                figure; showMatchedFeatures(I1,I2,matchedPoints1,matchedPoints2);
-                legend('matched points 1','matched points 2');
-                
-                diff=  yuv(1).U - yuv(2).U;             %  diffenzbild to data
-                % figure, imshow(diff,[]);figure,histogram(diff);
-                energie = meansqr(diff);
-    %             energie = sum(sum(diff.^2))/(size(diff,1)*size(diff,2)); 
-                Energie(i,j) = energie;
-
-               imwrite(diff,[[cd,'\diff\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
-    %            imwrite(diff,[[cd,'\diff\'],'test-',num2str(i),'_',num2str(j),'.jpg'])
- 
+               
