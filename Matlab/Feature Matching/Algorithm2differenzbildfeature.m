@@ -1,4 +1,4 @@
-clean;
+ clean;
 % close all;
 
 % Step1. load imagea
@@ -9,7 +9,7 @@ clean;
     img_path_list = dir(strcat(file_path,'*.yuv'));     % find the processing images  
     img_num = length(img_path_list);                    % number of the processing images
     Energie = zeros(img_num,img_num);
-
+    Central = [950,530];  % size(E)/2;
     filepath=pwd;               %  save the current work directory
     
     cd(file_path) 
@@ -39,10 +39,17 @@ clean;
 %                 figure,imshow(abs(diffc_U),[]),title('after transform data diffc in U');figure,histogram(diffc_U)
                 E = imcrop(abs(diffc_U),[11 11 1899 1059]);
 %                 figure,imshow(E,[]),figure, histogram(E);
+
+               %% central of the image
+
+                %% 1/2 teil of the image
+
+                %% 1/4 teil of the image
+
+                %%  weiter
                 energie = meansqr(E);
-                Energie(i,j) = energie;
-%                 figure,imshow(diffc_U,[]),title('after transform data diffc in U');figure,histogram(diffc_U)
-%                 figure,imshow(abs(yuv(1).U- yuv(2).U),[]),title('ohne transform data diffc in U');
+                Energie(i,j) = energie;              
+                
 %                 imwrite(E,[[cd,'\difftrans\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
                 end
             end
@@ -58,13 +65,13 @@ clean;
         diffsum=zeros(size(E));
         for i=1:4
             [idx(i),idy(i)]=find(Energie==v(i));
-            diffc(:,:,i) = registerTransformInSameCoordinate(img_path_list,file_path,idx(i),idy(i)); 
-            Scr =['number:',num2str(i)];
+            diffc(:,:,i) = registerTransformInSameCoordinate(img_path_list,file_path,idx(i),idy(i)); % stilles Image
+%             Scr =['number:',num2str(i)];
 %             figure,imshow(diffc(:,:,i),[]),title(Scr);
             diffsum = diffsum+diffc(:,:,i);
         end
         
-        diffsum = diffsum+diffc(:,:,i);
+%         diffsum = diffsum+diffc(:,:,i);
         diffreturn = zeros(1080,1920);
         for i=1:1060
             for j=1:1900
@@ -75,10 +82,6 @@ clean;
         Img = imresize(diffreturn,2);
         figure,imshow(diffsum,[])
         figure,imshow(abs(Img),[]);
-
-        
-        
-        
         
         
         
@@ -91,7 +94,6 @@ clean;
     figure,imshow( Ohnediff,[]),title('ohne transform');
 %     figure,imshow( imbinarize(diff,10));
     figure,histogram(diff);
-    
-                %% weiter
+
                 
                
