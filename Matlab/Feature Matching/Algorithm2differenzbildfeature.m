@@ -29,8 +29,8 @@
                 I2 = I2/255; 
 %                 figure, histogram(I2);
                
-                MOVINGREG = registerImages(I1,I2);
-                
+%                 MOVINGREG = registerImages(I1,I2);
+                MOVINGREG = registerImagestext(I1,I2);
 %                 figure,imshow(MOVINGREG.RegisteredImage);
                 tformY = MOVINGREG.Transformation;    
                 
@@ -45,6 +45,7 @@
                 %% 1/2 teil of the image
 
                 %% 1/4 teil of the image
+
 
                 %%  weiter
                 energie = meansqr(E);
@@ -66,8 +67,8 @@
         for i=1:4
             [idx(i),idy(i)]=find(Energie==v(i));
             diffc(:,:,i) = registerTransformInSameCoordinate(img_path_list,file_path,idx(i),idy(i)); % stilles Image
-%             Scr =['number:',num2str(i)];
-%             figure,imshow(diffc(:,:,i),[]),title(Scr);
+            Scr =['number:',num2str(i)];
+            figure,imshow(diffc(:,:,i),[]),title(Scr);
             diffsum = diffsum+diffc(:,:,i);
         end
         

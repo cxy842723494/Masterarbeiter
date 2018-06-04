@@ -107,18 +107,18 @@
                         diffsum2 = diffsum2+diffc(:,:,i);
                     end
 
-                [m,n]=size(Energie);
-                v=sort(reshape(Energie,1,m*n),'descend');
+                [m,n]=size(Energie3);
+                v=sort(reshape(Energie3,1,m*n),'descend');
                 v=v(1:4);           
                 idx=zeros(1,4);
                 idy=zeros(1,4);
-                diffsum=zeros(size(E));
+                diffsum3=zeros(size(E));
                     for i=1:4
-                        [idx(i),idy(i)]=find(Energie==v(i));
+                        [idx(i),idy(i)]=find(Energie3==v(i));
                         diffc(:,:,i) = registerTransformInSameCoordinate(img_path_list,file_path,idx(i),idy(i)); % stilles Image
             %             Scr =['number:',num2str(i)];
             %             figure,imshow(diffc(:,:,i),[]),title(Scr);
-                        diffsum = diffsum+diffc(:,:,i);
+                        diffsum3 = diffsum3+diffc(:,:,i);
                     end
 
                 [m,n]=size(Energie4);
