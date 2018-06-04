@@ -11,7 +11,7 @@ clean;
     img_path_list = dir(strcat(file_path,'*.yuv'));     % find the processing images  
     img_num = length(img_path_list);                    % number of the processing images
     Energie = zeros(img_num,img_num);
-
+    Central = [960,540]; 
     filepath=pwd;               %  save the current work directory
     cd(file_path) 
     mkdir diff;                    %    save the diff-data in diff folder
@@ -24,11 +24,16 @@ clean;
                 [yuv(2).Y,yuv(2).U,yuv(2).V] =  readYUV(strcat(file_path,image_name2));  
                 diff=  yuv(1).U - yuv(2).U;             %  diffenzbild to data
                 % figure, imshow(diff,[]);figure,histogram(diff);
-                energie = meansqr(diff);
-    %             energie = sum(sum(diff.^2))/(size(diff,1)*size(diff,2)); 
+%                 energie = meansqr(diff);
+%                 energie = sum(sum(diff.^2))/(size(diff,1)*size(diff,2)); 
+               
+                Teil = diff(Central(2)/2+1:Central(2)*3/2,Central(1)/2+1:Central(1)*3/2);
+%                 figure,imshow(Teil,[]);
+                energie = meansqr(Teil);
+
                 Energie(i,j) = energie;
 
-               imwrite(diff,[[cd,'\diff\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
+%                imwrite(diff,[[cd,'\diff\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
     %            imwrite(diff,[[cd,'\diff\'],'test-',num2str(i),'_',num2str(j),'.jpg'])
 
                 end
