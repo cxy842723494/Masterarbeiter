@@ -1,5 +1,5 @@
  clean;
-% close all;
+close all;
 
 % Step1. load imagea
     file_path = uigetdir('D:\xch\Daten\','Select the Folder');     % '*.*', path of the folder
@@ -16,7 +16,7 @@
     mkdir difftrans;                    %  save the diff-data in diff folder
     if img_num > 0                 %    load image 
             for i = 1:img_num         
-                for j = i+1:img_num    % j=1:img_num mean all diff ,but actually wo just need half of the data (note Feature19)
+                for j = i+1:img_num    % j=i+1:img_num mean all diff ,but actually wo just need half of the data (note Feature19)
                 image_name1 = img_path_list(i).name;    %  image1                 
                 [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(strcat(file_path,image_name1));  
                 image_name2 = img_path_list(j).name;    %  image2  
@@ -30,7 +30,7 @@
 %                 figure, histogram(I2);
                
 %                 MOVINGREG = registerImages(I1,I2);
-                MOVINGREG = registerImagestext(I1,I2);
+                MOVINGREG = registerImagestext1(I1,I2);
 %                 figure,imshow(MOVINGREG.RegisteredImage);
                 tformY = MOVINGREG.Transformation;    
                 
@@ -39,6 +39,16 @@
 %                 figure,imshow(abs(diffc_U),[]),title('after transform data diffc in U');figure,histogram(diffc_U)
                 E = imcrop(abs(diffc_U),[11 11 1899 1059]);
 %                 figure,imshow(E,[]),figure, histogram(E);
+
+%                 finiteIdx = isfinite(E(:));
+%                 EDmin = min(E(:));
+%                 EDmax = max(E(:));
+%                 if isequal(EDmax,EDmin)
+%                     E = 0*E;
+%                 else
+%                     E(finiteIdx) = (E(finiteIdx) - EDmin) ./ (EDmax - EDmin);
+%                 end
+                
 
                %% central of the image
 
@@ -68,7 +78,7 @@
             [idx(i),idy(i)]=find(Energie==v(i));
             diffc(:,:,i) = registerTransformInSameCoordinate(img_path_list,file_path,idx(i),idy(i)); % stilles Image
             Scr =['number:',num2str(i)];
-            figure,imshow(diffc(:,:,i),[]),title(Scr);
+            figure,imshow(diffc(:,:,i),[]),title(Scr);figure,histogram(diffc(:,:,i));
             diffsum = diffsum+diffc(:,:,i);
         end
         
@@ -81,14 +91,15 @@
         end
         
         Img = imresize(diffreturn,2);
-        figure,imshow(diffsum,[])
+        figure,imshow(diffsum,[]),figure, histogram(diffsum)
+        figure,imshow(abs(diffsum),[])
         figure,imshow(abs(Img),[]);
         
         
         
 %% Single Differnzbild mit Registration      
-    Index1 = 11;
-    Index2 = 13;
+    Index1 = 1;
+    Index2 = 15;
     [diff,Ohnediff] =  registerSingeltransform(img_path_list,file_path,Index1,Index2) ; 
     figure,imshow( diff,[]),title('mit transform');
     figure,imshow( abs(diff),[]),title('mit transform');

@@ -134,12 +134,12 @@
             %             figure,imshow(diffc(:,:,i),[]),title(Scr);
                         diffsum4 = diffsum4+diffc(:,:,i);
                     end
-                    diffsum = zeros(size(E));
-                    diffsum(1:Central(2),1:Central(1)) = diffsum1(1:Central(2),1:Central(1));
-                    diffsum(1:Central(2),Central(1)+1:end) = diffsum2(1:Central(2),Central(1)+1:end);
-                    diffsum(Central(2)+1:end,1:Central(1)) = diffsum3(Central(2)+1:end,1:Central(1));
-                    diffsum(Central(2)+1:end,Central(1)+1:end) = diffsum4(Central(2)+1:end,Central(1)+1:end);
-                    figure,imshow(diffsum,[])
-                    figure,imshow(abs(diffsum),[]),title('sum')
+                diffsum = zeros(size(E));
+                diffsum(1:Central(2),1:Central(1)) = diffsum1(1:Central(2),1:Central(1));
+                diffsum(1:Central(2),Central(1)+1:end) = diffsum2(1:Central(2),Central(1)+1:end);
+                diffsum(Central(2)+1:end,1:Central(1)) = diffsum3(Central(2)+1:end,1:Central(1));
+                diffsum(Central(2)+1:end,Central(1)+1:end) = diffsum4(Central(2)+1:end,Central(1)+1:end);
+                figure,imshow(diffsum,[])
+                figure,imshow(abs(diffsum),[]),title('sum')
         
         

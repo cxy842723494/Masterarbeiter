@@ -13,7 +13,7 @@ function [diffc] = registerTransformInSameCoordinate(img_path_list,file_path,Ind
                 I2 = I2/255; 
 %                 figure, histogram(I2);
                
-                MOVINGREG = registerImages(I1,I2);
+                MOVINGREG = registerImagestext1(I1,I2);
                 
 %                 figure,imshow(MOVINGREG.RegisteredImage);
                 tformY = MOVINGREG.Transformation;    
@@ -22,7 +22,7 @@ function [diffc] = registerTransformInSameCoordinate(img_path_list,file_path,Ind
                 diffc_U = U_teil1new - yuv(2).U;
 %                 figure,imshow(abs(diffc_U),[]),title('after transform data diffc in U');figure,histogram(diffc_U)
                 E(:,:,i) = imcrop(diffc_U,[11 11 1899 1059]);
-%                 E = imcrop(abs(diffc_U),[11 11 1899 1059]);
+%                 E(:,:,i) = imcrop(abs(diffc_U),[11 11 1899 1059]);
     end
 %     figure,imshow(abs(E(:,:,15)),[])
     diffc = E(:,:,Index1)- E(:,:,Index2);

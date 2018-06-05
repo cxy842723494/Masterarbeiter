@@ -3,8 +3,8 @@
 modAmp = 9;
 blocksize = 4;
 
-inputName = 'Campus.mp4'
-outputName = 'newMatrix25'
+inputName = '3D_40_LEFT.mp4'
+outputName = 'newMatrix3D_40'
 v = VideoReader(['input/', inputName]);
 nbFrames = 300;
 outputFramerate = 25;
@@ -84,4 +84,4 @@ for i=1:2:nbFrames
 end
 close(vMod);
 display('100%');
-save currentFrames currentFrames;
+% save currentFrames currentFrames;

@@ -10,8 +10,8 @@ function [E,OhneE] = registerSingeltransform(img_path_list,file_path,Index1,Inde
                 I2 = imresize(yuv(2).Y,[1080 1920]);
                 I2 = I2/255; 
 %                 figure, histogram(I2);
-               
-                MOVINGREG = registerImages(I1,I2);
+%                figure,imshowpair(I1,I2)
+                MOVINGREG = registerImagestext1(I1,I2);
                 
 %                 figure,imshow(MOVINGREG.RegisteredImage);
                 tformY = MOVINGREG.Transformation;    
