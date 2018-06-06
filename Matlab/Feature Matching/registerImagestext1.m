@@ -70,7 +70,7 @@ movingPoints = detectSURFFeatures(MOVING,'MetricThreshold',750.000000,'NumOctave
 % Extract features
 [fixedFeatures,fixedValidPoints] = extractFeatures(FIXED,fixedPoints,'Upright',true);
 [movingFeatures,movingValidPoints] = extractFeatures(MOVING,movingPoints,'Upright',true);
-
+ 
 % Match features
 indexPairs = matchFeatures(fixedFeatures,movingFeatures,'MatchThreshold',50.000000,'MaxRatio',0.500000);
 fixedMatchedPoints = fixedValidPoints(indexPairs(:,1));

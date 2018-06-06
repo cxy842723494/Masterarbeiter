@@ -20,6 +20,7 @@ function [E,OhneE] = registerSingeltransform(img_path_list,file_path,Index1,Inde
                 diffc_U = U_teil1new - yuv(2).U;
 %                 figure,imshow(abs(diffc_U),[]),title('after transform data diffc in U');figure,histogram(diffc_U)
                 E = imcrop(diffc_U,[11 11 1899 1059]);
+%                 figure,imshow(abs(E),[]);
 %                 E = imcrop(abs(diffc_U),[11 11 1899 1059]);
                 OhneE = yuv(1).U- yuv(2).U;
 end

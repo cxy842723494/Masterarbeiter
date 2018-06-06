@@ -1,5 +1,5 @@
  clean;
-close all;
+% close all;
 
 % Step1. load imagea
     file_path = uigetdir('D:\xch\Daten\','Select the Folder');     % '*.*', path of the folder
@@ -24,11 +24,11 @@ close all;
                 
                 I1 = imresize(yuv(1).Y,[1080 1920]);
                 I1 = I1/255; 
-%                 figure, histogram(I1);
+%                 figure, imshow(I1);figure,histogram(I1);
                 I2 = imresize(yuv(2).Y,[1080 1920]);
                 I2 = I2/255; 
 %                 figure, histogram(I2);
-               
+%                figure, imshowpair(I1,I2);
 %                 MOVINGREG = registerImages(I1,I2);
                 MOVINGREG = registerImagestext1(I1,I2);
 %                 figure,imshow(MOVINGREG.RegisteredImage);
@@ -36,6 +36,7 @@ close all;
                 
                 U_teil1new = imwarp(yuv(1).U, tformY,'OutputView', imref2d(size(yuv(1).U)));
                 diffc_U = U_teil1new - yuv(2).U;
+        
 %                 figure,imshow(abs(diffc_U),[]),title('after transform data diffc in U');figure,histogram(diffc_U)
                 E = imcrop(abs(diffc_U),[11 11 1899 1059]);
 %                 figure,imshow(E,[]),figure, histogram(E);
@@ -78,10 +79,21 @@ close all;
             [idx(i),idy(i)]=find(Energie==v(i));
             diffc(:,:,i) = registerTransformInSameCoordinate(img_path_list,file_path,idx(i),idy(i)); % stilles Image
             Scr =['number:',num2str(i)];
-            figure,imshow(diffc(:,:,i),[]),title(Scr);figure,histogram(diffc(:,:,i));
-            diffsum = diffsum+diffc(:,:,i);
+            figure,imshow(diffc(:,:,i),[]),title(Scr);figure,histogram(diffc(:,:,2));
+%             diffsum = diffsum+diffc(:,:,i);
         end
-        
+        B =imbinarize(diffc(:,:,1),-15);
+        C =imbinarize(diffc(:,:,1),15);
+        figure,imshow(imbinarize(diffc(:,:,1),-15),[]),
+        figure,imshow(imbinarize(diffc(:,:,1),15),[]),
+        figure,imshow(-B&C),
+        A=diffc(:,:,1);
+        mean2(diffc(:,:,4))
+        diffsum1 = diffc(:,:,1)+diffc(:,:,2);
+        figure,imshow( diffsum1,[]),figure, histogram(diffsum1);
+        figure,imshow( diffsum2,[]),figure, histogram(diffsum2);
+        diffsum2 = diffc(:,:,1)-diffc(:,:,2);
+%         diffsum = diffc(:,:,1)+diffc(:,:,2)+diffc(:,:,3)+diffc(:,:,4);
 %         diffsum = diffsum+diffc(:,:,i);
         diffreturn = zeros(1080,1920);
         for i=1:1060
@@ -98,12 +110,12 @@ close all;
         
         
 %% Single Differnzbild mit Registration      
-    Index1 = 1;
-    Index2 = 15;
+    Index1 = 6;
+    Index2 = 7;
     [diff,Ohnediff] =  registerSingeltransform(img_path_list,file_path,Index1,Index2) ; 
     figure,imshow( diff,[]),title('mit transform');
     figure,imshow( abs(diff),[]),title('mit transform');
-    figure,imshow( Ohnediff,[]),title('ohne transform');
+    figure,imshow( abs(Ohnediff),[]),title('ohne transform');
 %     figure,imshow( imbinarize(diff,10));
     figure,histogram(diff);
 

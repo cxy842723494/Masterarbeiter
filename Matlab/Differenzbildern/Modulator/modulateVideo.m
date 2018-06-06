@@ -3,8 +3,8 @@
 modAmp = 9;
 blocksize = 4;
 
-inputName = '3D_40_LEFT.mp4'
-outputName = 'newMatrix3D_40'
+inputName = '3D_40_LEFT.mp4';
+outputName = 'newMatrix3D_40_fps25';
 v = VideoReader(['input/', inputName]);
 nbFrames = 300;
 outputFramerate = 25;
@@ -59,7 +59,7 @@ for i=1:2:nbFrames
      %% add qr patternm in u/v
      dataMatrixU = addQrFinderPattern(dataMatrixU, qrPatternSize);
      dataMatrixV = addQrFinderPattern(dataMatrixV, qrPatternSize);
-     
+%      figure,imshow(dataMatrixU,[])
     Trgb2yuv = [0.2126 0.7152 0.0722; -0.1146 -0.3854 0.5000; 0.5000 -0.4542 -0.0458]; % BT.709
     Tyuv2rgb = inv(Trgb2yuv);
     
