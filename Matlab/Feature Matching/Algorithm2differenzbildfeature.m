@@ -76,23 +76,14 @@
     idy=zeros(1,4);
         diffsum=zeros(size(E));
         for i=1:4
-            [idx(i),idy(i)]=find(Energie==v(i));
-            diffc(:,:,i) = registerTransformInSameCoordinate(img_path_list,file_path,idx(i),idy(i)); % stilles Image
-            Scr =['number:',num2str(i)];
-            figure,imshow(diffc(:,:,i),[]),title(Scr);figure,histogram(diffc(:,:,2));
-%             diffsum = diffsum+diffc(:,:,i);
+            [idx(i),idy(i)]=find(Energie==v(i));          
         end
-        B =imbinarize(diffc(:,:,1),-15);
-        C =imbinarize(diffc(:,:,1),15);
-        figure,imshow(imbinarize(diffc(:,:,1),-15),[]),
-        figure,imshow(imbinarize(diffc(:,:,1),15),[]),
-        figure,imshow(-B&C),
-        A=diffc(:,:,1);
-        mean2(diffc(:,:,4))
-        diffsum1 = diffc(:,:,1)+diffc(:,:,2);
-        figure,imshow( diffsum1,[]),figure, histogram(diffsum1);
-        figure,imshow( diffsum2,[]),figure, histogram(diffsum2);
-        diffsum2 = diffc(:,:,1)-diffc(:,:,2);
+        
+        diffc_U = registerTransformInSameCoordinate(img_path_list,file_path,1,img_num); % stilles Image
+%         Scr =['number:',num2str(i)];
+%         figure,imshow(diffc_U(:,:,1),[]),title(Scr);figure,histogram(diffc(:,:,2));
+
+%         diffsum = diffsum+diffc(:,:,i);
 %         diffsum = diffc(:,:,1)+diffc(:,:,2)+diffc(:,:,3)+diffc(:,:,4);
 %         diffsum = diffsum+diffc(:,:,i);
         diffreturn = zeros(1080,1920);
