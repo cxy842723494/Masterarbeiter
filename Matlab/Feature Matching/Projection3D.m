@@ -53,8 +53,8 @@ function J = Projection3D(x,y,Img,f,delta11,delta12,delta13,delta21,delta22,delt
     J = sum(sum((y - W*x).^2));
     
     
-      
-      I1 = imread('IMG_0356.JPG');
-      I2 = imread('IMG_0357.JPG');
-      figure, imshowpair(I1,I2);
-      figure, imshow(I1);
+%       
+%       I1 = imread('IMG_0356.JPG');
+%       I2 = imread('IMG_0357.JPG');
+%       figure, imshowpair(I1,I2);
+%       figure, imshow(I1);
