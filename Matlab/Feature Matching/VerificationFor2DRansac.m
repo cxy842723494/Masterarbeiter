@@ -1,7 +1,7 @@
 clean;
 
-Img1= imread('IMG_0363.jpg');
-Img2= imread('IMG_0364.jpg');
+Img1= imread('IMG_0353.jpg');
+Img2= imread('IMG_0352.jpg');
 
 Igray1 = rgb2gray(Img1);
 Igray2 = rgb2gray(Img2);
