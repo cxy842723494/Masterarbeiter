@@ -91,8 +91,8 @@ invKn = [invK; 0 0 0];invKnn(1:3,:) = invKn';
 invKnn(4,:)=[0 0 0 1]; 
  K = invK'; K =inv(K)/3.142160374450406e-04;K =[K';0 0 0 ];
 K = [K';0 0 0 1];
-
 invKnn=invKnn'; 
+
 Rotz = [cosd(thetaz)  -sind(thetaz) 0; ...
         sind(thetaz)  cosd(thetaz)  0; ...
         0            0            1];  
