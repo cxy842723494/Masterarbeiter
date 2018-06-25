@@ -35,8 +35,9 @@ K = [ 1, 0, -w/2;
       0, 0, f];
               
 invK = [1, 0, w/(2*f);
-        0, 1, h/(2*f);
+        0, 1, h/(2*f);  % parameter lambda 
         0, 0, 1/f];
+    % K*inv(K)=I;
 
 % Rotz = [cosd(thetaz)  -sind(thetaz) 0; ...
 %         sind(thetaz)  cosd(thetaz)  0; ...
