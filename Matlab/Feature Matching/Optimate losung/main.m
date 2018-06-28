@@ -56,7 +56,7 @@ end
 
 %% P0 parameter include Rotation Translation und Focal length:
 function [p0,J] = J_Rotation_Translation(pts1h, pts2h, State,frame_size)
-p0=[0 10 0 100 0 0];  % first 3 Rotation others Translation
+p0=[0 0 0 10 0 0];  % first 3 Rotation others Translation
 dp=[0.1 0.1 0.1 1 1 1]; % % mit 0.1 grad verändern and 0.1 mm Translation
 term_dp=[0.001 0.001 0.001 0.001 0.001 0.001]; % 
 [p0,J] = J_optimizieren(p0, dp, term_dp, pts1h, pts2h, frame_size, State);

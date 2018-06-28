@@ -16,14 +16,14 @@ dxy2 = dxy(2,:);
 figure,histogram(dxy1),title('dxy1');
 figure,histogram(dxy2),title('dxy2');
 
-dxy = dxy.';
-figure,
-    for i = 1:size(pX1(1,:),2)
-        th(i) = atan2d(dxy(i,2),dxy(i,1));
-     plot([0,dxy(i,1)],[0,dxy(i,2)]);
-     hold on;
-    end
-figure,histogram(th);
+% dxy = dxy.';
+% figure,
+%     for i = 1:size(pX1(1,:),2)
+%         th(i) = atan2d(dxy(i,2),dxy(i,1));
+%      plot([0,dxy(i,1)],[0,dxy(i,2)]);
+%      hold on;
+%     end
+% figure,histogram(th);
 % bar(th);
 
 end

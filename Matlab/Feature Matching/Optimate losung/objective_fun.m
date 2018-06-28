@@ -119,7 +119,7 @@ end
 
 
 function [W] = getW_Rotation_Translation(thetaz,thetay,thetax,tx,ty,tz,w,h)           % f,w,h
-T = [tx,ty,tz];
+
 f = -3200; 
 % intrinsic camera Matrix
 % load('cameraParametersGooglePixel2XL.mat');
@@ -135,13 +135,10 @@ K = [f, 0, w/2, 0;
      0, 0, 0,   1];
 invK = inv(K);
 
+%  thetaz =0.01;   thetay = 0; thetax =0;
 Rotz = [cosd(thetaz)  -sind(thetaz) 0; ...
         sind(thetaz)  cosd(thetaz)  0; ...
         0            0            1];  
-%  thetaz =0.01;   thetay = 0; thetax =0; 
-% Rotz = [cosd(-thetaz)  -sind(-thetaz) 0; ...   % -thetaz?
-%         sind(-thetaz)  cosd(-thetaz)  0; ...
-%         0            0            1];  
 Roty = [cosd(thetay)  0            sind(thetay) ; ...
         0            1            0 ; ...
         -sind(thetay) 0            cosd(thetay)]; 
@@ -149,6 +146,7 @@ Rotx = [1            0            0 ; ...
         0            cosd(thetax)  -sind(thetax); ...
         0            sind(thetax)  cosd(thetax)]; 
 R = Rotz * Roty * Rotx;
+T = [tx,ty,tz];
 RTtemp = [R';T];
 RT(1:3,:) = RTtemp';
 RT(4,:) =[0 0 0 1];
