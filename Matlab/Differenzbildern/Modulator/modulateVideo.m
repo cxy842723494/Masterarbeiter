@@ -3,8 +3,8 @@
 modAmp = 9;
 blocksize = 4;
 
-inputName = '3D_40_LEFT.mp4';
-outputName = 'newMatrix3D_40_fps25';
+inputName = 'IMG_0383.MOV';
+outputName = 'IMG_0383.MOV';
 v = VideoReader(['input/', inputName]);
 nbFrames = 300;
 outputFramerate = 25;
