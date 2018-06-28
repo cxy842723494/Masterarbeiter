@@ -84,9 +84,9 @@ Roty = [cosd(thetay)  0             sind(thetay) ; ...
 Rotx = [1             0             0 ; ...
         0             cosd(thetax)  -sind(thetax); ...
         0             sind(thetax)  cosd(thetax)]; 
-% R = Rotz * Roty * Rotx;
+R = Rotz * Roty * Rotx;
 
-W = K * Rotz * Roty * Rotx * invK;
+W = K * R* invK;
 
 end
 

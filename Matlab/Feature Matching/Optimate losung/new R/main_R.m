@@ -11,9 +11,10 @@ clean;
 % [yuv(2).Y,yuv(2).U,yuv(2).V]= readYUV(fn2);
 % Igray1 = yuv(1).Y/255;
 % Igray2 = yuv(2).Y/255;
-
-Img1 = imread('image3.jpeg');
-Img2 = imread('image4.jpeg');
+ load('image.mat');
+ Img1 = A; Img2 = B;
+% Img1 = imread('image3.jpeg');
+% Img2 = imread('image4.jpeg');
 Igray1 = rgb2gray(Img1);
 Igray2 = rgb2gray(Img2);
 frame_size = size(Igray1);
@@ -52,8 +53,8 @@ end
 
 %% P0 parameter include Rotation and Focal length: 
 function [p0,J] = J_Rotation_focal(pts1h, pts2h, State,frame_size)
-p0=[5 5 0 3270];  % 3200 or -3200
-dp=[0.1 0.1 0.1 1]; % mit 0.1 grad verändern and focal length mit 1 pixel
+p0=[0 0 0 -3270];  % 3200 or -3200
+dp=[2 2 2 1]; % mit 0.1 grad verändern and focal length mit 1 pixel
 term_dp=[0.001 0.001 0.001 0.01]; % 
 [p0,J] = J_optimizieren(p0, dp, term_dp, pts1h, pts2h, frame_size, State);
 end
