@@ -14,7 +14,7 @@ matchedPoints2 = valid_points2(indexPairs(:,2),:);
 % figure; showMatchedFeatures(Igray1,Igray2,matchedPoints1,matchedPoints2);title('Candidate matched points (including outliers)');
 
 % discard outliers with RANSAC
-[fLMedS, inliers] = estimateFundamentalMatrix(matchedPoints1,matchedPoints2,'Method','RANSAC','DistanceThreshold',0.1);
+[fLMedS, inliers] = estimateFundamentalMatrix(matchedPoints1,matchedPoints2,'Method','RANSAC','DistanceThreshold',0.08);
 inlierPts1 = matchedPoints1(inliers,:);
 inlierPts2 = matchedPoints2(inliers,:);
 

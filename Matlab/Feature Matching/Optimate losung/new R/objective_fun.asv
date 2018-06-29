@@ -143,7 +143,7 @@ K = [f, 0, w/2, 0;
      0, 0, 0,   1];
 invK = inv(K);
 %%
-%  thetaz =-0.362139917695473;   thetay = 0.840556148283629; thetax =-3.844535893918611; 
+ thetaz =-0.362139917695473;   thetay = 0.840556148283629; thetax =-3.844535893918611; 
 Rotz = [cosd(thetaz)  -sind(thetaz) 0; ...
         sind(thetaz)  cosd(thetaz)  0; ...
         0            0            1];   
