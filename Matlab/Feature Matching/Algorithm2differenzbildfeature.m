@@ -3,7 +3,7 @@
 
 % Step1. load imagea
     file_path = uigetdir('D:\xch\Daten\','Select the Folder');     % '*.*', path of the folder
-    % file_path =  'D:\xch\Daten\xch\2305\';    
+%     file_path =  'D:\xch\Daten\xch\2305\';    
     % file_path =  'G:\googlexl\a5\dark\';   
     file_path = strcat(file_path,'\');
     img_path_list = dir(strcat(file_path,'*.yuv'));     % find the processing images  
@@ -27,9 +27,9 @@
 %                 figure, imshow(I1);figure,histogram(I1);
                 I2 = imresize(yuv(2).Y,[1080 1920]);
                 I2 = I2/255; 
-%                 figure, histogram(I2);
+%                figure, histogram(I2);
 %                figure, imshowpair(I1,I2);
-%                 MOVINGREG = registerImages(I1,I2);
+%                MOVINGREG = registerImages(I1,I2);
                 MOVINGREG = registerImagestext1(I1,I2);
 %                 figure,imshow(MOVINGREG.RegisteredImage);
                 tformY = MOVINGREG.Transformation;    

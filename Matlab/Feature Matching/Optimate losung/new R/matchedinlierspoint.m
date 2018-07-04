@@ -11,16 +11,16 @@ indexPairs = matchFeatures(features1,features2);
 
 matchedPoints1 = valid_points1(indexPairs(:,1),:);
 matchedPoints2 = valid_points2(indexPairs(:,2),:);
-% figure; showMatchedFeatures(Igray1,Igray2,matchedPoints1,matchedPoints2);title('Candidate matched points (including outliers)');
+figure; showMatchedFeatures(Igray1,Igray2,matchedPoints1,matchedPoints2);title('Candidate matched points (including outliers)');
 
 % discard outliers with RANSAC
 [fLMedS, inliers] = estimateFundamentalMatrix(matchedPoints1,matchedPoints2,'Method','RANSAC','DistanceThreshold',0.08);
 inlierPts1 = matchedPoints1(inliers,:);
 inlierPts2 = matchedPoints2(inliers,:);
 
-% figure;
-% showMatchedFeatures(Igray1, Igray2, inlierPts1,inlierPts2,'montage','PlotOptions',{'ro','go','y--'});
-% title('Point matches after outliers were removed');
+figure;
+showMatchedFeatures(Igray1, Igray2, inlierPts1,inlierPts2,'montage','PlotOptions',{'ro','go','y--'});
+title('Point matches after outliers were removed');
 
 integerClass = 'int32';
 outputClass = 'double';

@@ -78,15 +78,15 @@ movingMatchedPoints = movingValidPoints(indexPairs(:,2));
 MOVINGREG.FixedMatchedFeatures = fixedMatchedPoints;
 MOVINGREG.MovingMatchedFeatures = movingMatchedPoints;
 
-% figure,
-% showMatchedFeatures(MOVING,FIXED,movingMatchedPoints,fixedMatchedPoints)
-% title('Candidate matched points (including outliers)')
+figure,
+showMatchedFeatures(MOVING,FIXED,movingMatchedPoints,fixedMatchedPoints)
+title('Candidate matched points (including outliers)')
 
 % Apply transformation - Results may not be identical between runs because of the randomized nature of the algorithm
   [tform,inlierpoints1,inlierpoints2] = estimateGeometricTransform(...
        movingMatchedPoints,fixedMatchedPoints,'projective','MaxDistance',1.0);
-%   figure; showMatchedFeatures(MOVING,FIXED,inlierpoints1,inlierpoints2);
-%   title('Matched inlier points');
+  figure; showMatchedFeatures(MOVING,FIXED,inlierpoints1,inlierpoints2);
+  title('Matched inlier points');
 
 % tform = estimateGeometricTransform(movingMatchedPoints,fixedMatchedPoints,'projective');
 MOVINGREG.Transformation = tform;

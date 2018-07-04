@@ -13,8 +13,8 @@ plot(PX1(:,1),PX1(:,2),'g.');legend('x1','x2','Px1')
 dxy1 = dxy(1,:);
 dxy2 = dxy(2,:);
 % figure,bar(dxy1);
-% figure,histogram(dxy1),title('dxy1');
-% figure,histogram(dxy2),title('dxy2');
+figure,histogram(dxy1),title('dxy1');
+figure,histogram(dxy2),title('dxy2');
 
 % dxy = dxy.';
 % figure,

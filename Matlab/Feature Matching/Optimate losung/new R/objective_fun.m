@@ -5,7 +5,7 @@
 % x1,x2: the corresponding point
 % frame_time
 
-function [J,x1,x2,pX1,dxy] = objective_fun(p0,x1,x2,frame_size,State) % frame_time
+function [J,x1,x2,pX1,dxy,W] = objective_fun(p0,x1,x2,frame_size,State) % frame_time
 w=frame_size(2);
 h=frame_size(1);
 P = p0; 
