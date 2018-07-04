@@ -1,7 +1,8 @@
  clean;
 % close all;
 
-
+% fn1 ='YUV_2018_06_20_17_08_45_933.yuv';
+% fn2 ='YUV_2018_06_20_17_08_45_919.yuv';
 %% Step. load imagea
     file_path = uigetdir('D:\xch\Daten\','Select the Folder');     % '*.*', path of the folder
     file_path = strcat(file_path,'\');

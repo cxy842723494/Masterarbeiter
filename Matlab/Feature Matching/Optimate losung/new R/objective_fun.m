@@ -19,20 +19,43 @@ P = p0;
                         
 switch State 
     case 0
-        W = getW_Rotation(P(1),P(2),P(3),w,h);        
+        W = getW_Rotation(P(1),P(2),P(3),w,h);   
+        pX1 = W*x2 ; 
+        for i =1:size(pX1,2)
+            pX1(1,i) = pX1(1,i)/ pX1(3,i);
+            pX1(2,i) = pX1(2,i)/ pX1(3,i);
+        end
     case 1
-        W = getW_Rotation_F(P(1),P(2),P(3),P(4),w,h);        
+        W = getW_Rotation_F(P(1),P(2),P(3),P(4),w,h);  
+        pX1 = W*x2 ; 
+        for i =1:size(pX1,2)
+            pX1(1,i) = pX1(1,i)/ pX1(3,i);
+            pX1(2,i) = pX1(2,i)/ pX1(3,i);
+        end
     case 2
         x1(4, :) = 1;
         x2(4, :) = 1;
-        W = getW_Rotation_Translation(P(1),P(2),P(3),P(4),P(5),P(6),w,h);         
+        W = getW_Rotation_Translation(P(1),P(2),P(3),P(4),P(5),P(6),w,h);   
+        pX1 = W*x2 ; 
+        for i =1:size(pX1,2)
+            pX1(1,i) = pX1(1,i)/ pX1(3,i);
+            pX1(2,i) = pX1(2,i)/ pX1(3,i);
+        end
+    case 3 
+        W = getW_Rotation_seperateTranslation(P(1),P(2),P(3),w,h);    
+        pX1 = W*x2 ; 
+        for i =1:size(pX1,2)
+            pX1(1,i) = pX1(1,i)/ pX1(3,i);
+            pX1(2,i) = pX1(2,i)/ pX1(3,i);
+        end
+        pX1 = pX1 +[P(4),P(5),0].' ; 
 end
 
-pX1 = W*x2 ; 
-for i =1:size(pX1,2)
-    pX1(1,i) = pX1(1,i)/ pX1(3,i);
-    pX1(2,i) = pX1(2,i)/ pX1(3,i);
-end
+% pX1 = W*x2 ; 
+% for i =1:size(pX1,2)
+%     pX1(1,i) = pX1(1,i)/ pX1(3,i);
+%     pX1(2,i) = pX1(2,i)/ pX1(3,i);
+% end
 dxy = x1(1:2,:) - pX1(1:2,:) ;
 
 J = sum(sqrt(dot(dxy,dxy)));
@@ -161,4 +184,35 @@ RT(1:3,:) = RTtemp';
 RT(4,:) =[0 0 0 1];
 
 W = K * RT * invK;
+end
+
+function [W] = getW_Rotation_seperateTranslation(thetaz,thetay,thetax,w,h)           % f,w,h
+% intrinsic camera Matrix
+% load('cameraParametersGooglePixel2XL.mat');
+% K = cameraParams.IntrinsicMatrix.';
+% invK = inv(K);
+% norm_invK = invK/3.142160374450406e-04;   % 1 0 -ox
+                                          % 0 1 -oy
+                                          % 0 0 f  
+f = -3270; 
+invK = [ 1, 0, -w/2;
+         0, 1, -h/2;       
+         0, 0, f];
+              
+K = [1, 0, w/(2*f);
+     0, 1, h/(2*f);  
+     0, 0, 1/f];
+%  thetaz =0;   thetay = 0; thetax =0; 
+Rotz = [cosd(thetaz)  -sind(thetaz) 0; ...
+        sind(thetaz)  cosd(thetaz)  0; ...
+        0             0             1];  
+Roty = [cosd(thetay)  0             sind(thetay) ; ...
+        0             1             0 ; ...
+        -sind(thetay) 0             cosd(thetay)]; 
+Rotx = [1             0             0 ; ...
+        0             cosd(thetax)  -sind(thetax); ...
+        0             sind(thetax)  cosd(thetax)]; 
+ R = Rotz * Roty * Rotx;
+
+W = K * R * invK;
 end
