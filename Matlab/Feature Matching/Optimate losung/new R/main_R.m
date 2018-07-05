@@ -29,16 +29,17 @@ Igray2 = yuv(2).Y/255;
 % Igray1 = rgb2gray(Img1);
 % Igray2 = rgb2gray(Img2);
 frame_size = size(Igray1);
+I2new = ones(frame_size(1),frame_size(2)); 
 % figure, imshow(Igray1);
 % figure, imshow(Igray2);
-% figure, imshowpair(Igray1,Igray2);
+figure, imshowpair(Igray1,Igray2);
 
 % for i=1:5
 %% feature detection
 [pts1h,pts2h] = matchedinlierspoint(Igray1,Igray2);
 
 %% Algorithmus
-State =0;          % 0:test nur Rotation 
+State =2;          % 0:test nur Rotation 
                         % 1:test Rotation and Focal length
                         % 2:test Rotation, Translation and Focal length
                         % 3:test Rotation mit seperate Translation       
@@ -60,6 +61,8 @@ end
 % index = find(J0==min(J0));
 % J = J0(index);
 % p0 = P0(index,:);
+
+ 
 
 %% Auswert
 % auswert(p0,pts1h,pts2h,frame_size,State,Igray1) 
@@ -84,44 +87,48 @@ end
 % max_x_overlap = min(max(uhat(1,:)));
 % min_y_overlap = max(min(uhat(2,:)));
 % max_y_overlap = min(max(uhat(2,:)));
-% 
-% I2rect_total = imtransform(Igray2,T,'XData',[min_x_total max_x_total],...
-%     'YData',[min_y_total max_y_total],'UData',[min_u max_u],...
-%     'VData',[min_v max_v],'XYScale',[1 1]); 
-% figure;imshow(I2rect_total,[]);
-% I2rect_overlap = imtransform(Igray2,T,'XData',[min_x_overlap max_x_overlap],...
-%     'YData',[min_y_overlap max_y_overlap],'UData',[min_u max_u],...
-%     'VData',[min_v max_v],'XYScale',[1 1]);
-% figure;imshow(I2rect_overlap,[]);
-% figure;imshowpair(Igray1,I2rect_overlap);
 
-% imref2d,imterp2
-% I2new = imwarp(Igray2,H);
-[m,n] = size(Igray1); 
-I2new_matrix = ones(m,n);  
+%% State 0
+if State == 0
 invW = W^-1;
 invW = invW/invW(end); 
-T1 = invW;
-T = T1;
-% T2 = [1,0,0;0,1,0;-m/2,-n/2,1];  %x?y??????  
-% T3 = [1,0,0;0,1,0;m/2,n/2,1];    %x?y????  
-% T = T2*T1*T3; 
-for i=1300:m  
-    for j=1500:n  
-        p = T^-1*[i,j,1].';
-        p = p/p(3);
-        if (p(1)>0)&&(p(2)>0)
-%         if (p(1)<=m)&&(p(1)>0)&&(p(2)<=n)&&(p(2)>0) 
-        I2new_matrix(i,j) = Igray2(i,j);   
-        else   
-        I2new_matrix(i,j) = 0;     
-        end  
-    end  
+for i=1:frame_size(1)     
+    for j=1:frame_size(2)  
+        p2 = invW*[j,i,1].';
+        p2 = p2/p2(3);
+        p2_1(i,j) = p2(1);
+        p2_2(i,j)=  p2(2);  
+
+    end 
+   
 end  
-% figure;imshow(I2,[]);  
-figure;imshow(I2new_matrix);  
-figure;imshowpair(Igray1,I2new_matrix);  
-figure;imshowpair(Igray1,Igray2); hold on;
+p2new = interp2(Igray2,p2_1,p2_2);        
+figure;imshowpair(Igray1,p2new);
+% p2new = interp2(Igray2,p2_1,p2_2,'nearest');        
+% figure;imshowpair(Igray1,p2new); 
+clear p2_1 p2_2 p2new
+end
+%% State 2
+if State == 2
+invW = W^-1;
+
+for i=1:frame_size(1)          
+    for j=1:frame_size(2)       
+        p2 = invW*[j,i,1,1].';
+        p2 = p2/p2(3);
+        p2_1(i,j) = p2(1);
+        p2_2(i,j)=  p2(2);  
+
+    end 
+   
+end  
+p2new = interp2(Igray2,p2_1,p2_2);        
+figure;imshowpair(Igray1,p2new);
+% p2new = interp2(Igray2,p2_1,p2_2,'nearest');        
+% figure;imshowpair(Igray1,p2new); 
+clear p2_1 p2_2 p2new
+end
+
 %% P0 parameter include Rotation 
 function [p0,J,W] = J_Rotation(pts1h, pts2h, State,frame_size)
 p0=[0 0 0];
