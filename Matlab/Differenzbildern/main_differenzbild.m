@@ -29,7 +29,7 @@ end
 %     diff_Y = yuv(1).Y - yuv(2).Y;
     diff_U = yuv(1).U - yuv(2).U;
 %     diff_V = yuv(1).V - yuv(2).V;
-figure, imshow(diff_U,[]);
+    figure, imshow(diff_U,[]);
 
      
 %     load('diffc_Uo.mat');

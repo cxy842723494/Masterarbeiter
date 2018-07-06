@@ -3,11 +3,11 @@
 modAmp = 9;
 blocksize = 4;
 
-inputName = 'IMG_0383.MOV';
-outputName = 'IMG_0383.MOV';
+inputName = '3D_28_LEFT.mp4';
+outputName = '3D_28_LEFT';
 v = VideoReader(['input/', inputName]);
 nbFrames = 300;
-outputFramerate = 25;
+outputFramerate = 50;
 
 %%
 

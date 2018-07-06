@@ -4,10 +4,10 @@ modAmp = 9;
 blocksize = 4;
 
 inputName = 'windmill.png';
-outputName = 'textpattern25';
+outputName = 'Stillimage';
 v = imread(['input/', inputName]);
 nbFrames = 300;
-outputFramerate = 25;
+outputFramerate = 50;
 size(v,1)
 %%
 
