@@ -1,7 +1,7 @@
 clean;
  
-file_path = uigetdir('D:\xch\Daten\','Select the Folder');     % '*.*', path of the folder
-
+% file_path = uigetdir('D:\xch\Daten\','Select the Folder');     % '*.*', path of the folder
+file_path = uigetdir('G:\','Select the Folder'); 
 file_path = strcat(file_path,'\');
 img_path_list = dir(strcat(file_path,'*.yuv'));     % find the processing images  
 img_num = length(img_path_list);        
