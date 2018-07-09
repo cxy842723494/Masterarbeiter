@@ -3,48 +3,34 @@ clean;
 % input: 2 set of corresponding points after sift und RANSAC x,y
 
 %% load the image
-% fn1 ='YUV_2018_06_20_17_08_45_933.yuv';  % origin test
-% fn2 ='YUV_2018_06_20_17_08_45_919.yuv';
-% fn1 ='YUV_2018_06_20_17_14_00_264.yuv';
-% fn2 ='YUV_2018_06_20_17_14_00_259.yuv';
-% fn1 ='YUV_2018_05_30_11_20_24_001.yuv'; % real test
-% fn2 ='YUV_2018_05_30_11_20_23_967.yuv';
-% fn2 ='YUV_2018_05_30_11_20_24_400.yuv';
-% fn1 ='YUV_2018_05_23_14_00_34_670.yuv'; % still image
-% fn2 ='YUV_2018_05_23_14_00_34_642.yuv';
-% fn2 ='YUV_2018_05_23_14_00_35_032.yuv';
-% fn1 ='YUV_2018_05_22_16_45_20_452.yuv'; % still image 2
-% fn2 ='YUV_2018_05_22_16_45_20_426.yuv';
-% fn2 ='YUV_2018_05_22_16_45_20_688.yuv';
-% fn1 ='YUV_2018_05_23_14_00_34_733.yuv';
-% fn2 ='YUV_2018_05_23_14_00_34_768.yuv';
-% fn1 ='YUV_2018_07_06_17_08_50_411.yuv';
-% fn2 ='YUV_2018_07_06_17_08_50_419.yuv';
-% fn2 ='YUV_2018_07_06_17_08_50_815.yuv';
-%  fn2 ='YUV_2018_07_06_17_08_50_782.yuv';
 
 %     file_path = uigetdir('G:\0607\','Select the Folder');     % '*.*', path of the folder
-    file_path = 'G:\0607\text in Video (ohne stativ mit Data)\2'
-   
+%     file_path = 'D:\xch\Daten\xch\0607\text in Video from still image (ohne stativ mit Data)'
+    file_path = 'D:\xch\Daten\xch\0907\6'
+    
     file_path = strcat(file_path,'\');
     img_path_list = dir(strcat(file_path,'*.yuv'));     % find the processing images  
     img_num = length(img_path_list);     
     i = 1;
-    for j=2:15;
     image_name1 = img_path_list(i).name;    %  image1                 
     [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(strcat(file_path,image_name1));  
+    yuv(1).Y = imresize(yuv(1).Y,0.5);%,'nearest'
+    Igray1 = yuv(1).Y/255;
+    Igray1ori = yuv(1).Y/255;
+    U2new(:,:,i) = yuv(i).U; 
+    
+  for j=2:img_num
+   
     image_name2 = img_path_list(j).name;    %  image2  
     [yuv(2).Y,yuv(2).U,yuv(2).V] =  readYUV(strcat(file_path,image_name2));  
     
 % [yuv(1).Y,yuv(1).U,yuv(1).V]= readYUV(fn1);
 % [yuv(2).Y,yuv(2).U,yuv(2).V]= readYUV(fn2);
 
-yuv(1).Y = imresize(yuv(1).Y,0.5);%,'nearest'
-yuv(2).Y = imresize(yuv(2).Y,0.5);%,'nearest'
-Igray1 = yuv(1).Y/255;
-Igray2 = yuv(2).Y/255;
-Igray1ori = yuv(1).Y/255;
-Igray2ori = yuv(2).Y/255;
+    
+    yuv(2).Y = imresize(yuv(2).Y,0.5);%,'nearest'
+    Igray2 = yuv(2).Y/255;
+    Igray2ori = yuv(2).Y/255;
 
 %  load('image.mat');
 %  Img1 = A; Img2 = B;
@@ -63,12 +49,18 @@ frame_size = size(Igray1);
 I2new = ones(frame_size(1),frame_size(2)); 
 % figure, imshow(Igray1);
 % figure, imshow(Igray2);
-figure, imshowpair(Igray1,Igray2);
+% figure, imshowpair(Igray1ori,Igray2ori);
 
 %% add a filter in the middle of the image 
+[m,n] = size(Igray1);
+F = ones(m,n);
+F(m/4:3*m/4,n/4:3*n/4)=0;
+Igray1 = F.*Igray1;
+Igray2 = F.*Igray2;
+
 % [m,n] = size(Igray1);
 % F = ones(m,n);
-% F(m/4:3*m/4,n/4:3*n/4)=0;
+% F(m/8:7*m/8,n/8:7*n/8)=0;
 % Igray1 = F.*Igray1;
 % Igray2 = F.*Igray2;
 
@@ -94,7 +86,6 @@ State =2;          % 0:test nur Rotation
                 [p0,J,W,J0] = J_Rotation_Translation_seprate(pts1h, pts2h,State,frame_size);
 
         end
-    end
 % P0(i,:) = p0; J0(i) = J;
 % end
 
@@ -142,50 +133,52 @@ for i=1:frame_size(1)
     end 
    
 end  
-p2new = interp2(Igray2,p2_1,p2_2);        
-figure;imshowpair(Igray1,p2new);
-% p2new = interp2(Igray2,p2_1,p2_2,'nearest');        
-% figure;imshowpair(Igray1,p2new); 
-% clear p2_1 p2_2 p2new
+
 end
 %% State 2
 if State == 2
-invW = W^-1;
+    invW = W^-1;
 
-for i=1:frame_size(1)          
-    for j=1:frame_size(2)       
-        p2 = invW*[j,i,1,1].';
+for m=1:frame_size(1)          
+    for n=1:frame_size(2)       
+        p2 = invW*[n,m,1,1].';
         p2 = p2/p2(3);
-        p2_1(i,j) = p2(1);
-        p2_2(i,j)=  p2(2);  
+        p2_1(m,n) = p2(1);
+        p2_2(m,n)=  p2(2);  
 
     end 
    
-end  
-p2new = interp2(Igray2,p2_1,p2_2);        
-figure;imshowpair(Igray1,p2new);
-% p2new = interp2(Igray2ori,p2_1,p2_2);    
-% figure;imshowpair(Igray1ori,p2new);
-% p2new = interp2(Igray2,p2_1,p2_2,'nearest');        
-% figure;imshowpair(Igray1,p2new); 
-% clear p2_1 p2_2 p2new
+end 
 end
 
 %%
-U2new = interp2(yuv(2).U,p2_1,p2_2);  
-figure;imshow(yuv(2).U/255);
-figure;imshow(yuv(1).U/255);
-figure;imshow(U2new/255);
-diff_U = yuv(1).U - U2new;
-figure;imshow(diff_U),title('new diff');
-diff_U_origin = yuv(1).U - yuv(2).U;
-figure;imshow(diff_U_origin),title('origin diff');
+p2new = interp2(Igray2,p2_1,p2_2);        
+% figure;imshowpair(Igray1,p2new);
+p2new = interp2(Igray2ori,p2_1,p2_2);    
+figure;imshowpair(Igray1ori,p2new);
+% p2new = interp2(Igray2,p2_1,p2_2,'nearest');        
+% figure;imshowpair(Igray1,p2new); 
+% clear p2_1 p2_2 p2new
 
- imwrite(E,[[cd,'\difftrans\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
+
+%% U-teil differenzbild
+U2new(:,:,j) = interp2(yuv(2).U,p2_1,p2_2);  
+% figure;imshow(yuv(j).U/255);
+% figure;imshow(yuv(1).U/255);
+% figure;imshow(U2new(:,:,j)/255);
+
+diff_U(:,:,j-1) = yuv(i).U - U2new(:,:,j);
+% diff_U0 = diff_U(:,:,1)+diff_U(:,:,3)+diff_U(:,:,5);
+% figure;imshow(diff_U),title('new diff');
+diff_U_origin(:,:,j-1) = yuv(i).U - yuv(2).U;
+% figure;imshow(diff_U_origin),title('origin diff');
+  end
+%  imwrite(E,[[cd,'\difftrans\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
 
 %%
-implay(mat2gray(gather(diffImages(:,:,3,:))))
-
+implay(mat2gray(gather(diff_U(:,:,:))))
+implay(mat2gray(gather(diff_U_origin(:,:,:))))
+implay(mat2gray(gather(U2new(:,:,:))))
 
 %% P0 parameter include Rotation 
 function [p0,J,W,J0] = J_Rotation(pts1h, pts2h, State,frame_size)
