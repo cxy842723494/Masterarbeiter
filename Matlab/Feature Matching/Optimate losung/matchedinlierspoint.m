@@ -18,9 +18,9 @@ matchedPoints2 = valid_points2(indexPairs(:,2),:);
 inlierPts1 = matchedPoints1(inliers,:);
 inlierPts2 = matchedPoints2(inliers,:);
 
-figure;
-showMatchedFeatures(Igray1, Igray2, inlierPts1,inlierPts2,'montage','PlotOptions',{'ro','go','y--'});
-title('Point matches after outliers were removed');
+% figure;
+% showMatchedFeatures(Igray1, Igray2, inlierPts1,inlierPts2,'montage','PlotOptions',{'ro','go','y--'});
+% title('Point matches after outliers were removed');
 
 integerClass = 'int32';
 outputClass = 'double';

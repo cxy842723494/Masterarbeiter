@@ -5,8 +5,8 @@ clean;
 %% load the image
 
 %     file_path = uigetdir('G:\0607\','Select the Folder');     % '*.*', path of the folder
-%     file_path = 'D:\xch\Daten\xch\0607\text in Video from still image (ohne stativ mit Data)'
-    file_path = 'D:\xch\Daten\xch\0907\6'
+    file_path = 'H:\0607\text in Video from still image (ohne stativ mit Data)'
+%     file_path = 'G:\0907\7';
     
     file_path = strcat(file_path,'\');
     img_path_list = dir(strcat(file_path,'*.yuv'));     % find the processing images  
@@ -52,11 +52,11 @@ I2new = ones(frame_size(1),frame_size(2));
 % figure, imshowpair(Igray1ori,Igray2ori);
 
 %% add a filter in the middle of the image 
-[m,n] = size(Igray1);
-F = ones(m,n);
-F(m/4:3*m/4,n/4:3*n/4)=0;
-Igray1 = F.*Igray1;
-Igray2 = F.*Igray2;
+% [m,n] = size(Igray1);
+% F = ones(m,n);
+% F(m/4:3*m/4,n/4:3*n/4)=0;
+% Igray1 = F.*Igray1;
+% Igray2 = F.*Igray2;
 
 % [m,n] = size(Igray1);
 % F = ones(m,n);
@@ -155,7 +155,7 @@ end
 p2new = interp2(Igray2,p2_1,p2_2);        
 % figure;imshowpair(Igray1,p2new);
 p2new = interp2(Igray2ori,p2_1,p2_2);    
-figure;imshowpair(Igray1ori,p2new);
+% figure;imshowpair(Igray1ori,p2new);
 % p2new = interp2(Igray2,p2_1,p2_2,'nearest');        
 % figure;imshowpair(Igray1,p2new); 
 % clear p2_1 p2_2 p2new
