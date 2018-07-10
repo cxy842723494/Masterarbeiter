@@ -1,0 +1,15 @@
+function phaseShift(phase_0_center, nbDiffPicsFor2Pi, sweepFreq)
+phase_0_center
+inverseSweepFreq = 2*60-sweepFreq;
+offset = 2;
+if phase_0_center > 1 && phase_0_center < nbDiffPicsFor2Pi + 
+    if phase_0_center >= offset && phase_0_center < nbDiffPicsFor2Pi/2 + offset
+        EVTC('Sweep',sweepFreq,2*phase_0_center - offset);
+    elseif phase_0_center >= nbDiffPicsFor2Pi/2 + offset
+        EVTC('Sweep',inverseSweepFreq,2*(nbDiffPicsFor2Pi-phase_0_center) + offset);
+    elseif phase_0_center < offset
+        EVTC('Sweep',inverseSweepFreq,2*phase_0_center);
+    end
+end
+end
+

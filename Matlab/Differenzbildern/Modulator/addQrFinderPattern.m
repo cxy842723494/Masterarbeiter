@@ -2,16 +2,27 @@ function [ img ] = addQrFinderPattern( img, patternSize )
 %ADDQRFINDERPATTERN Summary of this function goes here
 %   Detailed explanation goes here
 
+% qr_base= [
+%     1 1 1 1 1 1 1 1 1;
+%     1 -1 -1 -1 -1 -1 -1 -1 1;
+%     1 -1 1 1 1 1 1 -1 1;
+%     1 -1 1 -1 -1 -1 1 -1 1;
+%     1 -1 1 -1 -1 -1 1 -1 1;
+%     1 -1 1 -1 -1 -1 1 -1 1;
+%     1 -1 1 1 1 1 1 -1 1;
+%     1 -1 -1 -1 -1 -1 -1 -1 1;
+%     1 1 1 1 1 1 1 1 1]; % Pattern with ration 1:1:1:3:1:1:1 in all direction;
+
 qr_base= [
     1 1 1 1 1 1 1 1 1;
-    1 -1 -1 -1 -1 -1 -1 -1 1;
-    1 -1 1 1 1 1 1 -1 1;
-    1 -1 1 -1 -1 -1 1 -1 1;
-    1 -1 1 -1 -1 -1 1 -1 1;
-    1 -1 1 -1 -1 -1 1 -1 1;
-    1 -1 1 1 1 1 1 -1 1;
-    1 -1 -1 -1 -1 -1 -1 -1 1;
-    1 1 1 1 1 1 1 1 1]; % Pattern with ration 1:1:1:3:1:1:1 in all direction;
+    1 0 0 0 0 0 0 0 1;
+    1 0 1 1 1 1 1 0 1;
+    1 0 1 0 0 0 1 0 1;
+    1 0 1 0 0 0 1 0 1;
+    1 0 1 0 0 0 1 0 1;
+    1 0 1 1 1 1 1 0 1;
+    1 0 0 0 0 0 0 0 1;
+    1 1 1 1 1 1 1 1 1];
 
 % qr_base = [
 %        1 1 1 1 1 1 1 ;
@@ -44,7 +55,7 @@ qr_base= [
 %      1 1 1 1 0 0 0 0]; % Pattern with one empty corner 
  
 
-qr = imresize(qr_base.*9, patternSize, 'nearest');
+qr = imresize(qr_base.*15, patternSize, 'nearest');
 % qr3 = cat(3,qr,qr,qr);
 v = size(qr,1);
 h = size(qr,2);

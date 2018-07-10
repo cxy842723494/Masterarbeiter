@@ -1,13 +1,13 @@
 %% 
 %% Define the modulation parameters
-modAmp = 9;
-blocksize = 4;
+modAmp = 15;
+blocksize = 6;
 
 inputName = 'windmill.png';
 outputName = 'Stillimage';
 v = imread(['input/', inputName]);
 nbFrames = 300;
-outputFramerate = 50;
+outputFramerate = 25;
 size(v,1)
 %%
 

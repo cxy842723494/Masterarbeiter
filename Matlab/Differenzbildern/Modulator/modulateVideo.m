@@ -7,7 +7,7 @@ inputName = '3D_28_LEFT.mp4';
 outputName = '3D_28_LEFT';
 v = VideoReader(['input/', inputName]);
 nbFrames = 300;
-outputFramerate = 50;
+outputFramerate = 25;
 
 %%
 
