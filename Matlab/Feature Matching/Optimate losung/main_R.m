@@ -5,7 +5,7 @@ clean;
 %% load the image
 
 %     file_path = uigetdir('G:\0607\','Select the Folder');     % '*.*', path of the folder
-    file_path = 'H:\0607\text in Video from still image (ohne stativ mit Data)'
+    file_path = 'G:\0607\text in Video from still image (ohne stativ mit Data)'
 %     file_path = 'G:\0907\7';
     
     file_path = strcat(file_path,'\');

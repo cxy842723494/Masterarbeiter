@@ -136,9 +136,9 @@ function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)
     % corner of the monitor in the world coordinate.
     cr = zeros(4,2);
     [cr(1,1),cr(1,2)]= transformPointsInverse(tformY,1,1);
-    [cr(2,1),cr(2,2)]= transformPointsInverse(tformY,3840,1);
-    [cr(3,1),cr(3,2)]= transformPointsInverse(tformY,1,2160);
-    [cr(4,1),cr(4,2)]= transformPointsInverse(tformY,3840,2160);
+    [cr(2,1),cr(2,2)]= transformPointsInverse(tformY,1920,1); % 3840
+    [cr(3,1),cr(3,2)]= transformPointsInverse(tformY,1,1080); % 2160
+    [cr(4,1),cr(4,2)]= transformPointsInverse(tformY,1920,1080);  % 3840,2160
     
 end
     
