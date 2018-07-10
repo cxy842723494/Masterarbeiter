@@ -3,7 +3,7 @@ load('G:\0607\text in Video from still image (ohne stativ mit Data)\diffnew\diff
 
 % implay(mat2gray(gather(diff_Unew(:,:,:))));
 
- 
+diff_Unew = diff; 
 num  = size(diff_Unew(:,:,:),3); 
 energie = zeros(1,num);
 
@@ -26,7 +26,7 @@ v=v(1:4);
         diffadd=  diffadd+diff_Unew(:,:,idx(k));
 
     end
-    figure;imshow(diffadd),title('diff');
+    figure;imshow(diffadd,[]),title('diff');
 %    
 %     BW91=imbinarize(abs(diff_Unew(:,:,91)),20);
 %     figure;imshow(BW91),title('91');    
@@ -38,7 +38,7 @@ v=v(1:4);
 %% Bild Pretreat
 
 %     threshold = graythresh(diffadd);
-    BW = imbinarize(diffadd);
+    BW = imbinarize(diffadd,40);
 %     BW1 = imbinarize(diffadd.10);
     figure;imshow(BW),title('BW');    
 %     grain = 3;

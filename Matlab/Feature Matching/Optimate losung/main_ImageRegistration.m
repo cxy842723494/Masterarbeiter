@@ -58,7 +58,7 @@ clean;
 %% feature detection
 % try 5 mals to select the best result
     for k=1:5
-        [pts1h,pts2h] = matchedinlierspoint(Igray1,Igray2);
+        [pts1h,pts2h] = functions.matchedinlierspoint(Igray1,Igray2);
 
         % Algorithmus to determin the parameter of the Transform Matrix
         State =2;       % 0:test nur Rotation 

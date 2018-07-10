@@ -2,11 +2,11 @@
 % i.e von hand held camera images to restruction image,
 % to provide the hande shake by catching the images
 
-%гегегегегегегегегегегегегегегегегегегегегегегегегегегегеге
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % input: camera images von the folder
 % output: durch the restructuring images to generate the differenzbild
-
-function [diff_U_origin] = imageRegistration(Igray1,Igray2,yuv)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function [diff_U] = imageRegistration(Igray1,Igray2,yuv)
 
 frame_size = size(Igray1);
 % U2new = ones(frame_size(1),frame_size(2)); 
