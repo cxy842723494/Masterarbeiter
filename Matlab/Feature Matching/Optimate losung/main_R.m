@@ -17,8 +17,9 @@ clean;
     yuv(1).Y = imresize(yuv(1).Y,0.5);%,'nearest'
     Igray1 = yuv(1).Y/255;
     Igray1ori = yuv(1).Y/255;
+    Y2new(:,:,i) = yuv(i).Y; 
     U2new(:,:,i) = yuv(i).U; 
-    
+    V2new(:,:,i) = yuv(i).V; 
   for j=2:img_num
    
     image_name2 = img_path_list(j).name;    %  image2  
@@ -162,6 +163,7 @@ p2new = interp2(Igray2ori,p2_1,p2_2);
 
 
 %% U-teil differenzbild
+Y2new(:,:,j) = interp2(yuv(2).Y,p2_1,p2_2);  
 U2new(:,:,j) = interp2(yuv(2).U,p2_1,p2_2);  
 % figure;imshow(yuv(j).U/255);
 % figure;imshow(yuv(1).U/255);
@@ -172,13 +174,24 @@ diff_U(:,:,j-1) = yuv(i).U - U2new(:,:,j);
 % figure;imshow(diff_U),title('new diff');
 diff_U_origin(:,:,j-1) = yuv(i).U - yuv(2).U;
 % figure;imshow(diff_U_origin),title('origin diff');
+%% V-teil differenzbild
+V2new(:,:,j) = interp2(yuv(2).V,p2_1,p2_2);  
+% figure;imshow(yuv(j).U/255);
+% figure;imshow(yuv(1).U/255);
+% figure;imshow(U2new(:,:,j)/255);
+
+diff_V(:,:,j-1) = yuv(i).V - V2new(:,:,j);
+% diff_U0 = diff_U(:,:,1)+diff_U(:,:,3)+diff_U(:,:,5);
+% figure;imshow(diff_U),title('new diff');
+diff_V_origin(:,:,j-1) = yuv(i).V - yuv(2).V;
+% figure;imshow(diff_U_origin),title('origin diff');
   end
 %  imwrite(E,[[cd,'\difftrans\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png'])
 
 %%
-implay(mat2gray(gather(diff_U(:,:,:))))
-implay(mat2gray(gather(diff_U_origin(:,:,:))))
-implay(mat2gray(gather(U2new(:,:,:))))
+% implay(mat2gray(gather(diff_U(:,:,:))))
+% implay(mat2gray(gather(diff_U_origin(:,:,:))))
+% implay(mat2gray(gather(U2new(:,:,:))))
 
 %% P0 parameter include Rotation 
 function [p0,J,W,J0] = J_Rotation(pts1h, pts2h, State,frame_size)
