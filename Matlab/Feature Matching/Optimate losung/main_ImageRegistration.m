@@ -15,7 +15,7 @@ clean;
     % Transform the other images in the first images' dimension
     i = 1;
     image_name1 = img_path_list(i).name;              
-    [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(strcat(file_path,image_name1));  
+    [yuv(1).Y,yuv(1).U,yuv(1).V] = functions.readYUV(strcat(file_path,image_name1));  
     yuv(1).Y = imresize(yuv(1).Y,0.5,'nearest');
     Igray1 = yuv(1).Y/255;
     frame_size = size(Igray1);
@@ -28,7 +28,7 @@ clean;
   for j=2:img_num                        % each image transform                            
    
     image_name2 = img_path_list(j).name;     
-    [yuv(2).Y,yuv(2).U,yuv(2).V] =  readYUV(strcat(file_path,image_name2));          
+    [yuv(2).Y,yuv(2).U,yuv(2).V] =  functions.readYUV(strcat(file_path,image_name2));          
     yuv(2).Y = imresize(yuv(2).Y,0.5);
     Igray2 = yuv(2).Y/255;
 %     Igray2ori = yuv(2).Y/255;
@@ -150,9 +150,9 @@ V2new(:,:,j) = interp2(yuv(2).V,p2_1,p2_2);
 
 %% Show the transformed Images
 
-implay(mat2gray(gather(Y2new(:,:,:))));
-implay(mat2gray(gather(U2new(:,:,:))));
-implay(mat2gray(gather(V2new(:,:,:))));
+% implay(mat2gray(gather(Y2new(:,:,:))));
+% implay(mat2gray(gather(U2new(:,:,:))));
+% implay(mat2gray(gather(V2new(:,:,:))));
 
 
 

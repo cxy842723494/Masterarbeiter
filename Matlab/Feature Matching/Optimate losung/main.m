@@ -1,47 +1,54 @@
 clean;
-%% load the image
-    file_path = uigetdir('G:\','Select the Folder');     % '*.*', path of the folder
-    file_path = strcat(file_path,'\');
-    img_path_list = dir(strcat(file_path,'*.yuv'));     % find the processing images  
-    img_num = length(img_path_list);                    % number of the processing images
-%     Energie = zeros(img_num,img_num);
+
+%% Load the imagesf from the floder
+    file_path = uigetdir('D:\xch\Daten\xch\','Select the Folder'); 
+
+%% ImageRegistration
+    [Y2new,U2new,V2new] = functions.imageRegistration(file_path);
+    implay(mat2gray(gather(Y2new(:,:,:))));
+    implay(mat2gray(gather(U2new(:,:,:))));
+    implay(mat2gray(gather(V2new(:,:,:))));
+
+%% Differentbild 
+    diff = functions.creatDifferentbild(U2new); 
+    Mal_num = 3;
+    diffplus = functions.sum_of_diff(diff,Mal_num);
     
-    filepath=pwd;               %  save the current work directory
-    cd(file_path) 
-%     mkdir diffnew;  
-%     mkdir difforigin;
-num = 1;
-if img_num > 0                 %    load image 
-    for i = 1:img_num         
-        for j = i+1:img_num    % j=1:img_num mean all diff ,but actually wo just need half of the data (note Feature19)
-        image_name1 = img_path_list(i).name;    %  image1                 
-        [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(strcat(file_path,image_name1));  
-        image_name2 = img_path_list(j).name;    %  image2  
-        [yuv(2).Y,yuv(2).U,yuv(2).V] =  readYUV(strcat(file_path,image_name2));  
+    implay(mat2gray(gather(diff(:,:,:))));   
+    figure;imshow(diffplus),title('diffplus');    
 
+%% Bild Pretreat
 
-% fn1 ='YUV_2018_07_06_17_08_50_411.yuv';
-% fn2 ='YUV_2018_07_06_17_08_50_419.yuv';
-% fn2 ='YUV_2018_07_06_17_08_50_815.yuv';
+%     threshold = graythresh(diffadd);
+    BW = imbinarize(diffadd,40);
+%     BW1 = imbinarize(diffadd.10);
+    figure;imshow(BW),title('BW');    
+%     grain = 3;
 
-% [yuv(1).Y,yuv(1).U,yuv(1).V]= readYUV(fn1);
-% [yuv(2).Y,yuv(2).U,yuv(2).V]= readYUV(fn2);
+%     Handles.img = imgPreprosessing(Img,threshold,grain);
+    Bw_morpho =imopen(imclose(BW,ones(5)),ones(5));   
+    figure;imshow(Bw_morpho),title('Bw_morpho');   
+     
+    [FiPx,FiPy,ux,vx,cr] = detectFIP(Bw_morpho);
+     
+ %% plot Result
+    cr = cr.';
+    [y,i] = sort(cr(2,:));
+    x = cr(1,i);
+    [x(1:2),i] = sort(x(1:2));
+    y(1:2) = y(i);
+    [x(4:-1:3),i] = sort(x(3:4));
+    y(3:4) = y(5-i);
+    
+    fn1='YUV_2018_07_06_17_08_50_411.yuv';
+    [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(fn1);  
+    figure, imshow(yuv(1).U,[]),hold on
 
-yuv(1).Y = imresize(yuv(1).Y,0.5);%,'nearest'
-yuv(2).Y = imresize(yuv(2).Y,0.5);%,'nearest'
-Igray1 = yuv(1).Y/255;
-Igray2 = yuv(2).Y/255;
+    plot(x(1:2), y(1:2), 'r', 'LineWidth', 2)
+    plot(x(2:3), y(2:3), 'r', 'LineWidth', 2)
+    plot(x(3:4), y(3:4), 'r', 'LineWidth', 2)
+    plot([x(1) x(4)], [y(1) y(4)], 'r', 'LineWidth', 2)
 
-% diff_U = imageRegistration(Igray1,Igray2,yuv);
-diff_U(:,:,num) = imageRegistration(Igray1,Igray2,yuv);
-num = num+1;
-% figure;imshow(diff_U(:,:,2),[]),title('new diff');
-%  imwrite(diff_U(:,:,:,num),[[cd,'\diffnew\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png']);
-%  imwrite(diff_U(:,:,:,num),[[cd,'\difforigin\'],'test-',sprintf('%02d',i),'_',sprintf('%02d',j),'.png']);
-             end
-       end
- end
-%%
-implay(mat2gray(gather(diff_U(:,:,:))));
+     
 
-
+    
