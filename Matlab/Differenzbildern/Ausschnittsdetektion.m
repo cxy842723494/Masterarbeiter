@@ -1,26 +1,33 @@
-% close all;
+
 clean;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input:     2 Camera Images
+% Method:    Hough Trasform
+% Output:    One Image with the richtige Detection
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
  %% read YUV images and calculate differential images
-% for k = 1:2
-%     [filename,filepath] = uigetfile('*.*','Select the image');
-%     if isequal(filename,0)||isequal(filepath,0)
-%         return;
-%     else
-%         filefullpath = [filepath,filename];
-%     end
-% %     img = imread(filefullpath);
-% %     fn(:,:,:,k) = img;
-%     [yuv(k).Y, yuv(k).U, yuv(k).V] = readYUV(filefullpath);
-%     
-% end
+ 
+for k = 1:2
+    [filename,filepath] = uigetfile('*.*','Select the image');
+    if isequal(filename,0)||isequal(filepath,0)
+        return;
+    else
+        filefullpath = [filepath,filename];
+    end
+%     img = imread(filefullpath);
+%     fn(:,:,:,k) = img;
+    [yuv(k).Y, yuv(k).U, yuv(k).V] = readYUV(filefullpath);
+    
+end
 
 % fn1 = 'YUV_2018_04_20_09_34_44_823.yuv';
 % fn2 = 'YUV_2018_04_20_09_34_44_795.yuv';
-
-
 % [yuv(1).Y, yuv(1).U, yuv(1).V] = readYUV(fn1);
 % [yuv(2).Y, yuv(2).U, yuv(2).V] = readYUV(fn2);
-% 
+
+
 % tic;
 % diff(:,:,1) = yuv(1).V - yuv(2).V;
 % % figure, imshow(diff(:,:,1),[])
@@ -95,7 +102,7 @@ hblocks = 1920/8;
 % diffc_r = gather(conv2([1 2 1]/2,[1 2 1]/2, imggray ,'same'));
 % cr = estimateModCorners(diffc_r,50./100,7,10);
 
-% differenzbilder
+% differenzbilder % D-bayern
 diffc_r = gather(conv2([1 2 1]/2,[1 2 1]/2, diff(:,:,1),'same'));
 
 cr = estimateModCorners(diffc_r,1/2,5,10);
