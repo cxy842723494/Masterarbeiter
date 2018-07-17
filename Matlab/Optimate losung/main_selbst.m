@@ -18,12 +18,13 @@ Mal_num = 3;
 diffplus = functions.sum_of_diff(abs(diff),Mal_num);
 
 implay(mat2gray(gather(diff(:,:,:))));    %abs(diff(:,:,:))
-% figure;imshow(diffplus),title('diffplus');
+% figure;imshow(diffplus,[]),title('diffplus');
+% diffplus = uint8(diffplus);
 
 %% Bild Pretreat
 
 % Handles.img = imgPreprosessing(Img,threshold,grain);
-% Bw_morpho =imopen(imclose(BW,ones(5)),ones(5));
+% Bw_morpho =imopen(imclose(diffplus,ones(5)),ones(5));
 
 [BW,~] = functions.imageSegementer(diffplus);
 % figure;imshow(BW),title('BW');
