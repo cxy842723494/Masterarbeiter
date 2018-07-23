@@ -1,0 +1,4 @@
+\ProvidesFile{t1AkkRg__.fd}
+\DeclareFontFamily{T1}{AkkRg__}{}
+\DeclareFontShape{T1}{AkkRg__}{m}{n}{ <-> AkkRg__}{}
+\pdfmapline{+AkkRg__\space <AkkRg__.ttf\space <T1-WGL4.enc}

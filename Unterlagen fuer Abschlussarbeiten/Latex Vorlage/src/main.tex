@@ -1,0 +1,334 @@
+\RequirePackage[l2tabu, orthodox]{nag}		%checks for obsolete LaTeX packages and outdated commands
+\documentclass[
+	fontsize=11pt,%				Schriftgroesse 11pt
+	paper=a4,%					Layout fuer Din A4
+	twoside=false,%				Layout fuer beidseitigen Druck %semi %true
+	twocolumn=false,%			zweispaltiger Satz
+	headsepline=true,%			horizontale Linie unter Kolumnentitel
+	footsepline=false,%			Trennline zum Seitenfuß
+	headinclude=true,%			Kopfzeile wird Seiten-Layouts mit beruecksichtigt
+	footinclude=false,%			Fußzeile wird Seiten-Layouts mit beruecksichtigt
+	chapterentrydots=false,%	Inhaltsverzeichnis dotfill für Kapitel
+	parskip=false,%				Der erste Absatz eines Abschnitts wird nicht eingezogen
+	BCOR=12mm,%					Korrektur fuer die Bindung
+	DIV=15,%					DIV-Wert fuer die Erstellung des Satzspiegels, siehe scrguide	%calc
+	parskip=half,%				Absatzabstand statt Absatzeinzug
+	footnotes=multiple,%		Fußnotenmarkierungen %nomultiple
+	headings=openany,%			Kapitel können auf geraden und ungeraden Seiten beginnen %openleft %openright
+	index=default,%				Index im Inhaltsverzeichnis %totoc %numbered
+	bibliography=totoc,%		Literaturverz. Wird ins Inhaltsverzeichnis eingetragen
+	listof=totoc,%				Tabellen und Abbildungs. Wird ins Inhaltsverzeichnis eingetragen
+	numbers=noendperiod,%		Kapitelnummern immer ohne Punkt	%endperiod %autoendperiod
+	draft=false,%				Keine Bilder in der Anzeige, overfull hboxes werden angezeigt
+	titlepage=true,%			Titlei auf erster Seite	%firstiscover
+	chapterprefix=false,%		Kapitelprefix für mainmatter
+	appendixprefix=true,%		Kapitelprefix für Anhang
+	bibliography=oldstyle,%		Formatierungsstil des Literaturverzeichnisses %openstyle
+	cleardoublepage=plain,%		Leere seiten plain
+	pagesize=auto,%				Ausgabetreiber %pdftex
+	]{scrbook}%					crbook 2018/01/23 v3.24
+
+\usepackage{scrhack}
+\usepackage{scrwfile}
+\usepackage{ifluatex}
+
+\usepackage[english, ngerman]{babel}%		Nötig, damit Dokument in Deutsch generiert wird
+\usepackage[utf8]{luainputenc}%				Nötig um Umlaute zu tippen. Alternativ: latin1
+\ifluatex
+	\usepackage[no-math]{fontspec}
+\else
+	\usepackage[T1]{fontenc}%				font encoding
+\fi
+
+\usepackage[centertags]{amsmath}%	AMS-Mathematik, %centertags zentriert Nummer bei split, %fleqn
+\interdisplaylinepenalty=2500
+\usepackage{amsthm}
+\usepackage{amsfonts}%				Standard fonts
+\usepackage{amssymb}%				Standard fonts
+\usepackage{gensymb}
+\usepackage{array}
+\usepackage{mathtools}%				Multiline and split equations
+\usepackage{relsize}
+\usepackage{physics}
+
+\ifluatex
+	\usepackage[luatex]{graphicx}%			Package um grafiken zu includieren
+\else
+	\usepackage[pdftex]{graphicx}%
+\fi
+\usepackage{textcomp}%						verschiedene Symbole
+\usepackage[onehalfspacing]{setspace}%		Zeilenabstand anpassen
+	\KOMAoptions{DIV=last}%					Seitenspiegel durch setspace nicht verändern
+\usepackage[hang, bf, font=small, textformat=period]{caption}%	Captions für figures und tables
+\usepackage{subcaption}%					Package um subfigure zu erstellen
+\usepackage[svgnames, table]{xcolor}%		Farbkonversion etc.
+\usepackage{colortbl}%						Support for colors in tables
+\usepackage{multirow}%						Zelle einer Tabelle über mehrere Zeilen ausdehnen
+\usepackage{booktabs}%						Tabellenformatierung
+\usepackage{rotating}%						Rotation von tables und figures
+\usepackage{tikz}%							Zeichnen direkt in Latex
+\usepackage[siunitx]{circuitikz}%			Zeichnen von elektrischen Schaltbildern direkt in Latex
+\usepackage{pgfplots}
+	\pgfplotsset{
+		compat=newest,%						% TODO: set to current version of pgfplots, when starting your work (2018/01/23: compat=1.15)
+		width=0.8\textwidth,%
+		colormap={blackwhite}{gray(0cm)=(0); gray(1cm)=(1)},%
+	}
+\usepackage{siunitx}
+	\sisetup{
+		locale = DE,%
+		detect-all,%
+% 		scientific-notation = engineering,%
+		list-final-separator = { und },%
+		list-pair-separator = { und },%
+		range-phrase = { bis },%
+		per-mode = symbol,%
+		binary-units = true,%
+		quotient-mode = fraction,%
+		output-complex-root = j,%
+	}
+	\DeclareSIUnit[]\dBm{dBm}
+	\DeclareSIUnit[]\dBW{dBW}
+\usepackage{calc}%							Hilfspaket um mit Latex variablen zu rechnen
+\usepackage{listings}%						Paket um sourcecode zu publizieren
+
+\lstnewenvironment{matlab}[1][]{
+	\lstset{
+		backgroundcolor=\color{white}, %\color{TUgreen!20}, %\color{gray!20}
+		fillcolor=,% %\color{black},
+		captionpos=t,% b
+		tabsize=4,%
+		rulecolor=\color{black},%
+		rulesepcolor=\color{gray!30},%
+		language=Matlab,%
+		basicstyle=\small,%
+		numbers=left,%
+		numberfirstline=true,%
+		numberblanklines=true,%
+		stepnumber=1,%
+		numbersep=5pt,%
+		numberstyle=\scriptsize,%
+		upquote=true,%
+		aboveskip={0\baselineskip},%
+% 		belowskip=\baselineskip,%
+		columns=flexible,% %fixed,
+		showstringspaces=false,%
+		extendedchars=true,%
+		breaklines=true,%
+		breakatwhitespace=true,%
+		prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\color{black}\hookleftarrow}},%
+		breakautoindent=true,%
+		frame=single,% %tblr, %shadowbox, %tblrTBLR,
+		frameround=ffff,% %tttt,
+		showtabs=false,%
+		showspaces=false,%
+		showstringspaces=false,%
+		identifierstyle=\ttfamily,%
+		basicstyle=\ttfamily\color{black},%
+		keywordstyle=\ttfamily\bfseries\color{MidnightBlue},%
+		commentstyle=\color{tudark},% %\color{MediumTurquoise},
+		stringstyle=\color{DarkOrchid},%
+		mathescape=true,%
+		showlines=true,%
+		escapechar=§,%							escape to latex
+		abovecaptionskip=0\smallskipamount,%
+		belowcaptionskip=3\smallskipamount,%
+		xleftmargin=1.25\baselineskip,%
+		xrightmargin=0pt,
+		#1,%									add more options from the optional parameter
+	}}{}
+\usepackage[
+	pdfpagelabels,
+	colorlinks=false,
+	plainpages=false,
+	pdfborder={0 0 0},
+	]{hyperref}%						Automatische Kreuzreferenzierungen (auch URLs) im PDF
+\makeatletter
+\AtBeginDocument{\hypersetup{
+		pdftitle = {\@documentnumber},%
+		pdfsubject = {\@title},%
+		pdfauthor = {\@author},%
+		pdfkeywords = {},%
+		bookmarksopen = {true},%
+		bookmarksdepth = 3,%			up to subsubsection titles will be included into PDF structure
+		bookmarksopenlevel = 1,%		... up to section titles
+	}
+}
+\usepackage[acronym,nonumberlist,section=chapter,translate=false,shortcuts,toc=true]{glossaries} % Glossar, Abkürzungsverzeichniss etc.
+	\renewcommand{\acronymname}{Abkürzungsverzeichnis}
+	\newglossary[slg]{symbol}{sym}{sbl}{Symbolverzeichnis}
+	\makeglossaries
+	\newglossarystyle{tab_style}{
+		\renewenvironment{theglossary}{\begin{longtable}[l]{llp{0mm}}}{\end{longtable}}
+		\renewcommand*{\glsgroupheading}[1]{}
+		\renewcommand*{\glossentry}[2]{\glsentryitem{##1}\glstarget{##1}{\textbf{\glossentryname{##1}}} & \glossentrydesc{##1} & ##2 \tabularnewline[3px]}
+		\renewcommand*{\subglossentry}[3]{\glossentry{##2}{##3}}
+		\renewcommand*{\glsgroupskip}{}
+	}
+	\newglossarystyle{tab_style_sym}{ 
+		\renewenvironment{theglossary}{\begin{longtable}[l]{llp{0mm}}}{\end{longtable}}
+		\renewcommand*{\glsgroupheading}[1]{}
+		\renewcommand*{\glossentry}[2]{\glsentryitem{##1}\glstarget{##1}{\glossentrysymbol{##1}} & \glossentrydesc{##1} & ##2 \tabularnewline[3px]}
+		\renewcommand*{\subglossentry}[3]{\glossentry{##2}{##3}}
+		\renewcommand*{\glsgroupskip}{}
+	}
+
+\input{backmatter/symbols_and_acronyms}%	load symbol and acronym defintions
+\glsaddallunused[\acronymtype]%				add all abbreviations
+\glsaddallunused[symbol]%					add all symbols
+\makeatother
+
+% *** CITATION PACKAGES ***
+\usepackage[style=ieee, backref=false, dashed=false, doi=false, isbn=false, backend=biber]{biblatex}
+\usepackage[autostyle=true, german=quotes]{csquotes}
+\addbibresource{literatur.bib}
+
+\DeclareBibliographyDriver{standard}{%
+	\usebibmacro{bibindex}%
+	\usebibmacro{begentry}%
+	\usebibmacro{author/editor+others/translator+others}%
+	\setunit{\labelnamepunct}\newblock
+	\usebibmacro{maintitle+title}%
+	\newunit\newblock
+	\printfield{version}%
+	\newunit\newblock
+	\printfield{series}%
+	\newunit\newblock
+	\printfield{number}%
+	\iffieldundef{number}{%
+		\newunit\newblock
+		\printfield{type}%
+	}{%
+		\setunit{\addspace}\newblock
+		\printfield[parens]{type}%
+	}
+	\newunit\newblock
+	\printfield{note}%
+	\newunit\newblock
+	\usebibmacro{organization+location+date}%
+	\newunit\newblock 
+	\usebibmacro{chapter+pages}% 
+	\newunit 
+	\printfield{pagetotal}% 
+	\newunit\newblock
+	\iftoggle{bbx:isbn}
+		{\printfield{isbn}}
+		{}%
+	\newunit\newblock
+	\iftoggle{bbx:url}
+		{\usebibmacro{url+urldate}}
+		{}%
+	\newunit\newblock 
+	\usebibmacro{addendum+pubstate}%
+	\setunit{\bibpagerefpunct}\newblock
+	\usebibmacro{pageref}%
+	\newunit\newblock
+	\usebibmacro{related}%
+	\usebibmacro{finentry}}
+
+\usepackage[german]{cleveref}
+
+% WASSERZEICHEN
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkLightness{0.9}
+% \SetWatermarkScale{1}
+
+% Schrift
+\ifluatex
+	% Arial
+	\setmainfont{Arial}
+	\setsansfont{Arial}
+	% or Calibri
+% 	\setmainfont{Calibri}
+% 	\setsansfont{Calibri}
+	\usepackage[italic]{mathastext}
+\else
+	\usepackage{helvet}
+	\renewcommand{\familydefault}{\sfdefault}
+	\usepackage[helvet]{sfmath}
+	\usepackage{sansmathaccent}
+\fi
+
+% TU Farben
+\xdefinecolor{tugreen}{RGB}{132, 184, 24}%		0
+\colorlet{tulight}{tugreen!20!white}%			1
+\colorlet{tudark}{tugreen!60!black}%			2
+\xdefinecolor{tuorange}{RGB}{227, 105, 19}%		3
+\xdefinecolor{tuyellow}{RGB}{242, 189, 0}%		4
+\xdefinecolor{tucitron}{RGB}{249, 219, 0}%		5
+
+% Nummerierung in den Überschriften bis Ebene...
+% \setcounter{secnumdepth}{4}
+% \setcounter{tocdepth}{4}
+
+% Fußnoten mit Buchstaben
+% \renewcommand{\thefootnote}{\alph{footnote}}
+
+% Verzeichnisnamen
+% \renewcommand{\contentsname}{}
+% \renewcommand{\listfigurename}{}
+% \renewcommand{\listtablename}{}
+% \renewcommand{\refname}{}
+% \renewcommand{\abstractname}{}
+\renewcommand*{\lstlistingname}{Quellcode} % Listings umbenennen
+\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis} % Listingsverzeichnis umbenennen
+
+% Todo environment
+\newenvironment{TODO}[1]{\textcolor{red}{\textbf{TODO: #1}}}
+
+% Bilder
+\graphicspath{./images/}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% Titelei
+\usepackage{kt_title}
+\usepackage{lipsum}	% TODO: remove. This is for dummy text only
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thesistitle{Tasty Kanalmodell\\ für die drahtlose Kommunikation\\ zwischen Gebäuden und\\ Außeninstallationen} % Titel der Abschlussarbeit % no more than 4 lines here
+\documentnumber{B\ 14-2015}%	MXX-20XX
+\documenttype{Bachelorarbeit}%	Masterarbeit
+\authorfirstname{Käpt'n Kevin}%	Name des Autors
+\authorsurname{Blaubär}%		Nachname des Autors
+\matrikelnumber{123456}%		Matrikelnummer des Autors
+\date{23. Januar 2018}%			Abgabedatum
+
+\makeatletter
+\title{\@thesistitle}
+\author{\@authorfirstname\space\@authorsurname}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\frontmatter
+\pagestyle{empty}
+\maketitle
+% \include{frontmatter/acknoledgement}
+\pagestyle{headings}
+% \include{frontmatter/abstract}
+\tableofcontents%			Inhaltsverzeichnis
+
+\mainmatter
+\include{mainmatter/einleitung}
+\include{mainmatter/grundlagen}
+\include{mainmatter/implementierung}
+\include{mainmatter/auswertung}
+\include{mainmatter/zusammenfassung}
+
+\appendix
+\include{mainmatter/anhangA}
+
+\backmatter
+\include{backmatter/nomenclature}
+\listoffigures%				Abbildungsverzeichnis
+\listoftables%				Tabellenverzeichnis
+\lstlistoflistings%			Listingsverzeichnis
+
+% \nocite{*}%				es wird alles zitiert
+\printbibliography%			Literaturverzeichnis
+
+\include{backmatter/eidestattliche_erklaerung}
+\end{document}
