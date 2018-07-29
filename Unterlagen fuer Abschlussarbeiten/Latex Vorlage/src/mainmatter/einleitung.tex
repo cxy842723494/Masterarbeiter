@@ -1,34 +1,11 @@
-\chapter{Einleitung} \label{cha:Einleitung}
+\chapter{Einleitung}\label{cha:Einleitung}
 
 
 
-\section{Section} \label{sec:Section}
+\section{Section}\label{sec:Section}
 
-Jetzt nur noch schreiben! :)
+Jetzt nur noch schreiben! :)12345
 %!TEX root = ../thesis.tex
 
 
-In diesem Kapitel soll der zuvor implementierte \ac{UIC} evaluiert werden. Hierzu wird ein Testaufbau realisiert und das Gesamtsystem auf Funktionalität und erreichbare Datenrate getestet.
-
-
- Multimeter und ein Tektronix TDS 2022B \ac{USB} Oszilloskop angeschlossen. Zwei getrennte Clients greifen auf den \ac{UIC} zu und stellen Anfragen an die Testgeräte. 
-Durch diesen Aufbau, können mehrere Aspekte evaluiert werden. Zum Einen ist es möglich Störungen, welche beim Zugriff eines Controllers auf unterschiedliche Geräte auftreten zu erkennen. Durch die Verwendung von zwei Controllern können außerdem Zugriffsverletzungen, bei gleichzeitigem Zugriff zweier Benutzer auf ein Gerät erkannt werden. Durch die Verwendung mehrere Kommunikationsstandards (\ac{USB}, \ac{GPIB}) kann untersucht werden, ob es in der Implementierung des Frameworks Fehler gibt. Die maximal erreichbare Datenrate kann durch eine Übertragung mehrerer großer Datenpakete und anschließender Mittelung gemessen werden. 
-
-
-
-	
-
-
-
-Um die Funktionalität des \ac{UIC} sicherzustellen werden mit dem oben beschriebenen Testaufbau einige beispielhafte Operationen durchgeführt. 
-Die implementierte GPIB Funktionalität kann an den beiden vorhandenen Geräten getestet werden. Im Betrieb mit mehr als einem Client, kann die Funktionalität des Sperr-Mechanismus und der generellen Ausfallsicherheit im Multi-Client Betrieb evaluiert werden. Der erfolgreiche Abbruch einer Operation durch einen abort() Befehl ist ebenso erreichbar. Die testweise implementierte USB-Schnittstelle kann über das angeschlossene Oszilloskop angesprochen werden. Hierbei ist es möglich, alle über den Core Channel ablaufenden Befehle am Oszilloskop auszuführen. Beispielhaft kann die aktuell auf dem Display angezeigte Wellenform zu einem Client übertragen werden, der diese anschließend weiterverarbeiten kann.
-Der UIC ist in der Lage alle diese Anforderungen zu erfüllen, ohne ein Fehlverhalten zu zeigen. Für eine wirkliche Beurteilung der Leistungsfähigkeit und Bestätigung der qualitativen Stabilität sind allerdings weitere Langzeittests mit mehr Freiheitsgraden durchzuführen.
-
-
-
-Zur Bestimmung der maximal erreichbaren Datenrate, wird ein großes Datenpaket mehrmals von einem Client an das \ac{HP} 3478A \ac{GPIB} Multimeter übertragen, und die benötigte Zeit gemessen. Da der \ac{GPIB} Bus keine Rückmeldung über übertragene Pakete liefert, wird nach 1294638 Ausführungen des write() Kommandos ein read() Kommando ausgeführt. Insgesamt werden 1000 Datenpakete zu je \SI{1018}{\byte} übertragen. Durch den read() Befehl werden zusätzlich \SI{13}{\byte} übertragen. Die gesuchte Datenrate ergibt sich somit zu: 
-
-
-Zur gemessenen Datenrate von \SI{23,28}{\kilo\byte/\second} lässt sich festhalten, dass diese deutlich unter der theoretischen \ac{UART} und \ac{TCP/IP} Geschwindigkeit liegt. Der merkliche Geschwindigkeitsunterschied, kann verschiedene Ursachen haben. Zum einen ist der \ac{GPIB} Bus aufgrund des Handshake Mechanismus, nur so schnell wie der langsamste Teilnehmer. Außerdem liegt bei den Implementierungen in diesem Projekt der Fokus nicht primär auf der Übertragungsgeschwindigkeit, sondern auf möglichst großer Stabilität und Benutzbarkeit. Allerdings lässt sich die Datenrate durch Optimierungen im Programmcode noch weiter steigern. 
-%Da in den Implementierungen zu diesem Projekt allerdings der Fokus nicht primär auf der Übertragungsgeschwindigkeit liegt, lässt sich diese durch einige Umstellungen im Programmcode noch steigern.
 

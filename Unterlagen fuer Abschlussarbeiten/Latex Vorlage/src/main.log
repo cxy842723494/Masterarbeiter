@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.22)  22 JUL 2018 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.24)  24 JUL 2018 09:42
 entering extended mode
 **./main.tex
 (main.tex
@@ -3128,18 +3128,14 @@ Package: glossary-tree 2018/06/01 v4.40 (NLCT)
 \glstreeindent=\skip98
 ))
 \glswrite=\write5
-\glo@main@file=\write6
-\openout6 = `main.glo'.
+\glo@acronym@file=\write6
+\openout6 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 160.
-\glo@acronym@file=\write7
-\openout7 = `main.acn'.
+Package glossaries Info: Writing glossary file main.acn on input line 161.
+\glo@symbol@file=\write7
+\openout7 = `main.sbl'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 160.
-\glo@symbol@file=\write8
-\openout8 = `main.sbl'.
-
-Package glossaries Info: Writing glossary file main.sbl on input line 160.
+Package glossaries Info: Writing glossary file main.sbl on input line 161.
 
 (backmatter/symbols_and_acronyms.tex)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty"
@@ -3199,7 +3195,7 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibparsep=\skip105
 \bibhang=\skip106
 \blx@bcfin=\read3
-\blx@bcfout=\write9
+\blx@bcfout=\write8
 \c@mincomprange=\count406
 \c@maxcomprange=\count407
 \c@mincompwidth=\count408
@@ -3532,50 +3528,50 @@ Package csquotes Info: ... found 'babel' package.
 (backmatter/nomenclature.aux) (backmatter/eidestattliche_erklaerung.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 305.
-LaTeX Font Info:    ... okay on input line 305.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 305.
-LaTeX Font Info:    ... okay on input line 305.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 305.
-LaTeX Font Info:    ... okay on input line 305.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 305.
-LaTeX Font Info:    ... okay on input line 305.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 305.
-LaTeX Font Info:    ... okay on input line 305.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 305.
-LaTeX Font Info:    ... okay on input line 305.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 305.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 305.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 306.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 306.
 
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 305.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 305.
-LaTeX Font Info:    ... okay on input line 305.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 305.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 306.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-Package nag Info: pgf.sty is broken: disabling dollar check on input line 305.
+Package nag Info: pgf.sty is broken: disabling dollar check on input line 306.
 Package nag Info: Command \RaggedLeft not defined, skipping amendment on input 
-line 305.
+line 306.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
- line 305.
-Package scrwfile Info: Using `\Hy@AtBeginDocument` on input line 305.
+ line 306.
+Package scrwfile Info: Using `\Hy@AtBeginDocument` on input line 306.
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/phv/m/n --> TS1/phv/bx/n on input line 305.
-Package gensymb Info: Math companion symbols declared on input line 305.
-LaTeX Info: Redefining \degree on input line 305.
-LaTeX Info: Redefining \celsius on input line 305.
+(Font)                  TS1/phv/m/n --> TS1/phv/bx/n on input line 306.
+Package gensymb Info: Math companion symbols declared on input line 306.
+LaTeX Info: Redefining \degree on input line 306.
+LaTeX Info: Redefining \celsius on input line 306.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 305.
-LaTeX Info: Redefining \ohm on input line 305.
-Package gensymb Info: Using \textohm for \ohm on input line 305.
-Package gensymb Info: Using \textmu for \micro on input line 305.
+erthousand on input line 306.
+LaTeX Info: Redefining \ohm on input line 306.
+Package gensymb Info: Using \textohm for \ohm on input line 306.
+Package gensymb Info: Using \textmu for \micro on input line 306.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -3631,9 +3627,9 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 File: siunitx-binary.cfg 2017/11/26 v2.7k siunitx: Binary units
 )
 \c@lstlisting=\count502
-Package scrhack Info: undefining \float@addtolists on input line 305.
+Package scrhack Info: undefining \float@addtolists on input line 306.
 \AtBeginShipoutBox=\box76
-Package hyperref Info: Link coloring OFF on input line 305.
+Package hyperref Info: Link coloring OFF on input line 306.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -3645,104 +3641,104 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count503
 )
-LaTeX Info: Redefining \ref on input line 305.
-LaTeX Info: Redefining \pageref on input line 305.
-LaTeX Info: Redefining \nameref on input line 305.
+LaTeX Info: Redefining \ref on input line 306.
+LaTeX Info: Redefining \pageref on input line 306.
+LaTeX Info: Redefining \nameref on input line 306.
  (main.out) (main.out)
-\@outlinefile=\write10
-\openout10 = `main.out'.
+\@outlinefile=\write9
+\openout9 = `main.out'.
 
-Package scrwfile Info: Extending `\@starttoc`  on input line 305.
+Package scrwfile Info: Extending `\@starttoc`  on input line 306.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 306.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 305.
+(hyperref)                removing `\\' on input line 306.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 305.
+(hyperref)                removing `\\' on input line 306.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 305.
+(hyperref)                removing `\\' on input line 306.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 305.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 305.
+(babel)             in language  on input line 306.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 306.
 (main.glsdefs)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout9 = `main.bcf'.
+\openout8 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 305.
-Package biblatex Info: Reference segment=0 on input line 305.
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl)
+Package biblatex Info: Reference section=0 on input line 306.
+Package biblatex Info: Reference segment=0 on input line 306.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
-line 305.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 305.
+line 306.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 306.
+
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 305.
+LaTeX Font Info:    Try loading font information for U+msa on input line 306.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 305.
+LaTeX Font Info:    Try loading font information for U+msb on input line 306.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 305.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 306.
 
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
-<kt_title.pdf, id=78, 597.55246pt x 845.07718pt>
+<kt_title.pdf, id=90, 597.55246pt x 845.07718pt>
 File: kt_title.pdf Graphic file (type pdf)
 <use kt_title.pdf>
-Package pdftex.def Info: kt_title.pdf  used on input line 308.
+Package pdftex.def Info: kt_title.pdf  used on input line 309.
 (pdftex.def)             Requested size: 597.551pt x 845.04932pt.
 \baselength=\skip122
 LaTeX Font Info:    Try loading font information for T1+AkkBd__ on input line 3
-08.
+09.
 
 (t1akkbd__.fd
 File: AkkBd__.fd 
 {C:/Users/Chen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map})
 LaTeX Font Info:    Try loading font information for T1+AkkRg__ on input line 3
-08.
+09.
 (t1akkrg__.fd
 File: t1AkkRg__.fd 
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 309.
  [1
 
 
@@ -3753,20 +3749,20 @@ Package babel Info: Redefining ngerman shorthand "~
 
  <./kt_title.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 312.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 313.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 312.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 313.
 
 Use my own \@starttoc for toc
 (main.toc)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 315.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 315.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 315.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 315.
  [2
 
 
@@ -3786,173 +3782,20 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
-
-! Package glossaries Error: Glossary entry `UIC' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 ...el soll der zuvor implementierte \ac{UIC} 
-                                                  evaluiert werden. Hierzu w...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `USB' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 ...eter und ein Tektronix TDS 2022B \ac{USB} 
-                                                  Oszilloskop angeschlossen....
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `UIC' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 ...etrennte Clients greifen auf den \ac{UIC} 
-                                                  zu und stellen Anfragen an...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `USB' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...mehrere Kommunikationsstandards (\ac{USB},
-                                                   \ac{GPIB}) kann untersuch...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `GPIB' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...munikationsstandards (\ac{USB}, \ac{GPIB})
-                                                   kann untersucht werden, o...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `UIC' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 Um die Funktionalität des \ac{UIC} 
-                                         sicherzustellen werden mit dem oben...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `HP' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 ... mehrmals von einem Client an das \ac{HP} 
-                                                  3478A \ac{GPIB} Multimeter...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `GPIB' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 ...nem Client an das \ac{HP} 3478A \ac{GPIB} 
-                                                  Multimeter übertragen, un...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `GPIB' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 ...enötigte Zeit gemessen. Da der \ac{GPIB} 
-                                                  Bus keine Rückmeldung üb...
-
-You need to define a glossary entry before you can use it.
-
+)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 316.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 316.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 316.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
-[1
+(babel)             in language  on input line 316.
+ [1
 
 
 
 ]
-
-! Package glossaries Error: Glossary entry `UART' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 ...eutlich unter der theoretischen \ac{UART} 
-                                                  und \ac{TCP/IP} Geschwindi...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `TCP/IP' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 ...r theoretischen \ac{UART} und \ac{TCP/IP} 
-                                                  Geschwindigkeit liegt. Der...
-
-You need to define a glossary entry before you can use it.
-
-
-! Package glossaries Error: Glossary entry `GPIB' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 ...sachen haben. Zum einen ist der \ac{GPIB} 
-                                                  Bus aufgrund des Handshake...
-
-You need to define a glossary entry before you can use it.
-
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 315.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 315.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 315.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 315.
- [2]
 \openout2 = `mainmatter/grundlagen.aux'.
 
  (mainmatter/grundlagen.tex
@@ -3965,9 +3808,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
-
-LaTeX Warning: Citation 'Kammeyer' on page 3 undefined on input line 11.
-
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
@@ -3984,13 +3824,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 73.
-[3
+[2
 
 
 
 ]
-\@gls@deffile=\write11
-\openout11 = `main.glsdefs'.
+\@gls@deffile=\write10
+\openout10 = `main.glsdefs'.
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 82.
@@ -4000,23 +3840,16 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 82.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 82.
- [4]
+ [3]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 83.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 83.
-
-
-LaTeX Warning: Citation 'IEEE2012' on page 5 undefined on input line 99.
-
-
-LaTeX Warning: Citation 'IEEE2012' on page 5 undefined on input line 99.
-
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 104.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 106.
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 129.
@@ -4042,16 +3875,16 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 146.
 
-[5])
+[4])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 316.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 316.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 316.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 316.
- [6]
+(babel)             in language  on input line 317.
+ [5]
 \openout2 = `mainmatter/implementierung.aux'.
 
  (mainmatter/implementierung.tex
@@ -4060,45 +3893,45 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-<images/Spell_Checker_preferences.jpg, id=214, 925.4575pt x 695.59875pt>
+<images/Spell_Checker_preferences.jpg, id=230, 925.4575pt x 695.59875pt>
 File: images/Spell_Checker_preferences.jpg Graphic file (type jpg)
 <use images/Spell_Checker_preferences.jpg>
 Package pdftex.def Info: images/Spell_Checker_preferences.jpg  used on input li
 ne 15.
 (pdftex.def)             Requested size: 370.17644pt x 278.23457pt.
-[7
+[6
 
 
 
  <./images/Spell_Checker_preferences.jpg>]
-<images/PdfLatex_settings.jpg, id=222, 565.11125pt x 309.155pt>
+<images/PdfLatex_settings.jpg, id=238, 565.11125pt x 309.155pt>
 File: images/PdfLatex_settings.jpg Graphic file (type jpg)
 <use images/PdfLatex_settings.jpg>
 Package pdftex.def Info: images/PdfLatex_settings.jpg  used on input line 34.
 (pdftex.def)             Requested size: 226.04048pt x 123.6598pt.
-<images/Viewer_settings.jpg, id=225, 492.84125pt x 550.055pt>
+<images/Viewer_settings.jpg, id=241, 492.84125pt x 550.055pt>
 File: images/Viewer_settings.jpg Graphic file (type jpg)
 <use images/Viewer_settings.jpg>
 Package pdftex.def Info: images/Viewer_settings.jpg  used on input line 58.
 (pdftex.def)             Requested size: 197.133pt x 220.0181pt.
-<images/SumatraPDF_optionen.jpg, id=227, 363.3575pt x 420.57124pt>
+<images/SumatraPDF_optionen.jpg, id=243, 363.3575pt x 420.57124pt>
 File: images/SumatraPDF_optionen.jpg Graphic file (type jpg)
 <use images/SumatraPDF_optionen.jpg>
 Package pdftex.def Info: images/SumatraPDF_optionen.jpg  used on input line 67.
 
 (pdftex.def)             Requested size: 145.34041pt x 168.22551pt.
- [8 <./images/PdfLatex_settings.jpg>] [9 <./images/Viewer_settings.jpg> <./imag
+ [7 <./images/PdfLatex_settings.jpg>] [8 <./images/Viewer_settings.jpg> <./imag
 es/SumatraPDF_optionen.jpg>])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 318.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 318.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 318.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 318.
 
-[10]
+[9]
 \openout2 = `mainmatter/auswertung.aux'.
 
  (mainmatter/auswertung.tex
@@ -4107,30 +3940,20 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-
-LaTeX Warning: Citation 'Reinhold:2013fk' on page 11 undefined on input line 3.
-
-
-
-LaTeX Warning: Citation 'Moon' on page 11 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'IEEE2011' on page 11 undefined on input line 3.
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 318.
+(babel)             in language  on input line 319.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 318.
+(babel)             in language  on input line 319.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 318.
+(babel)             in language  on input line 319.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 318.
- [11
+(babel)             in language  on input line 319.
+ [10
 
 
 
@@ -4149,14 +3972,14 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 319.
- [12
+(babel)             in language  on input line 320.
+ [11
 
 
 
@@ -4175,33 +3998,37 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 322.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 322.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 322.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 322.
- [13
+(babel)             in language  on input line 323.
+ [12
 
 
 
 ]
 \openout2 = `backmatter/nomenclature.aux'.
 
- (backmatter/nomenclature.tex
-No file main.acr.
-No file main.sym.
-)
+ (backmatter/nomenclature.tex (main.acr
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 1.
+) (main.sym
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 325.
- [14
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [13
+
+
 
 
 
@@ -4209,61 +4036,93 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+))
+Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 326.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 326.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 326.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 326.
+ [14
+
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 327.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 327.
 
 Use my own \@starttoc for lof
 (main.lof)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 328.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 328.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 328.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 328.
  [15
 
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 328.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 328.
 
 Use my own \@starttoc for lot
 (main.lot)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 329.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 329.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 329.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 329.
  [16
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 329.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 329.
 
 Use my own \@starttoc for lol
 (main.lol)
-
-LaTeX Warning: Empty bibliography on input line 331.
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 332.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 332.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 332.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 333.
-[17
+(babel)             in language  on input line 332.
+ [17
+
+]
+chapter without number
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 332.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 332.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 332.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 334.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 334.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 334.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 334.
+[18
 
 ]
 \openout2 = `backmatter/eidestattliche_erklaerung.aux'.
@@ -4277,23 +4136,23 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 12.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 333.
- [18
+(babel)             in language  on input line 334.
+ [19
 
 
 
 ]
 No complaints by nag.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 335.
 \openout2 = `main.wrt'.
 
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 335.
 (main.aux
 Use my own \@writefile for toc
 Use my own \@writefile for lof
@@ -4366,10 +4225,17 @@ Use my own \@writefile for lof
 Use my own \@writefile for lot
 Use my own \@writefile for lol
 Use my own \@writefile for toc
-) (backmatter/nomenclature.aux)
+) (backmatter/nomenclature.aux
+Use my own \@writefile for toc
+Use my own \@writefile for toc
+)
 Use my own \@writefile for toc
 Use my own \@writefile for toc
 Use my own \@writefile for toc
+Use my own \@writefile for toc
+Use my own \@writefile for lof
+Use my own \@writefile for lot
+Use my own \@writefile for lol
 (backmatter/eidestattliche_erklaerung.aux))
 Process extension: `toc'
 \openout2 = `main.toc'.
@@ -4387,71 +4253,41 @@ Process extension: `lol'
 \openout2 = `main.lol'.
 
 (main.wrt)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 335.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 335.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2246BF9DFEFF598D30BF672046F8A53E;1038.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 5D0A14CD794636B7EE5F601902B888A6;1202.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68602 strings out of 493290
- 1529115 string characters out of 3129424
- 2597264 words of memory out of 3000000
- 71023 multiletter control sequences out of 15000+200000
+ 68697 strings out of 493290
+ 1530938 string characters out of 3129424
+ 2602772 words of memory out of 3000000
+ 71098 multiletter control sequences out of 15000+200000
  605954 words of font info for 135 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  79i,17n,136p,9085b,3994s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:c0} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:ohm} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:pi} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:angstrom} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:led} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:abc} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist, r
-eplaced by a fixed one
-
- <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tct
-t1095.pk> <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
-pi600\ectt1095.pk>{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
-ips/base/8r.enc}{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/ttf2
-pk/base/T1-WGL4.enc}<./AkkRg__.ttf><./AkkBd__.ttf><C:/Users/Chen/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Chen/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/U
-sers/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss
-10.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmss8.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmss9.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chen/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Chen/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Chen/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Chen/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (20 pages, 430405 bytes).
+ <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+ctt1095.pk> <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ectt1095.pk>{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
+dvips/base/8r.enc}{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/tt
+f2pk/base/T1-WGL4.enc}<./AkkRg__.ttf><./AkkBd__.ttf><C:/Users/Chen/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Chen/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
+/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ss10.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmss8.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmss9.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chen/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Chen/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Chen/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Che
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (21 pages, 436990 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 83 named destinations out of 1000 (max. 500000)
- 182 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 466 PDF objects out of 1000 (max. 8388607)
+ 98 named destinations out of 1000 (max. 500000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
