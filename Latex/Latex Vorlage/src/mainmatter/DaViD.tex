@@ -1,6 +1,6 @@
 \chapter{DaViD} \label{cha:David}
 
-In diesem Kapitel werden das DaViD System beschrieben. Zuerst läuft die Vorstellung des DaViD-Systems.  Die mögliche Anwendungsbereiche des Systems werden in anschließenden Abschnitt erläutert. Schließlich folgt die Modulationsverfahren des DaVids und das Struktur des System-Models. 
+In diesem Kapitel werden das DaViD System beschrieben. Zuerst läuft die Vorstellung des DaViD-Systems. Die Systemmodell und Arbeitsprinzip des Systems werden in anschließenden Abschnitt erläutert. Schließlich folgt die mögliche Anwendungsbereiche des Systems.
 %Durch diese Beschreibung wird die Bedeutung und Ziele dieses Papiers besser verstehen.\ldots
 
 \section{Einführung des DaViDs} 
@@ -13,6 +13,59 @@ DaVid, abkürzt von \uline{Da}ta transmission using \uline{Vi}deo \uline{d}evice
  \caption{Eine beispielhafte Implementierung des DaViD-Systems}
  \label{fig:David1}
 \end{figure}
+
+
+\section{Modulationsverfahren} 
+
+Ein Modulationsverfahren, das die Videoqualität nicht offensichtlich reduziert garantiert, ist sehr wichtig für ein auf Videogerät basierendes Datenübertragungssystem. Die simultane Datenübertragung wird durch individuelle Modulation der Pixelamplituden des Displays realisiert. Ein robustes Multiplex-Schema muss definiert werden, um eine eindeutige und zuverlässige Demodulation, die ohne nennenswertes Übersprechen von beliebigen Videoinhalten, zu erreichen. Im DaVid-System wird dies durch Verdoppeln von Videoinhalt und Hinzufügen von Differenzdatenmustern zu Paaren des Pixels implementieren. Deshalb in zeitlicher oder örtlicher Richtung die Videoinhalt in paar Bildern werden gleich.
+
+
+Die möglichen Modulationsverfahren sind:
+\begin{itemize}
+	\item Zeitliche differentielle Modulation der Luminanz
+	\item Zeitliche differentielle Modulation der Chrominanz
+	\item Örtliche differentielle Modulation der Luminanz
+	\item Örtliche differentielle Modulation der Chrominanz
+\end{itemize}
+
+Durch zeitliche differentielle Modulationsverfahre enthalten kontinuierliches Paar von Frames den gleichen Luminanz- bzw. Chrominanz-Videoinhalt. Dagegen in örtliche Modulation sind die benachbarte Pixel mit den gleichen Videoamplituden.
+
+
+Deswegen wird in dieser Arbeit nur zeitliche differentielle Modulation verwendet.
+
+\begin{figure}[htb]
+	\centering 
+	\includegraphics[keepaspectratio,width=0.8\textwidth]{images/David2.jpg}
+	\caption{Blockschaltbild der Signalverarbeitung in zeitlicher differentieller Modulation}
+	\label{fig:David1}
+\end{figure}
+
+
+
+
+\begin{equation}
+\begin{split}
+s_{R/G/B}&(i,j,k+1) = s(i,j,k)\\
+&for  0\le i \textless N_x, 0\le j \textless N_y,k=2m
+\end{split}
+\end{equation}
+
+% \ge
+
+\section{Systemmodell} 
+
+Abbildung 2.2 zeigt die schematische Darstellung des DaVid-Systems. 
+
+
+\begin{figure}[htb]
+	\centering 
+	\includegraphics[keepaspectratio,width=0.8\textwidth]{images/David3.jpg}
+	\caption{Schematische Darstellung von DaVid System}
+	\label{fig:David1}
+\end{figure}
+
+
+
 
 \section{Anwendungsbereiche} 
 %\label{sec:Anwendungsbereiche}
@@ -31,66 +84,6 @@ Sobald die Dienste auf öffentlichen Bildschirmen implementiert werden, kann Leu
 
 
 
-\section{Modulationsverfahren} 
-
-Ein Modulationsverfahren, das die Videoqualität nicht offensichtlich reduziert garantiert, ist sehr wichtig für ein auf einem Videogerät basierendes Datenübertragungssystem. Die simultane Datenübertragung wird durch individuelle Modulation der Pixelamplituden des Displays realisiert. Ein robustes Multiplex-Schema muss definiert werden, um eine eindeutige und zuverlässige Demodulation, die ohne nennenswertes Übersprechen von beliebigen Videoinhalten, zu erreichen. Im DaVid-System wird dies durch Verdoppeln von Videoinhalt und Hinzufügen von Differenzdatenmustern zu Paaren des Pixels implementieren. Deshalb in zeitlicher oder örtlicher Richtung die Videoinhalt in paar Bildern werden gleich.
-
-
-Die möglichen Modulationsverfahren sind:
-\begin{itemize}
-  \item Zeitliche differentielle Modulation der Luminanz
-  \item Zeitliche differentielle Modulation der Chrominanz
-  \item Örtliche differentielle Modulation der Luminanz
-  \item Örtliche differentielle Modulation der Chrominanz
-\end{itemize}
-
-Durch zeitliche differentielle Modulationsverfahre enthalten kontinuierliches Paar von Frames den gleichen Luminanz- bzw. Chrominanz-Videoinhalt. Dagegen in örtliche Modulation sind die benachbarte Pixel mit den gleichen Videoamplituden.
-
-
-Deswegen wird in dieser Arbeit nur zeitliche differentielle Modulation verwendet.
-
-\begin{figure}[htb]
- \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/David2.jpg}
- \caption{Blockschaltbild der Signalverarbeitung in zeitlicher differentieller Modulation}
- \label{fig:David1}
-\end{figure}
-
-
-
-
-\begin{equation}
-\begin{split}
-s_{R/G/B}&(i,j,k+1) = s(i,j,k)\\
-&for  0\le i \textless N_x, 0\le j \textless N_y,k=2m
-\end{split}
-\end{equation}
-
-% \ge
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Systemmodell} 
-
-Abbildung 2.3 zeigt die schematische Darstellung des DaVid-Systems. 
-
-
-\begin{figure}[htb]
- \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/David3.jpg}
- \caption{Schematische Darstellung von DaVid System}
- \label{fig:David1}
-\end{figure}
 
 
 
