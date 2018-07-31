@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.24)  31 JUL 2018 08:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.24)  1 AUG 2018 01:48
 entering extended mode
 **./main.tex
 (main.tex
@@ -3526,20 +3526,8 @@ File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (main.aux
-(mainmatter/einleitung.aux) (mainmatter/DaViD.aux
-
-LaTeX Warning: Label `fig:David1' multiply defined.
-
-
-LaTeX Warning: Label `fig:David1@cref' multiply defined.
-
-
-LaTeX Warning: Label `fig:David1' multiply defined.
-
-
-LaTeX Warning: Label `fig:David1@cref' multiply defined.
-
-) (mainmatter/implementierung.aux) (mainmatter/auswertung.aux)
+(mainmatter/einleitung.aux) (mainmatter/DaViD.aux)
+(mainmatter/implementierung.aux) (mainmatter/auswertung.aux)
 (mainmatter/zusammenfassung.aux) (mainmatter/anhangA.aux)
 (backmatter/nomenclature.aux) (backmatter/eidestattliche_erklaerung.aux))
 \openout1 = `main.aux'.
@@ -3702,14 +3690,14 @@ Package biblatex Info: Automatic encoding selection.
 \openout9 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl)
 Package biblatex Info: Reference section=0 on input line 282.
 Package biblatex Info: Reference segment=0 on input line 282.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
 line 282.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 282.
+
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
@@ -3730,7 +3718,7 @@ LaTeX Font Info:    Try loading font information for TS1+phv on input line 282.
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
-<kt_title.pdf, id=86, 597.55246pt x 845.07718pt>
+<kt_title.pdf, id=94, 597.55246pt x 845.07718pt>
 File: kt_title.pdf Graphic file (type pdf)
 <use kt_title.pdf>
 Package pdftex.def Info: kt_title.pdf  used on input line 285.
@@ -3832,7 +3820,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
-<images/David1.jpg, id=149, 523.9575pt x 262.73157pt>
+<images/David1.jpg, id=159, 523.9575pt x 262.73157pt>
 File: images/David1.jpg Graphic file (type jpg)
 <use images/David1.jpg>
 Package pdftex.def Info: images/David1.jpg  used on input line 12.
@@ -3840,144 +3828,90 @@ Package pdftex.def Info: images/David1.jpg  used on input line 12.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 13.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 22.
 [3
 
 
 
  <./images/David1.jpg>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 37.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 37.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 37.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 37.
- [4]
-<images/David2.jpg, id=161, 234.1548pt x 78.41295pt>
-File: images/David2.jpg Graphic file (type jpg)
-<use images/David2.jpg>
-Package pdftex.def Info: images/David2.jpg  used on input line 54.
-(pdftex.def)             Requested size: 360.55476pt x 120.75627pt.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 66.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 66.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 66.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 66.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 83.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 83.
-<images/David3.jpg, id=162, 3807.22375pt x 2532.46124pt>
+<images/David3.jpg, id=166, 3807.22375pt x 2532.46124pt>
 File: images/David3.jpg Graphic file (type jpg)
 <use images/David3.jpg>
-Package pdftex.def Info: images/David3.jpg  used on input line 90.
-(pdftex.def)             Requested size: 360.55476pt x 239.81348pt.
-
-LaTeX Warning: Citation 'Kammeyer' on page 5 undefined on input line 115.
-
+Package pdftex.def Info: images/David3.jpg  used on input line 25.
+(pdftex.def)             Requested size: 450.69174pt x 299.78616pt.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 31.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
-[5 <./images/David2.jpg>]
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 162.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 162.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <6> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 162.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 34.
+ [4 <./images/David3.jpg>]
+<images/David2.jpg, id=173, 234.1548pt x 78.41295pt>
+File: images/David2.jpg Graphic file (type jpg)
+<use images/David2.jpg>
+Package pdftex.def Info: images/David2.jpg  used on input line 45.
+(pdftex.def)             Requested size: 360.55476pt x 120.75627pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 58.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 174.
- [6 <./images/David3.jpg>]
-\@gls@deffile=\write11
-\openout11 = `main.glsdefs'.
-
+(babel)             in language  on input line 58.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 58.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 58.
+ [5 <./images/David2.jpg>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 191.
- [7]
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 86.
 
-
-LaTeX Warning: Citation 'IEEE2012' on page 8 undefined on input line 208.
-
-
-LaTeX Warning: Citation 'IEEE2012' on page 8 undefined on input line 208.
-
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 213.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 215.
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 238.
-
-
-("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 240.
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 243
-.
-
-("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
-File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+[6]
+<images/David4.jpg, id=192, 252.58365pt x 157.5486pt>
+File: images/David4.jpg Graphic file (type jpg)
+<use images/David4.jpg>
+Package pdftex.def Info: images/David4.jpg  used on input line 90.
+(pdftex.def)             Requested size: 360.55476pt x 224.91293pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 119.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 119.
+ [7 <./images/David4.jpg>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 130.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 130.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 255.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 255.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 255.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 255.
-
-[8])
-Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 293.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 293.
@@ -3985,7 +3919,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 293.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 293.
- [9]
+ [8]
 \openout2 = `mainmatter/implementierung.aux'.
 
  (mainmatter/implementierung.tex
@@ -3994,34 +3928,39 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-<images/Spell_Checker_preferences.jpg, id=247, 925.4575pt x 695.59875pt>
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 9.
+("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+<images/Spell_Checker_preferences.jpg, id=209, 925.4575pt x 695.59875pt>
 File: images/Spell_Checker_preferences.jpg Graphic file (type jpg)
 <use images/Spell_Checker_preferences.jpg>
 Package pdftex.def Info: images/Spell_Checker_preferences.jpg  used on input li
 ne 15.
 (pdftex.def)             Requested size: 370.17644pt x 278.23457pt.
-[10
+
+[9
 
 
 
  <./images/Spell_Checker_preferences.jpg>]
-<images/PdfLatex_settings.jpg, id=255, 565.11125pt x 309.155pt>
+<images/PdfLatex_settings.jpg, id=218, 565.11125pt x 309.155pt>
 File: images/PdfLatex_settings.jpg Graphic file (type jpg)
 <use images/PdfLatex_settings.jpg>
 Package pdftex.def Info: images/PdfLatex_settings.jpg  used on input line 34.
 (pdftex.def)             Requested size: 226.04048pt x 123.6598pt.
-<images/Viewer_settings.jpg, id=258, 492.84125pt x 550.055pt>
+<images/Viewer_settings.jpg, id=221, 492.84125pt x 550.055pt>
 File: images/Viewer_settings.jpg Graphic file (type jpg)
 <use images/Viewer_settings.jpg>
 Package pdftex.def Info: images/Viewer_settings.jpg  used on input line 58.
 (pdftex.def)             Requested size: 197.133pt x 220.0181pt.
-<images/SumatraPDF_optionen.jpg, id=260, 363.3575pt x 420.57124pt>
+<images/SumatraPDF_optionen.jpg, id=223, 363.3575pt x 420.57124pt>
 File: images/SumatraPDF_optionen.jpg Graphic file (type jpg)
 <use images/SumatraPDF_optionen.jpg>
 Package pdftex.def Info: images/SumatraPDF_optionen.jpg  used on input line 67.
 
 (pdftex.def)             Requested size: 145.34041pt x 168.22551pt.
- [11 <./images/PdfLatex_settings.jpg>] [12 <./images/Viewer_settings.jpg> <./im
+ [10 <./images/PdfLatex_settings.jpg>] [11 <./images/Viewer_settings.jpg> <./im
 ages/SumatraPDF_optionen.jpg>])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 294.
@@ -4032,7 +3971,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 294.
 
-[13]
+[12]
 \openout2 = `mainmatter/auswertung.aux'.
 
  (mainmatter/auswertung.tex
@@ -4042,14 +3981,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-LaTeX Warning: Citation 'Reinhold:2013fk' on page 14 undefined on input line 3.
-
-
-
-LaTeX Warning: Citation 'Moon' on page 14 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'IEEE2011' on page 14 undefined on input line 3.
+LaTeX Warning: Reference `fig:mathplot' on page 1 undefined on input line 3.
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
@@ -4064,7 +3996,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 295.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 295.
- [14
+ [13
 
 
 
@@ -4090,7 +4022,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 296.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 296.
- [15
+ [14
 
 
 
@@ -4116,7 +4048,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 299.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 299.
- [16
+ [15
 
 
 
@@ -4135,7 +4067,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 302.
- [17
+ [16
 
 
 
@@ -4157,7 +4089,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 304.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 304.
- [18
+ [17
 
 
 ]
@@ -4176,7 +4108,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 305.
- [19
+ [18
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -4186,9 +4118,24 @@ Package babel Info: Redefining ngerman shorthand "~
 
 Use my own \@starttoc for lol
 (main.lol)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 308.
+ [19
 
-LaTeX Warning: Empty bibliography on input line 308.
-
+]
+chapter without number
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 308.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 308.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 310.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4205,10 +4152,6 @@ Package babel Info: Redefining ngerman shorthand "~
  (backmatter/eidestattliche_erklaerung.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 12.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 12.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 310.
@@ -4258,16 +4201,12 @@ Use my own \@writefile for lol
 Use my own \@writefile for toc
 Use my own \@writefile for lof
 Use my own \@writefile for toc
-Use my own \@writefile for toc
 Use my own \@writefile for lof
 Use my own \@writefile for toc
 Use my own \@writefile for lof
 Use my own \@writefile for lof
 Use my own \@writefile for toc
-Use my own \@writefile for lot
-Use my own \@writefile for lot
-Use my own \@writefile for lol
-Use my own \@writefile for lof
+Use my own \@writefile for toc
 ) (mainmatter/implementierung.aux
 Use my own \@writefile for toc
 Use my own \@writefile for lof
@@ -4310,6 +4249,10 @@ Use my own \@writefile for toc
 Use my own \@writefile for toc
 Use my own \@writefile for toc
 Use my own \@writefile for toc
+Use my own \@writefile for toc
+Use my own \@writefile for lof
+Use my own \@writefile for lot
+Use my own \@writefile for lol
 (backmatter/eidestattliche_erklaerung.aux))
 Process extension: `toc'
 \openout2 = `main.toc'.
@@ -4329,80 +4272,45 @@ Process extension: `lol'
 (main.wrt)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 311.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 311.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 0E8385CE159D71CB9FFA52AF5DDE3060;1301.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: A4A003568865B0CF6407313D184D0175;1184
-(rerunfilecheck)             After:  9D48EF52052603D2AD9BEF4224EEF703;1244.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68637 strings out of 493290
- 1527157 string characters out of 3129424
- 2597473 words of memory out of 3000000
- 71044 multiletter control sequences out of 15000+200000
- 605954 words of font info for 135 fonts, out of 3000000 for 9000
+ 67166 strings out of 493290
+ 1497994 string characters out of 3129424
+ 2359007 words of memory out of 3000000
+ 69611 multiletter control sequences out of 15000+200000
+ 581337 words of font info for 105 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 79i,17n,136p,9085b,3994s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:c0} has been referenced but does not exist, r
-eplaced by a fixed one
+ 79i,15n,136p,9085b,3615s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist,
+ replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:ohm} has been referenced but does not exist, re
+pdfTeX warning (dest): name{glo:ISI} has been referenced but does not exist, re
 placed by a fixed one
 
-pdfTeX warning (dest): name{glo:pi} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:angstrom} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:led} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:abc} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist, r
-eplaced by a fixed one
-
- <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tct
-t1095.pk> <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
-pi600\ectt1095.pk>{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
-ips/base/8r.enc}{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/ttf2
-pk/base/T1-WGL4.enc}<./AkkRg__.ttf><./AkkBd__.ttf><C:/Users/Chen/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Chen/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/U
-sers/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmss10.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmss8.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/Chen/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chen/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Chen/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/
-Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/
-Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.p
-fb>
-Output written on main.pdf (23 pages, 1927289 bytes).
+ <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ect
+t1095.pk>{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/
+8r.enc}{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/ttf2pk/base/T
+1-WGL4.enc}<./AkkRg__.ttf><./AkkBd__.ttf><C:/Users/Chen/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Chen/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Chen/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
+helvetic/uhvb8a.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/urw/helvetic/uhvr8a.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (23 pages, 1949567 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 395 PDF objects out of 1000 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
+ 234 words of extra memory for PDF output out of 10000 (max. 10000000)
 

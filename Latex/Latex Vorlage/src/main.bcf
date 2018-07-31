@@ -1975,12 +1975,9 @@
     <bcf:datasource type="file" datatype="bibtex">literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Kammeyer</bcf:citekey>
-    <bcf:citekey order="2">IEEE2012</bcf:citekey>
-    <bcf:citekey order="3">IEEE2012</bcf:citekey>
-    <bcf:citekey order="4">Reinhold:2013fk</bcf:citekey>
-    <bcf:citekey order="4">Moon</bcf:citekey>
-    <bcf:citekey order="4">IEEE2011</bcf:citekey>
+    <bcf:citekey order="1">Reinhold:2013fk</bcf:citekey>
+    <bcf:citekey order="1">Moon</bcf:citekey>
+    <bcf:citekey order="1">IEEE2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
