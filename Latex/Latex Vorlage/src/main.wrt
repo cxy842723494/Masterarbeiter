@@ -22,16 +22,16 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung des DaVids}{3}{section.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Eine beispielhafte Implementierung des DaViD-Systems\relax }}{3}{figure.caption.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung des DaViD}{3}{section.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Eine beispielhafte Implementierung des \gls {david}-Systems\relax }}{3}{figure.caption.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Systemmodell}{4}{section.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Schematische Darstellung von DaVid System\relax }}{4}{figure.caption.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Schematische Darstellung von \gls {david} System\relax }}{4}{figure.caption.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Modulationsverfahren}{5}{subsection.2.2.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces Blockschaltbild der Signalverarbeitung in zeitlicher differentieller Modulation\relax }}{5}{figure.caption.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces Ein Beispiel einer modulierten Bildfolge\relax }}{7}{figure.caption.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}DatenBlock}{7}{subsection.2.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}DatenBlock}{8}{subsection.2.2.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Anwendungsgebiete}{8}{section.2.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Implementierung}{10}{chapter.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}ErsteErfahrung}{10}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
@@ -40,35 +40,64 @@
 \@writefile{lot}{\babel@toc {english}{}}
 \@writefile{lol}{\babel@toc {english}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}TexLipse spell checking}{10}{section.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces TeXLipse Spell Checker preferences\relax }}{10}{figure.caption.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Enable tikzexternalize for PdfLatex}{11}{section.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces PdfLatex Builder Settings\relax }}{11}{figure.caption.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Enable tikzexternalize for PdfLatex}{10}{section.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces TeXLipse Spell Checker preferences\relax }}{11}{figure.caption.6}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Forward search with TeXlipse and Sumatra PDF}{11}{section.3.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces PdfLatex Builder Settings\relax }}{11}{figure.caption.7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces TeXLipse Viewer Settings\relax }}{12}{figure.caption.8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces SumatraPDF Options\relax }}{12}{figure.caption.9}}
 \@writefile{toc}{\babel@toc {ngerman}{}}
 \@writefile{lof}{\babel@toc {ngerman}{}}
 \@writefile{lot}{\babel@toc {ngerman}{}}
 \@writefile{lol}{\babel@toc {ngerman}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Auswertung}{14}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}ZweiteErfahrung}{14}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Section}{14}{section.4.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Zusammenfassung}{15}{chapter.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Grundlegende Einf\IeC {\"u}hrung}{14}{section.4.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Bildregistrierung}{14}{section.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Flussdiagramm der Bildregistrierung\relax }}{14}{figure.caption.10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}SURF}{15}{subsection.4.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}RANSAC}{16}{subsection.4.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Kamara Model}{16}{subsection.4.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Parameter Optimierung}{16}{subsection.4.2.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Differenzbild}{16}{section.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Image Processing}{16}{section.4.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}QR Pattern Detection}{16}{section.4.5}}
+\@writefile{toc}{\babel@toc {english}{}}
+\@writefile{lof}{\babel@toc {english}{}}
+\@writefile{lot}{\babel@toc {english}{}}
+\@writefile{lol}{\babel@toc {english}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}TexLipse spell checking}{16}{section.4.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Enable tikzexternalize for PdfLatex}{16}{section.4.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces TeXLipse Spell Checker preferences\relax }}{17}{figure.caption.11}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Forward search with TeXlipse and Sumatra PDF}{17}{section.4.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces PdfLatex Builder Settings\relax }}{17}{figure.caption.12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces TeXLipse Viewer Settings\relax }}{18}{figure.caption.13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces SumatraPDF Options\relax }}{18}{figure.caption.14}}
+\@writefile{toc}{\babel@toc {ngerman}{}}
+\@writefile{lof}{\babel@toc {ngerman}{}}
+\@writefile{lot}{\babel@toc {ngerman}{}}
+\@writefile{lol}{\babel@toc {ngerman}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{20}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{15}{section.5.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{16}{appendix.A}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{20}{section.5.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{21}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{16}{section.A.1}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{18}{chapter*.10}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{19}{chapter*.11}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{20}{chapter*.12}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{21}{chapter*.13}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{21}{section.6.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{22}{appendix.A}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lol}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{22}{section.A.1}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{24}{chapter*.15}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{25}{chapter*.16}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{26}{chapter*.17}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{27}{chapter*.18}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}

@@ -12,13 +12,13 @@ fn2 = 'yuv_2_bs8_2.yuv';
 % grayimg = rgb2gray(img);
 % diff(:,:,1) = yuv(1).V - yuv(2).V;
 % diff(:,:,3) = yuv(1).U - yuv(2).U;
-
+diffc_r = yuv(1).U - yuv(2).U;
 %% corner detection
 vblocks = 1080/8;
 hblocks = 1920/8;
 
 % einzelbilder
-diffc_r = gather(conv2([1 2 1]/2,[1 2 1]/2, yuv(1).U ,'same'));
+% diffc_r = gather(conv2([1 2 1]/2,[1 2 1]/2, yuv(1).U ,'same'));
 cr = estimateModCorners(diffc_r,760/100,7,10);
 figure, imshow(diffc_r);
 
@@ -35,7 +35,7 @@ y(1:2) = y(i);
 y(3:4) = y(5-i);
 
 % einzelbilder
-figure, imshow(yuv(1).U,[])
+figure, imshow(yuv(1).Y,[])
 
 % differenzbilder
 %figure, imshow(diff(:,:,1),[])

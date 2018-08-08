@@ -1,15 +1,21 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[40] biber-MSWIN64:313> INFO - === 
-[73] Biber.pm:371> INFO - Reading 'main.bcf'
-[155] Biber.pm:857> INFO - Found 5 citekeys in bib section 0
-[171] Biber.pm:3976> INFO - Processing section 0
-[188] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[197] bibtex.pm:1500> INFO - LaTeX decoding ...
-[210] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
-[267] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[267] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[268] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[268] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[271] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[273] bbl.pm:720> INFO - Output to main.bbl
+[34] biber-MSWIN64:313> INFO - === 
+[70] Biber.pm:371> INFO - Reading 'main.bcf'
+[153] Biber.pm:857> INFO - Found 9 citekeys in bib section 0
+[167] Biber.pm:3976> INFO - Processing section 0
+[183] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[192] bibtex.pm:1500> INFO - LaTeX decoding ...
+[225] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
+[234] Utils.pm:193> WARN - month field 'May' in entry 'Kays2017' is not an integer - this will probably not sort properly.
+[243] Utils.pm:193> WARN - month field 'Sept' in entry 'Kays201501' is not an integer - this will probably not sort properly.
+[246] Utils.pm:193> WARN - month field 'Jan' in entry 'Kays201502' is not an integer - this will probably not sort properly.
+[260] Utils.pm:193> WARN - month field 'Nov' in entry 'Reinhold:2013fk' is not an integer - this will probably not sort properly.
+[287] Utils.pm:193> WARN - BibTeX subsystem: C:\Users\Chen\AppData\Local\Temp\yKE3PEOZDz\literatur.bib_33176.utf8, line 6, warning: 93 characters of junk seen at toplevel
+[305] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[305] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[306] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[306] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[313] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[318] bbl.pm:720> INFO - Output to main.bbl
+[319] Biber.pm:110> INFO - WARNINGS: 5

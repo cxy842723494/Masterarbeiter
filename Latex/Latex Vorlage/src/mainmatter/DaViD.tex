@@ -1,36 +1,39 @@
 \chapter{DaVid} \label{cha:DaVid}
 
-In diesem Kapitel werden das DaVid System beschrieben. Zuerst läuft die Vorstellung des DaVid-Systems. Die Systemmodell und Arbeitsprinzip des Systems werden in anschließenden Abschnitt erläutert. Schließlich folgt die mögliche Anwendungsgebiete des Systems.
+In diesem Kapitel werden das \gls{david} System beschrieben. Zuerst läuft die Vorstellung des \gls{david} Systems. Die Systemmodell und Arbeitsprinzip des Systems werden in anschließenden Abschnitt erläutert. Schließlich folgt die mögliche Anwendungsgebiete des Systems. \cite{Kays2017,Kays2016,Kays201501,Kays201502}
+
+
+
 %Durch diese Beschreibung wird die Bedeutung und Ziele dieses Papiers besser verstehen.\ldots
 
-\section{Einführung des DaVids} 
+\section{Einführung des DaViD } 
 
-DaVid, abkürzt von \uline{Da}ta transmission using \uline{Vi}deo \uline{d}evices, ist ein neuartiges Verfahren zur optischen Freiraum-Datenübertragung zwischen einem Display als Sender und einer Kamera als Empfänger. Ein grundlegendes Übertragungskonzept von DaVid wird in Abbildung 2.1 gezeigt. Ein flaches Display wie ein OLED- oder LCD-Bildschirm zeigt ein Live-Video. Gleichzeitig werden die Daten hinter dem Bild auf die Pixel moduliert. Während die zusätzliche Datenmodulation für menschliche Betrachter nahezu unsichtbar ist, der Benutzer leitet ein hochauflösende Kamera oder ein Smartphone zur Bildschirm, um die Szene aufzunehmen. Durch der eingebaut Prozessor können die Signale decodiert werden.
+\gls{david} ist ein neuartiges Verfahren zur optischen Freiraum-Datenübertragung zwischen einem Display als Sender und einer Kamera als Empfänger. Ein grundlegendes Übertragungskonzept von \gls{david} wird in Abbildung 2.1 gezeigt. Ein flaches Display wie ein OLED- oder LCD-Bildschirm zeigt ein Live-Video. Gleichzeitig werden die Daten hinter dem Bild auf die Pixel moduliert. Während die zusätzliche Datenmodulation für menschliche Betrachter nahezu unsichtbar ist, der Benutzer leitet ein hochauflösende Kamera oder ein Smartphone zur Bildschirm, um die Szene aufzunehmen. Durch der eingebaut Prozessor können die Signale decodiert werden.
 
 \begin{figure}[htb]
  \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/David1.jpg}
- \caption{Eine beispielhafte Implementierung des DaViD-Systems}
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/2_DaViD/David1.jpg}
+ \caption{Eine beispielhafte Implementierung des \gls{david}-Systems}
  \label{fig:David1}
 \end{figure}
 
 
 \section{Systemmodell} 
-Bild in Display enthalten eine große Anzahl von Pixeln, die jeweils aus einer spezifischen Anordnung von Subpixeln für die RGB-Farbraum bestehen. Jeder einzelne Frame des Videos wird nämlich durch eine Matrix von Subpixelwerten dargestellt. DaVid System verwendet eine differentielle Modulationsmethod d.h. Teil der Videoinformationen muss wiederholt werden, indem Daten als ein symmetrischer Manchester-Code moduliert und zu den Videosignalkomponenten hinzugefügt werden. In Empfängerseite durch eine zeitliche Synchronisation können die zeitliche \gls{ISI} vermieden werden. Dann nach Verwendung einer örtlichen Synchronisation enthalten einen Differenzbild. Weil die Randbereich des Differenzbilds ungültig ist, verlässt sich die Modulationsgebiet durch die Verfahren in diese Arbeit entdecken. Danach werden die überlagerten Datensequenz durch eine Reihe von Behandlungen vom Videoinhalt getrennt. Abbildung 2.2 zeigt die schematische Darstellung des DaVid-Systems. 
+Bild in Display enthalten eine große Anzahl von Pixeln, die jeweils aus einer spezifischen Anordnung von Subpixeln für die RGB-Farbraum bestehen. Jeder einzelne Frame des Videos wird nämlich durch eine Matrix von Subpixelwerten dargestellt. \gls{david} System verwendet eine differentielle Modulationsmethod d.h. Teil der Videoinformationen muss wiederholt werden, indem Daten als ein symmetrischer Manchester-Code moduliert und zu den Videosignalkomponenten hinzugefügt werden. In Empfängerseite durch eine zeitliche Synchronisation können die zeitliche \gls{ISI} vermieden werden. Dann nach Verwendung einer örtlichen Synchronisation enthalten einen Differenzbild. Weil die Randbereich des Differenzbilds ungültig ist, verlässt sich die Modulationsgebiet durch die Verfahren in diese Arbeit entdecken. Danach werden die überlagerten Datensequenz durch eine Reihe von Behandlungen vom Videoinhalt getrennt. Abbildung 2.2 zeigt die schematische Darstellung des \gls{david}-Systems. 
 % Deshalb in zeitlicher oder örtlicher Richtung die Videoinhalt in paar Bildern werden gleich.
 \vspace{18pt}
 
 \begin{figure}[htb]
 	\centering 
-	\includegraphics[keepaspectratio,width=1.0\textwidth]{images/David3.jpg}
-	\caption{Schematische Darstellung von DaVid System}
+	\includegraphics[keepaspectratio,width=1.0\textwidth]{images/2_DaViD/David3.jpg}
+	\caption{Schematische Darstellung von \gls{david} System}
 	\label{fig:David2}
 \end{figure}
 
 
 \subsection{Modulationsverfahren}
 
-Ein Modulationsverfahren, das die Videoqualität nicht offensichtlich reduziert garantiert, ist sehr wichtig für ein auf Videogerät basierendes Datenübertragungssystem. Die möglichen Modulationsverfahren in DaVid-System sind:
+Ein Modulationsverfahren, das die Videoqualität nicht offensichtlich reduziert garantiert, ist sehr wichtig für ein auf Videogerät basierendes Datenübertragungssystem. Die möglichen Modulationsverfahren in \gls{david}-System sind:
 \begin{itemize}
 	\item Zeitliche differentielle Modulation der Luminanz
 	\item Zeitliche differentielle Modulation der Chrominanz
@@ -38,11 +41,11 @@ Ein Modulationsverfahren, das die Videoqualität nicht offensichtlich reduziert 
 	\item Örtliche differentielle Modulation der Chrominanz
 \end{itemize}
 
-Zeitliche differentielle Modulationsverfahre lässt kontinuierliches Paar Frames den gleichen Luminanz- bzw. Chrominanz-Videoinhalt enthalten, d.h. durch Subtrahieren die mit daten addiert Kanal der Paar Frames die Differenzbild erhalten lassen können. Dagegen in örtliche- sind die benachbarte Pixel mit den gleichen Videoamplituden. Im Vergleich zu Luminanzteil Y die Anzeigequalität in U und V Komponente ist signifikant besser, wenn Informationen in Chrominanz wiederholt und moduliert werden. Deswegen wird in dieser Arbeit nur zeitliche differentielle Modulation der Chrominanz verwendet. Abbildung 2.3 zeigt ein Blockdiagramm einer typischen Senderimplementierung durch zeitliche differentielle Modulation.
+Zeitliche differentielle Modulationsverfahre lässt kontinuierliches Paar Frames den gleichen Luminanz- bzw. Chrominanz-Videoinhalt enthalten, d.h. durch Subtrahieren die mit daten addiert Kanal der Paar Frames die Differenzbild erhalten lassen können. Dagegen in örtliche- sind die benachbarte Pixel mit den gleichen Videoamplituden. Hier wird in dieser Arbeit nur zeitliche differentielle Modulation der Chrominanz verwendet. Abbildung 2.3 zeigt ein Blockdiagramm einer typischen Senderimplementierung durch zeitliche differentielle Modulation.
 
 \begin{figure}[htb]
 	\centering 
-	\includegraphics[keepaspectratio,width=0.8\textwidth]{images/David2.jpg}
+	\includegraphics[keepaspectratio,width=0.8\textwidth]{images/2_DaViD/David2.jpg}
 	\caption{Blockschaltbild der Signalverarbeitung in zeitlicher differentieller Modulation}
 	\label{fig:David3}
 \end{figure}
@@ -87,11 +90,12 @@ Ein Beispiel einer modulierten Bildfolge ist in Abbildung 2.4 gezeigt. Das Hinzu
 
 \begin{figure}[htb]
 	\centering 
-	\includegraphics[keepaspectratio,width=0.8\textwidth]{images/David4.jpg}
+	\includegraphics[keepaspectratio,width=0.6\textwidth]{images/2_DaViD/David4.jpg}
 	\caption{Ein Beispiel einer modulierten Bildfolge}
 	\label{fig:David4}
 \end{figure}
 
+Im Vergleich zu Luminanzteil Y die Anzeigequalität in U und V Komponente ist signifikant besser, wenn Informationen in Chrominanz wiederholt und moduliert werden. Auf diese Weise wird die Gesamtleuchtdichte eines Pixel-Triple durch die Datenmodulation nicht beeinflusst.Die Umwandlungsmatrix, angegeben von \gls{ITU-R BT.709} für \gls{HDTV} Display von Standard $(R,G,B)$ zur Standard $(Y,U,V)$ läuft:
 
 \begin{equation}
    T = \begin{pmatrix}
@@ -101,6 +105,7 @@ Ein Beispiel einer modulierten Bildfolge ist in Abbildung 2.4 gezeigt. Das Hinzu
 \end{pmatrix}  
 \end{equation}
 
+Das Videosignal $s(i,j,k)$ muss vor dem Anwenden der Modulation in Y-, U- und V-Komponenten umgewandelt werden. Die nachfolgende inverse Konvertierung erklärt das Display-Eingangssignal in Abbildung 2.3:
 
 \begin{equation}
 \begin{split}
@@ -133,6 +138,7 @@ Ein Beispiel einer modulierten Bildfolge ist in Abbildung 2.4 gezeigt. Das Hinzu
 \end{split}
 \end{equation}
 
+Diese Art der Modulation kann als eine Modulation des roten und des blauen Subpixels betrachtet werden, während das grüne Subpixel verwendet wird, um die Änderung der Luminanz des Pixel-Tripels zu kompensieren. Durch Definition korreliert $A_U$ mit $A_B$ und $A_V$ mit $A_R$.
 
 \begin{equation}
    \begin{pmatrix}
@@ -178,15 +184,12 @@ In dieser Arbeit werden das DatenBlock für quadratische Blöcke gesetzt.
 \end{equation}
 
 
-
-
-
 \section{Anwendungsgebiete} 
 %\label{sec:Anwendungsbereiche}
 
-Die Datenübertragungsrate des David-Systems wird voraussichtlich erreicht bis zu 100 Mbit/s. Es gehöre	zu einer Sichtlinienübertragung für kurze Verbindungen. Geeignete Abdeckungsbereichen hängen von der Größe des Displays und der Kameraoptik ab. Obwohl im Vergleich zum letzten WLAN- Versionen \gls{ieee} 802.11, die Leistung scheint nicht so attraktiv. Der Vorteil liegt nicht nur in der wachsenden Leistungsfähigkeit von Video-Display und Kamera, aber auch die Option zur Wiederverwendung der bestehenden Hardware, die zum Zeigen des Videos installiert wurde. Ein empfohlene praktische Anwendungsbereich des DaVids ist öffentlicher Ort, z.B. U-Bahn-Station, großes Stadion und so weiter. Annehmen eine Situation, wenn die Leute auf ihre U-Bahn warten, sie können ihre eigene Software aktualisieren, indem Sie einfach auf die zeigende Werbung in dem Bildschirm leiten.
+Die Datenübertragungsrate des \gls{david}-Systems wird voraussichtlich erreicht bis zu 100 Mbit/s. Es gehöre	zu einer Sichtlinienübertragung für kurze Verbindungen. Geeignete Abdeckungsbereichen hängen von der Größe des Displays und der Kameraoptik ab. Obwohl im Vergleich zum letzten WLAN- Versionen \gls{ieee} 802.11, die Leistung scheint nicht so attraktiv. Der Vorteil liegt nicht nur in der wachsenden Leistungsfähigkeit von Video-Display und Kamera, aber auch die Option zur Wiederverwendung der bestehenden Hardware, die zum Zeigen des Videos installiert wurde. Ein empfohlene praktische Anwendungsbereich des \gls{david}s ist öffentlicher Ort, z.B. U-Bahn-Station, großes Stadion und so weiter. Annehmen eine Situation, wenn die Leute auf ihre U-Bahn warten, sie können ihre eigene Software aktualisieren, indem Sie einfach auf die zeigende Werbung in dem Bildschirm leiten.
 
-Berücksichtigen der Eigenschaften des DaVids, d.h. die Synchronisation von Videospielen und Datenübertragung. Viele Anwendungsszenarien können in Betracht gezogen werden und scheinen sehr attraktiv zu sein. Die drei Hauptszenarien sind:
+Berücksichtigen der Eigenschaften des \gls{david}s, d.h. die Synchronisation von Videospielen und Datenübertragung. Viele Anwendungsszenarien können in Betracht gezogen werden und scheinen sehr attraktiv zu sein. Die drei Hauptszenarien sind:
 
 \begin{itemize}
   \item Indoor-individuelle Kommunikation: Kurzstreckenverbindungen basieren auf relativ kleinen (Tablet-Größe) Bildschirm, Anwendungen z.B. die Übertragung von Hintergrundinformationen an Besucher im Museum, Kiosk.

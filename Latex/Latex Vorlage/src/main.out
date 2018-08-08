@@ -1,22 +1,35 @@
 \BOOKMARK [0][]{chapter.1}{Einleitung}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Section}{chapter.1}% 2
 \BOOKMARK [0][]{chapter.2}{DaVid}{}% 3
-\BOOKMARK [1][-]{section.2.1}{Einf\374hrung des DaVids}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.1}{Einf\374hrung des DaViD}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.2}{Systemmodell}{chapter.2}% 5
 \BOOKMARK [2][-]{subsection.2.2.1}{Modulationsverfahren}{section.2.2}% 6
 \BOOKMARK [2][-]{subsection.2.2.2}{DatenBlock}{section.2.2}% 7
 \BOOKMARK [1][-]{section.2.3}{Anwendungsgebiete}{chapter.2}% 8
-\BOOKMARK [0][]{chapter.3}{Implementierung}{}% 9
+\BOOKMARK [0][]{chapter.3}{ErsteErfahrung}{}% 9
 \BOOKMARK [1][-]{section.3.1}{TexLipse spell checking}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.2}{Enable tikzexternalize for PdfLatex}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.3}{Forward search with TeXlipse and Sumatra PDF}{chapter.3}% 12
-\BOOKMARK [0][]{chapter.4}{Auswertung}{}% 13
-\BOOKMARK [1][-]{section.4.1}{Section}{chapter.4}% 14
-\BOOKMARK [0][]{chapter.5}{Zusammenfassung}{}% 15
-\BOOKMARK [1][-]{section.5.1}{Section}{chapter.5}% 16
-\BOOKMARK [0][]{appendix.A}{Erster Anhang}{}% 17
-\BOOKMARK [1][-]{section.A.1}{Section}{appendix.A}% 18
-\BOOKMARK [0][]{chapter*.10}{Abbildungsverzeichnis}{}% 19
-\BOOKMARK [0][]{chapter*.11}{Tabellenverzeichnis}{}% 20
-\BOOKMARK [0][]{chapter*.12}{Quellcodeverzeichnis}{}% 21
-\BOOKMARK [0][]{chapter*.13}{Literatur}{}% 22
+\BOOKMARK [0][]{chapter.4}{ZweiteErfahrung}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Grundlegende Einf\374hrung}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.2}{Bildregistrierung}{chapter.4}% 15
+\BOOKMARK [2][-]{subsection.4.2.1}{SURF}{section.4.2}% 16
+\BOOKMARK [2][-]{subsection.4.2.2}{RANSAC}{section.4.2}% 17
+\BOOKMARK [2][-]{subsection.4.2.3}{Kamara Model}{section.4.2}% 18
+\BOOKMARK [2][-]{subsection.4.2.4}{Parameter Optimierung}{section.4.2}% 19
+\BOOKMARK [1][-]{section.4.3}{Differenzbild}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Image Processing}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.5}{QR Pattern Detection}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.6}{TexLipse spell checking}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.7}{Enable tikzexternalize for PdfLatex}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.8}{Forward search with TeXlipse and Sumatra PDF}{chapter.4}% 25
+\BOOKMARK [0][]{chapter.5}{Auswertung}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Section}{chapter.5}% 27
+\BOOKMARK [0][]{chapter.6}{Zusammenfassung}{}% 28
+\BOOKMARK [1][-]{section.6.1}{Section}{chapter.6}% 29
+\BOOKMARK [0][]{appendix.A}{Erster Anhang}{}% 30
+\BOOKMARK [1][-]{section.A.1}{Section}{appendix.A}% 31
+\BOOKMARK [0][]{chapter*.15}{Abbildungsverzeichnis}{}% 32
+\BOOKMARK [0][]{chapter*.16}{Tabellenverzeichnis}{}% 33
+\BOOKMARK [0][]{chapter*.17}{Quellcodeverzeichnis}{}% 34
+\BOOKMARK [0][]{chapter*.18}{Literatur}{}% 35

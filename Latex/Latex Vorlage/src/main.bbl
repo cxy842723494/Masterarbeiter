@@ -16,52 +16,210 @@
   {}
 \endgroup
 
-\preamble{%
-\newcommand{\bibremark}[1]{\marginpar{\tiny\bf#1}} \newcommand{\biburl}[1]{\url{#1}}%
-}
-
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{Kammeyer}{book}{}
-      \name{author}{1}{}{%
-        {{hash=de153763a92bbd166d8a9fec714fc24f}{%
-           family={Kammeyer},
+    \entry{Kays2017}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=a9e1d6f296fba589b41ae9e6cf3de34d}{%
+           family={Kays},
            familyi={K\bibinitperiod},
-           given={K.\bibnamedelimi D.},
-           giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bd2c1745a32401e7ccfa9b863269464a}{%
+           family={Brauers},
+           familyi={B\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8b8640d4cce5b32facc07dffbe242de1}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Vieweg+Teubner}%
-      }
-      \strng{namehash}{de153763a92bbd166d8a9fec714fc24f}
-      \strng{fullhash}{de153763a92bbd166d8a9fec714fc24f}
-      \strng{bibnamehash}{de153763a92bbd166d8a9fec714fc24f}
-      \strng{authorbibnamehash}{de153763a92bbd166d8a9fec714fc24f}
-      \strng{authornamehash}{de153763a92bbd166d8a9fec714fc24f}
-      \strng{authorfullhash}{de153763a92bbd166d8a9fec714fc24f}
+      \strng{namehash}{26f03a161831c92cdf2814a46f7af4cf}
+      \strng{fullhash}{26f03a161831c92cdf2814a46f7af4cf}
+      \strng{bibnamehash}{26f03a161831c92cdf2814a46f7af4cf}
+      \strng{authorbibnamehash}{26f03a161831c92cdf2814a46f7af4cf}
+      \strng{authornamehash}{26f03a161831c92cdf2814a46f7af4cf}
+      \strng{authorfullhash}{26f03a161831c92cdf2814a46f7af4cf}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Nachrichtenübertragung, fourth {Edition}}
-      \field{year}{2008}
+      \field{booktitle}{2017 IEEE International Conference on Communications (ICC)}
+      \field{issn}{1938-1883}
+      \field{month}{5}
+      \field{title}{Modulation concepts for high-rate display-camera data transmission}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICC.2017.7996371
+      \endverb
+      \keyw{decoding;error statistics;free-space optical communication;MIMO communication;video coding;video source coding;electronic media distribution;video representation;data rate;bit error probability;decoding performance;picture quality deterioration;human visual system;real-time video processing;digital data transmission;video sequences;massive MIMO visible light communication;display-camera data link;modulation concept;high-rate display-camera data transmission;Modulation;Cameras;Data communication;Streaming media;Optical transmitters;Proposals;Optical fiber networks;display-camera communications;screen-camera communications;optical MIMO;free space optical transmission;picture quality;DaViD}
     \endentry
-    \entry{IEEE2012}{standard}{}
-      \list{publisher}{1}{%
-        {IEEE}%
+    \entry{Kays2016}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=f45a3e0615359e0cbbdc7ba17d552924}{%
+           family={Kays},
+           familyi={K\bibinitperiod},
+           given={R{ü}diger},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4b4f10650744cf26af68e18064734926}{%
+           family={Brauers},
+           familyi={B\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=22e2cfa58d3d6a421b17799692baeab8}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
       }
+      \strng{namehash}{9afe9914e5011f5c25fd0cb4f0443281}
+      \strng{fullhash}{9afe9914e5011f5c25fd0cb4f0443281}
+      \strng{bibnamehash}{9afe9914e5011f5c25fd0cb4f0443281}
+      \strng{authorbibnamehash}{9afe9914e5011f5c25fd0cb4f0443281}
+      \strng{authornamehash}{9afe9914e5011f5c25fd0cb4f0443281}
+      \strng{authorfullhash}{9afe9914e5011f5c25fd0cb4f0443281}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{DaViD : Data Transmission Using Video Devices-An Innovative System for Smart Media Applications}
+      \field{year}{2016}
+    \endentry
+    \entry{Kays201501}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=a9e1d6f296fba589b41ae9e6cf3de34d}{%
+           family={Kays},
+           familyi={K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{fullhash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{bibnamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{authorbibnamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{authornamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{authorfullhash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE 5th International Conference on Consumer Electronics - Berlin (ICCE-Berlin)}
+      \field{month}{9}
+      \field{title}{Modulation concepts for visible light communication using video displays}
+      \field{year}{2015}
+      \field{pages}{388\bibrangedash 392}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/ICCE-Berlin.2015.7391288
+      \endverb
+      \keyw{error statistics;flat panel displays;free-space optical communication;optical communication equipment;optical modulation;television displays;visible light communication;VLC;video displays;radio frequency communication;wireless short-range link;LED transmitters;photodiode receivers;data transmission;modulation schemes;bit error probability;Modulation;Cameras;Receivers;Optical transmitters;Visible light communication;free space optical transmission;visible light communication;screen-to-camera communication;video device based optical transmission}
+    \endentry
+    \entry{Kays201502}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=a9e1d6f296fba589b41ae9e6cf3de34d}{%
+           family={Kays},
+           familyi={K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{fullhash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{bibnamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{authorbibnamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{authornamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \strng{authorfullhash}{a9e1d6f296fba589b41ae9e6cf3de34d}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE International Conference on Consumer Electronics (ICCE)}
+      \field{issn}{2158-3994}
+      \field{month}{1}
+      \field{title}{Visible light communication using TV displays and video cameras}
+      \field{year}{2015}
+      \field{pages}{554\bibrangedash 555}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1109/ICCE.2015.7066522
+      \endverb
+      \keyw{television displays;video cameras;visible light communication;TV displays;video cameras;VLC;radio frequency communication;wireless short range link;standard IEEE 802.15.7;multiparallel transmission;Modulation;Cameras;Optical transmitters;Light emitting diodes;TV;Lighting;Radio transmitters}
+    \endentry
+    \entry{lin1973}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ee5ad1086dab61efed0851b6802d25e4}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Shen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1052228cbdc74ef71d9c24c30ddc01ef}{%
+           family={Kernighan},
+           familyi={K\bibinitperiod},
+           given={Brian\bibnamedelima W.},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{8dbb7ca376d9c40a1b134cdb0104f283}
+      \strng{fullhash}{8dbb7ca376d9c40a1b134cdb0104f283}
+      \strng{bibnamehash}{8dbb7ca376d9c40a1b134cdb0104f283}
+      \strng{authorbibnamehash}{8dbb7ca376d9c40a1b134cdb0104f283}
+      \strng{authornamehash}{8dbb7ca376d9c40a1b134cdb0104f283}
+      \strng{authorfullhash}{8dbb7ca376d9c40a1b134cdb0104f283}
       \field{sortinit}{2}
       \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{This revision specifies technical corrections and clarifications to IEEE Std 802.11 for wireless local area networks (WLANS) as well as enhancements to the existing medium access control (MAC) and physical layer (PHY) functions. It also incorporates Amendments 1 to 10 published in 2008 to 2011.}
-      \field{number}{IEEE Std 802.11-2012 (Revision of IEEE Std 802.11-2007}
-      \field{title}{IEEE Standard for Information technology}
-      \field{year}{2012}
-      \field{pages}{1\bibrangedash 2793}
-      \range{pages}{2793}
+      \field{journaltitle}{Operations Research}
+      \field{title}{An Effective Heuristic Algorithm for the Travelling-Salesman Problem}
+      \field{volume}{21}
+      \field{year}{1973}
+      \field{pages}{498\bibrangedash 516}
+      \range{pages}{19}
     \endentry
-    \entry{Reinhold:2013fk}{article}{}
+    \entry{Surf}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f29476d21dba36576a275921245f7b52}{%
+           family={Bay},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0b435bb0ef8c58c705b59eb13602fb7d}{%
+           family={Ess},
+           familyi={E\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=753814c3f9309c9b72b11f4f61130bdb}{%
+           family={Tuytelaars},
+           familyi={T\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=26815aa48c753194f0f2f368a61242fb}{%
+           family={Gool},
+           familyi={G\bibinitperiod},
+           given={L.\bibnamedelimi Van},
+           giveni={L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0078c61ec8e77311ede269a1a503d56}
+      \strng{fullhash}{4e255173d811465ee40ce3537c5d6c27}
+      \strng{bibnamehash}{4e255173d811465ee40ce3537c5d6c27}
+      \strng{authorbibnamehash}{4e255173d811465ee40ce3537c5d6c27}
+      \strng{authornamehash}{d0078c61ec8e77311ede269a1a503d56}
+      \strng{authorfullhash}{4e255173d811465ee40ce3537c5d6c27}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Vision and Image Understanding (CVIU)}
+      \field{title}{SURF:Speeded Up Robust Features}
+      \field{volume}{110}
+      \field{year}{2008}
+      \field{pages}{346\bibrangedash 359}
+      \range{pages}{14}
+    \endentry
+    \entry{Reinhold:2013fk}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=50a8a405c48231b9d7a7928f463170cf}{%
            family={Reinhold},
@@ -84,35 +242,54 @@
       \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2013 IFIP and IEEE Wireless Days, Valencia, Spain}
+      \field{booktitle}{2013 IFIP Wireless Days (WD)}
+      \field{issn}{2156-9711}
+      \field{langid}{american}
       \field{month}{11}
-      \field{title}{{Improvement of IEEE 802.15.4a IR-UWB for Time-Critical Industrial Wireless Sensor Networks}}
+      \field{title}{Improvement of {IEEE} 802.15.4a {IR-UWB} for Time-Critical Industrial Wireless Sensor Networks}
       \field{year}{2013}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/WD.2013.6686434
+      \endverb
+      \keyw{Zigbee;access protocols;factory automation;ultra wideband communication;wireless sensor networks;IEEE 802.15.4a IR-UWB;IEEE 802.15.4a impulse-radio ultra-wideband physical layer;IEEE 802.15.4e media access control layer;industrial factory automation;physical access control layer;time-critical industrial wireless sensor networks;ultra wideband communication systems;Actuators;IEEE 802.15 Standards;Manufacturing automation;Optimized production technology;Payloads;Wireless sensor networks;IEEE 802.15.4a;IEEE 802.15.4e;IR-UWB;industrial wireless sensor networks;performance evaluation}
     \endentry
     \entry{Moon}{book}{}
       \name{author}{1}{}{%
-        {{hash=ddbf0991af104c1301eec348461c861e}{%
+        {{hash=d9e178cc01874be6cb8e994e2a250982}{%
            family={Moon},
            familyi={M\bibinitperiod},
-           given={T.\bibnamedelimi K.},
+           given={Todd\bibnamedelima K.},
            giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
       }
-      \list{publisher}{2}{%
-        {John Wiley}%
-        {Sons}%
+      \list{location}{1}{%
+        {Hoboken, NJ}%
       }
-      \strng{namehash}{ddbf0991af104c1301eec348461c861e}
-      \strng{fullhash}{ddbf0991af104c1301eec348461c861e}
-      \strng{bibnamehash}{ddbf0991af104c1301eec348461c861e}
-      \strng{authorbibnamehash}{ddbf0991af104c1301eec348461c861e}
-      \strng{authornamehash}{ddbf0991af104c1301eec348461c861e}
-      \strng{authorfullhash}{ddbf0991af104c1301eec348461c861e}
+      \list{publisher}{1}{%
+        {Wiley-Interscience}%
+      }
+      \strng{namehash}{d9e178cc01874be6cb8e994e2a250982}
+      \strng{fullhash}{d9e178cc01874be6cb8e994e2a250982}
+      \strng{bibnamehash}{d9e178cc01874be6cb8e994e2a250982}
+      \strng{authorbibnamehash}{d9e178cc01874be6cb8e994e2a250982}
+      \strng{authornamehash}{d9e178cc01874be6cb8e994e2a250982}
+      \strng{authorfullhash}{d9e178cc01874be6cb8e994e2a250982}
       \field{sortinit}{4}
       \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{isbn}{978-0471648000}
+      \field{langid}{american}
+      \field{month}{6}
+      \field{pagetotal}{800}
+      \field{subtitle}{Mathematical Methods and Algorithms}
       \field{title}{Error Correction Coding}
       \field{year}{2005}
+      \verb{doi}
+      \verb 10.1002/0471739219
+      \endverb
     \endentry
     \entry{IEEE2011}{standard}{}
       \list{publisher}{1}{%
@@ -123,11 +300,11 @@
       \field{labeltitlesource}{title}
       \field{abstract}{The protocol and compatible interconnection for data communication devices using low data-rate, low-power, and low-complexity short-range radio frequency (RF) transmissions in a wire less personal area network (WPAN) were defined in IEEE Std 802.15.4-2006. In this revision, the market applicability of IEEE Std 802.15.4 is extended, the ambiguities in the standard are removed, and the improvements learned from implementations of IEEE Std 802.15.4-2006 are included.}
       \field{isbn}{9780738166834}
+      \field{langid}{american}
       \field{number}{IEEE Std 802.15.4-2011}
+      \field{pagetotal}{334}
       \field{title}{IEEE Standard for Local and metropolitan area networks, Part 15.4: Low-Rate Wireless Personal Area Networks}
       \field{year}{2011}
-      \field{pages}{334}
-      \range{pages}{1}
       \verb{doi}
       \verb 10.1109/IEEESTD.2011.6012487
       \endverb

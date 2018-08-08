@@ -1,4 +1,0 @@
-\ProvidesFile{AkkBd__.fd}
-\DeclareFontFamily{T1}{AkkBd__}{}
-\DeclareFontShape{T1}{AkkBd__}{m}{n}{ <-> AkkBd__}{}
-\pdfmapline{+AkkBd__\space <AkkBd__.ttf\space <T1-WGL4.enc}
