@@ -18,12 +18,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Flussdiagramm der Bildregistrierung\relax }}{14}{figure.caption.10}
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Scale space\relax }}{16}{figure.caption.11}
-\babel@toc {english}{}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces TeXLipse Spell Checker preferences\relax }}{18}{figure.caption.12}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces PdfLatex Builder Settings\relax }}{18}{figure.caption.13}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces TeXLipse Viewer Settings\relax }}{19}{figure.caption.14}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces SumatraPDF Options\relax }}{19}{figure.caption.15}
-\babel@toc {ngerman}{}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Extreme Wert Erkennung\relax }}{17}{figure.caption.12}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Dominante Orientierung Feststellen\relax }}{17}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Merkmalspunkt Deskriptor\relax }}{18}{figure.caption.14}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces SURF Detektion\relax }}{20}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces OhneRANSAC\relax }}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces MitRANSAC\relax }}{21}{figure.caption.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

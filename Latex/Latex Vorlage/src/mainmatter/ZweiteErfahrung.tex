@@ -62,16 +62,74 @@ Der Algorithmus ermöglicht, dass mehrere Bilder des Maßstabsraums gleichzeitig
 
 \begin{figure}[htb]
  \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Pyramidenstruktur.pdf}
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Scale_space.pdf}
  \caption{Scale space}
  \label{fig:Scale space}
 \end{figure} 
 
 
 $\bullet$ \textbf{Präzise Lokalisierung von Feature-Punkten}\\
-Vergleichen die Größe jedes Pixel, das von der hessischen Matrix verarbeitet wird, mit 26 Punkten in seiner drei Dimensionen Raum.
+Vergleichen die Größe jedes Pixel, das von der hessischen Matrix verarbeitet wird, mit 26 Punkten in seiner drei Dimensionen Raum, wie in Abbildung 4.3 zeight. Wenn es das Maximum oder Minimum dieser 26 Punkte ist, wird es als vorläufiger Merkmalspunkt beibehalten. Das dreidimensionale lineare Interpolationsverfahren wird verwendet, um die Merkmalspunkte des Subpixel-Niveaus zu erhalten, und die Punkte, deren Werte kleiner als ein bestimmter Schwellenwert sind, werden ebenfalls entfernt.
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.4\textwidth]{images/4_ZweiteErfahrung/Extreme_Wert_Erkennung.pdf}
+ \caption{Extreme Wert Erkennung}
+ \label{fig:Extreme Wert Erkennung}
+\end{figure} 
+
+
+$\bullet$ \textbf{Hauptrichtungsermittlung}\\
+SIFT wählt die Hauptrichtung des Merkmalspunkts unter Verwendung des Gradientenhistogramms im Merkmalspunktfeld aus. Die Richtung, in der der Bin-Wert des Histogramms der größte und oder 80\% maximale Bin-Wert  überschreitet, wird als Hauptrichtung des Merkmalspunkts genommen. Dagegen beim SURF wird das Gradientenhistogramm nicht statistiken, sondern das Harr-Wavelet-Eigenshcaft im Merkmalspunkt-Bereich wird statistisch analysiert. Das heißt, im Bereich der Merkmalspunkt (zum Beispiel innerhalb eines Kreises mit einem Radius von 6s, wobei s der Maßstab ist, auf dem der Punkt liegt) die Summe der Horizontal-Haar-Wavelet-Merkmale und der Vertikal-Haar-Wavelet-Merkmale aller Punkte im  60-Grad-Sektor($\pi/3$) werden gezählt. Die Größe des Haar Wavelets stellt als 4s, so dass für jeden Sektor einen Wert bekommt. Dann wird 60-Grad-Sektor in einem bestimmten Intervall gedreht, schließlich lassen die Richtung des Sektors mit Maximalwert als Hauptrichtung des Merkmalspunkts nehmen. Ein schematisches Diagramm des Prozesses ist wie folgt in Abbildung 4.4.
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Dominante_Orientierung_Feststellen.pdf}
+ \caption{Dominante Orientierung Feststellen}
+ \label{fig:Dominante Orientierung Feststellen}
+\end{figure} 
+
+
+$\bullet$ \textbf{Merkmalspunkt Deskriptor Generierung}\\
+SURF nehmen eine quadratische Rahmen um den Merkmalspunkt. Die Seite der Rahmen ist 20s (s ist die Skala, bei der der Merkmalspunkt erkannt wird). Die Richtung des Rahmens ist natürlich die Hauptrichtung, die in vorliegened Schritt erfasst wird. Die Rahmen wird dann in 16 Unterbereiche unterteilt, von denen jeder die Haar-Wavelet-Merkmale der horizontalen und vertikalen Richtungen von 25 Pixeln berechnen. Hier die horizontalen und vertikalen Richtungen sind relativ zur Hauptrichtung. Das Haar Wavelet-Merkmal ist die Summe der horizontalen Richtungswerte, die Summe der absoluten Werte in der horizontalen Richtung, die Summe der vertikalen Richtungen und die Summe der absoluten Werte in der vertikalen Richtung. Das schematisches Diagramm in Abbildung 4.5 zeigt dieses Prozesse.
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.5\textwidth]{images/4_ZweiteErfahrung/Merkmalspunkt_Deskriptor.pdf}
+ \caption{Merkmalspunkt Deskriptor}
+ \label{fig:Merkmalspunkt Deskriptor}
+\end{figure} 
+
+Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ein $16*4=64$ dimensionaler Vektor verfügt, der halb so klein wie Sift ist, deswegen den Anpassungsprozess beim Merkmalanpassungsprozess stark beschleunigt. Die folgende Abbildung 4.6 zeigt den Merkmalspunkt, den wir durch den SURF-Algorithmus erhalten haben.
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/SURF_Detektion.pdf}
+ \caption{SURF Detektion}
+ \label{fig:SURF Detektion}
+\end{figure} 
+
 
 \subsection{RANSAC}
+Wie in Abbildung 4.6 gezeigt,  nur durch SURF Algorithmus gibt es immer einige offensichtliche Mismatch-Punkte. Zur Lösung des Problems ist es immer erforderlich mit \gls{ransac}.
+
+
+
+
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf}
+ \caption{OhneRANSAC}
+ \label{fig:OhneRANSAC}
+\end{figure} 
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf}
+ \caption{MitRANSAC}
+ \label{fig:MitRANSAC}
+\end{figure} 
 
 \subsection{Kamara Model}
 
@@ -86,86 +144,3 @@ Vergleichen die Größe jedes Pixel, das von der hessischen Matrix verarbeitet w
 \section{QR Pattern Detection} 
 
 
-Nicht vergessen, dass Überschriften nicht aufeinander folgen dürfen\ldots
-
-\begin{otherlanguage}{english}
-\section{TexLipse spell checking}
-%
-To enable spell checking in TeXLipse, download the respective dictionaries from 
-\url{https://sourceforge.net/projects/texlipse/files/dictionaries/}.
-
-Save the dictionaries at a local location and enter the path in \texttt{Window->Preferences->Tex\-lipse->Spell Checker} (see Fig. \ref{fig:dict_path}).
-%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[scale=0.40]{images/Spell_Checker_preferences.jpg}
-	\captionbelow{TeXLipse Spell Checker preferences}
-	\label{fig:dict_path}
-\end{figure}
-
-To synchronize the user dictionaries between multiple machines, it might be useful to save the dictionaries in your google drive or drop box.
-
-\section{Enable tikzexternalize for PdfLatex}
-
-Go to \texttt{Window->Preferences->Texlipse->Builder Settings} and add 
-%
-\begin{verbatim}
---shell-escape
-\end{verbatim}
-%
-to the command arguments (see Fig. \ref{fig:builder_settings}).
-%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[scale=0.40]{images/PdfLatex_settings.jpg}
-	\captionbelow{PdfLatex Builder Settings}
-	\label{fig:builder_settings}
-\end{figure}
-
-\section{Forward search with TeXlipse and Sumatra PDF}
-
-Download and install SumatraPDF: \url{https://www.sumatrapdfreader.org/}.
-
-Then edit the viewer settings for SumatraPDF in \texttt{Window->Preferences->Texlipse->Viewer Settings}.
-
-Change the viewer arguments to
-%
-\begin{verbatim}
--reuse-instance %fullfile -forward-search %texfile %line
-\end{verbatim}
-%
-and leave all DDE message field empty.
-Change the inverse search support to "`Viewer runs external command"' and enable "`Viewer supports forward search"'.
-
-Figure \ref{fig:viewer_settings} displays the dialog window.
-%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[scale=0.40]{images/Viewer_settings.jpg}
-	\captionbelow{TeXLipse Viewer Settings}
-	\label{fig:viewer_settings}
-\end{figure}
-
-In SumatraPDF configure the inverse search command via the \texttt{Settings->Options} menu (see Fig. \ref{fig:sumatrapdf_options}).
-%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[scale=0.40]{images/SumatraPDF_optionen.jpg}
-	\captionbelow{SumatraPDF Options}
-	\label{fig:sumatrapdf_options}
-\end{figure}
-
-If you have install TeXlipse~1.5.0, the inverse search command will look like this:
-
-\begin{lstlisting}[breaklines=true, basicstyle=\ttfamily, columns=flexible]
-javaw -classpath "C:\Users\wu\.p2\pool\plugins\net.sourceforge.texlipse_1.5.0\texlipse.jar" net.sourceforge.texlipse.viewer.util.FileLocationClient -p 55000 -f "%f" -l %l
-\end{lstlisting}
-
-Let the path point to your eclipse share pool. Or if you do not have a shared pool, choose the plugins directory of your eclipse installation.
-
-For TeXLipse~2.0.X the FileLocationClient is relocated to org.eclipse.texlipse making the inverse search command look like the following.
-\begin{lstlisting}[breaklines=true, basicstyle=\ttfamily, columns=flexible]
-javaw -classpath "C:\Users\wu\.p2\pool\plugins\org.eclipse.texlipse_2.0.1.201801202105\texlipse.jar" org.eclipse.texlipse.viewer.util.FileLocationClient -p 55000 -f "%f" -l %l
-\end{lstlisting}
-
-\end{otherlanguage}

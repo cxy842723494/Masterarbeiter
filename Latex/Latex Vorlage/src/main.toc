@@ -20,24 +20,19 @@
 \contentsline {section}{\numberline {4.1}Grundlegende Einf\IeC {\"u}hrung}{14}{section.4.1}
 \contentsline {section}{\numberline {4.2}Bildregistrierung}{14}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}SURF}{15}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}RANSAC}{17}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Kamara Model}{17}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Parameter Optimierung}{17}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Differenzbild}{17}{section.4.3}
-\contentsline {section}{\numberline {4.4}Image Processing}{17}{section.4.4}
-\contentsline {section}{\numberline {4.5}QR Pattern Detection}{17}{section.4.5}
-\babel@toc {english}{}
-\contentsline {section}{\numberline {4.6}TexLipse spell checking}{17}{section.4.6}
-\contentsline {section}{\numberline {4.7}Enable tikzexternalize for PdfLatex}{17}{section.4.7}
-\contentsline {section}{\numberline {4.8}Forward search with TeXlipse and Sumatra PDF}{18}{section.4.8}
-\babel@toc {ngerman}{}
-\contentsline {chapter}{\numberline {5}Auswertung}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section}{21}{section.5.1}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{22}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section}{22}{section.6.1}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{23}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{23}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{25}{chapter*.16}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{26}{chapter*.17}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{27}{chapter*.18}
-\contentsline {chapter}{\nonumberline Literatur}{28}{chapter*.19}
+\contentsline {subsection}{\numberline {4.2.2}RANSAC}{18}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Kamara Model}{19}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Parameter Optimierung}{19}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Differenzbild}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}Image Processing}{19}{section.4.4}
+\contentsline {section}{\numberline {4.5}QR Pattern Detection}{19}{section.4.5}
+\contentsline {chapter}{\numberline {5}Auswertung}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section}{22}{section.5.1}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section}{23}{section.6.1}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{24}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{24}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{26}{chapter*.18}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{27}{chapter*.19}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{28}{chapter*.20}
+\contentsline {chapter}{\nonumberline Literatur}{29}{chapter*.21}

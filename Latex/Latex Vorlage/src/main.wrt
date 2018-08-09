@@ -59,46 +59,37 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Flussdiagramm der Bildregistrierung\relax }}{14}{figure.caption.10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}SURF}{15}{subsection.4.2.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Scale space\relax }}{16}{figure.caption.11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}RANSAC}{17}{subsection.4.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Kamara Model}{17}{subsection.4.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Parameter Optimierung}{17}{subsection.4.2.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Differenzbild}{17}{section.4.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Image Processing}{17}{section.4.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}QR Pattern Detection}{17}{section.4.5}}
-\@writefile{toc}{\babel@toc {english}{}}
-\@writefile{lof}{\babel@toc {english}{}}
-\@writefile{lot}{\babel@toc {english}{}}
-\@writefile{lol}{\babel@toc {english}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}TexLipse spell checking}{17}{section.4.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Enable tikzexternalize for PdfLatex}{17}{section.4.7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces TeXLipse Spell Checker preferences\relax }}{18}{figure.caption.12}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Forward search with TeXlipse and Sumatra PDF}{18}{section.4.8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces PdfLatex Builder Settings\relax }}{18}{figure.caption.13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces TeXLipse Viewer Settings\relax }}{19}{figure.caption.14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces SumatraPDF Options\relax }}{19}{figure.caption.15}}
-\@writefile{toc}{\babel@toc {ngerman}{}}
-\@writefile{lof}{\babel@toc {ngerman}{}}
-\@writefile{lot}{\babel@toc {ngerman}{}}
-\@writefile{lol}{\babel@toc {ngerman}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{21}{chapter.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Extreme Wert Erkennung\relax }}{17}{figure.caption.12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Dominante Orientierung Feststellen\relax }}{17}{figure.caption.13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Merkmalspunkt Deskriptor\relax }}{18}{figure.caption.14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}RANSAC}{18}{subsection.4.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Kamara Model}{19}{subsection.4.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Parameter Optimierung}{19}{subsection.4.2.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Differenzbild}{19}{section.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Image Processing}{19}{section.4.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}QR Pattern Detection}{19}{section.4.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces SURF Detektion\relax }}{20}{figure.caption.15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces OhneRANSAC\relax }}{21}{figure.caption.16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces MitRANSAC\relax }}{21}{figure.caption.17}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{22}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{21}{section.5.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{22}{chapter.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{22}{section.5.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{23}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{22}{section.6.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{23}{appendix.A}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{23}{section.6.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{24}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{23}{section.A.1}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{25}{chapter*.16}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{26}{chapter*.17}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{27}{chapter*.18}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{28}{chapter*.19}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{24}{section.A.1}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{26}{chapter*.18}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{27}{chapter*.19}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{28}{chapter*.20}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{29}{chapter*.21}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
