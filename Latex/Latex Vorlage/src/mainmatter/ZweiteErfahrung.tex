@@ -15,14 +15,15 @@ In diesem Kapitel wird der durch die Projektgruppe implementierte VXI-11-Server 
 \end{figure}
 
 \subsection{SURF}
-Hier wird zuerste die SURF~\cite{Surf} Feature Detektion eingegangen. Der SURF-Algorithmus arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, und mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. Dies ist auch der Unterschied zwischen dem SIFT-Algorithmus und dem SURF-Algorithmus bei der Verwendung des Pyramidenprinzips. Der SURF-Algorithmus ermöglicht die gleichzeitige Verarbeitung mehrerer Bilder des Maßstabsraums, ohne das Bild Unterzustichproben, wodurch die Leistung des Algorithmus verbessert wird.
+Hier wird zuerste die SURF\cite{Surf} Feature Detektion eingegangen. Der SURF-Algorithmus arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, und mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. 
 
 \textbf{Algorithmus:}\\
+\\
 $\bullet$ \textbf{Aufbau einer hessischen Matrix.}\\
 Die Hesse-Matrix stellt den Kern des SURF-Algorithmus dar. Zur Vereinfachung der Operation wird die Funktion f (z, y) angenommen, dass die Hesse-Matrix H setzt sich aus Funktionen und partiellen Ableitungen zusammen:
 
 \begin{equation}
-   H(f(x,y)) = \begin{bmatrix}
+   \mathcal{H}(f(x,y)) = \begin{bmatrix}
    \frac{\partial^{2}f}{\partial x^{2}} & \frac{\partial^{2}f}{\partial x \cdot \partial y} \\
    \frac{\partial^{2}f}{\partial x \cdot \partial y} & \frac{\partial^{2}f}{\partial y^{2}} \\   
    \end{bmatrix}
@@ -31,14 +32,14 @@ Die Hesse-Matrix stellt den Kern des SURF-Algorithmus dar. Zur Vereinfachung der
  Diskriminante der H-Matrix läuft:
  
 \begin{equation}
-   \det(H) = \frac{\partial^{2}f}{\partial x^{2}} \cdot \frac{\partial^{2}f}{\partial y^{2}} - (\frac{\partial^{2}f}{\partial x \cdot \partial y})^2  
+   \det(\mathcal{H}) = \frac{\partial^{2}f}{\partial x^{2}} \cdot \frac{\partial^{2}f}{\partial y^{2}} - (\frac{\partial^{2}f}{\partial x \cdot \partial y})^2  
 \end{equation}
 
 Der Wert der Diskriminante ist der Eigenwert der H-Matrix. Durch dessen positiven und negativen wird bestimmt, ob der Punkt ein Extrempunkt ist oder nicht. Im SURF Algorithmus wird das Bildpixel $l(x,y)$ anstelle des Funktionswertes $f(x,y)$ verwendet. Nutzen eine Zweite-Order Gaussian function als Filter. Die zweiten Partielle Ableitungen können durch Faltung zwischen bestimmten Kernen berechnet werden. Dadurch können die Werte der drei Matrixelemente der H-Matrix berechnet werden, d.h. die H-Matrix berechnet:
 
 \begin{equation}
 \begin{split}
-   &H(\textbf{x},\sigma) = \begin{bmatrix}
+   &\mathcal{H}(\textbf{x},\sigma) = \begin{bmatrix}
    L_{xx}(\textbf{x},\sigma)\ L_{xy}(\textbf{x},\sigma) \\
    L_{xy}(\textbf{x},\sigma)\ L_{yy}(\textbf{x},\sigma)
    \end{bmatrix} \\   
@@ -48,9 +49,27 @@ Der Wert der Diskriminante ist der Eigenwert der H-Matrix. Durch dessen positive
 \end{equation}
 
 
-Hier $L_{xx}(\textbf{x},\sigma)$ bedeutet die Faltung der zweiter Gaussian Ableitung $G(\sigma)$ mit dem Bild I in Punkt $\textbf{x}$(x,y), ähnlich für $L_{xy}(\textbf{x},\sigma)$ und $L_{yy}(\textbf{x},\sigma)$.
+Hier $L_{xx}(\textbf{x},\sigma)$ bedeutet die Faltung der zweiter Gaussian Ableitung $G(\sigma)$ mit dem Bild I in Punkt $\textbf{x}$(x,y), ähnlich für $L_{xy}(\textbf{x},\sigma)$ und $L_{yy}(\textbf{x},\sigma)$. Auf diese Weise kann der Wert der Determinante für jedes Pixel in dem Bild berechnet werden, und dieser Wert kann verwendet werden, um den Merkmalspunkt zu feststellen.
+Zur einfacheren Anwendung schlägt Herbert Bay\cite{Surf} vor, L mit einer Approximation ersetzen. Um den Fehler zwischen dem genauen Wert und der Approximation auszugleichen, kann die H-Matrix-Diskriminante wie folgt ausgedrückt werden:
+
+\begin{equation}
+   \det(\mathcal{H}_{Approx}) = D_{xx}D_{yy} - (0.9D_{xy})^2  
+\end{equation}
+\\
+$\bullet$ \textbf{Erstellen Maßstab Raum}\\
+Der Maßstabsraum $L(\textbf{x},\sigma)$ des Bildes ist die Darstellung dieses Bildes bei unterschiedlichen Auflösungen(Skalierung). Im Bereich der Computer Vision wird der Maßstabsraum symbolisch als Bildpyramide ausgedrückt. Wobei die Eingangsbildfunktion wiederholt mit dem Kern der Gaußschen Funktion gefaltet und wiederholt unterabgetastet wird.Diese Methode wird hauptsächlich für die Implementierung des SIFT Algorithmus verwendet. Jede Bildschicht hängt jedoch von der vorherigen Bildschicht ab, und das Bild muss in der Größe angepasst werden.Daher hat diese Berechnungsmethode eine große Kosten in Berechnung. Dagegen in SURF Algorithmus, die Verfahre ist durch die Erhöhung der Größe des Bildkerns. Diese ist auch der Unterschied zwischen dem SIFT Algorithmus und dem SURF Algorithmus bei der Verwendung des Pyramidenprinzips.
+Der Algorithmus ermöglicht, dass mehrere Bilder des Maßstabsraums gleichzeitig verarbeitet werden, ohne dass das Bild unterabgetastet wird, wodurch die Leistung des Algorithmus verbessert wird. Das linke Bild in Abbildung 4.2 ist eine Pyramidenstruktur, die auf herkömmliche Weise erstellt wird, die Größe des Bildes wird geändert, und die Operation wird die Unterebene  unter Verwendung der Gaußschen Funktion wiederholt glätten. Der Surf Algorithmus auf der rechten Seite in Abbildung 4.2 behält das ursprüngliche Bild unverändert und ändert nur die Filtergröße.
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Pyramidenstruktur.pdf}
+ \caption{Scale space}
+ \label{fig:Scale space}
+\end{figure} 
 
 
+$\bullet$ \textbf{Präzise Lokalisierung von Feature-Punkten}\\
+Vergleichen die Größe jedes Pixel, das von der hessischen Matrix verarbeitet wird, mit 26 Punkten in seiner drei Dimensionen Raum.
 
 \subsection{RANSAC}
 

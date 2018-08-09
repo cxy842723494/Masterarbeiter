@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.8)  8 AUG 2018 23:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.8)  9 AUG 2018 00:49
 entering extended mode
 **./main.tex
 (main.tex
@@ -4081,59 +4081,74 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
  <./images/0_Image_Registration_Flussdiagramm.pdf, page is rotated 90 degrees>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
- [15]
+(babel)             in language  on input line 54.
+[15]
+
+pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Pyramidenstruktur.pdf
+): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<images/4_ZweiteErfahrung/Pyramidenstruktur.pdf, id=378, 678.535pt x 248.93pt>
+File: images/4_ZweiteErfahrung/Pyramidenstruktur.pdf Graphic file (type pdf)
+<use images/4_ZweiteErfahrung/Pyramidenstruktur.pdf>
+Package pdftex.def Info: images/4_ZweiteErfahrung/Pyramidenstruktur.pdf  used o
+n input line 65.
+(pdftex.def)             Requested size: 360.55476pt x 132.27411pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 86.
+[16 <./images/4_ZweiteErfahrung/Pyramidenstruktur.pdf>]
 File: images/Spell_Checker_preferences.jpg Graphic file (type jpg)
 <use images/Spell_Checker_preferences.jpg>
 Package pdftex.def Info: images/Spell_Checker_preferences.jpg  used on input li
-ne 82.
+ne 101.
 (pdftex.def)             Requested size: 370.17644pt x 278.23457pt.
 File: images/PdfLatex_settings.jpg Graphic file (type jpg)
 <use images/PdfLatex_settings.jpg>
-Package pdftex.def Info: images/PdfLatex_settings.jpg  used on input line 101.
+Package pdftex.def Info: images/PdfLatex_settings.jpg  used on input line 120.
 (pdftex.def)             Requested size: 226.04048pt x 123.6598pt.
- [16] [17]
+ [17] [18]
 File: images/Viewer_settings.jpg Graphic file (type jpg)
 <use images/Viewer_settings.jpg>
-Package pdftex.def Info: images/Viewer_settings.jpg  used on input line 125.
+Package pdftex.def Info: images/Viewer_settings.jpg  used on input line 144.
 (pdftex.def)             Requested size: 197.133pt x 220.0181pt.
 File: images/SumatraPDF_optionen.jpg Graphic file (type jpg)
 <use images/SumatraPDF_optionen.jpg>
-Package pdftex.def Info: images/SumatraPDF_optionen.jpg  used on input line 134
+Package pdftex.def Info: images/SumatraPDF_optionen.jpg  used on input line 153
 .
 (pdftex.def)             Requested size: 145.34041pt x 168.22551pt.
- [18])
+ [19])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 298.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4142,7 +4157,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 298.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 298.
- [19]
+
+[20]
 \openout2 = `mainmatter/auswertung.aux'.
 
  (mainmatter/auswertung.tex
@@ -4167,7 +4183,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 299.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 299.
- [20
+ [21
 
 
 
@@ -4193,7 +4209,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 300.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 300.
- [21
+ [22
 
 
 
@@ -4219,7 +4235,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 303.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 303.
- [22
+ [23
 
 
 
@@ -4238,7 +4254,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 306.
- [23
+ [24
 
 
 
@@ -4260,7 +4276,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 308.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 308.
- [24
+ [25
 
 
 ]
@@ -4279,7 +4295,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 309.
- [25
+ [26
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -4297,7 +4313,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 312.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 312.
- [26
+ [27
 
 ]
 chapter without number
@@ -4315,7 +4331,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 314.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 314.
-[27
+[28
 
 ]
 \openout2 = `backmatter/eidestattliche_erklaerung.aux'.
@@ -4332,7 +4348,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 314.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 314.
- [28
+ [29
 
 
 
@@ -4407,6 +4423,7 @@ Use my own \@writefile for toc
 Use my own \@writefile for toc
 Use my own \@writefile for lof
 Use my own \@writefile for toc
+Use my own \@writefile for lof
 Use my own \@writefile for toc
 Use my own \@writefile for toc
 Use my own \@writefile for toc
@@ -4474,7 +4491,7 @@ Process extension: `lol'
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 315.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E547E2C9A23DB75AB7A3DE0C1EBC6906;2191.
+(rerunfilecheck)             Checksum: 752FD1A6E9793076E9CE71808151E41F;2191.
 
 
 LaTeX Warning: There were undefined references.
@@ -4487,10 +4504,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 67398 strings out of 493290
- 1504725 string characters out of 3129425
- 2376844 words of memory out of 3000000
- 69789 multiletter control sequences out of 15000+200000
+ 67409 strings out of 493290
+ 1505075 string characters out of 3129425
+ 2376933 words of memory out of 3000000
+ 69795 multiletter control sequences out of 15000+200000
  590383 words of font info for 111 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  79i,24n,136p,9085b,3707s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -4523,9 +4540,9 @@ sfonts/cm/cmsy8.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 eX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Chen/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Chen/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (31 pages, 2035695 bytes).
+Output written on main.pdf (32 pages, 2063701 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 589 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 348 words of extra memory for PDF output out of 10000 (max. 10000000)
 

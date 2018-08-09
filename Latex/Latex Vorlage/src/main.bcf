@@ -1981,9 +1981,10 @@
     <bcf:citekey order="1">Kays201502</bcf:citekey>
     <bcf:citekey order="2">lin1973</bcf:citekey>
     <bcf:citekey order="3">Surf</bcf:citekey>
-    <bcf:citekey order="4">Reinhold:2013fk</bcf:citekey>
-    <bcf:citekey order="4">Moon</bcf:citekey>
-    <bcf:citekey order="4">IEEE2011</bcf:citekey>
+    <bcf:citekey order="4">Surf</bcf:citekey>
+    <bcf:citekey order="5">Reinhold:2013fk</bcf:citekey>
+    <bcf:citekey order="5">Moon</bcf:citekey>
+    <bcf:citekey order="5">IEEE2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
