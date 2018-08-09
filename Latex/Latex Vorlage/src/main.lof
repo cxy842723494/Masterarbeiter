@@ -21,9 +21,10 @@
 \contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Extreme Wert Erkennung\relax }}{17}{figure.caption.12}
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Dominante Orientierung Feststellen\relax }}{17}{figure.caption.13}
 \contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Merkmalspunkt Deskriptor\relax }}{18}{figure.caption.14}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces SURF Detektion\relax }}{20}{figure.caption.15}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces OhneRANSAC\relax }}{21}{figure.caption.16}
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces MitRANSAC\relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces SURF Merkmal\relax }}{19}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Linien Detektion\relax }}{20}{figure.caption.16}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces OhneRANSAC\relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces MitRANSAC\relax }}{22}{figure.caption.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

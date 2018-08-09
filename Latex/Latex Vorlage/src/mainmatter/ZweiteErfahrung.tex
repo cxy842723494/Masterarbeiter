@@ -102,51 +102,72 @@ SURF nehmen eine quadratische Rahmen um den Merkmalspunkt. Die Seite der Rahmen 
 
 Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ein $16*4=64$ dimensionaler Vektor verfügt, der halb so klein wie Sift(128 Dimension) ist, deswegen den Anpassungsprozess beim Merkmalanpassungsprozess stark beschleunigt. Die folgende Abbildung 4.6 zeigt den Merkmalspunkt, den wir durch den SURF-Algorithmus erhalten haben.
 
-\begin{figure}[htb]
+\begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/SURF_Detektion.pdf}
- \caption{SURF Detektion}
- \label{fig:SURF Detektion}
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/SURF_Detektion.pdf}
+ \caption{SURF Merkmal}
+ \label{fig:SURF Merkmal}
 \end{figure} 
 
 
 \subsection{RANSAC}
-Durch SURF Detektion findet es immer einige offensichtliche Mismatch-Punkte. Zur Lösung des Problems ist es immer erforderlich mit \gls{ransac}.
+
+Nach SURF Merkmalserkennung wird die Merkmalspunkte von zwei benachbarten Bildern mit Verfahre z.B. \gls{ncc} übereinstimmt. Leide findet es immer einige offensichtliche Fehlerpunkte. Ein einfaches Beispiel ist in der Abbildung 4.7 dargestellt. Das Ziel besteht darin, die am besten geeignete Linie unter einer Menge von Datenpunkten zu finden. Wenn es die einfache Methode der kleinsten Quadrate verwenden ,um diese Linie zu finden, wie auf der linken Seite gezeigt, kann es leider nicht richtig finden, da die Methode der kleinsten Quadrate von alle Datenpunkte beeinflusst wird. Deswegen wird \gls{ransac} eingeführt. Mit RANSAC kann das Modell nur von der inlierer Punkte berechnet werden und die Ergebnisse wie auf der rechten Seite zeigt. 
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/RANSAC/Linien_Detektion.pdf}
+ \caption{Linien Detektion}
+ \label{fig:Linien Detektion}
+\end{figure} 
+
 
 RANSAC Algorithmus, der von Fischler und Bolles \cite{ransac1} vorgeschlagene im Jahr 1981, ist ein allgemeiner Parameterschätzungsansatz, um den großen Anteil von Ausreißern in den Eingabedaten zu bewältigen. Im Gegensatz zu vielen der üblichen robusten Schätzverfahren wie M-Schätzer und kleinsten Quadraten, die von der Computer Vision Community aus der Statistik-Literatur übernommen wurden, wurde RANSAC aus der Computer-Vision-Community entwickelt. 
 
-RANSAC ist ein Wiederholungsprobennahme Verfahren, das  durch die minimalen Anzahl von Beobachtungenpunkten (Datenpunkten) die Kandidatenlösungen generiert. Diese Datebpunkten sind die erforderlich, um die zugrunde liegenden Modellparameter zu schätzen. Darauf haben Fischler und Bolles\cite{ransac1} hingewiesen, zur Erhalten einer anfängliche Lösung und Beschneidung der Ausreißern RANSAC Verfahren baraucht nicht so viele Daten, sondern verwendet die kleinste mögliche Menge und fährt fort, diese Menge mit eine konsistenten Datenpunkten zu vergrößern.
+RANSAC ist ein Wiederholungsprobennahme Verfahren, das  durch die minimalen Anzahl von Beobachtungenpunkten (Datenpunkten) die Kandidatenlösungen generiert. Diese Datebpunkten sind die erforderlich, um die zugrunde liegenden Modellparameter zu schätzen. Darauf haben Fischler und Bolles~\cite{ransac1} hingewiesen, zur Erhalten einer anfängliche Lösung und Beschneidung der Ausreißern RANSAC Verfahren baraucht nicht so viele Daten, sondern verwendet die kleinste mögliche Menge und fährt fort, diese Menge mit eine konsistenten Datenpunkten zu vergrößern.
 
 Der grundlegende Algorithmus ist wie folgt zusammengefasst:
 
 \begin{itemize}
-	\item Die inlinere Daten können durch die Parameter mehrerer Gruppen von Modellen beschrieben werden, dagegen sind Ausreißer nicht zum Modellieren von Daten geeignet.
-	\item Zeitliche differentielle Modulation der Chrominanz
-	\item Örtliche differentielle Modulation der Luminanz
+	\item Zufällig wählen die Mindestanzahl der Punkten aus, die erforderlich sind, zum Bestimmen der Modellparameter.
+	\item Lösen die Parameter des Modells.
+	\item Bestimmen wie viele Punkte aus der Menge aller Punkte mit einer vordefinierten Toleranz $\epsilon$ übereinstimmen
+	\item Wenn der Bruchteil der Anzahl von Inlierern über die Gesamtzahl der Punkte in dem Satz einen vordefinierten Schwellenwert $\tau$ überschreitet, schätzen die Modellparameter mit allen identifizierten Inlierern und terminieren wieder.
+	\item Ansonsten wiederholen die Schritte 1 bis 4 (maximal N-mal).
 \end{itemize}
 
+N bedeutet die Anzahl der Iterationen. Es wird hoch genug gewählt, um die Wahrscheinlichkeit p (normalerweise auf 0,99 gesetzt) sicherzustellen, dass mindestens eine der Gruppen von Stichproben keinen Ausreißer enthält.
+Dann die Wahrscheinlichkeit, dass bei N Mal Iterationen mit erforderlich minimalen Anzahl Punkte (hier m annahmen) mindestens ein Ausreißer mit ausgewählt wird, läuft:
 
+\begin{equation}
+   1 - p = (1 - u^m)^N
+\end{equation}
 
+Hier u stellen die Wahrscheinlichkeit dar, dass jeder ausgewählte Datenpunkt ein Inlier ist. Dagegen $v = 1 - u$ heißt die Wahrscheinlichkeit, dass jeder ausgewählte Datenpunkt ein Ausreißer ist. Durch einige Gleichheitsumwandlung können die Anzahl der Iterationen ausgedrückt werden als:
 
+\begin{equation}
+   N = \frac{\log(1 - p)}{\log(1 - (1 - v)^m)}
+\end{equation}
 
+In dieser Arbeit werden die Anwendung von RANSAC als folgend Abbildung gezeigt. Abbildung 4.8 zeigt die passende Punkt durch SURF Merkmalserkennung. Es ist ersichtlich, dass es viele fehlerhafte Kombinationen gibt. Durch RANSAC kann dieses Problem lösen und die übereinstimmendenPunkte verfeinern, wie in Abbildung 4.9 zeigt.
 
-
-
-\begin{figure}[htb]
+\begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf}
+ \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf}
  \caption{OhneRANSAC}
  \label{fig:OhneRANSAC}
 \end{figure} 
 
-\begin{figure}[htb]
+\begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf}
+ \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf}
  \caption{MitRANSAC}
  \label{fig:MitRANSAC}
 \end{figure} 
 
 \subsection{Kamara Model}
+In diesem Abschnitt wird
+
 
 \subsection{Parameter Optimierung}
 
