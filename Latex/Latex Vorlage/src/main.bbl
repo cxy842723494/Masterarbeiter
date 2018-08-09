@@ -219,6 +219,55 @@
       \field{pages}{346\bibrangedash 359}
       \range{pages}{14}
     \endentry
+    \entry{ransac1}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9cb3164d714c21e9fedc873c2e09a05e}{%
+           family={Fischler},
+           familyi={F\bibinitperiod},
+           given={Martin\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=951f7d383d3ea7b7019a817032735f8b}{%
+           family={Bolles},
+           familyi={B\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{fc26f22afcddeded198fab29d715e89a}
+      \strng{fullhash}{fc26f22afcddeded198fab29d715e89a}
+      \strng{bibnamehash}{fc26f22afcddeded198fab29d715e89a}
+      \strng{authorbibnamehash}{fc26f22afcddeded198fab29d715e89a}
+      \strng{authornamehash}{fc26f22afcddeded198fab29d715e89a}
+      \strng{authorfullhash}{fc26f22afcddeded198fab29d715e89a}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography}
+      \field{volume}{24}
+      \field{year}{1981}
+      \field{pages}{381\bibrangedash 395}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1145/358669.358692
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/358669.358692
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/358669.358692
+      \endverb
+      \keyw{automated cartography,camera calibration,image matching,location determination,model fitting,scene analysis}
+    \endentry
     \entry{Reinhold:2013fk}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=50a8a405c48231b9d7a7928f463170cf}{%
@@ -238,8 +287,8 @@
       \strng{authorbibnamehash}{7c3ed3daacd1422e2b72547e54c30980}
       \strng{authornamehash}{7c3ed3daacd1422e2b72547e54c30980}
       \strng{authorfullhash}{7c3ed3daacd1422e2b72547e54c30980}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2013 IFIP Wireless Days (WD)}
@@ -275,8 +324,8 @@
       \strng{authorbibnamehash}{d9e178cc01874be6cb8e994e2a250982}
       \strng{authornamehash}{d9e178cc01874be6cb8e994e2a250982}
       \strng{authorfullhash}{d9e178cc01874be6cb8e994e2a250982}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -295,8 +344,8 @@
       \list{publisher}{1}{%
         {IEEE}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labeltitlesource}{title}
       \field{abstract}{The protocol and compatible interconnection for data communication devices using low data-rate, low-power, and low-complexity short-range radio frequency (RF) transmissions in a wire less personal area network (WPAN) were defined in IEEE Std 802.15.4-2006. In this revision, the market applicability of IEEE Std 802.15.4 is extended, the ambiguities in the standard are removed, and the improvements learned from implementations of IEEE Std 802.15.4-2006 are included.}
       \field{isbn}{9780738166834}

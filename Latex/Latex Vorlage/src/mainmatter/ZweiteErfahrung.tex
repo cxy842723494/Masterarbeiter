@@ -15,12 +15,12 @@ In diesem Kapitel wird der durch die Projektgruppe implementierte VXI-11-Server 
 \end{figure}
 
 \subsection{SURF}
-Hier wird zuerste die SURF\cite{Surf} Feature Detektion eingegangen. Der SURF-Algorithmus arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, und mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. 
+Hier wird zuerste die SURF\cite{Surf} Merkmalserkennung eingegangen. SURF Merkmalserkennung arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. 
 
 \textbf{Algorithmus:}\\
 \\
 $\bullet$ \textbf{Aufbau einer hessischen Matrix.}\\
-Die Hesse-Matrix stellt den Kern des SURF-Algorithmus dar. Zur Vereinfachung der Operation wird die Funktion f (z, y) angenommen, dass die Hesse-Matrix H setzt sich aus Funktionen und partiellen Ableitungen zusammen:
+Die Hesse-Matrix stellt den Kern des SURF Algorithmus dar. Zur Vereinfachung der Operation wird die Funktion f (z, y) angenommen, dass die Hesse-Matrix H setzt sich aus Funktionen und partiellen Ableitungen zusammen:
 
 \begin{equation}
    \mathcal{H}(f(x,y)) = \begin{bmatrix}
@@ -35,7 +35,7 @@ Die Hesse-Matrix stellt den Kern des SURF-Algorithmus dar. Zur Vereinfachung der
    \det(\mathcal{H}) = \frac{\partial^{2}f}{\partial x^{2}} \cdot \frac{\partial^{2}f}{\partial y^{2}} - (\frac{\partial^{2}f}{\partial x \cdot \partial y})^2  
 \end{equation}
 
-Der Wert der Diskriminante ist der Eigenwert der H-Matrix. Durch dessen positiven und negativen wird bestimmt, ob der Punkt ein Extrempunkt ist oder nicht. Im SURF Algorithmus wird das Bildpixel $l(x,y)$ anstelle des Funktionswertes $f(x,y)$ verwendet. Nutzen eine Zweite-Order Gaussian function als Filter. Die zweiten Partielle Ableitungen können durch Faltung zwischen bestimmten Kernen berechnet werden. Dadurch können die Werte der drei Matrixelemente der H-Matrix berechnet werden, d.h. die H-Matrix berechnet:
+Der Wert der Diskriminante ist der Eigenwert der H-Matrix. Durch dessen positiven und negativen wird bestimmt, ob der Punkt ein Extrempunkt ist oder nicht. Im SURF Algorithmus wird das Bildpixel $l(x,y)$ anstelle des Funktionswertes $f(x,y)$ verwendet. Nutzen eine Zweite-Order Gaussian Function als Filter. Die zweiten Partielle Ableitungen können durch Faltung zwischen bestimmten Kernen berechnet werden. Dadurch können die Werte der drei Matrixelemente der H-Matrix auch berechnet werden, nämlich die H-Matrix berechnet:
 
 \begin{equation}
 \begin{split}
@@ -57,7 +57,7 @@ Zur einfacheren Anwendung schlägt Herbert Bay\cite{Surf} vor, L mit einer Appro
 \end{equation}
 \\
 $\bullet$ \textbf{Erstellen Maßstab Raum}\\
-Der Maßstabsraum $L(\textbf{x},\sigma)$ des Bildes ist die Darstellung dieses Bildes bei unterschiedlichen Auflösungen(Skalierung). Im Bereich der Computer Vision wird der Maßstabsraum symbolisch als Bildpyramide ausgedrückt. Wobei die Eingangsbildfunktion wiederholt mit dem Kern der Gaußschen Funktion gefaltet und wiederholt unterabgetastet wird.Diese Methode wird hauptsächlich für die Implementierung des SIFT Algorithmus verwendet. Jede Bildschicht hängt jedoch von der vorherigen Bildschicht ab, und das Bild muss in der Größe angepasst werden.Daher hat diese Berechnungsmethode eine große Kosten in Berechnung. Dagegen in SURF Algorithmus, die Verfahre ist durch die Erhöhung der Größe des Bildkerns. Diese ist auch der Unterschied zwischen dem SIFT Algorithmus und dem SURF Algorithmus bei der Verwendung des Pyramidenprinzips.
+Der Maßstabsraum $L(\textbf{x},\sigma)$ des Bildes ist die Darstellung dieses Bildes bei unterschiedlichen Auflösungen(Skalierung). Im Bereich der Computer Vision wird der Maßstabsraum symbolisch als Bildpyramide ausgedrückt, wobei die Eingangsbildfunktion wiederholt mit dem Kern der Gaußschen Funktion gefaltet und wiederholt unterabgetastet wird. Diese Methode wird hauptsächlich für die Implementierung des SIFT Algorithmus verwendet. Jede Bildschicht hängt jedoch von der vorherigen Bildschicht ab, und das Bild muss in der Größe angepasst werden. Daher hat diese Berechnungsmethode eine große Kosten in Berechnung. Im Vergleich dazu ist es in SURF durch die Erhöhung der Größe des Bildkerns. Diese ist ein Unterschied zwischen dem SIFT Algorithmus und dem SURF Algorithmus bei der Verwendung des Pyramidenprinzips.
 Der Algorithmus ermöglicht, dass mehrere Bilder des Maßstabsraums gleichzeitig verarbeitet werden, ohne dass das Bild unterabgetastet wird, wodurch die Leistung des Algorithmus verbessert wird. Das linke Bild in Abbildung 4.2 ist eine Pyramidenstruktur, die auf herkömmliche Weise erstellt wird, die Größe des Bildes wird geändert, und die Operation wird die Unterebene  unter Verwendung der Gaußschen Funktion wiederholt glätten. Der Surf Algorithmus auf der rechten Seite in Abbildung 4.2 behält das ursprüngliche Bild unverändert und ändert nur die Filtergröße.
 
 \begin{figure}[htb]
@@ -69,7 +69,7 @@ Der Algorithmus ermöglicht, dass mehrere Bilder des Maßstabsraums gleichzeitig
 
 
 $\bullet$ \textbf{Präzise Lokalisierung von Feature-Punkten}\\
-Vergleichen die Größe jedes Pixel, das von der hessischen Matrix verarbeitet wird, mit 26 Punkten in seiner drei Dimensionen Raum, wie in Abbildung 4.3 zeight. Wenn es das Maximum oder Minimum dieser 26 Punkte ist, wird es als vorläufiger Merkmalspunkt beibehalten. Das dreidimensionale lineare Interpolationsverfahren wird verwendet, um die Merkmalspunkte des Subpixel-Niveaus zu erhalten, und die Punkte, deren Werte kleiner als ein bestimmter Schwellenwert sind, werden ebenfalls entfernt.
+Vergleichen die Größe jedes Pixel, die von der hessischen Matrix verarbeitet wird, mit die 26 Punkten in seiner drei Dimensionen Raum, wie in Abbildung 4.3 zeight. Wenn es das Maximum oder Minimum dieser 26 Punkte ist, wird es als vorläufiger Merkmalspunkt beibehalten. Das dreidimensionale lineare Interpolationsverfahren wird verwendet, um die Merkmalspunkte des Subpixel-Niveaus zu erhalten, und die Punkte, deren Werte kleiner als ein bestimmter Schwellenwert sind, werden ebenfalls entfernt.
 
 \begin{figure}[htb]
  \centering 
@@ -80,7 +80,7 @@ Vergleichen die Größe jedes Pixel, das von der hessischen Matrix verarbeitet w
 
 
 $\bullet$ \textbf{Hauptrichtungsermittlung}\\
-SIFT wählt die Hauptrichtung des Merkmalspunkts unter Verwendung des Gradientenhistogramms im Merkmalspunktfeld aus. Die Richtung, in der der Bin-Wert des Histogramms der größte und oder 80\% maximale Bin-Wert  überschreitet, wird als Hauptrichtung des Merkmalspunkts genommen. Dagegen beim SURF wird das Gradientenhistogramm nicht statistiken, sondern das Harr-Wavelet-Eigenshcaft im Merkmalspunkt-Bereich wird statistisch analysiert. Das heißt, im Bereich der Merkmalspunkt (zum Beispiel innerhalb eines Kreises mit einem Radius von 6s, wobei s der Maßstab ist, auf dem der Punkt liegt) die Summe der Horizontal-Haar-Wavelet-Merkmale und der Vertikal-Haar-Wavelet-Merkmale aller Punkte im  60-Grad-Sektor($\pi/3$) werden gezählt. Die Größe des Haar Wavelets stellt als 4s, so dass für jeden Sektor einen Wert bekommt. Dann wird 60-Grad-Sektor in einem bestimmten Intervall gedreht, schließlich lassen die Richtung des Sektors mit Maximalwert als Hauptrichtung des Merkmalspunkts nehmen. Ein schematisches Diagramm des Prozesses ist wie folgt in Abbildung 4.4.
+SIFT wählt die Hauptrichtung des Merkmalspunkts unter Verwendung des Gradientenhistogramms im Merkmalspunktbereich aus. Die Richtung, in der der Bin-Wert des Histogramms der größte und oder 80\% maximale Bin-Wert  überschreitet, wird als Hauptrichtung des Merkmalspunkts genommen. Dagegen beim SURF wird das Gradientenhistogramm nicht statistiken, sondern das Harr-Wavelet-Eigenshcaft im Merkmalspunktbereich wird statistisch analysiert. Das heißt, im Bereich der Merkmalspunkt (zum Beispiel innerhalb eines Kreises mit einem Radius von 6s, wobei s der Maßstab ist, auf dem der Punkt liegt) die Summe der Horizontal-Haar-Wavelet-Merkmale und der Vertikal-Haar-Wavelet-Merkmale aller Punkte im  60-Grad-Sektor($\pi/3$) werden gezählt. Die Größe des Haar Wavelets stellt als 4s, so dass für jeden Sektor einen Wert bekommt. Dann wird 60-Grad-Sektor in einem bestimmten Intervall gedreht, schließlich lassen die Richtung des Sektors mit Maximalwert als Hauptrichtung des Merkmalspunkts nehmen. Ein schematisches Diagramm des Prozesses ist wie folgt in Abbildung 4.4.
 
 \begin{figure}[htb]
  \centering 
@@ -100,7 +100,7 @@ SURF nehmen eine quadratische Rahmen um den Merkmalspunkt. Die Seite der Rahmen 
  \label{fig:Merkmalspunkt Deskriptor}
 \end{figure} 
 
-Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ein $16*4=64$ dimensionaler Vektor verfügt, der halb so klein wie Sift ist, deswegen den Anpassungsprozess beim Merkmalanpassungsprozess stark beschleunigt. Die folgende Abbildung 4.6 zeigt den Merkmalspunkt, den wir durch den SURF-Algorithmus erhalten haben.
+Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ein $16*4=64$ dimensionaler Vektor verfügt, der halb so klein wie Sift(128 Dimension) ist, deswegen den Anpassungsprozess beim Merkmalanpassungsprozess stark beschleunigt. Die folgende Abbildung 4.6 zeigt den Merkmalspunkt, den wir durch den SURF-Algorithmus erhalten haben.
 
 \begin{figure}[htb]
  \centering 
@@ -111,7 +111,22 @@ Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ei
 
 
 \subsection{RANSAC}
-Wie in Abbildung 4.6 gezeigt,  nur durch SURF Algorithmus gibt es immer einige offensichtliche Mismatch-Punkte. Zur Lösung des Problems ist es immer erforderlich mit \gls{ransac}.
+Durch SURF Detektion findet es immer einige offensichtliche Mismatch-Punkte. Zur Lösung des Problems ist es immer erforderlich mit \gls{ransac}.
+
+RANSAC Algorithmus, der von Fischler und Bolles \cite{ransac1} vorgeschlagene im Jahr 1981, ist ein allgemeiner Parameterschätzungsansatz, um den großen Anteil von Ausreißern in den Eingabedaten zu bewältigen. Im Gegensatz zu vielen der üblichen robusten Schätzverfahren wie M-Schätzer und kleinsten Quadraten, die von der Computer Vision Community aus der Statistik-Literatur übernommen wurden, wurde RANSAC aus der Computer-Vision-Community entwickelt. 
+
+RANSAC ist ein Wiederholungsprobennahme Verfahren, das  durch die minimalen Anzahl von Beobachtungenpunkten (Datenpunkten) die Kandidatenlösungen generiert. Diese Datebpunkten sind die erforderlich, um die zugrunde liegenden Modellparameter zu schätzen. Darauf haben Fischler und Bolles\cite{ransac1} hingewiesen, zur Erhalten einer anfängliche Lösung und Beschneidung der Ausreißern RANSAC Verfahren baraucht nicht so viele Daten, sondern verwendet die kleinste mögliche Menge und fährt fort, diese Menge mit eine konsistenten Datenpunkten zu vergrößern.
+
+Der grundlegende Algorithmus ist wie folgt zusammengefasst:
+
+\begin{itemize}
+	\item Die inlinere Daten können durch die Parameter mehrerer Gruppen von Modellen beschrieben werden, dagegen sind Ausreißer nicht zum Modellieren von Daten geeignet.
+	\item Zeitliche differentielle Modulation der Chrominanz
+	\item Örtliche differentielle Modulation der Luminanz
+\end{itemize}
+
+
+
 
 
 
