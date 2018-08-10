@@ -112,7 +112,11 @@ Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ei
 
 \subsection{RANSAC}
 
-Nach SURF Merkmalserkennung wird die Merkmalspunkte von zwei benachbarten Bildern mit Verfahre z.B. \gls{ncc} übereinstimmt. Leide findet es immer einige offensichtliche Fehlerpunkte. Ein einfaches Beispiel ist in der Abbildung 4.7 dargestellt. Das Ziel besteht darin, die am besten geeignete Linie unter einer Menge von Datenpunkten zu finden. Wenn es die einfache Methode der kleinsten Quadrate verwenden ,um diese Linie zu finden, wie auf der linken Seite gezeigt, kann es leider nicht richtig finden, da die Methode der kleinsten Quadrate von alle Datenpunkte beeinflusst wird. Deswegen wird \gls{ransac} eingeführt. Mit RANSAC kann das Modell nur von der inlierer Punkte berechnet werden und die Ergebnisse wie auf der rechten Seite zeigt. 
+Nach SURF Merkmalserkennung wird die Merkmalspunkte von zwei benachbarten Bildern mit Verfahre z.B. \gls{ncc} übereinstimmt. Abbildung 4.8 zeigt die passende Punkt. Es ist ersichtlich, dass es darin viele fehlerhafte zusammenpassendes Paar gibt. Deswegen wird \gls{ransac} eingeführt.
+
+RANSAC Algorithmus, der von Fischler und Bolles \cite{ransac1} vorgeschlagene im Jahr 1981, ist ein allgemeiner Parameterschätzungsansatz, um den großen Anteil von Ausreißern in den Eingabedaten zu bewältigen. Im Gegensatz zu vielen der üblichen robusten Schätzverfahren wie M-Schätzer und kleinsten Quadraten, die von der Computer Vision Community aus der Statistik-Literatur übernommen wurden, wurde RANSAC aus der Computer-Vision-Community entwickelt. 
+
+Ein einfaches Beispiel ist in der Abbildung 4.7 dargestellt. Das Ziel besteht darin, die am besten geeignete Linie unter einer Menge von Datenpunkten zu finden. Wenn es die einfache Methode der kleinsten Quadrate verwenden ,um diese Linie zu finden, wie auf der linken Seite gezeigt, kann es leider nicht richtig finden, da die Methode der kleinsten Quadrate von alle Datenpunkte beeinflusst wird. Dagegen mit RANSAC kann das Modell nur von der inlierer Punkte berechnet werden und die Ergebnisse wie auf der rechten Seite zeigt. 
 
 \begin{figure}[H]
  \centering 
@@ -120,9 +124,6 @@ Nach SURF Merkmalserkennung wird die Merkmalspunkte von zwei benachbarten Bilder
  \caption{Linien Detektion}
  \label{fig:Linien Detektion}
 \end{figure} 
-
-
-RANSAC Algorithmus, der von Fischler und Bolles \cite{ransac1} vorgeschlagene im Jahr 1981, ist ein allgemeiner Parameterschätzungsansatz, um den großen Anteil von Ausreißern in den Eingabedaten zu bewältigen. Im Gegensatz zu vielen der üblichen robusten Schätzverfahren wie M-Schätzer und kleinsten Quadraten, die von der Computer Vision Community aus der Statistik-Literatur übernommen wurden, wurde RANSAC aus der Computer-Vision-Community entwickelt. 
 
 RANSAC ist ein Wiederholungsprobennahme Verfahren, das  durch die minimalen Anzahl von Beobachtungenpunkten (Datenpunkten) die Kandidatenlösungen generiert. Diese Datebpunkten sind die erforderlich, um die zugrunde liegenden Modellparameter zu schätzen. Darauf haben Fischler und Bolles~\cite{ransac1} hingewiesen, zur Erhalten einer anfängliche Lösung und Beschneidung der Ausreißern RANSAC Verfahren baraucht nicht so viele Daten, sondern verwendet die kleinste mögliche Menge und fährt fort, diese Menge mit eine konsistenten Datenpunkten zu vergrößern.
 
@@ -165,8 +166,29 @@ In dieser Arbeit werden die Anwendung von RANSAC als folgend Abbildung gezeigt. 
  \label{fig:MitRANSAC}
 \end{figure} 
 
-\subsection{Kamara Model}
-In diesem Abschnitt wird
+
+\subsection{Kamerakalibrierung}
+Kamara Model
+
+Wie in den ersten beiden Abschnitten vorgestellt,finde  die übereinstimmende Punkte mit Verwenden des SURF in aufeinanderfolgenden Bildern, dann durch RANSAC lassen die Ausreißer verwerfen. Als nächstes soll die Kamera kalibriert werden. In diesem Abschnitt wird zuerst das Kameramodell vorstellt.
+
+\textbf{Kamera Model}
+
+Das Modell der Lochkamera ist in Abbildung 4.10 dargestellt. In dem Modell ist C das optische Zentrum (Fokus), f ist die Kamerabrennweite.
+
+Die vier Koordinatensysteme im Modell sind wie folgt definiert:
+
+\begin{itemize}
+	\item 3D Weltkoordinatensystem $W(X,Y,Z)$ \\
+	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{X_w}\sim(X_w,Y_w,Z_w,1)^T$
+	\item 3D Kamerakoordinatensystem $C(X_c,Y_c,Z_c)$\\
+	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{X_c}\sim(X_c,Y_c,Z_c,1)^T$
+	\item 2D Bildabbildungs Koordinatensystem $P(x,y)$\\
+	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{x}\sim(x,y,1)^T$
+	\item 2D Bildpixel Koordinatensystem $I(u,v)$\\
+	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{u}\sim(u,v,1)^T$
+
+\end{itemize}
 
 
 \subsection{Parameter Optimierung}

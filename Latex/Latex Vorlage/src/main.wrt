@@ -67,7 +67,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Linien Detektion\relax }}{20}{figure.caption.16}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces OhneRANSAC\relax }}{22}{figure.caption.17}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces MitRANSAC\relax }}{22}{figure.caption.18}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Kamara Model}{23}{subsection.4.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Kamerakalibrierung}{23}{subsection.4.2.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Parameter Optimierung}{23}{subsection.4.2.4}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Differenzbild}{23}{section.4.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Image Processing}{23}{section.4.4}}

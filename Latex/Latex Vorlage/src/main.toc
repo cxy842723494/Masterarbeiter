@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {4.2}Bildregistrierung}{14}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}SURF}{15}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}RANSAC}{19}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Kamara Model}{23}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Kamerakalibrierung}{23}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Parameter Optimierung}{23}{subsection.4.2.4}
 \contentsline {section}{\numberline {4.3}Differenzbild}{23}{section.4.3}
 \contentsline {section}{\numberline {4.4}Image Processing}{23}{section.4.4}
