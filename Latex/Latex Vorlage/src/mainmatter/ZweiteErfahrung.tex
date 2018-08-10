@@ -168,7 +168,6 @@ In dieser Arbeit werden die Anwendung von RANSAC als folgend Abbildung gezeigt. 
 
 
 \subsection{Kamerakalibrierung}
-Kamara Model
 
 Wie in den ersten beiden Abschnitten vorgestellt,finde  die übereinstimmende Punkte mit Verwenden des SURF in aufeinanderfolgenden Bildern, dann durch RANSAC lassen die Ausreißer verwerfen. Als nächstes soll die Kamera kalibriert werden. In diesem Abschnitt wird zuerst das Kameramodell vorstellt.
 
@@ -183,12 +182,67 @@ Die vier Koordinatensysteme im Modell sind wie folgt definiert:
 	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{X_w}\sim(X_w,Y_w,Z_w,1)^T$
 	\item 3D Kamerakoordinatensystem $C(X_c,Y_c,Z_c)$\\
 	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{X_c}\sim(X_c,Y_c,Z_c,1)^T$
-	\item 2D Bildabbildungs Koordinatensystem $P(x,y)$\\
+	\item 2D Bildabbildung Koordinatensystem $P(x,y)$\\
 	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{x}\sim(x,y,1)^T$
 	\item 2D Bildpixel Koordinatensystem $I(u,v)$\\
 	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{u}\sim(u,v,1)^T$
-
 \end{itemize}
+
+% note
+
+Nachdem das von der Kamera aufgenommene Bild in ein digitales Bild umgewandelt wurde, darstellt jedes digitale Bild als ein $M×N$ Array im Computer und der Wert jedes Elements (d.h. Pixels) in dem Bild, der aus M Zeilen und N Spalten bestehen, als die Helligkeit (Graustufen) des Bildpunkts. Wie in der Abbildung 4.11 gezeigt, ein kartesisches Koordinatensystem $(U,V)$ definiert wird. Dies Koordinatensystem ist in Pixeleinheiten. Weil $(u,v)$ nur die Anzahl von Spalten und Reihen von Pixeln in dem Array darstellen kann und keine physikalischen Einheiten verwendet werden, um die Position des Pixels in dem Bild anzugeben, ist es notwendig, ein Bildkoordinatensystem in physikalischen Einheiten (mm) festzulegen. Das Bildkoordinatensystem nimmt einen Punkt O1 in dem Bild als den Ursprung, und die X-Achse und die Y-Achse sind jeweils parallel zu der U-Achse und der V-Achse.
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.6\textwidth]{images/4_ZweiteErfahrung/Kamera/pixelkoordinate.pdf}
+ \caption{Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem}
+ \label{fig:Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem}
+\end{figure} 
+
+Wie in Abbidung gezeigt, repräsentiert $(u,v)$ die Koordinaten des Bildkoordinatensystems in Einheiten von Pixeln und $(x,y)$ repräsentiert die Koordinaten des Bildkoordinatensystems in mm. Im X, Y Koordinatensystem ist der Ursprung O1 am Schnittpunkt der optischen Achse der Kamera und der Bildebene definiert, die im allgemeinen in der Mitte des Bildes liegt. Aus fertigungstechnischen Gründen gibt es jedoch viele Fälle von Offset. Wenn die Koordinaten von O1 in den U- und V-Koordinatensystemen $(u0, v0)$ sind, ist die Größe jedes Pixels in den X- und Y-Achsenrichtungen dx, dy, dann hat jedes Pixel des Bildes die folgende Beziehung 4.7 in zwei Koordinatensystemen.
+
+\begin{equation}
+   \begin{cases} 
+	u = x/d_x + u_0	 \\  
+	v = y/d_y + v_0	
+	\end{cases}
+\end{equation}
+
+Im homogenen Koordinatensystem darstellt:
+
+\begin{equation}
+   \begin{bmatrix}
+	u \\  
+	v \\
+	1
+	\end{bmatrix} = \begin{bmatrix}
+	1/d_x & 0 & u_0	\\
+	0	  & 1/d_y & v_0	\\
+	0     & 0 & 1	
+	\end{bmatrix} \cdot \begin{bmatrix}
+	x \\  
+	y \\
+	1
+	\end{bmatrix}
+\end{equation}
+
+
+\begin{equation}
+   \begin{bmatrix}
+	X_c \\  
+	Y_c \\
+	Z_c \\
+	1
+	\end{bmatrix} = \begin{bmatrix}
+	R & t	\\
+	0^T	& 1 \\
+	\end{bmatrix} \cdot \begin{bmatrix}
+	X_w \\  
+	Y_w \\
+	Z_w \\
+	1
+	\end{bmatrix}
+\end{equation}
 
 
 \subsection{Parameter Optimierung}
