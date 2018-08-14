@@ -175,6 +175,13 @@ Wie in den ersten beiden Abschnitten vorgestellt,finde  die übereinstimmende Pu
 
 Das Modell der Lochkamera ist in Abbildung 4.10 dargestellt. In dem Modell ist C das optische Zentrum (Fokus), f ist die Kamerabrennweite.
 
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Kamera/cameramodel.pdf}
+ \caption{Kamera Model}
+ \label{fig:cameramodel}
+\end{figure} 
+
 Die vier Koordinatensysteme im Modell sind wie folgt definiert:
 
 \begin{itemize}
@@ -189,22 +196,203 @@ Die vier Koordinatensysteme im Modell sind wie folgt definiert:
 \end{itemize}
 
 % note
+Unter diesem Modell wird ein 3D-Punkt im Weltkoordinatensystem durch drei Koordinaten den 2D-Bildpixelkoordinaten zugeordnet.
 
-Nachdem das von der Kamera aufgenommene Bild in ein digitales Bild umgewandelt wurde, darstellt jedes digitale Bild als ein $M×N$ Array im Computer und der Wert jedes Elements (d.h. Pixels) in dem Bild, der aus M Zeilen und N Spalten bestehen, als die Helligkeit (Graustufen) des Bildpunkts. Wie in der Abbildung 4.11 gezeigt, ein kartesisches Koordinatensystem $(U,V)$ definiert wird. Dies Koordinatensystem ist in Pixeleinheiten. Weil $(u,v)$ nur die Anzahl von Spalten und Reihen von Pixeln in dem Array darstellen kann und keine physikalischen Einheiten verwendet werden, um die Position des Pixels in dem Bild anzugeben, ist es notwendig, ein Bildkoordinatensystem in physikalischen Einheiten (mm) festzulegen. Das Bildkoordinatensystem nimmt einen Punkt O1 in dem Bild als den Ursprung, und die X-Achse und die Y-Achse sind jeweils parallel zu der U-Achse und der V-Achse.
+(a). 3D-Weltkoordinatensystem zum 3D-Kamera-Koordinatensystem.
+
+Die Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem ist eine Starrekörpertransformation, d.h. das Objekt verformt sich nicht und nur durch Rotation und Parallelverschiebung. Diese Transformation wird in Abbildung 4.11 gezeigt. R bedeutet Rotationsmatrix und T ist Translationsmatrix.
 
 \begin{figure}[htb]
  \centering 
- \includegraphics[keepaspectratio,width=0.6\textwidth]{images/4_ZweiteErfahrung/Kamera/pixelkoordinate.pdf}
- \caption{Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem}
- \label{fig:Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem}
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Kamera/WzuC.pdf}
+ \caption{Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem}
+ \label{fig:WzuC}
 \end{figure} 
 
-Wie in Abbidung gezeigt, repräsentiert $(u,v)$ die Koordinaten des Bildkoordinatensystems in Einheiten von Pixeln und $(x,y)$ repräsentiert die Koordinaten des Bildkoordinatensystems in mm. Im X, Y Koordinatensystem ist der Ursprung O1 am Schnittpunkt der optischen Achse der Kamera und der Bildebene definiert, die im allgemeinen in der Mitte des Bildes liegt. Aus fertigungstechnischen Gründen gibt es jedoch viele Fälle von Offset. Wenn die Koordinaten von O1 in den U- und V-Koordinatensystemen $(u0, v0)$ sind, ist die Größe jedes Pixels in den X- und Y-Achsenrichtungen dx, dy, dann hat jedes Pixel des Bildes die folgende Beziehung 4.7 in zwei Koordinatensystemen.
+Um die entsprechende Rotationsmatrix zu erhalten, wird verschiedene Winkel um verschiedene Koordinatenachsen gedreht. Ein simple Beispiel wird in Abbildung 4.12 gezeigt.
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.4\textwidth]{images/4_ZweiteErfahrung/Kamera/rotationsmatrix.pdf}
+ \caption{Rotation um Z-Achse}
+ \label{fig:rotation}
+\end{figure} 
+
+Aus dem Bild können wir leicht bekommen:
 
 \begin{equation}
    \begin{cases} 
-	u = x/d_x + u_0	 \\  
-	v = y/d_y + v_0	
+	x = x'\cos\theta - y'\sin\theta \\	
+	y = x'\sin\theta + y'\cos\theta \\
+	z = z'
+	\end{cases}
+\end{equation}
+
+In Matrixform wie folgend ausgedrückt:
+
+\begin{equation}
+   \begin{bmatrix}
+	x \\  
+	y \\
+	z
+	\end{bmatrix} = \begin{bmatrix}
+	\cos\theta & -\sin\theta & 0	\\
+	\sin\theta & \cos\theta  & 0	\\
+	0    	   & 0           & 1	
+	\end{bmatrix} \cdot \begin{bmatrix}
+	x' \\  
+	y' \\
+	z'
+	\end{bmatrix}= R_1 \cdot \begin{bmatrix}
+	x' \\  
+	y' \\
+	z'
+	\end{bmatrix}
+\end{equation}
+
+In ähnlicher Weise, um die x-Achse, y-Achse dreht sich um $\varphi$ und $\omega$ Grad, bekommen:
+\begin{equation}
+   \begin{bmatrix}
+	x \\  
+	y \\
+	z
+	\end{bmatrix} = \begin{bmatrix}
+		1   & 0          & 0	\\
+		0   & \cos\varphi & -\sin\varphi	\\
+	    0   & \sin\varphi& \cos\varphi	
+	\end{bmatrix} \cdot \begin{bmatrix}
+	x' \\  
+	y' \\
+	z'
+	\end{bmatrix}= R_2 \cdot \begin{bmatrix}
+	x' \\  
+	y' \\
+	z'
+	\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+   \begin{bmatrix}
+	x \\  
+	y \\
+	z
+	\end{bmatrix} = \begin{bmatrix}
+	\cos\omega  & 0           & \sin\omega	\\		
+	0    	    & 1           & 0	\\
+	-\sin\omega &0            &  \cos\omega
+	\end{bmatrix} \cdot \begin{bmatrix}
+	x' \\  
+	y' \\
+	z'
+	\end{bmatrix}= R_3 \cdot \begin{bmatrix}
+	x' \\  
+	y' \\
+	z'
+	\end{bmatrix}
+\end{equation}
+
+Dann können die Rotationsmatrix erhalten werden:
+\begin{equation}
+   R = R_1 \cdot R_2 \cdot R_3
+\end{equation}
+
+Kombinieren das Obige, können die Koordinaten von Punkt P im Kamerakoordinatensystem erhalten.
+\begin{equation}
+   \begin{bmatrix}
+	X_C \\  
+	Y_c \\
+	Z_c
+	\end{bmatrix} = R \cdot \begin{bmatrix}
+	X_w \\  
+	Y_w \\
+	Z_w 
+	\end{bmatrix} +T
+\end{equation}
+
+Im homogenen Koordinatensystem darstellt:
+\begin{equation}
+   \begin{bmatrix}
+	X_C \\  
+	Y_C \\
+	Z_C \\
+	1
+	\end{bmatrix} = \begin{bmatrix}
+	R & t	\\
+	\vec{0}	& 1 \\
+	\end{bmatrix} \cdot \begin{bmatrix}
+	X_w \\  
+	Y_w \\
+	Z_w \\
+	1
+	\end{bmatrix}
+\end{equation}
+
+(b). 3D-Kamera-Koordinatensystem zum 2D-Bildabbildung Koordinatensystem.
+
+Die Transformation vom Kamerakoordinatensystem zum Bildkoordinatensystem gehört zur perspektivischen Projektionsbeziehung von 3D zu 2D, wie zeigt in Abbildung 4.13.
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.4\textwidth]{images/4_ZweiteErfahrung/Kamera/Czuimage.pdf}
+ \caption{Transformation vom Kamerakoordinatensystem zum Bild Koordinatensystem}
+ \label{fig:Czuimage}
+\end{figure} 
+
+Es gibt zwei Paare ähnlichen Dreiecken:
+\begin{equation}
+   \begin{split}
+    \triangle ABO_C \sim \triangle oCO_c\\  
+	\triangle PBO_C \sim \triangle pCO_c
+	\end{split}
+\end{equation}
+
+Aus ähnlichen Dreiecksbeziehungen können diese Gleichung Verfügbar sein:
+\begin{equation}
+   \frac{AB}{oC} = \frac{AO_C}{oO_C} = \frac{PB}{pC} = \frac{X_C}{x} = \frac{Z_C}{f} = \frac{Y_C}{y} 
+\end{equation}
+
+Durch die Gleichung Transformation können es erhalten: 
+\begin{equation}
+   x = f \cdot \frac{X_C}{Z_C}, y = f \cdot \frac{Y_C}{Z_C}
+\end{equation}
+
+Im homogenen Koordinatensystem darstellt:
+\begin{equation}
+   Z_C \cdot \begin{bmatrix}
+	x \\  
+	y \\
+	1
+	\end{bmatrix} = \begin{bmatrix}
+	f & 0 & 0 & 0	\\
+	0 & f & 0 & 0	\\
+	0 & 0 & 1 & 0	
+	\end{bmatrix} \cdot \begin{bmatrix}
+	X_C \\  
+	Y_C \\
+	Z_C \\
+	1
+	\end{bmatrix}
+\end{equation}
+
+Zu dieser Zeit ist die Einheit des Projektionspunkts p noch nicht Pixel, sondern mm und muss weiter in das Pixelkoordinatensystem umgewandelt werden.
+
+(c). 2D-Bildabbildung Koordinatensystem zum 2D-Bildpixel Koordinatensystem.
+
+Das Pixelkoordinatensystem und das Bildkoordinatensystem befinden sich alle auf der Abbildungsebene, aber die jeweiligen Ursprünge und Maßeinheiten sind unterschiedlich. Der Ursprung des Bildkoordinatensystems ist der Schnittpunkt der optischen Achse der Kamera und der Abbildungsebene, üblicherweise der Mittelpunkt der Abbildungsebene oder der Hauptpunkt. Die Einheit des Bildkoordinatensystems ist mm, die zu der physikalischen Einheit gehört, und die Einheit des Pixelkoordinatensystems ist Pixel. Wir beschreiben gewöhnlich, dass ein Pixel welche Zeilen und Spalten ist. So ist der Übergang zwischen den beiden wie folgt in Abbildung 4.14. 
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.6\textwidth]{images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf}
+ \caption{Konvertierung von Bildkoordinatensystem zu Pixelkoordinatensystem}
+ \label{fig:Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem}
+\end{figure} 
+
+Hier dx, dy ist die Größe jedes Pixels in den X- und Y-Achsenrichtungen. Jedes Pixel des Bildes hat die folgende Beziehung 4.7 in zwei Koordinatensystemen.
+
+\begin{equation}
+   \begin{cases} 
+	u = \frac{x}{d_x} + u_0	 \\  
+	v = \frac{y}{d_y} + v_0	
 	\end{cases}
 \end{equation}
 
@@ -216,9 +404,9 @@ Im homogenen Koordinatensystem darstellt:
 	v \\
 	1
 	\end{bmatrix} = \begin{bmatrix}
-	1/d_x & 0 & u_0	\\
-	0	  & 1/d_y & v_0	\\
-	0     & 0 & 1	
+	\frac{1}{d_x} 			& 0 			& u_0	\\
+	0	 					& \frac{1}{d_y} & v_0	\\
+	0     					& 0 			& 1	
 	\end{bmatrix} \cdot \begin{bmatrix}
 	x \\  
 	y \\
@@ -226,33 +414,246 @@ Im homogenen Koordinatensystem darstellt:
 	\end{bmatrix}
 \end{equation}
 
-
+Das Bildkoordinatensystem ist eine zweidimensionale Ebene(Bildebene). Es ist in praktisch die Oberfläche des Kamera-CCD-Sensors. Jeder CCD-Sensor hat eine bestimmte Größe und eine bestimmte Auflösung. Diese beide bestimmt die Konvertierungsbeziehung. Eine simple Beispiel, eine Größe des CCD-Sensors ist $\SI{8}{\mm} \times \SI{6}{\mm}$ , die Auflösung dafür ist $640 \times 480$, dann die Beziehung zwischen mm und Pixel läuft $80~pixel/mm$. Lassen Sie die physikalische Größe jedes Pixels des CCD-Sensors $d_x \times d_y$ sein, entspricht läuft $d_x = d_y = \SI{1/80}{\mm}$.
+ 
+Dann durch die Umwandlung der obigen vier Koordinatensysteme kann ein Punkt vom Weltkoordinatensystem zum Pixelkoordinatensystem erhalten.
 \begin{equation}
-   \begin{bmatrix}
-	X_c \\  
-	Y_c \\
-	Z_c \\
+\begin{split}
+   Z_C \cdot \begin{bmatrix}
+	u \\  
+	v \\
 	1
-	\end{bmatrix} = \begin{bmatrix}
+	\end{bmatrix} & = \begin{bmatrix}
+	\frac{1}{d_x} 			& 0 			& u_0	\\
+	0	 					& \frac{1}{d_y} & v_0	\\
+	0     					& 0 			& 1	
+	\end{bmatrix} \cdot \begin{bmatrix}
+	f & 0 & 0 & 0	\\
+	0 & f & 0 & 0	\\
+	0 & 0 & 1 & 0	
+	\end{bmatrix} \cdot \begin{bmatrix}
 	R & t	\\
-	0^T	& 1 \\
+	\vec{0}	& 1 \\
+	\end{bmatrix} \cdot \begin{bmatrix}
+	X_w \\  
+	Y_w \\
+	Z_w \\
+	1
+	\end{bmatrix} \\
+	& = \begin{bmatrix}
+	f_x & 0 & u_0 & 0	\\
+	0 & f_y & v_0 & 0	\\
+	0 & 0 & 1 & 0	
+	\end{bmatrix} \cdot \begin{bmatrix}
+	R & t	\\
+	\vec{0}	& 1 \\
 	\end{bmatrix} \cdot \begin{bmatrix}
 	X_w \\  
 	Y_w \\
 	Z_w \\
 	1
 	\end{bmatrix}
+\end{split}	
 \end{equation}
 
+Die erste Matrix der rechten Gleichung ist die allgemein bekannt interne Referenz der Kamera. Dagegen ist die zweite Matrix die externe Referenz der Kamera. Beide Parameter der Kamera durch Zhang Zhengyou \cite{zhangzhengyou} Kalibrierung erhalten werden. Einige typisch Kamera Parameter von Manufaktur liegt in Tabellen 4.1.
 
-\subsection{Parameter Optimierung}
+\begin{table}[htb]
+	\captionabove{Parameter des Kameras im Vergleich}
+	\label{tbl:params}
+	\footnotesize
+	\centering
+	\rowcolors{2}{white}{gray!25}	%TUgreen!25
+	\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}	%p{}m{}b{}clr
+	\toprule
+	\textbf{Parameter} & \textbf{Google Pixel} & \textbf{Google Pixel2} & \textbf{Iphone 10}\\
+	\midrule
+	Sensor Größe $''$ & 1/2.3 & 1/2.6 & 1/3 \\
+	Bild Auflösung $pixels$ & $4048 \times 3036$ & $4032 \times 3024$ & $4032 \times 3024$ \\
+	Pixel Größe $\mu m$ & 1.544 & 1.4 & 1.22 \\	
+	Brennweite $mm$ & 4.67 & 4.47 & 3.99 \\
+	Formatfaktor $35 mm$  	&5.55	&6.04	&7.02	\\
+	
+	\bottomrule
+	\end{tabular}
+\end{table} 
+
+
+Aus der obigen Formel wenn die internen und externen Parameter der Kamera bekannt sind, ist nämlich die Projektionsmatrix bekannt, und zu diesem Zeitpunkt können die entsprechenden Bildkoordinaten für jeden beliebigen räumlichen Punkt erhalten werden. Dagegen  wenn die Position m (u, v) in Bildkoordinate bekannt ist, und auch die Parameter innerhalb und außerhalb der Kamera bereits bekannt sind, kann die entsprechenden Punkt in Wert Koordinate nicht eindeutig bestimmt werden. Die Grund dafür ist, die $Z_c$ Information während des Projektionsprozesses eliminiert wird. 
+
+\textbf{Image Warping}
+
+In diese Arbeit wird zuerst eine vereinfachte Situation  betrachten, d.h. nur mit Rotations Einfluss. Abbildung 4.15 zeigt das 3D-Rotationsbewegungsmodell der Kamera. Die Position des optischen Zentrums ändert sich während der Kamerabewegung im Drehbewegungsmodell der Kamera nicht. Unter diesem Modell ist die Abbildungsbeziehung zwischen dem Punkt X im Weltkoordinatensystem und der Bildkoordinate x im homogenen Koordinatensystem dargestellt: 
+\begin{equation}
+   x = KRX, X = \lambda  K^{-1} x
+\end{equation}
+
+Wobei: K ist der interne Parameter der Kamera, wie zuvor definiert. $\lambda$ ist der unbekannte Skalierungsfaktor, d.h. unter dem Kameramodell die Quelle der Bildpunktkoordinaten einem Strahl zugeordnet ist.
+
+\begin{figure}[htb]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.5\textwidth]{images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf}
+ \caption{Rotationsbewegungsmodell}
+ \label{fig:rotationsmodel}
+\end{figure} 
+
+
+Herleiten nun die Beziehung zwischen Bildpunkten in einem Framepaar für zwei verschiedene Kameraausrichtungen (siehe Abbildung 4.15). Für einen Weltkoordinatepunkt X sind die projizierten Punkte $x_i$ und $x_j$ in der Bildebene von zwei Bildern i und j gegeben durch
+\begin{equation}
+   x_i = KR_iX, x_j = KR_jX
+\end{equation}
+
+Anordnen diese Gleichungen weiter und ersetzen X, wird eine Beziehung aller Punkte im Bildrahmen i auf alle Punkte im Rahmen j erhalten:
+\begin{equation}
+   x_j = KR_jR_i^TK^{-1}x_i
+\end{equation}
+
+Bisher wird nur die Beziehung zwischen zwei Bildern desselben Videos betrachtet. Lockern diese Einschränkung, indem Frames von einer Kamera, die sich gemäß $R$ dreht, zu einer anderen Kamera, die sich gemäß $R'$ dreht, abbilden. Es gibt eine Hypothese, dass beide Kamerazentren sich im Ursprung befinden. Dann die Warping-Matrix, die Punkte von einer Kamera auf die andere abbildet, definiert werden können:
+\begin{equation}
+   W = KR'R^TK^{-1}
+\end{equation}
+
+Es wird hier angenommen, dass das erste Bild als Referenz genommen wird und der Rotationswinkel 0 ist. Dann die Gleichung kann vereinfacht werden:
+\begin{equation}
+   W = KRK^{-1}
+\end{equation}
+
+Kombiniert mit Formel 4.23 können es ausgedrückt als:
+\begin{equation}
+   x_j = Wx_i
+\end{equation}
+
+\textbf{Kalibrierung}
+
+In diesem Abschnitt wird die Parameter in der Warping-Matrix berechnt. Überprüfen die letzten beiden Abschnitte, mit Verwendung des SURF~\cite{Surf} die übereinstimmende Punkte in aufeinanderfolgenden Bilderrahme entdeckt werden dann durch RANSAC~\cite{ransac1}, Ausreißer verworfen werden. Das Ergebnis ist eine Menge von Punktkorrespondenzen $x_i$ und $x_j$ für alle benachbarten Bilder. Angesichts dieser Grundwahrheit kann man die Kalibrierung als ein Optimierungsproblem formulieren, wobei wir den Fehler bei der Mittelwertbildung im Quadrat aller Punktkorrespondenzen minimieren wollen:
+\begin{equation}
+   J = \sum_{(i,j)}\lVert x_j - Wx_i \rVert ^2
+\end{equation}
+
+Beachten, dass dies ein nichtlineares Optimierungsproblem ist. Einige nichtlinearer Optimierer könnte verwendet werden, um diese Zielfunktion zu minimieren. Jedoch ist es gefunden, dass Koordinatenabstieg durch direkte objektive Funktionsbewertung schnell konvergiert. Jedes Mal, wenn einen Schritt gemacht wird, bei dem die Zielfunktion J nicht abnimmt, kehren die Schrittrichtung um und verringern die Schrittweite des entsprechenden
+Parameter. Der Algorithmus endet, sobald die Schrittgröße für alle Parameter unter einen gewünschten Schwellenwert fällt (d.h. Wenn eine Zielgenauigkeit erreicht haben). Das Flussdiagramm des Algorithmus ist wie folgt:
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf}
+ \caption{Flussdiagramm für Algorithmus}
+ \label{fig:rotationsmodel}
+\end{figure} 
+
+Weiter in einem allgemeineren Fall, d.h. derzeit nicht nur mit Rotations Einfluss, sondern auch Translations Einfluss nehmen. Das Verlauf ist im Allgemeinen gleich. Der Hauptunterschied ist Anzahl der Parametern, die von original nur 3 Rotationsparameter zur jetzt 6 Parameter einschließlich 3 Rotationsparameter und 3 Translationsparameter. Das neu Warping-Matrix darstellt wie folgen:
+\begin{equation}
+   W = \begin{bmatrix}
+	f			& 0 		& \frac{w}{2}	  & 0 \\
+	0	 		& f			& \frac{h}{2} 	  & 0 \\
+	0     		& 0 		& 1 			  & 0 \\	
+	0     		& 0 		& 0 			  & 1
+	\end{bmatrix} \cdot \begin{bmatrix}
+	R_{11}			& R_{21}  		& R_{31}	  & 0 \\
+	R_{12}	 		& R_{22}		& R_{32}	  & 0 \\
+	R_{13}     		& R_{23} 		& R_{33} 	  & 0 \\	
+	t1     			& t2 			& t3 		  & 1
+	\end{bmatrix} \cdot \begin{bmatrix}
+	\frac{1}{f}	   & 0 				& -\frac{w}{2f}	  & 0 \\
+	0	 		   & \frac{1}{f}	& -\frac{h}{2f}   & 0 \\
+	0     		   & 0 		        & 1 			  & 0 \\	
+	0     		   & 0 		        & 0 			  & 1
+	\end{bmatrix}
+\end{equation}
+
+Dann durch Transformationsmatrix können die Koordinaten des zweiten Bildes in die Koordinaten des ersten Bildes umgewandelt werden. Abbildung 4.17 zeigt diese Verlauf. Die Ergebnisse der beiden experimentellen Fälle werden im nächsten Kapitel detailliert beschrieben. 
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf}
+ \caption{Transformation in eine Koordinate}
+ \label{fig:Transformation in eine Koordinate}
+\end{figure} 
 
 \section{Differenzbild}
+Durch Bildregistration erhalten eine Reihe Bildern von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden.
+Zwei beliebige Bilder subtrahiere und einen Differenzbild enthalten. Eine Beispiel Differenzbild wird in Abbildung 4.18 gezeigt. An jeder Ecke der Modulationsbereich existiert ein QR-Pattern. 
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Kamera/differenzbild.pdf}
+ \caption{Differenzbild Beispiel}
+ \label{fig:Differenzbild}
+\end{figure} 
+
+Hier in dieser Arbeit wird eine einfach Differenzbild Algorithmus vorstellen, wie folgen darstellt:
+
+\begin{enumerate}
+	\item Wähle zwei beliebige Bilder und subtrahiere, um Differenzbild zu enthalten.
+	\item Berechnen die Energie jedes Differenzbild. Um den Berechnungsaufwand zu reduzieren, kann nur der zentrale Bereich berechnet werden.
+	\item Sortiere und nehmen 3 Differenzbildern, die maximaler Energie verfügen.
+	\item Addieren diese 3 Differenzbildern und nächste Bildverarbeitung.
+\end{enumerate}
+
+\section{Bildverarbeitung} 
+Der detailliert Inhalt der Bildverarbeitung wurde in der ersten Methode eingeführt, hier ist nur eine einfache Beschreibung der verwendeten Funktionen in Matlab.
+
+\textbf{Bild Binarisierung}
+
+Für die Schwellenwertbildung und das Erstellen eines Binärbildes wurde eine Funktion namens "imbinarize" verwenden. Diese Funktion erhält das Bild und verwendet ein anpassungsfähige Schwellwert, um das Schwarz-Weiß-Bild zurückzugeben. Das ist genug für QR-Pattern Detktion, weil es nur dunkle und helle Module enthält, die binär 1 bzw. 0 sind. Das Skript ist wie folgt:
+
+\singlespacing
+\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Binarisierung}, label={lst:MATLABCodeBinarisierung}]
+
+% Threshold image - adaptive threshold
+BW = imbinarize(X, 'adaptive', 'Sensitivity', 0.500000, 'ForegroundPolarity', 'bright');
+
+\end{matlab}
+\onehalfspacing
+
+\textbf{Medianfilter}
+
+Der Grund für das Median-Filtern ist, dass manchmal beim Prozess Binarisierung aus einem Bild die Muster wie Salz- und Pfeffergeräusche erzeugt werden können. Um diesen Fehler zu vermeiden, ist Median Filterung eine leistungsfähig Methode. Das Skript ist so einfach wie medfilt2(img). Zur Verbesserung der Ergebnisse kann natürlich die verschiedenen Fenstergrößen für die Matlab-Funktion verwenden.
+
+\textbf{Morphologie}
+
+Mit öffnenden und schließenden Filtern können die Lücken zwischen Blöcken und die kleine Punkte von Rausch stark reduziert werden, was das resultierende binär Bild zu einer guten Schätzung des QR-Pattern macht. Das Skript ist wie folgt:
+
+\singlespacing
+\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
+% Close mask with square
+width = 5;
+se = strel('square', width);
+BW = imclose(BW, se);
+
+% Open mask with square
+width = 5;
+se = strel('square', width);
+BW = imopen(BW, se);
+
+\end{matlab}
+\onehalfspacing
+
+\section{QR Musters Detektion} 
+
+Nach Bildverarbeitung wird die QR Musters Detektion ausgeführt, d.h. lokalisieren die QR Musters im Bild rekonstruiere die Bild. Abbildung 4.19 zeigt eine simple Struktur des QR Musters. Es gibt insgesamt vier QR Muster, jede an der Ecke der Modulartionsbereiche. 
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/QRMuster/QRPattern.pdf}
+ \caption{QR Pattern}
+ \label{fig:QRPattern}
+\end{figure}
+
+Jedes Muster kann als drei konzentrische Quadrate betrachtet werden und besteht aus eine schwarzen (dunklen) $7 \times 7$ Modulen, eine weißen (hellen) $5 \times 5$ Modulen und schließlich eine dunklen $3 \times 3$ Modulen. Das Breiteverhältnis der alternativen Schwarz- und Weißmodul in jedem Muster beträgt etwa $1:1:3:1:1$ in jeder Richtung, wie zeigt in Abbildung 4.20. Diese wichtige Eigenschaft hilft uns, die Lokalität der QR Muster zu finden. Es gibt noch ein Trennmuster, das ein Funktionsmuster mit aller weißen (hellen) Module, Breit ein Modul. Es spielt eine Rolle als einer Grenze zwischen den Mustern und dem Datenbereich.
+ 
+ \begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.7\textwidth]{images/4_ZweiteErfahrung/QRMuster/QP_Patternratio.pdf}
+ \caption{QR Pattern Ratio}
+ \label{fig:QRPatternRatio}
+\end{figure}
 
 
-\section{Image Processing} 
 
 
-\section{QR Pattern Detection} 
+\singlespacing
+\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
+%instrreset
 
-
+\end{matlab}
+\onehalfspacing

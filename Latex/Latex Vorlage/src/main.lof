@@ -25,7 +25,17 @@
 \contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Linien Detektion\relax }}{20}{figure.caption.16}
 \contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces OhneRANSAC\relax }}{22}{figure.caption.17}
 \contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces MitRANSAC\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem\relax }}{24}{figure.caption.19}
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Kamera Model\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem\relax }}{24}{figure.caption.20}
+\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Rotation um Z-Achse\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Transformation vom Kamerakoordinatensystem zum Bild Koordinatensystem\relax }}{26}{figure.caption.22}
+\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Konvertierung von Bildkoordinatensystem zu Pixelkoordinatensystem\relax }}{27}{figure.caption.23}
+\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces Rotationsbewegungsmodell\relax }}{29}{figure.caption.25}
+\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces Flussdiagramm f\IeC {\"u}r Algorithmus\relax }}{32}{figure.caption.26}
+\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces Transformation in eine Koordinate\relax }}{33}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Differenzbild Beispiel\relax }}{34}{figure.caption.28}
+\contentsline {figure}{\numberline {\relax 4.19}{\ignorespaces QR Pattern\relax }}{36}{figure.caption.29}
+\contentsline {figure}{\numberline {\relax 4.20}{\ignorespaces QR Pattern Ratio\relax }}{36}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
