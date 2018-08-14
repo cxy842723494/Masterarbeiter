@@ -26,7 +26,7 @@ function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)
 %     n = size(Y, 3);
     
     % im real we don't need to analyse the whole pixels in the image, we
-    % just
+    % just analyse the pixel at the conner
     s.offset = 0;
     s.sizeH = ceil(h/2);%192*3*(uint16(w/1920));250; % 250:450 d.h. the ratio of the tv 3:4
     s.sizeW = ceil(w/2);%256*4*(uint16(w/1920));450; % 192:256 d.h. the ratio of the tv 9:16

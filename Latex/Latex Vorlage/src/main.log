@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.8)  14 AUG 2018 21:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.8)  15 AUG 2018 01:43
 entering extended mode
 **./main.tex
 (main.tex
@@ -3549,6 +3549,12 @@ LaTeX Warning: Label `fig:rotationsmodel' multiply defined.
 LaTeX Warning: Label `fig:rotationsmodel@cref' multiply defined.
 
 
+LaTeX Warning: Label `lst:MATLABCodeBinarisierung' multiply defined.
+
+
+LaTeX Warning: Label `lst:MATLABCodeBinarisierung@cref' multiply defined.
+
+
 LaTeX Warning: Label `lst:MATLABCodeBeispiel' multiply defined.
 
 
@@ -4059,222 +4065,245 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 6.
+<images/4_ZweiteErfahrung/Flussigdiagramm.pdf, id=326, 477.65451pt x 256.1299pt
+>
+File: images/4_ZweiteErfahrung/Flussigdiagramm.pdf Graphic file (type pdf)
+<use images/4_ZweiteErfahrung/Flussigdiagramm.pdf>
+Package pdftex.def Info: images/4_ZweiteErfahrung/Flussigdiagramm.pdf  used on 
+input line 14.
+(pdftex.def)             Requested size: 360.55476pt x 193.34758pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 8.
-<images/0_Image_Registration_Flussdiagramm.pdf, id=327, 845.28702pt x 377.69206
+(babel)             in language  on input line 19.
+
+Overfull \hbox (2.79907pt too wide) in paragraph at lines 21--22
+\T1/phv/m/n/10.95 Annehmen ei-ne Sze-ne, wenn ei-ne Rhein Fo-tos mit ei-ner Han
+dheld-Kamera auf-neh-men, kommt
+ []
+
+<images/4_ZweiteErfahrung/Bildregistration.pdf, id=327, 360.99869pt x 473.38658
 pt>
-File: images/0_Image_Registration_Flussdiagramm.pdf Graphic file (type pdf)
-<use images/0_Image_Registration_Flussdiagramm.pdf>
-Package pdftex.def Info: images/0_Image_Registration_Flussdiagramm.pdf  used on
- input line 12.
-(pdftex.def)             Requested size: 360.55476pt x 161.10194pt.
+File: images/4_ZweiteErfahrung/Bildregistration.pdf Graphic file (type pdf)
+<use images/4_ZweiteErfahrung/Bildregistration.pdf>
+Package pdftex.def Info: images/4_ZweiteErfahrung/Bildregistration.pdf  used on
+ input line 25.
+(pdftex.def)             Requested size: 270.41779pt x 354.62733pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 19.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 19.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 29.
 [14
 
 
 
- <./images/0_Image_Registration_Flussdiagramm.pdf, page is rotated 90 degrees>]
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+ [15 <./images/4_ZweiteErfahrung/Flussigdiagramm.pdf, page is rotated 90 degree
+s> <./images/4_ZweiteErfahrung/Bildregistration.pdf, page is rotated 90 degrees
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 54.
-[15]
+(babel)             in language  on input line 67.
+[16]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Scale_space.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Scale_space.pdf, id=354, 678.535pt x 248.93pt>
+<images/4_ZweiteErfahrung/Scale_space.pdf, id=375, 678.535pt x 248.93pt>
 File: images/4_ZweiteErfahrung/Scale_space.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Scale_space.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Scale_space.pdf  used on inpu
-t line 65.
+t line 78.
 (pdftex.def)             Requested size: 360.55476pt x 132.27411pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
-[16 <./images/4_ZweiteErfahrung/Scale_space.pdf>]
+(babel)             in language  on input line 86.
+[17 <./images/4_ZweiteErfahrung/Scale_space.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Extreme_Wert_Erkennun
 g.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
 ed
-<images/4_ZweiteErfahrung/Extreme_Wert_Erkennung.pdf, id=364, 290.08376pt x 234
+<images/4_ZweiteErfahrung/Extreme_Wert_Erkennung.pdf, id=384, 290.08376pt x 234
 .8775pt>
 File: images/4_ZweiteErfahrung/Extreme_Wert_Erkennung.pdf Graphic file (type pd
 f)
 <use images/4_ZweiteErfahrung/Extreme_Wert_Erkennung.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Extreme_Wert_Erkennung.pdf  u
-sed on input line 76.
+sed on input line 89.
 (pdftex.def)             Requested size: 180.27394pt x 145.9666pt.
 
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Dominante_Orientierun
 g_Feststellen.pdf): PDF inclusion: found PDF version <1.7>, but at most version
  <1.5> allowed
-<images/4_ZweiteErfahrung/Dominante_Orientierung_Feststellen.pdf, id=365, 526.9
+<images/4_ZweiteErfahrung/Dominante_Orientierung_Feststellen.pdf, id=385, 526.9
 6875pt x 186.6975pt>
 File: images/4_ZweiteErfahrung/Dominante_Orientierung_Feststellen.pdf Graphic f
 ile (type pdf)
 <use images/4_ZweiteErfahrung/Dominante_Orientierung_Feststellen.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Dominante_Orientierung_Festst
-ellen.pdf  used on input line 87.
+ellen.pdf  used on input line 100.
 (pdftex.def)             Requested size: 360.55476pt x 127.74457pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 95.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 95.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 95.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 95.
-[17 <./images/4_ZweiteErfahrung/Extreme_Wert_Erkennung.pdf> <./images/4_ZweiteE
+(babel)             in language  on input line 108.
+[18 <./images/4_ZweiteErfahrung/Extreme_Wert_Erkennung.pdf> <./images/4_ZweiteE
 rfahrung/Dominante_Orientierung_Feststellen.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Merkmalspunkt_Deskrip
 tor.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
 owed
-<images/4_ZweiteErfahrung/Merkmalspunkt_Deskriptor.pdf, id=376, 338.76563pt x 2
+<images/4_ZweiteErfahrung/Merkmalspunkt_Deskriptor.pdf, id=396, 338.76563pt x 2
 53.69781pt>
 File: images/4_ZweiteErfahrung/Merkmalspunkt_Deskriptor.pdf Graphic file (type 
 pdf)
 <use images/4_ZweiteErfahrung/Merkmalspunkt_Deskriptor.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Merkmalspunkt_Deskriptor.pdf 
- used on input line 98.
+ used on input line 111.
 (pdftex.def)             Requested size: 225.34587pt x 168.76498pt.
 
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/SURF_Detektion.pdf): 
 PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/SURF_Detektion.pdf, id=377, 521.66022pt x 688.53868pt
+<images/4_ZweiteErfahrung/SURF_Detektion.pdf, id=397, 521.66022pt x 688.53868pt
 >
 File: images/4_ZweiteErfahrung/SURF_Detektion.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/SURF_Detektion.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/SURF_Detektion.pdf  used on i
-nput line 107.
+nput line 120.
 (pdftex.def)             Requested size: 360.55476pt x 475.89069pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 111.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 111.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 111.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 111.
-[18 <./images/4_ZweiteErfahrung/Merkmalspunkt_Deskriptor.pdf>]
+(babel)             in language  on input line 124.
+[19 <./images/4_ZweiteErfahrung/Merkmalspunkt_Deskriptor.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
- [19 <./images/4_ZweiteErfahrung/SURF_Detektion.pdf>]
-<images/4_ZweiteErfahrung/RANSAC/Linien_Detektion.pdf, id=398, 645.10713pt x 35
+(babel)             in language  on input line 131.
+ [20 <./images/4_ZweiteErfahrung/SURF_Detektion.pdf>]
+<images/4_ZweiteErfahrung/RANSAC/Linien_Detektion.pdf, id=418, 645.10713pt x 35
 0.24452pt>
 File: images/4_ZweiteErfahrung/RANSAC/Linien_Detektion.pdf Graphic file (type p
 df)
 <use images/4_ZweiteErfahrung/RANSAC/Linien_Detektion.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/RANSAC/Linien_Detektion.pdf  
-used on input line 123.
+used on input line 136.
 (pdftex.def)             Requested size: 450.69174pt x 244.69385pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 146.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 146.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 146.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 133.
- [20 <./images/4_ZweiteErfahrung/RANSAC/Linien_Detektion.pdf, page is rotated 9
+(babel)             in language  on input line 146.
+ [21 <./images/4_ZweiteErfahrung/RANSAC/Linien_Detektion.pdf, page is rotated 9
 0 degrees>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf, id=416, 1070.96768pt x 724.534
+<images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf, id=436, 1070.96768pt x 724.534
 36pt>
 File: images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf  used o
-n input line 157.
+n input line 170.
 (pdftex.def)             Requested size: 405.61981pt x 274.40831pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 161.
-[21]
+(babel)             in language  on input line 174.
+[22]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf, id=423, 1054.20816pt x 724.5343
+<images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf, id=444, 1054.20816pt x 724.5343
 6pt>
 File: images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/RANSAC/MitRANSAC.pdf  used on
- input line 164.
+ input line 177.
 (pdftex.def)             Requested size: 405.61981pt x 278.77522pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 173.
-[22 <./images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf> <./images/4_ZweiteErfahr
+(babel)             in language  on input line 186.
+[23 <./images/4_ZweiteErfahrung/RANSAC/OhneRANSAC.pdf> <./images/4_ZweiteErfahr
 ung/RANSAC/MitRANSAC.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Kamera/cameramodel.pd
 f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Kamera/cameramodel.pdf, id=435, 499.05446pt x 325.174
+<images/4_ZweiteErfahrung/Kamera/cameramodel.pdf, id=455, 499.05446pt x 325.174
 84pt>
 File: images/4_ZweiteErfahrung/Kamera/cameramodel.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Kamera/cameramodel.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/cameramodel.pdf  used 
-on input line 180.
+on input line 193.
 (pdftex.def)             Requested size: 360.55476pt x 234.93942pt.
 
-Overfull \hbox (8.61319pt too wide) in paragraph at lines 188--190
+Overfull \hbox (8.61319pt too wide) in paragraph at lines 201--203
 \T1/phv/m/n/10.95 Punktkoordinaten wer-den durch ho-mo-ge-ne Ko-or-di-na-ten da
 r-ge-stellt: $[] \OMS/cmsy/m/n/10.95  \OT1/phv/m/n/10.95 (\OT1/phv/m/sl/10.95 
 X[]\OT1/phv/m/n/10.95 , \OT1/phv/m/sl/10.95 Y[]\OT1/phv/m/n/10.95 , \OT1/phv/m/
@@ -4282,266 +4311,257 @@ sl/10.95 Z[]\OT1/phv/m/n/10.95 , 1)[]$
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 200.
-[23 <./images/4_ZweiteErfahrung/Kamera/cameramodel.pdf>]
+(babel)             in language  on input line 213.
+[24 <./images/4_ZweiteErfahrung/Kamera/cameramodel.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Kamera/WzuC.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Kamera/WzuC.pdf, id=444, 640.56313pt x 366.56952pt>
+<images/4_ZweiteErfahrung/Kamera/WzuC.pdf, id=464, 640.56313pt x 366.56952pt>
 File: images/4_ZweiteErfahrung/Kamera/WzuC.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Kamera/WzuC.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/WzuC.pdf  used on inpu
-t line 207.
+t line 220.
 (pdftex.def)             Requested size: 360.55476pt x 206.34027pt.
 
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Kamera/rotationsmatri
 x.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
 ed
-<images/4_ZweiteErfahrung/Kamera/rotationsmatrix.pdf, id=445, 243.88113pt x 219
+<images/4_ZweiteErfahrung/Kamera/rotationsmatrix.pdf, id=465, 243.88113pt x 219
 .79114pt>
 File: images/4_ZweiteErfahrung/Kamera/rotationsmatrix.pdf Graphic file (type pd
 f)
 <use images/4_ZweiteErfahrung/Kamera/rotationsmatrix.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/rotationsmatrix.pdf  u
-sed on input line 216.
+sed on input line 229.
 (pdftex.def)             Requested size: 180.27394pt x 162.46849pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 223.
+(babel)             in language  on input line 236.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 223.
+(babel)             in language  on input line 236.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 223.
+(babel)             in language  on input line 236.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 223.
-[24 <./images/4_ZweiteErfahrung/Kamera/WzuC.pdf> <./images/4_ZweiteErfahrung/Ka
+(babel)             in language  on input line 236.
+[25 <./images/4_ZweiteErfahrung/Kamera/WzuC.pdf> <./images/4_ZweiteErfahrung/Ka
 mera/rotationsmatrix.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 332.
+(babel)             in language  on input line 345.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 332.
+(babel)             in language  on input line 345.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 332.
+(babel)             in language  on input line 345.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 332.
- [25]
+(babel)             in language  on input line 345.
+ [26]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Kamera/Czuimage.pdf):
  PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Kamera/Czuimage.pdf, id=469, 350.01765pt x 309.36578p
+<images/4_ZweiteErfahrung/Kamera/Czuimage.pdf, id=489, 350.01765pt x 309.36578p
 t>
 File: images/4_ZweiteErfahrung/Kamera/Czuimage.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Kamera/Czuimage.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/Czuimage.pdf  used on 
-input line 336.
+input line 349.
 (pdftex.def)             Requested size: 180.27394pt x 159.33694pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 392.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 392.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 392.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 379.
-[26 <./images/4_ZweiteErfahrung/Kamera/Czuimage.pdf>]
+(babel)             in language  on input line 392.
+[27 <./images/4_ZweiteErfahrung/Kamera/Czuimage.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Kamera/imagezupixel.p
 df): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf, id=482, 331.19734pt x 291.29
+<images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf, id=502, 331.19734pt x 291.29
 828pt>
 File: images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf  used
- on input line 385.
+ on input line 398.
 (pdftex.def)             Requested size: 270.41779pt x 237.8438pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 415.
+(babel)             in language  on input line 428.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 415.
+(babel)             in language  on input line 428.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 415.
+(babel)             in language  on input line 428.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 415.
-[27 <./images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf>]
+(babel)             in language  on input line 428.
+[28 <./images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 469.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 482.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 483.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 483.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 483.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 483.
- [28]
+(babel)             in language  on input line 496.
+ [29]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Kamera/rotationsmodel
 .pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowe
 d
-<images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf, id=505, 764.8575pt x 688.8
+<images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf, id=525, 764.8575pt x 688.8
 2344pt>
 File: images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf Graphic file (type pdf
 )
 <use images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf  us
-ed on input line 495.
+ed on input line 508.
 (pdftex.def)             Requested size: 225.34587pt x 202.93839pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 509.
+(babel)             in language  on input line 522.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 509.
+(babel)             in language  on input line 522.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 509.
+(babel)             in language  on input line 522.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 509.
-[29 <./images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf>]
+(babel)             in language  on input line 522.
+[30 <./images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 535.
+(babel)             in language  on input line 548.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 535.
+(babel)             in language  on input line 548.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 535.
+(babel)             in language  on input line 548.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 535.
- [30]
-<images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf, id=527, 388.7
+(babel)             in language  on input line 548.
+ [31]
+<images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf, id=547, 388.7
 353pt x 545.4167pt>
 File: images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf Graphic f
 ile (type pdf)
 <use images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_para
-meter.pdf  used on input line 538.
-(pdftex.def)             Requested size: 405.61981pt x 569.12581pt.
+meter.pdf  used on input line 551.
+(pdftex.def)             Requested size: 360.55476pt x 505.89238pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 542.
+(babel)             in language  on input line 557.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 542.
+(babel)             in language  on input line 557.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 542.
+(babel)             in language  on input line 557.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 542.
- [31]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 544.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 544.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 544.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 557.
  [32 <./images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf>]
-<images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf, id=550, 512.95941pt x 284
+<images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf, id=566, 512.95941pt x 284
 .82208pt>
 File: images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf Graphic file (type pd
 f)
 <use images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf  u
-sed on input line 567.
+sed on input line 580.
 (pdftex.def)             Requested size: 405.61981pt x 225.22862pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 572.
+(babel)             in language  on input line 585.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 572.
+(babel)             in language  on input line 585.
 
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Kamera/differenzbild.
 pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<images/4_ZweiteErfahrung/Kamera/differenzbild.pdf, id=551, 983.86241pt x 556.3
+<images/4_ZweiteErfahrung/Kamera/differenzbild.pdf, id=567, 983.86241pt x 556.3
 913pt>
 File: images/4_ZweiteErfahrung/Kamera/differenzbild.pdf Graphic file (type pdf)
 
 <use images/4_ZweiteErfahrung/Kamera/differenzbild.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Kamera/differenzbild.pdf  use
-d on input line 578.
+d on input line 591.
 (pdftex.def)             Requested size: 405.61981pt x 229.38689pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 582.
+(babel)             in language  on input line 595.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 582.
+(babel)             in language  on input line 595.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 582.
+(babel)             in language  on input line 595.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 582.
+(babel)             in language  on input line 595.
 [33 <./images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf, page is rotated 90 
-degrees>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 592.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 592.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+degrees>] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 610.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 600.
+(babel)             in language  on input line 617.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 600.
+(babel)             in language  on input line 617.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 600.
+(babel)             in language  on input line 620.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 600.
+(babel)             in language  on input line 620.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 620.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 620.
 
 [34 <./images/4_ZweiteErfahrung/Kamera/differenzbild.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 603
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 628
 .
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 631.
+(babel)             in language  on input line 651.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 631.
-<images/4_ZweiteErfahrung/QRMuster/QRPattern.pdf, id=580, 630.72638pt x 298.937
+(babel)             in language  on input line 651.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 651.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 651.
+
+[35]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 656.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 656.
+<images/4_ZweiteErfahrung/QRMuster/QRPattern.pdf, id=621, 630.72638pt x 298.937
 84pt>
 File: images/4_ZweiteErfahrung/QRMuster/QRPattern.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/QRMuster/QRPattern.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/QRMuster/QRPattern.pdf  used 
-on input line 637.
+on input line 662.
 (pdftex.def)             Requested size: 405.61981pt x 192.24553pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 640.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 640.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 640.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 640.
-
-[35]
-<images/4_ZweiteErfahrung/QRMuster/QP_Patternratio.pdf, id=602, 406.76466pt x 2
+<images/4_ZweiteErfahrung/QRMuster/QP_Patternratio.pdf, id=622, 406.76466pt x 2
 71.3297pt>
 File: images/4_ZweiteErfahrung/QRMuster/QP_Patternratio.pdf Graphic file (type 
 pdf)
 <use images/4_ZweiteErfahrung/QRMuster/QP_Patternratio.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/QRMuster/QP_Patternratio.pdf 
- used on input line 646.
+ used on input line 671.
 (pdftex.def)             Requested size: 315.48283pt x 210.44394pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 655.
+(babel)             in language  on input line 675.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 655.
+(babel)             in language  on input line 675.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 655.
+(babel)             in language  on input line 675.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 655.
- [36 <./images/4_ZweiteErfahrung/QRMuster/QRPattern.pdf> <./images/4_ZweiteErfa
-hrung/QRMuster/QP_Patternratio.pdf>])
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 300.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 300.
+(babel)             in language  on input line 675.
+ [36 <./images/4_ZweiteErfahrung/QRMuster/QRPattern.pdf>])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 300.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 300.
- [37]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 300.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 300.
+ [37 <./images/4_ZweiteErfahrung/QRMuster/QP_Patternratio.pdf>]
 \openout2 = `mainmatter/auswertung.aux'.
 
  (mainmatter/auswertung.tex
@@ -4805,6 +4825,7 @@ Use my own \@writefile for lol
 Use my own \@writefile for toc
 Use my own \@writefile for toc
 Use my own \@writefile for lof
+Use my own \@writefile for lof
 Use my own \@writefile for toc
 Use my own \@writefile for lof
 Use my own \@writefile for lof
@@ -4827,6 +4848,7 @@ Use my own \@writefile for lof
 Use my own \@writefile for lof
 Use my own \@writefile for toc
 Use my own \@writefile for lof
+Use my own \@writefile for lol
 Use my own \@writefile for toc
 Use my own \@writefile for lol
 Use my own \@writefile for lol
@@ -4880,7 +4902,7 @@ Process extension: `lol'
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 317.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 317.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 60318113EEBB6990AA2EEF66586C9D60;1875.
+(rerunfilecheck)             Checksum: C80F1A6F693586988BEA4FACC442B82B;1868.
 
 
 LaTeX Warning: There were undefined references.
@@ -4893,10 +4915,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68400 strings out of 493290
- 1522077 string characters out of 3129425
- 2381679 words of memory out of 3000000
- 70667 multiletter control sequences out of 15000+200000
+ 68423 strings out of 493290
+ 1522582 string characters out of 3129425
+ 2381749 words of memory out of 3000000
+ 70681 multiletter control sequences out of 15000+200000
  603778 words of font info for 129 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  79i,24n,136p,9085b,3705s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -4940,9 +4962,9 @@ pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 a.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic
 /uhvr8a.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/he
 lvetic/uhvro8a.pfb>
-Output written on main.pdf (49 pages, 4643926 bytes).
+Output written on main.pdf (49 pages, 4688720 bytes).
 PDF statistics:
- 874 PDF objects out of 1000 (max. 8388607)
- 194 named destinations out of 1000 (max. 500000)
- 406 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 903 PDF objects out of 1000 (max. 8388607)
+ 202 named destinations out of 1000 (max. 500000)
+ 411 words of extra memory for PDF output out of 10000 (max. 10000000)
 

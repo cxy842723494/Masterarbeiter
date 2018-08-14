@@ -1,21 +1,34 @@
 \chapter{ZweiteErfahrung} \label{cha:ZweiteErfahrung}
 
-In diesem Kapitel wird der durch die Projektgruppe implementierte VXI-11-Server vorgestellt und in den einzelnen Abschnitten auf die Teilbereiche Hardware, Software und auf Kommunikationsschnittstellen mit Test- und Messgeräten eingegangen. Die grundlegende Idee des VXI-11-Servers ist die Kommunikation mit Geräten über Ethernet, welche unterschiedliche Kommunikationsstandards nutzen. Hierzu ist eine entsprechende Hardware notwendig, um verschiedenste Kommunikationsstandards anschließen zu können und eine entsprechende softwaretechnische Implementierung. Auf die Realisierung dieser Teilbereiche wird im folgenden eingegangen.
+In diesem Kapitel wird die Realisierung der zweiten Verfahre eingegangen werden. Die Bildregistrierung wird zuerst im Detail gegeben. Anschließen läuft die Differenzbild Optimierung und Bildverarbeitung. QR Muster Detektion und die entspricht Matlab Code werden schließlich erläutert. 
+Zur Implementierung dieser Verfahre wird Matlab unter der Lizenz TU Dortmund verwendet.
 
-\section{Grundlegende Einführung} 
-\cite{lin1973}.
+\section{Allgemeine Struktur} 
 
-\section{Bildregistrierung} 
+Diese Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen  durch eine Reihe von Verarbeitungen wird QR Muster detektiert wird und dann schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem schnell und effektiv durch die QR-Mustereigenschaft lösen.
+
+In dieser Verfahre läuft zuerst Bildregistrierung. Durch diese Schritt kann die Punkte über den zwei Bildern in dasselbe Koordinatensystem konvertieren. Anschließen mit Helfe einen Optimierung für die enthaltet Differenzbilder wird eine detektierend Bild bekommen, die die Erkennung des QR Musters erleichtern können. Schließlich wird es durch die Charakteristik des QR Musters, das Breiteverhältnis $1:1:3:1:1$ beträgt, um QR Muster zu detektieren.
 
 \begin{figure}[htb]
  \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/0_Image_Registration_Flussdiagramm.pdf}
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Flussigdiagramm.pdf}
+ \caption{Flussdiagramm}
+ \label{fig:ZeiteVerfahre}
+\end{figure}
+
+\section{Bildregistrierung} 
+
+Annehmen eine Szene, wenn eine Rhein Fotos mit einer Handheld-Kamera aufnehmen, kommt es aufgrund von Handbewegungen zu einer leichten Verschiebung zwischen den beiden benachbarten Fotos. Wenn Sie diese Fotos abziehen, um Differenzbild zu erhalten, wird der Ergebnisse sehr schlecht sein. Um diese Problem zu lösen, wird hier Bildregistrierung eingeführt.
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.6\textwidth]{images/4_ZweiteErfahrung/Bildregistration.pdf}
  \caption{Flussdiagramm der Bildregistrierung}
  \label{fig:Bildregistrierung}
 \end{figure}
 
 \subsection{SURF}
-Hier wird zuerste die SURF\cite{Surf} Merkmalserkennung eingegangen. SURF Merkmalserkennung arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. 
+In Bildregistrierung wird zuerste die SURF\cite{Surf} Merkmalserkennung eingegangen. SURF Merkmalserkennung arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. 
 
 \textbf{Algorithmus:}\\
 \\
@@ -535,7 +548,7 @@ Parameter. Der Algorithmus endet, sobald die Schrittgröße für alle Parameter 
 
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf}
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf}
  \caption{Flussdiagramm für Algorithmus}
  \label{fig:rotationsmodel}
 \end{figure} 
@@ -588,6 +601,18 @@ Hier in dieser Arbeit wird eine einfach Differenzbild Algorithmus vorstellen, wi
 	\item Sortiere und nehmen 3 Differenzbildern, die maximaler Energie verfügen.
 	\item Addieren diese 3 Differenzbildern und nächste Bildverarbeitung.
 \end{enumerate}
+
+Das Skript in Matlab ist wie folgt:
+\singlespacing
+\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Binarisierung}, label={lst:MATLABCodeBinarisierung}]
+
+%% Differentbild
+diff = functions.creatDifferentbild(U2new);
+Mal_num = 3;
+diffplus = functions.sum_of_diff(abs(diff),Mal_num);
+
+\end{matlab}
+\onehalfspacing
 
 \section{Bildverarbeitung} 
 Der detailliert Inhalt der Bildverarbeitung wurde in der ersten Methode eingeführt, hier ist nur eine einfache Beschreibung der verwendeten Funktionen in Matlab.
@@ -648,6 +673,9 @@ Jedes Muster kann als drei konzentrische Quadrate betrachtet werden und besteht 
  \label{fig:QRPatternRatio}
 \end{figure}
 
+Die Unterfunktion "detectFIP" verwendet das folgende Verfahren zum Finden eines QR Musters:
+
+\textbf{Step1:}
 
 
 
@@ -657,3 +685,24 @@ Jedes Muster kann als drei konzentrische Quadrate betrachtet werden und besteht 
 
 \end{matlab}
 \onehalfspacing
+
+\textbf{Step2:}
+
+
+\textbf{Step3:}
+
+
+\textbf{Step4:}
+
+
+\textbf{Step5:}
+
+
+\textbf{Step6:}
+
+
+
+\textbf{Step7:}
+
+
+\textbf{Step8:}

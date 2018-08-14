@@ -17,21 +17,21 @@
 \contentsline {section}{\numberline {3.3}Forward search with TeXlipse and Sumatra PDF}{11}{section.3.3}
 \babel@toc {ngerman}{}
 \contentsline {chapter}{\numberline {4}ZweiteErfahrung}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}Grundlegende Einf\IeC {\"u}hrung}{14}{section.4.1}
+\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{14}{section.4.1}
 \contentsline {section}{\numberline {4.2}Bildregistrierung}{14}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}SURF}{15}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}RANSAC}{19}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Kamerakalibrierung}{23}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.1}SURF}{16}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}RANSAC}{20}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Kamerakalibrierung}{24}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Differenzbild}{33}{section.4.3}
-\contentsline {section}{\numberline {4.4}Bildverarbeitung}{34}{section.4.4}
-\contentsline {section}{\numberline {4.5}QR Musters Detektion}{35}{section.4.5}
+\contentsline {section}{\numberline {4.4}Bildverarbeitung}{35}{section.4.4}
+\contentsline {section}{\numberline {4.5}QR Musters Detektion}{36}{section.4.5}
 \contentsline {chapter}{\numberline {5}Auswertung}{38}{chapter.5}
 \contentsline {section}{\numberline {5.1}Section}{38}{section.5.1}
 \contentsline {chapter}{\numberline {6}Zusammenfassung}{39}{chapter.6}
 \contentsline {section}{\numberline {6.1}Section}{39}{section.6.1}
 \contentsline {chapter}{\numberline {A}Erster Anhang}{40}{appendix.A}
 \contentsline {section}{\numberline {A.1}Section}{40}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{42}{chapter*.31}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{43}{chapter*.32}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{44}{chapter*.33}
-\contentsline {chapter}{\nonumberline Literatur}{45}{chapter*.34}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{42}{chapter*.32}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{43}{chapter*.33}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{44}{chapter*.34}
+\contentsline {chapter}{\nonumberline Literatur}{45}{chapter*.35}
