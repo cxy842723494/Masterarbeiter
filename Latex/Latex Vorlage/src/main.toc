@@ -25,13 +25,13 @@
 \contentsline {section}{\numberline {4.3}Differenzbild}{33}{section.4.3}
 \contentsline {section}{\numberline {4.4}Bildverarbeitung}{35}{section.4.4}
 \contentsline {section}{\numberline {4.5}QR Musters Detektion}{36}{section.4.5}
-\contentsline {chapter}{\numberline {5}Auswertung}{38}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section}{38}{section.5.1}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section}{39}{section.6.1}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{40}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{40}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{42}{chapter*.32}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{43}{chapter*.33}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{44}{chapter*.34}
-\contentsline {chapter}{\nonumberline Literatur}{45}{chapter*.35}
+\contentsline {chapter}{\numberline {5}Auswertung}{41}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section}{41}{section.5.1}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{42}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section}{42}{section.6.1}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{43}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{43}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{45}{chapter*.32}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{46}{chapter*.33}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{47}{chapter*.34}
+\contentsline {chapter}{\nonumberline Literatur}{48}{chapter*.35}

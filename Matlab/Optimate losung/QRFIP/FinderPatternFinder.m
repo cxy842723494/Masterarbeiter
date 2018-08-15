@@ -26,20 +26,20 @@ end
 
 done = false;
 stateCount = zeros(1, 5);
-for i = iSkip : iSkip : maxI
+for i = iSkip : iSkip : maxI    % iSkip
     if done
         break;
     end
     stateCount = zeros(1, 5);
     currentState = 0;
-    for j = 1 : maxJ
-        if bw(i, j)% v                                                   v   Black pixel
+    for j = 1 : maxJ    %1
+        if bw(i, j)% v   1 wei? , but respect  in real welt dark, stored in the first volum
 %             if (bitand(currentState, 1) == 1) % Counting white pixels
             if (mod(currentState, 2) == 1)
                 currentState = currentState + 1;
             end
             stateCount(currentState+1) = stateCount(currentState+1) + 1;
-        else %                                                                White pixel
+        else %     0 schwarz , but respect  in real welt hell,  stored in the second volum
 %             if (bitand(currentState, 1) == 0) % Counting black pixels
             if (mod(currentState, 2) == 0)
                 if (currentState == 4) % A winner?

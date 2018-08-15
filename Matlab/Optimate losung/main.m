@@ -7,17 +7,21 @@ file_path = uigetdir('D:\xch\Daten\xch\','Select the Folder');
 %% ImageRegistration
 
 [Y2new,U2new,V2new] = functions.imageRegistration(file_path);
-implay(mat2gray(gather(Y2new(:,:,:))));
-implay(mat2gray(gather(U2new(:,:,:))));
-implay(mat2gray(gather(V2new(:,:,:))));
+% implay(mat2gray(gather(Y2new(:,:,:))));
+% implay(mat2gray(gather(U2new(:,:,:))));
+% implay(mat2gray(gather(V2new(:,:,:))));
 
 %% Differentbild
 
 diff = functions.creatDifferentbild(U2new);
 Mal_num = 3;
+% Nofind = 0;
+
+while true
+
 diffplus = functions.sum_of_diff(abs(diff),Mal_num);
 
-implay(mat2gray(gather(diff(:,:,:))));    %abs(diff(:,:,:))
+% implay(mat2gray(gather(diff(:,:,:))));    %abs(diff(:,:,:))
 % figure;imshow(diffplus,[]),title('diffplus');
 % diffplus = uint8(diffplus);
 
@@ -31,8 +35,15 @@ implay(mat2gray(gather(diff(:,:,:))));    %abs(diff(:,:,:))
 
 %% QR Pattern detection
 
-[FiPx,FiPy,ux,vx,cr] = detectFIP(BW);
+[FiPx,FiPy,ux,vx,cr,Nofind] = detectFIP(BW);
 
+if Nofind
+    Mal_num = Mal_num+1;
+else 
+    break;
+end
+
+end
 %% plot Result
 
 % fn1='YUV_2018_07_06_17_08_50_411.yuv';

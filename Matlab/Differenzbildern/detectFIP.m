@@ -1,4 +1,4 @@
-function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)     
+function [FIPx,FIPy,ux,vx,cr,Nofind] = detectFIP(Img_handle)     
 
 %     Fn1 = 'YUV_2018_04_20_09_33_51_995.yuv';
 %     Fn1 = 'YUV_2018_04_20_09_33_51_995.yuv';
@@ -28,8 +28,8 @@ function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)
     % im real we don't need to analyse the whole pixels in the image, we
     % just analyse the pixel at the conner
     s.offset = 0;
-    s.sizeH = ceil(h/2);%192*3*(uint16(w/1920));250; % 250:450 d.h. the ratio of the tv 3:4
-    s.sizeW = ceil(w/2);%256*4*(uint16(w/1920));450; % 192:256 d.h. the ratio of the tv 9:16
+    s.sizeH = ceil(h/4);  %h/2,  192*3*(uint16(w/1920));250; % 250:450 d.h. the ratio of the tv 3:4
+    s.sizeW = ceil(w/4);% w/2,  256*4*(uint16(w/1920));450; % 192:256 d.h. the ratio of the tv 9:16
     s.warpRatio = 1;0.9;
     s.FIPsize = 108*(w/1920);%;108 % 12 pixels per module 1:1:3:1:1 +10
     PatternAreaBW = zeros(s.sizeH, s.sizeW, 4);
@@ -82,11 +82,14 @@ function [FIPx,FIPy,ux,vx,cr] = detectFIP(Img_handle)
 %         patternInfo = FinderPatternFinder(PatternAreaBW(:,:,p),true);
         FIPx(p) = patternInfo.posX;
         FIPy(p) = patternInfo.posY;
+        Nofind =0 ;
         
         while (FIPx(p)==0||FIPy(p)==0)
-        patternInfo = FinderSigularPatternFinder(p); 
-        FIPx(p) = patternInfo.posX;
-        FIPy(p) = patternInfo.posY;
+            Nofind =1 ;
+            break;
+%         patternInfo = FinderSigularPatternFinder(p); 
+%         FIPx(p) = patternInfo.posX;
+%         FIPy(p) = patternInfo.posY;
         end
 %         if (p == 2 || p == 4)
 %             FIPx(p) = w - s.sizeW + FIPx(p);
