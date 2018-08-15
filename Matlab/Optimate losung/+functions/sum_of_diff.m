@@ -27,15 +27,16 @@ function diffplus = sum_of_diff(diff,Mal_num)
      
      % take off the NAN 
 %      A =diff(:,:,26);
-%      [a,b]= find(isnan(A));
-%      for i = 1:size(a)
-%         A(a(i),b(i))=0;
-%      end
-%      clear a b;
-%      [a,b]= find(isnan(diffplus));
-%      for i = 1:size(a)
-%      diffplus(a(i),b(i))=0;
-%      end
+       A = diffplus;
+     [a,b]= find(isnan(A));
+     for i = 1:size(a)
+        A(a(i),b(i))=0;
+     end
+     clear a b;
+     [a,b]= find(isnan(diffplus));
+     for i = 1:size(a)
+     diffplus(a(i),b(i))=0;
+     end
      
 %     figure;imshow(A,[]),title('26');
 %     figure;histogram(diff(:,:,86)),title('86');

@@ -21,8 +21,8 @@ end
 BW = imbinarize(X, 'adaptive', 'Sensitivity', 0.500000, 'ForegroundPolarity', 'bright');
 
 % Active contour
-iterations = 5;
-BW = activecontour(X, BW, iterations, 'edge');
+% iterations = 5;
+% BW = activecontour(X, BW, iterations, 'edge');
 
 % Close mask with square
 width = 5;
