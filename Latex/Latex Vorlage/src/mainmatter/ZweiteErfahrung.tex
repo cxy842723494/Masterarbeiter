@@ -5,8 +5,7 @@ Zur Implementierung dieser Verfahre wird Matlab unter der Lizenz TU Dortmund ver
 
 \section{Allgemeine Struktur} 
 
-Diese Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen  durch eine Reihe von Verarbeitungen wird QR Muster detektiert wird und dann schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem schnell und effektiv durch die QR-Mustereigenschaft lösen. Abbildung 4.1 zeigt die 
-Strukturdiagramm des Verfahrens.
+Diese Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen  durch eine Reihe von Verarbeitungen wird QR Muster detektiert wird und dann schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem schnell und effektiv durch die QR-Mustereigenschaft lösen. Abbildung 4.1 zeigt die Strukturdiagramm des Verfahrens.
 
 In dieser Verfahre läuft zuerst Bildregistrierung. Durch diese Schritt kann die Punkte über den zwei Bildern in dasselbe Koordinatensystem konvertieren. Anschließen mit Helfe einen Optimierung für die enthaltet Differenzbilder wird eine detektierend Bild bekommen, die die Erkennung des QR Musters erleichtern können. Schließlich wird es durch die Charakteristik des QR Musters, das Breiteverhältnis $1:1:3:1:1$ beträgt, um QR Muster zu detektieren.
 
@@ -29,10 +28,8 @@ Annehmen eine Szene, wenn eine Rhein Fotos mit einer Handheld-Kamera aufnehmen, 
 \end{figure}
 
 \subsection{SURF}
-In Bildregistrierung wird zuerste Merkmalserkennung eingegangen. Hier in dieser Arbeite lass die SURF \cite{Surf} nutzen. SURF Merkmalserkennung arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. 
+In Bildregistrierung wird zuerste Merkmalserkennung eingegangen. Hier in dieser Arbeite lass die SURF \cite{Surf} nutzen. Es ist eine verbesserte Version von SIFT, die Haar-Wavelet verwendet, um die Gradientenoperation in der SIFT-Methode anzunähern und gleichzeitig verwendet eine Integralgraph-Technik für schnelle Berechnungen. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. Die Geschwindigkeit von SURF ist 3-7 mal die von SIFT mit der in den meisten Fällen entspricht   Leistung von SIFT. Daher wurde es in vielen Anwendungen eingesetzt, insbesondere in Anwendungen, in denen die Laufzeitanforderungen hoch sind. Der Verläuf einer SURF Merkmalserkennung ist wie flogend:
 
-\textbf{Algorithmus:}\\
-\\
 $\bullet$ \textbf{Aufbau einer hessischen Matrix.}\\
 Die Hesse-Matrix stellt den Kern des SURF Algorithmus dar. Zur Vereinfachung der Operation wird die Funktion f (z, y) angenommen, dass die Hesse-Matrix H setzt sich aus Funktionen und partiellen Ableitungen zusammen:
 
@@ -72,7 +69,7 @@ Zur einfacheren Anwendung schlägt Herbert Bay\cite{Surf} vor, L mit einer Appro
 \\
 $\bullet$ \textbf{Erstellen Maßstab Raum}\\
 Der Maßstabsraum $L(\textbf{x},\sigma)$ des Bildes ist die Darstellung dieses Bildes bei unterschiedlichen Auflösungen(Skalierung). Im Bereich der Computer Vision wird der Maßstabsraum symbolisch als Bildpyramide ausgedrückt, wobei die Eingangsbildfunktion wiederholt mit dem Kern der Gaußschen Funktion gefaltet und wiederholt unterabgetastet wird. Diese Methode wird hauptsächlich für die Implementierung des SIFT Algorithmus verwendet. Jede Bildschicht hängt jedoch von der vorherigen Bildschicht ab, und das Bild muss in der Größe angepasst werden. Daher hat diese Berechnungsmethode eine große Kosten in Berechnung. Im Vergleich dazu ist es in SURF durch die Erhöhung der Größe des Bildkerns. Diese ist ein Unterschied zwischen dem SIFT Algorithmus und dem SURF Algorithmus bei der Verwendung des Pyramidenprinzips.
-Der Algorithmus ermöglicht, dass mehrere Bilder des Maßstabsraums gleichzeitig verarbeitet werden, ohne dass das Bild unterabgetastet wird, wodurch die Leistung des Algorithmus verbessert wird. Das linke Bild in Abbildung 4.2 ist eine Pyramidenstruktur, die auf herkömmliche Weise erstellt wird, die Größe des Bildes wird geändert, und die Operation wird die Unterebene  unter Verwendung der Gaußschen Funktion wiederholt glätten. Der Surf Algorithmus auf der rechten Seite in Abbildung 4.2 behält das ursprüngliche Bild unverändert und ändert nur die Filtergröße.
+Der Algorithmus ermöglicht, dass mehrere Bilder des Maßstabsraums gleichzeitig verarbeitet werden, ohne dass das Bild unterabgetastet wird, wodurch die Leistung des Algorithmus verbessert wird. Das linke Bild in Abbildung 4.3 ist eine Pyramidenstruktur, die auf herkömmliche Weise erstellt wird, die Größe des Bildes wird geändert, und die Operation wird die Unterebene  unter Verwendung der Gaußschen Funktion wiederholt glätten. Der Surf Algorithmus auf der rechten Seite in Abbildung 4.3 behält das ursprüngliche Bild unverändert und ändert nur die Filtergröße.
 
 \begin{figure}[htb]
  \centering 
@@ -83,7 +80,7 @@ Der Algorithmus ermöglicht, dass mehrere Bilder des Maßstabsraums gleichzeitig
 
 
 $\bullet$ \textbf{Präzise Lokalisierung von Feature-Punkten}\\
-Vergleichen die Größe jedes Pixel, die von der hessischen Matrix verarbeitet wird, mit die 26 Punkten in seiner drei Dimensionen Raum, wie in Abbildung 4.3 zeight. Wenn es das Maximum oder Minimum dieser 26 Punkte ist, wird es als vorläufiger Merkmalspunkt beibehalten. Das dreidimensionale lineare Interpolationsverfahren wird verwendet, um die Merkmalspunkte des Subpixel-Niveaus zu erhalten, und die Punkte, deren Werte kleiner als ein bestimmter Schwellenwert sind, werden ebenfalls entfernt.
+Vergleichen die Größe jedes Pixel, die von der hessischen Matrix verarbeitet wird, mit die 26 Punkten in seiner drei Dimensionen Raum, wie in Abbildung 4.4 zeight. Wenn es das Maximum oder Minimum dieser 26 Punkte ist, wird es als vorläufiger Merkmalspunkt beibehalten. Das dreidimensionale lineare Interpolationsverfahren wird verwendet, um die Merkmalspunkte des Subpixel-Niveaus zu erhalten, und die Punkte, deren Werte kleiner als ein bestimmter Schwellenwert sind, werden ebenfalls entfernt.
 
 \begin{figure}[htb]
  \centering 
@@ -94,7 +91,7 @@ Vergleichen die Größe jedes Pixel, die von der hessischen Matrix verarbeitet w
 
 
 $\bullet$ \textbf{Hauptrichtungsermittlung}\\
-SIFT wählt die Hauptrichtung des Merkmalspunkts unter Verwendung des Gradientenhistogramms im Merkmalspunktbereich aus. Die Richtung, in der der Bin-Wert des Histogramms der größte und oder 80\% maximale Bin-Wert  überschreitet, wird als Hauptrichtung des Merkmalspunkts genommen. Dagegen beim SURF wird das Gradientenhistogramm nicht statistiken, sondern das Harr-Wavelet-Eigenshcaft im Merkmalspunktbereich wird statistisch analysiert. Das heißt, im Bereich der Merkmalspunkt (zum Beispiel innerhalb eines Kreises mit einem Radius von 6s, wobei s der Maßstab ist, auf dem der Punkt liegt) die Summe der Horizontal-Haar-Wavelet-Merkmale und der Vertikal-Haar-Wavelet-Merkmale aller Punkte im  60-Grad-Sektor($\pi/3$) werden gezählt. Die Größe des Haar Wavelets stellt als 4s, so dass für jeden Sektor einen Wert bekommt. Dann wird 60-Grad-Sektor in einem bestimmten Intervall gedreht, schließlich lassen die Richtung des Sektors mit Maximalwert als Hauptrichtung des Merkmalspunkts nehmen. Ein schematisches Diagramm des Prozesses ist wie folgt in Abbildung 4.4.
+SIFT wählt die Hauptrichtung des Merkmalspunkts unter Verwendung des Gradientenhistogramms im Merkmalspunktbereich aus. Die Richtung, in der der Bin-Wert des Histogramms der größte und oder 80\% maximale Bin-Wert  überschreitet, wird als Hauptrichtung des Merkmalspunkts genommen. Dagegen beim SURF wird das Gradientenhistogramm nicht statistiken, sondern das Harr-Wavelet-Eigenshcaft im Merkmalspunktbereich wird statistisch analysiert. Das heißt, im Bereich der Merkmalspunkt (zum Beispiel innerhalb eines Kreises mit einem Radius von 6s, wobei s der Maßstab ist, auf dem der Punkt liegt) die Summe der Horizontal-Haar-Wavelet-Merkmale und der Vertikal-Haar-Wavelet-Merkmale aller Punkte im  60-Grad-Sektor($\pi/3$) werden gezählt. Die Größe des Haar Wavelets stellt als 4s, so dass für jeden Sektor einen Wert bekommt. Dann wird 60-Grad-Sektor in einem bestimmten Intervall gedreht, schließlich lassen die Richtung des Sektors mit Maximalwert als Hauptrichtung des Merkmalspunkts nehmen. Ein schematisches Diagramm des Prozesses ist wie folgt in Abbildung 4.5.
 
 \begin{figure}[htb]
  \centering 
@@ -105,7 +102,7 @@ SIFT wählt die Hauptrichtung des Merkmalspunkts unter Verwendung des Gradienten
 
 
 $\bullet$ \textbf{Merkmalspunkt Deskriptor Generierung}\\
-SURF nehmen eine quadratische Rahmen um den Merkmalspunkt. Die Seite der Rahmen ist 20s (s ist die Skala, bei der der Merkmalspunkt erkannt wird). Die Richtung des Rahmens ist natürlich die Hauptrichtung, die in vorliegened Schritt erfasst wird. Die Rahmen wird dann in 16 Unterbereiche unterteilt, von denen jeder die Haar-Wavelet-Merkmale der horizontalen und vertikalen Richtungen von 25 Pixeln berechnen. Hier die horizontalen und vertikalen Richtungen sind relativ zur Hauptrichtung. Das Haar Wavelet-Merkmal ist die Summe der horizontalen Richtungswerte, die Summe der absoluten Werte in der horizontalen Richtung, die Summe der vertikalen Richtungen und die Summe der absoluten Werte in der vertikalen Richtung. Das schematisches Diagramm in Abbildung 4.5 zeigt dieses Prozesse.
+SURF nehmen eine quadratische Rahmen um den Merkmalspunkt. Die Seite der Rahmen ist 20s (s ist die Skala, bei der der Merkmalspunkt erkannt wird). Die Richtung des Rahmens ist natürlich die Hauptrichtung, die in vorliegened Schritt erfasst wird. Die Rahmen wird dann in 16 Unterbereiche unterteilt, von denen jeder die Haar-Wavelet-Merkmale der horizontalen und vertikalen Richtungen von 25 Pixeln berechnen. Hier die horizontalen und vertikalen Richtungen sind relativ zur Hauptrichtung. Das Haar Wavelet-Merkmal ist die Summe der horizontalen Richtungswerte, die Summe der absoluten Werte in der horizontalen Richtung, die Summe der vertikalen Richtungen und die Summe der absoluten Werte in der vertikalen Richtung. Das schematisches Diagramm in Abbildung 4.6 zeigt dieses Prozesse.
 
 \begin{figure}[htb]
  \centering 
@@ -114,7 +111,7 @@ SURF nehmen eine quadratische Rahmen um den Merkmalspunkt. Die Seite der Rahmen 
  \label{fig:Merkmalspunkt Deskriptor}
 \end{figure} 
 
-Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ein $16*4=64$ dimensionaler Vektor verfügt, der halb so klein wie Sift(128 Dimension) ist, deswegen den Anpassungsprozess beim Merkmalanpassungsprozess stark beschleunigt. Die folgende Abbildung 4.6 zeigt den Merkmalspunkt, den wir durch den SURF-Algorithmus erhalten haben.
+Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ein $16*4=64$ dimensionaler Vektor verfügt, der halb so klein wie Sift(128 Dimension) ist, deswegen den Anpassungsprozess beim Merkmalanpassungsprozess stark beschleunigt. Die folgende Abbildung 4.7 zeigt den Merkmalspunkt, den wir durch den SURF-Algorithmus erhalten haben.
 
 \begin{figure}[H]
  \centering 
@@ -126,7 +123,7 @@ Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ei
 
 \subsection{RANSAC}
 
-Nach SURF Merkmalserkennung wird die Merkmalspunkte von zwei benachbarten Bildern mit Verfahre z.B. \gls{ncc} übereinstimmt. Abbildung 4.8 zeigt die passende Punkt. Es ist ersichtlich, dass es darin viele fehlerhafte zusammenpassendes Paar gibt. Deswegen wird \gls{ransac} eingeführt.
+Nach SURF Merkmalserkennung wird die Merkmalspunkte von zwei benachbarten Bildern mit Verfahre z.B. \gls{ncc} übereinstimmt. Leider durch diese Verfahren gibt es noch viele fehlerhafte zusammenpassendes Paar. Deswegen wird \gls{ransac} eingeführt.
 
 RANSAC Algorithmus, der von Fischler und Bolles \cite{ransac1} vorgeschlagene im Jahr 1981, ist ein allgemeiner Parameterschätzungsansatz, um den großen Anteil von Ausreißern in den Eingabedaten zu bewältigen. Im Gegensatz zu vielen der üblichen robusten Schätzverfahren wie M-Schätzer und kleinsten Quadraten, die von der Computer Vision Community aus der Statistik-Literatur übernommen wurden, wurde RANSAC aus der Computer-Vision-Community entwickelt. 
 
@@ -164,7 +161,7 @@ Hier u stellen die Wahrscheinlichkeit dar, dass jeder ausgewählte Datenpunkt ei
    N = \frac{\log(1 - p)}{\log(1 - (1 - v)^m)}
 \end{equation}
 
-In dieser Arbeit werden die Anwendung von RANSAC als folgend Abbildung gezeigt. Abbildung 4.8 zeigt die passende Punkt durch SURF Merkmalserkennung. Es ist ersichtlich, dass es viele fehlerhafte Kombinationen gibt. Durch RANSAC kann dieses Problem lösen und die übereinstimmendenPunkte verfeinern, wie in Abbildung 4.9 zeigt.
+Abbildung 4.8 zeigt die passende Punkt durch SURF Merkmalserkennung. Es ist ersichtlich, dass es viele fehlerhafte Kombinationen gibt. Durch die Anwendung von RANSAC kann dieses Problem effektiv lösen und die übereinstimmendenPunkte verfeinern, wie in Abbildung 4.9 zeigt.
 
 \begin{figure}[H]
  \centering 
@@ -183,7 +180,7 @@ In dieser Arbeit werden die Anwendung von RANSAC als folgend Abbildung gezeigt. 
 
 \subsection{Kamerakalibrierung}
 
-Wie in den ersten beiden Abschnitten vorgestellt,finde  die übereinstimmende Punkte mit Verwenden des SURF in aufeinanderfolgenden Bildern, dann durch RANSAC lassen die Ausreißer verwerfen. Als nächstes soll die Kamera kalibriert werden. In diesem Abschnitt wird zuerst das Kameramodell vorstellt.
+Wie in den ersten beiden Abschnitten vorgestellt, finde die übereinstimmende Punkte mit Verwenden des SURF in aufeinanderfolgenden Bildern, dann durch RANSAC lassen die Ausreißer verwerfen. Als nächstes soll die Kamera kalibriert werden, um die Punkte über den zwei Bildern in dasselbe Koordinatensystem konvertieren. In diesem Abschnitt wird zuerst das Kameramodell vorstellt.
 
 \textbf{Kamera Model}
 
@@ -537,7 +534,7 @@ Kombiniert mit Formel 4.23 können es ausgedrückt als:
    x_j = Wx_i
 \end{equation}
 
-\textbf{Kalibrierung}
+\textbf{Kalibrierung Optimierung}
 
 In diesem Abschnitt wird die Parameter in der Warping-Matrix berechnt. Überprüfen die letzten beiden Abschnitte, mit Verwendung des SURF~\cite{Surf} die übereinstimmende Punkte in aufeinanderfolgenden Bilderrahme entdeckt werden dann durch RANSAC~\cite{ransac1}, Ausreißer verworfen werden. Das Ergebnis ist eine Menge von Punktkorrespondenzen $x_i$ und $x_j$ für alle benachbarten Bilder. Angesichts dieser Grundwahrheit kann man die Kalibrierung als ein Optimierungsproblem formulieren, wobei wir den Fehler bei der Mittelwertbildung im Quadrat aller Punktkorrespondenzen minimieren wollen:
 \begin{equation}
@@ -583,9 +580,9 @@ Dann durch Transformationsmatrix können die Koordinaten des zweiten Bildes in d
  \label{fig:Transformation in eine Koordinate}
 \end{figure} 
 
-\section{Differenzbild}
+\section{Differenzbild Optimierung}
 Durch Bildregistration erhalten eine Reihe Bildern von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden.
-Zwei beliebige Bilder subtrahiere und einen Differenzbild enthalten. Eine Beispiel Differenzbild wird in Abbildung 4.18 gezeigt. An jeder Ecke der Modulationsbereich existiert ein QR-Pattern. 
+Zwei beliebige Bilder subtrahiere und einen Differenzbild enthalten. Eine Beispiel Differenzbild wird in Abbildung 4.18 gezeigt. An jeder Ecke der Modulationsbereich existiert ein QR-Pattern. Die Ziel in diesem Abschnitt ist eine Bilder herstellen, der die QR Muster Detektion vereinfachen werden können.
 
 \begin{figure}[H]
  \centering 
@@ -616,7 +613,7 @@ diffplus = functions.sum_of_diff(abs(diff),Mal_num);
 \onehalfspacing
 
 \section{Bildverarbeitung} 
-Der detailliert Inhalt der Bildverarbeitung wurde in der ersten Methode eingeführt, hier ist nur eine einfache Beschreibung der verwendeten Funktionen in Matlab.
+Der detailliert Inhalt der Bildverarbeitung wurde in der ersten Methode eingeführt, hier ist nur eine einfache Beschreibung der verwendeten Funktionen in Matlab. Durch Bildverarbeitung können kleine Punkte und Lücken, die durch Rauschen und Fehler verursacht werden, entfernt werden, um die nachfolgende Detektion zu erleichtern.
 
 \textbf{Bild Binarisierung}
 
