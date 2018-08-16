@@ -5,20 +5,21 @@ Zur Implementierung dieser Verfahre wird Matlab unter der Lizenz TU Dortmund ver
 
 \section{Allgemeine Struktur} 
 
-Diese Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen  durch eine Reihe von Verarbeitungen wird QR Muster detektiert wird und dann schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem schnell und effektiv durch die QR-Mustereigenschaft lösen.
+Diese Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen  durch eine Reihe von Verarbeitungen wird QR Muster detektiert wird und dann schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem schnell und effektiv durch die QR-Mustereigenschaft lösen. Abbildung 4.1 zeigt die 
+Strukturdiagramm des Verfahrens.
 
 In dieser Verfahre läuft zuerst Bildregistrierung. Durch diese Schritt kann die Punkte über den zwei Bildern in dasselbe Koordinatensystem konvertieren. Anschließen mit Helfe einen Optimierung für die enthaltet Differenzbilder wird eine detektierend Bild bekommen, die die Erkennung des QR Musters erleichtern können. Schließlich wird es durch die Charakteristik des QR Musters, das Breiteverhältnis $1:1:3:1:1$ beträgt, um QR Muster zu detektieren.
 
 \begin{figure}[htb]
  \centering 
  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Flussigdiagramm.pdf}
- \caption{Flussdiagramm}
- \label{fig:ZeiteVerfahre}
+ \caption{Strukturdiagramm}
+ \label{fig:ZeiteVerfahreStrukturdiagramm}
 \end{figure}
 
 \section{Bildregistrierung} 
 
-Annehmen eine Szene, wenn eine Rhein Fotos mit einer Handheld-Kamera aufnehmen, kommt es aufgrund von Handbewegungen zu einer leichten Verschiebung zwischen den beiden benachbarten Fotos. Wenn Sie diese Fotos abziehen, um Differenzbild zu erhalten, wird der Ergebnisse sehr schlecht sein. Um diese Problem zu lösen, wird hier Bildregistrierung eingeführt.
+Annehmen eine Szene, wenn eine Rhein Fotos mit einer Handheld-Kamera aufnehmen, kommt es aufgrund von Handbewegungen zu einer leichten Verschiebung zwischen den beiden benachbarten Fotos. Wenn Sie diese Fotos abziehen, um Differenzbild zu erhalten, wird der Ergebnisse sehr schlecht sein. Um diese Problem zu lösen, wird hier Bildregistrierung eingeführt. Ein Flussdiagramm der Bildregistrierung wird in Abbildung 4.2 gezeigt. 
 
 \begin{figure}[H]
  \centering 
@@ -28,7 +29,7 @@ Annehmen eine Szene, wenn eine Rhein Fotos mit einer Handheld-Kamera aufnehmen, 
 \end{figure}
 
 \subsection{SURF}
-In Bildregistrierung wird zuerste die SURF\cite{Surf} Merkmalserkennung eingegangen. SURF Merkmalserkennung arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. 
+In Bildregistrierung wird zuerste Merkmalserkennung eingegangen. Hier in dieser Arbeite lass die SURF \cite{Surf} nutzen. SURF Merkmalserkennung arbeitet mit integrierten Bildern. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. 
 
 \textbf{Algorithmus:}\\
 \\
