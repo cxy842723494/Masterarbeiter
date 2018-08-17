@@ -610,12 +610,12 @@ QR_{base} = \begin{bmatrix}
 \end{bmatrix}
 \end{equation}
 
-Als nächstes werden ein Begriff "Energie" vorstellen. Die auf numerischer Ebene bedeutet die
+Als nächstes werden ein Begriff $``Energie"$ vorstellen. Die auf numerischer Ebene bedeutet den Mittelwert der quadrierten Elemente des Bildes. Es ist bekannt sein, dass aufgrund der Subtraktion die Pixelwerte in das Gebiet, welches rund um die Modulationsbereich legt, gegeneinander aufgehoben werden. Deswegen in dieses Gebiet die Pixelwerte werden nur von Rausch beeinflusst und sehr klein sein werden. Im Vergleich dazu beträgt die Pixelwerte im Modulationbereich ein relativ größer Wert $\pm2A$, hier A beutet die Modulationsamplitude des Systems. Überlegen die Einfluss von Zeitsynchronisation, indem die Pixelwerte in einigem Teile der Modulationsbereich werden aufgrund Synchronisation auch ausgeglichen, nämlich die $``Energie"$ aufgehoben werden. Dann nehmen eine Regelmäßigkeit, die Größe der $``Energie"$ hängt hauptsächlich von die Pixelwerte im Modulationsbereich. Je größer die Pixelwerte sind, je höher der $``Energie"$ des Bildes ist, und je klarer das QR Muster werden. Gemäß dieser Regel berechnen die $``Energie"$ jedes Differenzbildes und anordnen in absteigender Reihenfolge. Um die folgende Detektion zu vereinfachen, fügen die ersten paar Bilder hinzu und erhalten einen zu detektierende Bilder. Die Praxis hat bewiesen, dass es ausreicht, die ersten drei Bilder zu nehmen.
+
+Die Formel der $``Energie"$ wird in Gleichung 4.30 darstellt. Hier m,n repräsentiert die Anzahl der Zeilen und Spalten der Matrix. $diff(i,j)$ bedeutet die Pixelwert des Punkts in der m-ten Zeile die n-te Spalte der Matrix.
+
 \begin{equation}
-
-	
-\end{equation}
-
+Energie = \frac{1}{m \times n} \sum_{i=1}^m \sum_{j=1}^n diff^2(i,j) \end{equation}
 
     
 
@@ -631,23 +631,20 @@ Zwei beliebige Bilder subtrahiere und einen Differenzbild enthalten. Eine Beispi
 Hier in dieser Arbeit wird eine einfach Differenzbild Algorithmus vorstellen, wie folgen darstellt:
 
 \begin{enumerate}
-	\item Wähle zwei beliebige Bilder und subtrahiere, um Differenzbild zu enthalten.
-	\item Berechnen die Energie jedes Differenzbild. Um den Berechnungsaufwand zu reduzieren, kann nur der zentrale Bereich berechnet werden.
-	\item Sortiere und nehmen 3 Differenzbildern, die maximaler Energie verfügen.
-	\item Addieren diese 3 Differenzbildern und nächste Bildverarbeitung.
+	\item Wähle zwei beliebige Bilder aus und subtrahiere, um Differenzbild zu enthalten.
+	\item Nehmen eine Absolutoperation für jedes Differenzbild und berechnen dessen Energie. Um den Berechnungsaufwand zu reduzieren, kann nur der zentrale Bereich berechnet werden.
+	\item Sortiere in absteigender Reihenfolge und nehmen die erste 3 Differenzbildern.
+	\item Addieren diese 3 Differenzbildern, um eine detektierend Bild zu erhalten.
 \end{enumerate}
 
-Das Skript in Matlab ist wie folgt:
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Binarisierung}, label={lst:MATLABCodeBinarisierung}]
+Das Flussdiagramm wird in Abbildung gezeigt.
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Differenzbild/Differenzbildflussigdiagramm.pdf}
+ \caption{Differenzbild Flussigdiagramm}
+ \label{fig:DifferenzbildFlussigdiagramm}
+\end{figure} 
 
-%% Differentbild
-diff = functions.creatDifferentbild(U2new);
-Mal_num = 3;
-diffplus = functions.sum_of_diff(abs(diff),Mal_num);
-
-\end{matlab}
-\onehalfspacing
 
 \section{Bildverarbeitung} 
 Durch die Differnzbild Optimierung, wird ein detektierendes Bild enthältet. Es ist noch ein Graustufenbild und muss noch einige Bildverarbeitung nehmen. Dadurch können kleine Punkte und Lücken, die durch Rauschen und Fehler verursacht werden, entfernt werden, um die nachfolgende Detektion zu erleichtern. Der detailliert Inhalt der Bildverarbeitung wurde in der anderen Methode eingeführt, hier ist nur eine kurze Beschreibung der verwendeten Funktionen in Matlab. 
@@ -715,8 +712,8 @@ Die folgende Abbildung 4.22 zeigt die Flussdiagramm einer Detektion für QR Must
 
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/Flussdiagrammsum.pdf}
- \caption{Flussdiagramm der Methode}
+ \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/QRMuster/QR_flussdiagramm.pdf}
+ \caption{Flussdiagramm der QR Muster Detektion}
  \label{fig:Flussdiagramm der Methode}
 \end{figure}
 

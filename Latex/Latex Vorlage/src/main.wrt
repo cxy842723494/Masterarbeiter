@@ -80,12 +80,12 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Transformation in eine Koordinate\relax }}{35}{figure.caption.28}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Differenzbild Optimierung}{35}{section.4.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.19}{\ignorespaces Differenzbild Beispiel\relax }}{37}{figure.caption.29}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}MATLAB Code Binarisierung}{37}{lstlisting.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.20}{\ignorespaces Differenzbild Flussigdiagramm\relax }}{38}{figure.caption.30}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Bildverarbeitung}{38}{section.4.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}QR Musters Detektion}{38}{section.4.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.20}{\ignorespaces QR Pattern\relax }}{39}{figure.caption.30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.21}{\ignorespaces QR Pattern Ratio\relax }}{39}{figure.caption.31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.22}{\ignorespaces Flussdiagramm der Methode\relax }}{42}{figure.caption.32}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}QR Musters Detektion}{39}{section.4.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.21}{\ignorespaces QR Pattern\relax }}{39}{figure.caption.31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.22}{\ignorespaces QR Pattern Ratio\relax }}{40}{figure.caption.32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.23}{\ignorespaces Flussdiagramm der QR Muster Detektion\relax }}{42}{figure.caption.33}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{43}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -101,10 +101,10 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{45}{section.A.1}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{47}{chapter*.33}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{49}{chapter*.34}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{50}{chapter*.35}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{51}{chapter*.36}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{47}{chapter*.34}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{49}{chapter*.35}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{50}{chapter*.36}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{51}{chapter*.37}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
