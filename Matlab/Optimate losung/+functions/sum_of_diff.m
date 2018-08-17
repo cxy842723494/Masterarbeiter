@@ -5,7 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function diffplus = sum_of_diff(diff,Mal_num)
 
-
+    implay(mat2gray(gather(diff(:,:,:))));
     diff_num  = size(diff(:,:,:),3); 
     energie = zeros(1,diff_num);
 

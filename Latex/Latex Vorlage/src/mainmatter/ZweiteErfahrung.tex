@@ -1,19 +1,19 @@
-\chapter{ZweiteErfahrung} \label{cha:ZweiteErfahrung}
+\chapter{Zweite Methode} \label{cha:Zweite Methode}
 
-In diesem Kapitel wird die Realisierung der zweiten Verfahre eingegangen werden. Die Bildregistrierung wird zuerst im Detail gegeben. Anschließen läuft die Differenzbild Optimierung und Bildverarbeitung. QR Muster Detektion und die entspricht Matlab Code werden schließlich erläutert. 
+In diesem Kapitel wird die Realisierung des zweiten Verfahrens eingegangen werden. Die Bildregistrierung wird zuerst im Detail gegeben. Anschließen läuft die Differenzbild Optimierung und Bildverarbeitung. QR Muster Detektion und die entspricht Matlab Code werden schließlich erläutert. 
 Zur Implementierung dieser Verfahre wird Matlab unter der Lizenz TU Dortmund verwendet.
 
 \section{Allgemeine Struktur} 
 
-Diese Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen  durch eine Reihe von Verarbeitungen wird QR Muster detektiert wird und dann schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem schnell und effektiv durch die QR-Mustereigenschaft lösen. Abbildung 4.1 zeigt die Strukturdiagramm des Verfahrens.
+Dieses Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen  durch eine Reihe von Verarbeitungen wird QR Muster detektiert wird und dann schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem schnell und effektiv durch die QR-Mustereigenschaft lösen. Abbildung 4.1 zeigt die Strukturdiagramm des Verfahrens.
 
 In dieser Verfahre läuft zuerst Bildregistrierung. Durch diese Schritt kann die Punkte über den zwei Bildern in dasselbe Koordinatensystem konvertieren. Anschließen mit Helfe einen Optimierung für die enthaltet Differenzbilder wird eine detektierend Bild bekommen, die die Erkennung des QR Musters erleichtern können. Schließlich wird es durch die Charakteristik des QR Musters, das Breiteverhältnis $1:1:3:1:1$ beträgt, um QR Muster zu detektieren.
 
-\begin{figure}[htb]
+\begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Flussigdiagramm.pdf}
- \caption{Strukturdiagramm}
- \label{fig:ZeiteVerfahreStrukturdiagramm}
+ \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/Flussdiagrammsum.pdf}
+ \caption{Flussdiagramm der Methode}
+ \label{fig:Flussdiagramm der Methode}
 \end{figure}
 
 \section{Bildregistrierung} 
@@ -581,7 +581,44 @@ Dann durch Transformationsmatrix können die Koordinaten des zweiten Bildes in d
 \end{figure} 
 
 \section{Differenzbild Optimierung}
-Durch Bildregistration erhalten eine Reihe Bildern von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden.
+Durch Bildregistration erhalten eine Reihe Bilder von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden. Auswälen je zwei Bilder und subtrahieren, um eine Reihe Differenzbildern zu enthälten. Es sollte hier beachtet werden, dass aufgrund der Zeitsynchronisation die QR Muster in diesen Differenzbilder die folgende Situation aufgetreten sein können. Nehmen an, dass es in der vertikalen Richtung ist.
+
+\begin{itemize}
+	\item total Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung.
+	\item halb Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung, halb nicht gezeigt.
+	\item total Weiß-Schwarz-Weiß-Schwarz-Weiß Ordnung.
+	\item halb Weiß-Schwarz-Weiß-Schwarz-Weiß Ordnung, halb nicht gezeigt.
+	\item halb Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung, halb Weiß-Schwarz-Weiß-Schwarz-Weiß Ordnung.
+	\item total nicht gezeigt.
+\end{itemize}
+
+Offensichtlich ist die direkte Verwendung dieser Differenzbilder ein kniffliges Problem für die nächste Detektion. Um dieses Problem zu lösen, wurde ein Algorithmus zur Optimierung der Differenzbilder entwickelt.
+
+Der Struktur eines QR Musters zeigt in Formel 4.29. Die äußerste "1" Schicht ist eine Trennmuster und die Zentralbereich bedeutet das QR Muster. Aufgrund der Modulationseigenschaften des \gls{david} Systems wird nur Element "1" nach Modulation offensichtlich verändert. Im Vergleich dazu werden die Element "0" nur klein verändert. Deswegen durch eine Absolutwertoperation, werden die QR Muster als Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung darstellt. Dies ist die erwartende Modellstruktur, die in nächster Schritt operieren werden. Der detailliertes Operieren wird in Abschnitt "QR Muster Detektion" gegeben.
+
+\begin{equation}
+QR_{base} = \begin{bmatrix}
+    1 &1 &1 &1 &1 &1 &1 &1 &1 \\
+    1 &0 &0 &0 &0 &0 &0 &0 &1 \\
+    1 &0 &1 &1 &1 &1 &1 &0 &1 \\ 
+    1 &0 &1 &0 &0 &0 &1 &0 &1 \\ 
+    1 &0 &1 &0 &0 &0 &1 &0 &1 \\ 
+    1 &0 &1 &0 &0 &0 &1 &0 &1 \\ 
+    1 &0 &1 &1 &1 &1 &1 &0 &1 \\ 
+    1 &0 &0 &0 &0 &0 &0 &0 &1 \\ 
+    1 &1 &1 &1 &1 &1 &1 &1 &1 \\ 
+\end{bmatrix}
+\end{equation}
+
+Als nächstes werden ein Begriff "Energie" vorstellen. Die auf numerischer Ebene bedeutet die
+\begin{equation}
+
+	
+\end{equation}
+
+
+    
+
 Zwei beliebige Bilder subtrahiere und einen Differenzbild enthalten. Eine Beispiel Differenzbild wird in Abbildung 4.18 gezeigt. An jeder Ecke der Modulationsbereich existiert ein QR-Pattern. Die Ziel in diesem Abschnitt ist eine Bilder herstellen, der die QR Muster Detektion vereinfachen werden können.
 
 \begin{figure}[H]
@@ -613,20 +650,11 @@ diffplus = functions.sum_of_diff(abs(diff),Mal_num);
 \onehalfspacing
 
 \section{Bildverarbeitung} 
-Der detailliert Inhalt der Bildverarbeitung wurde in der ersten Methode eingeführt, hier ist nur eine einfache Beschreibung der verwendeten Funktionen in Matlab. Durch Bildverarbeitung können kleine Punkte und Lücken, die durch Rauschen und Fehler verursacht werden, entfernt werden, um die nachfolgende Detektion zu erleichtern.
+Durch die Differnzbild Optimierung, wird ein detektierendes Bild enthältet. Es ist noch ein Graustufenbild und muss noch einige Bildverarbeitung nehmen. Dadurch können kleine Punkte und Lücken, die durch Rauschen und Fehler verursacht werden, entfernt werden, um die nachfolgende Detektion zu erleichtern. Der detailliert Inhalt der Bildverarbeitung wurde in der anderen Methode eingeführt, hier ist nur eine kurze Beschreibung der verwendeten Funktionen in Matlab. 
 
 \textbf{Bild Binarisierung}
 
-Für die Schwellenwertbildung und das Erstellen eines Binärbildes wurde eine Funktion namens "imbinarize" verwenden. Diese Funktion erhält das Bild und verwendet ein anpassungsfähige Schwellwert, um das Schwarz-Weiß-Bild zurückzugeben. Das ist genug für QR-Pattern Detktion, weil es nur dunkle und helle Module enthält, die binär 1 bzw. 0 sind. Das Skript ist wie folgt:
-
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Binarisierung}, label={lst:MATLABCodeBinarisierung}]
-
-% Threshold image - adaptive threshold
-BW = imbinarize(X, 'adaptive', 'Sensitivity', 0.500000, 'ForegroundPolarity', 'bright');
-
-\end{matlab}
-\onehalfspacing
+Für die Schwellenwertbildung und das Erstellen eines Binärbildes wurde eine Funktion namens "imbinarize" verwenden. Diese Funktion erhält das Bild und verwendet ein anpassungsfähige Schwellwert, um das Schwarz-Weiß-Bild zurückzugeben. Das ist genug für QR-Pattern Detktion, weil es nur dunkle und helle Module enthält, die binär 1 bzw. 0 sind. 
 
 \textbf{Medianfilter}
 
@@ -634,26 +662,11 @@ Der Grund für das Median-Filtern ist, dass manchmal beim Prozess Binarisierung 
 
 \textbf{Morphologie}
 
-Mit öffnenden und schließenden Filtern können die Lücken zwischen Blöcken und die kleine Punkte von Rausch stark reduziert werden, was das resultierende binär Bild zu einer guten Schätzung des QR-Pattern macht. Das Skript ist wie folgt:
-
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
-% Close mask with square
-width = 5;
-se = strel('square', width);
-BW = imclose(BW, se);
-
-% Open mask with square
-width = 5;
-se = strel('square', width);
-BW = imopen(BW, se);
-
-\end{matlab}
-\onehalfspacing
+Mit öffnenden und schließenden Filtern können die Lücken zwischen Blöcken und die kleine Punkte von Rausch stark reduziert werden, was das resultierende binär Bild zu einer guten Schätzung des QR-Pattern macht. 
 
 \section{QR Musters Detektion} 
 
-Nach Bildverarbeitung wird die QR Musters Detektion ausgeführt, d.h. lokalisieren die QR Musters im Bild rekonstruiere die Bild. Abbildung 4.19 zeigt eine simple Struktur des QR Musters. Es gibt insgesamt vier QR Muster, jede an der Ecke der Modulartionsbereiche. 
+Nach Bildverarbeitung wird nun die QR Musters Detektion ausgeführt. Die Ziel einer QR Musters Detektion ist die Zentrum des Musters im Bild zu lokalisieren und dadurch die Bild zu rekonstruieren. Abbildung 4.20 zeigt eine geometrische Struktur des QR Musters. An jedem Ecke der Modulartionsbereiche gibt es eine solche QR Muster.
 
 \begin{figure}[H]
  \centering 
@@ -662,7 +675,7 @@ Nach Bildverarbeitung wird die QR Musters Detektion ausgeführt, d.h. lokalisier
  \label{fig:QRPattern}
 \end{figure}
 
-Jedes Muster kann als drei konzentrische Quadrate betrachtet werden und besteht aus eine schwarzen (dunklen) $7 \times 7$ Modulen, eine weißen (hellen) $5 \times 5$ Modulen und schließlich eine dunklen $3 \times 3$ Modulen. Das Breiteverhältnis der alternativen Schwarz- und Weißmodul in jedem Muster beträgt etwa $1:1:3:1:1$ in jeder Richtung, wie zeigt in Abbildung 4.20. Diese wichtige Eigenschaft hilft uns, die Lokalität der QR Muster zu finden. Es gibt noch ein Trennmuster, das ein Funktionsmuster mit aller weißen (hellen) Module, Breit ein Modul. Es spielt eine Rolle als einer Grenze zwischen den Mustern und dem Datenbereich.
+Aus der geometrischen Sicht kann jedes Muster als drei konzentrische Quadrate betrachtet werden und besteht aus eine schwarzen (dunklen) $7 \times 7$ Modulen, eine weißen (hellen) $5 \times 5$ Modulen und schließlich eine dunklen $3 \times 3$ Modulen. Von Kenntnisse der Geometrie können bekannt sein, in jeder Richtung das Breiteverhältnis der alternativen Schwarz- und Weißmodul in einem Muster eine Bieziehnung $1:1:3:1:1$ beträgt, wie es in Abbildung 4.21 zeigt. Diese wichtige Eigenschaft hilft uns, die Lokalität der QR Muster zu finden. In der Praxis rund um die Muster gibt es noch ein Trennmuster, das ein Funktionsmuster mit aller weißen (hellen) Module(Breit ein Modul). Es spielt eine Rolle als eine Grenze zwischen den Mustern und dem Datenbereich, um die Verwechslungen zwischen Muster und Daten zu vermeiden.
  
  \begin{figure}[H]
  \centering 
@@ -671,123 +684,40 @@ Jedes Muster kann als drei konzentrische Quadrate betrachtet werden und besteht 
  \label{fig:QRPatternRatio}
 \end{figure}
 
-Die Unterfunktion "detectFIP" verwendet das folgende Verfahren zum Finden eines QR Musters:
+Als nächstes werden die detaillierten Schritte der Detektion eingeführt und es wird mit Funktion "detectFIP" in Matlab implementiert.
 
 \textbf{Schritt 1:}
 
-Um die Aufwand für Berechnung zu reduzieren, brauchen es nicht die Analysen für ganzen Pixel im Bild. d.h. nur das Pixel am der Ecke werden analysiert. 
-
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={Detektion Bereich}, label={lst:Detektion Bereich}]
-% take the size and the dimension of the image 
-    h = size(img, 1);	% height
-    w = size(img, 2);	% weight
-    
- 	s.offset = 0;
-    s.sizeH = ceil(h/4);  %1/4 height of the image
-    s.sizeW = ceil(w/4);  %1/4 weight of the image
-
-    PatternAreaBW(:,:,1) = img(s.offset+1:s.sizeH+s.offset,...
-        s.offset+1:s.sizeW+s.offset);
-    PatternAreaBW(:,:,2) = img(s.offset+1:s.sizeH+s.offset,...
-        end-s.sizeW-s.offset+1:end-s.offset);
-    PatternAreaBW(:,:,3) = img(end-s.sizeH-s.offset+1:end-s.offset, ...
-        s.offset+1:s.sizeW+s.offset);
-    PatternAreaBW(:,:,4) = img(end-s.sizeH-s.offset+1:end-s.offset, ...
-        end-s.sizeW-s.offset+1:end-s.offset);
-
-\end{matlab}
-\onehalfspacing
+Zuerst überlegen die größe Berechnungsaufwand für die Analysen des ganzen  Bilds, teilen einige kleine Bereiche auf, die QR Muster enthalten können.
 
 \textbf{Schritt 2:}
 
-Scannen jede Zeile des Bereich. Speichern die Länge der Schwarz und Weiß Module in eine fünf Element Vektor. Die Länge heißt die Anzahl aufeinanderfolgende Pixel in einer Zeile mit die gleiche Farbe. Speicherreihenfolge ist Schwarz-Weiß-Schwarz-Weiß-Schwarz. Unterfunktion "FinderPatternFinder" implementieren diese Aufgabe.
-
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
-
-function patternInfo = FinderPatternFinder(bw, tryHarder)
-
-\end{matlab}
+Scannen jede Zeile dieses kleinen Bereiches und speichern die Länge der Schwarz und Weiß Module in eine fünf Element Vektor. Die Länge der Module heißt die Anzahl aufeinanderfolgende Pixel in einer Zeile mit die gleiche Farbe. Speicherreihenfolge in diesem Vektor ist laut Schwarz-Weiß-Schwarz-Weiß-Schwarz. Es sollte hier angemerkt werden, dass das erste Element des Vektors die Anzahl der schwarzen Module enthält. 
 
 \textbf{Schritt 3:}
 
-Immer wenn der Vektor voll ist, nutzen die Unterfunktion "foundPatternCross". Solange die Anteile der Zählungen nahe genug an den $1:1:3:1:1$ Verhältnissen ist, als eine Übereinstimmung betrachtet werden und eine Bestimme zurückgeben.
-
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
-
-function result = foundPatternCross(stateCount)
-
-\end{matlab}
-\onehalfspacing                       
+Immer wenn das fünfte Element des Vektors gezählt wird, nehmen die fünf Elemente und ein Urteil machen, ob die Beziehung der Zählungen nahe genug an den $1:1:3:1:1$ Verhältnissen ist. Wenn die Bedingung erfüllt ist, gehen zum nächsten Schritt. Dagegen verschieben den Vektor um zwei nach links und werfen die ersten und zweiten Elemente des Vektors weg. AnschliSeßen gehen zurück zu Schritt 2, um weiter Scannen und Zählen zu beginnen.                
 
 \textbf{Schritt 4:}
 
-Wenn ein horizontaler Abtasten ein mögliches Muster findet, dann läuft eine Kreuzprüfung mit vertikalen Abtasten. Falls erfolgreich, machen ein Kreuz-Kreuz-Check mit einem anderen horizontalen Abtasten. Dies wird hauptsächlich benötigt, um die reale horizontale Mitte des Musters in  extremer Schräglage Fällen zu lokalisieren. Die Unterfunktion "handlePossibleCenter" wurde definiert, um das  Überprüfung zu implementieren.
-
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
-
-   [confirmed, possibleCenters] = ...
-                            handlePossibleCenter(bw, possibleCenters, ...
-                            stateCount, i, j);
-
-\end{matlab}
-\onehalfspacing
+Verarbeiten die Elemente vom Vektor, um das ungefähre horizontale Zentrum zu erhalten. Mache eine Kreuzprüfung an diesem Punkt, welche besteht aus den Schritten 2 und 3, der Unterschied dazwichen wird der horizontale Scan durch einen vertikalen Scan ersetzt. Anschließen machen ein Urteil, ob eine vertikale Zentrum gefunden ist. Wenn Ja bestimmt, machen eine Kreuz-Kreuzprüfung mit horizontale Scan, um die Ergebnis zu optimieren. Dies wird hauptsächlich benötigt, um die reale horizontale Mitte des Musters in  extremer Schräglage Fällen zu lokalisieren. Speichern der potenzielle Zetrum, danach leeren die Elemente des Vektors und wieder zu zweiten Schritt, um einen neuen Scan machen. Ansonsten verschieben den Vektor um zwei nach links und werfen die ersten und zweiten Elemente des Vektors weg. Gehen zurück zu Schritt 2, um weiter Scannen und Zählen zu beginnen.                
 
 \textbf{Schritt 5:}
 
-Je nach eine potenzielle Muster Zentrum gefunden ist, Löschen den Vektor, um wieder mit der Suche zu beginnen, sonst verschieben die Element des Vektors um zwei zurück.
-
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
-  % Clear state to start looking again
-                        currentState = 0;
-                        stateCount = zeros(1, 5);
-                        
-                    	%  shift counts back by two
-                        stateCount(1) = stateCount(3);
-                        stateCount(2) = stateCount(4);
-                        stateCount(3) = stateCount(5);
-                        stateCount(4) = 1;
-                        stateCount(5) = 0;
-                        currentState = 3;
-
-\end{matlab}
-\onehalfspacing  
+Verarbeiten die Ausgabe des vorherigen Schritts, falls es nicht nur eine potentiell Muster Zentrum gefunden, nutzen einen "selectBestPattern", um die beste zu auswählen. Es sollte angemerkt werden, dass wenn die mögliche Muster nach dem Ende der Erkundung nicht gefunden wird, ein spezielle Signal zurückgegeben wird und die System zu Schritt Differenzbild Optimierung zurückkehren wird. Die Operation besteht darin, der ursprünglichen Bild, die aus drei Differenzbild besteht, ein mehre Differenzbild hinzuzufügen.
                        
-
 \textbf{Schritt 6:}
 
-Schließlich falls es nicht nur eine potentiell Muster Zentrum gefunden, nutzen diese Funktion "selectBestPattern" um die beste zu auswählen. 
+Durch die gefunden Muster Zentren, machen eine projective Transformation, un die Ecke des Bildes zu bestimmen.
 
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
 
-patternInfo = selectBestPattern(possibleCenters);
+Die folgende Abbildung 4.22 zeigt die Flussdiagramm einer Detektion für QR Muster.
 
-\end{matlab}
-\onehalfspacing 
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/Flussdiagrammsum.pdf}
+ \caption{Flussdiagramm der Methode}
+ \label{fig:Flussdiagramm der Methode}
+\end{figure}
 
-Es sollte angemerkt werden, dass wenn die mögliche Musterung nach dem Ende der Erkundung nicht gefunden wird, ein Signal "Nofind" zurückgegeben wird und die System zu Differenzbild Optimierung zurückkehren wird. Die Operation besteht darin, der ursprünglichen Bild, die aus drei Differenzbild besteht, ein mehre Differenzbild hinzuzufügen.
-
-\singlespacing
-\begin{matlab}[firstnumber=1, name=MATLABCodeBeispiel, caption={MATLAB Code Beispiel}, label={lst:MATLABCodeBeispiel}]
-while true
-diffplus = functions.sum_of_diff(abs(diff),Mal_num);
-
-[BW,~] = functions.imageSegementer(diffplus);
-
-[FiPx,FiPy,ux,vx,cr,Nofind] = detectFIP(BW);
-
-if Nofind
-    Mal_num = Mal_num+1;
-else 
-    break;
-end
-end
-\end{matlab}
-\onehalfspacing 
-
-Die folgenden Bilder zeigen einige Beispiele für das Lokalisierung von QR Muster.
+Einige Beipiel für QR Muster Detektion zeigt in Abbildung:
