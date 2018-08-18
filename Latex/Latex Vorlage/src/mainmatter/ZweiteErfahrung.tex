@@ -581,7 +581,7 @@ Dann durch Transformationsmatrix können die Koordinaten des zweiten Bildes in d
 \end{figure} 
 
 \section{Differenzbild Optimierung}
-Durch Bildregistration erhalten eine Reihe Bilder von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden. Auswälen je zwei Bilder und subtrahieren, um eine Reihe Differenzbildern zu enthälten. Es sollte hier beachtet werden, dass aufgrund der Zeitsynchronisation die QR Muster in diesen Differenzbilder die folgende Situation aufgetreten sein können. Nehmen an, dass es in der vertikalen Richtung ist.
+Durch Bildregistration erhalten eine Reihe Bilder von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden. Die Ziel in diesem Abschnitt ist ein detektierendes Bilder herstellen, dadurch die QR Muster Detektion vereinfachen werden können. Auswälen je zwei Bilder und subtrahieren, um eine Reihe Differenzbildern zu enthälten. Es sollte hier beachtet werden, dass aufgrund der Zeitsynchronisation die QR Muster in diesen Differenzbilder die folgende Situation aufgetreten sein können. Nehmen an, dass es in der vertikalen Richtung ist.
 
 \begin{itemize}
 	\item total Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung.
@@ -591,6 +591,27 @@ Durch Bildregistration erhalten eine Reihe Bilder von der Kamera, deren Koordina
 	\item halb Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung, halb Weiß-Schwarz-Weiß-Schwarz-Weiß Ordnung.
 	\item total nicht gezeigt.
 \end{itemize}
+
+Tabelle zeigt einige Beispiel.
+
+\begin{table}[htb]
+	\captionabove{einige Beispiel}
+	\label{tbl:params}
+	\footnotesize
+	\centering
+	\rowcolors{2}{white}{gray!25}	%TUgreen!25
+	\begin{tabular}{|p{2cm}<{\centering}|c|p{2cm}<{\centering}|c|}	%p{}m{}b{}clr p{3cm} p{8cm}
+	\toprule
+	\textbf{Ob angepasst zu folgende Detektion?} & \multirow{4}{*}{\textbf{einige Beispiel}} & \textbf{Ob angepasst zu folgende Detektion?} & \multirow{4}{*}{\textbf{einige Beispiel}} \\
+	\midrule
+	 Ja & \includegraphics[scale=0.12]{images/4_ZweiteErfahrung/Differenzbild/0schwarz.pdf}& Nein & \includegraphics[scale=0.15]{images/4_ZweiteErfahrung/Differenzbild/1halfschwarz.pdf}\\
+	Nein & \includegraphics[scale=0.15]{images/4_ZweiteErfahrung/Differenzbild/2weis.pdf}& Nein & \includegraphics[scale=0.15]{images/4_ZweiteErfahrung/Differenzbild/3halfweis.pdf}\\
+	Nein & \includegraphics[scale=0.15]{images/4_ZweiteErfahrung/Differenzbild/4halbschwaryhalbweis.pdf}& Nein & \includegraphics[scale=0.15]{images/4_ZweiteErfahrung/Differenzbild/5aufheben.pdf}\\
+
+	\bottomrule
+	\end{tabular}
+\end{table} 
+
 
 Offensichtlich ist die direkte Verwendung dieser Differenzbilder ein kniffliges Problem für die nächste Detektion. Um dieses Problem zu lösen, wurde ein Algorithmus zur Optimierung der Differenzbilder entwickelt.
 
@@ -617,16 +638,7 @@ Die Formel der $``Energie"$ wird in Gleichung 4.30 darstellt. Hier m,n repräsen
 \begin{equation}
 Energie = \frac{1}{m \times n} \sum_{i=1}^m \sum_{j=1}^n diff^2(i,j) \end{equation}
 
-    
-
-Zwei beliebige Bilder subtrahiere und einen Differenzbild enthalten. Eine Beispiel Differenzbild wird in Abbildung 4.18 gezeigt. An jeder Ecke der Modulationsbereich existiert ein QR-Pattern. Die Ziel in diesem Abschnitt ist eine Bilder herstellen, der die QR Muster Detektion vereinfachen werden können.
-
-\begin{figure}[H]
- \centering 
- \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Kamera/differenzbild.pdf}
- \caption{Differenzbild Beispiel}
- \label{fig:Differenzbild}
-\end{figure} 
+ 
 
 Hier in dieser Arbeit wird eine einfach Differenzbild Algorithmus vorstellen, wie folgen darstellt:
 
@@ -643,6 +655,15 @@ Das Flussdiagramm wird in Abbildung gezeigt.
  \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Differenzbild/Differenzbildflussigdiagramm.pdf}
  \caption{Differenzbild Flussigdiagramm}
  \label{fig:DifferenzbildFlussigdiagramm}
+\end{figure} 
+
+Eine Beispiel für detektierendes Bild wird in Abbildung 4.18 gezeigt. Durch die Optimierung kann die QR Muster an der Eck des Bildes einfachen detektiert werden.
+
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Differenzbild/diffplus.pdf}
+ \caption{Differenzbild Beispiel}
+ \label{fig:Differenzbild}
 \end{figure} 
 
 
