@@ -18,20 +18,20 @@
 \babel@toc {ngerman}{}
 \contentsline {chapter}{\numberline {4}Zweite Methode}{14}{chapter.4}
 \contentsline {section}{\numberline {4.1}Allgemeine Struktur}{14}{section.4.1}
-\contentsline {section}{\numberline {4.2}Bildregistrierung}{16}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}SURF}{16}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}RANSAC}{21}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Bilder Umwandlung}{25}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Differenzbild Optimierung}{36}{section.4.3}
-\contentsline {section}{\numberline {4.4}Bildverarbeitung}{39}{section.4.4}
-\contentsline {section}{\numberline {4.5}QR Musters Detektion}{40}{section.4.5}
-\contentsline {chapter}{\numberline {5}Auswertung}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section}{44}{section.5.1}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section}{45}{section.6.1}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{46}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{46}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{48}{chapter*.35}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{50}{chapter*.36}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{51}{chapter*.37}
-\contentsline {chapter}{\nonumberline Literatur}{52}{chapter*.38}
+\contentsline {section}{\numberline {4.2}Bildregistrierung}{17}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}SURF}{17}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}RANSAC}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Bilder Umwandlung}{26}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Differenzbild Optimierung}{37}{section.4.3}
+\contentsline {section}{\numberline {4.4}Bildverarbeitung}{40}{section.4.4}
+\contentsline {section}{\numberline {4.5}QR Musters Detektion}{41}{section.4.5}
+\contentsline {chapter}{\numberline {5}Auswertung}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section}{45}{section.5.1}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{46}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section}{46}{section.6.1}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{47}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{47}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{49}{chapter*.36}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{51}{chapter*.37}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{52}{chapter*.38}
+\contentsline {chapter}{\nonumberline Literatur}{53}{chapter*.39}

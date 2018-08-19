@@ -55,57 +55,58 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{14}{section.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Flussdiagramm der Methode\relax }}{15}{figure.caption.10}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Bildregistrierung}{16}{section.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Flussdiagramm der Bildregistrierung\relax }}{16}{figure.caption.11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}SURF}{16}{subsection.4.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Scale space\relax }}{19}{figure.caption.12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Extreme Wert Erkennung\relax }}{19}{figure.caption.13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Dominante Orientierung Feststellen\relax }}{20}{figure.caption.14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Merkmalspunkt Deskriptor\relax }}{20}{figure.caption.15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces SURF Merkmal\relax }}{21}{figure.caption.16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}RANSAC}{21}{subsection.4.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Linien Detektion\relax }}{22}{figure.caption.17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces OhneRANSAC\relax }}{24}{figure.caption.18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces MitRANSAC\relax }}{24}{figure.caption.19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Bilder Umwandlung}{25}{subsection.4.2.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Modell einer Lochkamera\relax }}{25}{figure.caption.20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem\relax }}{26}{figure.caption.21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Rotation um Z-Achse\relax }}{27}{figure.caption.22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Transformation vom Kamerakoordinatensystem zum Bild Koordinatensystem\relax }}{28}{figure.caption.23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces Konvertierung von Bildkoordinatensystem zu Pixelkoordinatensystem\relax }}{29}{figure.caption.24}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Parameter des Kameras im Vergleich\relax }}{31}{table.caption.25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces Rotationsbewegungsmodell\relax }}{32}{figure.caption.26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces Transformation in eine Koordinate\relax }}{34}{figure.caption.27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Flussdiagramm f\IeC {\"u}r Optimierung\relax }}{35}{figure.caption.28}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Differenzbild Optimierung}{36}{section.4.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Die m\IeC {\"o}gliche Differenzbilder\relax }}{37}{table.caption.29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.19}{\ignorespaces Differenzbild Flussigdiagramm\relax }}{38}{figure.caption.30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.20}{\ignorespaces Ein detektierendes Bild\relax }}{39}{figure.caption.31}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Bildverarbeitung}{39}{section.4.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}QR Musters Detektion}{40}{section.4.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.21}{\ignorespaces QR Pattern\relax }}{40}{figure.caption.32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.22}{\ignorespaces QR Pattern Ratio\relax }}{41}{figure.caption.33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.23}{\ignorespaces Flussdiagramm der QR Muster Detektion\relax }}{43}{figure.caption.34}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{44}{chapter.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Strukturdiagramm\relax }}{14}{figure.caption.10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Flussdiagramm der Methode\relax }}{16}{figure.caption.11}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Bildregistrierung}{17}{section.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Flussdiagramm der Bildregistrierung\relax }}{17}{figure.caption.12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}SURF}{17}{subsection.4.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Scale space\relax }}{20}{figure.caption.13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Extreme Wert Erkennung\relax }}{20}{figure.caption.14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Dominante Orientierung Feststellen\relax }}{21}{figure.caption.15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Merkmalspunkt Deskriptor\relax }}{21}{figure.caption.16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces SURF Merkmal\relax }}{22}{figure.caption.17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}RANSAC}{22}{subsection.4.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Linien Detektion\relax }}{23}{figure.caption.18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces OhneRANSAC\relax }}{25}{figure.caption.19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces MitRANSAC\relax }}{25}{figure.caption.20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Bilder Umwandlung}{26}{subsection.4.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Modell einer Lochkamera\relax }}{26}{figure.caption.21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem\relax }}{27}{figure.caption.22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Rotation um Z-Achse\relax }}{28}{figure.caption.23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces Transformation vom Kamerakoordinatensystem zum Bild Koordinatensystem\relax }}{29}{figure.caption.24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces Konvertierung von Bildkoordinatensystem zu Pixelkoordinatensystem\relax }}{30}{figure.caption.25}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Parameter des Kameras im Vergleich\relax }}{32}{table.caption.26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces Rotationsbewegungsmodell\relax }}{33}{figure.caption.27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Transformation in desselben Koordinate\relax }}{35}{figure.caption.28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.19}{\ignorespaces Flussdiagramm f\IeC {\"u}r Optimierung\relax }}{36}{figure.caption.29}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Differenzbild Optimierung}{37}{section.4.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Die m\IeC {\"o}gliche Differenzbilder\relax }}{38}{table.caption.30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.20}{\ignorespaces Differenzbild Flussigdiagramm\relax }}{39}{figure.caption.31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.21}{\ignorespaces Ein detektierendes Bild\relax }}{40}{figure.caption.32}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Bildverarbeitung}{40}{section.4.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}QR Musters Detektion}{41}{section.4.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.22}{\ignorespaces QR Pattern\relax }}{41}{figure.caption.33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.23}{\ignorespaces QR Pattern Ratio\relax }}{42}{figure.caption.34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.24}{\ignorespaces Flussdiagramm der QR Muster Detektion\relax }}{44}{figure.caption.35}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{45}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{44}{section.5.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{45}{chapter.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{45}{section.5.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{46}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{45}{section.6.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{46}{appendix.A}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{46}{section.6.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{47}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{46}{section.A.1}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{48}{chapter*.35}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{50}{chapter*.36}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{51}{chapter*.37}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{52}{chapter*.38}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{47}{section.A.1}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{49}{chapter*.36}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{51}{chapter*.37}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{52}{chapter*.38}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{53}{chapter*.39}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}

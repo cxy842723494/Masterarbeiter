@@ -5,9 +5,17 @@ Zur Implementierung dieser Verfahre wird Matlab unter der Lizenz TU Dortmund ver
 
 \section{Allgemeine Struktur} 
 
-Dieses Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen  durch eine Reihe von Verarbeitungen wird QR Muster detektiert wird und dann schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem schnell und effektiv durch die QR-Mustereigenschaft lösen. Abbildung 4.1 zeigt die Strukturdiagramm des Verfahrens.
+Dieses Verfahren verwendet die Charakteristiken der Datenmodulation des DaViD Systems, d.h. an jedem Eck des Datenebene ein QR Muster hinzu und dann mit den Daten zusammen hinter dem Bild moduliert. Am Empfängen nach einige Operationen   wird QR Muster mit die in diese Kapitel vorstellte Verfahren detektiert und schließlich bestimmt der Modulationsbereich. Diese Methode löst effektiv den unschönen Effekt, der das QR-Modul direkt zum Bild hinzugefügt wird, und kann das Problem günstiger und effektiver durch die QR-Mustereigenschaft lösen. Abbildung \ref{fig:Strukturdiagramm} zeigt die Strukturdiagramm dieses Verfahrens.
 
-In dieser Verfahre läuft zuerst Bildregistrierung. Durch diese Schritt kann die Punkte über den zwei Bildern in dasselbe Koordinatensystem konvertieren. Anschließen mit Helfe einen Optimierung für die enthaltet Differenzbilder wird eine detektierend Bild bekommen, die die Erkennung des QR Musters erleichtern können. Schließlich wird es durch die Charakteristik des QR Musters, das Breiteverhältnis $1:1:3:1:1$ beträgt, um QR Muster zu detektieren.
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/Strukturdiagramm.pdf}
+ \caption{Strukturdiagramm}
+ \label{fig:Strukturdiagramm}
+\end{figure}
+
+Das Objekt, das mit dieser Methode bearbeitet wird, ist die aus einer spezifischen Handy App stammte Bildern. Diese App wurde speziell für das DaVid-System entwickelt und erstellt eine Reihe von Bildern bei jeder Aufnahme. In Allgemeiner wird die Kamera bei der Aufnahme in der Hand gehalten. Aufgrund von Handschütteln während des Aufnahme werden ein leichter Verschiebung zwischen den Bildern besteht. Um dieses Problem zu lösen, nehmen eine Bildregistrierung Operation. Zuerst durch Merkmalserkennung überprüfen
+die Merkmalspunkt jedes Bildes. Dann die entsprechenden Punkte zwischen den beiden Bilder werden durch Merkmalsextraktion und Merkmalanpassung erhalten. Hier einfuhren \gls{ransac} Algorithmus, um die falschen Korrespondentpunkt zu beseitigen und die Genauigkeit zu verbessern. Aus dem Kameramodell wird dann ein mathematisches Transformations Modell zwischen den entsprechenden Punkten in den beiden Bildern erstellt. Durch Lösung eines nichtlinearen Optimierungsproblems kann die Transformationsmatrix erhalten werden. Danach bekommen eine Reihe Bilder, die in dasselbe Koordinatensystem umgewandelt. Auswälen je zwei Bilder und subtrahieren, dann erhalten eine Reihe Differenzbildern. Um die folgend Detektion zu vereinfachen, machen eine Optimierungsoperation und dann erstellen ein detektierendes Bild. Anschließen eine Reihe von Bildverarbeitung bzw. Binarisierung, Medianfilter, Morphologie Operation wird behandelt. Dadurch können die kleine Punkte und Lücken, die durch Rauschen und Fehler verursacht werden, entfernt werden. Schließlich wird es durch die Charakteristik des QR Musters, das Breiteverhältnis $1:1:3:1:1$ beträgt, um QR Muster zu detektieren. Also bestimmen die Modulationsbereich. Die Flussdiagramm wird in Abbildung \ref{fig:Flussdiagramm der Methode} gezeigt. Die Details jedes Abschnitts werden in den folgenden Abschnitten beschrieben.
 
 \begin{figure}[H]
  \centering 
@@ -498,7 +506,7 @@ Die erste Matrix der rechten Gleichung ist die allgemein bekannt interne Referen
 
 Aus der obigen Formel wenn die internen und externen Parameter der Kamera bekannt sind, ist nämlich die Projektionsmatrix bekannt, und zu diesem Zeitpunkt können die entsprechenden Bildkoordinaten für jeden beliebigen räumlichen Punkt erhalten werden. Dagegen  wenn die Position $m(u,v)$ in Bildkoordinate bekannt ist, und auch die Parameter innerhalb und außerhalb der Kamera bereits bekannt sind, kann die entsprechenden Punkt in Wert Koordinate nicht eindeutig bestimmt werden. Die Grund dafür ist, die $Z_c$ Information während des Projektionsprozesses eliminiert wird. 
 
-\textbf{Transformation Modelle}
+\textbf{Umwandelung  Modelle}
 
 Als nächstes machen die Umwandlungsbeziehung zwischen den entsprechenden Punkten in den beiden Bilder.
 Zuerst wird in diese Arbeit eine vereinfachte Situation  betrachten, d.h. nur mit Rotations Einfluss. Abbildung \ref{fig:rotationsmodel} zeigt das 3D-Rotationsbewegungsmodell der Kamera. Darin die Position des optischen Zentrums ändert sich während der Kamerabewegung im Drehbewegungsmodell der Kamera nicht. Unter diesem Modell ist die Abbildungsbeziehung zwischen dem Punkt X im Weltkoordinatensystem und der Bildkoordinate x im homogenen Koordinatensystem dargestellt: 
@@ -676,7 +684,7 @@ Als folgend legt die detailliert Schritt dieses Algorithmus-
 Das Flussdiagramm wird in Abbildung \ref{fig:DifferenzbildFlussigdiagramm} gezeigt.
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Differenzbild/Differenzbildflussigdiagramm.pdf}
+ \includegraphics[keepaspectratio,width=1.1\textwidth]{images/4_ZweiteErfahrung/Differenzbild/Differenzbildflussigdiagramm.pdf}
  \caption{Differenzbild Flussigdiagramm}
  \label{fig:DifferenzbildFlussigdiagramm}
 \end{figure} 
