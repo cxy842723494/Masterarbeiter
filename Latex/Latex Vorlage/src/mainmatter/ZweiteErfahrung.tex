@@ -28,7 +28,12 @@ Annehmen eine Szene, wenn eine Rhein Fotos mit einer Handheld-Kamera aufnehmen, 
 \end{figure}
 
 \subsection{SURF}
-In Bildregistrierung wird zuerste Merkmalserkennung eingegangen. Hier in dieser Arbeite lass die SURF \cite{Surf} nutzen. Es ist eine verbesserte Version von SIFT, die Haar-Wavelet verwendet, um die Gradientenoperation in der SIFT-Methode anzunähern und gleichzeitig verwendet eine Integralgraph-Technik für schnelle Berechnungen. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. Die Geschwindigkeit von SURF ist 3-7 mal die von SIFT mit der in den meisten Fällen entspricht   Leistung von SIFT. Daher wurde es in vielen Anwendungen eingesetzt, insbesondere in Anwendungen, in denen die Laufzeitanforderungen hoch sind. Der Verläuf einer SURF Merkmalserkennung ist wie flogend:
+In jedem Bild gibt es eindeutige Pixelwertpunkte, d.h. Merkmalspunkte dieses Bildes. Um die Bilder in dasselbe Koordinatensystem zu transformieren, müssen diese Merkmalspunkte erkennt und analysiert werden. Deswegen ist das Verfahren besonders wichtig, indem die Merkmalspunkte eines Bilds definieren und finden. Um diese Problem zu lösen, wird das Konzept der Merkmalserkennung eingeführt. Die wird oft in Computer Vision und Bildverarbeitung Bereichen verwendet. Die Merkmalserkennung umfasst Verfahren zum Berechnen von Abstraktionen von Bildinformationen und zum Treffen lokaler Entscheidungen an jedem Bildpunkt, ob es an diesem Punkt ein Bildmerkmal eines bestimmten Typs gibt oder nicht. Einige typische Merkmalserkennungen sind wie z.b. Kante Detektion, Ecke Detektion, Tropfen Detektion und so weiter.
+
+Hier in dieser Arbeite lass das SURF \cite{Surf} nutzen. 
+Das ist ein patentierter lokaler Merkmal-Detektor und Deskriptor und kann für Aufgaben wie Objekterkennung, Bildregistrierung, Klassifizierung oder 3D-Rekonstruktion verwendet werden. \cite{Surf} Merkmalserkennungen ist eine verbesserte Version von SIFT Merkmalserkennungen, die Haar-Wavelet verwendet, um die Gradientenoperation in der SIFT-Methode anzunähern und gleichzeitig verwendet eine Integralgraph-Technik für schnelle Berechnungen. Die Faltung bezieht sich nur auf das vorherige Bild, mit Erhöhung der Größe des Bildkerns können das Heruntertaktung-Verfahren realisiert werden. Die Geschwindigkeit von SURF ist 3-7 mal die von SIFT mit der in den meisten Fällen entspricht   Leistung von SIFT. Daher wurde es in vielen Anwendungen eingesetzt, insbesondere in Anwendungen, in denen die Laufzeitanforderungen hoch sind. 
+
+Der Verläuf einer SURF Merkmalserkennung ist wie flogend:
 
 $\bullet$ \textbf{Aufbau einer hessischen Matrix.}\\
 Die Hesse-Matrix stellt den Kern des SURF Algorithmus dar. Zur Vereinfachung der Operation wird die Funktion f (z, y) angenommen, dass die Hesse-Matrix H setzt sich aus Funktionen und partiellen Ableitungen zusammen:
@@ -123,7 +128,7 @@ Auf diese Weise hat jeder kleine Bereich 4 Werte, so dass jeder Merkmalspunkt ei
 
 \subsection{RANSAC}
 
-Nach SURF Merkmalserkennung wird die Merkmalspunkte von zwei benachbarten Bildern mit Verfahre z.B. \gls{ncc} übereinstimmt. Leider durch diese Verfahren gibt es noch viele fehlerhafte zusammenpassendes Paar. Deswegen wird \gls{ransac} eingeführt.
+Nach SURF Merkmalserkennung wird die Merkmal von zwei benachbarten Bildern bekommen. Diese Merkmale werden dann mit extrahiert und abgeglichen, um entsprechende Punkte in den benachbarten zwei Bildern zu erhalten. Leider darin durch diese Operation gibt es immer noch viele fehlerhafte zusammenpassendes Paar. Deswegen wird hier \gls{ransac} eingeführt, um die falschen Punkt zu beseitigen.
 
 RANSAC Algorithmus, der von Fischler und Bolles \cite{ransac1} vorgeschlagene im Jahr 1981, ist ein allgemeiner Parameterschätzungsansatz, um den großen Anteil von Ausreißern in den Eingabedaten zu bewältigen. Im Gegensatz zu vielen der üblichen robusten Schätzverfahren wie M-Schätzer und kleinsten Quadraten, die von der Computer Vision Community aus der Statistik-Literatur übernommen wurden, wurde RANSAC aus der Computer-Vision-Community entwickelt. 
 
@@ -161,7 +166,7 @@ Hier u stellen die Wahrscheinlichkeit dar, dass jeder ausgewählte Datenpunkt ei
    N = \frac{\log(1 - p)}{\log(1 - (1 - v)^m)}
 \end{equation}
 
-Abbildung 4.8 zeigt die passende Punkt durch SURF Merkmalserkennung. Es ist ersichtlich, dass es viele fehlerhafte Kombinationen gibt. Durch die Anwendung von RANSAC kann dieses Problem effektiv lösen und die übereinstimmendenPunkte verfeinern, wie in Abbildung 4.9 zeigt.
+Abbildung 4.8 zeigt die passende Punkt durch Merkmalübereinstimmung mit \gls{surf} Detektion. Es ist ersichtlich, dass es viele fehlerhafte Kombinationen gibt. Dagegen durch die Anwendung von RANSAC kann dieses Problem effektiv lösen und die übereinstimmendenPunkte verfeinern, die Ergebnisse wie in Abbildung 4.9 zeigt.
 
 \begin{figure}[H]
  \centering 
@@ -178,29 +183,29 @@ Abbildung 4.8 zeigt die passende Punkt durch SURF Merkmalserkennung. Es ist ersi
 \end{figure} 
 
 
-\subsection{Kamerakalibrierung}
+\subsection{Bilder Umwandlung}
 
-Wie in den ersten beiden Abschnitten vorgestellt, finde die übereinstimmende Punkte mit Verwenden des SURF in aufeinanderfolgenden Bildern, dann durch RANSAC lassen die Ausreißer verwerfen. Als nächstes soll die Kamera kalibriert werden, um die Punkte über den zwei Bildern in dasselbe Koordinatensystem konvertieren. In diesem Abschnitt wird zuerst das Kameramodell vorstellt.
+Wie in den vorliegend Abschnitten vorgestellt, mit Verwenden des SURF finden die übereinstimmende Punkte in aufeinanderfolgenden Bildern, anschließen durch RANSAC lassen die Ausreißer verwerfen. Das Ziel dieses Abschnitts besteht darin, das Bild in dasselbe Koordinatensystem zu konvertieren. Der erste Schritt ist, ein Kameramodell zu erstellen und dann darauf die Umwandlungsbeziehung zwischen den entsprechenden Punkten in den zwei Bilder erhalten, schließlich durch den Optimierungsalgorithmus, um die endgültige Transformationsmatrix zu bestimmen. Die verschiedenen Teile werden im Folgenden detailliert beschrieben.
 
-\textbf{Kamera Model}
+\textbf{Kamera Modell}
 
-Das Modell der Lochkamera ist in Abbildung 4.10 dargestellt. In dem Modell ist C das optische Zentrum (Fokus), f ist die Kamerabrennweite.
+Das Modell der Lochkamera ist in Abbildung \ref{fig:cameramodel} dargestellt. In dem Modell ist $O_C$ das optische Zentrum (Fokus), f ist die Kamerabrennweite.
 
 \begin{figure}[htb]
  \centering 
  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Kamera/cameramodel.pdf}
- \caption{Kamera Model}
+ \caption{Modell einer Lochkamera}
  \label{fig:cameramodel}
 \end{figure} 
 
 Die vier Koordinatensysteme im Modell sind wie folgt definiert:
 
 \begin{itemize}
-	\item 3D Weltkoordinatensystem $W(X,Y,Z)$ \\
-	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{X_w}\sim(X_w,Y_w,Z_w,1)^T$
-	\item 3D Kamerakoordinatensystem $C(X_c,Y_c,Z_c)$\\
-	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{X_c}\sim(X_c,Y_c,Z_c,1)^T$
-	\item 2D Bildabbildung Koordinatensystem $P(x,y)$\\
+	\item 3D Weltkoordinatensystem $P(X_W,Y_W,Z_W)$ \\
+	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{X_w}\sim(X_W,Y_W,Z_W,1)^T$
+	\item 3D Kamerakoordinatensystem $C(X_C,Y_C,Z_C)$\\
+	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{X_c}\sim(X_C,Y_C,Z_C,1)^T$
+	\item 2D Bildabbildung Koordinatensystem $p(x,y)$\\
 	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{x}\sim(x,y,1)^T$
 	\item 2D Bildpixel Koordinatensystem $I(u,v)$\\
 	Punktkoordinaten werden durch homogene Koordinaten dargestellt: $\widetilde{u}\sim(u,v,1)^T$
@@ -209,9 +214,9 @@ Die vier Koordinatensysteme im Modell sind wie folgt definiert:
 % note
 Unter diesem Modell wird ein 3D-Punkt im Weltkoordinatensystem durch drei Koordinaten den 2D-Bildpixelkoordinaten zugeordnet.
 
-(a). 3D-Weltkoordinatensystem zum 3D-Kamera-Koordinatensystem.
+(\textbf{1}). 3D-Weltkoordinatensystem zum 3D-Kamera-Koordinatensystem.
 
-Die Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem ist eine Starrekörpertransformation, d.h. das Objekt verformt sich nicht und nur durch Rotation und Parallelverschiebung. Diese Transformation wird in Abbildung 4.11 gezeigt. R bedeutet Rotationsmatrix und T ist Translationsmatrix.
+Die Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem ist eine Starrekörpertransformation, d.h. das Objekt verformt sich nicht und nur durch Rotation und Parallelverschiebung. Diese Transformation wird in Abbildung \ref{fig:WzuC} gezeigt. R bedeutet Rotationsmatrix und T ist Translationsmatrix.
 
 \begin{figure}[htb]
  \centering 
@@ -220,7 +225,7 @@ Die Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem ist ein
  \label{fig:WzuC}
 \end{figure} 
 
-Um die entsprechende Rotationsmatrix zu erhalten, wird verschiedene Winkel um verschiedene Koordinatenachsen gedreht. Ein simple Beispiel wird in Abbildung 4.12 gezeigt.
+Um die entsprechende Rotationsmatrix zu erhalten, wird verschiedene Winkel um verschiedene Koordinatenachsen gedreht. Ein simple Beispiel wird in Abbildung \ref{fig:rotation} gezeigt.
 
 \begin{figure}[H]
  \centering 
@@ -338,9 +343,9 @@ Im homogenen Koordinatensystem darstellt:
 	\end{bmatrix}
 \end{equation}
 
-(b). 3D-Kamera-Koordinatensystem zum 2D-Bildabbildung Koordinatensystem.
+(\textbf{2}). 3D-Kamera-Koordinatensystem zum 2D-Bildabbildung Koordinatensystem.
 
-Die Transformation vom Kamerakoordinatensystem zum Bildkoordinatensystem gehört zur perspektivischen Projektionsbeziehung von 3D zu 2D, wie zeigt in Abbildung 4.13.
+Die Transformation vom Kamerakoordinatensystem zum Bildkoordinatensystem gehört zur perspektivischen Projektionsbeziehung von 3D zu 2D, wie zeigt in Abbildung \ref{fig:Czuimage}.
 
 \begin{figure}[H]
  \centering 
@@ -387,18 +392,18 @@ Im homogenen Koordinatensystem darstellt:
 
 Zu dieser Zeit ist die Einheit des Projektionspunkts p noch nicht Pixel, sondern mm und muss weiter in das Pixelkoordinatensystem umgewandelt werden.
 
-(c). 2D-Bildabbildung Koordinatensystem zum 2D-Bildpixel Koordinatensystem.
+(\textbf{3}). 2D-Bildabbildung Koordinatensystem zum 2D-Bildpixel Koordinatensystem.
 
-Das Pixelkoordinatensystem und das Bildkoordinatensystem befinden sich alle auf der Abbildungsebene, aber die jeweiligen Ursprünge und Maßeinheiten sind unterschiedlich. Der Ursprung des Bildkoordinatensystems ist der Schnittpunkt der optischen Achse der Kamera und der Abbildungsebene, üblicherweise der Mittelpunkt der Abbildungsebene oder der Hauptpunkt. Die Einheit des Bildkoordinatensystems ist mm, die zu der physikalischen Einheit gehört, und die Einheit des Pixelkoordinatensystems ist Pixel. Wir beschreiben gewöhnlich, dass ein Pixel welche Zeilen und Spalten ist. So ist der Übergang zwischen den beiden wie folgt in Abbildung 4.14. 
+Das Pixelkoordinatensystem und das Bildkoordinatensystem befinden sich alle auf der Abbildungsebene, aber die jeweiligen Ursprünge und Maßeinheiten sind unterschiedlich. Der Ursprung des Bildkoordinatensystems ist der Schnittpunkt der optischen Achse der Kamera und der Abbildungsebene, üblicherweise der Mittelpunkt der Abbildungsebene oder der Hauptpunkt. Die Einheit des Bildkoordinatensystems ist mm, die zu der physikalischen Einheit gehört, und die Einheit des Pixelkoordinatensystems ist Pixel. Wir beschreiben gewöhnlich, dass ein Pixel welche Zeilen und Spalten ist. So ist der Übergang zwischen den beiden wie folgt in Abbildung \ref{fig:Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem}. 
 
-\begin{figure}[htb]
+\begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.6\textwidth]{images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf}
+ \includegraphics[keepaspectratio,width=0.5\textwidth]{images/4_ZweiteErfahrung/Kamera/imagezupixel.pdf}
  \caption{Konvertierung von Bildkoordinatensystem zu Pixelkoordinatensystem}
  \label{fig:Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem}
 \end{figure} 
 
-Hier dx, dy ist die Größe jedes Pixels in den X- und Y-Achsenrichtungen. Jedes Pixel des Bildes hat die folgende Beziehung 4.7 in zwei Koordinatensystemen.
+Hier dx, dy ist die Größe jedes Pixels in den X- und Y-Achsenrichtungen. Jedes Pixel des Bildes hat die folgende Beziehung zwischen den zwei Koordinatensystemen.
 
 \begin{equation}
    \begin{cases} 
@@ -425,7 +430,7 @@ Im homogenen Koordinatensystem darstellt:
 	\end{bmatrix}
 \end{equation}
 
-Das Bildkoordinatensystem ist eine zweidimensionale Ebene(Bildebene). Es ist in praktisch die Oberfläche des Kamera-CCD-Sensors. Jeder CCD-Sensor hat eine bestimmte Größe und eine bestimmte Auflösung. Diese beide bestimmt die Konvertierungsbeziehung. Eine simple Beispiel, eine Größe des CCD-Sensors ist $\SI{8}{\mm} \times \SI{6}{\mm}$ , die Auflösung dafür ist $640 \times 480$, dann die Beziehung zwischen mm und Pixel läuft $80~pixel/mm$. Lassen Sie die physikalische Größe jedes Pixels des CCD-Sensors $d_x \times d_y$ sein, entspricht läuft $d_x = d_y = \SI{1/80}{\mm}$.
+Es ist erwähnenswert, dass Bildkoordinatensystem ist eine zweidimensionale Ebene(Bildebene), in praktisch die Oberfläche des Kamera-CCD-Sensors ist. Jeder CCD-Sensor hat eine bestimmte Größe und eine bestimmte Auflösung. Diese beide bestimmt die Konvertierungsbeziehung. Geben eine simple Beispiel, eine Größe des CCD-Sensors ist $\SI{8}{\mm} \times \SI{6}{\mm}$ , die Auflösung dafür ist $640~pixels \times 480~pixels$, dann die Beziehung zwischen mm und Pixel läuft $80~pixel/mm$. Lassen Sie die physikalische Größe jedes Pixels des CCD-Sensors $d_x \times d_y$ sein, entspricht läuft $d_x = d_y = \SI{1/80}{\mm}$.
  
 Dann durch die Umwandlung der obigen vier Koordinatensysteme kann ein Punkt vom Weltkoordinatensystem zum Pixelkoordinatensystem erhalten.
 \begin{equation}
@@ -467,7 +472,7 @@ Dann durch die Umwandlung der obigen vier Koordinatensysteme kann ein Punkt vom 
 \end{split}	
 \end{equation}
 
-Die erste Matrix der rechten Gleichung ist die allgemein bekannt interne Referenz der Kamera. Dagegen ist die zweite Matrix die externe Referenz der Kamera. Beide Parameter der Kamera durch Zhang Zhengyou \cite{zhangzhengyou} Kalibrierung erhalten werden. Einige typisch Kamera Parameter von Manufaktur liegt in Tabellen 4.1.
+Die erste Matrix der rechten Gleichung ist die allgemein bekannt interne Referenz der Kamera. Dagegen ist die zweite Matrix die externe Referenz der Kamera. Beide Parameter der Kamera durch Zhang Zhengyou \cite{zhangzhengyou} Kalibrierung erhalten werden. Einige typisch Kamera Parameter von Manufaktur liegt in Tabellen \ref{tbl:params}.
 
 \begin{table}[htb]
 	\captionabove{Parameter des Kameras im Vergleich}
@@ -490,18 +495,20 @@ Die erste Matrix der rechten Gleichung ist die allgemein bekannt interne Referen
 \end{table} 
 
 
-Aus der obigen Formel wenn die internen und externen Parameter der Kamera bekannt sind, ist nämlich die Projektionsmatrix bekannt, und zu diesem Zeitpunkt können die entsprechenden Bildkoordinaten für jeden beliebigen räumlichen Punkt erhalten werden. Dagegen  wenn die Position m (u, v) in Bildkoordinate bekannt ist, und auch die Parameter innerhalb und außerhalb der Kamera bereits bekannt sind, kann die entsprechenden Punkt in Wert Koordinate nicht eindeutig bestimmt werden. Die Grund dafür ist, die $Z_c$ Information während des Projektionsprozesses eliminiert wird. 
 
-\textbf{Image Warping}
+Aus der obigen Formel wenn die internen und externen Parameter der Kamera bekannt sind, ist nämlich die Projektionsmatrix bekannt, und zu diesem Zeitpunkt können die entsprechenden Bildkoordinaten für jeden beliebigen räumlichen Punkt erhalten werden. Dagegen  wenn die Position $m(u,v)$ in Bildkoordinate bekannt ist, und auch die Parameter innerhalb und außerhalb der Kamera bereits bekannt sind, kann die entsprechenden Punkt in Wert Koordinate nicht eindeutig bestimmt werden. Die Grund dafür ist, die $Z_c$ Information während des Projektionsprozesses eliminiert wird. 
 
-In diese Arbeit wird zuerst eine vereinfachte Situation  betrachten, d.h. nur mit Rotations Einfluss. Abbildung 4.15 zeigt das 3D-Rotationsbewegungsmodell der Kamera. Die Position des optischen Zentrums ändert sich während der Kamerabewegung im Drehbewegungsmodell der Kamera nicht. Unter diesem Modell ist die Abbildungsbeziehung zwischen dem Punkt X im Weltkoordinatensystem und der Bildkoordinate x im homogenen Koordinatensystem dargestellt: 
+\textbf{Transformation Modelle}
+
+Als nächstes machen die Umwandlungsbeziehung zwischen den entsprechenden Punkten in den beiden Bilder.
+Zuerst wird in diese Arbeit eine vereinfachte Situation  betrachten, d.h. nur mit Rotations Einfluss. Abbildung \ref{fig:rotationsmodel} zeigt das 3D-Rotationsbewegungsmodell der Kamera. Darin die Position des optischen Zentrums ändert sich während der Kamerabewegung im Drehbewegungsmodell der Kamera nicht. Unter diesem Modell ist die Abbildungsbeziehung zwischen dem Punkt X im Weltkoordinatensystem und der Bildkoordinate x im homogenen Koordinatensystem dargestellt: 
 \begin{equation}
    x = KRX, X = \lambda  K^{-1} x
 \end{equation}
 
 Wobei: K ist der interne Parameter der Kamera, wie zuvor definiert. $\lambda$ ist der unbekannte Skalierungsfaktor, d.h. unter dem Kameramodell die Quelle der Bildpunktkoordinaten einem Strahl zugeordnet ist.
 
-\begin{figure}[htb]
+\begin{figure}[H]
  \centering 
  \includegraphics[keepaspectratio,width=0.5\textwidth]{images/4_ZweiteErfahrung/Kamera/rotationsmodel.pdf}
  \caption{Rotationsbewegungsmodell}
@@ -509,7 +516,7 @@ Wobei: K ist der interne Parameter der Kamera, wie zuvor definiert. $\lambda$ is
 \end{figure} 
 
 
-Herleiten nun die Beziehung zwischen Bildpunkten in einem Framepaar für zwei verschiedene Kameraausrichtungen (siehe Abbildung 4.15). Für einen Weltkoordinatepunkt X sind die projizierten Punkte $x_i$ und $x_j$ in der Bildebene von zwei Bildern i und j gegeben durch
+Herleiten nun die Beziehung zwischen Bildpunkten in einem Framepaar für zwei verschiedene Kameraausrichtungen (siehe Abbildung \ref{fig:rotationsmodel}). Für einen Weltkoordinatepunkt X sind die projizierten Punkte $x_i$ und $x_j$ in der Bildebene von zwei Bildern i und j gegeben durch
 \begin{equation}
    x_i = KR_iX, x_j = KR_jX
 \end{equation}
@@ -524,7 +531,7 @@ Bisher wird nur die Beziehung zwischen zwei Bildern desselben Videos betrachtet.
    W = KR'R^TK^{-1}
 \end{equation}
 
-Es wird hier angenommen, dass das erste Bild als Referenz genommen wird und der Rotationswinkel 0 ist. Dann die Gleichung kann vereinfacht werden:
+Es wird hier angenommen, dass das erste Bild als Referenz Bild nehmen und der Rotationswinkel 0 ist. Dann die Gleichung kann vereinfacht als:
 \begin{equation}
    W = KRK^{-1}
 \end{equation}
@@ -534,24 +541,8 @@ Kombiniert mit Formel 4.23 können es ausgedrückt als:
    x_j = Wx_i
 \end{equation}
 
-\textbf{Kalibrierung Optimierung}
+Diese Formel zeigt, dass jeder Punkt in dem Bild i nach der Transformationsmatrix W in einen entsprechenden Punkt in dem Bild j umgewandelt werden kann. Weiter in einem allgemeineren Fall, d.h. derzeit nicht nur mit Rotations Einfluss, sondern auch Translations Einfluss nehmen. Das Ableitungsverlauf ist im Allgemeinen gleich. Der Hauptunterschied ist Anzahl der Parametern, die von original nur 3 Rotationsparameter zur jetzt 6 Parameter einschließlich 3 Rotationsparameter und 3 Translationsparameter. Das neu Warping-Matrix darstellt wie folgen:
 
-In diesem Abschnitt wird die Parameter in der Warping-Matrix berechnt. Überprüfen die letzten beiden Abschnitte, mit Verwendung des SURF~\cite{Surf} die übereinstimmende Punkte in aufeinanderfolgenden Bilderrahme entdeckt werden dann durch RANSAC~\cite{ransac1}, Ausreißer verworfen werden. Das Ergebnis ist eine Menge von Punktkorrespondenzen $x_i$ und $x_j$ für alle benachbarten Bilder. Angesichts dieser Grundwahrheit kann man die Kalibrierung als ein Optimierungsproblem formulieren, wobei wir den Fehler bei der Mittelwertbildung im Quadrat aller Punktkorrespondenzen minimieren wollen:
-\begin{equation}
-   J = \sum_{(i,j)}\lVert x_j - Wx_i \rVert ^2
-\end{equation}
-
-Beachten, dass dies ein nichtlineares Optimierungsproblem ist. Einige nichtlinearer Optimierer könnte verwendet werden, um diese Zielfunktion zu minimieren. Jedoch ist es gefunden, dass Koordinatenabstieg durch direkte objektive Funktionsbewertung schnell konvergiert. Jedes Mal, wenn einen Schritt gemacht wird, bei dem die Zielfunktion J nicht abnimmt, kehren die Schrittrichtung um und verringern die Schrittweite des entsprechenden
-Parameter. Der Algorithmus endet, sobald die Schrittgröße für alle Parameter unter einen gewünschten Schwellenwert fällt (d.h. Wenn eine Zielgenauigkeit erreicht haben). Das Flussdiagramm des Algorithmus ist wie folgt:
-
-\begin{figure}[H]
- \centering 
- \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf}
- \caption{Flussdiagramm für Algorithmus}
- \label{fig:rotationsmodel}
-\end{figure} 
-
-Weiter in einem allgemeineren Fall, d.h. derzeit nicht nur mit Rotations Einfluss, sondern auch Translations Einfluss nehmen. Das Verlauf ist im Allgemeinen gleich. Der Hauptunterschied ist Anzahl der Parametern, die von original nur 3 Rotationsparameter zur jetzt 6 Parameter einschließlich 3 Rotationsparameter und 3 Translationsparameter. Das neu Warping-Matrix darstellt wie folgen:
 \begin{equation}
    W = \begin{bmatrix}
 	f			& 0 		& \frac{w}{2}	  & 0 \\
@@ -571,17 +562,51 @@ Weiter in einem allgemeineren Fall, d.h. derzeit nicht nur mit Rotations Einflus
 	\end{bmatrix}
 \end{equation}
 
-Dann durch Transformationsmatrix können die Koordinaten des zweiten Bildes in die Koordinaten des ersten Bildes umgewandelt werden. Abbildung 4.17 zeigt diese Verlauf. Die Ergebnisse der beiden experimentellen Fälle werden im nächsten Kapitel detailliert beschrieben. 
+\textbf{Transformation Optimierung}
+
+In den letzten beiden Abschnitten wurde die Transformationsmatrix zwischen den beiden Bilder aus dem Kameramodell abgeleitet. Hier in diesen Abschnitt werden die Parameter der Transformationsmatrix berechnet, also bestimmen das Transformationsmatrix. Hier sind die entsprechenden Punkte von zwei benachbarten Bildern $x_i, x_j$ bekannt, und die Umwandlungsbeziehung dazwischen wird als die Formel 4.26 gezeigt. Angesichts dieser Bedingung 
+kann die Berechnung des Transformationsmatrix als ein Optimierungsproblem formulieren, wobei den Fehler J bei der Mittelwertbildung im Quadrat aller Punktkorrespondenzen minimieren wollen:
+
+\begin{equation}
+   J = \sum_{(i,j)}\lVert x_j - Wx_i \rVert ^2
+\end{equation}
+
+Beachten, dass dies ein nichtlineares Optimierungsproblem ist. Einige nichtlinearer Optimierer könnte verwendet werden, um diese Zielfunktion zu minimieren. Jedoch ist es gefunden, dass Koordinatenabstieg durch direkte objektive Funktionsbewertung schnell konvergiert. Jedes Mal, wenn einen Schritt gemacht wird, bei dem die Zielfunktion J nicht abnimmt, kehren die Schrittrichtung um und verringern die Schrittweite des entsprechenden Parameter. Der Algorithmus endet, sobald die Schrittgröße für alle Parameter unter einen gewünschten Schwellenwert fällt (d.h. Wenn eine Zielgenauigkeit erreicht haben). 
+
+Der detaillierte Algorithmus ist wie folgt darstellt. Einige Definitionen werden hier einführen. $P_0$ heißt der Vektor, die Anfangswerte der Parameter speichert. Anschießen in den Vektor $d_p$ speichert die Schrittgröße jedes Parameters. $temp_dp$ ist der Vektor, in den die gewünschten Schwellenwert der Parameter speichert. D bedeutet die Anzahl der Unbekannter Parameter und W das Transformationsmatrix.
+
+1. Zuerst durch Anfangswert $P_0$ berechnen den anfänglich Fehler $J_0$.
+
+2. Verändern einen Parameter in einer entsprechenden Schrittrichtung mit entsprechenden Schrittgröße.
+
+3. Berechnen den neuen Fehler $J_new$.
+
+4. Vergleichen die beiden Fehler, ob der neu Fehler $J_new$ kleiner ist. Wenn Ja bestimmt, behalten diesen Wert und ändern des Objekt auf den nächsten Parameter. Kehren zum zweiten Schritt zurück. Dagegen kehren die Schrittrichtung um und verringern die Schrittgröße des Parameter auf ein Drittel des Originals. Ändern des Objekt auf den nächsten Parameter und kehren zum zweiten Schritt zurück.
+
+5. Wenn alles Schrittgröße in $d_p$ die zuvor festgelegter Schwellenwert erreicht, beenden das Algorithmus und geben den minimalen Fehler J und entsprechenden Transformationsmatrix aus.
+
+Das Flussdiagramm des Algorithmus ist wie in Abbildung \ref{fig:FlussdiagrammforOptimierung} darstellt.
+
+Dann durch Transformationsmatrix können die Koordinaten des zweiten Bildes in die Koordinaten des ersten Bildes umgewandelt werden. Abbildung \ref{fig:Transformation in eine Koordinate} zeigt diese Verlauf. Dann durch Subtraktion können die Differenzbild erhalten.
 
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf}
- \caption{Transformation in eine Koordinate}
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Kamera/Transformmatrix.pdf}
+ \caption{Transformation in desselben Koordinate}
  \label{fig:Transformation in eine Koordinate}
 \end{figure} 
 
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Kamera/flussdiagramm_for_parameter.pdf}
+ \caption{Flussdiagramm für Optimierung}
+ \label{fig:FlussdiagrammforOptimierung}
+\end{figure} 
+
+
+
 \section{Differenzbild Optimierung}
-Durch Bildregistration erhalten eine Reihe Bilder von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden. Die Ziel in diesem Abschnitt ist ein detektierendes Bilder herstellen, dadurch die QR Muster Detektion vereinfachen werden können. Auswälen je zwei Bilder und subtrahieren, um eine Reihe Differenzbildern zu enthälten. Es sollte hier beachtet werden, dass aufgrund der Zeitsynchronisation die QR Muster in diesen Differenzbilder die folgende Situation aufgetreten sein können. Nehmen an, dass es in der vertikalen Richtung ist.
+Durch Bildregistration erhalten eine Reihe Bilder von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden. Auswälen je zwei Bilder und subtrahieren, um eine Reihe Differenzbildern zu enthälten. Die Ziel in diesem Abschnitt ist von diese Differenzbildern ein detektierendes Bilder herstellen, dadurch die QR Muster Detektion vereinfachen werden können. Es sollte hier beachtet werden, dass aufgrund der Zeitsynchronisation die QR Muster in Differenzbilder einige unerwartete Situation aufgetreten sein können. Einige mögliche Formel der Differenzbilder wie folgend gezeigt. Nehmen an, dass es in der vertikalen Richtung ist.
 
 \begin{itemize}
 	\item total Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung.
@@ -592,17 +617,17 @@ Durch Bildregistration erhalten eine Reihe Bilder von der Kamera, deren Koordina
 	\item total nicht gezeigt.
 \end{itemize}
 
-Tabelle zeigt einige Beispiel.
+Tabelle \ref{tbl:differenzbildformel} zeigt solche Situation und aufgelistet, ob sie zu folgend Detektion angepasst sind.
 
 \begin{table}[htb]
-	\captionabove{einige Beispiel}
-	\label{tbl:params}
+	\captionabove{Die mögliche Differenzbilder}
+	\label{tbl:differenzbildformel}
 	\footnotesize
 	\centering
 	\rowcolors{2}{white}{gray!25}	%TUgreen!25
 	\begin{tabular}{|p{2cm}<{\centering}|c|p{2cm}<{\centering}|c|}	%p{}m{}b{}clr p{3cm} p{8cm}
 	\toprule
-	\textbf{Ob angepasst zu folgende Detektion?} & \multirow{4}{*}{\textbf{einige Beispiel}} & \textbf{Ob angepasst zu folgende Detektion?} & \multirow{4}{*}{\textbf{einige Beispiel}} \\
+	\textbf{Ob angepasst zu folgende Detektion?} & \multirow{4}{*}{\textbf{Differenzbild}} & \textbf{Ob angepasst zu folgende Detektion?} & \multirow{4}{*}{\textbf{Differenzbild}} \\
 	\midrule
 	 Ja & \includegraphics[scale=0.12]{images/4_ZweiteErfahrung/Differenzbild/0schwarz.pdf}& Nein & \includegraphics[scale=0.15]{images/4_ZweiteErfahrung/Differenzbild/1halfschwarz.pdf}\\
 	Nein & \includegraphics[scale=0.15]{images/4_ZweiteErfahrung/Differenzbild/2weis.pdf}& Nein & \includegraphics[scale=0.15]{images/4_ZweiteErfahrung/Differenzbild/3halfweis.pdf}\\
@@ -615,7 +640,7 @@ Tabelle zeigt einige Beispiel.
 
 Offensichtlich ist die direkte Verwendung dieser Differenzbilder ein kniffliges Problem für die nächste Detektion. Um dieses Problem zu lösen, wurde ein Algorithmus zur Optimierung der Differenzbilder entwickelt.
 
-Der Struktur eines QR Musters zeigt in Formel 4.29. Die äußerste "1" Schicht ist eine Trennmuster und die Zentralbereich bedeutet das QR Muster. Aufgrund der Modulationseigenschaften des \gls{david} Systems wird nur Element "1" nach Modulation offensichtlich verändert. Im Vergleich dazu werden die Element "0" nur klein verändert. Deswegen durch eine Absolutwertoperation, werden die QR Muster als Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung darstellt. Dies ist die erwartende Modellstruktur, die in nächster Schritt operieren werden. Der detailliertes Operieren wird in Abschnitt "QR Muster Detektion" gegeben.
+Der Struktur eines QR Musters zeigt in Formel 4.29. Die äußerste $``1"$ Schicht ist hier eine Trennmuster und die Zentralbereich bedeutet das QR Muster. Aufgrund der Modulationseigenschaften des \gls{david} Systems wird nur die Pixelwert des Punkts mit Element $``1"$ nach Modulation offensichtlich verändert. Im Vergleich dazu werden die Pixelwert des Punkts mit Element $``0"$ nur klein verändert. Deswegen durch eine Absolutwertoperation, werden die QR Muster als Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung darstellt. Dies ist die erwartende Modellstruktur, die in nächster Schritt operieren werden. Der detailliertes Operieren wird in Abschnitt "QR Muster Detektion" gegeben.
 
 \begin{equation}
 QR_{base} = \begin{bmatrix}
@@ -631,25 +656,24 @@ QR_{base} = \begin{bmatrix}
 \end{bmatrix}
 \end{equation}
 
-Als nächstes werden ein Begriff $``Energie"$ vorstellen. Die auf numerischer Ebene bedeutet den Mittelwert der quadrierten Elemente des Bildes. Es ist bekannt sein, dass aufgrund der Subtraktion die Pixelwerte in das Gebiet, welches rund um die Modulationsbereich legt, gegeneinander aufgehoben werden. Deswegen in dieses Gebiet die Pixelwerte werden nur von Rausch beeinflusst und sehr klein sein werden. Im Vergleich dazu beträgt die Pixelwerte im Modulationbereich ein relativ größer Wert $\pm2A$, hier A beutet die Modulationsamplitude des Systems. Überlegen die Einfluss von Zeitsynchronisation, indem die Pixelwerte in einigem Teile der Modulationsbereich werden aufgrund Synchronisation auch ausgeglichen, nämlich die $``Energie"$ aufgehoben werden. Dann nehmen eine Regelmäßigkeit, die Größe der $``Energie"$ hängt hauptsächlich von die Pixelwerte im Modulationsbereich. Je größer die Pixelwerte sind, je höher der $``Energie"$ des Bildes ist, und je klarer das QR Muster werden. Gemäß dieser Regel berechnen die $``Energie"$ jedes Differenzbildes und anordnen in absteigender Reihenfolge. Um die folgende Detektion zu vereinfachen, fügen die ersten paar Bilder hinzu und erhalten einen zu detektierende Bilder. Die Praxis hat bewiesen, dass es ausreicht, die ersten drei Bilder zu nehmen.
+Als nächstes werden ein Begriff $``Energie"$ vorstellen. Die auf numerischer Ebene bedeutet den Mittelwert des quadrierten Pixels des Bildes. Es ist bekannt sein, dass aufgrund der Subtraktion die Pixelwerte in das Gebiet, welches rund um die Modulationsbereich legt, gegeneinander aufgehoben werden. Deswegen in dieses Gebiet die Pixelwerte werden nur von Rausch beeinflusst und sehr klein sein werden. Im Vergleich dazu beträgt die Pixelwerte im Modulationbereich ein relativ größer Wert $\pm2A$, hier A beutet die Modulationsamplitude des Systems. Überlegen die Einfluss von Zeitsynchronisation, indem die Pixelwerte in einigem Teile der Modulationsbereich werden aufgrund Synchronisation auch ausgeglichen, nämlich die $``Energie"$ aufgehoben werden. Dann nehmen eine Regelmäßigkeit, die Größe der $``Energie"$ hängt hauptsächlich von die Pixelwerte im Modulationsbereich. Je größer die Pixelwerte sind, je höher der $``Energie"$ des Bildes ist, und je klarer das QR Muster werden. Gemäß dieser Regel berechnen die $``Energie"$ jedes Differenzbildes und anordnen in absteigender Reihenfolge. Um die folgende Detektion zu vereinfachen, fügen die ersten paar Bilder hinzu und erhalten einen zu detektierende Bilder. Die Praxis hat bewiesen, dass es ausreicht, die ersten drei Bilder zu nehmen.
 
 Die Formel der $``Energie"$ wird in Gleichung 4.30 darstellt. Hier m,n repräsentiert die Anzahl der Zeilen und Spalten der Matrix. $diff(i,j)$ bedeutet die Pixelwert des Punkts in der m-ten Zeile die n-te Spalte der Matrix.
 
 \begin{equation}
-Energie = \frac{1}{m \times n} \sum_{i=1}^m \sum_{j=1}^n diff^2(i,j) \end{equation}
+Energie = \frac{1}{m \times n} \sum_{i=1}^m \sum_{j=1}^n diff^2(i,j) 
+\end{equation}
 
- 
-
-Hier in dieser Arbeit wird eine einfach Differenzbild Algorithmus vorstellen, wie folgen darstellt:
+Als folgend legt die detailliert Schritt dieses Algorithmus-
 
 \begin{enumerate}
 	\item Wähle zwei beliebige Bilder aus und subtrahiere, um Differenzbild zu enthalten.
-	\item Nehmen eine Absolutoperation für jedes Differenzbild und berechnen dessen Energie. Um den Berechnungsaufwand zu reduzieren, kann nur der zentrale Bereich berechnet werden.
+	\item Nehmen eine Absolutoperation für jedes Differenzbild und berechnen dessen Energie. 
 	\item Sortiere in absteigender Reihenfolge und nehmen die erste 3 Differenzbildern.
 	\item Addieren diese 3 Differenzbildern, um eine detektierend Bild zu erhalten.
 \end{enumerate}
 
-Das Flussdiagramm wird in Abbildung gezeigt.
+Das Flussdiagramm wird in Abbildung \ref{fig:DifferenzbildFlussigdiagramm} gezeigt.
 \begin{figure}[H]
  \centering 
  \includegraphics[keepaspectratio,width=0.9\textwidth]{images/4_ZweiteErfahrung/Differenzbild/Differenzbildflussigdiagramm.pdf}
@@ -657,13 +681,13 @@ Das Flussdiagramm wird in Abbildung gezeigt.
  \label{fig:DifferenzbildFlussigdiagramm}
 \end{figure} 
 
-Eine Beispiel für detektierendes Bild wird in Abbildung 4.18 gezeigt. Durch die Optimierung kann die QR Muster an der Eck des Bildes einfachen detektiert werden.
+Eine Beispiel für detektierendes Bild wird in Abbildung \ref{fig:EindetektierendesBild} gezeigt. Aus der Abbildung ist ersichtlich, dass der Modulationsbereich besser dargestellt ist und an den vier Eck des Bereichs ein eindeutiges QR Muster vorhanden ist. Als nächstes werden die Bildverarbeitung einführen.
 
 \begin{figure}[H]
  \centering 
  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/Differenzbild/diffplus.pdf}
- \caption{Differenzbild Beispiel}
- \label{fig:Differenzbild}
+ \caption{Ein detektierendes Bild}
+ \label{fig:EindetektierendesBild}
 \end{figure} 
 
 
@@ -684,7 +708,7 @@ Mit öffnenden und schließenden Filtern können die Lücken zwischen Blöcken u
 
 \section{QR Musters Detektion} 
 
-Nach Bildverarbeitung wird nun die QR Musters Detektion ausgeführt. Die Ziel einer QR Musters Detektion ist die Zentrum des Musters im Bild zu lokalisieren und dadurch die Bild zu rekonstruieren. Abbildung 4.20 zeigt eine geometrische Struktur des QR Musters. An jedem Ecke der Modulartionsbereiche gibt es eine solche QR Muster.
+Nach Bildverarbeitung wird nun die QR Musters Detektion ausgeführt. Die Ziel einer QR Musters Detektion ist die Zentrum des Musters im Bild zu lokalisieren und dadurch die Bild zu rekonstruieren. Abbildung \ref{fig:QRPattern} zeigt eine geometrische Struktur des QR Musters. An jedem Ecke der Modulartionsbereiche gibt es eine solche QR Muster.
 
 \begin{figure}[H]
  \centering 
@@ -693,7 +717,7 @@ Nach Bildverarbeitung wird nun die QR Musters Detektion ausgeführt. Die Ziel ei
  \label{fig:QRPattern}
 \end{figure}
 
-Aus der geometrischen Sicht kann jedes Muster als drei konzentrische Quadrate betrachtet werden und besteht aus eine schwarzen (dunklen) $7 \times 7$ Modulen, eine weißen (hellen) $5 \times 5$ Modulen und schließlich eine dunklen $3 \times 3$ Modulen. Von Kenntnisse der Geometrie können bekannt sein, in jeder Richtung das Breiteverhältnis der alternativen Schwarz- und Weißmodul in einem Muster eine Bieziehnung $1:1:3:1:1$ beträgt, wie es in Abbildung 4.21 zeigt. Diese wichtige Eigenschaft hilft uns, die Lokalität der QR Muster zu finden. In der Praxis rund um die Muster gibt es noch ein Trennmuster, das ein Funktionsmuster mit aller weißen (hellen) Module(Breit ein Modul). Es spielt eine Rolle als eine Grenze zwischen den Mustern und dem Datenbereich, um die Verwechslungen zwischen Muster und Daten zu vermeiden.
+Aus der geometrischen Sicht kann jedes Muster als drei konzentrische Quadrate betrachtet werden und besteht aus eine schwarzen (dunklen) $7 \times 7$ Modulen, eine weißen (hellen) $5 \times 5$ Modulen und schließlich eine dunklen $3 \times 3$ Modulen. Von Kenntnisse der Geometrie können bekannt sein, in jeder Richtung das Breiteverhältnis der alternativen Schwarz- und Weißmodul in einem Muster eine Bieziehnung $1:1:3:1:1$ beträgt, wie es in Abbildung \ref{fig:QRPatternRatio} zeigt. Diese wichtige Eigenschaft hilft uns, die Lokalität der QR Muster zu finden. In der Praxis rund um die Muster gibt es noch ein Trennmuster, das ein Funktionsmuster mit aller weißen (hellen) Module(Breit ein Modul). Es spielt eine Rolle als eine Grenze zwischen den Mustern und dem Datenbereich, um die Verwechslungen zwischen Muster und Daten zu vermeiden.
  
  \begin{figure}[H]
  \centering 
@@ -729,13 +753,13 @@ Verarbeiten die Ausgabe des vorherigen Schritts, falls es nicht nur eine potenti
 Durch die gefunden Muster Zentren, machen eine projective Transformation, un die Ecke des Bildes zu bestimmen.
 
 
-Die folgende Abbildung 4.22 zeigt die Flussdiagramm einer Detektion für QR Muster.
+Die folgende Abbildung \ref{fig:FlussdiagrammQRMuster} zeigt die Flussdiagramm einer Detektion für QR Muster.
 
-\begin{figure}[H]
+\begin{figure}[htb]
  \centering 
- \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/QRMuster/QR_flussdiagramm.pdf}
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{images/4_ZweiteErfahrung/QRMuster/QR_flussdiagramm.pdf}
  \caption{Flussdiagramm der QR Muster Detektion}
- \label{fig:Flussdiagramm der Methode}
+ \label{fig:FlussdiagrammQRMuster}
 \end{figure}
 
 Einige Beipiel für QR Muster Detektion zeigt in Abbildung:
