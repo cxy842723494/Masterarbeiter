@@ -58,8 +58,8 @@ for i=1:2:nbFrames
     dataMatrixU = imresize(dataMatrixU, blocksize, 'Nearest');
     dataMatrixV = imresize(dataMatrixV, blocksize, 'Nearest');
      %% add qr patternm in u/v
-     dataMatrixU = addQrFinderPattern(dataMatrixU, qrPatternSize);
-     dataMatrixV = addQrFinderPattern(dataMatrixV, qrPatternSize);
+%      dataMatrixU = addQrFinderPattern(dataMatrixU, qrPatternSize);
+%      dataMatrixV = addQrFinderPattern(dataMatrixV, qrPatternSize);
      
     Trgb2yuv = [0.2126 0.7152 0.0722; -0.1146 -0.3854 0.5000; 0.5000 -0.4542 -0.0458]; % BT.709
     Tyuv2rgb = inv(Trgb2yuv);
@@ -77,7 +77,8 @@ for i=1:2:nbFrames
    currentFrames(:,:,:,1) = currentFrames(:,:,:,1) + dataMatrix/255;
    currentFrames(:,:,:,2) = currentFrames(:,:,:,2) - dataMatrix/255;
 %    figure, imshowpair(currentFrames(:,:,:,1),currentFrames(:,:,:,2),'montag')
-   
+%    figure,imshow(currentFrames(:,:,:,1));
+%    figure,imshow(currentFrames(:,:,:,2));
    % Save in new file
    for i2=1:2
         writeVideo(vMod,uint8(255*currentFrames(:,:,:,i2)));

@@ -19,7 +19,7 @@ hblocks = 1920/8;
 
 % einzelbilder
 % diffc_r = gather(conv2([1 2 1]/2,[1 2 1]/2, yuv(1).U ,'same'));
-cr = estimateModCorners(diffc_r,760/100,7,10);
+cr = estimateModCorners(diffc_r,50/100,7,10);
 figure, imshow(diffc_r);
 
 % differenzbilder
@@ -35,7 +35,7 @@ y(1:2) = y(i);
 y(3:4) = y(5-i);
 
 % einzelbilder
-figure, imshow(yuv(1).Y,[])
+figure, imshow(yuv(1).U,[])
 
 % differenzbilder
 %figure, imshow(diff(:,:,1),[])
