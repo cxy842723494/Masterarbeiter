@@ -1,4 +1,4 @@
-\chapter{Zweite Method} \label{cha:ZweiteMethod}
+\chapter{Zweite Methode} \label{cha:ZweiteMethode}
 
 In diesem Kapitel werden die erste Erfahrung beschrieben. Zuerst läuft die Vorstellung des DaVid-Systems. Die Systemmodell und Arbeitsprinzip des Systems werden in anschließenden Abschnitt erläutert. Schließlich folgt die mögliche Anwendungsgebiete des Systems.
 
@@ -9,19 +9,60 @@ Nicht vergessen, dass Überschriften nicht aufeinander folgen dürfen\ldots
 
 \section{Binariesierung}
 
+\textbf{Grundlegende globale Schwelle Methode}
+
+Wenn die Histogrammspitzen und -täler des Bildes offensichtlich sind und Doppelpeaks aufweisen, ist die Wirkung dieserMethode besser. Es basiert auf der visuellen Überprüfung des Histogramms und der Schwellenwert wird durch eine iterative Methode erhalten. Die grundlegende Algorithmus ist wie folgt:
+
+1. Wählen eine Paramenter t und einen anfänglichen Schwellenwert $ T_{0} $ aus, wobei der Durchschnitt der maximalen Grauwerte $ l_{max} $ und minimalen Grauwerte  $ l_{max} $ verwendet wird. $ T_{0} = (l_{max}+l_{max})/2 $
+
+2. Segmentieren das Bild mit dem Schwellenwert $ T_{0} $. Dann das Bild besteht aus zwei Teilen: $ G_{1} $ besteht aus die Pixeln mit deren Grauwert größer als $ T_{0} $ und dargegen $ G_{2} $ deren Grauwert kleiner oder gleich als $ T_{0} $.
+
+3. Berechnen den durchschnittlichen Grauwert aller Pixeln in $ u_{1} $ und $ u_{2} $ und den neue Schwellenwert $ T_{1} = (u_{1}+u_{2})/2 $.
+
+4. Falls $ |T_{0} - T_{1}| < t $, dann nehmen $ T_{1} $ als optimalen Schwellenwert. Andernfalls weisen $ T_{1} $ zu $ T_{0} $und wiederholen die Schritte $ 2\sim4 $, bis der optimale Schwellenwert erhalten ist.
+
 \textbf{Grundlegende adaptive Schwellenwert Binarisierungsmethode}
 
 Ein Bildgebungsfaktor ungleichmäßiger Helligkeit bewirkt, dass ein Histogramm, das ansonsten für eine effiziente Segmentierung geeignet wäre, ein Histogramm wird, das nicht effektiv mit einem einzigen globalen Schwellenwert segmentiert werden kann.
 
+Ein Verfahren zur Verarbeitung besteht darin, das Bild weiter in Unterbilder zu unterteilen, um unterschiedliche Unterbilder mit unterschiedlichen Schwellenwerten zu segmentieren. Diese Methode wird als grundlegende adaptive Schwellenwert-Binarisierungsmethode bezeichnet. Das Hauptproblem bei diesem Ansatz besteht darin, das Bild zu unterteilen und den Schwellenwert für das resultierende Teilbild abzuschätzen. Da die Schwelle für jedes Pixel von dem Pixel in der Untergruppe abhängt, die Position im Bild, also solche Schwellen sind adaptiv. 
+
+Ein Verfahren zum Unterteilen von Unterbildern wird für das Bild übernommen. Hier werden drei Arten von Unterteilungsverfahren ausgewählt, und Unterbildermit einer Größe von $ 32\times32,4 \times4,16\times16 $ Pixelwerden jeweils geteilt, und die durchschnittliche Graustufe der Unterbilder wirdals ein Schwellenwert für die Binärisierung ausgewählt.
+
 
 \textbf{OTSU adaptive Schwelle Methode}
 
-OTSU, auch bekannt als die maximale Interklassenvarianz, wurde 1979 vom japanischen Gelehrten Otsu vorgeschlagen und ist eine adaptive Schwellenwertbestimmungsmethode, die auch als Otsu bekannt ist.
+OTSU\cite{Ostu}, auch bekannt als die maximale Interklassenvarianz, wurde 1979 vom japanischen Gelehrten Otsu vorgeschlagen und ist eine adaptive Schwellenwertbestimmungsmethode, die auch als Otsu bekannt ist.
 
-Die Grundidee des Otsu-Algorithmus ist: Für das Bild stellt das T die Segmentierungsschwellenwert zwischen Vordergrund und des Hintergrund dar. Die Anzahl der Vordergrundpunkte ist W0, der durchschnittliche Grauwert ist U0, dagegen die Anzahl der Hintergrundpunkte ist W1 und der durchschnittliche Grauwert ist U1. Dann ist das gesamte durchschnittliche Grauwert des Bildes:
+Die Grundidee des Otsu-Algorithmus ist: Verwenden das Histogramm des Bildes, gemäß der Varianz zwischen dem Vordergrund und dem Hintergrund, um den optimalen Schwellenwert dynamisch zu bestimmen. Setze die Anzahl der Pixeln in einen Bilden ist N, die Graustufe ist $ L(0,1,...,L-1) $. Die Anzahl der Pixeln mit dem Grauswert i ist $ n_{i} $, dann die Wahrscheinlichkeit von i läuft $ P_{i} = \frac{n_{i}}{N} $. Für das Bild stellt das T die Segmentierungsschwellenwert zwischen Vordergrund und des Hintergrund dar. Vordergrund entsprecht die Grauswerte von 0 zu $ T-1 $, dagegen Hintergrund die Grauswerte von T zu $ L -1 $.
 
+Die Wahrscheinlichkeit der Vordergrundgebiet W0 und der durchschnittliche Grauwert U0 sind
 
+\begin{equation}
+  w_{0} = \sum_{i=0}^{T-1} p_{i},\quad u_{0} = \sum_{i=0}^{T-1} ip_{i}/w_{0}
+\end{equation}
 
+dagegen die Wahrscheinlichkeit der Hintergrundpunkte W1 und der durchschnittliche Grauwert U1 sind
+
+\begin{equation}
+  w_{1} = \sum_{i=T}^{L-1} p_{i} = 1-w_{0},\quad u_{1} = \sum_{i=T}^{L-1} ip_{i}/w_{1}
+\end{equation}
+
+Dann das gesamte durchschnittliche Grauwert des Bildes ist
+
+\begin{equation}
+• u = w_{0}u_{0} + w_{1}u_{1}
+\end{equation}
+
+Die Infra-Klassen-Varianz ist definiert als
+
+\begin{equation}
+•\sigma^2 = w_{0}(u_{0} - u)^2 + w_{1}(u_{1} - u)^2 = w_{0}w_{1}(u_{0} - u_{1})^2
+\end{equation}
+
+Nehmen Schwellenwert T von 0 zu $ L-1 $. Wenn $ sigma^2 $ Maximum ist, wählen der entsprechende T als der optimale Schwellenwert aus.
+
+Die Ostu-Methode verwendet Grauswert Histogramm zur Bestimmen des Schwellenwerts. Es ist eine automatisch non-parametrische Schwellenauswahlmethode. Diese Methode ist einfach zu berechnen, und wird nicht von der Kontrast- und Helligkeitsänderung unter bestimmten Bedingungen beeinflusst und kann das Objekt zufriedenstellend vom Hintergrundbereich trennen.
 
 
 

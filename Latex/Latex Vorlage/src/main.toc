@@ -19,19 +19,19 @@
 \contentsline {section}{\numberline {3.3}Differenzbild Optimierung}{33}{section.3.3}
 \contentsline {section}{\numberline {3.4}Bildverarbeitung}{36}{section.3.4}
 \contentsline {section}{\numberline {3.5}QR Musters Detektion}{37}{section.3.5}
-\contentsline {chapter}{\numberline {4}Zweite Method}{41}{chapter.4}
+\contentsline {chapter}{\numberline {4}Zweite Methode}{41}{chapter.4}
 \contentsline {section}{\numberline {4.1}Allgemeine Struktur}{41}{section.4.1}
 \contentsline {section}{\numberline {4.2}Binariesierung}{41}{section.4.2}
-\contentsline {section}{\numberline {4.3}Morphologie}{41}{section.4.3}
-\contentsline {section}{\numberline {4.4}Canny detection}{41}{section.4.4}
-\contentsline {section}{\numberline {4.5}Hough detection}{41}{section.4.5}
-\contentsline {chapter}{\numberline {5}Auswertung}{42}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section}{42}{section.5.1}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section}{43}{section.6.1}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{44}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{44}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{46}{chapter*.32}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{47}{chapter*.33}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{48}{chapter*.34}
-\contentsline {chapter}{\nonumberline Literatur}{49}{chapter*.35}
+\contentsline {section}{\numberline {4.3}Morphologie}{43}{section.4.3}
+\contentsline {section}{\numberline {4.4}Canny detection}{43}{section.4.4}
+\contentsline {section}{\numberline {4.5}Hough detection}{43}{section.4.5}
+\contentsline {chapter}{\numberline {5}Auswertung}{44}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section}{44}{section.5.1}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section}{45}{section.6.1}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{46}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{46}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{48}{chapter*.32}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{49}{chapter*.33}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{50}{chapter*.34}
+\contentsline {chapter}{\nonumberline Literatur}{51}{chapter*.35}

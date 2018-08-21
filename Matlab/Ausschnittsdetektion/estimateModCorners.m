@@ -17,7 +17,9 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     selectf2 = imopen(imclose(select,ones(grain)),ones(grain));
     figure,imshow(selectf2),title('selectf2');
     edges = edge(selectf2); % Sobel edge detection
-    figure,imshow(edges),title('edges');
+    figure,imshow(edges),title('sobel');
+    edgec = edge(selectf2,'canny'); % Sobel edge detection
+    figure,imshow(edges),title('canny');
     %% Hough transform
     % We want to get the boundaries of the modulated rectangle as lines. To
     % do that, we must detect edges residing on a straight line through the

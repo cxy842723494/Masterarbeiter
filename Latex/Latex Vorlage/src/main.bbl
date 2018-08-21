@@ -149,36 +149,6 @@
       \endverb
       \keyw{television displays;video cameras;visible light communication;TV displays;video cameras;VLC;radio frequency communication;wireless short range link;standard IEEE 802.15.7;multiparallel transmission;Modulation;Cameras;Optical transmitters;Light emitting diodes;TV;Lighting;Radio transmitters}
     \endentry
-    \entry{lin1973}{article}{}
-      \name{author}{2}{}{%
-        {{hash=ee5ad1086dab61efed0851b6802d25e4}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={Shen},
-           giveni={S\bibinitperiod}}}%
-        {{hash=1052228cbdc74ef71d9c24c30ddc01ef}{%
-           family={Kernighan},
-           familyi={K\bibinitperiod},
-           given={Brian\bibnamedelima W.},
-           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \strng{namehash}{8dbb7ca376d9c40a1b134cdb0104f283}
-      \strng{fullhash}{8dbb7ca376d9c40a1b134cdb0104f283}
-      \strng{bibnamehash}{8dbb7ca376d9c40a1b134cdb0104f283}
-      \strng{authorbibnamehash}{8dbb7ca376d9c40a1b134cdb0104f283}
-      \strng{authornamehash}{8dbb7ca376d9c40a1b134cdb0104f283}
-      \strng{authorfullhash}{8dbb7ca376d9c40a1b134cdb0104f283}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Operations Research}
-      \field{title}{An Effective Heuristic Algorithm for the Travelling-Salesman Problem}
-      \field{volume}{21}
-      \field{year}{1973}
-      \field{pages}{498\bibrangedash 516}
-      \range{pages}{19}
-    \endentry
     \entry{Surf}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=f29476d21dba36576a275921245f7b52}{%
@@ -208,8 +178,8 @@
       \strng{authorbibnamehash}{4e255173d811465ee40ce3537c5d6c27}
       \strng{authornamehash}{d0078c61ec8e77311ede269a1a503d56}
       \strng{authorfullhash}{4e255173d811465ee40ce3537c5d6c27}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer Vision and Image Understanding (CVIU)}
@@ -294,6 +264,38 @@
       \field{pages}{1330\bibrangedash 1334}
       \range{pages}{5}
     \endentry
+    \entry{Ostu}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4531dc3ea86ad7c21ff2c751725cbf58}{%
+           family={Otsu},
+           familyi={O\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{4531dc3ea86ad7c21ff2c751725cbf58}
+      \strng{fullhash}{4531dc3ea86ad7c21ff2c751725cbf58}
+      \strng{bibnamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
+      \strng{authorbibnamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
+      \strng{authornamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
+      \strng{authorfullhash}{4531dc3ea86ad7c21ff2c751725cbf58}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0018-9472}
+      \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{A Threshold Selection Method from Gray-Level Histograms}
+      \field{volume}{9}
+      \field{year}{1979}
+      \field{pages}{62\bibrangedash 66}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/TSMC.1979.4310076
+      \endverb
+      \keyw{Histograms;Marine vehicles;Radar tracking;Least squares approximation;Surveillance;Target tracking;Gaussian distribution;Displays;Q measurement;Sea measurements}
+    \endentry
     \entry{Reinhold:2013fk}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=50a8a405c48231b9d7a7928f463170cf}{%
@@ -313,8 +315,8 @@
       \strng{authorbibnamehash}{7c3ed3daacd1422e2b72547e54c30980}
       \strng{authornamehash}{7c3ed3daacd1422e2b72547e54c30980}
       \strng{authorfullhash}{7c3ed3daacd1422e2b72547e54c30980}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2013 IFIP Wireless Days (WD)}
@@ -350,8 +352,8 @@
       \strng{authorbibnamehash}{d9e178cc01874be6cb8e994e2a250982}
       \strng{authornamehash}{d9e178cc01874be6cb8e994e2a250982}
       \strng{authorfullhash}{d9e178cc01874be6cb8e994e2a250982}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -370,8 +372,8 @@
       \list{publisher}{1}{%
         {IEEE}%
       }
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labeltitlesource}{title}
       \field{abstract}{The protocol and compatible interconnection for data communication devices using low data-rate, low-power, and low-complexity short-range radio frequency (RF) transmissions in a wire less personal area network (WPAN) were defined in IEEE Std 802.15.4-2006. In this revision, the market applicability of IEEE Std 802.15.4 is extended, the ambiguities in the standard are removed, and the improvements learned from implementations of IEEE Std 802.15.4-2006 are included.}
       \field{isbn}{9780738166834}

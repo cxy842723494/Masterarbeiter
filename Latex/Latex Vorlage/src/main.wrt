@@ -69,34 +69,34 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.22}{\ignorespaces QR Pattern\relax }}{37}{figure.caption.29}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.23}{\ignorespaces QR Pattern Ratio\relax }}{38}{figure.caption.30}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 3.24}{\ignorespaces Flussdiagramm der QR Muster Detektion\relax }}{40}{figure.caption.31}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Zweite Method}{41}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Zweite Methode}{41}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{41}{section.4.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Binariesierung}{41}{section.4.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Morphologie}{41}{section.4.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Canny detection}{41}{section.4.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Hough detection}{41}{section.4.5}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{42}{chapter.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Morphologie}{43}{section.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Canny detection}{43}{section.4.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Hough detection}{43}{section.4.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{44}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{42}{section.5.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{43}{chapter.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{44}{section.5.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{45}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{43}{section.6.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{44}{appendix.A}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{45}{section.6.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{46}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{44}{section.A.1}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{46}{chapter*.32}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{47}{chapter*.33}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{48}{chapter*.34}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{49}{chapter*.35}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{46}{section.A.1}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{48}{chapter*.32}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{49}{chapter*.33}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{50}{chapter*.34}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{51}{chapter*.35}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}

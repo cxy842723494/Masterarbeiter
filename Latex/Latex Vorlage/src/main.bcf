@@ -1985,9 +1985,10 @@
     <bcf:citekey order="5">ransac1</bcf:citekey>
     <bcf:citekey order="6">ransac1</bcf:citekey>
     <bcf:citekey order="7">zhangzhengyou</bcf:citekey>
-    <bcf:citekey order="8">Reinhold:2013fk</bcf:citekey>
-    <bcf:citekey order="8">Moon</bcf:citekey>
-    <bcf:citekey order="8">IEEE2011</bcf:citekey>
+    <bcf:citekey order="8">Ostu</bcf:citekey>
+    <bcf:citekey order="9">Reinhold:2013fk</bcf:citekey>
+    <bcf:citekey order="9">Moon</bcf:citekey>
+    <bcf:citekey order="9">IEEE2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
