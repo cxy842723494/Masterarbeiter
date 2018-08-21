@@ -6,6 +6,7 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     select = abs(im)>std(double(im(:)))*threshold;
 %    select = AdaptiveThreshold(im, 15, 15);
     figure,imshow(select),title('select');
+    level = graythresh()
     %% Use morphological filters to eliminate spurious holes and points
     % Transitions leave gaps between blocks, whereas noise causes small
     % spots outside the modulated area to cross the threshold. Using
