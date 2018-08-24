@@ -1,0 +1,6 @@
+I1 = imread('IMG_0348.jpg');
+
+I1 = rgb2gray(I1);
+imgc = edge(I1,'Canny',[0.0 0.6]);
+
+figure, imshow(img1);

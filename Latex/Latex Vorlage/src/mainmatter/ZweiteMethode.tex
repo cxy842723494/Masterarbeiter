@@ -184,8 +184,75 @@ Die Grenze des geschlossenen Objekts sind die Punkte, dass Strukturelement B, di
 
 \section{Canny detection}
 
+Jetzt können wir ein Binärbild erhalten, das grob in zwei Teile geteilt werden kann, einen Modulationsbereich mit Pixelwert 1 im mittleren und einen umgibt Hintergrundbereich mit Pixelwert 0. Um die nächste Linie Detektion zu implementieren. Machen eine Kanten Detektion, weil Kanten oft mit den Grenzen von Objekten in einer Szene verknüpft werden. Hier ist es die Grenze zwischen Modulationsbereich und Hintergrundbereich. \cite{canny}
 
+Es gibt immer einige gut Kantenextraktionmethod, wie Sobel, Canny, Laplacian, Prewitt, Roberts usw. Hier in dieser Abreit wird die leistungsfähigste Kantenerkennungsmethode bzw. Canny Algorithmus benutzt. Die Canny-Methode unterscheidet sich von den anderen Kantenerkennungsmethoden darin, dass sie zwei verschiedene Schwellenwerte verwendet (um starke und schwache Kanten zu erkennen) und die schwachen Kanten in der Ausgabe nur dann einschließt, wenn sie mit starken Kanten verbunden sind. Diese Methode kann daher im Vergleich zur anderen Method weniger Wahrscheinlichkeit verfügen, durch Rauschen getäuscht zu werden, und mehre Wahrscheinlichkeit verfügen, echte schwache Kanten zu erkennen.
+
+Das Ziel von Canny Algorithmus ist es, einen optimalen Kantenextraktionsalgorithmus zu finden. Drei Kriterien für die optimale Kantendetektion werden vorgeschlagen:
+
+\begin{itemize}
+
+\item Gute Erkennung: Der Algorithmus kann so viele tatsächliche Kanten wie möglich im Bild erkennen.
+\item Gute Positionierung: Identifizieren die Kanten so nah wie möglich an den tatsächlichen Kanten im Bild.
+\item Minimale Antwort: Kanten in einem Bild können nur einmal identifiziert werden, und mögliches Bildrauschen sollte nicht als Kanten erkannt werden.
+
+\end{itemize}
+
+Die Implemetierung eine Canny Algorithmus läuft:
+
+\begin{enumerate}
+	\item \textbf{Gaußsche Unschärfe.} Die Hauptziel ist, Rausch zu entfernen. Da die Rauschen auch auf Hochfrequenzsignale konzentriert ist, wird es leicht als eine falsche Kante erkannt. Anwenden gaußsche Unschärfe, um Rauschen zu entfernen und die Erkennung falscher Kanten zu reduzieren. Es sollte beachtet werden, dass ein zu großer Radius einige schwache Kanten nicht erkennen.
+	\item \textbf{Berechnen die Größe und Richtung des Gradienten.} Die Kanten des Bildes können in verschiedene Richtungen zeigen. Daher verwendet der klassische Canny Algorithmus vier Gradientenoperatoren, um die Gradienten in horizontaler, vertikaler und diagonaler Richtung zu berechnen. Jedoch in allgemeine werden diese vier Gradientenoperatoren nicht verwendet, sondern mit Kantenunterschiedsoperatoren (wie Rober, Prewitt, Sobel) die Differenz Gx und Gy in horizontaler und vertikaler Richtung berechnen. Die Berechnung der Gradientengröße und Richtung wie folgt:	
+\begin{equation}
+\begin{split}
+•  G   & = \sqrt{G_x^{2} + G_y^{2}} \\
+\theta & = atan2(G_y,G_x)
+\end{split}
+\end{equation}
+
+Der Gradientenwinkel $ \theta $ liegt im Bereich von Radianten $ -\pi $ bis $ \pi $, dann approximiere es in vier Richtungen, die horizontale, vertikale und zwei diagonale Richtungen repräsentieren    $(0^{\circ}, 45^{\circ}, 90^{\circ}, 135^{\circ}) $. Es kann durch $  \pm i \pi / 8\ (i =1, 3, 5, 7) $ geteilt werden, und der in jedem Bereich fallende Gradientenwinkel einen spezifischen Wert ergibt, der eine von vier Richtungen repräsentieren. Als folgend nehmen eine Beispile mit Sobel Operator.
+
+\begin{equation}
+G_x = \begin{bmatrix}
+-1 &0 &+1 \\
+-2 &0 &+2 \\
+-1 &0 &+1
+\end{bmatrix} * A \quad and \quad G_y = \begin{bmatrix}
++1 &+2 &+1 \\
+0 &0 &0 \\
+-1 &-2 &-1
+\end{bmatrix} * A
+\end{equation}
+	
+	\item \textbf{Nicht-maximale Unterdrückung.} Nicht-maximale Unterdrückung ist eine Kantenverfeinerungsmethode. Die Gradientenkanten, die normalerweise abgeleitet werden, sind nicht als ein Pixel breit, sonder mehrere Pixel breit. Während Kriterie 3 erfordert, dass die Kante nur eine genaue Punktbreite hat. Nicht-maximale Unterdrückung kann dazu beitragen, den lokalen maximalen Gradienten beizubehalten, während alle anderen Gradientenwerte unterdrückt werden. Dies bedeutet, dass nur die schärfste Position in der Gradientenänderung beibehalten wird. Der Algorithmus ist wie folgt:
+	\begin{itemize}
+	\item Vergleichen die Gradientenstärke des aktuellen Punkts mit der Gradientenstärke der positiven und negativen Gradientenrichtungspunkte.
+	\item Wenn die Gradientenstärke des aktuellen Punktes im Vergleich zur Gradientenstärke anderer Punkte in der gleichen Richtung am größten ist, wird der Wert auf 1 behalten. Ansonsten wird es auf 0 gesetzt. Zum Beispiel, wenn die Gradientenrichtung des aktuellen Punktes in die Richtung von $(90^{\circ}$ direkt darüber zeigt, muss es mit den Pixeln in der vertikalen Richtung direkt darüber und darunter verglichen werden.
+	\end{itemize}
+	
+	Es ist erwähnenswert, dass die positiven und negativen Richtungen keine unterschiedlichen Bedeutungen haben. Zum Beispiel sind die südöstliche Richtung und die nordwestliche Richtung beide als eine Richtung der Diagonalen betrachtet. Vorher approximierten die Gradientenrichtung horizontal, vertikal und zwei Diagonalen in vier Richtungen, so dass jedes Pixel in einer dieser vier Richtungen entsprechend seiner eigenen Gradientenrichtung verglichen wird, um zu bestimmen, ob es beibehalten wird. 
+	
+	
+	\item \textbf{Doppelte Schwelle.} Ein allgemeiner Kantenerkennungsalgorithmus verwendet einen Schwellenwert, um kleine Gradientenwerte entfernen, die durch Rauschen oder Farbänderungen verursacht werden, während große Gradientenwerte beibehalten werden.
+Der Canny Algorithmus wendet einen doppelten Schwellenwert, d.h. einen hohen Schwellenwert und einen niedrigen Schwellenwert an, um Kantenpixel zu unterscheiden. Wenn der Kantenpixelpunktgradientwert größer als den hohen Schwellenwert ist, wird er als einen starken Kantenpunkt betrachtet.	Wenn der Kantengradientenwert kleiner als der hohen Schwellenwert und größer als den niedrigen Schwellenwert ist, wird er als einen schwachen Kantenpunkt markiert. Punkte, die unterhalb der niedrigen Schwelle, werden unterdrückt.
+
+	\item \textbf{Hysterese Grenzenverfolgung.} Bisher können die starke Kantenpunkt als echte Kanten angesehen werden. Dagegen die Schwache Kantenpunkte können echte Kanten sein, jedoch sie können auch durch Rauschen oder Farbänderungen verursacht sein. Um genaue Ergebnisse zu erhalten, sollten die zweite Möglichkeit von schwachen Kantenpunkte entfernt werden. In allgemein werden die schwache Kantenpunkte und die starke Kantenpunkte, die durch reale Kanten verursacht werden, als verbunden betrachtet, während die schwache durch Rauschen verursacht Kantenpunkte, dies nicht verbunden sind. Der sogenannte Hysterese Grenzenverfolgung Algorithmus untersucht die achte verbundene Pixel eines schwachen Kantenpunktes, solange ein starker Randpunkt vorhanden ist, wird dieser schwache Randpunkt als echt Kantenpunkte betrachtet und die Wert als 1 bleibt.
+	
+Zur Implementierung dieser Schritt sucht nach allen verbundenen schwachen Kanten. Wenn ein Punkt einer verbundenen schwachen Kante mit einem starken Kantenpunkt verbunden ist, wird die schwache Kante beibehalten, snsonsten unterdrücken diese schwache Kante. Bei der Suche kann der Algorithmus "Breite zuerst" oder "Tiefe zuerst" verwenden. Nachdem der gesamten Suche des Bildes, werden die Nicht-Kantenpunkte entfernt, d.h. der Wert  auf 0 gesetzt wird.
+	
+\end{enumerate}
+
+Abbildung \ref{fig:canny} zeigt ein Ergibnis mit Canny Kantenextraktion.
+
+\begin{figure}[H]
+ \centering 
+  \includegraphics[keepaspectratio,width=0.4\textwidth]{images/4_ZweiteErfahrung/Canny/canny.pdf}
+ \caption{Einige grundlegende Strukturelement}
+ \label{fig:canny}
+\end{figure} 
 
 \section{Hough detection}
+
+
 
 
