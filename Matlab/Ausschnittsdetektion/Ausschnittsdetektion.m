@@ -1,21 +1,24 @@
 clear
 clc
-
 %% read YUV images and calculate differential images
-fn1 = 'yuv_1_bs8_2.yuv';
-fn2 = 'yuv_2_bs8_2.yuv';
+% fn1 = 'yuv_1_bs8_2.yuv';
+% fn2 = 'yuv_2_bs8_2.yuv';
+% 
+% [yuv(1).Y, yuv(1).U, yuv(1).V] = readYUV(fn1);
+% [yuv(2).Y, yuv(2).U, yuv(2).V] = readYUV(fn2);
+% 
+% % img = yuv2rgb(yuv(1).Y,yuv(1).U,yuv(1).V);
+% % grayimg = rgb2gray(img);
+% % diff(:,:,1) = yuv(1).V - yuv(2).V;
+% % diff(:,:,3) = yuv(1).U - yuv(2).U;
+% diffc_r = yuv(1).U - yuv(2).U;
 
-[yuv(1).Y, yuv(1).U, yuv(1).V] = readYUV(fn1);
-[yuv(2).Y, yuv(2).U, yuv(2).V] = readYUV(fn2);
 
-% img = yuv2rgb(yuv(1).Y,yuv(1).U,yuv(1).V);
-% grayimg = rgb2gray(img);
-% diff(:,:,1) = yuv(1).V - yuv(2).V;
-% diff(:,:,3) = yuv(1).U - yuv(2).U;
-diffc_r = yuv(1).U - yuv(2).U;
+
+diffc_r  = diffplus;
 %% corner detection
-vblocks = 1080/8;
-hblocks = 1920/8;
+% vblocks = 1080/8;
+% hblocks = 1920/8;
 
 % einzelbilder
 % diffc_r = gather(conv2([1 2 1]/2,[1 2 1]/2, yuv(1).U ,'same'));
@@ -35,8 +38,8 @@ y(1:2) = y(i);
 y(3:4) = y(5-i);
 
 % einzelbilder
-figure, imshow(yuv(1).U,[])
-
+% figure, imshow(yuv(1).U,[]);
+figure, imshow(U1,[]);
 % differenzbilder
 %figure, imshow(diff(:,:,1),[])
 
@@ -45,3 +48,13 @@ plot(x(1:2), y(1:2), 'r', 'LineWidth', 2)
 plot(x(2:3), y(2:3), 'r', 'LineWidth', 2)
 plot(x(3:4), y(3:4), 'r', 'LineWidth', 2)
 plot([x(1) x(4)], [y(1) y(4)], 'r', 'LineWidth', 2)
+
+plot(cr(1,1),cr(2,1), 'r.');
+plot(cr(1,2),cr(2,2), 'r.');
+plot(cr(1,3),cr(2,3), 'r.');
+plot(cr(1,4),cr(2,4), 'r.');
+
+plot(cr(1,1),cr(2,1), 'g.');
+plot(cr(1,2),cr(2,2), 'g.');
+plot(cr(1,3),cr(2,3), 'g.');
+plot(cr(1,4),cr(2,4), 'g.');

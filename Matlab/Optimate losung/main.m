@@ -23,6 +23,7 @@ diffplus = functions.sum_of_diff(abs(diff),Mal_num);
 
 % implay(mat2gray(gather(diff(:,:,:))));    %abs(diff(:,:,:))
 % figure;imshow(diffplus,[]),title('diffplus');
+% figure;histogram(diffplus);
 % diffplus = uint8(diffplus);
 
 %% Bild Pretreat
@@ -48,6 +49,7 @@ end
 
 % fn1='YUV_2018_07_06_17_08_50_411.yuv';
 % [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(fn1);
+% U1 = U2new(:,:,1);
 figure, imshow(U2new(:,:,1),[]),hold on
 functions.plotResult(cr);
 

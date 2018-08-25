@@ -3,23 +3,30 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     % Threshold should be high enough to avoid large noise outside the
     % modulated area, but large enough to avoid large gaps in weakly
     % modulated regions.
-    select = abs(im)>std(double(im(:)))*threshold;
+%     select = abs(im)>std(double(im(:)))*threshold;
 %    select = AdaptiveThreshold(im, 15, 15);
-    figure,imshow(select),title('select');
-%     level = graythresh();
+%     figure,histogram(im);
+%     figure,imshow(select),title('select');
+
+    [select,maskedImage]  = binar(im);
+    
     %% Use morphological filters to eliminate spurious holes and points
     % Transitions leave gaps between blocks, whereas noise causes small
     % spots outside the modulated area to cross the threshold. Using
     % opening and closing filters, both can be greatly reduced, making the
     % resulting BW image a good estimate of the rectangle containing the
     % modulated data.
-    selectf = imclose(imopen(select,ones(grain)),ones(grain));
+%     selectf = imclose(imopen(select,ones(grain)),ones(grain));
     selectf2 = imopen(imclose(select,ones(grain)),ones(grain));
     figure,imshow(selectf2),title('selectf2');
-    edges = edge(selectf2); % Sobel edge detection
-    figure,imshow(edges),title('sobel');
-    edgec = edge(selectf2,'canny'); % Sobel edge detection
+%     edges = edge(selectf2); % Sobel edge detection
+%     figure,imshow(edges),title('sobel');
+    edges = edge(selectf2,'Canny'); % Canny edge detection
+
     figure,imshow(edges),title('canny');
+    
+%      img_cross = imdilate(edges,strel('diamond',1));
+%      figure,imshow(img_cross),title('img_cross');
     %% Hough transform
     % We want to get the boundaries of the modulated rectangle as lines. To
     % do that, we must detect edges residing on a straight line through the
