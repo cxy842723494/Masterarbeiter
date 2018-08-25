@@ -24,14 +24,14 @@
 \contentsline {section}{\numberline {4.2}Binariesierung}{41}{section.4.2}
 \contentsline {section}{\numberline {4.3}Morphologie}{43}{section.4.3}
 \contentsline {section}{\numberline {4.4}Canny detection}{47}{section.4.4}
-\contentsline {section}{\numberline {4.5}Hough detection}{50}{section.4.5}
-\contentsline {chapter}{\numberline {5}Auswertung}{51}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section}{51}{section.5.1}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{52}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section}{52}{section.6.1}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{53}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{53}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{55}{chapter*.36}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{57}{chapter*.37}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{58}{chapter*.38}
-\contentsline {chapter}{\nonumberline Literatur}{59}{chapter*.39}
+\contentsline {section}{\numberline {4.5}Hough Transformation}{51}{section.4.5}
+\contentsline {chapter}{\numberline {5}Auswertung}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section}{53}{section.5.1}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{54}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section}{54}{section.6.1}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{55}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{55}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{57}{chapter*.37}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{59}{chapter*.38}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{60}{chapter*.39}
+\contentsline {chapter}{\nonumberline Literatur}{61}{chapter*.40}

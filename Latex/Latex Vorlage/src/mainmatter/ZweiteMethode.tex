@@ -238,7 +238,7 @@ Der Canny Algorithmus wendet einen doppelten Schwellenwert, d.h. einen hohen Sch
 
 	\item \textbf{Hysterese Grenzenverfolgung.} Bisher können die starke Kantenpunkt als echte Kanten angesehen werden. Dagegen die Schwache Kantenpunkte können echte Kanten sein, jedoch sie können auch durch Rauschen oder Farbänderungen verursacht sein. Um genaue Ergebnisse zu erhalten, sollten die zweite Möglichkeit von schwachen Kantenpunkte entfernt werden. In allgemein werden die schwache Kantenpunkte und die starke Kantenpunkte, die durch reale Kanten verursacht werden, als verbunden betrachtet, während die schwache durch Rauschen verursacht Kantenpunkte, dies nicht verbunden sind. Der sogenannte Hysterese Grenzenverfolgung Algorithmus untersucht die achte verbundene Pixel eines schwachen Kantenpunktes, solange ein starker Randpunkt vorhanden ist, wird dieser schwache Randpunkt als echt Kantenpunkte betrachtet und die Wert als 1 bleibt.
 	
-Zur Implementierung dieser Schritt sucht nach allen verbundenen schwachen Kanten. Wenn ein Punkt einer verbundenen schwachen Kante mit einem starken Kantenpunkt verbunden ist, wird die schwache Kante beibehalten, snsonsten unterdrücken diese schwache Kante. Bei der Suche kann der Algorithmus "Breite zuerst" oder "Tiefe zuerst" verwenden. Nachdem der gesamten Suche des Bildes, werden die Nicht-Kantenpunkte entfernt, d.h. der Wert  auf 0 gesetzt wird.
+Zur Implementierung dieser Schritt sucht allen verbundenen schwachen Kanten. Wenn ein Punkt einer verbundenen schwachen Kante mit einem starken Kantenpunkt verbunden ist, wird die schwache Kante beibehalten, snsonsten unterdrücken diese schwache Kante. Bei der Suche kann der Algorithmus "Breite zuerst" oder "Tiefe zuerst" verwenden. Nachdem der gesamten Suche des Bildes, werden die Nicht-Kantenpunkte entfernt, d.h. der Wert auf 0 gesetzt wird.
 	
 \end{enumerate}
 
@@ -251,7 +251,39 @@ Abbildung \ref{fig:canny} zeigt ein Ergibnis mit Canny Kantenextraktion.
  \label{fig:canny}
 \end{figure} 
 
-\section{Hough detection}
+\section{Hough Transformation}
+
+Hier betrachten die Grenzen des modulierten Rechtecks als Linien. Dann das Problem für Rechteck Detektion umwandeln nach das Problem eines Linie Extrahieren. Um dies zu tun, müssen die Kanten erkennen, die auf einer geraden Linie durch das Bild liegen. Die Hough Transformation ist eine beliebte Methode zum Extrahieren von Linien aus einem Bild. Es kann solche Informationen liefern, indem die Spitzen an Punkten die geraden Linien in dem binären Bild entsprechen. Der Aufwand für eine Hough Transformation hängt von der Größe des Bildes und der Anzahl der analysierten Winkel ab. Da die Winkelauflösung für die weitere Verarbeitung wichtig ist, ist eine maximale Kameraneigung vorgeschrieben. Hier in diese Arbeit läuft es $ \pm 10^{\circ} $.
+
+
+Um die Funktionsweise des HT Algorithmus zu beschreiben, müssen einige Definition einfügen. In Hough Transformation, jede Linie in der $ xy $ Ebene kann parametrisch beschreiben als:
+\begin{equation}
+•  \rho = x \cos \theta + y \sin \theta
+\end{equation} 
+
+Hier bedeutet $ \rho $ die Entfernung vom Ursprung der Koordinate zur Linie, $ \theta $ der Winkel zwischen $ \rho $ und der positiven Richtung der x-Achse, $ (x,y) $ sind die Punkte auf der geraden Linie, wie in Abbildung \ref{fig:Hough} zeigt.
+
+\begin{figure}[H]
+ \centering 
+  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/Hough/Hough.pdf}
+ \caption{Anglekoordinate}
+ \label{fig:Hough}
+\end{figure}
+
+Die obige Gleichung gilt für jedes Pixel auf dem Bild, d.h. für jeden Punkt auf dem Bild kann eine entsprechende trigonometrische Kurve nach der Hough-Transformation im Parameterraum ($ \theta $, $ \rho $) gefunden werden. Irgendwelche zwei Punkte auf dem Bild, die zwei  trigonometrische Kurven entsprechen, und werden unvermeidlich einen Schnittpunkt ($ \theta_0 $, $ \rho_0 $) erzeugen. Dieser Schnittpunkt wird dann in die Gleichung der Linie eingefügt, um eine gerade Linie zu bestimmen (nämlich die durch die zwei Punkte auf dem Bild festgelegte Linie). 
+
+Das heißt, die entsprechende trigonometrische Kurven, die von Punkten auf derselben Linie auf dem Bild erzeugt werden, schneiden sich an einem Punkt ($ \theta_0 $, $ \rho_0 $) im Parameterraum. Je mehr Punkte auf der Linie sind, desto mehr Kurven schneiden sich an diesem Punkt. Das Algorithmus einer Hough Transformation wie folgend darstellt:
+
+\begin{enumerate}
+\item Erstellen einen Parameterraum mit einer geeigneten Quantisierungsstufe für Entfernung $ \rho $ und Winkel $ \theta $.
+\item Erstellen ein Akkumulator Array A($ \rho $,$ \theta $).
+\item Erstellen A($ \rho $,$ \theta $) = 0 ,für aller ($ \rho $,$ \theta $).
+\item Für jeden Nicht-Hintergrundpunkt $ (x,y) $ im Bild berechnen $ \rho $ mit jede $ \theta $ ,ob Gleichung erfüllen: $ \rho = x \cos \theta + y \sin \theta $. Falls bestimmt, Erhöhe das Akkumulator-Array: $ A(\rho,\theta) = A(\rho,\theta) + 1 $.
+\item Suchen den Spitzenwert in Array A, der die Linie im Parameterraum angeben.
+\end{enumerate}
+
+Eine Beispiel Implementierung der Hough Transformation zeigt in Abbildung .
+
 
 
 

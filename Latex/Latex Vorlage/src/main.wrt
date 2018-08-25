@@ -81,26 +81,27 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Einige grundlegende Strukturelement\relax }}{46}{figure.caption.34}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Canny detection}{47}{section.4.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Einige grundlegende Strukturelement\relax }}{50}{figure.caption.35}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Hough detection}{50}{section.4.5}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{51}{chapter.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Hough Transformation}{51}{section.4.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Anglekoordinate\relax }}{51}{figure.caption.36}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Auswertung}{53}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{51}{section.5.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{52}{chapter.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section}{53}{section.5.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung}{54}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{52}{section.6.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{53}{appendix.A}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section}{54}{section.6.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{55}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{53}{section.A.1}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{55}{chapter*.36}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{57}{chapter*.37}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{58}{chapter*.38}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{59}{chapter*.39}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{55}{section.A.1}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{57}{chapter*.37}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{59}{chapter*.38}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{60}{chapter*.39}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{61}{chapter*.40}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
