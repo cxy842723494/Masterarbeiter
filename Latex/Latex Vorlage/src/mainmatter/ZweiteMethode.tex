@@ -1,13 +1,20 @@
 \chapter{Zweite Methode} \label{cha:ZweiteMethode}
 
-In diesem Kapitel wird die Realisierung des zweiten Verfahrens eingegangen werden. Die Bildverarbeitungen wird zuerst im Detail gegeben. Es ist in verschiedene Teile unterteilt als Binarisierung, Morphologie Operation und Canny Kannten Detektion. Anschließen wird die Hough Transformation erläutert. Zur Implementierung dieses Verfahrens wird Matlab unter der Lizenz TU Dortmund verwendet. Außerdem diese Methode wird auch auf einer Smartphone-GPU parallele implementiert.
+In diesem Kapitel wird die Realisierung des zweiten Verfahrens eingegangen werden. Zuerst wird die allgemeine Struktur dieser Methode beschrieben. Dadurch können die Struktur und Arbeitsprinzip der gesamten Methode eine grobe verstehen. Anschießen geben die Bildverarbeitungen im Detail. Es besteht aus verschiedene Teile wie als folgend: Binarisierung Behandelung, Morphologie Operation und Canny Kannten Detektion. In diesem Abschnitt wird es  erläutert, wie diese Operationen funktioniert und was die Sinne dieser Behandelungen sind. Schließlich wird eine Linie Extrahieren Methode Hough Transformation detailliert vorstellen. Zur Implementierung dieses Verfahrens wird Matlab unter der Lizenz TU Dortmund verwendet. Außerdem diese Methode wird auch auf einer Smartphone-GPU parallele implementiert.
 
 \section{Allgemeine Struktur} 
 
-Anders als bei der vorherigen Methode, indem durch die  Charakteristiken des QR Musters die Modulationsbereiche detektieren, wird hier eine neue Strategie mit Hilfe die geometrischen Eigenschaften des Modulationsbereichs verwenden. 
-Es ist bekannt, dass im DaVid System durch Aufnahme des Inhalts auf dem Bildschirm die versteckte Daten erkennen. Dann entspricht der Modulationsbereich tatsächlich dem Bildschirmbereich, die im Allgemeinen über die Form von Rechtecken verfügen. Bis hier kann das Problem des Detektierens des Modulationsbereichs in ein Problem des Detektierens eines Rechtecks umgewandelt werden. Dann weiter wegen Rechtecks geometrischen Eingenschaft, konveniert das Problem nach einen Linie Extrahieren Problem. Diese Methode basiert auf den geometrischen Eigenschaften des Modulationsbereich, um den endgültigen Modulationsbereich zu erkennen und zu bestimmen.
+Anders als bei der vorherigen Methode, indem durch die  Charakteristiken des QR Musters die Modulationsbereiche detektieren, wird hier eine neue Strategie mit Hilfe die geometrischen Eigenschaften des Modulationsbereichs verwenden. Es ist bekannt, dass im DaVid System durch Aufnahme des Inhalts auf dem Bildschirm die versteckte Daten erkennen. Dann entspricht der Modulationsbereich tatsächlich dem Bildschirmbereich, die im Allgemeinen über die Form von Rechtecken verfügen. Deswegen kann hier das Problem des Detektierens des Modulationsbereichs in ein Problem des Detektierens eines Rechtecks umgewandelt werden. Außerdem, wegen Rechtecks geometrischen Eingenschaft, die aus 2 paar parallele Linien besteht, lassen das Problem nach einen Linie Extrahieren Problem konvenieren. Das heißt, diese Methode basiert auf die extrahiert Linien auf dem Bild, um den endgültigen Modulationsbereich zu erkennen und zu bestimmen. Abbildung \ref{fig:Strukturdiagramm} zeigt die Strukturdiagramm dieses Verfahrens.
 
-Das Objekt, das mit dieser Methode bearbeitet wird, ist auch ein Reihe von Bildern, die von einer Handkamera aufgenommen wurden. Durch eine Bildregistration Operation diese Bilder in dasselbe Koordinatensystem umgewandelt. Mit gegenseitige Subtraktion erhalten eine Reihe Differenzbildern. Durch das Wissen des vorherigen Kapitels, die $``Energie"$ wird hauptsächlich aus diesem Modulationsbereich gewonnen. Nehmen einige mit maximale $``Energie"$ Differenzbildern addieren und eine detektierendes Bild erhalten, um die folgende Operation zu behandeln. Diese zwei Teilbereiche sind schon in vorherigen Kapitel geschrieben und werden hier nicht ins Detail gehen. Um den Modulationsbereich hervorzuheben, nehmen das detektierendes Bild eine Binariesierung Operation, dann teilen es in zwei Teile, eine für den grober Modulationsbereich und eine für den Hintergrund. Für Beseitigung der zahlreiche Unvollkommenheiten, die von Rauschen und Fehler ursacht, brauchen hier eine morphologische Behandelung. Es hängt von das Form und Struktur des Objekts ab. Danach die aktuelle Ziel wird es, die rechteckigen Grenzen zwischen Modulationsbereich und Hintergrundbereich zu erkennen. Durch eine Kantenextraktion, hier canny-Methode anwenden, beleibt in das Bild nur die Kanten.  Durch Betrachten der Grenzen des modulierten Rechtecks als Linien. Dann das Problem für Rechteck Detektion umwandeln nach das Problem eines Linie Extrahieren. Schließlich mit Hough Transformation, die Voting-Algorithmus anwenden, um die längste Linien in Bild extrahieren und die Rechteck bestimmen. Also wird die Modulationsbereich bestimmen. Die Flussdiagramm wird in Abbildung \ref{fig:Flussdiagramm der zweite Methode} gezeigt. Die Details jedes Teils werden in den folgenden Abschnitten beschrieben.
+\begin{figure}[H]
+ \centering 
+ \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/Strukturdiagramm.pdf}
+ \caption{Strukturdiagramm}
+ \label{fig:Strukturdiagramm für zweite Methode}
+\end{figure}
+
+
+Das Objekt, das mit dieser Methode bearbeitet wird, ist auch ein Reihe von Bildern, die von einer Handkamera aufgenommen wurden. Durch eine Bildregistration Operation diese Bilder in dasselbe Koordinatensystem umgewandelt. Mit gegenseitige Subtraktion erhalten eine Reihe Differenzbildern. Durch das Wissen des vorherigen Kapitels, die $``Energie"$ wird hauptsächlich aus diesem Modulationsbereich gewonnen. Nehmen einige mit maximale $``Energie"$ Differenzbildern addieren und eine detektierendes Bild erhalten, um die folgende Operation zu behandeln. Diese zwei Teilbereiche sind schon in vorherigen Kapitel geschrieben und werden hier nicht ins Detail gehen. Um den Modulationsbereich vom Bild hervorzuheben, nehmen das detektierendes Bild eine Binariesierung Operation, dadurch wird das Bild in zwei Teilen geteilt, eine für Objekt (hier heißt die Modulationsbereich) und eine für Hintergrund (hier heißt die Bereich umgeben die Modulationsbereich). Danach zur Beseitigung der zahlreiche Unvollkommenheiten (hier heißt kleine Punkte und Lücken), die von Rauschen und Fehler verursacht werden, brauchen hier eine morphologische Behandelung, welche basiert von das Form und Struktur des Objekts. Als nächste soll die Modulationsbereich erkannt werden. Um diese zu implementieren, muss die rechteckigen Grenzen zwischen Modulationsbereich und Hintergrundbereich finden. Mit Helfe einer Kantenextraktionsmethode, hier Canny-Algorithmus benutzen, werden im Bild nur die Kanten beleibt, die die Grenze des Modulationsbereich enthält. Beobachten, dass die Grenze des Modulationsbereichs ein rechteckig Form ist, besteht sie aus vier Linien. Das Hough-Transformationsverfahren wird verwendet, um jede zwei gerade Linien in der horizontalen Richtung bzw. der vertikalen Richtung zu erfassen. Schließlich wird das endgültige Rechteck durch die vier geraden Linien bestimmt, das heißt, der Modulationsbereich wird bestimmt. Die Flussdiagramm wird in Abbildung \ref{fig:Flussdiagramm der zweite Methode} gezeigt. Die Details jedes Teils werden in den folgenden Abschnitten beschrieben.
 
 \begin{figure}[H]
  \centering 
@@ -18,26 +25,11 @@ Das Objekt, das mit dieser Methode bearbeitet wird, ist auch ein Reihe von Bilde
 
 \section{Binarisierung}
 
-Viele Anwendungen der digitalen Bildverarbeitung können als binäre Probleme betrachtet werden. Dabei treten nur zwei Grauwertstufen auf, eine für das oder
-die vorhandenen Objekte und eine für den Hintergrund. Beispielsweise kann es sich um Schrift, Zeichnungen oder auch flache Werkstücke handeln, für die alle ein
-idealisiertes zweipegeliges Bildmodell angenommen wird. Die Aufnahme der Szene mit einer Kamera führt aber in der Regel auf ein Bild mit einem Histogrammverlauf über weite Bereiche der Grauwertskala. Die Gründe für das Abweichen
-vom idealen binären Verhalten des aufgenommenen Bildes bei an sich zweipegeliger Vorlage sind von vielfältiger systembedingter Natur. Die Effekte reichen von Kamerafehlern bis hin zu inhomogener Szenenbeleuchtung.
-Somit stellt sich die Aufgabe der Binarisierung eines Grauwertbildes, so daß der enthaltene figürliche Bildinhalt erhalten bleibt. Die einfachste Lösung sieht die Anwendung einer konstanten Grauwertschwelle T vor, die die folgende Grauwerttransformation
-vornimmt.
+In diesem Abschnitt wird der Binarisierungsvorgang der Bildverarbeitung beschrieben. Hier um die Modulationsbereich zu detektieren, muss zuerst es vom Bild hervorzuheben. Dann mit einer Binarisierung Operation kann das implementieren, indem das Bild in zwei Teilen geteilt, ein Teil mit Pixelwert 1 für die Modulationsbereich, anderes mit Pixelwert 0 für die umgebende Hintergrund. Dann kann die Modulationsbereich mit einige weitere Operationen behandelt werden.
 
-\begin{equation}
-  y(x) =
-  \begin{cases} 
-  0,   & \mbox{für }x < T \\
-  255, & \mbox{sonst}
-  \end{cases}
-\end{equation}
+In der digitalen Bildverarbeitung nehmen binäre Bilder eine sehr wichtige Position ein. Viele Anwendungen der digitalen Bildverarbeitung können als binäre Probleme betrachtet werden. Um binäre Bilder zu verarbeiten und zu analysieren, digitalisieren zunächst das Graustufenbild, um ein binäres Bild zu erhalten. Wenn das Bild weiterverarbeitet wird, bezieht sich die Sammeleigenschaft des Bildes nur auf die Position des Pixels, dessen Pixelwert 0 oder 255 ist, und der mehrstufige Wert des Pixels ist nicht länger beteiligt, so dass die Verarbeitung einfach ist. Darüber hinaus ist die Menge an Datenverarbeitung und Komprimierung gering. 
 
-
-
-
-Diese einfache Methode ist nur für den Fall eines bimodalen Grauwerthistogramms erfolgversprechend. Nur in diesem Fall kommt der Histogrammverlauf dem Idealmodell eines Zweipegelbides nahe genug.
-Die Abbildung \ref{fig:Histogramm} zeigt einen solchen typischen Verlauf. Wir sehen zwei scharfe Anhäufungen, eine für das Objekt und eine für den Hintergrund. Die Binarisierungsschwelle wird genau an die tiefste Stelle zwischen den beiden Anhäufungen gelegt.
+Um ein ideales Binärbild zu erhalten, werden im Allgemeinen geschlossene, zusammenhängende Grenzen verwendet, um Bereiche zu definieren, die sich nicht überlappen. Hier geben ein einfaches Beispiel zur Veranschaulichung der Binarisierungsvorgang. Annehmen ein Fall mit einen bimodalan Histogramm des Bildes. Abbildung \ref{fig:Histogramm} zeigt einen solchen Histogramm. Darin gibt es zwei scharfe Wellenberg, eine für das Objekt und eine für den Hintergrund. Die Binarisierungsschwelle T wird genau an die tiefste Stelle zwischen den beiden Wellenberg gelegt. 
 
 \begin{figure}[htb]
  \centering 
@@ -46,11 +38,21 @@ Die Abbildung \ref{fig:Histogramm} zeigt einen solchen typischen Verlauf. Wir se
  \label{fig:Histogramm}
 \end{figure} 
 
-Als folgende werden einige gebräuchliche Binarisierungsmethoden vorstellen.
+Alle Pixel, deren Graustufe größer oder gleich dem Schwellenwert T ist, werden als zu einem bestimmten Objekt gehörend bestimmt und ihr Pixelwert ist 1. Andernfalls werden diese Pixel aus dem Objektbereich ausgeschlossen, und der Pixelwert ist 0, was den Hintergrund oder den Ausnahmeobjektbereich anzeigt. Die Formel darstellt als:
+
+\begin{equation}
+  y(x) =
+  \begin{cases} 
+  0,   & \mbox{für }x < T \\
+  1, & \mbox{sonst}
+  \end{cases}
+\end{equation}
+
+In der Praxis ist das Histogramm aufgrund der Helligkeit und Inhalt des Bilds nicht der obige bimodale Fall. Dies erfordert auch, dass die geeignete Binarisierungsmethode entsprechend den tatsächlichen Bedürfnissen im Binarisierungsprozess auswählen. Als folgende werden einige in diese Arbeite versuchte Binarisierungsmethoden vorstellen.
 
 \textbf{Grundlegende globale Schwelle Methode}
 
-Wenn die Histogrammspitzen und -täler des Bildes offensichtlich sind und Doppelpeaks aufweisen, ist die Wirkung dieser Methode besser. Es basiert auf der visuellen Überprüfung des Histogramms und der Schwellenwert wird durch eine iterative Methode erhalten. Die grundlegende Algorithmus ist wie folgt:
+Der grundlegende globale Schwelle Methode ist eine Erweiterung des festen Schwelle Methode, die vorher beschriebt. Wenn die Histogrammspitzen und -täler des Bildes offensichtlich sind und Doppelpeaks aufweisen, ist die Wirkung dieser Methode besser. Es basiert auf der visuellen Überprüfung des Histogramms und der Schwellenwert wird durch eine iterative Methode erhalten. Die grundlegende Algorithmus ist wie folgt:
 
 1. Wählen eine Paramenter t und einen anfänglichen Schwellenwert $ T_{0} $ aus, wobei der Durchschnitt der maximalen Grauwerte $ l_{max} $ und minimalen Grauwerte  $ l_{max} $ verwendet wird. $ T_{0} = (l_{max}+l_{max})/2 $
 
@@ -60,7 +62,9 @@ Wenn die Histogrammspitzen und -täler des Bildes offensichtlich sind und Doppel
 
 4. Falls $ |T_{0} - T_{1}| < t $, dann nehmen $ T_{1} $ als optimalen Schwellenwert. Andernfalls weisen $ T_{1} $ zu $ T_{0} $und wiederholen die Schritte $ 2\sim4 $, bis der optimale Schwellenwert erhalten ist.
 
-\textbf{Grundlegende adaptive Schwellenwert Binarisierungsmethode}
+Abbildung. 
+
+\textbf{Grundlegende lokale Schwellenwert Methode}
 
 Ein Bildgebungsfaktor ungleichmäßiger Helligkeit bewirkt, dass ein Histogramm, das ansonsten für eine effiziente Segmentierung geeignet wäre, ein Histogramm wird, das nicht effektiv mit einem einzigen globalen Schwellenwert segmentiert werden kann.
 
@@ -68,6 +72,7 @@ Ein Verfahren zur Verarbeitung besteht darin, das Bild weiter in Unterbilder zu 
 
 Ein Verfahren zum Unterteilen von Unterbildern wird für das Bild übernommen. Hier werden drei Arten von Unterteilungsverfahren ausgewählt, und Unterbildermit einer Größe von $ 32\times32,4 \times4,16\times16 $ Pixelwerden jeweils geteilt, und die durchschnittliche Graustufe der Unterbilder wird Sals ein Schwellenwert für die Binärisierung ausgewählt.
 
+Abbildung. 
 
 \textbf{OTSU adaptive Schwelle Methode}
 
@@ -103,7 +108,7 @@ Nehmen Schwellenwert T von 0 zu $ L-1 $. Wenn $ sigma^2 $ Maximum ist, wählen d
 
 Die Ostu-Methode verwendet Grauswert Histogramm zur Bestimmen des Schwellenwerts. Es ist eine automatisch non-parametrische Schwellenauswahlmethode. Diese Methode ist einfach zu berechnen, und wird nicht von der Kontrast- und Helligkeitsänderung unter bestimmten Bedingungen beeinflusst und kann das Objekt zufriedenstellend vom Hintergrundbereich trennen.
 
-
+Abbildung. 
 
 
 

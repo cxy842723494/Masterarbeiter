@@ -296,6 +296,38 @@
       \endverb
       \keyw{Histograms;Marine vehicles;Radar tracking;Least squares approximation;Surveillance;Target tracking;Gaussian distribution;Displays;Q measurement;Sea measurements}
     \endentry
+    \entry{canny}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2f780c34a67ad022b73f934e6290bd09}{%
+           family={Canny},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f780c34a67ad022b73f934e6290bd09}
+      \strng{fullhash}{2f780c34a67ad022b73f934e6290bd09}
+      \strng{bibnamehash}{2f780c34a67ad022b73f934e6290bd09}
+      \strng{authorbibnamehash}{2f780c34a67ad022b73f934e6290bd09}
+      \strng{authornamehash}{2f780c34a67ad022b73f934e6290bd09}
+      \strng{authorfullhash}{2f780c34a67ad022b73f934e6290bd09}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0162-8828}
+      \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{month}{11}
+      \field{number}{6}
+      \field{title}{A Computational Approach to Edge Detection}
+      \field{volume}{PAMI-8}
+      \field{year}{1986}
+      \field{pages}{679\bibrangedash 698}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1109/TPAMI.1986.4767851
+      \endverb
+      \keyw{Image edge detection;Detectors;Machine vision;Shape measurement;Performance analysis;Uncertainty;Gaussian approximation;Signal to noise ratio;Signal synthesis;Feature extraction;Edge detection;feature extraction;image processing;machine vision;multiscale image analysis}
+    \endentry
     \entry{Reinhold:2013fk}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=50a8a405c48231b9d7a7928f463170cf}{%
@@ -315,8 +347,8 @@
       \strng{authorbibnamehash}{7c3ed3daacd1422e2b72547e54c30980}
       \strng{authornamehash}{7c3ed3daacd1422e2b72547e54c30980}
       \strng{authorfullhash}{7c3ed3daacd1422e2b72547e54c30980}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2013 IFIP Wireless Days (WD)}
@@ -352,8 +384,8 @@
       \strng{authorbibnamehash}{d9e178cc01874be6cb8e994e2a250982}
       \strng{authornamehash}{d9e178cc01874be6cb8e994e2a250982}
       \strng{authorfullhash}{d9e178cc01874be6cb8e994e2a250982}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -372,8 +404,8 @@
       \list{publisher}{1}{%
         {IEEE}%
       }
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labeltitlesource}{title}
       \field{abstract}{The protocol and compatible interconnection for data communication devices using low data-rate, low-power, and low-complexity short-range radio frequency (RF) transmissions in a wire less personal area network (WPAN) were defined in IEEE Std 802.15.4-2006. In this revision, the market applicability of IEEE Std 802.15.4 is extended, the ambiguities in the standard are removed, and the improvements learned from implementations of IEEE Std 802.15.4-2006 are included.}
       \field{isbn}{9780738166834}

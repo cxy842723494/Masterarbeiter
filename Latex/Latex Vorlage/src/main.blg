@@ -1,23 +1,24 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[33] biber-MSWIN64:313> INFO - === 
-[60] Biber.pm:371> INFO - Reading 'main.bcf'
-[150] Biber.pm:857> INFO - Found 11 citekeys in bib section 0
-[166] Biber.pm:3976> INFO - Processing section 0
-[183] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[195] bibtex.pm:1500> INFO - LaTeX decoding ...
-[230] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
-[240] Utils.pm:193> WARN - month field 'May' in entry 'Kays2017' is not an integer - this will probably not sort properly.
-[264] Utils.pm:193> WARN - month field 'Sept' in entry 'Kays201501' is not an integer - this will probably not sort properly.
-[268] Utils.pm:193> WARN - month field 'Jan' in entry 'Kays201502' is not an integer - this will probably not sort properly.
-[285] Utils.pm:193> WARN - month field 'December' in entry 'zhangzhengyou' is not an integer - this will probably not sort properly.
-[290] Utils.pm:193> WARN - month field 'Jan' in entry 'Ostu' is not an integer - this will probably not sort properly.
-[295] Utils.pm:193> WARN - month field 'Nov' in entry 'Reinhold:2013fk' is not an integer - this will probably not sort properly.
-[323] Utils.pm:193> WARN - BibTeX subsystem: C:\Users\xch\AppData\Local\Temp\RN9xgLBiZN\literatur.bib_7808.utf8, line 6, warning: 93 characters of junk seen at toplevel
-[341] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[341] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[341] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[341] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[354] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[359] bbl.pm:720> INFO - Output to main.bbl
-[359] Biber.pm:110> INFO - WARNINGS: 7
+[39] biber-MSWIN64:313> INFO - === 
+[73] Biber.pm:371> INFO - Reading 'main.bcf'
+[157] Biber.pm:857> INFO - Found 12 citekeys in bib section 0
+[175] Biber.pm:3976> INFO - Processing section 0
+[191] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[201] bibtex.pm:1500> INFO - LaTeX decoding ...
+[236] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
+[245] Utils.pm:193> WARN - month field 'May' in entry 'Kays2017' is not an integer - this will probably not sort properly.
+[255] Utils.pm:193> WARN - month field 'Sept' in entry 'Kays201501' is not an integer - this will probably not sort properly.
+[258] Utils.pm:193> WARN - month field 'Jan' in entry 'Kays201502' is not an integer - this will probably not sort properly.
+[271] Utils.pm:193> WARN - month field 'December' in entry 'zhangzhengyou' is not an integer - this will probably not sort properly.
+[274] Utils.pm:193> WARN - month field 'Jan' in entry 'Ostu' is not an integer - this will probably not sort properly.
+[277] Utils.pm:193> WARN - month field 'Nov' in entry 'canny' is not an integer - this will probably not sort properly.
+[281] Utils.pm:193> WARN - month field 'Nov' in entry 'Reinhold:2013fk' is not an integer - this will probably not sort properly.
+[313] Utils.pm:193> WARN - BibTeX subsystem: C:\Users\Chen\AppData\Local\Temp\CIJSiCYz0_\literatur.bib_14636.utf8, line 6, warning: 93 characters of junk seen at toplevel
+[332] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[332] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[333] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[333] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[348] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[354] bbl.pm:720> INFO - Output to main.bbl
+[355] Biber.pm:110> INFO - WARNINGS: 8
