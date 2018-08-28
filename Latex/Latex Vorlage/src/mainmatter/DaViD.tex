@@ -1,14 +1,14 @@
-\chapter{DaVid} \label{cha:DaVid}
+\chapter{\gls{david}} \label{cha:DaVid}
 
-In diesem Kapitel werden das \gls{david} System beschrieben. Zuerst läuft die Vorstellung des \gls{david} Systems. Die Systemmodell und Arbeitsprinzip des Systems werden in anschließenden Abschnitt erläutert. Schließlich folgt die mögliche Anwendungsgebiete des Systems. \cite{Kays2017,Kays2016,Kays201501,Kays201502}
+In diesem Kapitel werden das \gls{david} System besprochen. Zuerst stellen wir das \gls{david} Systems vor. Das Systemmodell und Arbeitsprinzip des Systems werden im anschließenden Abschnitt erläutert. Schließlich flogen die mögliche Anwendungsgebiete des Systems. \cite{Kays2017,Kays2016,Kays201501,Kays201502}
 
 
 
 %Durch diese Beschreibung wird die Bedeutung und Ziele dieses Papiers besser verstehen.\ldots
 
-\section{Einführung des DaViD } 
+\section{Einführung des \gls{david}s} 
 
-\gls{david} ist ein neuartiges Verfahren zur optischen Freiraum-Datenübertragung zwischen einem Display als Sender und einer Kamera als Empfänger. Ein grundlegendes Übertragungskonzept von \gls{david} wird in Abbildung 2.1 gezeigt. Ein flaches Display wie ein OLED- oder LCD-Bildschirm zeigt ein Live-Video. Gleichzeitig werden die Daten hinter dem Bild auf die Pixel moduliert. Während die zusätzliche Datenmodulation für menschliche Betrachter nahezu unsichtbar ist, der Benutzer leitet ein hochauflösende Kamera oder ein Smartphone zur Bildschirm, um die Szene aufzunehmen. Durch der eingebaut Prozessor können die Signale decodiert werden.
+\gls{david} ist ein neuartiges Verfahren zur optischen Freiraum-Datenübertragung zwischen einem Display als Sender und digitalen Kamera als Empfänger. Ein grundlegendes Übertragungskonzept von \gls{david} wird in Abbildung \ref{fig:David1} gezeigt. Ein flaches Display, wie ein OLED- oder LCD-Bildschirm, zeigt ein Live-Video. Gleichzeitig werden die Daten hinter dem Bild auf die Pixel moduliert, während der Pixel auf dem Bild für menschliche Betrachter nahezu unsichtbar ist. Der Benutzer richtet eine hochauflösende Kamera beziehungsweise Smartphonekamera auf den Bildschirm, um die Szene aufzunehmen. Durch den Smartphone Prozessor können die Signale  in Daten decodiert werden.
 
 \begin{figure}[htb]
  \centering 
@@ -19,29 +19,29 @@ In diesem Kapitel werden das \gls{david} System beschrieben. Zuerst läuft die V
 
 
 \section{Systemmodell} 
-Bild in Display enthalten eine große Anzahl von Pixeln, die jeweils aus einer spezifischen Anordnung von Subpixeln für die RGB-Farbraum bestehen. Jeder einzelne Frame des Videos wird nämlich durch eine Matrix von Subpixelwerten dargestellt. \gls{david} System verwendet eine differentielle Modulationsmethod d.h. Teil der Videoinformationen muss wiederholt werden, indem Daten als ein symmetrischer Manchester-Code moduliert und zu den Videosignalkomponenten hinzugefügt werden. In Empfängerseite durch eine zeitliche Synchronisation können die zeitliche \gls{ISI} vermieden werden. Dann nach Verwendung einer örtlichen Synchronisation enthalten einen Differenzbild. Weil die Randbereich des Differenzbilds ungültig ist, verlässt sich die Modulationsgebiet durch die Verfahren in diese Arbeit entdecken. Danach werden die überlagerten Datensequenz durch eine Reihe von Behandlungen vom Videoinhalt getrennt. Abbildung 2.2 zeigt die schematische Darstellung des \gls{david}-Systems. 
+Das Display enthält eine große Anzahl von Pixeln, die jeweils aus einer spezifischen Anordnung von Subpixeln zur Darstellung des RGB-Farbraums bestehen. Jeder einzelne Frame des Videos wird nämlich durch eine Matrix von Subpixelwerten dargestellt. Das \gls{david}-System verwendet eine differentielle Modulationsmethode d.h. ein Teil der Videoinformationen wird wiederholt, sodass Daten als ein symmetrischer Manchester-Code moduliert und zu den Videosignalkomponenten hinzugefügt werden. Durch eine zeitliche Synchronisation der Empfängerseite kann die \gls{ISI} vermieden werden. Nach einer örtlichen Synchronisation mit dem modulierten Display, enthält der Empfänger ein Differenzbild. Da der Randbereich des Differenzbilds ungültig ist, wird das Modulationsgebiet durch das Verfahren dieser Arbeit beschränkt. Danach werden die überlagerten Datensequenz durch eine Reihe von Behandlungen, vom Videoinhalt getrennt. Abbildung \ref{fig:David2} zeigt die schematische Darstellung des \gls{david}-Systems. 
 % Deshalb in zeitlicher oder örtlicher Richtung die Videoinhalt in paar Bildern werden gleich.
 \vspace{18pt}
 
 \begin{figure}[htb]
 	\centering 
 	\includegraphics[keepaspectratio,width=1.0\textwidth]{images/2_DaViD/David3.jpg}
-	\caption{Schematische Darstellung von \gls{david} System}
+	\caption{Schematische Darstellung vom \gls{david}-System}
 	\label{fig:David2}
 \end{figure}
 
 
 \subsection{Modulationsverfahren}
 
-Ein Modulationsverfahren, das die Videoqualität nicht offensichtlich reduziert garantiert, ist sehr wichtig für ein auf Videogerät basierendes Datenübertragungssystem. Die möglichen Modulationsverfahren in \gls{david}-System sind:
+Ein Modulationsverfahren, welches die Videoqualität nicht beträchtlich reduziert, ist sehr kritisch für ein auf Videogeräte basierendes Datenübertragungssystem. Die möglichen Modulationsverfahren im \gls{david}-System sind:
 \begin{itemize}
-	\item Zeitliche differentielle Modulation der Luminanz
-	\item Zeitliche differentielle Modulation der Chrominanz
-	\item Örtliche differentielle Modulation der Luminanz
-	\item Örtliche differentielle Modulation der Chrominanz
+	\item Zeitlich-differentielle Modulation der Luminanz
+	\item Zeitlich-differentielle Modulation der Chrominanz
+	\item Örtlich-differentielle Modulation der Luminanz
+	\item Örtlich-differentielle Modulation der Chrominanz
 \end{itemize}
 
-Zeitliche differentielle Modulationsverfahre lässt kontinuierliches Paar Frames den gleichen Luminanz- bzw. Chrominanz-Videoinhalt enthalten, d.h. durch Subtrahieren die mit daten addiert Kanal der Paar Frames die Differenzbild erhalten lassen können. Dagegen in örtliche- sind die benachbarte Pixel mit den gleichen Videoamplituden. Hier wird in dieser Arbeit nur zeitliche differentielle Modulation der Chrominanz verwendet. Abbildung 2.3 zeigt ein Blockdiagramm einer typischen Senderimplementierung durch zeitliche differentielle Modulation.
+Zeitliche differentielle Modulationsverfahren lassen kontinuierliches eins Paar Frames den gleichen Luminanz- bzw. Chrominanz-Videoinhalt anzeigen, d.h. durch Subtrahieren dieser Frames die mit Datensquenze Differenzbild erhalten lassen können. Dagegen haben die benachbarte Pixel bei Örtliche-differentielle Modulation die gleichen Videoamplituden. In dieser Arbeit wird nur zeitlich-differentielle Modulation der Chrominanz verwendet. Abbildung \ref{fig:David3} zeigt ein Blockschaltbild einer typischen Senderimplementierung durch zeitlich-differentielle Modulation.
 
 \begin{figure}[htb]
 	\centering 
@@ -50,17 +50,17 @@ Zeitliche differentielle Modulationsverfahre lässt kontinuierliches Paar Frames
 	\label{fig:David3}
 \end{figure}
 
-Wir nehmen eine Diaplay an, die in horizontale Richtung $N_x$ Pixel stehen, dagegen in vertikale Richtung $N_y$ Pixel. Das Videoeingangssignal wird verarbeitet, um eine Anzeigeeingabe $s(i,j,k)$ zu liefern. Mit zeitliche differenziell Modulation ist die Videoinhalt des kommenden Frame dasselbe.Die Indizes i und j bedeuten die horizontale und vertikale Pixelposition auf dem Bildschirm, während k die Nummer des reproduzierten Bildes ist.
-Indiz m heißt den Zähler des Frames in einer Videosequenz. Der Amplitudenbereich des Videosignals sollte begrenzt sein, um die Addition kleiner Datenamplituden ohne Übersteuern zu ermöglichen.
+Wir nehmen eine Display an, welche in horizontaler Richtung $N_x$ Pixel und in vertikaler Richtung $N_y$ Pixel enthält. Das Videoeingangssignal wird verarbeitet, um eine Anzeigeeingabe $s(i,j,k)$ auszusenden. Mit zeitlich-differenziell Modulation gleicht der Inhalt dieses Frames des darauf folgend. Die Indizes i und j definieren die horizontale und vertikale Pixelposition auf dem Display, während k die Nummer des reproduzierten Frames ist.
+Indiz m symbolisiert den Zähler der Frames in einer Videosequenz. Der Amplitudenbereich des Videosignals sollte begrenzt sein, um die Addition kleiner Datenamplituden ohne Übersteuern zu ermöglichen.
 
 \begin{equation}
 \begin{split}
  s_{R/G/B}&(i,j,k+1) = s(i,j,k) \\
-          &  for \ 0\le i <N_x, 0\le j<N_y,k=2 \cdot m , m \in \mathbb{Z}\\
+          &  for \ 0\le i <N_x, 0\le j<N_y,k=2m , m \in \mathbb{Z}\\
 \end{split}
 \end{equation}
 
-Vor Datenübertragung muss der Datenstrom in Schichten der Länge L aufgeteilt werden. Indiz L bedeutet die Menge der Daten, die in einem Framepaar übertragen werden können. Ein direkter Ansatz ist eine direkte Zuordnung von Datenbits zu Pixeltripeln Zeile für Zeile.
+Vor der Datenübertragung muss der Datenstrom in Schichten der Länge L aufgeteilt werden. Indiz L bedeutet die Menge der Daten, die in einem Framepaar übertragen werden können. Ein direkter Ansatz ist eine direkte Zuordnung von Datenbits zu Pixeltripeln Zeile für Zeile.
 
 \begin{equation}
 \begin{split}
@@ -70,7 +70,7 @@ Vor Datenübertragung muss der Datenstrom in Schichten der Länge L aufgeteilt w
 \end{split}
 \end{equation}
 
-Die Modulationsamplitude A ist ein wichtiger Parameter für Datenübertragung. Im Prinzip kann die Amplitude in verschieden Kanal unabhängig gewählt werden, um die Systemleistung zu optimieren. In diesen Arbeiten setzen die Amplitude gleichwertig.
+Die Modulationsamplitude A ist ein wichtiger Parameter für die Datenübertragung. Im Prinzip kann die Amplitude in verschieden Kanälen unabhängig gewählt werden um die Systemleistung zu optimieren. In dieser Arbeiten werden alle Amplituden auf den gleichen Wert gesetzt.
 
 \begin{equation}
  A_R=A_G=A_B=A        
@@ -85,7 +85,7 @@ Das differentielle Modulationsverfahren ordnet jede Sequenz von $\left\{-A, A\ri
 \end{split}
 \end{equation}
 
-Ein Beispiel einer modulierten Bildfolge ist in Abbildung 2.4 gezeigt. Das Hinzufügen der modulierten Daten (hier mit A = 4) zu dem Videoeingang ergibt die Anzeigeamplituden in der rechten Spalte.
+Ein Beispiel einer modulierten Bildfolge ist in Abbildung \ref{fig:David4} gezeigt. Das Hinzufügen der modulierten Daten (hier mit A = 4) zu dem Videoeingang ergibt die Anzeigeamplituden in der rechten Spalte.
 \newpage
 
 \begin{figure}[htb]
@@ -95,7 +95,7 @@ Ein Beispiel einer modulierten Bildfolge ist in Abbildung 2.4 gezeigt. Das Hinzu
 	\label{fig:David4}
 \end{figure}
 
-Im Vergleich zu Luminanzteil Y die Anzeigequalität in U und V Komponente ist signifikant besser, wenn Informationen in Chrominanz wiederholt und moduliert werden. Auf diese Weise wird die Gesamtleuchtdichte eines Pixel-Triple durch die Datenmodulation nicht beeinflusst.Die Umwandlungsmatrix, angegeben von \gls{ITU-R BT.709} für \gls{HDTV} Display von Standard $(R,G,B)$ zur Standard $(Y,U,V)$ läuft:
+Im Vergleich zu Luminanzteil Y ist die Anzeigequalität in der U und V Komponente signifikant besser, wenn Informationen in Chrominanz wiederholt und moduliert werden. Auf diese Weise wird die Gesamtleuchtdichte eines Pixel-Triple durch die Datenmodulation nicht beeinflusst. Die Umwandlungsmatrix, angegeben von \gls{ITU-R BT.709} für \gls{HDTV} Display des Standards $(R,G,B)$ zum Standard $(Y,U,V)$ läuft:
 
 \begin{equation}
    T = \begin{pmatrix}
@@ -105,7 +105,7 @@ Im Vergleich zu Luminanzteil Y die Anzeigequalität in U und V Komponente ist si
 \end{pmatrix}  
 \end{equation}
 
-Das Videosignal $s(i,j,k)$ muss vor dem Anwenden der Modulation in Y-, U- und V-Komponenten umgewandelt werden. Die nachfolgende inverse Konvertierung erklärt das Display-Eingangssignal in Abbildung 2.3:
+Das Videosignal $s(i,j,k)$ muss vor dem Anwenden der Modulation in Y-, U- und V-Komponenten umgewandelt werden. Die nachfolgende inverse Konvertierung erklärt das Display-Eingangssignal in Abbildung \ref{fig:David3}:
 
 \begin{equation}
 \begin{split}
@@ -138,7 +138,7 @@ Das Videosignal $s(i,j,k)$ muss vor dem Anwenden der Modulation in Y-, U- und V-
 \end{split}
 \end{equation}
 
-Diese Art der Modulation kann als eine Modulation des roten und des blauen Subpixels betrachtet werden, während das grüne Subpixel verwendet wird, um die Änderung der Luminanz des Pixel-Tripels zu kompensieren. Durch Definition korreliert $A_U$ mit $A_B$ und $A_V$ mit $A_R$.
+Diese Art der Modulation kann als eine Modulation des roten und des blauen Subpixels betrachtet werden, während der grüne Subpixel verwendet wird, um die Änderung der Luminanz des Pixel-Tripels zu kompensieren. Durch Definition korreliert $A_U$ mit $A_B$ und $A_V$ mit $A_R$.
 
 \begin{equation}
    \begin{pmatrix}
@@ -156,8 +156,7 @@ Diese Art der Modulation kann als eine Modulation des roten und des blauen Subpi
 
 \subsection{DatenBlock}
 
-Um die Anforderungen an die Kameraauflösung zu lockern, Ein einfaches und unkompliziertes Verfahren ist Zuordnung jedes Datenbits zu einem Block von $B_X \times B_Y$ Pixeln.
-
+Ein einfaches und unkompliziertes Verfahren um die Anforderungen an die Kameraauflösung zu lockern, ist die Zuordnung jedes Datenbits zu einem Block von $B_X \times B_Y$ Pixeln.
 \begin{equation}
 \begin{split}
   & d(l)\rightarrow d(x,y,k) \qquad 0\le l <L \\
@@ -167,7 +166,7 @@ Um die Anforderungen an die Kameraauflösung zu lockern, Ein einfaches und unkom
 \end{split}
 \end{equation}
 
-Wenn die Anzahl der Pixel pro Zeile kein Vielfaches von $B_X$ ist oder wenn die Anzahl der Pixel kein Vielfaches von $B_Y$ ist, muss die Anzahl der Pixel und Zeilen, die für die Modulation in Gleichung $\left(2.5\right)$ verwendet werden, ersetzt werden durch:
+Wenn die Anzahl der Pixel Pro Zeile bzw. Spalte kein Vielfaches von $B_X$ bzw. $B_Y$ ist, muss die Anzahl der Pixel Pro Zeile bzw Spalten, die für die Modulation in Gleichung $\left(2.8\right)$ verwendet werden, ersetzt werden durch:
 
 \begin{equation}
 \begin{split}
@@ -176,8 +175,7 @@ Wenn die Anzahl der Pixel pro Zeile kein Vielfaches von $B_X$ ist oder wenn die 
 \end{split}
 \end{equation}
 
-% \newpage
-In dieser Arbeit werden das DatenBlock für quadratische Blöcke gesetzt.
+In dieser Arbeit ist der Datenblock quadratisch.
 
 \begin{equation}
    B_X = B_Y = B.
@@ -187,17 +185,17 @@ In dieser Arbeit werden das DatenBlock für quadratische Blöcke gesetzt.
 \section{Anwendungsgebiete} 
 %\label{sec:Anwendungsbereiche}
 
-Die Datenübertragungsrate des \gls{david}-Systems wird voraussichtlich erreicht bis zu 100 Mbit/s. Es gehöre	zu einer Sichtlinienübertragung für kurze Verbindungen. Geeignete Abdeckungsbereichen hängen von der Größe des Displays und der Kameraoptik ab. Obwohl im Vergleich zum letzten WLAN- Versionen \gls{ieee} 802.11, die Leistung scheint nicht so attraktiv. Der Vorteil liegt nicht nur in der wachsenden Leistungsfähigkeit von Video-Display und Kamera, aber auch die Option zur Wiederverwendung der bestehenden Hardware, die zum Zeigen des Videos installiert wurde. Ein empfohlene praktische Anwendungsbereich des \gls{david}s ist öffentlicher Ort, z.B. U-Bahn-Station, großes Stadion und so weiter. Annehmen eine Situation, wenn die Leute auf ihre U-Bahn warten, sie können ihre eigene Software aktualisieren, indem Sie einfach auf die zeigende Werbung in dem Bildschirm leiten.
+Die Datenübertragungsrate des \gls{david}-Systems beträgt voraussichtlich bis zu 100 Mbit/s. Es gehört zu einer Sichtlinienübertragung für kurze Strecken. Geeignete Abdeckungsbereiche hängen von der Größe des Displays und der Kameraoptik ab. Im Vergleich zu den letzten WLAN-Versionen \gls{ieee} 802.11, erscheint die Leistung zunächst unattraktiv. Dieses spezielle Verfahren der Datenübertragung macht es jedoch zu einem Kandidaten für viele praktische Anwendungen. Außer den Hauptvorteilen von VLC, der Vorteil liegt auch in die Option zur Wiederverwendung der bestehenden Hardware, die zum Zeigen des Videos eingebaut wurde. Ein empfohlene praktische Anwendungsbereich des \gls{david}-Systems ist öffentlicher Ort, wie U-Bahn-Station, großes Stadion und so weiter. Angenommen in eine Situation, wo Passanten auf eine U-Bahn warten und ihre Software mit Hilfe von Digitalen Werbetafeln aktualisieren können, indem sie ihre Kamera auf die Werbung richten.
 
-Berücksichtigen der Eigenschaften des \gls{david}s, d.h. die Synchronisation von Videospielen und Datenübertragung. Viele Anwendungsszenarien können in Betracht gezogen werden und scheinen sehr attraktiv zu sein. Die drei Hauptszenarien sind:
+Durch Berücksichtigung der Eigenschaften des \gls{david}s, z.B. Synchronisation von Anwendungen und Datenübertragung, können viele attraktive Anwendungszenarien in Betracht gezogen werden. Drei Hauptszenarien sind: 
 
 \begin{itemize}
-  \item Indoor-individuelle Kommunikation: Kurzstreckenverbindungen basieren auf relativ kleinen (Tablet-Größe) Bildschirm, Anwendungen z.B. die Übertragung von Hintergrundinformationen an Besucher im Museum, Kiosk.
-  \item Indoor-Multicast-Kommunikation:Streckabstand ist länger als ersten Fall auf relativ größer (40-100") Bildschirm, Anwendungen z.B. während Videoabspielen Besucher die Anwendungsdaten oder Mediendateien herunterladen können im Kiosk, Restaurant.
-  \item Freien Kommunikation: Größter Bildschirm wie im Einkaufszentren oder Sport-Arenen, Anwendungen können denen des zweiten Szenarios ähneln.
+  \item Indoor-individuelle Kommunikation: Kurzstreckenverbindungen basieren auf relativ kleinen (Tablet-Größe) Bildschirmen, Anwendungen wie z.B. die Übertragung von Hintergrundinformationen an Besucher im Museum oder Kiosk.
+  \item Indoor-Multicast-Kommunikation: Streckenabstand ist länger als im ersten Fall auf relativ großem (40-100") Bildschirm, Anwendungen wie z.B. Herunterladen von Anwendungsdateien oder Mediendateien im Kiosk oder Restaurant.
+  \item Freie Kommunikation: Riesige Bildschirme wie in Einkaufszentren oder Sport-Arenen. Anwendungen können denen des zweiten Szenarios ähneln.
 \end{itemize}
 
-Sobald die Dienste auf öffentlichen Bildschirmen implementiert werden, kann Leute mit Hilfe eines modernen Smartphones, die mit einer geeigneten Kamera eingebaut ist, nach der Installation einer neuen App innovative wahrnehmen.
+Sobald die Dienste auf öffentlichen Bildschirmen implementiert werden, können Benutzer mit Hilfe eines modernen Smartphones mit einer geeigneten Kamera nach der Installation einer neuen App Innovation wahrnehmen.
 
 
 

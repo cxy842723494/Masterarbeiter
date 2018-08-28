@@ -4,8 +4,8 @@
 \babel@toc {ngerman}{}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Section}{1}{section.1.1}
-\contentsline {chapter}{\numberline {2}DaVid}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung des DaViD}{3}{section.2.1}
+\contentsline {chapter}{\numberline {2}\gls {david}}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung des \gls {david}s}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Systemmodell}{4}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Modulationsverfahren}{5}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}DatenBlock}{8}{subsection.2.2.2}
@@ -13,25 +13,25 @@
 \contentsline {chapter}{\numberline {3}Erste Methode}{10}{chapter.3}
 \contentsline {section}{\numberline {3.1}Allgemeine Struktur}{10}{section.3.1}
 \contentsline {section}{\numberline {3.2}Bildregistrierung}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}SURF}{13}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}RANSAC}{18}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.1}\gls {surf}}{13}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}\gls {ransac}}{18}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Bilder Umwandlung}{22}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Differenzbild Optimierung}{33}{section.3.3}
 \contentsline {section}{\numberline {3.4}Bildverarbeitung}{36}{section.3.4}
 \contentsline {section}{\numberline {3.5}QR Musters Detektion}{37}{section.3.5}
-\contentsline {chapter}{\numberline {4}Zweite Methode}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{41}{section.4.1}
-\contentsline {section}{\numberline {4.2}Binarisierung}{44}{section.4.2}
-\contentsline {section}{\numberline {4.3}Morphologie}{47}{section.4.3}
-\contentsline {section}{\numberline {4.4}Canny detection}{51}{section.4.4}
-\contentsline {section}{\numberline {4.5}Hough Transformation}{55}{section.4.5}
-\contentsline {chapter}{\numberline {5}Auswertung}{57}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section}{57}{section.5.1}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{58}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section}{58}{section.6.1}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{59}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{59}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{61}{chapter*.40}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{63}{chapter*.41}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{64}{chapter*.42}
-\contentsline {chapter}{\nonumberline Literatur}{65}{chapter*.43}
+\contentsline {chapter}{\numberline {4}Zweite Methode}{42}{chapter.4}
+\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{42}{section.4.1}
+\contentsline {section}{\numberline {4.2}Binarisierung}{45}{section.4.2}
+\contentsline {section}{\numberline {4.3}Morphologie}{50}{section.4.3}
+\contentsline {section}{\numberline {4.4}Canny detection}{54}{section.4.4}
+\contentsline {section}{\numberline {4.5}Hough Transformation}{58}{section.4.5}
+\contentsline {chapter}{\numberline {5}Auswertung}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section}{61}{section.5.1}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{62}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section}{62}{section.6.1}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{63}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{63}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{65}{chapter*.47}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{67}{chapter*.48}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{68}{chapter*.49}
+\contentsline {chapter}{\nonumberline Literatur}{69}{chapter*.50}

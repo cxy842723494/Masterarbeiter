@@ -42,7 +42,7 @@ y(3:4) = y(5-i);
 figure, imshow(U1,[]);
 % differenzbilder
 %figure, imshow(diff(:,:,1),[])
-
+%figure, imshow(diffplus,[])
 hold on
 plot(x(1:2), y(1:2), 'r', 'LineWidth', 2)
 plot(x(2:3), y(2:3), 'r', 'LineWidth', 2)

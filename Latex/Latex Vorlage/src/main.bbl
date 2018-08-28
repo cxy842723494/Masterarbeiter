@@ -214,8 +214,8 @@
       \strng{authorbibnamehash}{fc26f22afcddeded198fab29d715e89a}
       \strng{authornamehash}{fc26f22afcddeded198fab29d715e89a}
       \strng{authorfullhash}{fc26f22afcddeded198fab29d715e89a}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0001-0782}
@@ -252,8 +252,8 @@
       \strng{authorbibnamehash}{a21bd48f3051e7658e90961a9a30072b}
       \strng{authornamehash}{a21bd48f3051e7658e90961a9a30072b}
       \strng{authorfullhash}{a21bd48f3051e7658e90961a9a30072b}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
@@ -278,8 +278,8 @@
       \strng{authorbibnamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
       \strng{authornamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
       \strng{authorfullhash}{4531dc3ea86ad7c21ff2c751725cbf58}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0018-9472}
@@ -310,8 +310,8 @@
       \strng{authorbibnamehash}{2f780c34a67ad022b73f934e6290bd09}
       \strng{authornamehash}{2f780c34a67ad022b73f934e6290bd09}
       \strng{authorfullhash}{2f780c34a67ad022b73f934e6290bd09}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0162-8828}
@@ -347,8 +347,8 @@
       \strng{authorbibnamehash}{7c3ed3daacd1422e2b72547e54c30980}
       \strng{authornamehash}{7c3ed3daacd1422e2b72547e54c30980}
       \strng{authorfullhash}{7c3ed3daacd1422e2b72547e54c30980}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2013 IFIP Wireless Days (WD)}
@@ -384,8 +384,8 @@
       \strng{authorbibnamehash}{d9e178cc01874be6cb8e994e2a250982}
       \strng{authornamehash}{d9e178cc01874be6cb8e994e2a250982}
       \strng{authorfullhash}{d9e178cc01874be6cb8e994e2a250982}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -404,8 +404,8 @@
       \list{publisher}{1}{%
         {IEEE}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labeltitlesource}{title}
       \field{abstract}{The protocol and compatible interconnection for data communication devices using low data-rate, low-power, and low-complexity short-range radio frequency (RF) transmissions in a wire less personal area network (WPAN) were defined in IEEE Std 802.15.4-2006. In this revision, the market applicability of IEEE Std 802.15.4 is extended, the ambiguities in the standard are removed, and the improvements learned from implementations of IEEE Std 802.15.4-2006 are included.}
       \field{isbn}{9780738166834}
