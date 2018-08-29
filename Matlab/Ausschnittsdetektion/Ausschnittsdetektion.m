@@ -23,7 +23,7 @@ diffc_r  = diffplus;
 % einzelbilder
 % diffc_r = gather(conv2([1 2 1]/2,[1 2 1]/2, yuv(1).U ,'same'));
 cr = estimateModCorners(diffc_r,50/100,7,10);
-figure, imshow(diffc_r);
+figure, imshow(diffc_r,[]);
 
 % differenzbilder
 %diffc_r = gather(conv2([1 2 1]/2,[1 2 1]/2, diff(:,:,1),'same'));
@@ -39,7 +39,7 @@ y(3:4) = y(5-i);
 
 % einzelbilder
 % figure, imshow(yuv(1).U,[]);
-figure, imshow(U1,[]);
+figure, imshow(diffc_r,[]);
 % differenzbilder
 %figure, imshow(diff(:,:,1),[])
 %figure, imshow(diffplus,[])
@@ -49,12 +49,21 @@ plot(x(2:3), y(2:3), 'r', 'LineWidth', 2)
 plot(x(3:4), y(3:4), 'r', 'LineWidth', 2)
 plot([x(1) x(4)], [y(1) y(4)], 'r', 'LineWidth', 2)
 
-plot(cr(1,1),cr(2,1), 'r.');
-plot(cr(1,2),cr(2,2), 'r.');
-plot(cr(1,3),cr(2,3), 'r.');
-plot(cr(1,4),cr(2,4), 'r.');
+% plot(cr(1,1),cr(2,1), 'r.');
+% plot(cr(1,2),cr(2,2), 'r.');
+% plot(cr(1,3),cr(2,3), 'r.');
+% plot(cr(1,4),cr(2,4), 'r.');
+% 
+% plot(cr(1,1),cr(2,1), 'g.');
+% plot(cr(1,2),cr(2,2), 'g.');
+% plot(cr(1,3),cr(2,3), 'g.');
+% plot(cr(1,4),cr(2,4), 'g.');
 
-plot(cr(1,1),cr(2,1), 'g.');
-plot(cr(1,2),cr(2,2), 'g.');
-plot(cr(1,3),cr(2,3), 'g.');
-plot(cr(1,4),cr(2,4), 'g.');
+
+ux = [1,1920, 1920, 1];
+vx = [1,1, 1080, 1080];
+
+[tformY, ~, ~] = estimateGeometricTransform(...
+    [x; y].', [ux; vx].', 'projective');
+ diffc_rw = imwarp(diffc_r, tformY, 'OutputView', imref2d(size(diffc_r)));
+ figure, imshow(diffc_rw,[]);

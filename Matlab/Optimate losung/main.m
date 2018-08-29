@@ -1,5 +1,5 @@
 clean;
-
+close all;
 %% Load the imagesf from the floder
 
 file_path = uigetdir('D:\xch\Daten\xch\','Select the Folder');
@@ -16,7 +16,7 @@ file_path = uigetdir('D:\xch\Daten\xch\','Select the Folder');
 diff = functions.creatDifferentbild(U2new);
 Mal_num = 3;
 % Nofind = 0;
-
+% implay(mat2gray(gather(diff(:,:,:))));
 while true
 
 diffplus = functions.sum_of_diff(abs(diff),Mal_num);
@@ -36,7 +36,7 @@ diffplus = functions.sum_of_diff(abs(diff),Mal_num);
 
 %% QR Pattern detection
 
-[FiPx,FiPy,ux,vx,cr,Nofind] = detectFIP(BW);
+[FiPx,FiPy,ux,vx,cr,tformY,Nofind] = detectFIP(BW);
 
 if Nofind
     Mal_num = Mal_num+1;
@@ -50,6 +50,24 @@ end
 % fn1='YUV_2018_07_06_17_08_50_411.yuv';
 % [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(fn1);
 % U1 = U2new(:,:,1);
+
+figure, imshow(Y2new(:,:,1),[]),hold on
+functions.plotResult(cr);
+
+Y = imwarp(Y2new(:,:,1), tformY, 'OutputView', imref2d(size(Y2new(:,:,1))));
+    figure, imshow(Y,[]),hold on;
+    
+% for i =200:200:1080
+%      for j = 200:200:1920
+%         plot(j,i,'r.');
+%      end 
+% end
+
+% Yw(:,:,1) = imwarp(Y(:,:,1), tformY, 'OutputView', imref2d(size(Y(:,:,1))));
+%     figure, imshow(Yw(:,:,1),[]);
+
+
+
 figure, imshow(U2new(:,:,1),[]),hold on
 functions.plotResult(cr);
 

@@ -1,7 +1,8 @@
 %% 
+clean;
 %% Define the modulation parameters
-modAmp = 9;
-blocksize = 6;
+modAmp = 6;
+blocksize = 4;
 
 inputName = 'windmill.png';
 outputName = 'Stillimage';
@@ -36,6 +37,8 @@ vMod.FrameRate = outputFramerate;
 open(vMod);
 
 currentFrames = zeros(size(v,1), size(v,2),3,2);
+height=size(v,1);
+width=size(v,2);
 % getNewFrame = true;
 % counter = 0.1;
 % minAmp = 10;
@@ -46,7 +49,7 @@ for i=1:2:nbFrames
     Img = currentFrames(:,:,:,1);
     imwrite(Img,'result.jpg')
     % Add Pattern for SpatialSync
-    qrPatternSize = 12; % origin 12,je small,je better the quality of vidio,but must consider the recterangle detection 
+    qrPatternSize = 8; % origin 12,je small,je better the quality of vidio,but must consider the recterangle detection 
 %     currentFrames(:,:,:,1) = addQrFinderPattern(currentFrames(:,:,:,1), qrPatternSize);
 %     currentFrames(:,:,:,2) = addQrFinderPattern(currentFrames(:,:,:,2), qrPatternSize);
    
@@ -60,6 +63,17 @@ for i=1:2:nbFrames
      %% add qr patternm in u/v
       dataMatrixU = addQrFinderPattern(dataMatrixU, qrPatternSize);
       dataMatrixV = addQrFinderPattern(dataMatrixV, qrPatternSize);
+
+
+%     for i = 200:200:height
+%         dataMatrixU(i,:)=255;
+%     end
+% 
+%     for j = 200:200:width
+%         dataMatrixU(:,j)=255;
+%     end
+%     figure,imshow(dataMatrixU),hold on;
+
      
     Trgb2yuv = [0.2126 0.7152 0.0722; -0.1146 -0.3854 0.5000; 0.5000 -0.4542 -0.0458]; % BT.709
     Tyuv2rgb = inv(Trgb2yuv);
@@ -69,8 +83,6 @@ for i=1:2:nbFrames
     dataMatrixB = Tyuv2rgb(3,2)*dataMatrixU + Tyuv2rgb(3,3)*dataMatrixV;
     
     dataMatrix = cat(3, dataMatrixR, dataMatrixG, dataMatrixB);
-
-    
     
    
    % Modulate the Frames
@@ -79,6 +91,8 @@ for i=1:2:nbFrames
 %    figure, imshowpair(currentFrames(:,:,:,1),currentFrames(:,:,:,2),'montag')
 %    figure,imshow(currentFrames(:,:,:,1));
 %    figure,imshow(currentFrames(:,:,:,2));
+
+
    % Save in new file
    for i2=1:2
         writeVideo(vMod,uint8(255*currentFrames(:,:,:,i2)));
