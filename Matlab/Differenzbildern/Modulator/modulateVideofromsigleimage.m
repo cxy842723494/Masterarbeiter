@@ -1,7 +1,7 @@
 %% 
 clean;
 %% Define the modulation parameters
-modAmp = 6;
+modAmp = 4;
 blocksize = 4;
 
 inputName = 'windmill.png';
@@ -61,8 +61,8 @@ for i=1:2:nbFrames
     dataMatrixU = imresize(dataMatrixU, blocksize, 'Nearest');
     dataMatrixV = imresize(dataMatrixV, blocksize, 'Nearest');
      %% add qr patternm in u/v
-      dataMatrixU = addQrFinderPattern(dataMatrixU, qrPatternSize);
-      dataMatrixV = addQrFinderPattern(dataMatrixV, qrPatternSize);
+%       dataMatrixU = addQrFinderPattern(dataMatrixU, qrPatternSize);
+%       dataMatrixV = addQrFinderPattern(dataMatrixV, qrPatternSize);
 
 
 %     for i = 200:200:height

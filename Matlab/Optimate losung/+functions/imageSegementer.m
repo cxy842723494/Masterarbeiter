@@ -18,19 +18,19 @@ else
 end
 
 % Threshold image - adaptive threshold
-BW = imbinarize(X, 'adaptive', 'Sensitivity', 0.500000, 'ForegroundPolarity', 'bright');
-
+% BW = imbinarize(X, 'adaptive', 'Sensitivity', 0.500000, 'ForegroundPolarity', 'bright');
+BW = imbinarize(X);
 % Active contour
 % iterations = 5;
 % BW = activecontour(X, BW, iterations, 'edge');
 
 % Close mask with square
-width = 5;
+width = 4; %5
 se = strel('square', width);
 BW = imclose(BW, se);
 
 % Open mask with square
-width = 5;
+width = 4;% 5
 se = strel('square', width);
 BW = imopen(BW, se);
 

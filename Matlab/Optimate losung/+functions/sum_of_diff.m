@@ -20,7 +20,7 @@ function diffplus = sum_of_diff(diff,Mal_num)
     v=v(1:Mal_num);           
     idx=zeros(1,Mal_num);
     diffplus = zeros(size(diff(:,:,1)));
-     for i=1:3
+     for i=1:Mal_num
             idx(i) = find(energie==v(i));
             diffplus = diffplus + diff(:,:,idx(i));
      end

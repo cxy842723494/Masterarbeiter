@@ -31,7 +31,7 @@ function [FIPx,FIPy,ux,vx,cr,tformY,Nofind] = detectFIP(Img_handle)
     s.sizeH = ceil(h/2);  %h/2,  192*3*(uint16(w/1920));250; % 250:450 d.h. the ratio of the tv 3:4
     s.sizeW = ceil(w/2);% w/2,  256*4*(uint16(w/1920));450; % 192:256 d.h. the ratio of the tv 9:16
     s.warpRatio = 1;0.9;
-    s.FIPsize = 108*(w/1920);%;108 % 12 pixels per module 1:1:3:1:1 +10
+    s.FIPsize = 72*(w/1920);%;108 : 12 pixels per module 1:1:3:1:1 +10  72: 8*9
     PatternAreaBW = zeros(s.sizeH, s.sizeW, 4);
     y = Y(:,:,1);
     if max(y(:)) > 1
