@@ -75,14 +75,15 @@ function [FIPx,FIPy,ux,vx,cr,tformY,Nofind] = detectFIP(Img_handle)
 
     FIPx = zeros(1, 4);
     FIPy = zeros(1, 4); 
-    
+    Nofind =0 ;
+     
         for p = 1 : 4 %1:4
 %         PatternAreaBW(:,:,1)=BW;
         patternInfo = FinderPatternFinder(not(PatternAreaBW(:,:,p)),true);
 %         patternInfo = FinderPatternFinder(PatternAreaBW(:,:,p),true);
         FIPx(p) = patternInfo.posX;
         FIPy(p) = patternInfo.posY;
-        Nofind =0 ;
+       
         
         while (FIPx(p)==0||FIPy(p)==0)
             Nofind =1 ;
