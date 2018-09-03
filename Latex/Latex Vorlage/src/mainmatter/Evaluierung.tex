@@ -5,22 +5,17 @@ In diesem Kapitel soll der zuvor implementierte Verfahren evaluiert werden.  las
 
 \section{Evaluierung der 1.Verfahren}
 
-Hier wird das 1. Verfahren mit dessen Genauigkeit und Leistunsfähigkeit evaluiert. Als in Kapital 3 vorstellt, diese Methode ist häuptlich für den Fall, bei der Aufnahmen die Smartphone in der Hand gehalten. Dann brauchen eine Bildregistration Operation, um die Bildern in dasselbe Korordinatensystem zu transformieren. Die Funktion dieses Moduls wirkt sich direkt auf die Entstehung der Differenzbildern aus und hat einen wesentlichen Einfluss auf die spätere Erkennung, insbesondere die Erkennung von QR-Mustern. Deswegen wird eine Analysierung dafür durchgeführt.
+Hier wird das 1. Verfahren mit dessen Genauigkeit und Leistunsfähigkeit evaluiert. Als in Kapital 3 vorstellt, diese Methode ist häuptlich für den Fall, bei der Aufnahmen die Smartphone in der Hand gehalten. Dann brauchen eine Bildregistration Operation, um die Bildern in dasselbe Korordinatensystem zu transformieren. Die Funktion dieses Moduls wirkt sich direkt auf die Entstehung der Differenzbildern aus und hat einen wesentlichen Einfluss auf die spätere Erkennung. Deswegen wird zuerst eine Analysierung dafür durchgeführt.
 
-Um die Leistung visuell zu verstehen, wird einen Satz Parameter gesetzt. Das Modulationsamplitude erstellt als 6, Datenblock als $ 4 \times 4 Pixel$, QR Muster Größe als $ 72 \times 72 Pixel $.  In der Rhein von Bildern wird das erste Bild und das letzte Bild verglichen, wie in Abbildung \ref{fig:vorregistration} zeigt. 
-
-
-%Die durchschnittliche Entfernung der entsprechenden Pixel zwischen den zwei Bildern beträgt ca.2 Pixel. 
-%Abbildung \ref{fig:nachregis} zeigt das Bild nach der Bildregistration. Wie zu sehen ist, ist der Abstand gut komprimiert. %Die durchschnittliche Entfernung hier beträgt ca. 0.45 Pixel.
-
+Um Leistung intuitiv auszudrücken, lassen sich einen Satz Parameter setzen. Das Modulationsamplitude erstellt als 6, Datenblock als $ 4 \times 4 Pixel$, QR Muster Größe als $ 72 \times 72 Pixel $.  In der Rhein von Bildern wird das erste Bild und das letzte Bild verglichen, wie in Abbildung \ref{fig:vorregistration} zeigt. 
 \begin{figure}[H]
  \centering 
-  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/5_Implementirung/vorregistration.pdf}
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/5_Implementirung/vorregistration.pdf}
  \caption{Verschiebung durch Handshake}
  \label{fig:vorregistration}
 \end{figure}
 
-Aus der Abbildung ist deutlich zu erkennen, dass das Bild durch Handshake eine deutliche Verschiebung erfahren hat. Durch die Bildregistration, die in dieser Arbeit vorstellt, kann dieses Problem effektive gelöst werden. Abbildung \ref{fig:Konvergenzkurve} zeigt die Konvergenzkurve des Fehlers J bei der Summenwertbildung im Quadrat aller Korrespondenzpunkte.
+Aus der Abbildung ist deutlich zu erkennen, dass das Bild durch Handshake eine deutliche Verschiebung erfahren hat. Die durchschnittliche Entfernung der entsprechenden Pixel zwischen den zwei Bildern hier beträgt 2.3213 Pixel. Durch die Bildregistration, die in dieser Arbeit vorstellt, kann dieses Problem effektive gelöst werden. Abbildung \ref{fig:Konvergenzkurve} zeigt die Konvergenzkurve des Fehlers J bei der Summenwertbildung im Quadrat aller Korrespondenzpunkte.
 
 \begin{figure}[H]
  \centering 
@@ -29,7 +24,7 @@ Aus der Abbildung ist deutlich zu erkennen, dass das Bild durch Handshake eine d
  \label{fig:Konvergenzkurve}
 \end{figure}
 
-Die vertikale Koordinate repräsentiert den Fehlerwert J und die horizontale Koordinate repräsentiert die Anzahl der Iterationen des Algorithmus. Als zeigt in der Abbildung, wird J nach etwa 10 Iterationen konvergiert. Die konkreten Daten wird in Tabelle \ref{tbl:Daten des Fehlers} gezeigt.
+Die vertikale Koordinate repräsentiert den Fehlerwert J und die horizontale Koordinate repräsentiert die Anzahl der Iterationen des Algorithmus. Als zeigt in der Abbildung, wird J nach etwa 10 Iterationen konvergiert. Die detailliert sammelte Daten wird in Tabelle \ref{tbl:Daten des Fehlers} gegeben.
 
 \begin{table}[htb]
 	\captionabove{Daten des Fehlers}
@@ -53,13 +48,15 @@ Die vertikale Koordinate repräsentiert den Fehlerwert J und die horizontale Koo
 	\end{tabular}
 \end{table} 
 
-Abbildung \ref{fig:Bild nach Registration} zeigt das Bild nach der Bildregistration. Wie zu sehen ist, ist der Feler gut komprimiert.
+Abbildung \ref{fig:Bild nach Registration} zeigt diese Effekt, dass das Bild in Abbildung \ref{fig:vorregistration} durch die Bildregistration entstehen. Wie zu sehen ist, ist der Feler gut komprimiert. Die neue durchschnittliche Entfernung beträgt 0.3073 Pixel.
 \begin{figure}[H]
  \centering 
   \includegraphics[keepaspectratio,width=1.05\textwidth]{images/5_Implementirung/nachregis.pdf}
  \caption{Bild nach Registration}
  \label{fig:Bild nach Registration}
 \end{figure}
+
+Als nächstes folgt eine Gesamtbewertung von Methode 1. Hier wird ein Bild speziell für das Testen verwendet, dh das Gitter wird zum Originalbild hinzugefügt, und die Größe des Gitters wird im Voraus bestimmt.Hier wird ein Gitter von 200 × 200 ausgewählt.
 
 
 \section{Evaluierung der vorhandenen Funktionalität}
