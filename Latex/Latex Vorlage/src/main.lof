@@ -47,9 +47,34 @@
 \contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces \IeC {\"O}ffnung und Schlie\IeC {\ss }ung\relax }}{53}{figure.caption.42}
 \contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Bild nach einer morphologischen Operation\relax }}{54}{figure.caption.43}
 \contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Bin\IeC {\"a}rbild nach der Canny detektion\relax }}{58}{figure.caption.44}
-\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Anglekoordinate in einem Koordinatensystem\relax }}{59}{figure.caption.45}
+\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces $ \rho ,\theta $ Parameterraum\relax }}{59}{figure.caption.45}
 \contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Houghdetektion\relax }}{60}{figure.caption.46}
+\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces Parametrisierte Linie\relax }}{62}{figure.caption.47}
+\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces Integral der Funktion $ f(x,y) $\relax }}{62}{figure.caption.47}
+\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces Radon Transformation als Linienintegral\relax }}{62}{figure.caption.48}
+\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Parallele Linienintegral mit gleichen $ \theta $\relax }}{62}{figure.caption.48}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Bilder vor Bildregistration\relax }}{65}{figure.caption.50}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Bilder nach Bildregistration\relax }}{65}{figure.caption.50}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Ein zu detektierendes Bild\relax }}{65}{figure.caption.51}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Histogramm\relax }}{65}{figure.caption.51}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Bin\IeC {\"a}r\relax }}{66}{figure.caption.52}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Morphologisch\relax }}{66}{figure.caption.52}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces QR Muster\relax }}{66}{figure.caption.53}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Mudulaitionbereich\relax }}{66}{figure.caption.53}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Ergebnis der 1. Methode\relax }}{67}{figure.caption.54}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Ein zu detektierendes Bild\relax }}{68}{figure.caption.55}
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Binarisierung\relax }}{68}{figure.caption.55}
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Morphologisch\relax }}{68}{figure.caption.56}
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Canny Detektion\relax }}{68}{figure.caption.56}
+\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Cross Dilatation\relax }}{68}{figure.caption.57}
+\contentsline {figure}{\numberline {\relax 5.15}{\ignorespaces Radon Detektion\relax }}{68}{figure.caption.57}
+\contentsline {figure}{\numberline {\relax 5.16}{\ignorespaces Ergebnis der 2. Methode\relax }}{69}{figure.caption.58}
+\contentsline {figure}{\numberline {\relax 5.17}{\ignorespaces Ergebnis auf Smartphone\relax }}{70}{figure.caption.60}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Verschiebung durch Handshake\relax }}{72}{figure.caption.61}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Konvergenzkurve von J\relax }}{72}{figure.caption.62}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Bild nach Registration\relax }}{73}{figure.caption.64}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

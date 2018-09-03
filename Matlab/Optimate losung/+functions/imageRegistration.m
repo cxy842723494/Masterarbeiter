@@ -92,7 +92,7 @@ function [Y2new,U2new,V2new] = imageRegistration(file_path)
 %     pts2h = Pts2h(Index).data;
 
     % Auswert
-%     functions.AuswertForImageregistration(p0,pts1h,pts2h,frame_size,State,Igray1) 
+    functions.AuswertForImageregistration(p0,pts1h,pts2h,frame_size,State,Igray1) 
 
     % Transform Matrix
     p2_1 =zeros(frame_size);
@@ -169,7 +169,7 @@ end
  %% P0 parameter include Rotation 
     function [p0,J,W,J0] = J_Rotation(pts1h, pts2h, State,frame_size)
     p0=[0 0 0];
-    dp=[2 2 2 ]; % mit 0.1 grad verändern 
+    dp=[0.1 0.1 0.1 ]; % mit 0.1 grad verändern 
     term_dp=[0.001 0.001 0.001 ]; % threshold 0.001 grad
     [p0,J,W,J0] = functions.J_optimizieren(p0, dp, term_dp, pts1h, pts2h, frame_size,State);
     end
@@ -177,7 +177,7 @@ end
 %% P0 parameter include Rotation and Focal length: 
     function [p0,J,W,J0] = J_Rotation_focal(pts1h, pts2h, State,frame_size)
     p0=[0 0 0 -3270];  % 3200 or -3200
-    dp=[2 2 2 5]; % mit 0.1 grad verändern and focal length mit 1 pixel
+    dp=[0.1 0.1 0.1 0]; % mit 0.1 grad verändern and focal length mit 1 pixel
     term_dp=[0.001 0.001 0.001 0.001]; % 
     [p0,J,W,J0] = functions.J_optimizieren(p0, dp, term_dp, pts1h, pts2h, frame_size, State);
     end
@@ -185,8 +185,8 @@ end
 %% P0 parameter include Rotation Translation und Focal length:
     function [p0,J,W,J0] = J_Rotation_Translation(pts1h, pts2h, State,frame_size)
     p0=[0 0 0 0 0 0];  % first 3 Rotation others Translation
-    dp=[2 2 2 0.01 0.01 0.01]; % % mit 0.1 grad verändern and 0.1 mm Translation
-    term_dp=[0.001 0.001 0.001 0.000001 0.000001 0.000001]; % 
+    dp=[0.1 0.1 0.1 0.001 0.001 0.001]; % % mit 0.1 grad verändern and 0.1 mm Translation
+    term_dp=[0.001 0.001 0.001 0.0001 0.0001 0.0001]; % 
     [p0,J,W,J0] = functions.J_optimizieren(p0, dp, term_dp, pts1h, pts2h, frame_size, State);
     end
 

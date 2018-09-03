@@ -13,7 +13,7 @@ Dieses Verfahren verwendet die Charakteristiken der Datenmodulation des \gls{dav
  \label{fig:Strukturdiagramm}
 \end{figure}
 
-Das Objekt, das mit dieser Methode bearbeitet wird, ist ein Reihe aus einer spezifischen Smartphone App sammelt Bild. Diese App wurde speziell für das \gls{david}-System entwickelt und erstellt eine Reihe von Bildern bei jeder Aufnahme. Im Allgemeinen wird die Kamera bei der Aufnahme in der Hand gehalten. Aufgrund von Handschütteln während der Aufnahme entsteht eine leichte Verschiebung zwischen den Bildern. Um dieses Problem zu beheben, wird eine Bildregistrierung Operation verwendet, die zwei Bilder einer Aufnahme in dasselbe Koordinatensystem konvertiert. Zuerst werden durch \gls{surf} Merkmalserkennung Merkmale der Bilder verglichen. 
+Das Objekt, das mit dieser Methode bearbeitet wird, ist ein Reihe aus einer spezifischen Smartphone App $ ``VLCReceiver" $ sammelt Bild. Diese App wurde speziell für das \gls{david}-System entwickelt und erstellt eine Reihe von Bildern bei jeder Aufnahme. Im Allgemeinen wird die Kamera bei der Aufnahme in der Hand gehalten. Aufgrund von Handschütteln während der Aufnahme entsteht eine leichte Verschiebung zwischen den Bildern. Um dieses Problem zu beheben, wird eine Bildregistrierung Operation verwendet, die zwei Bilder einer Aufnahme in dasselbe Koordinatensystem konvertiert. Zuerst werden durch \gls{surf} Merkmalserkennung Merkmale der Bilder verglichen. 
 Anschließend erhalten wir durch Merkmalsextraktion und Merkmalsanpassung die entsprechenden Punkte zwischen den verglichenen Bildern. Dazu wird ein \gls{ransac} Algorithmus benötigt, um die irrelevanten Korrespondentenpunkte zu beseitigen und die Genauigkeit zu verbessern. Aus dem Kameramodell wird anschließend ein mathematisches Transformationsmodell zwischen den entsprechenden Punkten in den beiden Bildern erstellt. Es ist zu beachten, dass der Prozess zur Lösung des Transformationsmodells als ein nichtlineares Optimierungsproblem angesehen werden kann.
 Durch die Lösung dieses Problems kann die Transformationsmatrix erhalten werden. In dieser Arbeit wird immer das erste Bild als Referenzbild gewählt und nehmen anschließend eine Bildregistrierung mit folgenden Bildern vor. Danach bekommen wir eine Reihe Bilder, die in dasselbe Koordinatensystem umgewandelt werden. Es werden je zwei Bilder subtrahiert, wodurch eine Reihe Differenzbilder entstehen. Um die folgende Detektion zu vereinfachen, wird eine Optimierungsoperation mit der Hilfe der geometrischen Eigenschaft des QR Musters unternommen und erstellen dann ein erkennendes Bild. Anschließend eine Reihe von Bildverarbeitungen bzw. Binarisierung, Medianfilter, Morphologie Operation wird behandelt. Dadurch können vereinzelt Punkte und Lücken, die durch Rauschen und Fehler verursacht wurden, entfernt werden. Schließlich wird es durch die Charakteristik des QR Musters, dessen Breiteverhältnis $1:1:3:1:1$ beträgt um QR Muster zu detektieren, also den Modulationsbereich zu bestimmen. Das Flussdiagramm wird in Abbildung \ref{fig:Flussdiagramm der Methode} gezeigt. Die Details jeden Teils werden in den folgenden Abschnitten beschrieben.
 
@@ -480,11 +480,11 @@ Durch die Umwandlung der obigen vier Koordinatensysteme kann ein Punkt vom Weltk
 \end{split}	
 \end{equation}
 
-Die erste Matrix der rechten Gleichung ist die allgemein bekannte interne Referenz der Kamera. Dagegen ist die zweite Matrix die externe Referenz der Kamera. Beide Parameter der Kamera können durch Zhang Zhengyou \cite{zhangzhengyou} Kalibrierung erhalten werden. Einige typische Kamera Parameter vom Werk aus sind der Tabellen \ref{tbl:params} zu entnehmen.
+Die erste Matrix der rechten Gleichung ist die allgemein bekannte interne Referenz der Kamera. Dagegen ist die zweite Matrix die externe Referenz der Kamera. Beide Parameter der Kamera können durch Zhang Zhengyou \cite{zhangzhengyou} Kalibrierung erhalten werden. Einige typische Kamera Parameter vom Werk aus sind der Tabellen \ref{tbl:Parameter der Kameras im Vergleich} zu entnehmen.
 
 \begin{table}[htb]
 	\captionabove{Parameter der Kameras im Vergleich}
-	\label{tbl:params}
+	\label{tbl:Parameter der Kameras im Vergleich}
 	\footnotesize
 	\centering
 	\rowcolors{2}{white}{gray!25}	%TUgreen!25
@@ -570,7 +570,7 @@ Diese Formel zeigt, dass jeder Punkt in dem Bild i nach der Transformationsmatri
 \textbf{Transformationsoptimierung}
 
 In den letzten beiden Abschnitten wurde die Transformationsmatrix zwischen den beiden Bildern aus dem Kameramodell abgeleitet. Hier in diesen Abschnitt werden die Parameter der Transformationsmatrix berechnet, also wird nun die Transformationsmatrix bestimmt. Hier sind die entsprechenden Punkte von zwei benachbarten Bildern $x_i, x_j$ bekannt, und die Umwandlungsbeziehung dazwischen wird als die Formel 3.26 dargestellt. Angesichts dieser Bedingung 
-kann die Berechnung des Transformationsmatrix als ein Optimierungsproblem formuliert werden, wobei der Fehler J bei der Mittelwertbildung im Quadrat aller Punktkorrespondenzen minimiert werden soll:
+kann die Berechnung des Transformationsmatrix als ein Optimierungsproblem formuliert werden, wobei der Fehler J bei der Summenwertbildung im Quadrat aller Punktkorrespondenzen minimiert werden soll:
 
 \begin{equation}
    J = \sum_{(i,j)}\lVert x_j - Wx_i \rVert ^2
@@ -703,9 +703,9 @@ Durch die Differnzbild-Optimierung, wird ein zu detektierendes Bild erhalten. Ab
 
 Für die Schwellenwertbildung und das Erstellen eines Binärbildes wurde eine Funktion namens $ ``imbinarize" $ in Matlab verwendet. Dieser Funktion wird das Bild übergeben ,damit es einen anpassungsfähigen Schwellwert generiert um das Schwarz-Weiß-Bild zu erstellen. Das ist genug für QR Muster Detektion, weil es nur schwarze und weiße Module enthält, die binär 1 bzw. 0 sind. 
 
-\textbf{Medianfilter}
+%\textbf{Medianfilter}
 
-Der Grund für das Median-Filtern ist, dass manchmal beim Prozess der Binarisierung aus einem Bild Effekte wie Salz- und Pfeffergeräusche entstehen können. Um diesen Fehler zu vermeiden, ist Median Filterung eine zuverlässige Methode. Eine Funktion namens $ ``medfilt2" $ wurde in Matlab verwendet. Zur Verbesserung der Ergebnisse können auch die verschiedenen Fenstergrößen für die Matlab-Funktion verwendet werden.
+%Der Grund für das Median-Filtern ist, dass manchmal beim Prozess der Binarisierung aus einem Bild Effekte wie Salz- und Pfeffergeräusche entstehen können. Um diesen Fehler zu vermeiden, ist Median Filterung eine zuverlässige Methode. Eine Funktion namens $ ``medfilt2" $ wurde in Matlab verwendet. Zur Verbesserung der Ergebnisse können auch die verschiedenen Fenstergrößen für die Matlab-Funktion verwendet werden.
 
 \textbf{Morphologie}
 

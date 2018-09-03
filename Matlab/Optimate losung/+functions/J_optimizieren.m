@@ -21,11 +21,11 @@ function [p0,J,W,J0] = J_optimizieren(p0, dp, term_dp, x1, x2, frame_size, State
         end
     end
     J0 = J_data(1);
-%  switch State
-%      case 0
-%          figure,plot(1:1:i-1,J_data),title(sprintf('i:%d,p0:%f,%f,%f',i-1,p0(1),p0(2),p0(3)));
-%      case 1
-%          figure,plot(1:1:i-1,J_data),title(sprintf('i:%d,p0:%f,%f,%f,%f',i-1,p0(1),p0(2),p0(3),p0(4)));
-%      case 2
-%          figure,plot(1:1:i-1,J_data),title(sprintf('i:%d,p0:%f,%f,%f,%f,%f,%f',i-1,p0(1),p0(2),p0(3),p0(4),p0(5),p0(6)));
-%  end
+ switch State
+     case 0
+         figure,plot(1:1:i-1,J_data),title(sprintf('i:%d,p0:%f,%f,%f',i-1,p0(1),p0(2),p0(3)));
+     case 1
+         figure,plot(1:1:i-1,J_data),title(sprintf('i:%d,p0:%f,%f,%f,%f',i-1,p0(1),p0(2),p0(3),p0(4)));
+     case 2
+         figure,plot(1:1:i-1,J_data),title(sprintf('i:%d,p0:%f,%f,%f,%f,%f,%f',i-1,p0(1),p0(2),p0(3),p0(4),p0(5),p0(6)));
+ end

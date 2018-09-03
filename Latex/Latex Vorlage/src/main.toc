@@ -24,14 +24,22 @@
 \contentsline {section}{\numberline {4.2}Binarisierung}{45}{section.4.2}
 \contentsline {section}{\numberline {4.3}Morphologie}{50}{section.4.3}
 \contentsline {section}{\numberline {4.4}Canny detection}{54}{section.4.4}
-\contentsline {section}{\numberline {4.5}Hough Transformation}{58}{section.4.5}
-\contentsline {chapter}{\numberline {5}Auswertung}{61}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section}{61}{section.5.1}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{62}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section}{62}{section.6.1}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{63}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{63}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{65}{chapter*.47}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{67}{chapter*.48}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{68}{chapter*.49}
-\contentsline {chapter}{\nonumberline Literatur}{69}{chapter*.50}
+\contentsline {section}{\numberline {4.5}Cross Dilatation}{58}{section.4.5}
+\contentsline {section}{\numberline {4.6}Hough Transformation}{59}{section.4.6}
+\contentsline {section}{\numberline {4.7}Radon Transformation}{61}{section.4.7}
+\contentsline {chapter}{\numberline {5}Implementierung}{64}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experiment Umgebung}{64}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementierung der ersten Verfahren}{64}{section.5.2}
+\contentsline {section}{\numberline {5.3}Implementierung der zweiten Verfahren}{67}{section.5.3}
+\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{69}{section.5.4}
+\contentsline {chapter}{\numberline {6}Evaluierung}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}Evaluierung der Bildregistration}{71}{section.6.1}
+\contentsline {section}{\numberline {6.2}Evaluierung der vorhandenen Funktionalit\IeC {\"a}t}{73}{section.6.2}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{74}{chapter.7}
+\contentsline {section}{\numberline {7.1}Section}{74}{section.7.1}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{75}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{75}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{77}{chapter*.65}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{79}{chapter*.66}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{80}{chapter*.67}
+\contentsline {chapter}{\nonumberline Literatur}{81}{chapter*.68}

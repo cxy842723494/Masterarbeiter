@@ -1986,9 +1986,6 @@
     <bcf:citekey order="6">zhangzhengyou</bcf:citekey>
     <bcf:citekey order="7">Ostu</bcf:citekey>
     <bcf:citekey order="8">canny</bcf:citekey>
-    <bcf:citekey order="9">Reinhold:2013fk</bcf:citekey>
-    <bcf:citekey order="9">Moon</bcf:citekey>
-    <bcf:citekey order="9">IEEE2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

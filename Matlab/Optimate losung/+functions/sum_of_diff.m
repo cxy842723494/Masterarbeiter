@@ -38,7 +38,9 @@ function diffplus = sum_of_diff(diff,Mal_num)
      diffplus(a(i),b(i))=0;
      end
      
-%     figure;imshow(A,[]),title('26');
+%     figure;imshow(diff(:,:,19),[]),title('26');
 %     figure;histogram(diff(:,:,86)),title('86');
+%    figure;histogram(diffplus);
 %     figure;imshow(diffplus,[]),title('diffplus');
+% figure;subplot(1,2,1),histogram(diff(:,:,19)),title('Eizige Differenzbild');subplot(1,2,2),histogram(diffplus),title('?berlagertes Differenzbild');
 end

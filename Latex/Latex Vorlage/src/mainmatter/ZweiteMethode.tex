@@ -1,6 +1,6 @@
 \chapter{Zweite Methode} \label{cha:ZweiteMethode}
 
-In diesem Kapitel wird die Realisierung des zweiten Verfahrens eingegangen. Zuerst wird die allgemeine Struktur dieser Methode beschrieben. Dies liefert ein grobes Verständnis der Struktur und des Arbeitsprinzips der gesamten Methode. Anschießend läuft eine Erklärung der Bildverarbeitungen im Detail. Diese besteht aus folgenden Teilen: Binarisierung, Morphologie Operation und Canny Kannten Detektion. In diesem Abschnitt wird erläutert, wie diese Operationen funktionieren und was der Sinn dieser Behandelungen ist. Schließlich wird eine Linienextrahierungsmethode$ (Hough Transformation) $ detailliert vorstellen. Zur Implementierung dieses Verfahrens wird Matlab unter der Lizenz der TU Dortmund verwendet. Außerdem wird diese Methode auch auf einer Smartphone-GPU parallel implementiert.
+In diesem Kapitel wird die Realisierung des zweiten Verfahrens eingegangen. Zuerst wird die allgemeine Struktur dieser Methode beschrieben. Dies liefert ein grobes Verständnis der Struktur und des Arbeitsprinzips der gesamten Methode. Anschießend läuft eine Erklärung der Bildverarbeitungen im Detail. Diese besteht aus folgenden Teilen: Binarisierung, Morphologie Operation und Canny Kannten Detektion. In diesem Abschnitt wird erläutert, wie diese Operationen funktionieren und was der Sinn dieser Behandelungen ist. Schließlich wird eine Linienextrahierungsmethode$ (Hough und Radon Transformation) $ detailliert vorstellen. 
 
 \section{Allgemeine Struktur} 
 
@@ -14,7 +14,7 @@ Anders als bei der vorherigen Methode, indem durch die  Charakteristiken des QR 
 \end{figure}
 
 
-Das Objekt, welches mit dieser Methode bearbeitet wird, ist auch ebenfalls eine Reihe von Bildern, die von einer Handkamera aufgenommen wurde. Durch eine Bildregistration Operation können diese Bilder in dasselbe Koordinatensystem umgewandelt werden. Mit gegenseitiger Subtraktion wird eine Reihe Differenzbilder erhalten. Durch das Wissen des vorherigen Kapitels, wird die $``Energie"$ hauptsächlich aus dem Modulationsbereich gewonnen. Durch Addition der Differenzbild mit der meisten $``Energie"$ kann ein zu detektierendes Bild erhalten werden um die folgende Operation durchzuführen. Diese zwei Teilbereiche sind schon im vorherigen Kapitel beschrieben und werden hier nicht ins Detail erklärt. Um den Modulationsbereich vom Bild hervorzuheben, wird das zu detektierendes Bild binarisiert, dadurch wird das Bild in zwei Teile geteilt, ein für das Objekt (hier der Modulationsbereich) und ein für den Hintergrund (hier der Bereich um den Modulationsbereich). Danach wird zur Beseitigung der zahlreichen Unvollkommenheiten (hier die kleinen Punkte und Lücken), die von Rauschen und Fehlern verursacht werden, wird hier eine morphologische Behandelung benötigt, welche auf der Form und Struktur des Objekts basiert. Als Nächstes soll der Modulationsbereich erkannt werden. Um diese zu implementieren, muss die rechteckige Grenze zwischen dem Modulationsbereich und dem Hintergrundbereich gefunden werden. Mit Hilfe einer Kantenextraktionsmethode, also dem Canny-Algorithmus, werden im Bild nur die Kanten übernommen, die der Grenze des Modulationsbereichs entsprechen. Die Grenze des Modulationsbereichs hat eine rechteckige Form, bestehend aus vier Linien. Das Hough-Transformationsverfahren wird verwendet, um alle zwei geraden Linien in der horizontalen Richtung bzw. der vertikalen Richtung zu erfassen. Schließlich wird das endgültige Rechteck, also der Modulationsbereich, durch die vier geraden Linien bestimmt. Das Flussdiagramm wird in Abbildung \ref{fig:Flussdiagramm der zweite Methode} gezeigt. Die Details jedes Teils werden in den folgenden Abschnitten beschrieben.
+Das Objekt, welches mit dieser Methode bearbeitet wird, ist eine Reihe von Bildern, die von einer Handkamera mit Stativ aufgenommen wurde. Durch des Stativ können diese Bilder in dasselbe Koordinatensystem sein. Mit gegenseitiger Subtraktion wird eine Reihe Differenzbilder erhalten. Durch das Wissen des vorherigen Kapitels, wird die $``Energie"$ hauptsächlich aus dem Modulationsbereich gewonnen. Durch Addition der Differenzbild mit der meisten $``Energie"$ kann ein zu detektierendes Bild erhalten werden um die folgende Operation durchzuführen. Diese Teilbereiche sind schon im vorherigen Kapitel beschrieben und werden hier nicht ins Detail erklärt. Um den Modulationsbereich vom Bild hervorzuheben, wird das zu detektierendes Bild binarisiert, dadurch wird das Bild in zwei Teile geteilt, ein für das Objekt (hier der Modulationsbereich) und ein für den Hintergrund (hier der Bereich um den Modulationsbereich). Danach wird zur Beseitigung der zahlreichen Unvollkommenheiten (hier die kleinen Punkte und Lücken), die von Rauschen und Fehlern verursacht werden, wird hier eine morphologische Behandelung benötigt, welche auf der Form und Struktur des Objekts basiert. Als Nächstes soll der Modulationsbereich erkannt werden. Um diese zu implementieren, muss die rechteckige Grenze zwischen dem Modulationsbereich und dem Hintergrundbereich gefunden werden. Mit Hilfe einer Kantenextraktionsmethode, also dem Canny-Algorithmus, werden im Bild nur die Kanten übernommen, die der Grenze des Modulationsbereichs entsprechen. Die Grenze des Modulationsbereichs hat eine rechteckige Form, bestehend aus vier Linien. Das Hough- und Radon-Transformationsverfahren wird verwendet, um alle zwei geraden Linien in der horizontalen Richtung bzw. der vertikalen Richtung zu erfassen. Schließlich wird das endgültige Rechteck, also der Modulationsbereich, durch die vier geraden Linien bestimmt. Das Flussdiagramm wird in Abbildung \ref{fig:Flussdiagramm der zweite Methode} gezeigt. Die Details jedes Teils werden in den folgenden Abschnitten beschrieben.
 
 \begin{figure}[H]
  \centering 
@@ -313,6 +313,12 @@ Abbildung \ref{fig:Binärbild nach der Canny detektion} zeigt ein Ergebnis mit d
  \label{fig:Binärbild nach der Canny detektion}
 \end{figure} 
 
+\section{Cross Dilatation}
+
+Es könnte herausfinden, dass viele Linien aufgrund der Kamera-Verzerrung nicht perfekt gerade sind, wie Abbildung zeigt. Dies kann die Erkennung des Rechtecks in praktischen Anwendungen beeinträchtigen. Um dieses Problem zu lösen und die robuste Leistung der Methode zu erhöhen, Cross Dilatation wird eingeführt, welche jedes Pixel $ (x,y) $ zu einem Kreuzmuster zu erweitern. Alle Pixel, einschließlich die ausdehnte Pixeln, werden zu die nächste Operation behandelt. 
+
+Es ist angenommen, dass die Sphäre des Einflusses jedes Pixels mit einer Region dargestellt wird, die um das Pixel herum zentriert ist und sondern nicht das Pixel selbst. Dann wenn jede Pixel auf eine Linien kann die Region erreichen, die durch das nächste Pixel der Linien beeinflusst wird, dann könnte die gesamte Linie extrahiert werden. Um die Sphäre des Einflusses zu bezeichnen, wird jedes Pixel $ (x,y) $ zu einem Kreuzmuster erweitert, indem ein benachbartes Pixel in der vier Richtung des Pixels 1 setzen, wie in Abbildung 4 gezeigt.
+
 \section{Hough Transformation}
 
 Hier werden die Grenzen des modulierten Rechtecks als Linien betrachtet. Um das Problem für eine Rechteck Detektion lösbar zu machen, müssen zunächst Linie extrahiert werden. Um dies zu tun, müssen die Kanten die auf einer Linie im Bild liegen erkannt werden. Die Hough Transformation ist eine beliebte Methode zum Extrahieren von Linien aus einem Bild. Diese ist in der Lage die benötigten Informationen zu liefern, indem die Spitzen an den Punkten der geraden Linien denen des binären Bildes entsprechen. Der Aufwand einer Hough Transformation hängt von der Größe des Bildes und der Anzahl der analysierten Winkel ab. Da die Winkelauflösung für die weitere Verarbeitung wichtig ist, ist eine maximale Kameraneigung vorgeschrieben, welcher in dieser Arbeit $ \pm 10^{\circ} $ beträgt.
@@ -328,7 +334,7 @@ Hier bedeutet $ \rho $ die Entfernung vom Ursprung der Koordinate zur Linie, $ \
 \begin{figure}[H]
  \centering 
   \includegraphics[keepaspectratio,width=1.0\textwidth]{images/4_ZweiteErfahrung/Hough/Hough.pdf}
- \caption{Anglekoordinate in einem Koordinatensystem}
+ \caption{$ \rho,\theta $ Parameterraum}
  \label{fig:Hough}
 \end{figure}
 
@@ -358,6 +364,59 @@ Eine Beispiel Implementierung der Hough Transformation ist in Abbildung \ref{fig
  \label{fig:Houghdetektion}
 \end{figure}
 
+\section{Radon Transformation}
+In diesem Abschnitt wird eine erweiterte Form von Hough Transformation bzw. Radon Transformation vorgestellt. Die Hough Transformation transformiert eine gegebene Kurve im Bildraum als ein Punkt im Parameterraum entsprechend dem Parameterausdruck der Kurve ,dann durch Suchen nach Peaks in dem Parameterraum diesen Kurve in dem Bildraum bestimmen. Radon Transformation projiziert den Bildraum in den $ \rho \theta $-Raum in Form eines Linienintegrals (entspricht dem Parameterraum der Linie). Es kann verstanden werden, dass die Hough Transformation eine diskrete Form der Radon Transformation ist. Aufgrund der soliden mathematischen Basis ist die Radon Transformation  im Gegensatz dazu raffinierter und genauer.
 
+Die Idee der Radon-Transformation besteht darin, die ursprüngliche Funktion räumlich zu transformieren, das heißt, die ursprünglichen in der XY-Ebene Punkte werden auf die AB-Ebene abgebildet. Dann sind alle Punkte einer geraden Linie in der XY-Ebene an einer demselben Punkt der AB-Ebene. Zeichnen die akkumulierte Dicke der Punkte auf der AB-Ebene auf, und können die Existenz der Linien auf der XY-Ebene kennen.
 
+Wie bei der Hough-Transformation werden die Parameter $ \rho $ und $ \theta $ zuerst verwendet, um die gerade Linie auf der xy-Ebene darzustellen. Diese Parametrisierte Linie wird in Abbildung \ref{fig:Parametrisierte Linie} gezeigt und die Formel läuft als:
+\begin{equation}
+•  L(\rho,\theta)=\lbrace(x,y):x\cos{\theta} + y\sin{\theta} = \rho\rbrace
+\end{equation} 
+
+Angenommen, es gibt eine Funktion f (x, y), wie in Abbildung \ref{fig:Integral der Funktion f (x, y)} gezeigt, dann ist das Integral der Funktion über die gerade Linie L:
+\begin{equation}
+•  \int_{L}= f(x,y)\ ds
+\end{equation} 
+Wobei $ ds $ das Differential der Linie ist. 
+
+\begin{figure}[H]
+\centering 
+\begin{minipage}[b]{0.49\textwidth} 
+\centering 
+\includegraphics[width=1.0\textwidth]{images/4_ZweiteErfahrung/Radon/1.pdf} 
+\caption{Parametrisierte Linie}
+\label{fig:Parametrisierte Linie}
+\end{minipage}
+\begin{minipage}[b]{0.49\textwidth} 
+\centering 
+\includegraphics[width=1.0\textwidth]{images/4_ZweiteErfahrung/Radon/2.pdf}
+\caption{Integral der Funktion $ f(x,y) $}
+\label{fig:Integral der Funktion f (x, y)}
+\end{minipage}
+\end{figure}
+
+Die obigen Integrale für x, y sind leicht zu lösen. Eine der Lösungstechniken ist die Verwendung der Delta-Funktion. Das obige Integral kann geschrieben werden als:
+\begin{equation}
+•  \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y)\delta (x\cos{\theta} + y\sin{\theta}-\rho)\ dxdy
+\end{equation} 
+Deswegen wenn einen Satz von $ (\rho,\theta) $ bestimmen, können einen Integral Wert entlang $ L(\rho,\theta) $ erhalten. Somit wird die Radon-Transformation zum Linienintegral der Funktion $ f(x,y) $ umgewandelt, wie in Abbildung \ref{fig:Radon Transformation als Linienintegral} gezeigt. Die Höhe $ g $ repräsentiert das Linienintegral von $ f(x,y) $ auf der Linie L.
+
+\begin{figure}[H]
+\centering 
+\begin{minipage}[b]{0.49\textwidth} 
+\centering 
+\includegraphics[width=1.0\textwidth]{images/4_ZweiteErfahrung/Radon/3.pdf} 
+\caption{Radon Transformation als Linienintegral}
+\label{fig:Radon Transformation als Linienintegral}
+\end{minipage}
+\begin{minipage}[b]{0.49\textwidth} 
+\centering 
+\includegraphics[width=1.0\textwidth]{images/4_ZweiteErfahrung/Radon/4.pdf}
+\caption{Parallele Linienintegral mit gleichen $ \theta $}
+\label{fig:Parallele Linienintegral}
+\end{minipage}
+\end{figure}
+
+Wenn viele Linien parallel zu L sind, haben sie das gleiche $ \ theta $, die radialen Koordinaten $ \ rho $ sind verschieden. Für jede solche parallele Linie machen ein Linienintegral von f (x, y), werden viele Projektionslinien erzeugt, wie in Abbildung \ref{fig:Parallele Linienintegral} gezeigt. Das heißt, die Radon-Transformation eines Bildes in einem bestimmten Winkel erzeugt N Linienintegralwerte (Radon-Transformation), und jeder Zeilenintegralwert entspricht einer Radialkoordinate. Die Radon-Transformationswerte bei verschiedenen Winkeln werden kombiniert, um ein Radon-Diagramm zu bilden.
 

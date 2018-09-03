@@ -3,10 +3,10 @@ close all;
 
 %%
 diffc_r  = diffplus;
-%     figure,imshow(diffc_r,[]),title('diffc_r');
+   figure,imshow(diffc_r,[]),title('diffc_r');
 
 [select,maskedImage]  = binar(diffc_r);
-%     figure,imshow(select,[]),title('binar');
+   figure,imshow(select,[]),title('binar');
  
 grain = 12;  % size der QR 12 
 selectf2 = imopen(imclose(select,ones(grain)),ones(grain));
@@ -43,7 +43,7 @@ cr_hough_cd = [x;y];
 
 % einzelbilder
 % figure, imshow(yuv(1).U,[]);
-figure, imshow(diffc_r,[]);
+figure, imshow(Y2new(:,:,1),[]);
 % differenzbilder
 %figure, imshow(diff(:,:,1),[])
 %figure, imshow(diffplus,[])

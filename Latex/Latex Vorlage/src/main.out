@@ -20,14 +20,22 @@
 \BOOKMARK [1][-]{section.4.2}{Binarisierung}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.3}{Morphologie}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.4}{Canny detection}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.5}{Hough Transformation}{chapter.4}% 23
-\BOOKMARK [0][]{chapter.5}{Auswertung}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Section}{chapter.5}% 25
-\BOOKMARK [0][]{chapter.6}{Zusammenfassung}{}% 26
-\BOOKMARK [1][-]{section.6.1}{Section}{chapter.6}% 27
-\BOOKMARK [0][]{appendix.A}{Erster Anhang}{}% 28
-\BOOKMARK [1][-]{section.A.1}{Section}{appendix.A}% 29
-\BOOKMARK [0][]{chapter*.47}{Abbildungsverzeichnis}{}% 30
-\BOOKMARK [0][]{chapter*.48}{Tabellenverzeichnis}{}% 31
-\BOOKMARK [0][]{chapter*.49}{Quellcodeverzeichnis}{}% 32
-\BOOKMARK [0][]{chapter*.50}{Literatur}{}% 33
+\BOOKMARK [1][-]{section.4.5}{Cross Dilatation}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.6}{Hough Transformation}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.7}{Radon Transformation}{chapter.4}% 25
+\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Experiment Umgebung}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Implementierung der ersten Verfahren}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{Implementierung der zweiten Verfahren}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.4}{Implementierung auf einer Smartphone-GPU}{chapter.5}% 30
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 31
+\BOOKMARK [1][-]{section.6.1}{Evaluierung der Bildregistration}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.2}{Evaluierung der vorhandenen Funktionalit\344t}{chapter.6}% 33
+\BOOKMARK [0][]{chapter.7}{Zusammenfassung}{}% 34
+\BOOKMARK [1][-]{section.7.1}{Section}{chapter.7}% 35
+\BOOKMARK [0][]{appendix.A}{Erster Anhang}{}% 36
+\BOOKMARK [1][-]{section.A.1}{Section}{appendix.A}% 37
+\BOOKMARK [0][]{chapter*.65}{Abbildungsverzeichnis}{}% 38
+\BOOKMARK [0][]{chapter*.66}{Tabellenverzeichnis}{}% 39
+\BOOKMARK [0][]{chapter*.67}{Quellcodeverzeichnis}{}% 40
+\BOOKMARK [0][]{chapter*.68}{Literatur}{}% 41

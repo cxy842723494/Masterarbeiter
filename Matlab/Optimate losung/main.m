@@ -22,7 +22,7 @@ while true
 diffplus = functions.sum_of_diff(abs(diff),Mal_num);
 
 % implay(mat2gray(gather(diff(:,:,:))));    %abs(diff(:,:,:))
-% figure;imshow(diffplus,[]),title('diffplus');
+ figure,imshow(diffplus,[]),title('zu detektierendes Diffrenzbild');
 % figure;histogram(diffplus);
 % diffplus = uint8(diffplus);
 
@@ -51,22 +51,18 @@ end
 % [yuv(1).Y,yuv(1).U,yuv(1).V] =  readYUV(fn1);
 % U1 = U2new(:,:,1);
 
-figure, imshow(Y2new(:,:,1),[]),hold on
+figure, imshow(Y2new(:,:,1),[]),title('Modelationsbereich'),hold on
 functions.plotResult(cr);
 
+
 Y = imwarp(Y2new(:,:,1), tformY, 'OutputView', imref2d(size(Y2new(:,:,1))));
-    figure, imshow(Y,[]),hold on;
+figure, imshow(Y,[]),title('Ergebnisse'),hold on;
     
 % for i =200:200:1080
 %      for j = 200:200:1920
 %         plot(j,i,'r.');
 %      end 
 % end
-
-% Yw(:,:,1) = imwarp(Y(:,:,1), tformY, 'OutputView', imref2d(size(Y(:,:,1))));
-%     figure, imshow(Yw(:,:,1),[]);
-
-
 
 figure, imshow(U2new(:,:,1),[]),hold on
 functions.plotResult(cr);
