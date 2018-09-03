@@ -33,7 +33,7 @@
 \contentsline {section}{\numberline {5.3}Implementierung der zweiten Verfahren}{67}{section.5.3}
 \contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{69}{section.5.4}
 \contentsline {chapter}{\numberline {6}Evaluierung}{71}{chapter.6}
-\contentsline {section}{\numberline {6.1}Evaluierung der Bildregistration}{71}{section.6.1}
+\contentsline {section}{\numberline {6.1}Evaluierung der 1.Verfahren}{71}{section.6.1}
 \contentsline {section}{\numberline {6.2}Evaluierung der vorhandenen Funktionalit\IeC {\"a}t}{73}{section.6.2}
 \contentsline {chapter}{\numberline {7}Zusammenfassung}{74}{chapter.7}
 \contentsline {section}{\numberline {7.1}Section}{74}{section.7.1}
