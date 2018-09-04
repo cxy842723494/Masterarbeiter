@@ -55,7 +55,7 @@ qr_base= [
 %      1 1 1 1 0 0 0 0]; % Pattern with one empty corner 
  
 
-qr = imresize(qr_base.*9, patternSize, 'nearest');  % qr_base.*15
+qr = imresize(qr_base.*6, patternSize, 'nearest');  % qr_base.*15
 % qr3 = cat(3,qr,qr,qr);
 v = size(qr,1);
 h = size(qr,2);

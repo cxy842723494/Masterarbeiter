@@ -1,13 +1,13 @@
 %% clean
 %% Define the modulation parameters
-modAmp = 9;
+modAmp = 4;
 blocksize = 4;
 
-inputName = '3D_28_LEFT.mp4';
-outputName = '3D_28_LEFT';
+inputName = '3D_43_LEFT.mp4';
+outputName = 'VA4B4_text';
 v = VideoReader(['input/', inputName]);
 nbFrames = 300;
-outputFramerate = 25;
+outputFramerate = 50;
 
 %%
 
@@ -45,7 +45,7 @@ for i=1:2:nbFrames
     currentFrames(:,:,:,2) = currentFrames(:,:,:,1);
 
     % Add Pattern for SpatialSync
-    qrPatternSize = 12; % origin 12,je small,je better the quality of vidio,but must consider the recterangle detection 
+    qrPatternSize = 8; % origin 12,je small,je better the quality of vidio,but must consider the recterangle detection 
 %     currentFrames(:,:,:,1) = addQrFinderPattern(currentFrames(:,:,:,1), qrPatternSize);
 %     currentFrames(:,:,:,2) = addQrFinderPattern(currentFrames(:,:,:,2), qrPatternSize);
    
@@ -57,8 +57,8 @@ for i=1:2:nbFrames
     dataMatrixU = imresize(dataMatrixU, blocksize, 'Nearest');
     dataMatrixV = imresize(dataMatrixV, blocksize, 'Nearest');
      %% add qr patternm in u/v
-     dataMatrixU = addQrFinderPattern(dataMatrixU, qrPatternSize);
-     dataMatrixV = addQrFinderPattern(dataMatrixV, qrPatternSize);
+%      dataMatrixU = addQrFinderPattern(dataMatrixU, qrPatternSize);
+%      dataMatrixV = addQrFinderPattern(dataMatrixV, qrPatternSize);
 %      figure,imshow(dataMatrixU,[])
     Trgb2yuv = [0.2126 0.7152 0.0722; -0.1146 -0.3854 0.5000; 0.5000 -0.4542 -0.0458]; % BT.709
     Tyuv2rgb = inv(Trgb2yuv);
@@ -68,10 +68,18 @@ for i=1:2:nbFrames
     dataMatrixB = Tyuv2rgb(3,2)*dataMatrixU + Tyuv2rgb(3,3)*dataMatrixV;
     
     dataMatrix = cat(3, dataMatrixR, dataMatrixG, dataMatrixB);
+%%
+    [height,width,~,~]=size(currentFrames);
 
+for i = 200:200:height
+    currentFrames(i,:,:)=255;
+end
+
+for j = 200:200:width
+    currentFrames(:,j,:)=255;
+end
     
-    
-   
+ %%  
    % Modulate the Frames
    currentFrames(:,:,:,1) = currentFrames(:,:,:,1) + dataMatrix/255;
    currentFrames(:,:,:,2) = currentFrames(:,:,:,2) - dataMatrix/255;
