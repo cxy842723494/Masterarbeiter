@@ -7,12 +7,22 @@ function diffplus = sum_of_diff(diff,Mal_num)
 
 %     implay(mat2gray(gather(diff(:,:,:))));
     diff_num  = size(diff(:,:,:),3); 
-    energie = zeros(1,diff_num);
-
-    for i = 1:diff_num
-    energie(i) = meansqr(diff(:,:,i));
-    end
+    energie = zeros(1,diff_num);    
+    Central =size(diff(:,:,:))/2; 
     
+% figure, imshow(Teil,[]);
+     for i = 1:diff_num
+     E = diff(:,:,i);
+    Teil = E(Central(1)/2+1:Central(1)*3/2,Central(2)/2+1:Central(2)*3/2);    energie(i) = meansqr(Teil);
+    energie(i) = meansqr(Teil);
+     end
+    
+    
+   %  alter
+%     for i = 1:diff_num
+%     energie(i) = meansqr(diff(:,:,i));
+%     end
+%     
     clear i;
 
     

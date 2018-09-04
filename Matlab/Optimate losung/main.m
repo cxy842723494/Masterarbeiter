@@ -5,14 +5,15 @@ close all;
 file_path = uigetdir('D:\xch\Daten\xch\','Select the Folder');
 
 %% ImageRegistration
-
+tic;
 [Y2new,U2new,V2new] = functions.imageRegistration(file_path);
+toc;
 % implay(mat2gray(gather(Y2new(:,:,:))));
 % implay(mat2gray(gather(U2new(:,:,:))));
 % implay(mat2gray(gather(V2new(:,:,:))));
 
 %% Differentbild
-
+tic;
 diff = functions.creatDifferentbild(U2new);
 Mal_num = 3;
 % Nofind = 0;
@@ -20,7 +21,7 @@ Mal_num = 3;
 while true
 
 diffplus = functions.sum_of_diff(abs(diff),Mal_num);
-
+toc;
 % implay(mat2gray(gather(diff(:,:,:))));    %abs(diff(:,:,:))
  figure,imshow(diffplus,[]),title('zu detektierendes Diffrenzbild');
 % figure;histogram(diffplus);
@@ -58,11 +59,11 @@ functions.plotResult(cr);
 Y = imwarp(Y2new(:,:,1), tformY, 'OutputView', imref2d(size(Y2new(:,:,1))));
 figure, imshow(Y,[]),title('Ergebnisse'),hold on;
     
-% for i =200:200:1080
-%      for j = 200:200:1920
-%         plot(j,i,'r.');
-%      end 
-% end
+for i =200:200:1080
+     for j = 200:200:1920
+        plot(j,i,'r.');
+     end 
+end
 
 figure, imshow(U2new(:,:,1),[]),hold on
 functions.plotResult(cr);

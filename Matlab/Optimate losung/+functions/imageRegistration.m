@@ -25,7 +25,7 @@ function [Y2new,U2new,V2new] = imageRegistration(file_path)
     U2new(:,:,i) = yuv(i).U; 
     V2new(:,:,i) = yuv(i).V; 
  
-  for j=2:img_num                        % each image transform to 1. dimension                           
+  for j=2:img_num                        % each image transform to 1. dimension                 j=8            
    
     image_name2 = img_path_list(j).name;     
     [yuv(2).Y,yuv(2).U,yuv(2).V] =  functions.readYUV(strcat(file_path,image_name2));          
@@ -91,8 +91,8 @@ function [Y2new,U2new,V2new] = imageRegistration(file_path)
 %     pts1h = Pts1h(Index).data; 
 %     pts2h = Pts2h(Index).data;
 
-    % Auswert
-    functions.AuswertForImageregistration(p0,pts1h,pts2h,frame_size,State,Igray1) 
+%%Auswert
+%     functions.AuswertForImageregistration(p0,pts1h,pts2h,frame_size,State,Igray1) 
 
     % Transform Matrix
     p2_1 =zeros(frame_size);

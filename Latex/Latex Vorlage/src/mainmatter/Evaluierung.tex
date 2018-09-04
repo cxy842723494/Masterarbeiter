@@ -24,6 +24,7 @@ Aus der Abbildung ist deutlich zu erkennen, dass das Bild durch Handshake eine d
  \label{fig:Konvergenzkurve}
 \end{figure}
 
+
 Die vertikale Koordinate repräsentiert den Fehlerwert J und die horizontale Koordinate repräsentiert die Anzahl der Iterationen des Algorithmus. Als zeigt in der Abbildung, wird J nach etwa 10 Iterationen konvergiert. Die detailliert sammelte Daten wird in Tabelle \ref{tbl:Daten des Fehlers} gegeben.
 
 \begin{table}[htb]
@@ -48,15 +49,48 @@ Die vertikale Koordinate repräsentiert den Fehlerwert J und die horizontale Koo
 	\end{tabular}
 \end{table} 
 
-Abbildung \ref{fig:Bild nach Registration} zeigt diese Effekt, dass das Bild in Abbildung \ref{fig:vorregistration} durch die Bildregistration entstehen. Wie zu sehen ist, ist der Feler gut komprimiert. Die neue durchschnittliche Entfernung beträgt 0.3073 Pixel.
+Abbildung \ref{fig:Bild nach Registration} zeigt diese Effekt, dass das Bild in Abbildung \ref{fig:vorregistration} durch die Bildregistration entstehen. Wie zu sehen ist, ist der Feler gut komprimiert. Abbildung \ref{fig:Bild nach Registration} zeigt die Abweichung in horizontaler und vertikaler Richtung zwischen den entsprechenden Punkten nach der Operation. Es ist ersichtlich, dass die Abweichung in beiden Richtungen ca. $ 95\% $  unter 0.5 Pixel sind. Die durchschnittlichen Offsets in horizontaler und vertikaler Richtung betragen 0.1746 bzw. 0.1956 Pixel. Also die neue durchschnittliche Entfernung beträgt 0.3073 Pixel. 
+
 \begin{figure}[H]
  \centering 
-  \includegraphics[keepaspectratio,width=1.05\textwidth]{images/5_Implementirung/nachregis.pdf}
+  \includegraphics[keepaspectratio,width=1.00\textwidth]{images/5_Implementirung/nachregis.pdf}
  \caption{Bild nach Registration}
  \label{fig:Bild nach Registration}
 \end{figure}
 
-Als nächstes folgt eine Gesamtbewertung von Methode 1. Hier wird ein Bild speziell für das Testen verwendet, dh das Gitter wird zum Originalbild hinzugefügt, und die Größe des Gitters wird im Voraus bestimmt.Hier wird ein Gitter von 200 × 200 ausgewählt.
+
+\begin{figure}[H]
+ \centering 
+  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/6_Auswertung/histogramregistration1_8.pdf}
+ \caption{Histogramm}
+ \label{fig:Histogrammfr}
+\end{figure}
+
+Als nächstes folgt eine Gesamtbewertung von Methode 1. Hier wird ein Bild speziell für das Testen verwendet, dh das Gitter wird zum Originalbild hinzugefügt, und die Größe des Gitters wird im Voraus bestimmt. Hier wird ein Gitter von 200 × 200 ausgewählt. Abbildung \ref{fig:Bild nach Registration} zeigt diese spezielle Bild.
+\begin{figure}[H]
+ \centering 
+  \includegraphics[keepaspectratio,width=0.85\textwidth]{images/6_Auswertung/windmill_auswert.pdf}
+ \caption{GitterBild}
+ \label{fig:GitterBild}
+\end{figure}
+
+Die detektierend Modulationsbereich durch die 1. Methode wird in Abbildung \ref{fig:Bild nach Registration} gezeigt. Aus der Abbildung wurde der Offset jedes Gitterpunkts markiert. Der Untergraph in der oberen rechten Ecke der Abbildung ist eine Teilvergrößerung des roten rechteckigen Bereichs. Die durchgezogene Linie repräsentiert die Position des Gitters im Idealfall, und die gestrichelte Linie repräsentiert die tatsächliche Position des Gitters, nachdem das Verfahren 1 detektiert wurde. Der rote Pfeil zeigt den Offset des Punktes an. Der daraus berechnete durchschnittliche Offset beträgt 1.7680 Pixel. 
+
+\begin{figure}[H]
+ \centering 
+  \includegraphics[keepaspectratio,width=1.00\textwidth]{images/6_Auswertung/Ergebnis1.pdf}
+ \caption{Ergebnis1}
+ \label{fig:Ergebnis1}
+\end{figure}
 
 
-\section{Evaluierung der vorhandenen Funktionalität}
+\section{Evaluierung der 2.Verfahren}
+
+In dieser Abschnitt wird das 2. Verfahren evaluiert. Als in Kapital 4 vorstellt, diese Methode ist häuptlich für den Fall, bei der Aufnahmen des Bilder die Smartphone auf ein Stativ gelegt. Dann wird hier die Bildregistration Operation nicht mehr gebraucht. Die Gitterbilder aus dem vorherigen Abschnitt werden auch hier verwendet. Der Parameter ist eingestellt auf: Modulationsamplitudeals 6, Datenblock als $ 4 \times 4 Pixel$, QR Muster Größe als $ 72 \times 72 Pixel $. Die Ergebnisse nach Methode 2 sind in der Abbildung \ref{fig:Ergebnis2} dargestellt.
+Der berechnete durchschnittliche Offset beträgt 1.3468 Pixel. 
+\begin{figure}[H]
+ \centering 
+  \includegraphics[keepaspectratio,width=1.00\textwidth]{images/6_Auswertung/Ergebnis2.pdf}
+ \caption{Ergebnis2}
+ \label{fig:Ergebnis2}
+\end{figure}

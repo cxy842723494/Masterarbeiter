@@ -34,12 +34,12 @@
 \contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{69}{section.5.4}
 \contentsline {chapter}{\numberline {6}Evaluierung}{71}{chapter.6}
 \contentsline {section}{\numberline {6.1}Evaluierung der 1.Verfahren}{71}{section.6.1}
-\contentsline {section}{\numberline {6.2}Evaluierung der vorhandenen Funktionalit\IeC {\"a}t}{73}{section.6.2}
-\contentsline {chapter}{\numberline {7}Zusammenfassung}{74}{chapter.7}
-\contentsline {section}{\numberline {7.1}Section}{74}{section.7.1}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{75}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{75}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{77}{chapter*.65}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{79}{chapter*.66}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{80}{chapter*.67}
-\contentsline {chapter}{\nonumberline Literatur}{81}{chapter*.68}
+\contentsline {section}{\numberline {6.2}Evaluierung der 2.Verfahren}{75}{section.6.2}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{77}{chapter.7}
+\contentsline {section}{\numberline {7.1}Section}{77}{section.7.1}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{78}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{78}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{80}{chapter*.69}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{83}{chapter*.70}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{84}{chapter*.71}
+\contentsline {chapter}{\nonumberline Literatur}{85}{chapter*.72}
