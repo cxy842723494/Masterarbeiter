@@ -1,26 +1,26 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[34] biber-MSWIN64:313> INFO - === 
-[69] Biber.pm:371> INFO - Reading 'main.bcf'
-[153] Biber.pm:857> INFO - Found 13 citekeys in bib section 0
-[168] Biber.pm:3976> INFO - Processing section 0
-[186] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[196] bibtex.pm:1500> INFO - LaTeX decoding ...
-[241] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
-[248] Utils.pm:193> WARN - month field 'Feb' in entry '1205458' is not an integer - this will probably not sort properly.
-[254] Utils.pm:193> WARN - month field 'Aug' in entry '4649677' is not an integer - this will probably not sort properly.
-[258] Utils.pm:193> WARN - month field 'June' in entry '867694' is not an integer - this will probably not sort properly.
-[268] Utils.pm:193> WARN - month field 'May' in entry 'Kays2017' is not an integer - this will probably not sort properly.
-[277] Utils.pm:193> WARN - month field 'Sept' in entry 'Kays201501' is not an integer - this will probably not sort properly.
-[280] Utils.pm:193> WARN - month field 'Jan' in entry 'Kays201502' is not an integer - this will probably not sort properly.
+[29] biber-MSWIN64:313> INFO - === 
+[55] Biber.pm:371> INFO - Reading 'main.bcf'
+[138] Biber.pm:857> INFO - Found 13 citekeys in bib section 0
+[165] Biber.pm:3976> INFO - Processing section 0
+[180] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[183] bibtex.pm:1500> INFO - LaTeX decoding ...
+[223] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
+[230] Utils.pm:193> WARN - month field 'Feb' in entry '1205458' is not an integer - this will probably not sort properly.
+[237] Utils.pm:193> WARN - month field 'Aug' in entry '4649677' is not an integer - this will probably not sort properly.
+[241] Utils.pm:193> WARN - month field 'June' in entry '867694' is not an integer - this will probably not sort properly.
+[253] Utils.pm:193> WARN - month field 'May' in entry 'Kays2017' is not an integer - this will probably not sort properly.
+[275] Utils.pm:193> WARN - month field 'Sept' in entry 'Kays201501' is not an integer - this will probably not sort properly.
+[278] Utils.pm:193> WARN - month field 'Jan' in entry 'Kays201502' is not an integer - this will probably not sort properly.
 [293] Utils.pm:193> WARN - month field 'December' in entry 'zhangzhengyou' is not an integer - this will probably not sort properly.
 [296] Utils.pm:193> WARN - month field 'Jan' in entry 'Ostu' is not an integer - this will probably not sort properly.
-[299] Utils.pm:193> WARN - month field 'Nov' in entry 'canny' is not an integer - this will probably not sort properly.
-[300] Utils.pm:193> WARN - BibTeX subsystem: C:\Users\Chen\AppData\Local\Temp\z9j62Z3Umd\literatur.bib_4140.utf8, line 6, warning: 93 characters of junk seen at toplevel
-[321] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[321] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[321] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[321] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[340] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[347] bbl.pm:720> INFO - Output to main.bbl
-[348] Biber.pm:110> INFO - WARNINGS: 10
+[300] Utils.pm:193> WARN - month field 'Nov' in entry 'canny' is not an integer - this will probably not sort properly.
+[303] Utils.pm:193> WARN - BibTeX subsystem: C:\Users\xch\AppData\Local\Temp\xEktGbjV3W\literatur.bib_7624.utf8, line 6, warning: 93 characters of junk seen at toplevel
+[320] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[320] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[320] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[320] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[333] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[338] bbl.pm:720> INFO - Output to main.bbl
+[338] Biber.pm:110> INFO - WARNINGS: 10

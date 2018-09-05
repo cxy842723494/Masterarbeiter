@@ -6,17 +6,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Eine beispielhafte Implementierung des \gls {david}-Systems\relax }}{3}{figure.caption.2}
 \contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Schematische Darstellung vom \gls {david}-System\relax }}{4}{figure.caption.3}
-\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces Blockschaltbild der Signalverarbeitung in zeitlicher differentieller Modulation\relax }}{5}{figure.caption.4}
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces Blockschaltbild der Signalverarbeitung in zeitlich-differentieller Modulation\relax }}{5}{figure.caption.4}
 \contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces Ein Beispiel einer modulierten Bildfolge\relax }}{7}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Strukturdiagramm\relax }}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Strukturdiagramm\relax }}{11}{figure.caption.6}
 \contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Flussdiagramm der ersten Methode\relax }}{12}{figure.caption.7}
 \contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Flussdiagramm der Bildregistrierung\relax }}{13}{figure.caption.8}
 \contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Scale space\relax }}{16}{figure.caption.9}
 \contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces Extremwert Erkennung\relax }}{16}{figure.caption.10}
 \contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Dominante Orientierung feststellen\relax }}{17}{figure.caption.11}
 \contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Merkmalspunkt Deskriptor\relax }}{17}{figure.caption.12}
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces \gls {surf} Merkmal\relax }}{18}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces \gls {surf} Merkmale\relax }}{18}{figure.caption.13}
 \contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Linien Detektion\relax }}{19}{figure.caption.14}
 \contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Ohne \gls {ransac}\relax }}{21}{figure.caption.15}
 \contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Mit \gls {ransac}\relax }}{21}{figure.caption.16}
@@ -26,22 +26,22 @@
 \contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces Transformation vom Kamerakoordinatensystem zum Bildkoordinatensystem\relax }}{25}{figure.caption.20}
 \contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces Konvertierung vom Bildkoordinatensystem zum Pixelkoordinatensystem\relax }}{26}{figure.caption.21}
 \contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces Rotationsbewegungsmodell\relax }}{29}{figure.caption.23}
-\contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces Transformation in die selben Koordinate\relax }}{31}{figure.caption.24}
+\contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces Transformation in das selbe Koordinatensystem\relax }}{31}{figure.caption.24}
 \contentsline {figure}{\numberline {\relax 3.19}{\ignorespaces Flussdiagramm f\IeC {\"u}r Optimierung\relax }}{32}{figure.caption.25}
-\contentsline {figure}{\numberline {\relax 3.20}{\ignorespaces Differenzbild Flussigdiagramm\relax }}{35}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax 3.20}{\ignorespaces Differenzbild Flussdiagramm\relax }}{35}{figure.caption.27}
 \contentsline {figure}{\numberline {\relax 3.21}{\ignorespaces Ein zu detektierendes Bild\relax }}{36}{figure.caption.28}
 \contentsline {figure}{\numberline {\relax 3.22}{\ignorespaces QR Muster\relax }}{37}{figure.caption.29}
 \contentsline {figure}{\numberline {\relax 3.23}{\ignorespaces QR Muster Ratio\relax }}{38}{figure.caption.30}
 \contentsline {figure}{\numberline {\relax 3.24}{\ignorespaces Flussdiagramm der QR Muster Detektion\relax }}{40}{figure.caption.31}
 \contentsline {figure}{\numberline {\relax 3.25}{\ignorespaces Beispiel einer QR Muster Detektion\relax }}{41}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Strukturdiagramm\relax }}{43}{figure.caption.33}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Flussdiagramm der zweite Methode\relax }}{44}{figure.caption.34}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Idee f\IeC {\"u}r Detektion\relax }}{43}{figure.caption.33}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Flussdiagramm der zweiten Methode\relax }}{44}{figure.caption.34}
 \contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Histogramm eines einfachen Beispiels\relax }}{45}{figure.caption.35}
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Binarisierung mit globalen Schwellenwertmethode\relax }}{47}{figure.caption.36}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Binarisierung mit lokalen Schwellenwertmethode\relax }}{47}{figure.caption.37}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Binarisierung mit lokaler Schwellenwertmethode\relax }}{47}{figure.caption.37}
 \contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Binarisierung mit Ostu\relax }}{49}{figure.caption.38}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Bin\IeC {\"a}rbild mit Ostu\relax }}{49}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Binarisiertes zu detektierendes Bild\relax }}{49}{figure.caption.39}
 \contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Einige grundlegende Strukturelemente\relax }}{50}{figure.caption.40}
 \contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Dilatation und Erosion\relax }}{51}{figure.caption.41}
 \contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces \IeC {\"O}ffnung und Schlie\IeC {\ss }ung\relax }}{53}{figure.caption.42}
@@ -51,8 +51,8 @@
 \contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Houghdetektion\relax }}{60}{figure.caption.46}
 \contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces Parametrisierte Linie\relax }}{62}{figure.caption.47}
 \contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces Integral der Funktion $ f(x,y) $\relax }}{62}{figure.caption.47}
-\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces Radon Transformation als Linienintegral\relax }}{62}{figure.caption.48}
-\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Parallele Linienintegral mit gleichen $ \theta $\relax }}{62}{figure.caption.48}
+\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces Radon Transformation $(\theta ,\rho )$\relax }}{62}{figure.caption.48}
+\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Radon Transformation $(\theta )$\relax }}{62}{figure.caption.48}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Bilder vor Bildregistration\relax }}{65}{figure.caption.50}
 \contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Bilder nach Bildregistration\relax }}{65}{figure.caption.50}

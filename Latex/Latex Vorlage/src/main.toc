@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Bilder Umwandlung}{22}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Differenzbild Optimierung}{33}{section.3.3}
 \contentsline {section}{\numberline {3.4}Bildverarbeitung}{36}{section.3.4}
-\contentsline {section}{\numberline {3.5}QR Musters Detektion}{37}{section.3.5}
+\contentsline {section}{\numberline {3.5}QR Muster Detektion}{37}{section.3.5}
 \contentsline {chapter}{\numberline {4}Zweite Methode}{42}{chapter.4}
 \contentsline {section}{\numberline {4.1}Allgemeine Struktur}{42}{section.4.1}
 \contentsline {section}{\numberline {4.2}Binarisierung}{45}{section.4.2}
