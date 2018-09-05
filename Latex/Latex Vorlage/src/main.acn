@@ -9,6 +9,7 @@
 \glossaryentry{abc?\glossentry{abc}|setentrycounter[]{page}\glsignore}{1}
 \glossaryentry{HDTV?\glossentry{HDTV}|setentrycounter[]{page}\glsignore}{1}
 \glossaryentry{ISI?\glossentry{ISI}|setentrycounter[]{page}\glsignore}{1}
+\glossaryentry{GPU?\glossentry{gpu}|setentrycounter[]{page}\glsignore}{1}
 \glossaryentry{EEPROM?\glossentry{eeprom}|setentrycounter[]{page}\glsignore}{1}
 \glossaryentry{DaVid?\glossentry{david}|setentrycounter[]{page}\glsnumberformat}{ii}
 \glossaryentry{DaVid?\glossentry{david}|setentrycounter[]{page}\glsnumberformat}{ii}
@@ -85,6 +86,7 @@
 \glossaryentry{SURF?\glossentry{surf}|setentrycounter[]{page}\glsnumberformat}{22}
 \glossaryentry{RANSAC?\glossentry{ransac}|setentrycounter[]{page}\glsnumberformat}{22}
 \glossaryentry{DaVid?\glossentry{david}|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{GPU?\glossentry{gpu}|setentrycounter[]{page}\glsnumberformat}{64}
 \glossaryentry{DaVid?\glossentry{david}|setentrycounter[]{page}\glsnumberformat}{77}
 \glossaryentry{RANSAC?\glossentry{ransac}|setentrycounter[]{page}\glsnumberformat}{77}
 \glossaryentry{DaVid?\glossentry{david}|setentrycounter[]{page}\glsnumberformat}{81}

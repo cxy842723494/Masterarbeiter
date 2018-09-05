@@ -30,13 +30,13 @@
 \contentsline {section}{\numberline {4.6}Hough Transformation}{59}{section.4.6}
 \contentsline {section}{\numberline {4.7}Radon Transformation}{61}{section.4.7}
 \contentsline {chapter}{\numberline {5}Implementierung}{64}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experiment Umgebung}{64}{section.5.1}
-\contentsline {section}{\numberline {5.2}Implementierung der ersten Verfahren}{64}{section.5.2}
-\contentsline {section}{\numberline {5.3}Implementierung der zweiten Verfahren}{67}{section.5.3}
+\contentsline {section}{\numberline {5.1}Experimentelle Umgebung}{64}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementierung vom ersten Verfahren}{65}{section.5.2}
+\contentsline {section}{\numberline {5.3}Implementierung von zweiten Verfahren}{67}{section.5.3}
 \contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{69}{section.5.4}
 \contentsline {chapter}{\numberline {6}Evaluierung}{71}{chapter.6}
-\contentsline {section}{\numberline {6.1}Evaluierung der 1.Verfahren}{71}{section.6.1}
-\contentsline {section}{\numberline {6.2}Evaluierung der 2.Verfahren}{75}{section.6.2}
+\contentsline {section}{\numberline {6.1}Evaluierung des 1.Verfahrens}{71}{section.6.1}
+\contentsline {section}{\numberline {6.2}Evaluierung des 2.Verfahrens}{75}{section.6.2}
 \contentsline {chapter}{\numberline {7}Zusammenfassung}{77}{chapter.7}
 \contentsline {chapter}{\numberline {A}Erster Anhang}{79}{appendix.A}
 \contentsline {section}{\numberline {A.1}Section}{79}{section.A.1}
