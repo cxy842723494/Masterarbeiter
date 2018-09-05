@@ -19,6 +19,154 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{1205458}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7380b3680fcc7ab14b51eb4ba1accdb1}{%
+           family={Komine},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5d4b680d5d6aa14331be6149aac9ed6a}{%
+           family={Nakagawa},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b47dfe243d3bbe40a45b48dd8df8d749}
+      \strng{fullhash}{b47dfe243d3bbe40a45b48dd8df8d749}
+      \strng{bibnamehash}{b47dfe243d3bbe40a45b48dd8df8d749}
+      \strng{authorbibnamehash}{b47dfe243d3bbe40a45b48dd8df8d749}
+      \strng{authornamehash}{b47dfe243d3bbe40a45b48dd8df8d749}
+      \strng{authorfullhash}{b47dfe243d3bbe40a45b48dd8df8d749}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0098-3063}
+      \field{journaltitle}{IEEE Transactions on Consumer Electronics}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{Integrated system of white LED visible-light communication and power-line communication}
+      \field{volume}{49}
+      \field{year}{2003}
+      \field{pages}{71\bibrangedash 79}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TCE.2003.1205458
+      \endverb
+      \keyw{LED lamps;optical transmitters;carrier transmission on power lines;white LED visible-light communication;power-line communication;indoor optical wireless communication;quality of service;lighting equipment;power-line;transmitted signal waveform;integrated system;Light emitting diodes;LED lamps;Brightness;Power system reliability;Energy consumption;Optical communication equipment;Wireless communication;Quality of service;Electromagnetic interference;Communication cables}
+    \endentry
+    \entry{4649677}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=217f8e8ad6ca8dc0e9f2d64a1a53a314}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=929907ee7356af80c6d98302d6dacd24}{%
+           family={Makino},
+           familyi={M\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f2e3a4bd3cad4b3230410709f555cf8e}{%
+           family={Maeda},
+           familyi={M\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{35dd9b43fd829ab9c399c8d3bd7438db}
+      \strng{fullhash}{35dd9b43fd829ab9c399c8d3bd7438db}
+      \strng{bibnamehash}{35dd9b43fd829ab9c399c8d3bd7438db}
+      \strng{authorbibnamehash}{35dd9b43fd829ab9c399c8d3bd7438db}
+      \strng{authornamehash}{35dd9b43fd829ab9c399c8d3bd7438db}
+      \strng{authorfullhash}{35dd9b43fd829ab9c399c8d3bd7438db}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2008 30th Annual International Conference of the IEEE Engineering in Medicine and Biology Society}
+      \field{issn}{1094-687X}
+      \field{month}{8}
+      \field{title}{Basic study on indoor location estimation using Visible Light Communication platform}
+      \field{year}{2008}
+      \field{pages}{2377\bibrangedash 2380}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/IEMBS.2008.4649677
+      \endverb
+      \keyw{Visible light Communication (VLC);Fluorescent light;Indoor guidance;location estimation;Algorithms;Communication Aids for Disabled;Computer Communication Networks;Equipment Design;Humans;Lighting;Orientation;Sensitivity and Specificity;Telemetry;Visually Impaired Persons}
+    \endentry
+    \entry{867694}{article}{}
+      \name{author}{2}{}{%
+        {{hash=547652e8a6d285f59399d9b339e570c0}{%
+           family={Plant},
+           familyi={P\bibinitperiod},
+           given={D.\bibnamedelimi V.},
+           giveni={D\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=58b0c3b0e1168a997dbdf26701c08164}{%
+           family={Kirk},
+           familyi={K\bibinitperiod},
+           given={A.\bibnamedelimi G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5bf9aade1056991c1e47336bfa67c6e}
+      \strng{fullhash}{f5bf9aade1056991c1e47336bfa67c6e}
+      \strng{bibnamehash}{f5bf9aade1056991c1e47336bfa67c6e}
+      \strng{authorbibnamehash}{f5bf9aade1056991c1e47336bfa67c6e}
+      \strng{authornamehash}{f5bf9aade1056991c1e47336bfa67c6e}
+      \strng{authorfullhash}{f5bf9aade1056991c1e47336bfa67c6e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0018-9219}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Optical interconnects at the chip and board level: challenges and solutions}
+      \field{volume}{88}
+      \field{year}{2000}
+      \field{pages}{806\bibrangedash 818}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/5.867694
+      \endverb
+      \keyw{optical backplanes;packaging;digital systems;micro-optics;short-distance optical interconnects;general-purpose distributed digital systems;multiple packaging layers;backplane;two-dimensional optical communication;parallel optical interconnects;Optical interconnections;Optical arrays;Packaging;Digital systems;Optical design;Integrated circuit interconnections;Stimulated emission;Optical devices;Optical sensors;Kirk field collapse effect}
+    \endentry
+    \entry{bodysensor}{article}{}
+      \name{author}{3}{}{%
+        {{hash=252deed1a7ef70665c589c30b59899eb}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=63545690c5bd0640a903a267d5dbf4d0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4cfdbe797233d8674c41d72e5733175a}{%
+           family={Roscoe},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bdce01469b1b307ad5aebb1b772a5ec8}
+      \strng{fullhash}{bdce01469b1b307ad5aebb1b772a5ec8}
+      \strng{bibnamehash}{bdce01469b1b307ad5aebb1b772a5ec8}
+      \strng{authorbibnamehash}{bdce01469b1b307ad5aebb1b772a5ec8}
+      \strng{authornamehash}{bdce01469b1b307ad5aebb1b772a5ec8}
+      \strng{authorfullhash}{bdce01469b1b307ad5aebb1b772a5ec8}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Science Student Conference 2012}
+      \field{title}{Multi-channel key distribution protocols using visible light communications in body sensor networks}
+      \field{year}{2012}
+      \field{pages}{15}
+      \range{pages}{1}
+    \endentry
     \entry{Kays2017}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=a9e1d6f296fba589b41ae9e6cf3de34d}{%
@@ -43,8 +191,8 @@
       \strng{authorbibnamehash}{26f03a161831c92cdf2814a46f7af4cf}
       \strng{authornamehash}{26f03a161831c92cdf2814a46f7af4cf}
       \strng{authorfullhash}{26f03a161831c92cdf2814a46f7af4cf}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2017 IEEE International Conference on Communications (ICC)}
@@ -83,8 +231,8 @@
       \strng{authorbibnamehash}{9afe9914e5011f5c25fd0cb4f0443281}
       \strng{authornamehash}{9afe9914e5011f5c25fd0cb4f0443281}
       \strng{authorfullhash}{9afe9914e5011f5c25fd0cb4f0443281}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{DaViD : Data Transmission Using Video Devices-An Innovative System for Smart Media Applications}
@@ -104,8 +252,8 @@
       \strng{authorbibnamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
       \strng{authornamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
       \strng{authorfullhash}{a9e1d6f296fba589b41ae9e6cf3de34d}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2015 IEEE 5th International Conference on Consumer Electronics - Berlin (ICCE-Berlin)}
@@ -133,8 +281,8 @@
       \strng{authorbibnamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
       \strng{authornamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
       \strng{authorfullhash}{a9e1d6f296fba589b41ae9e6cf3de34d}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2015 IEEE International Conference on Consumer Electronics (ICCE)}
@@ -178,8 +326,8 @@
       \strng{authorbibnamehash}{4e255173d811465ee40ce3537c5d6c27}
       \strng{authornamehash}{d0078c61ec8e77311ede269a1a503d56}
       \strng{authorfullhash}{4e255173d811465ee40ce3537c5d6c27}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer Vision and Image Understanding (CVIU)}
@@ -214,8 +362,8 @@
       \strng{authorbibnamehash}{fc26f22afcddeded198fab29d715e89a}
       \strng{authornamehash}{fc26f22afcddeded198fab29d715e89a}
       \strng{authorfullhash}{fc26f22afcddeded198fab29d715e89a}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0001-0782}
@@ -252,8 +400,8 @@
       \strng{authorbibnamehash}{a21bd48f3051e7658e90961a9a30072b}
       \strng{authornamehash}{a21bd48f3051e7658e90961a9a30072b}
       \strng{authorfullhash}{a21bd48f3051e7658e90961a9a30072b}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
@@ -278,8 +426,8 @@
       \strng{authorbibnamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
       \strng{authornamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
       \strng{authorfullhash}{4531dc3ea86ad7c21ff2c751725cbf58}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0018-9472}
@@ -310,8 +458,8 @@
       \strng{authorbibnamehash}{2f780c34a67ad022b73f934e6290bd09}
       \strng{authornamehash}{2f780c34a67ad022b73f934e6290bd09}
       \strng{authorfullhash}{2f780c34a67ad022b73f934e6290bd09}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0162-8828}
@@ -327,97 +475,6 @@
       \verb 10.1109/TPAMI.1986.4767851
       \endverb
       \keyw{Image edge detection;Detectors;Machine vision;Shape measurement;Performance analysis;Uncertainty;Gaussian approximation;Signal to noise ratio;Signal synthesis;Feature extraction;Edge detection;feature extraction;image processing;machine vision;multiscale image analysis}
-    \endentry
-    \entry{Reinhold:2013fk}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=50a8a405c48231b9d7a7928f463170cf}{%
-           family={Reinhold},
-           familyi={R\bibinitperiod},
-           given={Rafael},
-           giveni={R\bibinitperiod}}}%
-        {{hash=4cdc399a2b95a6cfb855af6302ac58cc}{%
-           family={Kays},
-           familyi={K\bibinitperiod},
-           given={Rüdiger},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{7c3ed3daacd1422e2b72547e54c30980}
-      \strng{fullhash}{7c3ed3daacd1422e2b72547e54c30980}
-      \strng{bibnamehash}{7c3ed3daacd1422e2b72547e54c30980}
-      \strng{authorbibnamehash}{7c3ed3daacd1422e2b72547e54c30980}
-      \strng{authornamehash}{7c3ed3daacd1422e2b72547e54c30980}
-      \strng{authorfullhash}{7c3ed3daacd1422e2b72547e54c30980}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2013 IFIP Wireless Days (WD)}
-      \field{issn}{2156-9711}
-      \field{langid}{american}
-      \field{month}{11}
-      \field{title}{Improvement of {IEEE} 802.15.4a {IR-UWB} for Time-Critical Industrial Wireless Sensor Networks}
-      \field{year}{2013}
-      \field{pages}{1\bibrangedash 4}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.1109/WD.2013.6686434
-      \endverb
-      \keyw{Zigbee;access protocols;factory automation;ultra wideband communication;wireless sensor networks;IEEE 802.15.4a IR-UWB;IEEE 802.15.4a impulse-radio ultra-wideband physical layer;IEEE 802.15.4e media access control layer;industrial factory automation;physical access control layer;time-critical industrial wireless sensor networks;ultra wideband communication systems;Actuators;IEEE 802.15 Standards;Manufacturing automation;Optimized production technology;Payloads;Wireless sensor networks;IEEE 802.15.4a;IEEE 802.15.4e;IR-UWB;industrial wireless sensor networks;performance evaluation}
-    \endentry
-    \entry{Moon}{book}{}
-      \name{author}{1}{}{%
-        {{hash=d9e178cc01874be6cb8e994e2a250982}{%
-           family={Moon},
-           familyi={M\bibinitperiod},
-           given={Todd\bibnamedelima K.},
-           giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ}%
-      }
-      \list{publisher}{1}{%
-        {Wiley-Interscience}%
-      }
-      \strng{namehash}{d9e178cc01874be6cb8e994e2a250982}
-      \strng{fullhash}{d9e178cc01874be6cb8e994e2a250982}
-      \strng{bibnamehash}{d9e178cc01874be6cb8e994e2a250982}
-      \strng{authorbibnamehash}{d9e178cc01874be6cb8e994e2a250982}
-      \strng{authornamehash}{d9e178cc01874be6cb8e994e2a250982}
-      \strng{authorfullhash}{d9e178cc01874be6cb8e994e2a250982}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{1}
-      \field{isbn}{978-0471648000}
-      \field{langid}{american}
-      \field{month}{6}
-      \field{pagetotal}{800}
-      \field{subtitle}{Mathematical Methods and Algorithms}
-      \field{title}{Error Correction Coding}
-      \field{year}{2005}
-      \verb{doi}
-      \verb 10.1002/0471739219
-      \endverb
-    \endentry
-    \entry{IEEE2011}{standard}{}
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The protocol and compatible interconnection for data communication devices using low data-rate, low-power, and low-complexity short-range radio frequency (RF) transmissions in a wire less personal area network (WPAN) were defined in IEEE Std 802.15.4-2006. In this revision, the market applicability of IEEE Std 802.15.4 is extended, the ambiguities in the standard are removed, and the improvements learned from implementations of IEEE Std 802.15.4-2006 are included.}
-      \field{isbn}{9780738166834}
-      \field{langid}{american}
-      \field{number}{IEEE Std 802.15.4-2011}
-      \field{pagetotal}{334}
-      \field{title}{IEEE Standard for Local and metropolitan area networks, Part 15.4: Low-Rate Wireless Personal Area Networks}
-      \field{year}{2011}
-      \verb{doi}
-      \verb 10.1109/IEEESTD.2011.6012487
-      \endverb
-      \keyw{Ad hoc networks,IEEE 802.15.4,IEEE Std 802.15.4-2006,IEEE standard,IEEE standards,LR-WPAN,Low power electronics,Mobile communication,PAN,Personal area networks,RF,RF transmission,WPAN,Wireless LAN networks,Zigbee,ad hoc network,data communication,data communication device,local area networks,low data rate,low data rate transmission,low power,low-power low-complexity short-range radiofrequenc,low-rate wireless personal area networks,metropolitan area networks,mobility,personal area network,protocol,protocols,radio frequency,short range,telecommunication standards,wireless,wireless personal area network}
     \endentry
   \enddatalist
 \endrefsection

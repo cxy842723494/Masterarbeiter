@@ -4,43 +4,43 @@
 \babel@toc {ngerman}{}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Ziel der Arbeit}{1}{section.1.2}
-\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{1}{section.1.3}
-\contentsline {chapter}{\numberline {2}\gls {david}}{2}{chapter.2}
-\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung des \gls {david}s}{2}{section.2.1}
-\contentsline {section}{\numberline {2.2}Systemmodell}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Modulationsverfahren}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}DatenBlock}{7}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Anwendungsgebiete}{7}{section.2.3}
-\contentsline {chapter}{\numberline {3}Erste Methode}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Allgemeine Struktur}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Bildregistrierung}{12}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}\gls {surf}}{12}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}\gls {ransac}}{17}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Bilder Umwandlung}{21}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Differenzbild Optimierung}{32}{section.3.3}
-\contentsline {section}{\numberline {3.4}Bildverarbeitung}{35}{section.3.4}
-\contentsline {section}{\numberline {3.5}QR Musters Detektion}{36}{section.3.5}
-\contentsline {chapter}{\numberline {4}Zweite Methode}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{41}{section.4.1}
-\contentsline {section}{\numberline {4.2}Binarisierung}{44}{section.4.2}
-\contentsline {section}{\numberline {4.3}Morphologie}{49}{section.4.3}
-\contentsline {section}{\numberline {4.4}Canny detection}{53}{section.4.4}
-\contentsline {section}{\numberline {4.5}Cross Dilatation}{57}{section.4.5}
-\contentsline {section}{\numberline {4.6}Hough Transformation}{58}{section.4.6}
-\contentsline {section}{\numberline {4.7}Radon Transformation}{60}{section.4.7}
-\contentsline {chapter}{\numberline {5}Implementierung}{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experiment Umgebung}{63}{section.5.1}
-\contentsline {section}{\numberline {5.2}Implementierung der ersten Verfahren}{63}{section.5.2}
-\contentsline {section}{\numberline {5.3}Implementierung der zweiten Verfahren}{66}{section.5.3}
-\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{68}{section.5.4}
-\contentsline {chapter}{\numberline {6}Evaluierung}{70}{chapter.6}
-\contentsline {section}{\numberline {6.1}Evaluierung der 1.Verfahren}{70}{section.6.1}
-\contentsline {section}{\numberline {6.2}Evaluierung der 2.Verfahren}{74}{section.6.2}
-\contentsline {chapter}{\numberline {7}Zusammenfassung}{76}{chapter.7}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{78}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{78}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{80}{chapter*.69}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{83}{chapter*.70}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{84}{chapter*.71}
-\contentsline {chapter}{\nonumberline Literatur}{85}{chapter*.72}
+\contentsline {section}{\numberline {1.2}Aufgabe in dieser Arbeit}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{2}{section.1.3}
+\contentsline {chapter}{\numberline {2}\gls {david}}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung des \gls {david}s}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Systemmodell}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Modulationsverfahren}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}DatenBlock}{8}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Anwendungsgebiete}{8}{section.2.3}
+\contentsline {chapter}{\numberline {3}Erste Methode}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Allgemeine Struktur}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Bildregistrierung}{13}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}\gls {surf}}{13}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}\gls {ransac}}{18}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Bilder Umwandlung}{22}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Differenzbild Optimierung}{33}{section.3.3}
+\contentsline {section}{\numberline {3.4}Bildverarbeitung}{36}{section.3.4}
+\contentsline {section}{\numberline {3.5}QR Musters Detektion}{37}{section.3.5}
+\contentsline {chapter}{\numberline {4}Zweite Methode}{42}{chapter.4}
+\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{42}{section.4.1}
+\contentsline {section}{\numberline {4.2}Binarisierung}{45}{section.4.2}
+\contentsline {section}{\numberline {4.3}Morphologie}{50}{section.4.3}
+\contentsline {section}{\numberline {4.4}Canny detection}{54}{section.4.4}
+\contentsline {section}{\numberline {4.5}Cross Dilatation}{58}{section.4.5}
+\contentsline {section}{\numberline {4.6}Hough Transformation}{59}{section.4.6}
+\contentsline {section}{\numberline {4.7}Radon Transformation}{61}{section.4.7}
+\contentsline {chapter}{\numberline {5}Implementierung}{64}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experiment Umgebung}{64}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementierung der ersten Verfahren}{64}{section.5.2}
+\contentsline {section}{\numberline {5.3}Implementierung der zweiten Verfahren}{67}{section.5.3}
+\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{69}{section.5.4}
+\contentsline {chapter}{\numberline {6}Evaluierung}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}Evaluierung der 1.Verfahren}{71}{section.6.1}
+\contentsline {section}{\numberline {6.2}Evaluierung der 2.Verfahren}{75}{section.6.2}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{77}{chapter.7}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{79}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{79}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{81}{chapter*.69}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{84}{chapter*.70}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{85}{chapter*.71}
+\contentsline {chapter}{\nonumberline Literatur}{86}{chapter*.72}
