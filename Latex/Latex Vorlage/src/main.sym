@@ -1,0 +1,14 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossentry{angstrom}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{1}}}%
+\glossentry{angstro}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{1}}}\glsgroupskip
+\glsgroupheading{O}\relax \glsresetentrylist %
+\glossentry{ohm}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{1}}}\glsgroupskip
+\glsgroupheading{P}\relax \glsresetentrylist %
+\glossentry{pi}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{1}}}%
+\end{theglossary}\glossarypostamble

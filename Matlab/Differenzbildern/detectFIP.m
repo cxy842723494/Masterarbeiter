@@ -113,12 +113,12 @@ function [FIPx,FIPy,ux,vx,cr,tformY,Nofind] = detectFIP(Img_handle)
         FIPy(3) = h - s.sizeH + FIPy(3);
         FIPy(4) = h - s.sizeH + FIPy(4);
     
-   figure, imshow(Y,[]),title('QR Muster bestimmen'); % figure,
-    hold on
-    plot(floor(FIPx(1)), floor(FIPy(1)), 'r.','MarkerSize', 10)
-    plot(floor(FIPx(2)), floor(FIPy(2)), 'r.','MarkerSize', 10)
-    plot(floor(FIPx(3)), floor(FIPy(3)), 'r.','MarkerSize', 10)
-    plot(floor(FIPx(4)), floor(FIPy(4)), 'r.','MarkerSize', 10)
+%    figure, imshow(Y,[]),title('QR Muster bestimmen'); % figure,
+%     hold on
+%     plot(floor(FIPx(1)), floor(FIPy(1)), 'r.','MarkerSize', 10)
+%     plot(floor(FIPx(2)), floor(FIPy(2)), 'r.','MarkerSize', 10)
+%     plot(floor(FIPx(3)), floor(FIPy(3)), 'r.','MarkerSize', 10)
+%     plot(floor(FIPx(4)), floor(FIPy(4)), 'r.','MarkerSize', 10)
     
     
       ux = [w*(1-s.warpRatio)/2 + s.FIPsize*s.warpRatio/2 ...

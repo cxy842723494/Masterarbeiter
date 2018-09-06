@@ -20,7 +20,7 @@ Diesem Kapitel gibt einen Beschreibung über \gls{david} System. Zuerst wird ein
 
 
 \section{Systemmodell} 
-Das Display enthält eine große Anzahl von Pixel, die jeweils aus einer spezifischen Anordnung von Subpixel zur Darstellung des RGB-Farbraums bestehen. Jeder einzelne Frame des Videos wird durch eine Matrix von Subpixelwerten dargestellt. Das \gls{david}-System verwendet eine differentielle Modulationsmethode d.h. ein Teil der Videoinformationen wird wiederholt, sodass Daten als ein symmetrischer Manchester-Code moduliert und zu den Videosignalkomponenten hinzugefügt werden. Durch eine zeitliche Synchronisation der Empfängerseite kann die \gls{ISI} vermieden werden. Nach einer örtlichen Synchronisation mit dem modulierten Display, enthält der Empfänger ein Differenzbild. Da der Randbereich des Differenzbilds ungültig ist, wird das Modulationsgebiet durch das Verfahren dieser Arbeit beschränkt. Danach werden die überlagerten Datensequenz durch eine Reihe von Behandlungen, vom Videoinhalt getrennt. Abbildung \ref{fig:David2} zeigt die schematische Darstellung des \gls{david}-Systems. 
+Das Display enthält eine große Anzahl von Pixel, die jeweils aus einer spezifischen Anordnung von Subpixel zur Darstellung des RGB-Farbraums bestehen. Jeder einzelne Frame des Videos wird durch eine Matrix von Subpixelwerten dargestellt. Das \gls{david}-System verwendet eine differentielle Modulationsmethode d.h. ein Teil der Videoinformationen wird wiederholt, sodass Daten als ein symmetrischer Manchester-Code moduliert und zu den Videosignalkomponenten hinzugefügt werden. Durch eine zeitliche Synchronisation der Empfängerseite kann die \gls{ISI} vermieden werden. Nach einer örtlichen Synchronisation mit dem modulierten Display, enthält der Empfänger ein Differenzbild. Da der Randbereich des Differenzbilds ungültig ist, wird das Gebiet durch das Verfahren dieser Arbeit beschränkt. Danach werden die überlagerten Datensequenz durch eine Reihe von Behandlungen, vom Videoinhalt getrennt. Abbildung \ref{fig:David2} zeigt die schematische Darstellung des \gls{david}-Systems. 
 % Deshalb in zeitlicher oder örtlicher Richtung die Videoinhalt in paar Bildern werden gleich.
 \vspace{18pt}
 
@@ -42,7 +42,7 @@ Ein Modulationsverfahren, welches die Videoqualität nicht beträchtlich reduzie
 	\item Örtlich-differentielle Modulation der Chrominanz
 \end{itemize}
 
-Zeitlich-differentielle Modulationsverfahren lassen eine Reihe von Frames paarweise den gleichen Luminanz- bzw. Chrominanz-Videoinhalt anzeigen, d.h. durch Subtrahieren dieser Frames entsteht ein Datensequenz Differenzbild. Dagegen haben die benachbarten Pixel bei örtliche-differentielle Modulation die gleichen Videoamplituden. In dieser Arbeit wird nur zeitlich-differentielle Modulation der Chrominanz verwendet. Abbildung \ref{fig:David3} zeigt ein Blockschaltbild einer typischen Senderimplementierung durch zeitlich-differentielle Modulation.
+Zeitlich-differentielle Modulationsverfahren lassen eine Reihe von Frames paarweise den gleichen Luminanz- bzw. Chrominanz-Videoinhalt anzeigen. Dagegen haben die benachbarten Pixel bei örtliche-differentielle Modulation die gleichen Videoamplituden. In dieser Arbeit wird nur zeitlich-differentielle Modulation der Chrominanz verwendet, d.h. durch Subtrahieren dieser Frames entsteht ein Datensequenz Differenzbild, welches die beiden Verfahren in dieser Arbeit darauf basiert. Abbildung \ref{fig:David3} zeigt ein Blockschaltbild einer typischen Senderimplementierung durch zeitlich-differentielle Modulation.
 
 \begin{figure}[htb]
 	\centering 
@@ -51,7 +51,7 @@ Zeitlich-differentielle Modulationsverfahren lassen eine Reihe von Frames paarwe
 	\label{fig:David3}
 \end{figure}
 
-Eine Display enthält in horizontaler Richtung $N_x$ Pixel und in vertikaler Richtung $N_y$ Pixel. Ein Videoeingangssignal wird verarbeitet, um eine Anzeigeeingabe $s(i,j,k)$ auszusenden. Mit zeitlich-differentieller Modulation gleicht der Inhalt dieses Frames des darauf folgenden. Die Indizes i und j definieren die horizontale und vertikale Pixelposition auf dem Display, während k die Nummer des reproduzierten Frames ist. Indiz m symbolisiert den Zähler der Frames in einer Videosequenz. Der Amplitudenbereich des Videosignals sollte begrenzt sein um die Addition kleiner Datenamplituden ohne Übersteuern zu ermöglichen.
+Eine Display enthält in horizontaler Richtung $N_x$ Pixel und in vertikaler Richtung $N_y$ Pixel. Ein Videoeingangssignal wird verarbeitet, um eine Anzeigeeingabe $s(i,j,k)$ auszusenden. Mit zeitlich-differentieller Modulation gleicht der Inhalt dieses Frames des darauf folgenden. Die Indizes i und j definieren die horizontale und vertikale Pixelposition auf dem Display, während k die Nummer des reproduzierten Frames ist. Indiz m symbolisiert den Zähler der Frames in einer Videosequenz. Der Amplitudenbereich des Videosignals sollte begrenzt sein um die Addition kleiner Datenamplituden A ohne Übersteuern zu ermöglichen.
 
 \begin{equation}
 \begin{split}
@@ -60,17 +60,17 @@ Eine Display enthält in horizontaler Richtung $N_x$ Pixel und in vertikaler Ric
 \end{split}
 \end{equation}
 
-Vor der Datenübertragung muss der Datenstrom in Schichten der Länge L aufgeteilt werden. Indiz L bedeutet die Menge der Daten, die in einem Framepaar übertragen werden können. Ein direkter Ansatz ist eine direkte Zuordnung von Datenbits zu Pixeltripeln Zeile für Zeile.
+%Vor der Datenübertragung muss der Datenstrom in Schichten der Länge L aufgeteilt werden. Indiz L bedeutet die Menge der Daten, die in einem Framepaar übertragen werden können. Ein direkter Ansatz ist eine direkte Zuordnung von Datenbits zu Pixeltripeln Zeile für Zeile.
 
-\begin{equation}
-\begin{split}
-  & d(l)\rightarrow d(i,j,m) \qquad d(l)\in \{-1,1\} \\
-  & 0\le l <L,L = N_x \cdot N_y \\
-  & i=l \bmod N_x \qquad j=\lfloor l/N_x \rfloor \\
-\end{split}
-\end{equation}
+%\begin{equation}
+%\begin{split}
+%  & d(l)\rightarrow d(i,j,m) \qquad d(l)\in \{-1,1\} \\
+%  & 0\le l <L,L = N_x \cdot N_y \\
+%  & i=l \bmod N_x \qquad j=\lfloor l/N_x \rfloor \\
+%\end{split}
+%\end{equation}
 
-Die Modulationsamplitude A ist ein wichtiger Parameter für die Datenübertragung. Im Prinzip kann die Amplitude in verschieden Kanälen unabhängig gewählt werden um die Systemleistung zu optimieren. In dieser Arbeiten werden alle Amplituden auf den gleichen Wert gesetzt.
+Die Modulationsamplitude A ist ein wichtiger Parameter für die Datenübertragung. Im Prinzip kann die Amplitude in verschieden Kanälen unabhängig gewählt werden um die Systemleistung zu optimieren. In dieser Arbeit werden alle Amplituden auf den gleichen Wert gesetzt.
 
 \begin{equation}
  A_R=A_G=A_B=A        
@@ -80,77 +80,77 @@ Das differentielle Modulationsverfahren ordnet jede Sequenz von $\left\{-A, A\ri
 
 \begin{equation}
 \begin{split}
-   s_{R/G/B}(i,j,k)  &= s_{R/G/B}(i,j,m) + A_{R/G/B} \cdot \left( 2 \cdot d(i,j,m) - 1 \right) \\
-   s_{R/G/B}(i,j,k+1)&= s_{R/G/B}(i,j,m) - A_{R/G/B} \cdot \left( 2 \cdot d(i,j,m) - 1 \right) \\
+   g_{R/G/B}(i,j,k)  &= s_{R/G/B}(i,j,m) + A_{R/G/B} \cdot \left( 2 \cdot d(i,j,m) - 1 \right) \\
+   g_{R/G/B}(i,j,k+1)&= s_{R/G/B}(i,j,m) - A_{R/G/B} \cdot \left( 2 \cdot d(i,j,m) - 1 \right) \\
 \end{split}
 \end{equation}
 
-Ein Beispiel einer modulierten Bildfolge ist in Abbildung \ref{fig:David4} gezeigt. Das Hinzufügen der modulierten Daten (hier mit A = 4) zu dem Videoeingang ergibt die Anzeigeamplituden in der rechten Spalte.
-\newpage
+%Ein Beispiel einer modulierten Bildfolge ist in Abbildung \ref{fig:David4} gezeigt. Das Hinzufügen der modulierten Daten (hier mit A = 4) zu dem Videoeingang ergibt die Anzeigeamplituden in der rechten Spalte.
+%\newpage
 
-\begin{figure}[htb]
-	\centering 
-	\includegraphics[keepaspectratio,width=0.6\textwidth]{images/2_DaViD/David4.jpg}
-	\caption{Ein Beispiel einer modulierten Bildfolge}
-	\label{fig:David4}
-\end{figure}
+%\begin{figure}[htb]
+%	\centering 
+%	\includegraphics[keepaspectratio,width=0.6\textwidth]{images/2_DaViD/David4.jpg}
+%	\caption{Ein Beispiel einer modulierten Bildfolge}
+%	\label{fig:David4}
+%\end{figure}
 
-Im Vergleich zu Luminanzteil Y ist die Anzeigequalität in der U und V Komponente signifikant besser, wenn Informationen in Chrominanz wiederholt und moduliert werden. Auf diese Weise wird die Gesamtleuchtdichte eines Pixel-Triples durch die Datenmodulation nicht beeinflusst. Die Umwandlungsmatrix (ITU-R BT.709) für \gls{HDTV} Display vom Standard $(R,G,B)$ zum Standard $(Y,U,V)$ ist folgende:
+%Im Vergleich zu Luminanzteil Y ist die Anzeigequalität in der U und V Komponente signifikant besser, wenn Informationen in Chrominanz wiederholt und moduliert werden. Auf diese Weise wird die Gesamtleuchtdichte eines Pixel-Triples durch die Datenmodulation nicht beeinflusst. Die Umwandlungsmatrix (ITU-R BT.709) für \gls{HDTV} Display vom Standard $(R,G,B)$ zum Standard $(Y,U,V)$ ist folgende:
 
-\begin{equation}
-   T = \begin{pmatrix}
-   0,213 & 0,715 & 0,072 \\
-   -0,115& -0,385& 0,5	\\
-   0,5   & -0,454& -0,0458
-\end{pmatrix}  
-\end{equation}
+%\begin{equation}
+%   T = \begin{pmatrix}
+%   0,213 & 0,715 & 0,072 \\
+%   -0,115& -0,385& 0,5	\\
+%   0,5   & -0,454& -0,0458
+%\end{pmatrix}  
+%\end{equation}
 
-Das Videosignal $s(i,j,k)$ muss vor dem Anwenden der Modulation in Y-, U- und V-Komponenten umgewandelt werden. Die nachfolgende inverse Konvertierung erklärt das Display-Eingangssignal in Abbildung \ref{fig:David3}:
+%Das Videosignal $s(i,j,k)$ muss vor dem Anwenden der Modulation in Y-, U- und V-Komponenten umgewandelt werden. Die nachfolgende inverse Konvertierung erklärt das Display-Eingangssignal in Abbildung \ref{fig:David3}:
 
-\begin{equation}
-\begin{split}
-  \begin{pmatrix}
-  g_R(i,j,k) \\
-  g_G(i,j,k) \\
-  g_B(i,j,k) \\
-\end{pmatrix} &= T^{-1} \cdot \left( T \cdot \begin{pmatrix}
-  S_R(i,j,m) \\
-  S_G(i,j,m) \\
-  S_B(i,j,m) 
-  \end{pmatrix}  + \begin{pmatrix}
-  0 \\
-  A_U \cdot d(i,j,m) \\
-  A_V \cdot d(i,j,m) 
-  \end{pmatrix} \right) \\  
-  \begin{pmatrix}
-  g_R(i,j,k+1) \\
-  g_G(i,j,k+1) \\
-  g_B(i,j,k+1) \\
-\end{pmatrix} &= T^{-1} \cdot \left( T \cdot \begin{pmatrix}
-  S_R(i,j,m) \\
-  S_G(i,j,m) \\
-  S_B(i,j,m) 
-  \end{pmatrix}  - \begin{pmatrix}
-  0 \\
-  A_U \cdot d(i,j,m) \\
-  A_V \cdot d(i,j,m) 
-  \end{pmatrix} \right) \\ 
-\end{split}
-\end{equation}
+%\begin{equation}
+%\begin{split}
+%  \begin{pmatrix}
+%  g_R(i,j,k) \\
+%  g_G(i,j,k) \\
+%  g_B(i,j,k) \\
+%\end{pmatrix} &= T^{-1} \cdot \left( T \cdot \begin{pmatrix}
+%  S_R(i,j,m) \\
+%  S_G(i,j,m) \\
+%  S_B(i,j,m) 
+%  \end{pmatrix}  + \begin{pmatrix}
+%  0 \\
+%  A_U \cdot d(i,j,m) \\
+%  A_V \cdot d(i,j,m) 
+%  \end{pmatrix} \right) \\  
+%  \begin{pmatrix}
+%  g_R(i,j,k+1) \\
+%  g_G(i,j,k+1) \\
+%  g_B(i,j,k+1) \\
+%\end{pmatrix} &= T^{-1} \cdot \left( T \cdot \begin{pmatrix}
+%  S_R(i,j,m) \\
+%  S_G(i,j,m) \\
+%  S_B(i,j,m) 
+%  \end{pmatrix}  - \begin{pmatrix}
+%  0 \\
+%  A_U \cdot d(i,j,m) \\
+%  A_V \cdot d(i,j,m) 
+%  \end{pmatrix} \right) \\ 
+%\end{split}
+%\end{equation}
 
-Diese Art der Modulation kann als eine Modulation des roten und des blauen Subpixels betrachtet werden, während der grüne Subpixel verwendet wird, um die Änderung der Luminanz des Pixel-Tripels zu kompensieren. Durch die Definition korreliert $A_U$ mit $A_B$ und $A_V$ mit $A_R$.
-
-\begin{equation}
-   \begin{pmatrix}
-   A_R \\
-   A_G \\
-   A_B
-  \end{pmatrix}  = T^{-1} \cdot \begin{pmatrix}
-   A_Y \\
-   A_U \\
-   A_V
-  \end{pmatrix}
-\end{equation}
+%Diese Art der Modulation kann als eine Modulation des roten und des blauen Subpixels betrachtet werden, während der grüne Subpixel verwendet wird, um die Änderung der Luminanz des Pixel-Tripels zu kompensieren. Durch die Definition korreliert $A_U$ mit $A_B$ und $A_V$ mit $A_R$.
+%
+%\begin{equation}
+%   \begin{pmatrix}
+%   A_R \\
+%   A_G \\
+%   A_B
+%  \end{pmatrix}  = T^{-1} \cdot \begin{pmatrix}
+%   A_Y \\
+%   A_U \\
+%   A_V
+%  \end{pmatrix}
+%\end{equation}
 
 
 
@@ -166,14 +166,14 @@ Ein einfaches und unkompliziertes Verfahren um die Anforderungen an die Kameraau
 \end{split}
 \end{equation}
 
-Wenn die Anzahl der Pixel Pro Zeile bzw. Spalte kein Vielfaches von $B_X$ bzw. $B_Y$ ist, muss die Anzahl der Pixel Pro Zeile bzw Spalte, die für die Modulation in Gleichung $\left(2.8\right)$ verwendet werden, ersetzt werden durch:
-
-\begin{equation}
-\begin{split}
-  & N_X = \lfloor N_X/B_X \rfloor \cdot B_X\\ 
-  & N_Y = \lfloor N_Y/B_Y \rfloor \cdot B_Y\\ 
-\end{split}
-\end{equation}
+%Wenn die Anzahl der Pixel Pro Zeile bzw. Spalte kein Vielfaches von $B_X$ bzw. $B_Y$ ist, muss die Anzahl der Pixel Pro Zeile bzw Spalte, die für die Modulation in Gleichung $\left(2.8\right)$ verwendet werden, ersetzt werden durch:
+%
+%\begin{equation}
+%\begin{split}
+%  & N_X = \lfloor N_X/B_X \rfloor \cdot B_X\\ 
+%  & N_Y = \lfloor N_Y/B_Y \rfloor \cdot B_Y\\ 
+%\end{split}
+%\end{equation}
 
 In dieser Arbeit ist der Datenblock quadratisch.
 

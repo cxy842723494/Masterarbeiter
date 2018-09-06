@@ -65,7 +65,9 @@
 	\KOMAoptions{DIV=last}%					Seitenspiegel durch setspace nicht verändern
 \usepackage{float}
 \usepackage[hang, bf, font=small, textformat=period]{caption}%	Captions für s und tables
-\usepackage{subcaption}%					Package um subfigure zu erstellen
+%\usepackage{grephicx}
+\usepackage{subfigure}
+%\usepackage{subcaption}%					Package um subfigure zu erstellen
 \usepackage[svgnames, table]{xcolor}%		Farbkonversion etc.
 \usepackage{colortbl}%						Support for colors in tables
 \usepackage{multirow}%						Zelle einer Tabelle über mehrere Zeilen ausdehnen
@@ -161,7 +163,8 @@
 		bookmarksopenlevel = 1,%		... up to section titles
 	}
 }
-\usepackage[acronym,nonumberlist,section=chapter,translate=false,shortcuts,toc=true]{glossaries} % Glossar, Abkürzungsverzeichniss etc.
+%\usepackage[acronym,nonumberlist,section=chapter,translate=false,shortcuts,toc=true]{glossaries} % Glossar, Abkürzungsverzeichniss etc.
+\usepackage[automake]{glossaries}
 	\renewcommand{\acronymname}{Abkürzungsverzeichnis}
 	\newglossary[slg]{symbol}{sym}{sbl}{Symbolverzeichnis}
 	\makeglossaries
@@ -271,13 +274,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\thesistitle{Tasty Kanalmodell\\ für die drahtlose Kommunikation\\ zwischen Gebäuden und\\ Außeninstallationen} % Titel der Abschlussarbeit % no more than 4 lines here
-\documentnumber{B\ 14-2015}%	MXX-20XX
-\documenttype{Bachelorarbeit}%	Masterarbeit
-\authorfirstname{Käpt'n Kevin}%	Name des Autors
-\authorsurname{Blaubär}%		Nachname des Autors
-\matrikelnumber{123456}%		Matrikelnummer des Autors
-\date{23. Januar 2018}%			Abgabedatum
+\thesistitle{Untersuchung von Verfahren \\ zur Ausschnittsdetektin \\ für die Screen-Camera \\ Light Communication} % Titel der Abschlussarbeit % no more than 4 lines here
+\documentnumber{M\ 06-2017}%	MXX-20XX
+\documenttype{Masterarbeit}%	Masterarbeit
+\authorfirstname{Xiaoyu}%	Name des Autors
+\authorsurname{Chen}%		Nachname des Autors
+\matrikelnumber{181225}%		Matrikelnummer des Autors
+\date{10. September 2018}%			Abgabedatum
 
 \makeatletter
 \title{\@thesistitle}

@@ -23,7 +23,7 @@ BW = imbinarize(X);
 % Active contour
 % iterations = 5;
 % BW = activecontour(X, BW, iterations, 'edge');
-figure,imshow(BW),title('Binarisierung');
+% figure,imshow(BW),title('Binarisierung');
 % Close mask with square
 width = 4; %5
 se = strel('square', width);
@@ -33,7 +33,7 @@ BW = imclose(BW, se);
 width = 4;% 5
 se = strel('square', width);
 BW = imopen(BW, se);
-figure,imshow(BW),title('Morphologisch');
+% figure,imshow(BW),title('Morphologisch');
 % Create masked image.
 maskedImage = X;
 maskedImage(~BW) = 0;

@@ -4,8 +4,8 @@ clean;
 modAmp = 4;
 blocksize = 4;
 
-inputName = 'windmill_auswert.png';
-outputName = 'A4B4QRauswert ';
+inputName = 'windmill.png';
+outputName = 'fussball ';
 v = imread(['input/', inputName]);
 nbFrames = 300;
 outputFramerate = 25;

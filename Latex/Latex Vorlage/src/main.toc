@@ -10,37 +10,37 @@
 \contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung des \gls {david}s}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Systemmodell}{4}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Modulationsverfahren}{5}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}DatenBlock}{8}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Anwendungsgebiete}{8}{section.2.3}
-\contentsline {chapter}{\numberline {3}Erste Methode}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Allgemeine Struktur}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Bildregistrierung}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}\gls {surf}}{13}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}\gls {ransac}}{18}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Bilder Umwandlung}{22}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Differenzbild Optimierung}{33}{section.3.3}
-\contentsline {section}{\numberline {3.4}Bildverarbeitung}{36}{section.3.4}
-\contentsline {section}{\numberline {3.5}QR Muster Detektion}{37}{section.3.5}
-\contentsline {chapter}{\numberline {4}Zweite Methode}{42}{chapter.4}
-\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{42}{section.4.1}
-\contentsline {section}{\numberline {4.2}Binarisierung}{45}{section.4.2}
-\contentsline {section}{\numberline {4.3}Morphologie}{50}{section.4.3}
-\contentsline {section}{\numberline {4.4}Canny detection}{54}{section.4.4}
-\contentsline {section}{\numberline {4.5}Cross Dilatation}{58}{section.4.5}
-\contentsline {section}{\numberline {4.6}Hough Transformation}{59}{section.4.6}
-\contentsline {section}{\numberline {4.7}Radon Transformation}{61}{section.4.7}
-\contentsline {chapter}{\numberline {5}Implementierung}{64}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experimentelle Umgebung}{64}{section.5.1}
-\contentsline {section}{\numberline {5.2}Implementierung vom ersten Verfahren}{65}{section.5.2}
-\contentsline {section}{\numberline {5.3}Implementierung von zweiten Verfahren}{67}{section.5.3}
-\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{69}{section.5.4}
-\contentsline {chapter}{\numberline {6}Evaluierung}{71}{chapter.6}
-\contentsline {section}{\numberline {6.1}Evaluierung des 1.Verfahrens}{71}{section.6.1}
-\contentsline {section}{\numberline {6.2}Evaluierung des 2.Verfahrens}{75}{section.6.2}
-\contentsline {chapter}{\numberline {7}Zusammenfassung}{77}{chapter.7}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{79}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{79}{section.A.1}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{81}{chapter*.69}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{84}{chapter*.70}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{85}{chapter*.71}
-\contentsline {chapter}{\nonumberline Literatur}{86}{chapter*.72}
+\contentsline {subsection}{\numberline {2.2.2}DatenBlock}{6}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Anwendungsgebiete}{7}{section.2.3}
+\contentsline {chapter}{\numberline {3}Erste Methode}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Allgemeine Struktur}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Bildregistrierung}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}\gls {surf}}{11}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}\gls {ransac}}{16}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Bilder Umwandlung}{20}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Differenzbild Optimierung}{31}{section.3.3}
+\contentsline {section}{\numberline {3.4}Bildverarbeitung}{34}{section.3.4}
+\contentsline {section}{\numberline {3.5}QR Muster Detektion}{35}{section.3.5}
+\contentsline {chapter}{\numberline {4}Zweite Methode}{40}{chapter.4}
+\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{40}{section.4.1}
+\contentsline {section}{\numberline {4.2}Binarisierung}{43}{section.4.2}
+\contentsline {section}{\numberline {4.3}Morphologie}{48}{section.4.3}
+\contentsline {section}{\numberline {4.4}Canny detection}{52}{section.4.4}
+\contentsline {section}{\numberline {4.5}Cross Dilatation}{56}{section.4.5}
+\contentsline {section}{\numberline {4.6}Hough Transformation}{57}{section.4.6}
+\contentsline {section}{\numberline {4.7}Radon Transformation}{59}{section.4.7}
+\contentsline {chapter}{\numberline {5}Implementierung}{62}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experimentelle Umgebung}{62}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementierung vom ersten Verfahren}{62}{section.5.2}
+\contentsline {section}{\numberline {5.3}Implementierung von zweiten Verfahren}{65}{section.5.3}
+\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{67}{section.5.4}
+\contentsline {chapter}{\numberline {6}Evaluierung}{69}{chapter.6}
+\contentsline {section}{\numberline {6.1}Evaluierung des 1.Verfahrens}{69}{section.6.1}
+\contentsline {section}{\numberline {6.2}Evaluierung des 2.Verfahrens}{74}{section.6.2}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{75}{chapter.7}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{77}{appendix.A}
+\contentsline {section}{\numberline {A.1}Section}{77}{section.A.1}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{81}{chapter*.73}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{84}{chapter*.74}
+\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{85}{chapter*.75}
+\contentsline {chapter}{\nonumberline Literatur}{86}{chapter*.76}
