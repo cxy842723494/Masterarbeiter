@@ -79,82 +79,82 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Allgemeine Struktur}{42}{section.4.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Idee f\IeC {\"u}r Detektion\relax }}{43}{figure.caption.33}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Flussdiagramm der zweiten Methode\relax }}{44}{figure.caption.34}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Binarisierung}{45}{section.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Binarisierung}{44}{section.4.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Histogramm eines einfachen Beispiels\relax }}{45}{figure.caption.35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Binarisierung mit globalen Schwellenwertmethode\relax }}{47}{figure.caption.36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Binarisierung mit globalen Schwellenwertmethode\relax }}{46}{figure.caption.36}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Binarisierung mit lokaler Schwellenwertmethode\relax }}{47}{figure.caption.37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Binarisierung mit Ostu\relax }}{49}{figure.caption.38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Binarisierung mit Ostu\relax }}{48}{figure.caption.38}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Binarisiertes zu detektierendes Bild\relax }}{49}{figure.caption.39}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Morphologie}{50}{section.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Morphologie}{49}{section.4.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Einige grundlegende Strukturelemente\relax }}{50}{figure.caption.40}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Dilatation und Erosion\relax }}{51}{figure.caption.41}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces \IeC {\"O}ffnung und Schlie\IeC {\ss }ung\relax }}{53}{figure.caption.42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces \IeC {\"O}ffnung und Schlie\IeC {\ss }ung\relax }}{52}{figure.caption.42}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Canny detection}{53}{section.4.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Bild nach einer morphologischen Operation\relax }}{54}{figure.caption.43}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Canny detection}{54}{section.4.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Bin\IeC {\"a}rbild nach der Canny detektion\relax }}{58}{figure.caption.44}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Cross Dilatation}{58}{section.4.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Hough Transformation}{59}{section.4.6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces $ \rho ,\theta $ Parameterraum\relax }}{59}{figure.caption.45}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Houghdetektion\relax }}{60}{figure.caption.46}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Radon Transformation}{61}{section.4.7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces Parametrisierte Linie\relax }}{62}{figure.caption.47}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces Integral der Funktion $ f(x,y) $\relax }}{62}{figure.caption.47}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces Radon Transformation $(\theta ,\rho )$\relax }}{62}{figure.caption.48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Radon Transformation $(\theta )$\relax }}{62}{figure.caption.48}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Implementierung}{64}{chapter.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Bin\IeC {\"a}rbild nach der Canny detektion\relax }}{57}{figure.caption.44}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Cross Dilatation}{57}{section.4.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Hough Transformation}{58}{section.4.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces $ \rho ,\theta $ Parameterraum\relax }}{58}{figure.caption.45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Houghdetektion\relax }}{59}{figure.caption.46}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Radon Transformation}{60}{section.4.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces Parametrisierte Linie\relax }}{61}{figure.caption.47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces Integral der Funktion $ f(x,y) $\relax }}{61}{figure.caption.47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces Radon Transformation $(\theta ,\rho )$\relax }}{61}{figure.caption.48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces Radon Transformation $(\theta )$\relax }}{61}{figure.caption.48}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Implementierung}{63}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Experimentelle Umgebung}{64}{section.5.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces Verwendete Bildschirme\relax }}{64}{table.caption.49}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Implementierung vom ersten Verfahren}{65}{section.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Bilder vor Bildregistrierung\relax }}{65}{figure.caption.50}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Bilder nach Bildregistrierung\relax }}{65}{figure.caption.50}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Ein zu detektierendes Bild\relax }}{66}{figure.caption.51}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces entsprechendes Histogramm\relax }}{66}{figure.caption.51}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Bin\IeC {\"a}r\relax }}{66}{figure.caption.52}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Morphologisch\relax }}{66}{figure.caption.52}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces QR Muster\relax }}{66}{figure.caption.53}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Mudulaitionsbereich\relax }}{66}{figure.caption.53}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Ergebnis der 1. Methode\relax }}{67}{figure.caption.54}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Implementierung von zweiten Verfahren}{67}{section.5.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Ein zu detektierendes Bild\relax }}{68}{figure.caption.55}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Binarisierung\relax }}{68}{figure.caption.55}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Morphologisch\relax }}{68}{figure.caption.56}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Canny Detektion\relax }}{68}{figure.caption.56}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Cross Dilatation\relax }}{68}{figure.caption.57}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.15}{\ignorespaces Radon Detektion\relax }}{68}{figure.caption.57}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.16}{\ignorespaces Ergebnis der 2. Methode\relax }}{69}{figure.caption.58}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{69}{section.5.4}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces Grundlegende Parameter f\IeC {\"u}r Mi3\relax }}{69}{table.caption.59}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.17}{\ignorespaces Ergebnis auf dem Xiaomi Mi3\relax }}{70}{figure.caption.60}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Evaluierung}{71}{chapter.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Experimentelle Umgebung}{63}{section.5.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces Verwendete Bildschirme\relax }}{63}{table.caption.49}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Implementierung vom ersten Verfahren}{64}{section.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Bilder vor Bildregistrierung\relax }}{64}{figure.caption.50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Bilder nach Bildregistrierung\relax }}{64}{figure.caption.50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Ein zu detektierendes Bild\relax }}{65}{figure.caption.51}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces entsprechendes Histogramm\relax }}{65}{figure.caption.51}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Bin\IeC {\"a}r\relax }}{65}{figure.caption.52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Morphologisch\relax }}{65}{figure.caption.52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces QR Muster\relax }}{65}{figure.caption.53}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Mudulaitionsbereich\relax }}{65}{figure.caption.53}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Ergebnis der 1. Methode\relax }}{66}{figure.caption.54}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Implementierung von zweiten Verfahren}{66}{section.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Ein zu detektierendes Bild\relax }}{67}{figure.caption.55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Binarisierung\relax }}{67}{figure.caption.55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Morphologisch\relax }}{67}{figure.caption.56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Canny Detektion\relax }}{67}{figure.caption.56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Cross Dilatation\relax }}{67}{figure.caption.57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.15}{\ignorespaces Radon Detektion\relax }}{67}{figure.caption.57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.16}{\ignorespaces Ergebnis der 2. Methode\relax }}{68}{figure.caption.58}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{68}{section.5.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces Grundlegende Parameter f\IeC {\"u}r Mi3\relax }}{68}{table.caption.59}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.17}{\ignorespaces Ergebnis auf dem Xiaomi Mi3\relax }}{69}{figure.caption.60}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Evaluierung}{70}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Evaluierung des 1.Verfahrens}{71}{section.6.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Verzerrung durch Handsch\IeC {\"u}tteln\relax }}{72}{figure.caption.61}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Konvergenzkurve von J\relax }}{72}{figure.caption.62}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 6.1}{\ignorespaces Daten des Fehlers\relax }}{73}{table.caption.63}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Bild nach Registrierung\relax }}{73}{figure.caption.64}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Histogramm f\IeC {\"u}r die Abweichungen in beiden Richtungen\relax }}{74}{figure.caption.65}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Testbild mit Gitter\relax }}{74}{figure.caption.66}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Ergebnis 1\relax }}{75}{figure.caption.67}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Evaluierung des 2.Verfahrens}{75}{section.6.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.7}{\ignorespaces Ergebnis 2\relax }}{76}{figure.caption.68}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Zusammenfassung}{77}{chapter.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Evaluierung des 1.Verfahrens}{70}{section.6.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Verzerrung durch Handsch\IeC {\"u}tteln\relax }}{71}{figure.caption.61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Konvergenzkurve von J\relax }}{71}{figure.caption.62}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 6.1}{\ignorespaces Daten des Fehlers\relax }}{72}{table.caption.63}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Bild nach Registrierung\relax }}{72}{figure.caption.64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Histogramm f\IeC {\"u}r die Abweichungen in beiden Richtungen\relax }}{73}{figure.caption.65}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Testbild mit Gitter\relax }}{73}{figure.caption.66}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Ergebnis 1\relax }}{74}{figure.caption.67}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Evaluierung des 2.Verfahrens}{74}{section.6.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.7}{\ignorespaces Ergebnis 2\relax }}{75}{figure.caption.68}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Zusammenfassung}{76}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{79}{appendix.A}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Erster Anhang}{78}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{79}{section.A.1}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{81}{chapter*.69}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{84}{chapter*.70}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{85}{chapter*.71}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{86}{chapter*.72}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Section}{78}{section.A.1}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{80}{chapter*.69}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{83}{chapter*.70}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{84}{chapter*.71}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{85}{chapter*.72}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}

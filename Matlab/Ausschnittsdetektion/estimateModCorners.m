@@ -3,12 +3,12 @@ function [corners,selectf2,Hh,Hv,select,Th,Rh,Ph,Tv,Rv,Pv,selectf] = estimateMod
     % Threshold should be high enough to avoid large noise outside the
     % modulated area, but large enough to avoid large gaps in weakly
     % modulated regions.
-%     select = abs(im)>std(double(im(:)))*threshold;
-%    select = AdaptiveThreshold(im, 15, 15);
-%     figure,histogram(im);
+    select = abs(im)>std(double(im(:)))*threshold;
+   select = AdaptiveThreshold(im, 15, 15);
+    figure,histogram(im);
 %     figure,imshow(select),title('select');
 
-    [select,maskedImage]  = binar(im);
+%     [select,maskedImage]  = binar(im);
     
     %% Use morphological filters to eliminate spurious holes and points
     % Transitions leave gaps between blocks, whereas noise causes small

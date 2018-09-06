@@ -1,15 +1,17 @@
 clear
 clc
 %% read YUV images and calculate differential images
-% fn1 = 'yuv_1_bs8_2.yuv';
-% fn2 = 'yuv_2_bs8_2.yuv';
-% 
-% [yuv(1).Y, yuv(1).U, yuv(1).V] = readYUV(fn1);
-% [yuv(2).Y, yuv(2).U, yuv(2).V] = readYUV(fn2);
-% 
-% % img = yuv2rgb(yuv(1).Y,yuv(1).U,yuv(1).V);
-% % grayimg = rgb2gray(img);
-% % diff(:,:,1) = yuv(1).V - yuv(2).V;
+fn1 = 'yuv_1_bs8_2.yuv';
+fn2 = 'yuv_2_bs8_2.yuv';
+
+[yuv(1).Y, yuv(1).U, yuv(1).V] = readYUV(fn1);
+[yuv(2).Y, yuv(2).U, yuv(2).V] = readYUV(fn2);
+
+% img = yuv2rgb(yuv(1).Y,yuv(1).U,yuv(1).V);
+% grayimg = rgb2gray(img);
+diff(:,:,1) = yuv(1).V - yuv(2).V;
+figure, imshow(diff(:,:,1),[]);
+figure, histogram(diff(:,:,1));
 % % diff(:,:,3) = yuv(1).U - yuv(2).U;
 % diffc_r = yuv(1).U - yuv(2).U;
 

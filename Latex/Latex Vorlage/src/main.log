@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.8)  5 SEP 2018 20:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.8)  5 SEP 2018 23:44
 entering extended mode
 **./main.tex
 (main.tex
@@ -4768,13 +4768,13 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
-<images/4_ZweiteErfahrung/Flussdiagrammsum.pdf, id=952, 485.011pt x 701.6373pt>
-
+<images/4_ZweiteErfahrung/Flussdiagrammsum.pdf, id=952, 403.74336pt x 429.61603
+pt>
 File: images/4_ZweiteErfahrung/Flussdiagrammsum.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Flussdiagrammsum.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Flussdiagrammsum.pdf  used on
  input line 21.
-(pdftex.def)             Requested size: 450.69174pt x 652.00204pt.
+(pdftex.def)             Requested size: 450.69174pt x 479.59993pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4785,23 +4785,19 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 25.
  [43 <./images/4_ZweiteErfahrung/Strukturdiagramm.pdf, page is rotated 90 degre
 es>]
-Overfull \vbox (38.71161pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
-
-[44 <./images/4_ZweiteErfahrung/Flussdiagrammsum.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 26.
-
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
+ [44 <./images/4_ZweiteErfahrung/Flussdiagrammsum.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Binar/binar.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
@@ -4812,57 +4808,58 @@ Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/binar.pdf  used on inpu
 t line 36.
 (pdftex.def)             Requested size: 270.41779pt x 160.43358pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 52.
 [45 <./images/4_ZweiteErfahrung/Binar/binar.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Binar/global.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Binar/global.pdf, id=999, 362.10281pt x 179.92218pt>
+<images/4_ZweiteErfahrung/Binar/global.pdf, id=1000, 362.10281pt x 179.92218pt>
+
 File: images/4_ZweiteErfahrung/Binar/global.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Binar/global.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/global.pdf  used on inp
 ut line 73.
 (pdftex.def)             Requested size: 270.41779pt x 134.36751pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
-[46]
+(babel)             in language  on input line 80.
+[46 <./images/4_ZweiteErfahrung/Binar/global.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Binar/adaptive.pdf): 
 PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Binar/adaptive.pdf, id=1010, 741.52031pt x 411.03563p
+<images/4_ZweiteErfahrung/Binar/adaptive.pdf, id=1014, 741.52031pt x 411.03563p
 t>
 File: images/4_ZweiteErfahrung/Binar/adaptive.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Binar/adaptive.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/adaptive.pdf  used on i
 nput line 88.
 (pdftex.def)             Requested size: 270.41779pt x 149.89818pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 95.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 95.
-[47 <./images/4_ZweiteErfahrung/Binar/global.pdf> <./images/4_ZweiteErfahrung/B
-inar/adaptive.pdf>]
+
 Overfull \hbox (0.14772pt too wide) in paragraph at lines 95--96
 \T1/phv/m/n/10.95 Ge-lehr-ten Ot-su ent-wor-fen und ist ei-ne ad-ap-ti-ve Schwe
 l-len-wert-be-stim-mungs-me-tho-de, die auch
  []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 98.
+[47 <./images/4_ZweiteErfahrung/Binar/adaptive.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 111.
 
@@ -4881,25 +4878,17 @@ Missing character: There is no ˆ in font phvr7t!
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Binar/Ostu.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Binar/Ostu.pdf, id=1025, 356.0803pt x 181.42781pt>
+<images/4_ZweiteErfahrung/Binar/Ostu.pdf, id=1026, 356.0803pt x 181.42781pt>
 File: images/4_ZweiteErfahrung/Binar/Ostu.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Binar/Ostu.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/Ostu.pdf  used on input
  line 123.
 (pdftex.def)             Requested size: 270.41779pt x 137.7869pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 127.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 127.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 127.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 127.
-[48]
+
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/binar/binarisierung.p
 df): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/binar/binarisierung.pdf, id=1036, 1094.58937pt x 612.
+<images/4_ZweiteErfahrung/binar/binarisierung.pdf, id=1028, 1094.58937pt x 612.
 03656pt>
 File: images/4_ZweiteErfahrung/binar/binarisierung.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/binar/binarisierung.pdf>
@@ -4907,19 +4896,27 @@ Package pdftex.def Info: images/4_ZweiteErfahrung/binar/binarisierung.pdf  used
  on input line 134.
 (pdftex.def)             Requested size: 450.69174pt x 252.00125pt.
 Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 137.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 137.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 137.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 137.
+[48 <./images/4_ZweiteErfahrung/Binar/Ostu.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 141.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 141.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 144.
-[49 <./images/4_ZweiteErfahrung/Binar/Ostu.pdf> <./images/4_ZweiteErfahrung/bin
-ar/binarisierung.pdf>]
+(babel)             in language  on input line 151.
+ [49 <./images/4_ZweiteErfahrung/binar/binarisierung.pdf>]
 <images/4_ZweiteErfahrung/Morphological/strelement.pdf, id=1048, 368.24777pt x 
 326.72363pt>
 File: images/4_ZweiteErfahrung/Morphological/strelement.pdf Graphic file (type 
@@ -4928,15 +4925,7 @@ pdf)
 Package pdftex.def Info: images/4_ZweiteErfahrung/Morphological/strelement.pdf 
  used on input line 159.
 (pdftex.def)             Requested size: 157.74486pt x 139.95996pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 165.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 165.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 165.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 165.
- [50 <./images/4_ZweiteErfahrung/Morphological/strelement.pdf>]
+
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 171.
 
@@ -4949,7 +4938,7 @@ Missing character: There is no ˆ in font phvr7t!
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Morphological/Dilatat
 ionundErosion.pdf): PDF inclusion: found PDF version <1.6>, but at most version
  <1.5> allowed
-<images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf, id=1071, 474.
+<images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf, id=1050, 474.
 27188pt x 367.3725pt>
 File: images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf Graphic f
 ile (type pdf)
@@ -4958,14 +4947,14 @@ Package pdftex.def Info: images/4_ZweiteErfahrung/Morphological/DilatationundEr
 osion.pdf  used on input line 178.
 (pdftex.def)             Requested size: 360.55476pt x 279.29567pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 182.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 182.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 182.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
-[51 <./images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf>]
+(babel)             in language  on input line 182.
+[50 <./images/4_ZweiteErfahrung/Morphological/strelement.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 188.
 
@@ -4973,6 +4962,15 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 188.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 188.
 
 Missing character: There is no ˆ in font phvr7t!
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 199.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 199.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 199.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 199.
+[51 <./images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 201.
 
@@ -4985,7 +4983,7 @@ Missing character: There is no ˆ in font phvr7t!
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Morphological/oeffnun
 gundschliessung.pdf): PDF inclusion: found PDF version <1.6>, but at most versi
 on <1.5> allowed
-<images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf, id=1083, 51
+<images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf, id=1084, 51
 2.66531pt x 365.86688pt>
 File: images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf Graphic
  file (type pdf)
@@ -4993,15 +4991,6 @@ File: images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf Graphic
 Package pdftex.def Info: images/4_ZweiteErfahrung/Morphological/oeffnungundschl
 iessung.pdf  used on input line 208.
 (pdftex.def)             Requested size: 360.55476pt x 257.31091pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 212.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 212.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 212.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 212.
-[52]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 218.
 
@@ -5010,19 +4999,19 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 218.
 
 Missing character: There is no ˆ in font phvr7t!
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 232.
+(babel)             in language  on input line 219.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 232.
+(babel)             in language  on input line 219.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 232.
+(babel)             in language  on input line 219.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 232.
-[53 <./images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf>]
+(babel)             in language  on input line 219.
+[52 <./images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Morphological/morpho.
 pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<images/4_ZweiteErfahrung/Morphological/morpho.pdf, id=1103, 1094.58937pt x 612
+<images/4_ZweiteErfahrung/Morphological/morpho.pdf, id=1098, 1094.58937pt x 612
 .03656pt>
 File: images/4_ZweiteErfahrung/Morphological/morpho.pdf Graphic file (type pdf)
 
@@ -5042,12 +5031,21 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 251.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 251.
-[54 <./images/4_ZweiteErfahrung/Morphological/morpho.pdf>]
+[53]
 Overfull \hbox (4.12366pt too wide) in paragraph at lines 265--266
 \T1/phv/m/n/10.95 Gauÿ-scher Un-schär-fe ist da-zu da, um Rau-schen zu ent-fer-
 nen und die Er-ken-nung falscher
  []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 266.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 266.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 266.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 266.
+[54 <./images/4_ZweiteErfahrung/Morphological/morpho.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 271.
 
@@ -5057,32 +5055,24 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 271.
 
 Missing character: There is no ˆ in font phvr7t!
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 275.
+(babel)             in language  on input line 292.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 275.
+(babel)             in language  on input line 292.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 275.
+(babel)             in language  on input line 292.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 275.
+(babel)             in language  on input line 292.
 [55]
 Overfull \hbox (13.82826pt too wide) in paragraph at lines 297--299
 []\T1/phv/b/n/10.95 Doppelte Schwel-le. \T1/phv/m/n/10.95 Ein all-ge-mei-ner Ka
 n-te-ner-ken-nungs-al-go-rith-mus wel-cher einen Schwel-
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 299.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 299.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 299.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 299.
-[56]
+
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Canny/canny.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Canny/canny.pdf, id=1129, 1445.4pt x 754.31813pt>
+<images/4_ZweiteErfahrung/Canny/canny.pdf, id=1124, 1445.4pt x 754.31813pt>
 File: images/4_ZweiteErfahrung/Canny/canny.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Canny/canny.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Canny/canny.pdf  used on inpu
@@ -5096,7 +5086,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 314.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 314.
-[57]
+[56]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 315.
 Package babel Info: Redefining ngerman shorthand "~
@@ -5113,7 +5103,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 324.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 324.
- [58 <./images/4_ZweiteErfahrung/Canny/canny.pdf>]
+ [57 <./images/4_ZweiteErfahrung/Canny/canny.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 327.
 
@@ -5121,7 +5111,7 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 327.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 327.
 
 Missing character: There is no ˆ in font phvr7t!
-<images/4_ZweiteErfahrung/Hough/Hough.pdf, id=1145, 335.64195pt x 143.28531pt>
+<images/4_ZweiteErfahrung/Hough/Hough.pdf, id=1140, 335.64195pt x 143.28531pt>
 File: images/4_ZweiteErfahrung/Hough/Hough.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Hough/Hough.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Hough/Hough.pdf  used on inpu
@@ -5135,12 +5125,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 341.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 341.
-[59 <./images/4_ZweiteErfahrung/Hough/Hough.pdf>]
+[58 <./images/4_ZweiteErfahrung/Hough/Hough.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Hough/Houghdetektion.
 pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf, id=1170, 963.6pt x 483.3056
+<images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf, id=1166, 963.6pt x 483.3056
 2pt>
 File: images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf Graphic file (type pdf)
 
@@ -5160,7 +5150,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 368.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 368.
-[60 <./images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf>]
+[59 <./images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 373.
 
@@ -5175,13 +5165,13 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 378.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 378.
 
 Missing character: There is no ˆ in font phvr7t!
-<images/4_ZweiteErfahrung/Radon/1.pdf, id=1187, 154.8997pt x 114.20668pt>
+<images/4_ZweiteErfahrung/Radon/1.pdf, id=1183, 154.8997pt x 114.20668pt>
 File: images/4_ZweiteErfahrung/Radon/1.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Radon/1.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Radon/1.pdf  used on input li
 ne 386.
 (pdftex.def)             Requested size: 220.84142pt x 162.83333pt.
-<images/4_ZweiteErfahrung/Radon/2.pdf, id=1188, 167.9635pt x 114.293pt>
+<images/4_ZweiteErfahrung/Radon/2.pdf, id=1184, 167.9635pt x 114.293pt>
 File: images/4_ZweiteErfahrung/Radon/2.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Radon/2.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Radon/2.pdf  used on input li
@@ -5195,7 +5185,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 397.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 397.
-[61]
+[60]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 400.
 
@@ -5203,13 +5193,13 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 400.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 400.
 
 Missing character: There is no ˆ in font phvr7t!
-<images/4_ZweiteErfahrung/Radon/3.pdf, id=1197, 139.52023pt x 105.47606pt>
+<images/4_ZweiteErfahrung/Radon/3.pdf, id=1193, 139.52023pt x 105.47606pt>
 File: images/4_ZweiteErfahrung/Radon/3.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Radon/3.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Radon/3.pdf  used on input li
 ne 408.
 (pdftex.def)             Requested size: 220.84142pt x 166.95772pt.
-<images/4_ZweiteErfahrung/Radon/4.pdf, id=1198, 139.52023pt x 102.22993pt>
+<images/4_ZweiteErfahrung/Radon/4.pdf, id=1194, 139.52023pt x 102.22993pt>
 File: images/4_ZweiteErfahrung/Radon/4.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Radon/4.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Radon/4.pdf  used on input li
@@ -5223,7 +5213,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 421.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 421.
-[62 <./images/4_ZweiteErfahrung/Radon/1.pdf> <./images/4_ZweiteErfahrung/Radon/
+[61 <./images/4_ZweiteErfahrung/Radon/1.pdf> <./images/4_ZweiteErfahrung/Radon/
 2.pdf> <./images/4_ZweiteErfahrung/Radon/3.pdf> <./images/4_ZweiteErfahrung/Rad
 on/4.pdf>])
 Package babel Info: Redefining ngerman shorthand "|
@@ -5234,7 +5224,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 302.
- [63]
+ [62]
 \openout2 = `mainmatter/Implementierung.aux'.
 
  (mainmatter/Implementierung.tex
@@ -5259,7 +5249,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 32.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 32.
-[64
+[63
 
 
 
@@ -5267,7 +5257,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/vorregistration.pdf): 
 PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/vorregistration.pdf, id=1262, 1094.58937pt x 612.03656
+<images/5_Implementirung/vorregistration.pdf, id=1257, 1094.58937pt x 612.03656
 pt>
 File: images/5_Implementirung/vorregistration.pdf Graphic file (type pdf)
 <use images/5_Implementirung/vorregistration.pdf>
@@ -5278,7 +5268,7 @@ nput line 41.
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/nachregis.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/nachregis.pdf, id=1263, 963.6pt x 483.30562pt>
+<images/5_Implementirung/nachregis.pdf, id=1258, 963.6pt x 483.30562pt>
 File: images/5_Implementirung/nachregis.pdf Graphic file (type pdf)
 <use images/5_Implementirung/nachregis.pdf>
 Package pdftex.def Info: images/5_Implementirung/nachregis.pdf  used on input l
@@ -5293,7 +5283,7 @@ Overfull \hbox (22.08548pt too wide) in paragraph at lines 47--48
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/nachdiff.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/nachdiff.pdf, id=1265, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/nachdiff.pdf, id=1260, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/nachdiff.pdf Graphic file (type pdf)
 <use images/5_Implementirung/nachdiff.pdf>
 Package pdftex.def Info: images/5_Implementirung/nachdiff.pdf  used on input li
@@ -5303,7 +5293,7 @@ ne 59.
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/histodiff.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/histodiff.pdf, id=1266, 421.575pt x 316.18124pt>
+<images/5_Implementirung/histodiff.pdf, id=1261, 421.575pt x 316.18124pt>
 File: images/5_Implementirung/histodiff.pdf Graphic file (type pdf)
 <use images/5_Implementirung/histodiff.pdf>
 Package pdftex.def Info: images/5_Implementirung/histodiff.pdf  used on input l
@@ -5317,12 +5307,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 70.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 70.
-[65 <./images/5_Implementirung/vorregistration.pdf> <./images/5_Implementirung/
+[64 <./images/5_Implementirung/vorregistration.pdf> <./images/5_Implementirung/
 nachregis.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/Binar.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/Binar.pdf, id=1285, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/Binar.pdf, id=1281, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/Binar.pdf Graphic file (type pdf)
 <use images/5_Implementirung/Binar.pdf>
 Package pdftex.def Info: images/5_Implementirung/Binar.pdf  used on input line 
@@ -5332,7 +5322,7 @@ Package pdftex.def Info: images/5_Implementirung/Binar.pdf  used on input line
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/morpho.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/morpho.pdf, id=1286, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/morpho.pdf, id=1282, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/morpho.pdf Graphic file (type pdf)
 <use images/5_Implementirung/morpho.pdf>
 Package pdftex.def Info: images/5_Implementirung/morpho.pdf  used on input line
@@ -5342,7 +5332,7 @@ Package pdftex.def Info: images/5_Implementirung/morpho.pdf  used on input line
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/QR_muster.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/QR_muster.pdf, id=1287, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/QR_muster.pdf, id=1283, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/QR_muster.pdf Graphic file (type pdf)
 <use images/5_Implementirung/QR_muster.pdf>
 Package pdftex.def Info: images/5_Implementirung/QR_muster.pdf  used on input l
@@ -5352,7 +5342,7 @@ ine 93.
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/Mudulaition.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/Mudulaition.pdf, id=1288, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/Mudulaition.pdf, id=1284, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/Mudulaition.pdf Graphic file (type pdf)
 <use images/5_Implementirung/Mudulaition.pdf>
 Package pdftex.def Info: images/5_Implementirung/Mudulaition.pdf  used on input
@@ -5362,7 +5352,7 @@ Package pdftex.def Info: images/5_Implementirung/Mudulaition.pdf  used on input
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/ergeb.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/ergeb.pdf, id=1289, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/ergeb.pdf, id=1285, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/ergeb.pdf Graphic file (type pdf)
 <use images/5_Implementirung/ergeb.pdf>
 Package pdftex.def Info: images/5_Implementirung/ergeb.pdf  used on input line 
@@ -5376,7 +5366,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 111.
-[66 <./images/5_Implementirung/nachdiff.pdf> <./images/5_Implementirung/histodi
+[65 <./images/5_Implementirung/nachdiff.pdf> <./images/5_Implementirung/histodi
 ff.pdf> <./images/5_Implementirung/Binar.pdf> <./images/5_Implementirung/morpho
 .pdf> <./images/5_Implementirung/QR_muster.pdf> <./images/5_Implementirung/Mudu
 laition.pdf>]
@@ -5388,7 +5378,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/diff.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/diff.pdf, id=1319, 725.71124pt x 384.6872pt>
+<images/5_Implementirung/2/diff.pdf, id=1315, 725.71124pt x 384.6872pt>
 File: images/5_Implementirung/2/diff.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/diff.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/diff.pdf  used on input line
@@ -5398,7 +5388,7 @@ Package pdftex.def Info: images/5_Implementirung/2/diff.pdf  used on input line
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/bina.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/bina.pdf, id=1320, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/bina.pdf, id=1316, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/bina.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/bina.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/bina.pdf  used on input line
@@ -5412,11 +5402,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 139.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 139.
-[67 <./images/5_Implementirung/ergeb.pdf>]
+[66 <./images/5_Implementirung/ergeb.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/morpho.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/morpho.pdf, id=1332, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/morpho.pdf, id=1328, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/morpho.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/morpho.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/morpho.pdf  used on input li
@@ -5426,7 +5416,7 @@ ne 145.
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/canny.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/canny.pdf, id=1333, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/canny.pdf, id=1329, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/canny.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/canny.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/canny.pdf  used on input lin
@@ -5436,7 +5426,7 @@ e 151.
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/cd.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/cd.pdf, id=1334, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/cd.pdf, id=1330, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/cd.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/cd.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/cd.pdf  used on input line 1
@@ -5446,7 +5436,7 @@ Package pdftex.def Info: images/5_Implementirung/2/cd.pdf  used on input line 1
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/modulation.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/modulation.pdf, id=1335, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/modulation.pdf, id=1331, 1094.58937pt x 612.03656pt>
 
 File: images/5_Implementirung/2/modulation.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/modulation.pdf>
@@ -5457,7 +5447,7 @@ t line 167.
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/ergebnis.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/ergebnis.pdf, id=1336, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/ergebnis.pdf, id=1332, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/ergebnis.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/ergebnis.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/ergebnis.pdf  used on input 
@@ -5471,7 +5461,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 179.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 179.
-[68 <./images/5_Implementirung/2/diff.pdf> <./images/5_Implementirung/2/bina.pd
+[67 <./images/5_Implementirung/2/diff.pdf> <./images/5_Implementirung/2/bina.pd
 f> <./images/5_Implementirung/2/morpho.pdf> <./images/5_Implementirung/2/canny.
 pdf> <./images/5_Implementirung/2/cd.pdf> <./images/5_Implementirung/2/modulati
 on.pdf>]
@@ -5493,7 +5483,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 207.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 207.
-[69 <./images/5_Implementirung/2/ergebnis.pdf>]
+[68 <./images/5_Implementirung/2/ergebnis.pdf>]
 File: images/5_Implementirung/2/modulation.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/modulation.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/modulation.pdf  used on inpu
@@ -5508,7 +5498,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 303.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 303.
- [70]
+ [69]
 \openout2 = `mainmatter/Evaluierung.aux'.
 
 
@@ -5535,7 +5525,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 17.
-[71
+[70
 
 
 
@@ -5543,7 +5533,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/J8.pdf): PDF inclusion: fo
 und PDF version <1.6>, but at most version <1.5> allowed
-<images/6_Auswertung/J8.pdf, id=1385, 963.6pt x 483.30562pt>
+<images/6_Auswertung/J8.pdf, id=1381, 963.6pt x 483.30562pt>
 File: images/6_Auswertung/J8.pdf Graphic file (type pdf)
 <use images/6_Auswertung/J8.pdf>
 Package pdftex.def Info: images/6_Auswertung/J8.pdf  used on input line 22.
@@ -5556,7 +5546,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 29.
-[72 <./images/6_Auswertung/J8.pdf>]
+[71 <./images/6_Auswertung/J8.pdf>]
 Overfull \hbox (23.34306pt too wide) in paragraph at lines 37--50
  [][] 
  []
@@ -5570,7 +5560,7 @@ ine 56.
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/histogramregistration1_8.p
 df): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/6_Auswertung/histogramregistration1_8.pdf, id=1398, 2168.1pt x 1138.252
+<images/6_Auswertung/histogramregistration1_8.pdf, id=1394, 2168.1pt x 1138.252
 5pt>
 File: images/6_Auswertung/histogramregistration1_8.pdf Graphic file (type pdf)
 <use images/6_Auswertung/histogramregistration1_8.pdf>
@@ -5585,11 +5575,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 68.
-[73]
+[72]
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/windmill_auswert.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/6_Auswertung/windmill_auswert.pdf, id=1406, 1927.2pt x 1084.05pt>
+<images/6_Auswertung/windmill_auswert.pdf, id=1402, 1927.2pt x 1084.05pt>
 File: images/6_Auswertung/windmill_auswert.pdf Graphic file (type pdf)
 <use images/6_Auswertung/windmill_auswert.pdf>
 Package pdftex.def Info: images/6_Auswertung/windmill_auswert.pdf  used on inpu
@@ -5603,12 +5593,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 78.
-[74 <./images/6_Auswertung/histogramregistration1_8.pdf> <./images/6_Auswertung
+[73 <./images/6_Auswertung/histogramregistration1_8.pdf> <./images/6_Auswertung
 /windmill_auswert.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/Ergebnis1.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/6_Auswertung/Ergebnis1.pdf, id=1420, 2168.1pt x 1138.2525pt>
+<images/6_Auswertung/Ergebnis1.pdf, id=1416, 2168.1pt x 1138.2525pt>
 File: images/6_Auswertung/Ergebnis1.pdf Graphic file (type pdf)
 <use images/6_Auswertung/Ergebnis1.pdf>
 Package pdftex.def Info: images/6_Auswertung/Ergebnis1.pdf  used on input line 
@@ -5622,7 +5612,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/Ergebnis2.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/6_Auswertung/Ergebnis2.pdf, id=1422, 2168.1pt x 1138.2525pt>
+<images/6_Auswertung/Ergebnis2.pdf, id=1418, 2168.1pt x 1138.2525pt>
 File: images/6_Auswertung/Ergebnis2.pdf Graphic file (type pdf)
 <use images/6_Auswertung/Ergebnis2.pdf>
 Package pdftex.def Info: images/6_Auswertung/Ergebnis2.pdf  used on input line 
@@ -5637,7 +5627,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 304.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 304.
- [75 <./images/6_Auswertung/Ergebnis1.pdf>]
+ [74 <./images/6_Auswertung/Ergebnis1.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 304.
 Package babel Info: Redefining ngerman shorthand "~
@@ -5646,7 +5636,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 304.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 304.
- [76 <./images/6_Auswertung/Ergebnis2.pdf>]
+ [75 <./images/6_Auswertung/Ergebnis2.pdf>]
 \openout2 = `mainmatter/zusammenfassung.aux'.
 
  (mainmatter/zusammenfassung.tex
@@ -5663,7 +5653,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
-[77
+[76
 
 
 
@@ -5676,7 +5666,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 305.
- [78]
+ [77]
 \openout2 = `mainmatter/anhangA.aux'.
 
  (mainmatter/anhangA.tex
@@ -5698,7 +5688,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 308.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 308.
- [79
+ [78
 
 
 
@@ -5717,7 +5707,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 311.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 311.
- [80
+ [79
 
 
 
@@ -5739,7 +5729,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 40.
- [81
+ [80
 
 
 ]
@@ -5751,7 +5741,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 79.
- [82])
+ [81])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 313.
 Package babel Info: Redefining ngerman shorthand "~
@@ -5760,7 +5750,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 313.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 313.
- [83]
+ [82]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 313.
 Package babel Info: Redefining ngerman shorthand "~
@@ -5776,7 +5766,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 314.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 314.
- [84
+ [83
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -5794,7 +5784,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 317.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 317.
- [85
+ [84
 
 ]
 chapter without number
@@ -5818,7 +5808,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 317.
 
-[86
+[85
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -5829,7 +5819,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 319.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 319.
- [87]
+ [86]
 \openout2 = `backmatter/eidestattliche_erklaerung.aux'.
 
  (backmatter/eidestattliche_erklaerung.tex
@@ -5844,7 +5834,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 319.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 319.
- [88
+ [87
 
 
 
@@ -5950,8 +5940,8 @@ Use my own \@writefile for toc
 Use my own \@writefile for lof
 Use my own \@writefile for lof
 Use my own \@writefile for lof
-Use my own \@writefile for lof
 Use my own \@writefile for toc
+Use my own \@writefile for lof
 Use my own \@writefile for lof
 Use my own \@writefile for toc
 Use my own \@writefile for toc
@@ -6054,8 +6044,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68127 strings out of 493290
- 1529852 string characters out of 3129425
+ 68126 strings out of 493290
+ 1529845 string characters out of 3129425
  2381606 words of memory out of 3000000
  70238 multiletter control sequences out of 15000+200000
  604697 words of font info for 129 fonts, out of 3000000 for 9000
@@ -6106,9 +6096,9 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.p
 fb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
 vro8a.pfb>
-Output written on main.pdf (91 pages, 8616788 bytes).
+Output written on main.pdf (90 pages, 8613021 bytes).
 PDF statistics:
- 1715 PDF objects out of 1728 (max. 8388607)
- 299 named destinations out of 1000 (max. 500000)
+ 1710 PDF objects out of 1728 (max. 8388607)
+ 298 named destinations out of 1000 (max. 500000)
  724 words of extra memory for PDF output out of 10000 (max. 10000000)
 
