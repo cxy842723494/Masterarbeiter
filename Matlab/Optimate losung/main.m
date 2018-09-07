@@ -48,6 +48,9 @@ toc;
 tic;
 [FiPx,FiPy,ux,vx,cr,tformY,Nofind] = detectFIP(BW);
 toc;
+
+
+%%
 if Nofind
     Mal_num = Mal_num+1;
 % else 
