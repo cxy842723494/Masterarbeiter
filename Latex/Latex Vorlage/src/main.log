@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.8)  5 SEP 2018 23:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.8)  9 SEP 2018 02:17
 entering extended mode
 **./main.tex
 (main.tex
@@ -2331,10 +2331,25 @@ Package caption Info: KOMA-Script document class.
 \c@ContinuedFloat=\count284
 Package caption Info: float package is loaded.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
-Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip80
+\subfigcapskip=\skip81
+\subfigcaptopadj=\dimen177
+\subfigbottomskip=\skip82
+\subfigcapmargin=\dimen178
+\subfiglabelskip=\skip83
 \c@subfigure=\count285
-\c@subtable=\count286
+\c@lofdepth=\count286
+\c@subtable=\count287
+\c@lotdepth=\count288
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip84
+\subfig@bottom=\skip85
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -2347,9 +2362,9 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2018/05/02 v1.0c Color table columns (DPC)
 \everycr=\toks31
-\minrowclearance=\skip80
+\minrowclearance=\skip86
 )
-\rownum=\count287
+\rownum=\count289
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -2366,35 +2381,84 @@ File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multirow.s
 ty"
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip81
-\multirow@cntb=\count288
-\multirow@dima=\skip82
-\bigstrutjot=\dimen177
+\multirow@colwidth=\skip87
+\multirow@cntb=\count290
+\multirow@dima=\skip88
+\bigstrutjot=\dimen179
+)
+("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count291
+\mult@box=\box54
+\multicol@leftmargin=\dimen180
+\c@unbalance=\count292
+\c@collectmore=\count293
+\doublecol@number=\count294
+\multicoltolerance=\count295
+\multicolpretolerance=\count296
+\full@width=\dimen181
+\page@free=\dimen182
+\premulticols=\dimen183
+\postmulticols=\dimen184
+\multicolsep=\skip89
+\multicolbaselineskip=\skip90
+\partial@page=\box55
+\last@line=\box56
+\maxbalancingoverflow=\dimen185
+\mult@rightbox=\box57
+\mult@grightbox=\box58
+\mult@gfirstbox=\box59
+\mult@firstbox=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\c@columnbadness=\count297
+\c@finalcolumnbadness=\count298
+\last@try=\dimen186
+\multicolovershoot=\dimen187
+\multicolundershoot=\dimen188
+\mult@nat@firstbox=\box78
+\colbreak@box=\box79
+\mc@col@check@num=\count299
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\makecell\makecell.sty"
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen178
-\c@nlinenum=\count289
+\rotheadsize=\dimen189
+\c@nlinenum=\count300
 \TeXr@lab=\toks32
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen179
-\lightrulewidth=\dimen180
-\cmidrulewidth=\dimen181
-\belowrulesep=\dimen182
-\belowbottomsep=\dimen183
-\aboverulesep=\dimen184
-\abovetopsep=\dimen185
-\cmidrulesep=\dimen186
-\cmidrulekern=\dimen187
-\defaultaddspace=\dimen188
-\@cmidla=\count290
-\@cmidlb=\count291
-\@aboverulesep=\dimen189
-\@belowrulesep=\dimen190
-\@thisruleclass=\count292
-\@lastruleclass=\count293
-\@thisrulewidth=\dimen191
+\heavyrulewidth=\dimen190
+\lightrulewidth=\dimen191
+\cmidrulewidth=\dimen192
+\belowrulesep=\dimen193
+\belowbottomsep=\dimen194
+\aboverulesep=\dimen195
+\abovetopsep=\dimen196
+\cmidrulesep=\dimen197
+\cmidrulekern=\dimen198
+\defaultaddspace=\dimen199
+\@cmidla=\count301
+\@cmidlb=\count302
+\@aboverulesep=\dimen256
+\@belowrulesep=\dimen257
+\@thisruleclass=\count303
+\@lastruleclass=\count304
+\@thisrulewidth=\dimen258
 )
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\rotating.s
 ty"
@@ -2402,22 +2466,22 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
  ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count294
-\rotFPtop=\skip83
-\rotFPbot=\skip84
-\rot@float@box=\box54
+\c@r@tfl@t=\count305
+\rotFPtop=\skip91
+\rotFPbot=\skip92
+\rot@float@box=\box80
 \rot@mess@toks=\toks33
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
 \pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen192
-\pgfutil@tempdimb=\dimen193
+\pgfutil@tempdima=\dimen259
+\pgfutil@tempdimb=\dimen260
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.te
 x")) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
-\pgfutil@abb=\box55
+\pgfutil@abb=\box81
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -2439,20 +2503,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 x"
 \pgfkeys@tmptoks=\toks37
 ))
-\pgf@x=\dimen194
-\pgf@y=\dimen195
-\pgf@xa=\dimen196
-\pgf@ya=\dimen197
-\pgf@xb=\dimen198
-\pgf@yb=\dimen199
-\pgf@xc=\dimen256
-\pgf@yc=\dimen257
+\pgf@x=\dimen261
+\pgf@y=\dimen262
+\pgf@xa=\dimen263
+\pgf@ya=\dimen264
+\pgf@xb=\dimen265
+\pgf@yb=\dimen266
+\pgf@xc=\dimen267
+\pgf@yc=\dimen268
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count295
-\c@pgf@countb=\count296
-\c@pgf@countc=\count297
-\c@pgf@countd=\count298
+\c@pgf@counta=\count306
+\c@pgf@countb=\count307
+\c@pgf@countc=\count308
+\c@pgf@countd=\count309
 \t@pgf@toka=\toks38
 \t@pgf@tokb=\toks39
 \t@pgf@tokc=\toks40
@@ -2471,8 +2535,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.t
 ex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count299
-\pgfsyssoftpath@bigbuffer@items=\count300
+\pgfsyssoftpath@smallbuffer@items=\count310
+\pgfsyssoftpath@bigbuffer@items=\count311
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.t
 ex"
@@ -2483,9 +2547,9 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen258
-\pgfmath@count=\count301
-\pgfmath@box=\box56
+\pgfmath@dimen=\dimen269
+\pgfmath@count=\count312
+\pgfmath@box=\box82
 \pgfmath@toks=\toks41
 \pgfmath@stack@operand=\toks42
 \pgfmath@stack@operation=\toks43
@@ -2508,57 +2572,57 @@ ex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarit
 hmetics.code.tex")))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count302
+\c@pgfmathroundto@lastzeros=\count313
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
 "
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen259
-\pgf@picmaxx=\dimen260
-\pgf@picminy=\dimen261
-\pgf@picmaxy=\dimen262
-\pgf@pathminx=\dimen263
-\pgf@pathmaxx=\dimen264
-\pgf@pathminy=\dimen265
-\pgf@pathmaxy=\dimen266
-\pgf@xx=\dimen267
-\pgf@xy=\dimen268
-\pgf@yx=\dimen269
-\pgf@yy=\dimen270
-\pgf@zx=\dimen271
-\pgf@zy=\dimen272
+\pgf@picminx=\dimen270
+\pgf@picmaxx=\dimen271
+\pgf@picminy=\dimen272
+\pgf@picmaxy=\dimen273
+\pgf@pathminx=\dimen274
+\pgf@pathmaxx=\dimen275
+\pgf@pathminy=\dimen276
+\pgf@pathmaxy=\dimen277
+\pgf@xx=\dimen278
+\pgf@xy=\dimen279
+\pgf@yx=\dimen280
+\pgf@yy=\dimen281
+\pgf@zx=\dimen282
+\pgf@zy=\dimen283
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
 ode.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen273
-\pgf@path@lasty=\dimen274
+\pgf@path@lastx=\dimen284
+\pgf@path@lasty=\dimen285
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
 tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen275
-\pgf@shorten@start@additional=\dimen276
+\pgf@shorten@end@additional=\dimen286
+\pgf@shorten@start@additional=\dimen287
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
 "
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box57
-\pgf@hbox=\box58
-\pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count303
+\pgfpic=\box83
+\pgf@hbox=\box84
+\pgf@layerbox@main=\box85
+\pgf@picture@serial@count=\count314
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
 de.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen277
+\pgflinewidth=\dimen288
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
 .code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen278
-\pgf@pt@y=\dimen279
-\pgf@pt@temp=\dimen280
+\pgf@pt@x=\dimen289
+\pgf@pt@y=\dimen290
+\pgf@pt@temp=\dimen291
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -2574,12 +2638,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
 "
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen281
+\pgfarrowsep=\dimen292
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen282
-\pgf@sys@shading@range@num=\count304
+\pgf@max=\dimen293
+\pgf@sys@shading@range@num=\count315
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
 x"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -2587,7 +2651,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.t
 ex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box60
+\pgfexternal@startupbox=\box86
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
 "
@@ -2603,15 +2667,15 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box61
+\pgfnodeparttextbox=\box87
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
 sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen283
-\pgf@nodesepend=\dimen284
+\pgf@nodesepstart=\dimen294
+\pgf@nodesepend=\dimen295
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
 sty"
@@ -2625,8 +2689,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
-\pgffor@iter=\dimen285
-\pgffor@skip=\dimen286
+\pgffor@iter=\dimen296
+\pgffor@skip=\dimen297
 \pgffor@stack=\toks44
 \pgffor@toks=\toks45
 ))
@@ -2636,31 +2700,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.
 code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count305
-\pgfplotmarksize=\dimen287
+\pgf@plot@mark@count=\count316
+\pgfplotmarksize=\dimen298
 )
-\tikz@lastx=\dimen288
-\tikz@lasty=\dimen289
-\tikz@lastxsaved=\dimen290
-\tikz@lastysaved=\dimen291
-\tikzleveldistance=\dimen292
-\tikzsiblingdistance=\dimen293
-\tikz@figbox=\box62
-\tikz@figbox@bg=\box63
-\tikz@tempbox=\box64
-\tikz@tempbox@bg=\box65
-\tikztreelevel=\count306
-\tikznumberofchildren=\count307
-\tikznumberofcurrentchild=\count308
-\tikz@fig@count=\count309
+\tikz@lastx=\dimen299
+\tikz@lasty=\dimen300
+\tikz@lastxsaved=\dimen301
+\tikz@lastysaved=\dimen302
+\tikzleveldistance=\dimen303
+\tikzsiblingdistance=\dimen304
+\tikz@figbox=\box88
+\tikz@figbox@bg=\box89
+\tikz@tempbox=\box90
+\tikz@tempbox@bg=\box91
+\tikztreelevel=\count317
+\tikznumberofchildren=\count318
+\tikznumberofcurrentchild=\count319
+\tikz@fig@count=\count320
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count310
-\pgfmatrixcurrentcolumn=\count311
-\pgf@matrix@numberofcolumns=\count312
+\pgfmatrixcurrentrow=\count321
+\pgfmatrixcurrentcolumn=\count322
+\pgf@matrix@numberofcolumns=\count323
 )
-\tikz@expandcount=\count313
+\tikz@expandcount=\count324
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarytopaths.code.tex"
@@ -2677,18 +2741,18 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.t
 ex"
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen294
+\arrowsize=\dimen305
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcirc.defines.tex"
-\pgf@circ@res@up=\dimen295
-\pgf@circ@res@down=\dimen296
-\pgf@circ@res@zero=\dimen297
-\pgf@circ@res@left=\dimen298
-\pgf@circ@res@right=\dimen299
-\pgf@circ@res@other=\dimen300
-\pgf@circ@res@step=\dimen301
-\pgf@circ@res@temp=\dimen302
-\pgfstartlinewidth=\dimen303
-\pgf@circ@Rlen=\dimen304
+\pgf@circ@res@up=\dimen306
+\pgf@circ@res@down=\dimen307
+\pgf@circ@res@zero=\dimen308
+\pgf@circ@res@left=\dimen309
+\pgf@circ@res@right=\dimen310
+\pgf@circ@res@other=\dimen311
+\pgf@circ@res@step=\dimen312
+\pgf@circ@res@temp=\dimen313
+\pgfstartlinewidth=\dimen314
+\pgf@circ@Rlen=\dimen315
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcircutils.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcircshapes.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcircmonopoles.tex")
@@ -2703,8 +2767,8 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
 \@xs@message=\write4
-\integerpart=\count314
-\decimalpart=\count315
+\integerpart=\count325
+\decimalpart=\count326
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 ))
@@ -2717,9 +2781,9 @@ Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 \t@pgfplots@toka=\toks46
 \t@pgfplots@tokb=\toks47
 \t@pgfplots@tokc=\toks48
-\pgfplots@tmpa=\dimen305
-\c@pgfplots@coordindex=\count316
-\c@pgfplots@scanlineindex=\count317
+\pgfplots@tmpa=\dimen316
+\c@pgfplots@coordindex=\count327
+\c@pgfplots@scanlineindex=\count328
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.
 tex"))
@@ -2735,7 +2799,7 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 fsupp_pgflibraryfpu.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
 fsupp_pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count318
+\c@pgfmathroundto@lastzeros=\count329
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
 fsupp_leq.code.tex"))
@@ -2746,13 +2810,13 @@ ructure.code.tex")
 ructureext.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsarray.
 code.tex"
-\c@pgfplotsarray@tmp=\count319
+\c@pgfplotsarray@tmp=\count330
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsmatrix
 .code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstableshared
 .code.tex"
-\c@pgfplotstable@counta=\count320
+\c@pgfplotstable@counta=\count331
 \t@pgfplotstable@a=\toks49
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsdeque.
@@ -2765,7 +2829,7 @@ e.tex"))
 tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgflibrarypgfplots.surf
 shading.code.tex"
-\c@pgfplotslibrarysurf@no=\count321
+\c@pgfplotslibrarysurf@no=\count332
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfs
 hading.pgfsys-pdftex.def")))
@@ -2792,16 +2856,16 @@ ex")))
 librarydecorations.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code
 .tex"
-\pgfdecoratedcompleteddistance=\dimen306
-\pgfdecoratedremainingdistance=\dimen307
-\pgfdecoratedinputsegmentcompleteddistance=\dimen308
-\pgfdecoratedinputsegmentremainingdistance=\dimen309
-\pgf@decorate@distancetomove=\dimen310
-\pgf@decorate@repeatstate=\count322
-\pgfdecorationsegmentamplitude=\dimen311
-\pgfdecorationsegmentlength=\dimen312
+\pgfdecoratedcompleteddistance=\dimen317
+\pgfdecoratedremainingdistance=\dimen318
+\pgfdecoratedinputsegmentcompleteddistance=\dimen319
+\pgfdecoratedinputsegmentremainingdistance=\dimen320
+\pgf@decorate@distancetomove=\dimen321
+\pgf@decorate@repeatstate=\count333
+\pgfdecorationsegmentamplitude=\dimen322
+\pgfdecorationsegmentlength=\dimen323
 )
-\tikz@lib@dec@box=\box66
+\tikz@lib@dec@box=\box92
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarydecorations.pathmorphing.code.tex"
@@ -2811,13 +2875,13 @@ ecorations.pathmorphing.code.tex"))
 librarydecorations.pathreplacing.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
 ecorations.pathreplacing.code.tex"))
-\pgfplots@numplots=\count323
-\pgfplots@xmin@reg=\dimen313
-\pgfplots@xmax@reg=\dimen314
-\pgfplots@ymin@reg=\dimen315
-\pgfplots@ymax@reg=\dimen316
-\pgfplots@zmin@reg=\dimen317
-\pgfplots@zmax@reg=\dimen318
+\pgfplots@numplots=\count334
+\pgfplots@xmin@reg=\dimen324
+\pgfplots@xmax@reg=\dimen325
+\pgfplots@ymin@reg=\dimen326
+\pgfplots@ymax@reg=\dimen327
+\pgfplots@zmin@reg=\dimen328
+\pgfplots@zmax@reg=\dimen329
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryplotmarks.code.tex"
@@ -2827,29 +2891,29 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 e.tex"
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 ))) ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count324
-\lst@gtempboxa=\box67
+\lst@mode=\count335
+\lst@gtempboxa=\box93
 \lst@token=\toks50
-\lst@length=\count325
-\lst@currlwidth=\dimen319
-\lst@column=\count326
-\lst@pos=\count327
-\lst@lostspace=\dimen320
-\lst@width=\dimen321
-\lst@newlines=\count328
-\lst@lineno=\count329
-\lst@maxwidth=\dimen322
+\lst@length=\count336
+\lst@currlwidth=\dimen330
+\lst@column=\count337
+\lst@pos=\count338
+\lst@lostspace=\dimen331
+\lst@width=\dimen332
+\lst@newlines=\count339
+\lst@lineno=\count340
+\lst@maxwidth=\dimen333
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count330
-\lst@skipnumbers=\count331
-\lst@framebox=\box68
+\c@lstnumber=\count341
+\lst@skipnumbers=\count342
+\lst@framebox=\box94
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 101.
+Package scrhack Info: loading listings hack on input line 104.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\listings.hak"
 File: listings.hak 2018/03/30 v3.25 KOMA-Script package (hacking package listin
@@ -2860,7 +2924,7 @@ Package scrhack Info: redefining \lstlistoflistings on input line 137.
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 153.
+(scrhack)             need that hack, on input line 156.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.s
 ty"
@@ -2918,9 +2982,9 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen323
-\Hy@linkcounter=\count332
-\Hy@pagecounter=\count333
+\@linkdim=\dimen334
+\Hy@linkcounter=\count343
+\Hy@pagecounter=\count344
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
 "
@@ -2928,7 +2992,7 @@ File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count334
+\Hy@SavedSpaceFactor=\count345
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.c
 fg"
@@ -2945,16 +3009,16 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count335
+\c@Hy@tempcnt=\count346
  ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen324
-\Fld@menulength=\count336
-\Field@Width=\dimen325
-\Fld@charsize=\dimen326
+\XeTeXLinkMargin=\dimen335
+\Fld@menulength=\count347
+\Field@Width=\dimen336
+\Fld@charsize=\dimen337
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -2964,17 +3028,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count337
-\c@Item=\count338
-\c@Hfootnote=\count339
+\Hy@abspage=\count348
+\c@Item=\count349
+\c@Hfootnote=\count350
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.de
 f"
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count340
-\c@bookmark@seq@number=\count341
+\Fld@listcount=\count351
+\c@bookmark@seq@number=\count352
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilec
 heck.sty"
@@ -2982,7 +3046,7 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip85
+\Hy@SectionHShift=\skip93
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty"
 Package: glossaries 2018/07/23 v4.41 (NLCT)
@@ -2998,7 +3062,7 @@ tex"
 \XKV@toks=\toks51
 \XKV@tempa@toks=\toks52
 )
-\XKV@depth=\count342
+\XKV@depth=\count353
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) ("C:\Program Files\MiKTeX 2.9\tex\latex\mfirstuc\mfirstuc.sty"
 Package: mfirstuc 2017/11/14 v2.06 (NLCT)
@@ -3016,7 +3080,7 @@ Package: datatool-base 2018/04/16 v2.30 (NLCT)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\substr\substr.sty"
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count343
+\c@su@anzahl=\count354
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty"
 Package: datatool-fp 2018/04/16 v2.30 (NLCT)
@@ -3027,19 +3091,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
 Package: defpattern 1994/10/12
-\actioncount=\count344
+\actioncount=\count355
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
 Package: fp-basic 1996/05/13
-\FP@xs=\count345
-\FP@xia=\count346
-\FP@xib=\count347
-\FP@xfa=\count348
-\FP@xfb=\count349
-\FP@rega=\count350
-\FP@regb=\count351
-\FP@regs=\count352
-\FP@times=\count353
+\FP@xs=\count356
+\FP@xia=\count357
+\FP@xib=\count358
+\FP@xfa=\count359
+\FP@xfb=\count360
+\FP@rega=\count361
+\FP@regb=\count362
+\FP@regs=\count363
+\FP@times=\count364
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
 Package: fp-addons 1995/03/15
@@ -3058,7 +3122,7 @@ Package: fp-pas 1994/08/29
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
 Package: fp-random 1995/02/23
-\FPseed=\count354
+\FPseed=\count365
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
 Package: fp-eqn 1995/04/03
@@ -3070,22 +3134,22 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks55
-\@dtl@tmpcount=\count355
-\dtl@tmplength=\skip86
-\dtl@sortresult=\count356
-\@dtl@numgrpsepcount=\count357
-\@dtl@datatype=\count358
-\dtl@codeA=\count359
-\dtl@codeB=\count360
-\@dtl@foreach@level=\count361
+\@dtl@tmpcount=\count366
+\dtl@tmplength=\skip94
+\dtl@sortresult=\count367
+\@dtl@numgrpsepcount=\count368
+\@dtl@datatype=\count369
+\dtl@codeA=\count370
+\dtl@codeB=\count371
+\@dtl@foreach@level=\count372
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compatible-3
 07.sty"
 Package: glossaries-compatible-307 2018/07/23 v4.41 (NLCT)
 )
-\gls@level=\count362
+\gls@level=\count373
 \@gls@tmpb=\toks56
-\gls@tmplen=\skip87
+\gls@tmplen=\skip95
 \glskeylisttok=\toks57
 \glslabeltok=\toks58
 \glsshorttok=\toks59
@@ -3096,70 +3160,70 @@ Package: glossaries-compatible-307 2018/07/23 v4.41 (NLCT)
 Package: glossary-hypernav 2018/07/23 v4.41 (NLCT)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.sty"
 Package: glossary-list 2018/07/23 v4.41 (NLCT)
-\glslistdottedwidth=\skip88
+\glslistdottedwidth=\skip96
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.sty"
 Package: glossary-long 2018/07/23 v4.41 (NLCT)
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.sty
 "
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip89
-\LTright=\skip90
-\LTpre=\skip91
-\LTpost=\skip92
-\LTchunksize=\count363
-\LTcapwidth=\dimen327
-\LT@head=\box69
-\LT@firsthead=\box70
-\LT@foot=\box71
-\LT@lastfoot=\box72
-\LT@cols=\count364
-\LT@rows=\count365
-\c@LT@tables=\count366
-\c@LT@chunks=\count367
+\LTleft=\skip97
+\LTright=\skip98
+\LTpre=\skip99
+\LTpost=\skip100
+\LTchunksize=\count374
+\LTcapwidth=\dimen338
+\LT@head=\box95
+\LT@firsthead=\box96
+\LT@foot=\box97
+\LT@lastfoot=\box98
+\LT@cols=\count375
+\LT@rows=\count376
+\c@LT@tables=\count377
+\c@LT@chunks=\count378
 \LT@p@ftn=\toks61
 )
 Class scrbook Info: longtable captions redefined on input line 43.
-\glsdescwidth=\skip93
-\glspagelistwidth=\skip94
+\glsdescwidth=\skip101
+\glspagelistwidth=\skip102
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.sty"
 Package: glossary-super 2018/07/23 v4.41 (NLCT)
  ("C:\Program Files\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count368
-\ST@wd=\dimen328
-\ST@rightskip=\skip95
-\ST@leftskip=\skip96
-\ST@parfillskip=\skip97
-\ST@pageleft=\dimen329
-\ST@headht=\dimen330
-\ST@tailht=\dimen331
-\ST@pagesofar=\dimen332
-\ST@pboxht=\dimen333
-\ST@lineht=\dimen334
-\ST@stretchht=\dimen335
-\ST@prevht=\dimen336
-\ST@toadd=\dimen337
-\ST@dimen=\dimen338
-\ST@pbox=\box73
+\c@tracingst=\count379
+\ST@wd=\dimen339
+\ST@rightskip=\skip103
+\ST@leftskip=\skip104
+\ST@parfillskip=\skip105
+\ST@pageleft=\dimen340
+\ST@headht=\dimen341
+\ST@tailht=\dimen342
+\ST@pagesofar=\dimen343
+\ST@pboxht=\dimen344
+\ST@lineht=\dimen345
+\ST@stretchht=\dimen346
+\ST@prevht=\dimen347
+\ST@toadd=\dimen348
+\ST@dimen=\dimen349
+\ST@pbox=\box99
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.sty"
 Package: glossary-tree 2018/07/23 v4.41 (NLCT)
-\glstreeindent=\skip98
+\glstreeindent=\skip106
 ))
 \glswrite=\write5
 \glo@main@file=\write6
 \openout6 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 167.
+Package glossaries Info: Writing glossary file main.glo on input line 171.
 \glo@acronym@file=\write7
 \openout7 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 167.
+Package glossaries Info: Writing glossary file main.acn on input line 171.
 \glo@symbol@file=\write8
 \openout8 = `main.sbl'.
 
-Package glossaries Info: Writing glossary file main.sbl on input line 167.
+Package glossaries Info: Writing glossary file main.sbl on input line 171.
 
 (backmatter/symbols_and_acronyms.tex)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty"
@@ -3167,62 +3231,62 @@ Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count369
+\lrq@indent=\count380
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count370
-\c@listtotal=\count371
-\c@listcount=\count372
-\c@liststart=\count373
-\c@liststop=\count374
-\c@citecount=\count375
-\c@citetotal=\count376
-\c@multicitecount=\count377
-\c@multicitetotal=\count378
-\c@instcount=\count379
-\c@maxnames=\count380
-\c@minnames=\count381
-\c@maxitems=\count382
-\c@minitems=\count383
-\c@citecounter=\count384
-\c@savedcitecounter=\count385
-\c@uniquelist=\count386
-\c@uniquename=\count387
-\c@refsection=\count388
-\c@refsegment=\count389
-\c@maxextratitle=\count390
-\c@maxextratitleyear=\count391
-\c@maxextradate=\count392
-\c@maxextraalpha=\count393
-\c@abbrvpenalty=\count394
-\c@highnamepenalty=\count395
-\c@lownamepenalty=\count396
-\c@maxparens=\count397
-\c@parenlevel=\count398
-\blx@tempcnta=\count399
-\blx@tempcntb=\count400
-\blx@tempcntc=\count401
-\blx@maxsection=\count402
-\blx@maxsegment@0=\count403
-\blx@notetype=\count404
-\blx@parenlevel@text=\count405
-\blx@parenlevel@foot=\count406
-\blx@sectionciteorder@0=\count407
-\labelnumberwidth=\skip99
-\labelalphawidth=\skip100
-\biblabelsep=\skip101
-\bibitemsep=\skip102
-\bibnamesep=\skip103
-\bibinitsep=\skip104
-\bibparsep=\skip105
-\bibhang=\skip106
+\c@tabx@nest=\count381
+\c@listtotal=\count382
+\c@listcount=\count383
+\c@liststart=\count384
+\c@liststop=\count385
+\c@citecount=\count386
+\c@citetotal=\count387
+\c@multicitecount=\count388
+\c@multicitetotal=\count389
+\c@instcount=\count390
+\c@maxnames=\count391
+\c@minnames=\count392
+\c@maxitems=\count393
+\c@minitems=\count394
+\c@citecounter=\count395
+\c@savedcitecounter=\count396
+\c@uniquelist=\count397
+\c@uniquename=\count398
+\c@refsection=\count399
+\c@refsegment=\count400
+\c@maxextratitle=\count401
+\c@maxextratitleyear=\count402
+\c@maxextradate=\count403
+\c@maxextraalpha=\count404
+\c@abbrvpenalty=\count405
+\c@highnamepenalty=\count406
+\c@lownamepenalty=\count407
+\c@maxparens=\count408
+\c@parenlevel=\count409
+\blx@tempcnta=\count410
+\blx@tempcntb=\count411
+\blx@tempcntc=\count412
+\blx@maxsection=\count413
+\blx@maxsegment@0=\count414
+\blx@notetype=\count415
+\blx@parenlevel@text=\count416
+\blx@parenlevel@foot=\count417
+\blx@sectionciteorder@0=\count418
+\labelnumberwidth=\skip107
+\labelalphawidth=\skip108
+\biblabelsep=\skip109
+\bibitemsep=\skip110
+\bibnamesep=\skip111
+\bibinitsep=\skip112
+\bibparsep=\skip113
+\bibhang=\skip114
 \blx@bcfin=\read3
 \blx@bcfout=\write9
-\c@mincomprange=\count408
-\c@maxcomprange=\count409
-\c@mincompwidth=\count410
+\c@mincomprange=\count419
+\c@maxcomprange=\count420
+\c@mincompwidth=\count421
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -3233,88 +3297,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count411
-\c@savedafterword=\count412
-\c@annotator=\count413
-\c@savedannotator=\count414
-\c@author=\count415
-\c@savedauthor=\count416
-\c@bookauthor=\count417
-\c@savedbookauthor=\count418
-\c@commentator=\count419
-\c@savedcommentator=\count420
-\c@editor=\count421
-\c@savededitor=\count422
-\c@editora=\count423
-\c@savededitora=\count424
-\c@editorb=\count425
-\c@savededitorb=\count426
-\c@editorc=\count427
-\c@savededitorc=\count428
-\c@foreword=\count429
-\c@savedforeword=\count430
-\c@holder=\count431
-\c@savedholder=\count432
-\c@introduction=\count433
-\c@savedintroduction=\count434
-\c@namea=\count435
-\c@savednamea=\count436
-\c@nameb=\count437
-\c@savednameb=\count438
-\c@namec=\count439
-\c@savednamec=\count440
-\c@translator=\count441
-\c@savedtranslator=\count442
-\c@shortauthor=\count443
-\c@savedshortauthor=\count444
-\c@shorteditor=\count445
-\c@savedshorteditor=\count446
-\c@labelname=\count447
-\c@savedlabelname=\count448
-\c@institution=\count449
-\c@savedinstitution=\count450
-\c@lista=\count451
-\c@savedlista=\count452
-\c@listb=\count453
-\c@savedlistb=\count454
-\c@listc=\count455
-\c@savedlistc=\count456
-\c@listd=\count457
-\c@savedlistd=\count458
-\c@liste=\count459
-\c@savedliste=\count460
-\c@listf=\count461
-\c@savedlistf=\count462
-\c@location=\count463
-\c@savedlocation=\count464
-\c@organization=\count465
-\c@savedorganization=\count466
-\c@origlocation=\count467
-\c@savedoriglocation=\count468
-\c@origpublisher=\count469
-\c@savedorigpublisher=\count470
-\c@publisher=\count471
-\c@savedpublisher=\count472
-\c@language=\count473
-\c@savedlanguage=\count474
-\c@origlanguage=\count475
-\c@savedoriglanguage=\count476
-\c@pageref=\count477
-\c@savedpageref=\count478
-\shorthandwidth=\skip107
-\shortjournalwidth=\skip108
-\shortserieswidth=\skip109
-\shorttitlewidth=\skip110
-\shortauthorwidth=\skip111
-\shorteditorwidth=\skip112
-\locallabelnumberwidth=\skip113
-\locallabelalphawidth=\skip114
-\localshorthandwidth=\skip115
-\localshortjournalwidth=\skip116
-\localshortserieswidth=\skip117
-\localshorttitlewidth=\skip118
-\localshortauthorwidth=\skip119
-\localshorteditorwidth=\skip120
+\c@afterword=\count422
+\c@savedafterword=\count423
+\c@annotator=\count424
+\c@savedannotator=\count425
+\c@author=\count426
+\c@savedauthor=\count427
+\c@bookauthor=\count428
+\c@savedbookauthor=\count429
+\c@commentator=\count430
+\c@savedcommentator=\count431
+\c@editor=\count432
+\c@savededitor=\count433
+\c@editora=\count434
+\c@savededitora=\count435
+\c@editorb=\count436
+\c@savededitorb=\count437
+\c@editorc=\count438
+\c@savededitorc=\count439
+\c@foreword=\count440
+\c@savedforeword=\count441
+\c@holder=\count442
+\c@savedholder=\count443
+\c@introduction=\count444
+\c@savedintroduction=\count445
+\c@namea=\count446
+\c@savednamea=\count447
+\c@nameb=\count448
+\c@savednameb=\count449
+\c@namec=\count450
+\c@savednamec=\count451
+\c@translator=\count452
+\c@savedtranslator=\count453
+\c@shortauthor=\count454
+\c@savedshortauthor=\count455
+\c@shorteditor=\count456
+\c@savedshorteditor=\count457
+\c@labelname=\count458
+\c@savedlabelname=\count459
+\c@institution=\count460
+\c@savedinstitution=\count461
+\c@lista=\count462
+\c@savedlista=\count463
+\c@listb=\count464
+\c@savedlistb=\count465
+\c@listc=\count466
+\c@savedlistc=\count467
+\c@listd=\count468
+\c@savedlistd=\count469
+\c@liste=\count470
+\c@savedliste=\count471
+\c@listf=\count472
+\c@savedlistf=\count473
+\c@location=\count474
+\c@savedlocation=\count475
+\c@organization=\count476
+\c@savedorganization=\count477
+\c@origlocation=\count478
+\c@savedoriglocation=\count479
+\c@origpublisher=\count480
+\c@savedorigpublisher=\count481
+\c@publisher=\count482
+\c@savedpublisher=\count483
+\c@language=\count484
+\c@savedlanguage=\count485
+\c@origlanguage=\count486
+\c@savedoriglanguage=\count487
+\c@pageref=\count488
+\c@savedpageref=\count489
+\shorthandwidth=\skip115
+\shortjournalwidth=\skip116
+\shortserieswidth=\skip117
+\shorttitlewidth=\skip118
+\shortauthorwidth=\skip119
+\shorteditorwidth=\skip120
+\locallabelnumberwidth=\skip121
+\locallabelalphawidth=\skip122
+\localshorthandwidth=\skip123
+\localshortjournalwidth=\skip124
+\localshortserieswidth=\skip125
+\localshorttitlewidth=\skip126
+\localshortauthorwidth=\skip127
+\localshorteditorwidth=\skip128
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -3326,13 +3390,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
 File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count479
-\c@textcitetotal=\count480
-\c@textcitemaxnames=\count481
-\c@biburlnumpenalty=\count482
-\c@biburlucpenalty=\count483
-\c@biburllcpenalty=\count484
-\c@smartand=\count485
+\c@textcitecount=\count490
+\c@textcitetotal=\count491
+\c@textcitemaxnames=\count492
+\c@biburlnumpenalty=\count493
+\c@biburlucpenalty=\count494
+\c@biburllcpenalty=\count495
+\c@smartand=\count496
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -3354,8 +3418,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
 File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count486
-\c@bbx:relatedtotal=\count487
+\c@bbx:relatedcount=\count497
+\c@bbx:relatedtotal=\count498
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -3367,8 +3431,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\cbx\numeric-comp.cbx"
 File: numeric-comp.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count488
-\c@cbx@tempcntb=\count489
+\c@cbx@tempcnta=\count499
+\c@cbx@tempcntb=\count500
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -3392,12 +3456,12 @@ File: biblatex.cfg
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty"
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
-\csq@reset=\count490
-\csq@gtype=\count491
-\csq@glevel=\count492
-\csq@qlevel=\count493
-\csq@maxlvl=\count494
-\csq@tshold=\count495
+\csq@reset=\count501
+\csq@gtype=\count502
+\csq@glevel=\count503
+\csq@qlevel=\count504
+\csq@maxlvl=\count505
+\csq@tshold=\count506
 \csq@ltx@everypar=\toks62
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.def"
@@ -3501,16 +3565,16 @@ Package: sansmathaccent 2013/03/28
 (kt_title.sty
 Package: kt_title 2018/01/23 v1.1 title page, Armin Wulf
  ("C:\Program Files\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
-\UL@box=\box74
-\UL@hyphenbox=\box75
-\UL@skip=\skip121
+\UL@box=\box100
+\UL@hyphenbox=\box101
+\UL@skip=\skip129
 \UL@hook=\toks63
-\UL@height=\dimen339
-\UL@pe=\count496
-\UL@pixel=\dimen340
-\ULC@box=\box76
+\UL@height=\dimen350
+\UL@pe=\count507
+\UL@pixel=\dimen351
+\ULC@box=\box102
 Package: ulem 2012/05/18
-\ULdepth=\dimen341
+\ULdepth=\dimen352
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\libraries\tikzlibrary
 external.code.tex"
@@ -3518,7 +3582,7 @@ external.code.tex"
 externalshared.code.tex")))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count497
+\c@lips@count=\count508
 )
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
@@ -3567,43 +3631,55 @@ LaTeX Warning: Label `fig:Ergebnis1' multiply defined.
 
 LaTeX Warning: Label `fig:Ergebnis1@cref' multiply defined.
 
+
+LaTeX Warning: Label `tab:performance_comparison' multiply defined.
+
+
+LaTeX Warning: Label `tab:performance_comparison@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:performance_comparison' multiply defined.
+
+
+LaTeX Warning: Label `tab:performance_comparison@cref' multiply defined.
+
 ) (mainmatter/zusammenfassung.aux) (mainmatter/anhangA.aux)
 (backmatter/nomenclature.aux) (backmatter/eidestattliche_erklaerung.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 289.
-LaTeX Font Info:    ... okay on input line 289.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 289.
-LaTeX Font Info:    ... okay on input line 289.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 289.
-LaTeX Font Info:    ... okay on input line 289.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 289.
-LaTeX Font Info:    ... okay on input line 289.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 289.
-LaTeX Font Info:    ... okay on input line 289.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 289.
-LaTeX Font Info:    ... okay on input line 289.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 289.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 289.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 293.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 293.
 
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 289.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 289.
-LaTeX Font Info:    ... okay on input line 289.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 289.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 293.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-Package nag Info: pgf.sty is broken: disabling dollar check on input line 289.
+Package nag Info: pgf.sty is broken: disabling dollar check on input line 293.
 Package nag Info: Command \RaggedLeft not defined, skipping amendment on input 
-line 289.
+line 293.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
- line 289.
-Package scrwfile Info: Using `\Hy@AtBeginDocument` on input line 289.
+ line 293.
+Package scrwfile Info: Using `\Hy@AtBeginDocument` on input line 293.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-
 English.dict"
@@ -3614,29 +3690,29 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/phv/m/n --> TS1/phv/bx/n on input line 289.
-Package gensymb Info: Math companion symbols declared on input line 289.
-LaTeX Info: Redefining \degree on input line 289.
-LaTeX Info: Redefining \celsius on input line 289.
+(Font)                  TS1/phv/m/n --> TS1/phv/bx/n on input line 293.
+Package gensymb Info: Math companion symbols declared on input line 293.
+LaTeX Info: Redefining \degree on input line 293.
+LaTeX Info: Redefining \celsius on input line 293.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 289.
-LaTeX Info: Redefining \ohm on input line 289.
-Package gensymb Info: Using \textohm for \ohm on input line 289.
-LaTeX Info: Redefining \micro on input line 289.
-Package gensymb Info: Using \textmu for \micro on input line 289.
+erthousand on input line 293.
+LaTeX Info: Redefining \ohm on input line 293.
+Package gensymb Info: Using \textohm for \ohm on input line 293.
+LaTeX Info: Redefining \micro on input line 293.
+Package gensymb Info: Using \textmu for \micro on input line 293.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count498
-\scratchdimen=\dimen342
-\scratchbox=\box77
-\nofMPsegments=\count499
-\nofMParguments=\count500
+\scratchcounter=\count509
+\scratchdimen=\dimen353
+\scratchbox=\box103
+\nofMPsegments=\count510
+\nofMParguments=\count511
 \everyMPshowfont=\toks64
-\MPscratchCnt=\count501
-\MPscratchDim=\dimen343
-\MPnumerator=\count502
-\makeMPintoPDFobject=\count503
+\MPscratchCnt=\count512
+\MPscratchDim=\dimen354
+\MPnumerator=\count513
+\makeMPintoPDFobject=\count514
 \everyMPtoPDFconversion=\toks65
 )
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
@@ -3661,6 +3737,7 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
+Package caption Info: subfigure package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
@@ -3671,10 +3748,10 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 ("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-binary.cfg"
 File: siunitx-binary.cfg 2017/11/26 v2.7k siunitx: Binary units
 )
-\c@lstlisting=\count504
-Package scrhack Info: undefining \float@addtolists on input line 289.
-\AtBeginShipoutBox=\box78
-Package hyperref Info: Link coloring OFF on input line 289.
+\c@lstlisting=\count515
+Package scrhack Info: undefining \float@addtolists on input line 293.
+\AtBeginShipoutBox=\box104
+Package hyperref Info: Link coloring OFF on input line 293.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -3684,46 +3761,46 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 string.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count505
+\c@section@level=\count516
 )
-LaTeX Info: Redefining \ref on input line 289.
-LaTeX Info: Redefining \pageref on input line 289.
-LaTeX Info: Redefining \nameref on input line 289.
+LaTeX Info: Redefining \ref on input line 293.
+LaTeX Info: Redefining \pageref on input line 293.
+LaTeX Info: Redefining \nameref on input line 293.
  (main.out) (main.out)
 \@outlinefile=\write10
 \openout10 = `main.out'.
 
-Package scrwfile Info: Extending `\@starttoc`  on input line 289.
+Package scrwfile Info: Extending `\@starttoc`  on input line 293.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 293.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 293.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 293.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 289.
+(hyperref)                removing `\\' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 289.
+(hyperref)                removing `\\' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 289.
+(hyperref)                removing `\\' on input line 293.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 293.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 293.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 293.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 289.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 289.
+(babel)             in language  on input line 293.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 293.
 (main.glsdefs)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -3733,57 +3810,57 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 289.
-Package biblatex Info: Reference segment=0 on input line 289.
+Package biblatex Info: Reference section=0 on input line 293.
+Package biblatex Info: Reference segment=0 on input line 293.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
-line 289.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 289.
+line 293.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 293.
 
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 289.
+LaTeX Font Info:    Try loading font information for U+msa on input line 293.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 289.
+LaTeX Font Info:    Try loading font information for U+msb on input line 293.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 289.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 293.
 
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
-<kt_title.pdf, id=174, 597.55246pt x 845.07718pt>
+<kt_title.pdf, id=178, 597.55246pt x 845.07718pt>
 File: kt_title.pdf Graphic file (type pdf)
 <use kt_title.pdf>
-Package pdftex.def Info: kt_title.pdf  used on input line 292.
+Package pdftex.def Info: kt_title.pdf  used on input line 296.
 (pdftex.def)             Requested size: 597.551pt x 845.04932pt.
-\baselength=\skip122
+\baselength=\skip130
 LaTeX Font Info:    Try loading font information for T1+AkkBd__ on input line 2
-92.
+96.
 
 (t1akkbd__.fd
 File: AkkBd__.fd 
 {C:/Users/Chen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map})
 LaTeX Font Info:    Try loading font information for T1+AkkRg__ on input line 2
-92.
+96.
 (t1akkrg__.fd
 File: t1AkkRg__.fd 
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 292.
+(babel)             in language  on input line 296.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 292.
+(babel)             in language  on input line 296.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 292.
+(babel)             in language  on input line 296.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 292.
+(babel)             in language  on input line 296.
  [1
 
 
@@ -3794,9 +3871,9 @@ Package babel Info: Redefining ngerman shorthand "~
 
  <./kt_title.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 296.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 300.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 296.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 300.
 
 Use my own \@starttoc for toc
 (main.toc
@@ -3814,13 +3891,13 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 302.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 302.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 302.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 302.
  [3]
 \openout2 = `mainmatter/einleitung.aux'.
 
@@ -3837,35 +3914,31 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 12.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 12.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 10.
 [1
 
 
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 11.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 299.
+(babel)             in language  on input line 303.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 299.
+(babel)             in language  on input line 303.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 299.
+(babel)             in language  on input line 303.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 299.
+(babel)             in language  on input line 303.
  [2]
 \openout2 = `mainmatter/DaViD.aux'.
 
@@ -3875,10 +3948,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 1.
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3887,7 +3956,7 @@ Package babel Info: Redefining ngerman shorthand "~
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 10.
 
-<images/2_DaViD/David1.jpg, id=295, 523.9575pt x 262.73157pt>
+<images/2_DaViD/David1.jpg, id=298, 523.9575pt x 262.73157pt>
 File: images/2_DaViD/David1.jpg Graphic file (type jpg)
 <use images/2_DaViD/David1.jpg>
 Package pdftex.def Info: images/2_DaViD/David1.jpg  used on input line 16.
@@ -3914,7 +3983,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 pdfTeX warning: pdflatex (file ./images/2_DaViD/1.pdf): PDF inclusion: found PD
 F version <1.6>, but at most version <1.5> allowed
-<images/2_DaViD/1.pdf, id=309, 844.65562pt x 596.98032pt>
+<images/2_DaViD/1.pdf, id=312, 844.65562pt x 596.98032pt>
 File: images/2_DaViD/1.pdf Graphic file (type pdf)
 <use images/2_DaViD/1.pdf>
 Package pdftex.def Info: images/2_DaViD/1.pdf  used on input line 29.
@@ -3934,16 +4003,10 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 38.
 [4 <./images/2_DaViD/1.pdf>]
-Overfull \hbox (4.42162pt too wide) in paragraph at lines 45--46
-\T1/phv/m/n/10.95 örtliche-differentielle Mo-du-la-ti-on die glei-chen Vi-deo-a
-m-pli-tu-den. In die-ser Ar-beit wird nur zeitlich-
- []
-
-
 
 pdfTeX warning: pdflatex (file ./images/2_DaViD/2.pdf): PDF inclusion: found PD
 F version <1.6>, but at most version <1.5> allowed
-<images/2_DaViD/2.pdf, id=343, 823.1245pt x 331.19734pt>
+<images/2_DaViD/2.pdf, id=345, 823.1245pt x 331.19734pt>
 File: images/2_DaViD/2.pdf Graphic file (type pdf)
 <use images/2_DaViD/2.pdf>
 Package pdftex.def Info: images/2_DaViD/2.pdf  used on input line 49.
@@ -3963,43 +4026,6 @@ Overfull \hbox (4.5528pt too wide) in paragraph at lines 79--80
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 89.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 89.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 89.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 89.
-[6]
-<images/2_DaViD/David4.jpg, id=420, 252.58365pt x 157.5486pt>
-File: images/2_DaViD/David4.jpg Graphic file (type jpg)
-<use images/2_DaViD/David4.jpg>
-Package pdftex.def Info: images/2_DaViD/David4.jpg  used on input line 93.
-(pdftex.def)             Requested size: 270.41779pt x 168.6859pt.
-
-Overfull \hbox (3.59033pt too wide) in paragraph at lines 108--109
-[]\T1/phv/m/n/10.95 Das Vi-deo-si-gnal $\OT1/phv/m/sl/10.95 s\OT1/phv/m/n/10.95
- (\OT1/phv/m/sl/10.95 i\OT1/phv/m/n/10.95 , \OT1/phv/m/sl/10.95 j\OT1/phv/m/n/1
-0.95 , \OT1/phv/m/sl/10.95 k\OT1/phv/m/n/10.95 )$ \T1/phv/m/n/10.95 muss vor de
-m An-wen-den der Mo-du-la-ti-on in Y-, U- und V-Komponenten
- []
-
-
-Overfull \hbox (18.0657pt too wide) in paragraph at lines 108--109
-\T1/phv/m/n/10.95 um-ge-wan-delt wer-den. Die nach-fol-gen-de in-ver-se Kon-ver
--tie-rung er-klärt das Display-Eingangssignal
- []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 153.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 153.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 153.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 153.
-[7 <./images/2_DaViD/David4.jpg>]
-Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 157.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 157.
@@ -4015,16 +4041,16 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 189.
- [8])
+[6])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 300.
+(babel)             in language  on input line 304.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 300.
+(babel)             in language  on input line 304.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 300.
+(babel)             in language  on input line 304.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 300.
- [9]
+(babel)             in language  on input line 304.
+ [7]
 \openout2 = `mainmatter/ErsteMethode.aux'.
 
  (mainmatter/ErsteMethode.tex
@@ -4037,7 +4063,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
-<images/3_Ersteverfahren/Strukturdiagramm.pdf, id=454, 443.66151pt x 202.96426p
+<images/3_Ersteverfahren/Strukturdiagramm.pdf, id=430, 443.66151pt x 202.96426p
 t>
 File: images/3_Ersteverfahren/Strukturdiagramm.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Strukturdiagramm.pdf>
@@ -4052,7 +4078,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 15.
-[10
+[8
 
 
 
@@ -4065,9 +4091,9 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 18.
- [11 <./images/3_Ersteverfahren/Strukturdiagramm.pdf, page is rotated 90 degree
-s>]
-<images/3_Ersteverfahren/Flussdiagrammsum.pdf, id=482, 591.18063pt x 706.83775p
+ [9 <./images/3_Ersteverfahren/Strukturdiagramm.pdf, page is rotated 90 degrees
+>]
+<images/3_Ersteverfahren/Flussdiagrammsum.pdf, id=457, 591.18063pt x 706.83775p
 t>
 File: images/3_Ersteverfahren/Flussdiagrammsum.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Flussdiagrammsum.pdf>
@@ -4086,8 +4112,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 29.
- [12 <./images/3_Ersteverfahren/Flussdiagrammsum.pdf>]
-<images/3_Ersteverfahren/Bildregistration.pdf, id=501, 361.24962pt x 368.21265p
+ [10 <./images/3_Ersteverfahren/Flussdiagrammsum.pdf>]
+<images/3_Ersteverfahren/Bildregistration.pdf, id=477, 361.24962pt x 368.21265p
 t>
 File: images/3_Ersteverfahren/Bildregistration.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Bildregistration.pdf>
@@ -4111,7 +4137,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 40.
-[13 <./images/3_Ersteverfahren/Bildregistration.pdf, page is rotated 90 degrees
+[11 <./images/3_Ersteverfahren/Bildregistration.pdf, page is rotated 90 degrees
 >]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 72.
@@ -4121,11 +4147,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 72.
- [14]
+ [12]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Scale_space.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/Scale_space.pdf, id=548, 678.535pt x 248.93pt>
+<images/3_Ersteverfahren/Scale_space.pdf, id=526, 678.535pt x 248.93pt>
 File: images/3_Ersteverfahren/Scale_space.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Scale_space.pdf>
 Package pdftex.def Info: images/3_Ersteverfahren/Scale_space.pdf  used on input
@@ -4139,12 +4165,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 96.
-[15]
+[13]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Extreme_Wert_Erkennung
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
-<images/3_Ersteverfahren/Extreme_Wert_Erkennung.pdf, id=558, 290.08376pt x 234.
+<images/3_Ersteverfahren/Extreme_Wert_Erkennung.pdf, id=536, 290.08376pt x 234.
 8775pt>
 File: images/3_Ersteverfahren/Extreme_Wert_Erkennung.pdf Graphic file (type pdf
 )
@@ -4160,13 +4186,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 107.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 107.
-[16 <./images/3_Ersteverfahren/Scale_space.pdf> <./images/3_Ersteverfahren/Extr
+[14 <./images/3_Ersteverfahren/Scale_space.pdf> <./images/3_Ersteverfahren/Extr
 eme_Wert_Erkennung.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Dominante_Orientierung
 _Feststellen.pdf): PDF inclusion: found PDF version <1.7>, but at most version 
 <1.5> allowed
-<images/3_Ersteverfahren/Dominante_Orientierung_Feststellen.pdf, id=571, 526.96
+<images/3_Ersteverfahren/Dominante_Orientierung_Feststellen.pdf, id=548, 526.96
 875pt x 186.6975pt>
 File: images/3_Ersteverfahren/Dominante_Orientierung_Feststellen.pdf Graphic fi
 le (type pdf)
@@ -4179,7 +4205,7 @@ llen.pdf  used on input line 110.
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Merkmalspunkt_Deskript
 or.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
 wed
-<images/3_Ersteverfahren/Merkmalspunkt_Deskriptor.pdf, id=574, 338.76563pt x 25
+<images/3_Ersteverfahren/Merkmalspunkt_Deskriptor.pdf, id=551, 338.76563pt x 25
 3.69781pt>
 File: images/3_Ersteverfahren/Merkmalspunkt_Deskriptor.pdf Graphic file (type p
 df)
@@ -4195,12 +4221,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 127.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 127.
-[17 <./images/3_Ersteverfahren/Dominante_Orientierung_Feststellen.pdf> <./image
+[15 <./images/3_Ersteverfahren/Dominante_Orientierung_Feststellen.pdf> <./image
 s/3_Ersteverfahren/Merkmalspunkt_Deskriptor.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/SURF_Detektion.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/SURF_Detektion.pdf, id=589, 521.66022pt x 688.53868pt>
+<images/3_Ersteverfahren/SURF_Detektion.pdf, id=566, 521.66022pt x 688.53868pt>
 
 File: images/3_Ersteverfahren/SURF_Detektion.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/SURF_Detektion.pdf>
@@ -4223,8 +4249,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 139.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 139.
-[18 <./images/3_Ersteverfahren/SURF_Detektion.pdf>]
-<images/3_Ersteverfahren/RANSAC/Linien_Detektion.pdf, id=607, 645.10713pt x 350
+[16 <./images/3_Ersteverfahren/SURF_Detektion.pdf>]
+<images/3_Ersteverfahren/RANSAC/Linien_Detektion.pdf, id=585, 645.10713pt x 350
 .24452pt>
 File: images/3_Ersteverfahren/RANSAC/Linien_Detektion.pdf Graphic file (type pd
 f)
@@ -4240,12 +4266,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 152.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 152.
- [19 <./images/3_Ersteverfahren/RANSAC/Linien_Detektion.pdf, page is rotated 90
+ [17 <./images/3_Ersteverfahren/RANSAC/Linien_Detektion.pdf, page is rotated 90
  degrees>]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/RANSAC/OhneRANSAC.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/RANSAC/OhneRANSAC.pdf, id=631, 1070.96768pt x 724.5343
+<images/3_Ersteverfahren/RANSAC/OhneRANSAC.pdf, id=609, 1070.96768pt x 724.5343
 6pt>
 File: images/3_Ersteverfahren/RANSAC/OhneRANSAC.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/RANSAC/OhneRANSAC.pdf>
@@ -4260,11 +4286,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 183.
-[20]
+[18]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/RANSAC/MitRANSAC.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/RANSAC/MitRANSAC.pdf, id=642, 1054.20816pt x 724.53436
+<images/3_Ersteverfahren/RANSAC/MitRANSAC.pdf, id=620, 1054.20816pt x 724.53436
 pt>
 File: images/3_Ersteverfahren/RANSAC/MitRANSAC.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/RANSAC/MitRANSAC.pdf>
@@ -4283,12 +4309,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 195.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 195.
-[21 <./images/3_Ersteverfahren/RANSAC/OhneRANSAC.pdf> <./images/3_Ersteverfahre
+[19 <./images/3_Ersteverfahren/RANSAC/OhneRANSAC.pdf> <./images/3_Ersteverfahre
 n/RANSAC/MitRANSAC.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Kamera/cameramodel.pdf
 ): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/Kamera/cameramodel.pdf, id=656, 499.05446pt x 325.1748
+<images/3_Ersteverfahren/Kamera/cameramodel.pdf, id=634, 499.05446pt x 325.1748
 4pt>
 File: images/3_Ersteverfahren/Kamera/cameramodel.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Kamera/cameramodel.pdf>
@@ -4319,11 +4345,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 216.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 216.
-[22 <./images/3_Ersteverfahren/Kamera/cameramodel.pdf>]
+[20 <./images/3_Ersteverfahren/Kamera/cameramodel.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Kamera/WzuC.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/Kamera/WzuC.pdf, id=667, 640.56313pt x 366.56952pt>
+<images/3_Ersteverfahren/Kamera/WzuC.pdf, id=644, 640.56313pt x 366.56952pt>
 File: images/3_Ersteverfahren/Kamera/WzuC.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Kamera/WzuC.pdf>
 Package pdftex.def Info: images/3_Ersteverfahren/Kamera/WzuC.pdf  used on input
@@ -4334,7 +4360,7 @@ Package pdftex.def Info: images/3_Ersteverfahren/Kamera/WzuC.pdf  used on input
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Kamera/rotationsmatrix
 .pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowe
 d
-<images/3_Ersteverfahren/Kamera/rotationsmatrix.pdf, id=669, 243.88113pt x 219.
+<images/3_Ersteverfahren/Kamera/rotationsmatrix.pdf, id=646, 243.88113pt x 219.
 79114pt>
 File: images/3_Ersteverfahren/Kamera/rotationsmatrix.pdf Graphic file (type pdf
 )
@@ -4350,7 +4376,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 242.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 242.
-[23 <./images/3_Ersteverfahren/Kamera/WzuC.pdf>]
+[21 <./images/3_Ersteverfahren/Kamera/WzuC.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4359,11 +4385,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 323.
- [24 <./images/3_Ersteverfahren/Kamera/rotationsmatrix.pdf>]
+ [22 <./images/3_Ersteverfahren/Kamera/rotationsmatrix.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Kamera/Czuimage.pdf): 
 PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/Kamera/Czuimage.pdf, id=692, 350.01765pt x 309.36578pt
+<images/3_Ersteverfahren/Kamera/Czuimage.pdf, id=670, 350.01765pt x 309.36578pt
 >
 File: images/3_Ersteverfahren/Kamera/Czuimage.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Kamera/Czuimage.pdf>
@@ -4378,11 +4404,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 380.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 380.
-[25 <./images/3_Ersteverfahren/Kamera/Czuimage.pdf>]
+[23 <./images/3_Ersteverfahren/Kamera/Czuimage.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Kamera/imagezupixel.pd
 f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/Kamera/imagezupixel.pdf, id=706, 331.19734pt x 291.298
+<images/3_Ersteverfahren/Kamera/imagezupixel.pdf, id=684, 331.19734pt x 291.298
 28pt>
 File: images/3_Ersteverfahren/Kamera/imagezupixel.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Kamera/imagezupixel.pdf>
@@ -4397,7 +4423,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 414.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 414.
-[26 <./images/3_Ersteverfahren/Kamera/imagezupixel.pdf>]
+[24 <./images/3_Ersteverfahren/Kamera/imagezupixel.pdf>]
 Overfull \hbox (17.27383pt too wide) in paragraph at lines 440--441
 []\T1/phv/m/n/10.95 Es ist er-wäh-nens-wert, dass das Bild-ko-or-di-na-ten-sys-
 tem ei-ne zwei-di-men-sio-na-le Ebe-ne(Bildebene),
@@ -4413,12 +4439,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 506.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 506.
-[27]
+[25]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Kamera/rotationsmodel.
 pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<images/3_Ersteverfahren/Kamera/rotationsmodel.pdf, id=729, 764.8575pt x 688.82
+<images/3_Ersteverfahren/Kamera/rotationsmodel.pdf, id=707, 764.8575pt x 688.82
 344pt>
 File: images/3_Ersteverfahren/Kamera/rotationsmodel.pdf Graphic file (type pdf)
 
@@ -4434,7 +4460,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 522.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 522.
-[28]
+[26]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 546.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4443,7 +4469,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 546.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 546.
- [29 <./images/3_Ersteverfahren/Kamera/rotationsmodel.pdf>]
+ [27 <./images/3_Ersteverfahren/Kamera/rotationsmodel.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 581.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4452,8 +4478,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 581.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 581.
- [30]
-<images/3_Ersteverfahren/Kamera/Transformmatrix.pdf, id=761, 512.95941pt x 284.
+ [28]
+<images/3_Ersteverfahren/Kamera/Transformmatrix.pdf, id=739, 512.95941pt x 284.
 82208pt>
 File: images/3_Ersteverfahren/Kamera/Transformmatrix.pdf Graphic file (type pdf
 )
@@ -4461,7 +4487,7 @@ File: images/3_Ersteverfahren/Kamera/Transformmatrix.pdf Graphic file (type pdf
 Package pdftex.def Info: images/3_Ersteverfahren/Kamera/Transformmatrix.pdf  us
 ed on input line 598.
 (pdftex.def)             Requested size: 360.55476pt x 200.20418pt.
-<images/3_Ersteverfahren/Kamera/flussdiagramm_for_parameter.pdf, id=762, 363.46
+<images/3_Ersteverfahren/Kamera/flussdiagramm_for_parameter.pdf, id=740, 363.46
 591pt x 612.6669pt>
 File: images/3_Ersteverfahren/Kamera/flussdiagramm_for_parameter.pdf Graphic fi
 le (type pdf)
@@ -4477,7 +4503,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 609.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 609.
- [31 <./images/3_Ersteverfahren/Kamera/Transformmatrix.pdf, page is rotated 90 
+ [29 <./images/3_Ersteverfahren/Kamera/Transformmatrix.pdf, page is rotated 90 
 degrees>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 612.
@@ -4492,7 +4518,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 614.
 
-[32 <./images/3_Ersteverfahren/Kamera/flussdiagramm_for_parameter.pdf>]
+[30 <./images/3_Ersteverfahren/Kamera/flussdiagramm_for_parameter.pdf>]
 Overfull \hbox (12.03062pt too wide) in paragraph at lines 620--621
 []\T1/phv/m/n/10.95 halb Schwarz-Weiÿ-Schwarz-Weiÿ-Schwarz Ord-nung, halb Weiÿ-
 Schwarz-Weiÿ-Schwarz-
@@ -4503,7 +4529,7 @@ Schwarz-Weiÿ-Schwarz-
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Differenzbild/0schwarz
 .pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowe
 d
-<images/3_Ersteverfahren/Differenzbild/0schwarz.pdf, id=803, 1187.35097pt x 669
+<images/3_Ersteverfahren/Differenzbild/0schwarz.pdf, id=781, 1187.35097pt x 669
 .39526pt>
 File: images/3_Ersteverfahren/Differenzbild/0schwarz.pdf Graphic file (type pdf
 )
@@ -4516,7 +4542,7 @@ ed on input line 636.
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Differenzbild/1halfsch
 warz.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> al
 lowed
-<images/3_Ersteverfahren/Differenzbild/1halfschwarz.pdf, id=804, 964.30943pt x 
+<images/3_Ersteverfahren/Differenzbild/1halfschwarz.pdf, id=782, 964.30943pt x 
 542.2099pt>
 File: images/3_Ersteverfahren/Differenzbild/1halfschwarz.pdf Graphic file (type
  pdf)
@@ -4528,7 +4554,7 @@ Package pdftex.def Info: images/3_Ersteverfahren/Differenzbild/1halfschwarz.pdf
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Differenzbild/2weis.pd
 f): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/3_Ersteverfahren/Differenzbild/2weis.pdf, id=805, 962.26573pt x 541.531
+<images/3_Ersteverfahren/Differenzbild/2weis.pdf, id=783, 962.26573pt x 541.531
 46pt>
 File: images/3_Ersteverfahren/Differenzbild/2weis.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/Differenzbild/2weis.pdf>
@@ -4540,7 +4566,7 @@ on input line 637.
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Differenzbild/3halfwei
 s.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
 ed
-<images/3_Ersteverfahren/Differenzbild/3halfweis.pdf, id=806, 1094.58937pt x 61
+<images/3_Ersteverfahren/Differenzbild/3halfweis.pdf, id=784, 1094.58937pt x 61
 2.03656pt>
 File: images/3_Ersteverfahren/Differenzbild/3halfweis.pdf Graphic file (type pd
 f)
@@ -4553,7 +4579,7 @@ sed on input line 637.
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Differenzbild/4halbsch
 waryhalbweis.pdf): PDF inclusion: found PDF version <1.6>, but at most version 
 <1.5> allowed
-<images/3_Ersteverfahren/Differenzbild/4halbschwaryhalbweis.pdf, id=807, 962.94
+<images/3_Ersteverfahren/Differenzbild/4halbschwaryhalbweis.pdf, id=785, 962.94
 435pt x 540.17421pt>
 File: images/3_Ersteverfahren/Differenzbild/4halbschwaryhalbweis.pdf Graphic fi
 le (type pdf)
@@ -4566,7 +4592,7 @@ weis.pdf  used on input line 638.
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Differenzbild/5aufhebe
 n.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
 ed
-<images/3_Ersteverfahren/Differenzbild/5aufheben.pdf, id=808, 962.94435pt x 540
+<images/3_Ersteverfahren/Differenzbild/5aufheben.pdf, id=786, 962.94435pt x 540
 .17421pt>
 File: images/3_Ersteverfahren/Differenzbild/5aufheben.pdf Graphic file (type pd
 f)
@@ -4587,7 +4613,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 659.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 659.
-[33]
+[31]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 662.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4596,12 +4622,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 662.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 662.
- [34 <./images/3_Ersteverfahren/Differenzbild/0schwarz.pdf> <./images/3_Ersteve
+ [32 <./images/3_Ersteverfahren/Differenzbild/0schwarz.pdf> <./images/3_Ersteve
 rfahren/Differenzbild/1halfschwarz.pdf> <./images/3_Ersteverfahren/Differenzbil
 d/2weis.pdf> <./images/3_Ersteverfahren/Differenzbild/3halfweis.pdf> <./images/
 3_Ersteverfahren/Differenzbild/4halbschwaryhalbweis.pdf> <./images/3_Ersteverfa
 hren/Differenzbild/5aufheben.pdf>]
-<images/3_Ersteverfahren/Differenzbild/Differenzbildflussigdiagramm.pdf, id=840
+<images/3_Ersteverfahren/Differenzbild/Differenzbildflussigdiagramm.pdf, id=817
 , 883.64326pt x 257.07846pt>
 File: images/3_Ersteverfahren/Differenzbild/Differenzbildflussigdiagramm.pdf Gr
 aphic file (type pdf)
@@ -4622,13 +4648,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 687.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 687.
-[35 <./images/3_Ersteverfahren/Differenzbild/Differenzbildflussigdiagramm.pdf, 
+[33 <./images/3_Ersteverfahren/Differenzbild/Differenzbildflussigdiagramm.pdf, 
 page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/Differenzbild/diffplus
 .pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowe
 d
-<images/3_Ersteverfahren/Differenzbild/diffplus.pdf, id=866, 962.26573pt x 540.
+<images/3_Ersteverfahren/Differenzbild/diffplus.pdf, id=843, 962.26573pt x 540.
 17421pt>
 File: images/3_Ersteverfahren/Differenzbild/diffplus.pdf Graphic file (type pdf
 )
@@ -4652,15 +4678,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 714.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 714.
-[36 <./images/3_Ersteverfahren/Differenzbild/diffplus.pdf>]
-<images/3_Ersteverfahren/QRMuster/QRPattern.pdf, id=876, 630.72638pt x 298.9378
+[34 <./images/3_Ersteverfahren/Differenzbild/diffplus.pdf>]
+<images/3_Ersteverfahren/QRMuster/QRPattern.pdf, id=854, 630.72638pt x 298.9378
 4pt>
 File: images/3_Ersteverfahren/QRMuster/QRPattern.pdf Graphic file (type pdf)
 <use images/3_Ersteverfahren/QRMuster/QRPattern.pdf>
 Package pdftex.def Info: images/3_Ersteverfahren/QRMuster/QRPattern.pdf  used o
 n input line 717.
 (pdftex.def)             Requested size: 405.61981pt x 192.24553pt.
-<images/3_Ersteverfahren/QRMuster/QP_Patternratio.pdf, id=878, 406.76466pt x 27
+<images/3_Ersteverfahren/QRMuster/QP_Patternratio.pdf, id=856, 406.76466pt x 27
 1.3297pt>
 File: images/3_Ersteverfahren/QRMuster/QP_Patternratio.pdf Graphic file (type p
 df)
@@ -4676,7 +4702,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 730.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 730.
- [37 <./images/3_Ersteverfahren/QRMuster/QRPattern.pdf>]
+ [35 <./images/3_Ersteverfahren/QRMuster/QRPattern.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 749.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4685,8 +4711,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 749.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 749.
- [38 <./images/3_Ersteverfahren/QRMuster/QP_Patternratio.pdf>]
-<images/3_Ersteverfahren/QRMuster/QR_flussdiagramm.pdf, id=910, 629.11238pt x 6
+ [36 <./images/3_Ersteverfahren/QRMuster/QP_Patternratio.pdf>]
+<images/3_Ersteverfahren/QRMuster/QR_flussdiagramm.pdf, id=888, 629.11238pt x 6
 53.26561pt>
 File: images/3_Ersteverfahren/QRMuster/QR_flussdiagramm.pdf Graphic file (type 
 pdf)
@@ -4699,7 +4725,7 @@ Package pdftex.def Info: images/3_Ersteverfahren/QRMuster/QR_flussdiagramm.pdf
 pdfTeX warning: pdflatex (file ./images/3_Ersteverfahren/QRMuster/QR_Patterndet
 ektion.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<images/3_Ersteverfahren/QRMuster/QR_Patterndetektion.pdf, id=912, 1094.58937pt
+<images/3_Ersteverfahren/QRMuster/QR_Patterndetektion.pdf, id=890, 1094.58937pt
  x 612.03656pt>
 File: images/3_Ersteverfahren/QRMuster/QR_Patterndetektion.pdf Graphic file (ty
 pe pdf)
@@ -4709,32 +4735,32 @@ df  used on input line 772.
 (pdftex.def)             Requested size: 450.69174pt x 252.00125pt.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
- [39]
+(babel)             in language  on input line 305.
+ [37]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
- [40 <./images/3_Ersteverfahren/QRMuster/QR_flussdiagramm.pdf>]
+(babel)             in language  on input line 305.
+ [38 <./images/3_Ersteverfahren/QRMuster/QR_flussdiagramm.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 305.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
- [41 <./images/3_Ersteverfahren/QRMuster/QR_Patterndetektion.pdf>]
+(babel)             in language  on input line 305.
+ [39 <./images/3_Ersteverfahren/QRMuster/QR_Patterndetektion.pdf>]
 \openout2 = `mainmatter/ZweiteMethode.aux'.
 
 
@@ -4748,7 +4774,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
-<images/4_ZweiteErfahrung/Strukturdiagramm.pdf, id=945, 403.108pt x 134.22948pt
+<images/4_ZweiteErfahrung/Strukturdiagramm.pdf, id=922, 403.108pt x 134.22948pt
 >
 File: images/4_ZweiteErfahrung/Strukturdiagramm.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Strukturdiagramm.pdf>
@@ -4763,12 +4789,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 15.
-[42
+[40
 
 
 
 ]
-<images/4_ZweiteErfahrung/Flussdiagrammsum.pdf, id=952, 403.74336pt x 429.61603
+<images/4_ZweiteErfahrung/Flussdiagrammsum.pdf, id=930, 403.74336pt x 429.61603
 pt>
 File: images/4_ZweiteErfahrung/Flussdiagrammsum.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Flussdiagrammsum.pdf>
@@ -4783,7 +4809,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 25.
- [43 <./images/4_ZweiteErfahrung/Strukturdiagramm.pdf, page is rotated 90 degre
+ [41 <./images/4_ZweiteErfahrung/Strukturdiagramm.pdf, page is rotated 90 degre
 es>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 26.
@@ -4797,11 +4823,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 29.
- [44 <./images/4_ZweiteErfahrung/Flussdiagrammsum.pdf>]
+ [42 <./images/4_ZweiteErfahrung/Flussdiagrammsum.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Binar/binar.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Binar/binar.pdf, id=989, 605.26125pt x 359.09157pt>
+<images/4_ZweiteErfahrung/Binar/binar.pdf, id=967, 605.26125pt x 359.09157pt>
 File: images/4_ZweiteErfahrung/Binar/binar.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Binar/binar.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/binar.pdf  used on inpu
@@ -4815,12 +4841,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 52.
-[45 <./images/4_ZweiteErfahrung/Binar/binar.pdf>]
+[43 <./images/4_ZweiteErfahrung/Binar/binar.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Binar/global.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Binar/global.pdf, id=1000, 362.10281pt x 179.92218pt>
-
+<images/4_ZweiteErfahrung/Binar/global.pdf, id=978, 362.10281pt x 179.92218pt>
 File: images/4_ZweiteErfahrung/Binar/global.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Binar/global.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/global.pdf  used on inp
@@ -4834,12 +4859,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 80.
-[46 <./images/4_ZweiteErfahrung/Binar/global.pdf>]
+[44 <./images/4_ZweiteErfahrung/Binar/global.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Binar/adaptive.pdf): 
 PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Binar/adaptive.pdf, id=1014, 741.52031pt x 411.03563p
-t>
+<images/4_ZweiteErfahrung/Binar/adaptive.pdf, id=991, 741.52031pt x 411.03563pt
+>
 File: images/4_ZweiteErfahrung/Binar/adaptive.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Binar/adaptive.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/adaptive.pdf  used on i
@@ -4859,7 +4884,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 98.
-[47 <./images/4_ZweiteErfahrung/Binar/adaptive.pdf>]
+[45 <./images/4_ZweiteErfahrung/Binar/adaptive.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 111.
 
@@ -4878,7 +4903,7 @@ Missing character: There is no ˆ in font phvr7t!
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Binar/Ostu.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Binar/Ostu.pdf, id=1026, 356.0803pt x 181.42781pt>
+<images/4_ZweiteErfahrung/Binar/Ostu.pdf, id=1003, 356.0803pt x 181.42781pt>
 File: images/4_ZweiteErfahrung/Binar/Ostu.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Binar/Ostu.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/Ostu.pdf  used on input
@@ -4888,7 +4913,7 @@ Package pdftex.def Info: images/4_ZweiteErfahrung/Binar/Ostu.pdf  used on input
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/binar/binarisierung.p
 df): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/binar/binarisierung.pdf, id=1028, 1094.58937pt x 612.
+<images/4_ZweiteErfahrung/binar/binarisierung.pdf, id=1005, 1094.58937pt x 612.
 03656pt>
 File: images/4_ZweiteErfahrung/binar/binarisierung.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/binar/binarisierung.pdf>
@@ -4903,7 +4928,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 137.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 137.
-[48 <./images/4_ZweiteErfahrung/Binar/Ostu.pdf>]
+[46 <./images/4_ZweiteErfahrung/Binar/Ostu.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 141.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4916,8 +4941,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 151.
- [49 <./images/4_ZweiteErfahrung/binar/binarisierung.pdf>]
-<images/4_ZweiteErfahrung/Morphological/strelement.pdf, id=1048, 368.24777pt x 
+ [47 <./images/4_ZweiteErfahrung/binar/binarisierung.pdf>]
+<images/4_ZweiteErfahrung/Morphological/strelement.pdf, id=1026, 368.24777pt x 
 326.72363pt>
 File: images/4_ZweiteErfahrung/Morphological/strelement.pdf Graphic file (type 
 pdf)
@@ -4938,7 +4963,7 @@ Missing character: There is no ˆ in font phvr7t!
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Morphological/Dilatat
 ionundErosion.pdf): PDF inclusion: found PDF version <1.6>, but at most version
  <1.5> allowed
-<images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf, id=1050, 474.
+<images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf, id=1028, 474.
 27188pt x 367.3725pt>
 File: images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf Graphic f
 ile (type pdf)
@@ -4954,7 +4979,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 182.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 182.
-[50 <./images/4_ZweiteErfahrung/Morphological/strelement.pdf>]
+[48 <./images/4_ZweiteErfahrung/Morphological/strelement.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 188.
 
@@ -4970,7 +4995,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 199.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 199.
-[51 <./images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf>]
+[49 <./images/4_ZweiteErfahrung/Morphological/DilatationundErosion.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 201.
 
@@ -4983,7 +5008,7 @@ Missing character: There is no ˆ in font phvr7t!
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Morphological/oeffnun
 gundschliessung.pdf): PDF inclusion: found PDF version <1.6>, but at most versi
 on <1.5> allowed
-<images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf, id=1084, 51
+<images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf, id=1062, 51
 2.66531pt x 365.86688pt>
 File: images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf Graphic
  file (type pdf)
@@ -5006,12 +5031,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 219.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 219.
-[52 <./images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf>]
+[50 <./images/4_ZweiteErfahrung/Morphological/oeffnungundschliessung.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Morphological/morpho.
 pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<images/4_ZweiteErfahrung/Morphological/morpho.pdf, id=1098, 1094.58937pt x 612
+<images/4_ZweiteErfahrung/Morphological/morpho.pdf, id=1075, 1094.58937pt x 612
 .03656pt>
 File: images/4_ZweiteErfahrung/Morphological/morpho.pdf Graphic file (type pdf)
 
@@ -5031,7 +5056,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 251.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 251.
-[53]
+[51]
 Overfull \hbox (4.12366pt too wide) in paragraph at lines 265--266
 \T1/phv/m/n/10.95 Gauÿ-scher Un-schär-fe ist da-zu da, um Rau-schen zu ent-fer-
 nen und die Er-ken-nung falscher
@@ -5045,7 +5070,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 266.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 266.
-[54 <./images/4_ZweiteErfahrung/Morphological/morpho.pdf>]
+[52 <./images/4_ZweiteErfahrung/Morphological/morpho.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 271.
 
@@ -5062,7 +5087,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 292.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 292.
-[55]
+[53]
 Overfull \hbox (13.82826pt too wide) in paragraph at lines 297--299
 []\T1/phv/b/n/10.95 Doppelte Schwel-le. \T1/phv/m/n/10.95 Ein all-ge-mei-ner Ka
 n-te-ner-ken-nungs-al-go-rith-mus wel-cher einen Schwel-
@@ -5072,7 +5097,7 @@ n-te-ner-ken-nungs-al-go-rith-mus wel-cher einen Schwel-
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Canny/canny.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/4_ZweiteErfahrung/Canny/canny.pdf, id=1124, 1445.4pt x 754.31813pt>
+<images/4_ZweiteErfahrung/Canny/canny.pdf, id=1102, 1445.4pt x 754.31813pt>
 File: images/4_ZweiteErfahrung/Canny/canny.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Canny/canny.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Canny/canny.pdf  used on inpu
@@ -5086,7 +5111,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 314.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 314.
-[56]
+[54]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 315.
 Package babel Info: Redefining ngerman shorthand "~
@@ -5103,7 +5128,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 324.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 324.
- [57 <./images/4_ZweiteErfahrung/Canny/canny.pdf>]
+ [55 <./images/4_ZweiteErfahrung/Canny/canny.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 327.
 
@@ -5111,7 +5136,7 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 327.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 327.
 
 Missing character: There is no ˆ in font phvr7t!
-<images/4_ZweiteErfahrung/Hough/Hough.pdf, id=1140, 335.64195pt x 143.28531pt>
+<images/4_ZweiteErfahrung/Hough/Hough.pdf, id=1118, 335.64195pt x 143.28531pt>
 File: images/4_ZweiteErfahrung/Hough/Hough.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Hough/Hough.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Hough/Hough.pdf  used on inpu
@@ -5125,12 +5150,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 341.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 341.
-[58 <./images/4_ZweiteErfahrung/Hough/Hough.pdf>]
+[56 <./images/4_ZweiteErfahrung/Hough/Hough.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/4_ZweiteErfahrung/Hough/Houghdetektion.
 pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf, id=1166, 963.6pt x 483.3056
+<images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf, id=1143, 963.6pt x 483.3056
 2pt>
 File: images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf Graphic file (type pdf)
 
@@ -5150,7 +5175,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 368.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 368.
-[59 <./images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf>]
+[57 <./images/4_ZweiteErfahrung/Hough/Houghdetektion.pdf>]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 373.
 
@@ -5165,13 +5190,13 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 378.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 378.
 
 Missing character: There is no ˆ in font phvr7t!
-<images/4_ZweiteErfahrung/Radon/1.pdf, id=1183, 154.8997pt x 114.20668pt>
+<images/4_ZweiteErfahrung/Radon/1.pdf, id=1160, 154.8997pt x 114.20668pt>
 File: images/4_ZweiteErfahrung/Radon/1.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Radon/1.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Radon/1.pdf  used on input li
 ne 386.
 (pdftex.def)             Requested size: 220.84142pt x 162.83333pt.
-<images/4_ZweiteErfahrung/Radon/2.pdf, id=1184, 167.9635pt x 114.293pt>
+<images/4_ZweiteErfahrung/Radon/2.pdf, id=1161, 167.9635pt x 114.293pt>
 File: images/4_ZweiteErfahrung/Radon/2.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Radon/2.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Radon/2.pdf  used on input li
@@ -5185,7 +5210,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 397.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 397.
-[60]
+[58]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 400.
 
@@ -5193,13 +5218,13 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 400.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 400.
 
 Missing character: There is no ˆ in font phvr7t!
-<images/4_ZweiteErfahrung/Radon/3.pdf, id=1193, 139.52023pt x 105.47606pt>
+<images/4_ZweiteErfahrung/Radon/3.pdf, id=1171, 139.52023pt x 105.47606pt>
 File: images/4_ZweiteErfahrung/Radon/3.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Radon/3.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Radon/3.pdf  used on input li
 ne 408.
 (pdftex.def)             Requested size: 220.84142pt x 166.95772pt.
-<images/4_ZweiteErfahrung/Radon/4.pdf, id=1194, 139.52023pt x 102.22993pt>
+<images/4_ZweiteErfahrung/Radon/4.pdf, id=1172, 139.52023pt x 102.22993pt>
 File: images/4_ZweiteErfahrung/Radon/4.pdf Graphic file (type pdf)
 <use images/4_ZweiteErfahrung/Radon/4.pdf>
 Package pdftex.def Info: images/4_ZweiteErfahrung/Radon/4.pdf  used on input li
@@ -5213,18 +5238,18 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 421.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 421.
-[61 <./images/4_ZweiteErfahrung/Radon/1.pdf> <./images/4_ZweiteErfahrung/Radon/
+[59 <./images/4_ZweiteErfahrung/Radon/1.pdf> <./images/4_ZweiteErfahrung/Radon/
 2.pdf> <./images/4_ZweiteErfahrung/Radon/3.pdf> <./images/4_ZweiteErfahrung/Rad
 on/4.pdf>])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 302.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 302.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 302.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 302.
- [62]
+(babel)             in language  on input line 306.
+ [60]
 \openout2 = `mainmatter/Implementierung.aux'.
 
  (mainmatter/Implementierung.tex
@@ -5238,18 +5263,18 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
-[63
+(babel)             in language  on input line 31.
+[61
 
 
 
@@ -5257,248 +5282,283 @@ Package babel Info: Redefining ngerman shorthand "~
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/vorregistration.pdf): 
 PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/vorregistration.pdf, id=1257, 1094.58937pt x 612.03656
+<images/5_Implementirung/vorregistration.pdf, id=1235, 1094.58937pt x 612.03656
 pt>
 File: images/5_Implementirung/vorregistration.pdf Graphic file (type pdf)
 <use images/5_Implementirung/vorregistration.pdf>
 Package pdftex.def Info: images/5_Implementirung/vorregistration.pdf  used on i
-nput line 41.
+nput line 40.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/nachregis.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/nachregis.pdf, id=1258, 963.6pt x 483.30562pt>
+<images/5_Implementirung/nachregis.pdf, id=1236, 963.6pt x 483.30562pt>
 File: images/5_Implementirung/nachregis.pdf Graphic file (type pdf)
 <use images/5_Implementirung/nachregis.pdf>
 Package pdftex.def Info: images/5_Implementirung/nachregis.pdf  used on input l
-ine 47.
+ine 46.
 (pdftex.def)             Requested size: 242.9269pt x 121.83643pt.
 
-Overfull \hbox (22.08548pt too wide) in paragraph at lines 47--48
+Overfull \hbox (22.08548pt too wide) in paragraph at lines 46--47
  [][] 
  []
 
-
-
-pdfTeX warning: pdflatex (file ./images/5_Implementirung/nachdiff.pdf): PDF inc
-lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/nachdiff.pdf, id=1260, 1094.58937pt x 612.03656pt>
-File: images/5_Implementirung/nachdiff.pdf Graphic file (type pdf)
-<use images/5_Implementirung/nachdiff.pdf>
-Package pdftex.def Info: images/5_Implementirung/nachdiff.pdf  used on input li
-ne 59.
-(pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
-
-
-pdfTeX warning: pdflatex (file ./images/5_Implementirung/histodiff.pdf): PDF in
-clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/histodiff.pdf, id=1261, 421.575pt x 316.18124pt>
-File: images/5_Implementirung/histodiff.pdf Graphic file (type pdf)
-<use images/5_Implementirung/histodiff.pdf>
-Package pdftex.def Info: images/5_Implementirung/histodiff.pdf  used on input l
-ine 65.
-(pdftex.def)             Requested size: 176.6738pt x 132.50574pt.
+Package epstopdf Info: Source file: <images/5_Implementirung/Diff/zudifferenzbi
+ld.eps>
+(epstopdf)                    date: 2018-09-07 21:11:34
+(epstopdf)                    size: 3546622 bytes
+(epstopdf)             Output file: <images/5_Implementirung/Diff/zudifferenzbi
+ld-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-09-07 21:11:34
+(epstopdf)                    size: 632763 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/5_Implementirung/Dif
+f/zudifferenzbild-eps-converted-to.pdf images/5_Implementirung/Diff/zudifferenz
+bild.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+<images/5_Implementirung/Diff/zudifferenzbild-eps-converted-to.pdf, id=1239, 14
+45.4pt x 725.71124pt>
+File: images/5_Implementirung/Diff/zudifferenzbild-eps-converted-to.pdf Graphic
+ file (type pdf)
+<use images/5_Implementirung/Diff/zudifferenzbild-eps-converted-to.pdf>
+Package pdftex.def Info: images/5_Implementirung/Diff/zudifferenzbild-eps-conve
+rted-to.pdf  used on input line 111.
+(pdftex.def)             Requested size: 220.84142pt x 110.87842pt.
+Package epstopdf Info: Source file: <images/5_Implementirung/Diff/histogramm.ep
+s>
+(epstopdf)                    date: 2018-09-07 21:11:34
+(epstopdf)                    size: 58016 bytes
+(epstopdf)             Output file: <images/5_Implementirung/Diff/histogramm-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2018-09-07 21:11:34
+(epstopdf)                    size: 60995 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/5_Implementirung/Dif
+f/histogramm-eps-converted-to.pdf images/5_Implementirung/Diff/histogramm.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
+<images/5_Implementirung/Diff/histogramm-eps-converted-to.pdf, id=1240, 1445.4p
+t x 755.82375pt>
+File: images/5_Implementirung/Diff/histogramm-eps-converted-to.pdf Graphic file
+ (type pdf)
+<use images/5_Implementirung/Diff/histogramm-eps-converted-to.pdf>
+Package pdftex.def Info: images/5_Implementirung/Diff/histogramm-eps-converted-
+to.pdf  used on input line 117.
+(pdftex.def)             Requested size: 220.84142pt x 115.47919pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 70.
-[64 <./images/5_Implementirung/vorregistration.pdf> <./images/5_Implementirung/
-nachregis.pdf>]
+(babel)             in language  on input line 124.
+[62 <./images/5_Implementirung/vorregistration.pdf> <./images/5_Implementirung/
+nachregis.pdf> <./images/5_Implementirung/Diff/zudifferenzbild-eps-converted-to
+.pdf> <./images/5_Implementirung/Diff/histogramm-eps-converted-to.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/Binar.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/Binar.pdf, id=1281, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/Binar.pdf, id=1275, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/Binar.pdf Graphic file (type pdf)
 <use images/5_Implementirung/Binar.pdf>
 Package pdftex.def Info: images/5_Implementirung/Binar.pdf  used on input line 
-77.
+129.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/morpho.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/morpho.pdf, id=1282, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/morpho.pdf, id=1276, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/morpho.pdf Graphic file (type pdf)
 <use images/5_Implementirung/morpho.pdf>
 Package pdftex.def Info: images/5_Implementirung/morpho.pdf  used on input line
- 83.
+ 135.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/QR_muster.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/QR_muster.pdf, id=1283, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/QR_muster.pdf, id=1277, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/QR_muster.pdf Graphic file (type pdf)
 <use images/5_Implementirung/QR_muster.pdf>
 Package pdftex.def Info: images/5_Implementirung/QR_muster.pdf  used on input l
-ine 93.
+ine 145.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/Mudulaition.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/Mudulaition.pdf, id=1284, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/Mudulaition.pdf, id=1278, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/Mudulaition.pdf Graphic file (type pdf)
 <use images/5_Implementirung/Mudulaition.pdf>
 Package pdftex.def Info: images/5_Implementirung/Mudulaition.pdf  used on input
- line 99.
+ line 151.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/ergeb.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/ergeb.pdf, id=1285, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/ergeb.pdf, id=1279, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/ergeb.pdf Graphic file (type pdf)
 <use images/5_Implementirung/ergeb.pdf>
 Package pdftex.def Info: images/5_Implementirung/ergeb.pdf  used on input line 
-107.
+159.
 (pdftex.def)             Requested size: 450.69174pt x 252.00125pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 111.
+(babel)             in language  on input line 163.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 111.
+(babel)             in language  on input line 163.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 111.
+(babel)             in language  on input line 163.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 111.
-[65 <./images/5_Implementirung/nachdiff.pdf> <./images/5_Implementirung/histodi
-ff.pdf> <./images/5_Implementirung/Binar.pdf> <./images/5_Implementirung/morpho
-.pdf> <./images/5_Implementirung/QR_muster.pdf> <./images/5_Implementirung/Mudu
-laition.pdf>]
+(babel)             in language  on input line 163.
+[63 <./images/5_Implementirung/Binar.pdf> <./images/5_Implementirung/morpho.pdf
+> <./images/5_Implementirung/QR_muster.pdf> <./images/5_Implementirung/Mudulait
+ion.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 168.
+Package epstopdf Info: Source file: <images/5_Implementirung/2/diff.eps>
+(epstopdf)                    date: 2018-09-07 21:11:33
+(epstopdf)                    size: 2775830 bytes
+(epstopdf)             Output file: <images/5_Implementirung/2/diff-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2018-09-07 21:11:33
+(epstopdf)                    size: 291005 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/5_Implementirung/2/d
+iff-eps-converted-to.pdf images/5_Implementirung/2/diff.eps>
+(epstopdf)             \includegraphics on input line 182.
+Package epstopdf Info: Output file is already uptodate.
+<images/5_Implementirung/2/diff-eps-converted-to.pdf, id=1302, 1445.4pt x 755.8
+2375pt>
+File: images/5_Implementirung/2/diff-eps-converted-to.pdf Graphic file (type pd
+f)
+<use images/5_Implementirung/2/diff-eps-converted-to.pdf>
+Package pdftex.def Info: images/5_Implementirung/2/diff-eps-converted-to.pdf  u
+sed on input line 182.
+(pdftex.def)             Requested size: 234.09135pt x 122.41048pt.
 
+Overfull \hbox (13.24994pt too wide) in paragraph at lines 182--183
+ [][] 
+ []
 
-pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/diff.pdf): PDF inclu
-sion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/diff.pdf, id=1315, 725.71124pt x 384.6872pt>
-File: images/5_Implementirung/2/diff.pdf Graphic file (type pdf)
-<use images/5_Implementirung/2/diff.pdf>
-Package pdftex.def Info: images/5_Implementirung/2/diff.pdf  used on input line
- 129.
-(pdftex.def)             Requested size: 220.84142pt x 117.06233pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/bina.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/bina.pdf, id=1316, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/bina.pdf, id=1303, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/bina.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/bina.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/bina.pdf  used on input line
- 135.
+ 188.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 139.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 139.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 139.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 139.
-[66 <./images/5_Implementirung/ergeb.pdf>]
+(babel)             in language  on input line 192.
+[64 <./images/5_Implementirung/ergeb.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/morpho.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/morpho.pdf, id=1328, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/morpho.pdf, id=1316, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/morpho.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/morpho.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/morpho.pdf  used on input li
-ne 145.
+ne 198.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/canny.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/canny.pdf, id=1329, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/canny.pdf, id=1317, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/canny.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/canny.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/canny.pdf  used on input lin
-e 151.
+e 204.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/cd.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/cd.pdf, id=1330, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/cd.pdf, id=1318, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/cd.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/cd.pdf>
-Package pdftex.def Info: images/5_Implementirung/2/cd.pdf  used on input line 1
-61.
+Package pdftex.def Info: images/5_Implementirung/2/cd.pdf  used on input line 2
+14.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/modulation.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/modulation.pdf, id=1331, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/modulation.pdf, id=1319, 1094.58937pt x 612.03656pt>
 
 File: images/5_Implementirung/2/modulation.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/modulation.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/modulation.pdf  used on inpu
-t line 167.
+t line 220.
 (pdftex.def)             Requested size: 220.84142pt x 123.47911pt.
 
 
 pdfTeX warning: pdflatex (file ./images/5_Implementirung/2/ergebnis.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/5_Implementirung/2/ergebnis.pdf, id=1332, 1094.58937pt x 612.03656pt>
+<images/5_Implementirung/2/ergebnis.pdf, id=1320, 1094.58937pt x 612.03656pt>
 File: images/5_Implementirung/2/ergebnis.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/ergebnis.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/ergebnis.pdf  used on input 
-line 175.
+line 228.
 (pdftex.def)             Requested size: 450.69174pt x 252.00125pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 179.
+(babel)             in language  on input line 232.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 179.
+(babel)             in language  on input line 232.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 179.
+(babel)             in language  on input line 232.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 179.
-[67 <./images/5_Implementirung/2/diff.pdf> <./images/5_Implementirung/2/bina.pd
-f> <./images/5_Implementirung/2/morpho.pdf> <./images/5_Implementirung/2/canny.
-pdf> <./images/5_Implementirung/2/cd.pdf> <./images/5_Implementirung/2/modulati
-on.pdf>]
+(babel)             in language  on input line 232.
+[65 <./images/5_Implementirung/2/diff-eps-converted-to.pdf> <./images/5_Impleme
+ntirung/2/bina.pdf> <./images/5_Implementirung/2/morpho.pdf> <./images/5_Implem
+entirung/2/canny.pdf> <./images/5_Implementirung/2/cd.pdf> <./images/5_Implemen
+tirung/2/modulation.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 237.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 237.
 
-Overfull \hbox (9.4425pt too wide) in paragraph at lines 206--207
+Overfull \hbox (9.4425pt too wide) in paragraph at lines 259--260
 []\T1/phv/m/n/10.95 RenderScript stellt ei-ne na-ti-ve High-Performance-Computi
 ng-API be-reit, die in C (C99-Standard)
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 207.
-[68 <./images/5_Implementirung/2/ergebnis.pdf>]
+(babel)             in language  on input line 260.
+[66 <./images/5_Implementirung/2/ergebnis.pdf>]
 File: images/5_Implementirung/2/modulation.pdf Graphic file (type pdf)
 <use images/5_Implementirung/2/modulation.pdf>
 Package pdftex.def Info: images/5_Implementirung/2/modulation.pdf  used on inpu
-t line 219.
+t line 272.
 (pdftex.def)             Requested size: 450.69174pt x 252.00125pt.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 303.
+(babel)             in language  on input line 307.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 303.
+(babel)             in language  on input line 307.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 303.
+(babel)             in language  on input line 307.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 303.
- [69]
+(babel)             in language  on input line 307.
+ [67]
 \openout2 = `mainmatter/Evaluierung.aux'.
 
 
@@ -5525,7 +5585,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 17.
-[70
+[68
 
 
 
@@ -5533,7 +5593,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/J8.pdf): PDF inclusion: fo
 und PDF version <1.6>, but at most version <1.5> allowed
-<images/6_Auswertung/J8.pdf, id=1381, 963.6pt x 483.30562pt>
+<images/6_Auswertung/J8.pdf, id=1369, 963.6pt x 483.30562pt>
 File: images/6_Auswertung/J8.pdf Graphic file (type pdf)
 <use images/6_Auswertung/J8.pdf>
 Package pdftex.def Info: images/6_Auswertung/J8.pdf  used on input line 22.
@@ -5546,97 +5606,452 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 29.
-[71 <./images/6_Auswertung/J8.pdf>]
-Overfull \hbox (23.34306pt too wide) in paragraph at lines 37--50
- [][] 
- []
-
+[69 <./images/6_Auswertung/J8.pdf>]
 File: images/5_Implementirung/nachregis.pdf Graphic file (type pdf)
 <use images/5_Implementirung/nachregis.pdf>
 Package pdftex.def Info: images/5_Implementirung/nachregis.pdf  used on input l
-ine 56.
+ine 58.
 (pdftex.def)             Requested size: 450.69174pt x 226.04747pt.
 
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/histogramregistration1_8.p
 df): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/6_Auswertung/histogramregistration1_8.pdf, id=1394, 2168.1pt x 1138.252
+<images/6_Auswertung/histogramregistration1_8.pdf, id=1382, 2168.1pt x 1138.252
 5pt>
 File: images/6_Auswertung/histogramregistration1_8.pdf Graphic file (type pdf)
 <use images/6_Auswertung/histogramregistration1_8.pdf>
 Package pdftex.def Info: images/6_Auswertung/histogramregistration1_8.pdf  used
- on input line 64.
+ on input line 66.
 (pdftex.def)             Requested size: 450.69174pt x 236.60852pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 70.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 70.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 70.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
-[72]
+(babel)             in language  on input line 70.
+[70]
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/windmill_auswert.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/6_Auswertung/windmill_auswert.pdf, id=1402, 1927.2pt x 1084.05pt>
+<images/6_Auswertung/windmill_auswert.pdf, id=1391, 1927.2pt x 1084.05pt>
 File: images/6_Auswertung/windmill_auswert.pdf Graphic file (type pdf)
 <use images/6_Auswertung/windmill_auswert.pdf>
 Package pdftex.def Info: images/6_Auswertung/windmill_auswert.pdf  used on inpu
-t line 72.
+t line 74.
 (pdftex.def)             Requested size: 383.09073pt x 215.48286pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
-[73 <./images/6_Auswertung/histogramregistration1_8.pdf> <./images/6_Auswertung
+(babel)             in language  on input line 80.
+[71 <./images/6_Auswertung/histogramregistration1_8.pdf> <./images/6_Auswertung
 /windmill_auswert.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/Ergebnis1.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/6_Auswertung/Ergebnis1.pdf, id=1416, 2168.1pt x 1138.2525pt>
+<images/6_Auswertung/Ergebnis1.pdf, id=1405, 2168.1pt x 1138.2525pt>
 File: images/6_Auswertung/Ergebnis1.pdf Graphic file (type pdf)
 <use images/6_Auswertung/Ergebnis1.pdf>
 Package pdftex.def Info: images/6_Auswertung/Ergebnis1.pdf  used on input line 
-81.
+83.
 (pdftex.def)             Requested size: 450.69174pt x 236.60852pt.
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 97.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 97.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.75> not available
+(Font)              size <5> substituted on input line 97.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 97.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.75> not available
+(Font)              size <5> substituted on input line 97.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 97.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <3.75> not available
+(Font)              size <5> substituted on input line 97.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 97.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <3.75> not available
+(Font)              size <5> substituted on input line 97.
+
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode1/1_11.eps>
+(epstopdf)                    date: 2018-09-09 00:42:34
+(epstopdf)                    size: 2425256 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode1/1_11-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2018-09-09 00:44:26
+(epstopdf)                    size: 146961 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+1/1_11-eps-converted-to.pdf images/6_Auswertung/Methode1/1_11.eps>
+(epstopdf)             \includegraphics on input line 136.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode1/1_11-eps-converted-to.pdf, id=1406, 1445.4pt x 75
+8.835pt>
+File: images/6_Auswertung/Methode1/1_11-eps-converted-to.pdf Graphic file (type
+ pdf)
+<use images/6_Auswertung/Methode1/1_11-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode1/1_11-eps-converted-to.pdf
+  used on input line 136.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode1/1_12.eps>
+(epstopdf)                    date: 2018-09-09 00:43:58
+(epstopdf)                    size: 2396300 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode1/1_12-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2018-09-09 00:44:32
+(epstopdf)                    size: 122633 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+1/1_12-eps-converted-to.pdf images/6_Auswertung/Methode1/1_12.eps>
+(epstopdf)             \includegraphics on input line 143.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode1/1_12-eps-converted-to.pdf, id=1407, 1445.4pt x 75
+8.835pt>
+File: images/6_Auswertung/Methode1/1_12-eps-converted-to.pdf Graphic file (type
+ pdf)
+<use images/6_Auswertung/Methode1/1_12-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode1/1_12-eps-converted-to.pdf
+  used on input line 143.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode1/1_3.eps>
+(epstopdf)                    date: 2018-09-09 01:07:20
+(epstopdf)                    size: 2400115 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode1/1_3-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 01:07:39
+(epstopdf)                    size: 144520 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+1/1_3-eps-converted-to.pdf images/6_Auswertung/Methode1/1_3.eps>
+(epstopdf)             \includegraphics on input line 151.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode1/1_3-eps-converted-to.pdf, id=1408, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode1/1_3-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode1/1_3-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode1/1_3-eps-converted-to.pdf 
+ used on input line 151.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode1/1_4.eps>
+(epstopdf)                    date: 2018-09-09 00:51:06
+(epstopdf)                    size: 2461198 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode1/1_4-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 00:51:49
+(epstopdf)                    size: 146883 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+1/1_4-eps-converted-to.pdf images/6_Auswertung/Methode1/1_4.eps>
+(epstopdf)             \includegraphics on input line 158.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode1/1_4-eps-converted-to.pdf, id=1409, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode1/1_4-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode1/1_4-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode1/1_4-eps-converted-to.pdf 
+ used on input line 158.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode1/1_5.eps>
+(epstopdf)                    date: 2018-09-09 01:01:32
+(epstopdf)                    size: 2109708 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode1/1_5-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 01:04:09
+(epstopdf)                    size: 126573 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+1/1_5-eps-converted-to.pdf images/6_Auswertung/Methode1/1_5.eps>
+(epstopdf)             \includegraphics on input line 166.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode1/1_5-eps-converted-to.pdf, id=1410, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode1/1_5-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode1/1_5-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode1/1_5-eps-converted-to.pdf 
+ used on input line 166.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode1/1_6.eps>
+(epstopdf)                    date: 2018-09-09 01:03:41
+(epstopdf)                    size: 2260492 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode1/1_6-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 01:04:14
+(epstopdf)                    size: 119676 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+1/1_6-eps-converted-to.pdf images/6_Auswertung/Methode1/1_6.eps>
+(epstopdf)             \includegraphics on input line 173.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode1/1_6-eps-converted-to.pdf, id=1411, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode1/1_6-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode1/1_6-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode1/1_6-eps-converted-to.pdf 
+ used on input line 173.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+
+Overfull \hbox (3.16705pt too wide) in paragraph at lines 136--175
+ [][][][] 
+ []
+
+
+Overfull \hbox (3.16705pt too wide) in paragraph at lines 136--175
+ [][][][] 
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 87.
+(babel)             in language  on input line 177.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 87.
+(babel)             in language  on input line 177.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 177.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 177.
+[72 <./images/6_Auswertung/Ergebnis1.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 181.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 181.
 
 
 pdfTeX warning: pdflatex (file ./images/6_Auswertung/Ergebnis2.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<images/6_Auswertung/Ergebnis2.pdf, id=1418, 2168.1pt x 1138.2525pt>
+<images/6_Auswertung/Ergebnis2.pdf, id=1421, 2168.1pt x 1138.2525pt>
 File: images/6_Auswertung/Ergebnis2.pdf Graphic file (type pdf)
 <use images/6_Auswertung/Ergebnis2.pdf>
 Package pdftex.def Info: images/6_Auswertung/Ergebnis2.pdf  used on input line 
-92.
+186.
 (pdftex.def)             Requested size: 450.69174pt x 236.60852pt.
-)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 304.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 304.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 304.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 304.
- [74 <./images/6_Auswertung/Ergebnis1.pdf>]
+(babel)             in language  on input line 189.
+[73 <./images/6_Auswertung/Methode1/1_11-eps-converted-to.pdf> <./images/6_Ausw
+ertung/Methode1/1_12-eps-converted-to.pdf> <./images/6_Auswertung/Methode1/1_3-
+eps-converted-to.pdf> <./images/6_Auswertung/Methode1/1_4-eps-converted-to.pdf>
+ <./images/6_Auswertung/Methode1/1_5-eps-converted-to.pdf> <./images/6_Auswertu
+ng/Methode1/1_6-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode2/2_1.eps>
+(epstopdf)                    date: 2018-09-09 01:23:26
+(epstopdf)                    size: 2397157 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode2/2_1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 02:11:16
+(epstopdf)                    size: 141006 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+2/2_1-eps-converted-to.pdf images/6_Auswertung/Methode2/2_1.eps>
+(epstopdf)             \includegraphics on input line 226.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode2/2_1-eps-converted-to.pdf, id=1457, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode2/2_1-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode2/2_1-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode2/2_1-eps-converted-to.pdf 
+ used on input line 226.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode2/2_2.eps>
+(epstopdf)                    date: 2018-09-09 01:26:52
+(epstopdf)                    size: 2334693 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode2/2_2-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 02:11:22
+(epstopdf)                    size: 106596 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+2/2_2-eps-converted-to.pdf images/6_Auswertung/Methode2/2_2.eps>
+(epstopdf)             \includegraphics on input line 233.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode2/2_2-eps-converted-to.pdf, id=1458, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode2/2_2-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode2/2_2-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode2/2_2-eps-converted-to.pdf 
+ used on input line 233.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode2/2_3.eps>
+(epstopdf)                    date: 2018-09-09 01:49:44
+(epstopdf)                    size: 2360947 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode2/2_3-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 02:11:27
+(epstopdf)                    size: 131953 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+2/2_3-eps-converted-to.pdf images/6_Auswertung/Methode2/2_3.eps>
+(epstopdf)             \includegraphics on input line 241.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode2/2_3-eps-converted-to.pdf, id=1459, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode2/2_3-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode2/2_3-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode2/2_3-eps-converted-to.pdf 
+ used on input line 241.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode2/2_4.eps>
+(epstopdf)                    date: 2018-09-09 01:32:47
+(epstopdf)                    size: 2433331 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode2/2_4-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 02:11:33
+(epstopdf)                    size: 158586 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+2/2_4-eps-converted-to.pdf images/6_Auswertung/Methode2/2_4.eps>
+(epstopdf)             \includegraphics on input line 248.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode2/2_4-eps-converted-to.pdf, id=1460, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode2/2_4-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode2/2_4-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode2/2_4-eps-converted-to.pdf 
+ used on input line 248.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode2/2_5.eps>
+(epstopdf)                    date: 2018-09-09 02:13:10
+(epstopdf)                    size: 2384502 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode2/2_5-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 02:13:45
+(epstopdf)                    size: 132045 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+2/2_5-eps-converted-to.pdf images/6_Auswertung/Methode2/2_5.eps>
+(epstopdf)             \includegraphics on input line 256.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode2/2_5-eps-converted-to.pdf, id=1461, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode2/2_5-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode2/2_5-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode2/2_5-eps-converted-to.pdf 
+ used on input line 256.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode2/2_6.eps>
+(epstopdf)                    date: 2018-09-09 02:15:33
+(epstopdf)                    size: 2379839 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode2/2_6-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 02:16:22
+(epstopdf)                    size: 129469 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+2/2_6-eps-converted-to.pdf images/6_Auswertung/Methode2/2_6.eps>
+(epstopdf)             \includegraphics on input line 263.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode2/2_6-eps-converted-to.pdf, id=1462, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode2/2_6-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode2/2_6-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode2/2_6-eps-converted-to.pdf 
+ used on input line 263.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode2/2_7.eps>
+(epstopdf)                    date: 2018-09-09 01:59:33
+(epstopdf)                    size: 2379751 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode2/2_7-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 02:11:49
+(epstopdf)                    size: 137563 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+2/2_7-eps-converted-to.pdf images/6_Auswertung/Methode2/2_7.eps>
+(epstopdf)             \includegraphics on input line 271.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode2/2_7-eps-converted-to.pdf, id=1463, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode2/2_7-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode2/2_7-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode2/2_7-eps-converted-to.pdf 
+ used on input line 271.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+Package epstopdf Info: Source file: <images/6_Auswertung/Methode2/2_8.eps>
+(epstopdf)                    date: 2018-09-09 02:01:06
+(epstopdf)                    size: 2483019 bytes
+(epstopdf)             Output file: <images/6_Auswertung/Methode2/2_8-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-09-09 02:11:54
+(epstopdf)                    size: 155007 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/6_Auswertung/Methode
+2/2_8-eps-converted-to.pdf images/6_Auswertung/Methode2/2_8.eps>
+(epstopdf)             \includegraphics on input line 278.
+Package epstopdf Info: Output file is already uptodate.
+<images/6_Auswertung/Methode2/2_8-eps-converted-to.pdf, id=1464, 1445.4pt x 758
+.835pt>
+File: images/6_Auswertung/Methode2/2_8-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use images/6_Auswertung/Methode2/2_8-eps-converted-to.pdf>
+Package pdftex.def Info: images/6_Auswertung/Methode2/2_8-eps-converted-to.pdf 
+ used on input line 278.
+(pdftex.def)             Requested size: 220.84142pt x 115.93927pt.
+
+Overfull \hbox (3.16705pt too wide) in paragraph at lines 226--280
+ [][][][] 
+ []
+
+
+Overfull \hbox (3.16705pt too wide) in paragraph at lines 226--280
+ [][][][] 
+ []
+
+
+Overfull \hbox (3.16705pt too wide) in paragraph at lines 226--280
+ [][][][] 
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 304.
+(babel)             in language  on input line 282.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 304.
+(babel)             in language  on input line 282.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 304.
+(babel)             in language  on input line 282.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 304.
- [75 <./images/6_Auswertung/Ergebnis2.pdf>]
+(babel)             in language  on input line 282.
+[74 <./images/6_Auswertung/Ergebnis2.pdf>])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 308.
+ [75 <./images/6_Auswertung/Methode2/2_1-eps-converted-to.pdf> <./images/6_Ausw
+ertung/Methode2/2_2-eps-converted-to.pdf> <./images/6_Auswertung/Methode2/2_3-e
+ps-converted-to.pdf> <./images/6_Auswertung/Methode2/2_4-eps-converted-to.pdf> 
+<./images/6_Auswertung/Methode2/2_5-eps-converted-to.pdf> <./images/6_Auswertun
+g/Methode2/2_6-eps-converted-to.pdf> <./images/6_Auswertung/Methode2/2_7-eps-co
+nverted-to.pdf> <./images/6_Auswertung/Methode2/2_8-eps-converted-to.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 308.
+ [76]
 \openout2 = `mainmatter/zusammenfassung.aux'.
 
  (mainmatter/zusammenfassung.tex
@@ -5653,20 +6068,20 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
-[76
+[77
 
 
 
 ])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 305.
- [77]
+(babel)             in language  on input line 309.
+ [78]
 \openout2 = `mainmatter/anhangA.aux'.
 
  (mainmatter/anhangA.tex
@@ -5681,33 +6096,37 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 312.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 312.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 312.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 308.
- [78
+(babel)             in language  on input line 312.
+ [79
 
 
 
 ]
 \openout2 = `backmatter/nomenclature.aux'.
 
- (backmatter/nomenclature.tex
-No file main.acr.
-No file main.sym.
-)
+ (backmatter/nomenclature.tex (main.acr
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 311.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 311.
+(babel)             in language  on input line 1.
+) (main.sym
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 311.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 311.
- [79
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [80
+
+
 
 
 
@@ -5715,9 +6134,26 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 312.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 312.
+(babel)             in language  on input line 1.
+))
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 315.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 315.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 315.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 315.
+ [81
+
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 316.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 316.
 
 Use my own \@starttoc for lof
 (main.lof
@@ -5729,7 +6165,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 40.
- [80
+ [82
 
 
 ]
@@ -5741,85 +6177,85 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 79.
- [81])
+ [83])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 313.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 313.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 313.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 313.
- [82]
+(babel)             in language  on input line 317.
+ [84]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 313.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 313.
+(babel)             in language  on input line 317.
 
 Use my own \@starttoc for lot
 (main.lot)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 318.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 318.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 318.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 314.
- [83
+(babel)             in language  on input line 318.
+ [85
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 318.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 318.
 
 Use my own \@starttoc for lol
 (main.lol)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 317.
- [84
+(babel)             in language  on input line 321.
+ [86
 
 ]
 chapter without number
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 317.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 317.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 321.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 321.
 
 ("C:\Users\Chen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 317.
+(babel)             in language  on input line 321.
 
-[85
+[87
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 319.
- [86]
+(babel)             in language  on input line 323.
+ [88]
 \openout2 = `backmatter/eidestattliche_erklaerung.aux'.
 
  (backmatter/eidestattliche_erklaerung.tex
@@ -5827,23 +6263,23 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 7.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 319.
- [87
+(babel)             in language  on input line 323.
+ [89
 
 
 
 ]
 No complaints by nag.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
 \openout2 = `main.wrt'.
 
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
 (main.aux
 Use my own \@writefile for toc
 Use my own \@writefile for lof
@@ -5867,7 +6303,6 @@ Use my own \@writefile for lot
 Use my own \@writefile for lol
 Use my own \@writefile for toc
 Use my own \@writefile for toc
-Use my own \@writefile for toc
 ) (mainmatter/DaViD.aux
 Use my own \@writefile for toc
 Use my own \@writefile for lof
@@ -5878,7 +6313,6 @@ Use my own \@writefile for lof
 Use my own \@writefile for toc
 Use my own \@writefile for lof
 Use my own \@writefile for toc
-Use my own \@writefile for lof
 Use my own \@writefile for lof
 Use my own \@writefile for toc
 Use my own \@writefile for toc
@@ -5993,8 +6427,27 @@ Use my own \@writefile for lof
 Use my own \@writefile for lof
 Use my own \@writefile for lof
 Use my own \@writefile for lof
+Use my own \@writefile for lot
+Use my own \@writefile for lof
 Use my own \@writefile for toc
 Use my own \@writefile for lof
+Use my own \@writefile for lot
+Use my own \@writefile for lof
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
+Use my own \@writefile for lot
 ) (mainmatter/zusammenfassung.aux
 Use my own \@writefile for toc
 Use my own \@writefile for lof
@@ -6006,7 +6459,10 @@ Use my own \@writefile for lof
 Use my own \@writefile for lot
 Use my own \@writefile for lol
 Use my own \@writefile for toc
-) (backmatter/nomenclature.aux)
+) (backmatter/nomenclature.aux
+Use my own \@writefile for toc
+Use my own \@writefile for toc
+)
 Use my own \@writefile for toc
 Use my own \@writefile for toc
 Use my own \@writefile for toc
@@ -6031,10 +6487,14 @@ Process extension: `lol'
 \openout2 = `main.lol'.
 
 (main.wrt)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 320.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 324.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 324.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 57F06C2B9FE0384A4C58853ABD7F56F1;2643.
+(rerunfilecheck)             Checksum: B0B72B3EA3BC42B8CB324E41B29483D5;2846.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.25pt have occurred.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -6044,61 +6504,35 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68126 strings out of 493290
- 1529845 string characters out of 3129425
- 2381606 words of memory out of 3000000
- 70238 multiletter control sequences out of 15000+200000
- 604697 words of font info for 129 fonts, out of 3000000 for 9000
+ 68478 strings out of 493290
+ 1538029 string characters out of 3129425
+ 2387214 words of memory out of 3000000
+ 70531 multiletter control sequences out of 15000+200000
+ 615500 words of font info for 150 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  79i,24n,136p,9085b,3369s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:gpu} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:sift} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:HDTV} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:ISI} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:vlc} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:ransac} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:surf} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:david} has been referenced but does not exist, 
-replaced by a fixed one
-
- <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ect
-t1095.pk>{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/
-8r.enc}{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/ttf2pk/base/T
-1-WGL4.enc}<./AkkRg__.ttf><./AkkBd__.ttf><C:/Users/Chen/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Chen/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Chen
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
-/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi9.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Chen/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Chen/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
-/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:
-/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.p
-fb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
-vro8a.pfb>
-Output written on main.pdf (90 pages, 8613021 bytes).
+ <C:\Users\Chen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+ctt1095.pk>{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/bas
+e/8r.enc}{C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/ttf2pk/base
+/T1-WGL4.enc}<./AkkRg__.ttf><./AkkBd__.ttf><C:/Users/Chen/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Chen/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ch
+en/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi9.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmss10.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Chen/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Chen/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ch
+en/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/
+uhvb8a.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/hel
+vetic/uhvr8a.pfb><C:/Users/Chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
+rw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (92 pages, 11130128 bytes).
 PDF statistics:
- 1710 PDF objects out of 1728 (max. 8388607)
- 298 named destinations out of 1000 (max. 500000)
- 724 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1824 PDF objects out of 2073 (max. 8388607)
+ 326 named destinations out of 1000 (max. 500000)
+ 797 words of extra memory for PDF output out of 10000 (max. 10000000)
 

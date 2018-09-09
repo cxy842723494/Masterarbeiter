@@ -1,10 +1,10 @@
 \chapter{Implementierung} \label{cha:Implementierung}
 
-In diesem Kapitel soll das zuvor vorgestellte Verfahren implementiert werden. Zuerst wird die experimentelle Umgebung auf dem PC, einschließlich der benutzten Geräte, und die Software vorgestellt. Anschließend die Implementierung der beiden vorherigen Methoden mit Matlab, welche die verarbeiteten Daten jeden Schrittes  und dessen Demonstration der Endergebnisse enthalten. Schließlich läuft die Implementierung des Detektionsverfahrens auf einer Smartphone-\gls{gpu}.
+In diesem Kapitel soll das zuvor vorgestellte Verfahren implementiert werden. Zuerst wird die experimentelle Umgebung auf dem Matlab vorgestellt. Anschließend die Implementierung der beiden vorherigen Methoden, welche die verarbeiteten Daten jeden Schrittes und dessen Demonstration der Endergebnisse enthalten. Schließlich läuft die Implementierung des Detektionsverfahrens auf einer Smartphone-\gls{gpu}.
 
 \section{Experimentelle Umgebung}
 
-Hier wird die Experimentelle Umgebung auf dem PC-Seite bzw. der Test Geräte, und Software in dieser Arbeit erläutert. Das Google Pixel wird hier verwendet, um die Bilder aufzunehmen. Dessen Parameter sind in der Tabelle \ref{tbl:Parameter der Kameras im Vergleich} verfügbar. Die Anwendungssoftware $ ``VLCReceiver" $ wird mit einem automatischen Einstellungsmodus benutzt. Entsprechend dem möglichen Einsatzbereich des David-Systems wurden im Experiment Bildschirme  verschiedener Größen und Umgebungen ausgewählt. Die in dem Experiment verwendeten Bildschirme sind in der Tabelle \ref{tbl:Verwendeter Bildschirm} zu sehen. Die aufgenommenen Bilder auf der PC-Seite mit Matlab 2017b unter der Lizenz der TU Dortmund verarbeitet.
+Hier wird die Experimentelle Umgebung auf dem Matlab erläutert. Das Google Pixel wird hier verwendet, um die Bilder aufzunehmen. Dessen Parameter sind in der Tabelle \ref{tbl:Parameter der Kameras im Vergleich} verfügbar. Die Anwendungssoftware $ ``VLCReceiver" $ wird mit einem automatischen Einstellungsmodus benutzt. Entsprechend dem möglichen Einsatzbereich des David-Systems wurden im Experiment Bildschirme verschiedener Größen und Umgebungen ausgewählt. Die in dem Experiment verwendeten Bildschirme sind in der Tabelle \ref{tbl:Verwendeter Bildschirm} zu sehen. Die aufgenommenen Bilder werden auf der PC-Seite mit Matlab 2017b unter der Lizenz der TU Dortmund verarbeitet.
 
 \begin{table}[htb]
 	\captionabove{Verwendete Bildschirme}
@@ -21,16 +21,15 @@ Hier wird die Experimentelle Umgebung auf dem PC-Seite bzw. der Test Geräte, un
 	Samsung 	  & SMB2440MH   & LED & $ 1920 \times 1280$ & 24'' & 60 \\
 	Ausu  		  & VG248   & LCD & $ 1920 \times 1280$ & 24'' & 60 \\
 	LG  		  & 55EF950V & OLED & $ 2160 \times 3840$ & 55'' & 120 \\
-	 Projektor & ? & ? & ? & ?'' & ? \\
 	
 	\bottomrule
 	\end{tabular}
 \end{table} 
 
 \section{Implementierung vom ersten Verfahren}
-Im Implementierungsprozess der Methode 1, stammt das Bild aus einer Reihe von acht Bildern, die mit einer Smartphonekamera aus der Handy aufgenommen wurden. Entsprechend den Eigenschaften der Bildregistration in dieser Arbeit sind die von der handgehaltenen Kamera aufgenommenen Objekte alles statische Videos. Dies bedeutet, dass sich der Inhalt des Videos nicht ändert. Im tatsächlichen Betrieb entspricht es einer statischen elektronischen Werbetafel. Die Modulationsamplitude wird auf 6 gesetzt, der Daten Datenblock mit $ 4 \times 4 Pixel$ und die QR Muster Größe als $ 72 \times 72 Pixel$ initialisiert.
+Im Implementierungsprozess der Methode 1, stammt das Bild aus einer Reihe von acht Bildern, die mit einer Smartphonekamera aus die Hand aufgenommen wurden. Entsprechend den Eigenschaften der Bildregistrierung in dieser Arbeit sind die von der handgehaltenen Kamera aufgenommenen Objekte alles statische Videos. Dies bedeutet, dass sich der Inhalt des Videos nicht ändert. Im tatsächlichen Betrieb entspricht es z.B. einer statischen elektronischen Werbetafel. Die Modulationsamplitude wird auf 6 gesetzt, der Daten Datenblock mit $ 4 \times 4 Pixel$ und die QR Muster Größe als $ 72 \times 72 Pixel$ initialisiert.
 
-Aufgrund von Handschütteln während der Aufnahme entsteht eine leichte Verschiebung zwischen den Bildern. Um diesen Effekt zu verdeutlichen, wird das erste Bild und das achte Bild in Abbildung \ref{fig:vorregistration} verglichen. 
+Aufgrund von Handschütteln während der Aufnahme entsteht eine leichte Verschiebung zwischen den Bildern. Um diesen Auswirkung zu verdeutlichen, wird das erste Bild und das achte Bild in Abbildung \ref{fig:vorregistration} verglichen. 
 %Die durchschnittliche Entfernung der entsprechenden Pixel zwischen den zwei Bildern beträgt ca.2 Pixel. 
 Abbildung \ref{fig:nachregis} zeigt das Bild nach der Bildregistration. Wie zu sehen ist, ist der Abstand komprimiert worden. %Die durchschnittliche Entfernung hier beträgt ca. 0.45 Pixel.
  
@@ -50,25 +49,78 @@ Abbildung \ref{fig:nachregis} zeigt das Bild nach der Bildregistration. Wie zu s
 \end{minipage}
 \end{figure}
  
-Aufgrund der Bildwiederholfrequenz werden die QR Muster in den Differenzbildern, wie in Tabelle 3.2 zu sehen ist, einige unerwartete Effekte aufweisen. Um diese zu neutralisieren, wird eine Absolutwertoperation durchgeführt. Danach wird mit Hilfe der Berechnung der $ ``Energie" $ jedes Differenzbilds, ein neues zu detektierende Bild entstehen, welches in Abbildung \ref{fig:nachdiff} zu sehen ist. 
+Aufgrund der Bildwiederholfrequenz werden die QR Muster in den Differenzbildern, wie in Tabelle \ref{tbl:differenzbildformel} zu sehen ist, einige unerwartete Effekte aufweisen. Um diese zu neutralisieren, wird eine Absolutwertoperation durchgeführt. Danach werden hier 3 Differenzbilder welche die größte ``Energie" beinhalten, überlagert um ein neues zu detektierende Bild entstehen. Das Ergebnis ist in Abbildung \ref{fig:nachdiff} zu sehen. 
+
+%\begin{figure}[htbp]
+%\centerings
+%\subfigure[pic1.]{
+%\includegraphics[keepaspectratio,width=0.45\textwidth]{images/5_Implementirung/1.eps}
+%%\caption{fig1}
+%}
+%\quad
+%\subfigure[pic2.]{
+%\includegraphics[keepaspectratio,width=0.45\textwidth]{images/5_Implementirung/22.eps}
+%}
+%\quad
+%\subfigure[pic3.]{
+%\includegraphics[keepaspectratio,width=0.49\textwidth]{images/3_Ersteverfahren/Differenzbild/0schwarz.pdf}
+%}
+%\quad
+%\subfigure[pic4.]{
+%\includegraphics[keepaspectratio,width=0.45\textwidth]{images/3_Ersteverfahren/Differenzbild/0schwarz.pdf}
+%}
+%\quad
+%\subfigure[pic5.]{
+%\includegraphics[keepaspectratio,width=0.45\textwidth]{images/3_Ersteverfahren/Differenzbild/0schwarz.pdf}
+%}
+%\quad
+%\subfigure[pic6.]{
+%\includegraphics[keepaspectratio,width=0.45\textwidth]{images/3_Ersteverfahren/Differenzbild/0schwarz.pdf}
+%}
+%\caption{Differenzbildern}
+%\label{Differenzbildern}
+%\end{figure}
+
+
+
+%\begin{table}[htb]
+%	\captionabove{mögliche Differenzbilder}
+%	\label{tbl:differenzbildformel}
+%	\footnotesize
+%	\centering
+%%	\rowcolors{2}{white}{gray!25}	%TUgreen!25 
+%	\begin{tabular}{|c|c|}	%p{}m{}b{}clr p{3cm} p{8cm}
+%	\toprule
+%	\textbf{Differenzbild}\\
+%	\midrule
+%	  \includegraphics[scale=0.12]{images/3_Ersteverfahren/Differenzbild/0schwarz.pdf} & \includegraphics[scale=0.15]{images/3_Ersteverfahren/Differenzbild/1halfschwarz.pdf}\\
+%	 \includegraphics[scale=0.15]{images/3_Ersteverfahren/Differenzbild/2weis.pdf} & \includegraphics[scale=0.15]{images/3_Ersteverfahren/Differenzbild/3halfweis.pdf}\\
+%	 \includegraphics[scale=0.15]{images/3_Ersteverfahren/Differenzbild/4halbschwaryhalbweis.pdf} & \includegraphics[scale=0.15]{images/3_Ersteverfahren/Differenzbild/5aufheben.pdf}\\
+%
+%	\bottomrule
+%	\end{tabular}
+%\end{table} 
+
+
+
 
 \begin{figure}[H]
 \centering 
 \begin{minipage}[b]{0.49\textwidth} 
 \centering 
-\includegraphics[width=1.0\textwidth]{images/5_Implementirung/nachdiff.pdf} 
+\includegraphics[width=1.0\textwidth]{images/5_Implementirung/Diff/zudifferenzbild.eps} 
 \caption{Ein zu detektierendes Bild}
 \label{fig:nachdiff}
 \end{minipage}
 \begin{minipage}[b]{0.49\textwidth} 
 \centering 
-\includegraphics[width=0.8\textwidth]{images/5_Implementirung/histodiff.pdf}
+\includegraphics[width=1.0\textwidth]{images/5_Implementirung/Diff/histogramm.eps}
 \caption{entsprechendes Histogramm}
 \label{fig:Histogramm}
 \end{minipage}
 \end{figure}
 
-Anschließend wird das Bild zur Bildverarbeitung durchgeführt. Abbildung \ref{fig:binar} und Abbildung \ref{fig:morpho} zeigen die Ergebnisse durch die Binarisierung bzw. durch die Morphologie Operation. Mit der QR Muster Detektion kann das Zentrum des Musters bestimmen werden, wie in Abbildung \ref{fig:QR_muster} zu sehen ist. Dadurch lässt sich der Modulationsbereich bestimmen. In Abbildung \ref{fig:Mudulaitionbereich} wird der Modulationsbereich durch ein rotes Rechteck gekennzeichnet. Schließlich kann mit einer projektiven Transformation das Endergebnis, welche in Abbildung \ref{fig:Ergebnis1} zu sehen ist, erhalten werden.
+Anschließend wird das Bild zur Bildverarbeitung durchgeführt. Abbildung \ref{fig:binar} und Abbildung \ref{fig:morpho} zeigen die Ergebnisse durch die Binarisierung bzw. durch die Morphologie Operation. Nach der Binarisierungsvorgang mit Ostu wird der Modulationsbereich vom Bild grob extrahiert. Die nächste Morphologie Operation kann die Lücken und die kleine Punkte vom Rauschen stark reduziert. Hier wird ein $ 5 \times 5 $ quadratisches Strukturelement verwendet. Mit der QR Muster Detektion kann das Zentrum des Musters bestimmen werden, wie in Abbildung \ref{fig:QR_muster} zu sehen ist. Dadurch lässt sich der Modulationsbereich bestimmen. In Abbildung \ref{fig:Mudulaitionbereich} wird der Modulationsbereich durch ein rotes Rechteck gekennzeichnet. Schließlich kann mit einer projektiven Transformation das Endergebnis, welche in Abbildung \ref{fig:Ergebnis1} zu sehen ist, erhalten werden.
 
 \begin{figure}[H]
 \centering 
@@ -113,11 +165,12 @@ Anschließend wird das Bild zur Bildverarbeitung durchgeführt. Abbildung \ref{f
 
 
 
-\section{Implementierung von zweiten Verfahren}
+\section{Implementierung vom zweiten Verfahren}
 
-Hier wird die Implementierung der zweiten Methode vorgestellt. Das Bild stammt aus einer Reihe von acht Bildern, die durch ein Google Pixel mit Stativ aufgenommen wurden. Deswegen wird hier kein Bildregistration verwendet. Dies bedeutet, dass sich der Inhalt des Videos verändern lässt. Die Modulationsamplitude werden auf 6 und der Daten Datenblock auf $ 4 \times 4 Pixel$ eingestellt. 
+Hier wird die Implementierung der zweiten Methode vorgestellt. Das Bild stammt aus einer Reihe von acht Bildern, die durch ein Google Pixel mit Stativ aufgenommen wurden. In dieser Situation wird keine Bildregistrierung verwendet. Dies bedeutet, dass sich der Inhalt des Videos verändern lässt. Die Modulationsamplitude werden auf 6 und der Daten Datenblock auf $ 4 \times 4 Pixel$ eingestellt. 
 
-Durch das Wissen des 4. Kapitels, werden von diesen Bildern eine Reihe Differenzbilder erstellt. Die 3 Differenzbilder mit der größten $``Energie"$ werden addiert, um ein zu detektierendes Bild zu erhalten, wie in Abbildung \ref{fig:diff2} zu sehen ist. Anschließend wird unter Verwendung der Binarisierungmethode, Ostu Schwellenmethode, ein Binärbild generiert, indem der Modulationsbereich des Bildes extrahiert wird. Um kleine Punkte und Lücken zu beseitigen, lässt sich eine Morphologie Operation durchführen. Das hier benutzte Strukturelement ist ein $5 \times 5$ Quadrat. Die Wirkungen beider Operationen werden in Abbildung \ref{fig:binar2} und Abbildung \ref{fig:morph2} gezeigt. Um der Einfluss der Kamera-Verzerrung zu neutralisieren, wird das Binärbild mit einer Cross Dilatation verarbeitet, also $ n_{around} = 1$. Struktur der Cross Dilatation wird in Abbildung gezeigt und Abbildung \ref{fig:cd} zeigt diese Operation. Das Bildzentrum lässt sich auf den Ursprung setzen. Anschließend kann durch Vergleich der Integralwerte die längste Linie, welche die oben, unten, links und rechts liegt, gefunden werden. Um die Berechnungskosten zu reduzieren, werden die Linien innerhalb von $ \pm 10^{\circ} $ erkannt. 
+Durch das Wissen des 4. Kapitels, werden von diesen Bildern eine Reihe Differenzbilder erstellt. Die 3 Differenzbilder mit der größten $``Energie"$ werden addiert, um ein zu detektierendes Bild zu erhalten, wie in Abbildung \ref{fig:diff2} zu sehen ist. Anschließend wird unter Verwendung der Binarisierungmethode, Ostu Schwellenmethode, ein Binärbild generiert, indem der Modulationsbereich des Bildes extrahiert wird. Um kleine Punkte und Lücken zu beseitigen, lässt sich eine Morphologie Operation durchführen. Das hier benutzte Strukturelement ist ein $5 \times 5$ Quadrat. Die Wirkungen beider Operationen werden in Abbildung \ref{fig:binar2} und Abbildung \ref{fig:morph2} gezeigt. Um der Einfluss der Kamera-Verzerrung zu neutralisieren, wird das Binärbild mit einer Cross Dilatation verarbeitet, also $ n_{around} = 1$. Struktur der Cross Dilatation wird in Abbildung gezeigt und Abbildung \ref{fig:cd} zeigt diese Operation. 
+In der Radon Transformation lässt sich das Bildzentrum auf den Ursprung setzen. Dann durch Vergleich der Integralwerte kann die längste Linie, welche die oben, unten, links und rechts liegt, gefunden werden. Um die Berechnungskosten zu reduzieren, werden nur die Linien innerhalb von $ \pm 10^{\circ} $ erkannt. 
 
 
 
@@ -126,7 +179,7 @@ Durch das Wissen des 4. Kapitels, werden von diesen Bildern eine Reihe Differenz
 \centering 
 \begin{minipage}[b]{0.49\textwidth} 
 \centering 
-\includegraphics[width=1.0\textwidth]{images/5_Implementirung/2/diff.pdf} 
+\includegraphics[width=1.06\textwidth]{images/5_Implementirung/2/diff.eps} 
 \caption{Ein zu detektierendes Bild}
 \label{fig:diff2}
 \end{minipage}

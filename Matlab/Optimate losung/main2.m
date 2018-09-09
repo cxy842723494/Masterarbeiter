@@ -16,7 +16,7 @@ toc
 tic;
 diff = functions.creatDifferentbild(U2new);
 
-Mal_num = 3;
+Mal_num = 5;
 tic
 diffplus = functions.sum_of_diff(abs(diff),Mal_num);
 toc;
@@ -34,7 +34,7 @@ diffc_r  = diffplus;
 [select,maskedImage]  = functions.binar(diffc_r);
 %    figure,imshow(select,[]),title('binar')
  
-grain = 12;  % size der QR 12 
+grain =5;  % size der QR 12 
 selectf2 = imopen(imclose(select,ones(grain)),ones(grain));
 % figure,imshow(selectf2),title('selectf2');
 %     edges = edge(selectf2); % Sobel edge detection
@@ -75,7 +75,7 @@ figure, imshow(Y2new(:,:,1),[]);
 % differenzbilder
 %figure, imshow(diff(:,:,1),[])
 %figure, imshow(diffplus,[])
-hold on
+hold on,axis normal,
 plot(x(1:2), y(1:2), 'r', 'LineWidth', 2)
 plot(x(2:3), y(2:3), 'r', 'LineWidth', 2)
 plot(x(3:4), y(3:4), 'r', 'LineWidth', 2)

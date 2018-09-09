@@ -1,4 +1,4 @@
-\chapter{Erste Methode} \label{cha:Erste Methode}
+\chapter{Untersuchung vom ersten Verfahren mittels Mustererkennung } 
 
 In diesem Kapitel wird auf die Realisierung des ersten Verfahrens eingegangen. Zuerst wird die Bildregistrierung im Detail besprochen. Anschließend läuft die Differenzbild Optimierung und die benötigte Bildverarbeitung. Schließlich wird die QR Mustererkennung erläutert. Zur Implementierung dieses Verfahrens wird Matlab unter der Lizenz der TU Dortmund verwendet.
 
@@ -189,7 +189,7 @@ Abbildung \ref{fig:OhneRANSAC} zeigt die passenden Punkte durch Merkmalübereins
 \end{figure} 
 
 
-\subsection{Bilder Umwandlung}
+\subsection{Bildumwandlung}
 
 Wie in dem vorherigen Abschnitt vorgestellt, kann durch Verwenden des \gls{surf} übereinstimmende Punkte in aufeinanderfolgenden Bildern gefunden werden, anschließend lassen sich durch \gls{ransac} die Ausreißer ausschließen. Das Ziel dieses Abschnitts besteht darin, das Bild in dasselbe Koordinatensystem zu konvertieren. Der erste Schritt ist ein Kameramodell zu erstellen und anschließend die Umwandlungsbeziehung zwischen den entsprechenden Punkten in den zwei Bildern zu erhalten, um schließlich durch den Optimierungsalgorithmus die endgültige Transformationsmatrix zu erhalten. Die verschiedenen Schritte werden im Folgenden detailliert beschrieben.
 
@@ -609,7 +609,7 @@ Durch die Transformationsmatrix können die Koordinaten des zweiten Bildes in di
 
 
 
-\section{Differenzbild Optimierung}
+\section{Differenzbild-Optimierung}
 Die Bildregistration liefert eine Reihe Bilder von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden. Es werden je zwei Bilder ausgewählt und subtrahiert, um eine Reihe Differenzbilder zu erhalten. Das Ziel in diesem Abschnitt ist, von diesen Differenzbildern ein zu detektierendes Bild herzustellen, das die QR Muster Detektion vereinfacht. Es sollte hier beachtet werden, dass aufgrund der Zeitsynchronisation die QR Muster in den Differenzbildern einige unerwartete Effekte aufweisen könnten. Eine mögliche Formel der Differenzbilder wie folgt mit der Anhahme dass es in vertikaler Richtung ist.
 
 \begin{itemize}
@@ -708,7 +708,7 @@ Für die Schwellenwertbildung und das Erstellen eines Binärbildes wurde eine Fu
 
 Mit öffnenden und schließenden Filtern können die Lücken zwischen Blöcken und die Punkte vom Rauschen stark reduziert werden, was das binär Bild zu einer guten Interpretation des QR Musters macht. 
 
-\section{QR Muster Detektion} 
+\section{QR-Muster-Detektion} 
 
 Nach der Bildverarbeitung wird nun die QR Muster Detektion ausgeführt. Das Ziel einer QR Muster Detektion ist, das Zentrum des Musters im Bild zu lokalisieren um dadurch das Bild zu rekonstruieren. Abbildung \ref{fig:QRPattern} zeigt die geometrische Struktur eines QR Musters. An jeder Ecke des Modulartionsbereichs gibt es ein solches QR Muster.
 

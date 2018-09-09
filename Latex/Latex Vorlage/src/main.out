@@ -1,42 +1,43 @@
 \BOOKMARK [0][]{chapter.1}{Einleitung}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Aufgabe in dieser Arbeit}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Aufbau der Arbeit}{chapter.1}% 4
-\BOOKMARK [0][]{chapter.2}{david}{}% 5
-\BOOKMARK [1][-]{section.2.1}{Einf\374hrung des davids}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Systemmodell}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.1}{Modulationsverfahren}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.2}{DatenBlock}{section.2.2}% 9
-\BOOKMARK [1][-]{section.2.3}{Anwendungsgebiete}{chapter.2}% 10
-\BOOKMARK [0][]{chapter.3}{Erste Methode}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Allgemeine Struktur}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Bildregistrierung}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.2.1}{surf}{section.3.2}% 14
-\BOOKMARK [2][-]{subsection.3.2.2}{ransac}{section.3.2}% 15
-\BOOKMARK [2][-]{subsection.3.2.3}{Bilder Umwandlung}{section.3.2}% 16
-\BOOKMARK [1][-]{section.3.3}{Differenzbild Optimierung}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.4}{Bildverarbeitung}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.5}{QR Muster Detektion}{chapter.3}% 19
-\BOOKMARK [0][]{chapter.4}{Zweite Methode}{}% 20
-\BOOKMARK [1][-]{section.4.1}{Allgemeine Struktur}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.2}{Binarisierung}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.3}{Morphologie}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.4}{Canny detection}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.5}{Cross Dilatation}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.6}{Hough Transformation}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.7}{Radon Transformation}{chapter.4}% 27
-\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Experimentelle Umgebung}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.2}{Implementierung vom ersten Verfahren}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.3}{Implementierung von zweiten Verfahren}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.4}{Implementierung auf einer Smartphone-GPU}{chapter.5}% 32
-\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 33
-\BOOKMARK [1][-]{section.6.1}{Evaluierung des 1.Verfahrens}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.2}{Evaluierung des 2.Verfahrens}{chapter.6}% 35
-\BOOKMARK [0][]{chapter.7}{Zusammenfassung}{}% 36
-\BOOKMARK [0][]{appendix.A}{Erster Anhang}{}% 37
-\BOOKMARK [1][-]{section.A.1}{Section}{appendix.A}% 38
-\BOOKMARK [0][]{chapter*.69}{Abbildungsverzeichnis}{}% 39
-\BOOKMARK [0][]{chapter*.70}{Tabellenverzeichnis}{}% 40
-\BOOKMARK [0][]{chapter*.71}{Quellcodeverzeichnis}{}% 41
-\BOOKMARK [0][]{chapter*.72}{Literatur}{}% 42
+\BOOKMARK [1][-]{section.1.2}{Aufbau der Arbeit}{chapter.1}% 3
+\BOOKMARK [0][]{chapter.2}{Optische Freiraum-Daten\374bertragung mittels Videodisplays und Kameras}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Einf\374hrung des davids}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Systemmodell}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.1}{Modulationsverfahren}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{DatenBlock}{section.2.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Anwendungsgebiete}{chapter.2}% 9
+\BOOKMARK [0][]{chapter.3}{Untersuchung vom ersten Verfahren mittels Mustererkennung}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Allgemeine Struktur}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Bildregistrierung}{chapter.3}% 12
+\BOOKMARK [2][-]{subsection.3.2.1}{surf}{section.3.2}% 13
+\BOOKMARK [2][-]{subsection.3.2.2}{ransac}{section.3.2}% 14
+\BOOKMARK [2][-]{subsection.3.2.3}{Bildumwandlung}{section.3.2}% 15
+\BOOKMARK [1][-]{section.3.3}{Differenzbild-Optimierung}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Bildverarbeitung}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.5}{QR-Muster-Detektion}{chapter.3}% 18
+\BOOKMARK [0][]{chapter.4}{Untersuchung vom zweiten Verfahren mittels Formerkennung}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Allgemeine Struktur}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Binarisierung}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.3}{Morphologie}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.4}{Canny Detektion}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.5}{Cross Dilatation}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.6}{Hough Transformation}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.7}{Radon Transformation}{chapter.4}% 26
+\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 27
+\BOOKMARK [1][-]{section.5.1}{Experimentelle Umgebung}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.2}{Implementierung vom ersten Verfahren}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.3}{Implementierung vom zweiten Verfahren}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.4}{Implementierung auf einer Smartphone-GPU}{chapter.5}% 31
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 32
+\BOOKMARK [1][-]{section.6.1}{Evaluierung vom ersten Verfahren}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.2}{Evaluierung vom zweiten Verfahren}{chapter.6}% 34
+\BOOKMARK [0][]{chapter.7}{Zusammenfassung}{}% 35
+\BOOKMARK [0][]{appendix.A}{Erster Anhang}{}% 36
+\BOOKMARK [1][-]{section.A.1}{Section}{appendix.A}% 37
+\BOOKMARK [0][]{section*.73}{Abk\374rzungsverzeichnis}{}% 38
+\BOOKMARK [0][]{section*.75}{Symbolverzeichnis}{}% 39
+\BOOKMARK [0][]{chapter*.77}{Abbildungsverzeichnis}{}% 40
+\BOOKMARK [0][]{chapter*.78}{Tabellenverzeichnis}{}% 41
+\BOOKMARK [0][]{chapter*.79}{Quellcodeverzeichnis}{}% 42
+\BOOKMARK [0][]{chapter*.80}{Literatur}{}% 43

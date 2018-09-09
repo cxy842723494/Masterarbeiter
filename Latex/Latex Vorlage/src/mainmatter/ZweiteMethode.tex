@@ -1,4 +1,4 @@
-\chapter{Zweite Methode} \label{cha:ZweiteMethode}
+\chapter{Untersuchung vom zweiten Verfahren mittels Formerkennung} 
 
 In diesem Kapitel wird die Realisierung des zweiten Verfahrens eingegangen. Zuerst wird die allgemeine Struktur dieser Methode beschrieben. Dies liefert ein grobes Verständnis der Struktur und des Arbeitsprinzips der gesamten Methode. Anschießend läuft eine Erklärung der Bildverarbeitungen im Detail. Diese besteht aus folgenden Teilen: Binarisierung, Morphologie Operation und Canny Kanten Detektion. In diesem Abschnitt wird erläutert, wie diese Operationen funktionieren und was der Sinn dieser Behandlungen ist. Schließlich wird die Linienextrahierungsmethode (Hough- und Radon-Transformation) detailliert vorgestellen. 
 
@@ -243,7 +243,7 @@ Das zu detektierende Bild aus Abbildung \ref{fig:binarisierungbild} nach einer m
  \label{fig:Bild nach einer morphologischen Operation}
 \end{figure} 
 
-\section{Canny detection}
+\section{Canny Detektion}
 
 Nach der morphologischen Operation wird ein Binärbild erhalten, welches grob in zwei Teile geteilt werden kann. Ein Modulationsbereich mit dem Pixelwert 1 im mittleren Bereich und einen umgebenden Hintergrundbereich mit dem Pixelwert 0. Um die nächste Linie Detektion zu implementieren, wird eine Kanten Detektion, weil Kanten oft mit den Grenzen von Objekten in einer Szene verknüpft werden, durchgeführt. In anderen Worten, ist es die Grenze zwischen Modulationsbereich und Hintergrundbereich. \cite{canny}
 

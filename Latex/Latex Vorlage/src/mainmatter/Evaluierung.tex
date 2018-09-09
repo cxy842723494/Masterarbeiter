@@ -3,7 +3,7 @@
 In diesem Kapitel soll das zuvor implementierte Verfahren evaluiert werden. Es lassen sich eine Reihe von Testanalysen durchführen, um die Methode auf die Genauigkeit und die Leistungsfähigkeit zu testen.
 
 
-\section{Evaluierung des 1.Verfahrens}
+\section{Evaluierung vom ersten Verfahren}
 
 Hier wird das 1. Verfahren mit zusammen mit dessen Genauigkeit und Leistunsfähigkeit evaluiert. Wie in Kapitel 3 vorgestellt, ist diese Methode häuptlich für den Fall der Aufnahme über das Smartphone aus der Hand vorgesehen. Anschließend wird eimente Bildregistrierungs Operation benötigt, um die Bilder in dasselbe Korordinatensystem zu transformieren. Die Funktion dieses Verfahrens wirkt sich direkt auf die Entstehung der Differenzbilder aus und hat einen wesentlichen Einfluss auf die spätere Erkennung. Deswegen wird zuerst eine Analyse durchgeführt.
 
@@ -31,21 +31,23 @@ Die vertikale Koordinate repräsentiert den Fehlerwert J und die horizontale Koo
 	\captionabove{Daten des Fehlers}
 	\label{tbl:Daten des Fehlers}
 	\footnotesize
+	%\fontsize{7.5}{10}\selectfont
 	\centering
-	\rowcolors{2}{white}{gray!25}	%TUgreen!25
+	%\rowcolors{2}{white}{gray!25}	%TUgreen!25
 	%\begin{tabular}{|p{2cm}|p{4cm}|p{3cm}|p{3cm}|}	%p{}m{}b{}clr
 	\begin{tabular}{|c|c|c|c|c|c|}
-	\toprule
-	\textbf{Verglichene Bilder} & \textbf{Anzahl der Punkte} & \textbf{Ursprüngliche Fehler} & \textbf{Mittelwert} &\textbf{Ergebnis Fehler} & \textbf{Mittelwert}\\
-	\midrule
-	1-2 & 849 & 350.5674 & 0.4129 & 224.9265 & 0.2649\\ 
-	1-3 & 723 & 826.8834 & 1.1437 & 236.0301 & 0.3265\\ 
-	1-4 & 619 & 662.3621 & 1.0701 & 208.4760 & 0.3368\\ 
-	1-5 & 500 & 723.2307 & 1.4465 & 207.1174 & 0.4142\\ 
-	1-6 & 835 & 1607.4002 & 1.9250& 231.7138 & 0.2775\\ 
-	1-7 & 802 & 1059.4579 & 1.3210& 260.3104 & 0.3246\\ 
-	1-8 & 803 & 1863.9972 & 2.3213& 246.7970 & 0.3073\\ 
-	\bottomrule
+	\hline
+	%\multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
+	\multirow{2}{*}{Verglichene Bilder}&\multirow{2}{*}{Anzahl der Punkte}&\multicolumn{2}{c|}{Vor Bildregistrierung}&\multicolumn{2}{c|}{Nach Bildregistrierung}\cr\cline{3-6}
+	 &  & Gesamtfehler & Mittelwert & Gesamtfehler & Mittelwert\cr\hline
+	1-2 & 849 & 350.5674 & 0.4129 & 224.9265 & 0.2649\cr\hline
+	1-3 & 723 & 826.8834 & 1.1437 & 236.0301 & 0.3265\cr\hline
+	1-4 & 619 & 662.3621 & 1.0701 & 208.4760 & 0.3368\cr\hline
+	1-5 & 500 & 723.2307 & 1.4465 & 207.1174 & 0.4142\cr\hline
+	1-6 & 835 & 1607.4002 & 1.9250& 231.7138 & 0.2775\cr\hline
+	1-7 & 802 & 1059.4579 & 1.3210& 260.3104 & 0.3246\cr\hline
+	1-8 & 803 & 1863.9972 & 2.3213& 246.7970 & 0.3073\cr
+	\hline
 	\end{tabular}
 \end{table} 
 
@@ -79,12 +81,104 @@ Der zu detektierende Modulationsbereich durch die 1. Methode wird in Abbildung \
 \begin{figure}[H]
  \centering 
   \includegraphics[keepaspectratio,width=1.00\textwidth]{images/6_Auswertung/Ergebnis1.pdf}
- \caption{Ergebnis 1}
+ \caption{Ergebnis vom ersten Verfahren}
  \label{fig:Ergebnis1}
 \end{figure}
 
+Die Zeitperformance bei Verwendung vom ersten Verfahren ist in Tabelle 6.2 aufgeführt, und die entsprechenden Detektionsergebnisse sind in Abbildung 6.3 dargestellt.
 
-\section{Evaluierung des 2.Verfahrens}
+
+\begin{table}[H]
+  \centering
+  %\footnotesize
+  \fontsize{7.5}{10}\selectfont
+  \caption{Laufzeitleistung vom ersten Verfahren}
+  \label{tab:performance_comparison}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    %\multicolumn{2}{c|}{\multirow{2}{*}{Method}}&
+     %\multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
+    No.&Parameter&Display&Bildregistrierung$ [s] $&Differenzbild Opt.$ [s] $&Bildverarbeitung$ [s] $&QR-Detektion$ [s] $\cr\hline
+    \hline
+    1&A9B6&ASUS&56.5812&2.0524&0.0502&0.0709\cr\hline
+    2&A9B6&OLED&56.9922&2.1650&0.0489&0.0720\cr\hline
+    3&A6B4&ASUS&54.9934&2.1214&0.0512&0.0713\cr\hline
+    4&A6B4&OLED&55.9458&2.1593&0.0533&0.0789\cr\hline
+    5&A4B4&ASUS&57.8797&1.9985&0.0566&0.0717\cr\hline 
+    6&A4B4&ASUS&56.9837&2.0786&0.0527&0.0752\cr  
+    \hline 
+    \end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Als Nächst werden einige Ergebnisse der Verwendungen von den 2. Methode angegeben. 
+
+\begin{figure}[H]
+\centering
+ 
+\subfigure[No.1]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode1/1_11.eps}
+%\caption{fig1}
+\end{minipage}%
+}%
+\subfigure[No.2]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode1/1_12.eps}
+%\caption{fig2}
+\end{minipage}%
+}%
+\quad                 %这个回车键很重要 \quad也可以
+\subfigure[No.3]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode1/1_3.eps}
+%\caption{fig2}
+\end{minipage}
+}%
+\subfigure[No.4]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode1/1_4.eps}
+%\caption{fig2}
+\end{minipage}
+}%
+\quad                 %这个回车键很重要 \quad也可以
+\subfigure[No.5]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode1/1_5.eps}
+%\caption{fig2}
+\end{minipage}
+}%
+\subfigure[No.6]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode1/1_6.eps}
+%\caption{fig2}
+\end{minipage}
+}% 
+\centering
+\caption{Entsprechende Ergebnisse vom den ersten Verfahren}
+\end{figure}
+
+
+
+
+\section{Evaluierung vom zweiten Verfahren}
 
 In diesem Abschnitt wird das 2. Verfahren evaluiert. Wie in Kapitel 4 vorgestellt, ist diese Methode häuptlich für den Fall bei der Aufnahme der Bilder mit einem Smartphone auf einem Stativ. Infolgedessen wird hier die Bildregistrierungs Operation nicht mehr gebraucht. Die Gitterbilder aus dem vorherigen Abschnitt werden hier ebenfalls verwendet. Der Parameter ist eingestellt auf: Modulationsamplitude als 6, der Datenblock als $ 4 \times 4 Pixel$ und die QR Muster Größe als $ 72 \times 72 Pixel $. Die Ergebnisse nach Methode 2 sind in der Abbildung \ref{fig:Ergebnis2} dargestellt.Die berechnete durchschnittliche Abweichung beträgt 1.3468 Pixel. 
 \begin{figure}[H]
@@ -93,3 +187,123 @@ In diesem Abschnitt wird das 2. Verfahren evaluiert. Wie in Kapitel 4 vorgestell
  \caption{Ergebnis 2}
  \label{fig:Ergebnis2}
 \end{figure}
+
+
+\renewcommand{\arraystretch}{1.5} %¿ØÖÆ±í¸ñÐÐ¸ßµÄËõ·Å±ÈÀý
+\begin{table}[H]
+  \centering
+  %\footnotesize
+  \fontsize{7.5}{10}\selectfont
+  \caption{Laufzeitleistung vom zweiten Verfahren}
+  \label{tab:performance_comparison}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    %\multicolumn{2}{c|}{\multirow{2}{*}{Method}}&
+     %\multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
+    No.&Parameter&Display&Differenzbild Opt.$ [s] $&Bildverarbeitung$ [s] $&QR-Detektion$ [s] $\cr\hline
+    \hline
+    1&A9B6&ASUS&2.1544&0.1275&0.2792\cr\hline
+    2&A9B6&OLED&2.3691&0.1283&0.2795\cr\hline
+    3&A9B6&Notebook&2.1059&0.1340&0.3009\cr\hline
+    4&A6B4&ASUS&2.0939&0.1309&0.3086\cr\hline
+    5&A6B4&OLED&2.0882&0.1293&0.2725\cr\hline
+    6&A6B4&OLED&2.0573&0.1321&0.3382\cr\hline
+    7&A4B4&ASUS&2.4397&0.1284&0.3726\cr\hline   
+    8&A4B4&ASUS&2.4893&0.1296&0.3529\cr\hline 
+    \end{tabular}
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+ 
+\subfigure[No.1]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode2/2_1.eps}
+%\caption{fig1}
+\end{minipage}%
+}%
+\subfigure[No.2]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode2/2_2.eps}
+%\caption{fig2}
+\end{minipage}%
+}%
+\quad                 %这个回车键很重要 \quad也可以
+\subfigure[No.3]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode2/2_3.eps}
+%\caption{fig2}
+\end{minipage}
+}%
+\subfigure[No.4]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode2/2_4.eps}
+%\caption{fig2}
+\end{minipage}
+}%
+\quad                 %这个回车键很重要 \quad也可以
+\subfigure[No.5]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode2/2_5.eps}
+%\caption{fig2}
+\end{minipage}
+}%
+\subfigure[No.6]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode2/2_6.eps}
+%\caption{fig2}
+\end{minipage}
+}% 
+\quad                 %这个回车键很重要 \quad也可以
+\subfigure[No.7]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode2/2_7.eps}
+%\caption{fig2}
+\end{minipage}
+}%
+\subfigure[No.8]{
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+\includegraphics[width=1.0\textwidth]{images/6_Auswertung/Methode2/2_8.eps}
+%\caption{fig2}
+\end{minipage}
+}% 
+\centering
+\caption{Entsprechende Ergebnisse vom den zweiten Verfahren}
+\end{figure}
+
+
+
+
+\renewcommand{\arraystretch}{1.5} %¿ØÖÆ±í¸ñÐÐ¸ßµÄËõ·Å±ÈÀý
+\begin{table}[tp]
+ 
+  \centering
+  %\footnotesize
+  \fontsize{7.5}{10}\selectfont
+  \caption{Zeitperformance comparison by three evaluation metrics.}
+  \label{tab:performance_comparison}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    %\multicolumn{2}{c|}{\multirow{2}{*}{Method}}&
+     \multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
+    Parameter&Display&Differenzbild Opt.&Bildverarbietung&QR Detektion&Differenzbild Opt.&Bildverarbietung&Radon\cr
+    \hline
+    \hline
+    A9B6&ASUS&2.0524&0.0502&0.0709&2.1544&0.1275&0.2792\cr\hline
+    A9B6&OLED&2.1650&0.0489&0.0720&2.0369&0.1283&0.2842\cr\hline
+    A6B4&ASUS&2.1214&0.0512&0.0713&2.0939&0.1309&0.3086\cr\hline
+    A6B4&OLED&2.1593&0.0533&0.0789&2.0882&0.1293&0.2725\cr\hline
+    A4B4&ASUS&1.9985&0.0566&0.0717&2.0690&0.1284&0.3083\cr\hline
+    \multicolumn{2}{|c|}{Mittelwert}& 2.0993& 0.0520& 0.0730& 2.0885& 0.1289& 0.2906\cr
+    \hline
+    \end{tabular}
+\end{table}
