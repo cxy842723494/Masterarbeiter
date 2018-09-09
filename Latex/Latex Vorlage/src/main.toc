@@ -22,26 +22,25 @@
 \contentsline {section}{\numberline {3.5}QR-Muster-Detektion}{35}{section.3.5}
 \contentsline {chapter}{\numberline {4}Untersuchung vom zweiten Verfahren mittels Formerkennung}{40}{chapter.4}
 \contentsline {section}{\numberline {4.1}Allgemeine Struktur}{40}{section.4.1}
-\contentsline {section}{\numberline {4.2}Binarisierung}{42}{section.4.2}
-\contentsline {section}{\numberline {4.3}Morphologie}{47}{section.4.3}
-\contentsline {section}{\numberline {4.4}Canny Detektion}{51}{section.4.4}
-\contentsline {section}{\numberline {4.5}Cross Dilatation}{55}{section.4.5}
-\contentsline {section}{\numberline {4.6}Hough Transformation}{56}{section.4.6}
-\contentsline {section}{\numberline {4.7}Radon Transformation}{58}{section.4.7}
-\contentsline {chapter}{\numberline {5}Implementierung}{61}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experimentelle Umgebung}{61}{section.5.1}
-\contentsline {section}{\numberline {5.2}Implementierung vom ersten Verfahren}{61}{section.5.2}
-\contentsline {section}{\numberline {5.3}Implementierung vom zweiten Verfahren}{64}{section.5.3}
-\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{66}{section.5.4}
-\contentsline {chapter}{\numberline {6}Evaluierung}{68}{chapter.6}
-\contentsline {section}{\numberline {6.1}Evaluierung vom ersten Verfahren}{68}{section.6.1}
-\contentsline {section}{\numberline {6.2}Evaluierung vom zweiten Verfahren}{73}{section.6.2}
+\contentsline {section}{\numberline {4.2}Bildverarbeitung}{43}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Binarisierung}{43}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Morphologie Operation}{48}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Kantendetektion}{52}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Cross Dilatation}{56}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Linienerkennung}{57}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Hough Transformation}{57}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Radon Transformation}{59}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Implementierung}{62}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experimentelle Umgebung}{62}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementierung vom ersten Verfahren}{62}{section.5.2}
+\contentsline {section}{\numberline {5.3}Implementierung vom zweiten Verfahren}{65}{section.5.3}
+\contentsline {section}{\numberline {5.4}Implementierung auf einer Smartphone-GPU}{67}{section.5.4}
+\contentsline {chapter}{\numberline {6}Evaluierung}{69}{chapter.6}
+\contentsline {section}{\numberline {6.1}Evaluierung vom ersten Verfahren}{69}{section.6.1}
+\contentsline {section}{\numberline {6.2}Evaluierung vom zweiten Verfahren}{74}{section.6.2}
 \contentsline {chapter}{\numberline {7}Zusammenfassung}{77}{chapter.7}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{79}{appendix.A}
-\contentsline {section}{\numberline {A.1}Section}{79}{section.A.1}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{80}{section*.73}
-\contentsline {chapter}{Symbolverzeichnis}{81}{section*.75}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{82}{chapter*.77}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{85}{chapter*.78}
-\contentsline {chapter}{\nonumberline Quellcodeverzeichnis}{86}{chapter*.79}
-\contentsline {chapter}{\nonumberline Literatur}{87}{chapter*.80}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{79}{section*.72}
+\contentsline {chapter}{Symbolverzeichnis}{80}{section*.74}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{81}{chapter*.76}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{84}{chapter*.77}
+\contentsline {chapter}{\nonumberline Literatur}{85}{chapter*.78}

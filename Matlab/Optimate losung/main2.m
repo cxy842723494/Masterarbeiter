@@ -82,6 +82,8 @@ plot(x(3:4), y(3:4), 'r', 'LineWidth', 2)
 plot([x(1) x(4)], [y(1) y(4)], 'r', 'LineWidth', 2)
 
 
+
+
 ux = [1,1920, 1920, 1];
 vx = [1,1, 1080, 1080];
 
@@ -94,4 +96,13 @@ vx = [1,1, 1080, 1080];
      for j = 200:200:1920
         plot(j,i,'rx');
      end 
-end
+ end
+
+ A =diff(:,:,26);
+[a,b]= find(isnan(A));
+     for i = 1:size(a)
+        A(a(i),b(i))=0;
+     end
+A = imwarp(A, tformY, 'OutputView', imref2d(size(A)));
+figure, imshow(A  ,[]),title('U-Kanal'),hold on;
+ 

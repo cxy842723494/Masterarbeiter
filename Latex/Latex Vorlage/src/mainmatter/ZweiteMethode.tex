@@ -23,7 +23,12 @@ Das Objekt, welches mit dieser Methode bearbeitet wird, ist eine Reihe von Bilde
  \label{fig:Flussdiagramm der zweite Methode}
 \end{figure}
 
-\section{Binarisierung}
+\section{Bildverarbeitung}
+
+
+
+
+\subsection{Binarisierung}
 
 In diesem Abschnitt wird der Binarisierungsvorgang der Bildverarbeitung beschrieben. Um den Modulationsbereich zu detektieren, muss dieser zuerst vom Bild hervorgehoben werden. Anschießend kann mit einer Binarisierungsoperation dieser Vorgang implementiert werden, indem das Bild in zwei Teile geteilt wird: ein Teil mit dem Pixelwert 1 für den Modulationsbereich und der andere Teil mit dem Pixelwert 0 für den umgebenden Hintergrund. Schließlich kann der Modulationsbereich mit einigen weiteren Operationen wie der Morphologie Operation und Kanten Detektion behandelt werden.
 
@@ -138,7 +143,7 @@ Abbildung \ref{fig:binarisierungbild} zeigt ein Binärbild nach einer Binariesie
 
 
 
-\section{Morphologie}
+\subsection{Morphologie Operation}
 
 Nach der Binarisierung kann das Bild über zahlreiche Unvollkommenheiten verfügen. Insbesondere ist das Binärbild, welches durch einfache Schwellenwerte generiert wurde, durch Rauschen und Fehler verzerrt. Die morphologische Bildverarbeitung verfolgt das Ziel, diese Unvollkommenheiten zu beseitigen indem Form und Struktur des Objekts berücksichtigt werden.
 
@@ -243,11 +248,14 @@ Das zu detektierende Bild aus Abbildung \ref{fig:binarisierungbild} nach einer m
  \label{fig:Bild nach einer morphologischen Operation}
 \end{figure} 
 
-\section{Canny Detektion}
+\subsection{Kantendetektion}
 
 Nach der morphologischen Operation wird ein Binärbild erhalten, welches grob in zwei Teile geteilt werden kann. Ein Modulationsbereich mit dem Pixelwert 1 im mittleren Bereich und einen umgebenden Hintergrundbereich mit dem Pixelwert 0. Um die nächste Linie Detektion zu implementieren, wird eine Kanten Detektion, weil Kanten oft mit den Grenzen von Objekten in einer Szene verknüpft werden, durchgeführt. In anderen Worten, ist es die Grenze zwischen Modulationsbereich und Hintergrundbereich. \cite{canny}
 
-Es gibt immer einige gute Kantenextraktionsmethoden, wie Sobel, Canny, Laplacian, Prewitt, Roberts uvm. In dieser Arbeit wird die leistungsfähigste Kantenerkennungsmethode bzw. der Canny Algorithmus benutzt. Die Canny-Methode unterscheidet sich von den anderen Kantenerkennungsmethoden darin, dass sie zwei verschiedene Schwellenwerte verwendet (um starke und schwache Kanten zu erkennen) und die schwachen Kanten in der Ausgabe nur dann einschließt, wenn sie mit starken Kanten verbunden sind. Diese Methode kann daher im Vergleich zur anderen Methode weniger Wahrscheinlichkeit verfügen, durch Rauschen getäuscht zu werden, und mehr Wahrscheinlichkeit verfügen echte schwache Kanten zu erkennen.
+\textbf{Canny Algorithmus}
+
+Es gibt immer einige gute Kantenextraktionsmethoden, wie Sobel, Canny, Laplacian, Prewitt, Roberts uvm. In dieser Arbeit wird die leistungsfähigste Kantenerkennungsmethode bzw. der Canny Algorithmus benutzt. Die Canny-Methode unterscheidet sich von den anderen Kantenerkennungsmethoden darin, dass sie zwei verschiedene Schwellenwerte verwendet (um starke und schwache Kanten zu erkennen) und die schwachen Kanten in der Ausgabe nur dann eins
+,chließt, wenn sie mit starken Kanten verbunden sind. Diese Methode kann daher im Vergleich zur anderen Methode weniger Wahrscheinlichkeit verfügen, durch Rauschen getäuscht zu werden, und mehr Wahrscheinlichkeit verfügen echte schwache Kanten zu erkennen.
 
 Das Ziel vom Canny Algorithmus ist es, einen optimalen Kantenextraktionsalgorithmus zu finden. Drei Kriterien für die optimale Kantendetektion werden vorgeschlagen:
 
@@ -312,13 +320,16 @@ Abbildung \ref{fig:Binärbild nach der Canny detektion} zeigt ein Ergebnis mit d
  \label{fig:Binärbild nach der Canny detektion}
 \end{figure} 
 
-\section{Cross Dilatation}
+\subsection{Cross Dilatation}
 
 Diese Operation erkennt Linien die Aufgrund von Kamera-Verzerrung nicht gerade aufgenommen wurden, wie Abbildung 1 zeigt. Dies kann die Erkennung des Rechtecks in praktischen Anwendungen beeinträchtigen. Um dieses Problem zu lösen und die Leistung der Methode zu erhöhen, wird die Cross Dilatation verwendet, welche jedes Pixel $ (x,y) $ zu einem Kreuzmuster erweitert. Alle Pixel, einschließlich die Ausgedehnten Pixeln, werden in der nächsten Operation behandelt. 
 
 Es ist angenommen, dass Einflussbereich jedes Pixels mit einer Region dargestellt wird, die um das Pixel herum zentriert ist. Wenn jedes Pixel auf eine Linien die Region erreicht, die durch das nächste Pixel der Linien beeinflusst wird, kann die gesamte Linie extrahiert werden. Um den Einflussbereich zu bestimmen, wird jedes Pixel $ (x,y) $ zu einem Kreuzmuster erweitert, indem benachbarte Pixel in den vier Richtungen des Pixels den Wert 1 bekommen, wie in Abbildung 1 zu sehen ist.
 
-\section{Hough Transformation}
+\section{Linienerkennung}
+
+
+\subsection{Hough Transformation}
 
 Hier werden die Grenzen des modulierten Rechtecks als Linien betrachtet. Um das Problem für eine Rechteck Detektion lösbar zu machen, müssen zunächst die Linien extrahiert werden. Um dies zu tun, müssen die Kanten die auf einer Linie im Bild liegen, erkannt werden. Die Hough Transformation ist eine beliebte Methode zum Extrahieren von Linien aus einem Bild. Diese ist in der Lage die benötigten Informationen zu liefern, indem die Spitzen an den Punkten der geraden Linien denen des binären Bildes entsprechen. Der Aufwand einer Hough Transformation hängt von der Größe des Bildes und der Anzahl der analysierten Winkel ab. Da die Winkelauflösung für die weitere Verarbeitung wichtig ist, ist eine maximale Kameraneigung vorgeschrieben, welcher in dieser Arbeit $ \pm 10^{\circ} $ beträgt.
 
@@ -363,7 +374,7 @@ Eine Beispiel Implementierung der Hough Transformation ist in Abbildung \ref{fig
  \label{fig:Houghdetektion}
 \end{figure}
 
-\section{Radon Transformation}
+\subsection{Radon Transformation}
 In diesem Abschnitt wird Radon Transformation vorgestellt. Wie im vorherigen Abschnitt beschrieben, transformiert die Hough Transformation eine gegebene Kurve im Bildraum als ein Punkt im Parameterraum entsprechend dem Parameterausdruck der Kurve, wodurch mit dem Suchen nach Peaks in dem Parameterraum diese Kurven in dem Bildraum bestimmt werden können. Radon Transformation projiziert den Bildraum in den $ \rho \theta $-Raum in Form eines Linienintegrals (entspricht dem Parameterraum der Linie). Die Hough Transformation kann als eine diskrete Form der Radon Transformation betrachtet werden. Aufgrund der soliden mathematischen Basis ist die Radon Transformation im Gegensatz zu HT raffinierter und genauer.
 
 Die Idee der Radon Transformation besteht darin, die ursprüngliche Funktion räumlich zu transformieren, das heißt, die ursprünglichen Punkte aus der XY-Ebene werden auf die AB-Ebene abgebildet. Dadurch sind alle Punkte einer geraden Linie in der XY-Ebene an demselben Punkt in der AB-Ebene. Durch Zeichnen der akkumulierten Dicke der Punkte auf der AB-Ebene, kann die Existenz der Linien auf der XY-Ebene erkannt kennen.

@@ -18,26 +18,25 @@
 \BOOKMARK [1][-]{section.3.5}{QR-Muster-Detektion}{chapter.3}% 18
 \BOOKMARK [0][]{chapter.4}{Untersuchung vom zweiten Verfahren mittels Formerkennung}{}% 19
 \BOOKMARK [1][-]{section.4.1}{Allgemeine Struktur}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{Binarisierung}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{Morphologie}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.4}{Canny Detektion}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.5}{Cross Dilatation}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.6}{Hough Transformation}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.7}{Radon Transformation}{chapter.4}% 26
-\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 27
-\BOOKMARK [1][-]{section.5.1}{Experimentelle Umgebung}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.2}{Implementierung vom ersten Verfahren}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.3}{Implementierung vom zweiten Verfahren}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.4}{Implementierung auf einer Smartphone-GPU}{chapter.5}% 31
-\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 32
-\BOOKMARK [1][-]{section.6.1}{Evaluierung vom ersten Verfahren}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.2}{Evaluierung vom zweiten Verfahren}{chapter.6}% 34
-\BOOKMARK [0][]{chapter.7}{Zusammenfassung}{}% 35
-\BOOKMARK [0][]{appendix.A}{Erster Anhang}{}% 36
-\BOOKMARK [1][-]{section.A.1}{Section}{appendix.A}% 37
-\BOOKMARK [0][]{section*.73}{Abk\374rzungsverzeichnis}{}% 38
-\BOOKMARK [0][]{section*.75}{Symbolverzeichnis}{}% 39
-\BOOKMARK [0][]{chapter*.77}{Abbildungsverzeichnis}{}% 40
-\BOOKMARK [0][]{chapter*.78}{Tabellenverzeichnis}{}% 41
-\BOOKMARK [0][]{chapter*.79}{Quellcodeverzeichnis}{}% 42
-\BOOKMARK [0][]{chapter*.80}{Literatur}{}% 43
+\BOOKMARK [1][-]{section.4.2}{Bildverarbeitung}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.2.1}{Binarisierung}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.2}{Morphologie Operation}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.3}{Kantendetektion}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.4}{Cross Dilatation}{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{Linienerkennung}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.3.1}{Hough Transformation}{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.2}{Radon Transformation}{section.4.3}% 28
+\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Experimentelle Umgebung}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Implementierung vom ersten Verfahren}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.3}{Implementierung vom zweiten Verfahren}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.4}{Implementierung auf einer Smartphone-GPU}{chapter.5}% 33
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 34
+\BOOKMARK [1][-]{section.6.1}{Evaluierung vom ersten Verfahren}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.2}{Evaluierung vom zweiten Verfahren}{chapter.6}% 36
+\BOOKMARK [0][]{chapter.7}{Zusammenfassung}{}% 37
+\BOOKMARK [0][]{section*.72}{Abk\374rzungsverzeichnis}{}% 38
+\BOOKMARK [0][]{section*.74}{Symbolverzeichnis}{}% 39
+\BOOKMARK [0][]{chapter*.76}{Abbildungsverzeichnis}{}% 40
+\BOOKMARK [0][]{chapter*.77}{Tabellenverzeichnis}{}% 41
+\BOOKMARK [0][]{chapter*.78}{Literatur}{}% 42

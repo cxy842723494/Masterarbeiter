@@ -156,10 +156,17 @@ Anschließend wird das Bild zur Bildverarbeitung durchgeführt. Abbildung \ref{f
 
 \begin{figure}[H]
  \centering 
-  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/5_Implementirung/ergeb.pdf}
- \caption{Ergebnis der 1. Methode}
+  \includegraphics[keepaspectratio,width=0.85\textwidth]{images/5_Implementirung/diffq8.eps}
+ \caption{Modulationsbereich im U-Kanal}
  \label{fig:Ergebnis1}
 \end{figure}
+
+%\begin{figure}[H]
+% \centering 
+%  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/5_Implementirung/ergeb.pdf}
+% \caption{Ergebnis der 1. Methode}
+% \label{fig:Ergebnis1}
+%\end{figure}
 
 %Als Nächst einige Ergebnisse der Verwendungen von die 1. Methode wird angegeben.
 
@@ -167,14 +174,10 @@ Anschließend wird das Bild zur Bildverarbeitung durchgeführt. Abbildung \ref{f
 
 \section{Implementierung vom zweiten Verfahren}
 
-Hier wird die Implementierung der zweiten Methode vorgestellt. Das Bild stammt aus einer Reihe von acht Bildern, die durch ein Google Pixel mit Stativ aufgenommen wurden. In dieser Situation wird keine Bildregistrierung verwendet. Dies bedeutet, dass sich der Inhalt des Videos verändern lässt. Die Modulationsamplitude werden auf 6 und der Daten Datenblock auf $ 4 \times 4 Pixel$ eingestellt. 
+Hier wird die Implementierung der zweiten Methode vorgestellt. Das Bild stammt aus einer Reihe von acht Bildern, die durch ein Google Pixel mit Stativ aufgenommen wurden. In dieser Situation wird keine Bildregistrierung verwendet. Dies bedeutet, dass sich der Inhalt des Videos verändern lässt. Die Modulationsamplitude werden hier auf 6 und der Daten Datenblock auf $ 4 \times 4 Pixel$ eingestellt. 
 
 Durch das Wissen des 4. Kapitels, werden von diesen Bildern eine Reihe Differenzbilder erstellt. Die 3 Differenzbilder mit der größten $``Energie"$ werden addiert, um ein zu detektierendes Bild zu erhalten, wie in Abbildung \ref{fig:diff2} zu sehen ist. Anschließend wird unter Verwendung der Binarisierungmethode, Ostu Schwellenmethode, ein Binärbild generiert, indem der Modulationsbereich des Bildes extrahiert wird. Um kleine Punkte und Lücken zu beseitigen, lässt sich eine Morphologie Operation durchführen. Das hier benutzte Strukturelement ist ein $5 \times 5$ Quadrat. Die Wirkungen beider Operationen werden in Abbildung \ref{fig:binar2} und Abbildung \ref{fig:morph2} gezeigt. Um der Einfluss der Kamera-Verzerrung zu neutralisieren, wird das Binärbild mit einer Cross Dilatation verarbeitet, also $ n_{around} = 1$. Struktur der Cross Dilatation wird in Abbildung gezeigt und Abbildung \ref{fig:cd} zeigt diese Operation. 
 In der Radon Transformation lässt sich das Bildzentrum auf den Ursprung setzen. Dann durch Vergleich der Integralwerte kann die längste Linie, welche die oben, unten, links und rechts liegt, gefunden werden. Um die Berechnungskosten zu reduzieren, werden nur die Linien innerhalb von $ \pm 10^{\circ} $ erkannt. 
-
-
-
-
 \begin{figure}[H]
 \centering 
 \begin{minipage}[b]{0.49\textwidth} 
@@ -225,10 +228,19 @@ In der Radon Transformation lässt sich das Bildzentrum auf den Ursprung setzen.
 
 \begin{figure}[H]
  \centering 
-  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/5_Implementirung/2/ergebnis.pdf}
- \caption{Ergebnis der 2. Methode}
+  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/5_Implementirung/diff2.eps}
+ \caption{Modulationsbereich im U-Kanal}
  \label{fig:Ergebnis1}
 \end{figure}
+
+
+
+%\begin{figure}[H]
+% \centering 
+%  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/5_Implementirung/2/ergebnis.pdf}
+% \caption{Ergebnis der 2. Methode}
+% \label{fig:Ergebnis1}
+%\end{figure}
 
 %Als Nächst einige Ergebnisse der Verwendungen von die 2. Methode wird angegeben.
 
@@ -269,7 +281,7 @@ Das Ergebnis der Implementierung auf Xiaomi Mi-3 wird in Abbildung \ref{fig:Erge
 
 \begin{figure}[H]
  \centering 
-  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/5_Implementirung/2/modulation.pdf}
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/5_Implementirung/smartphone.pdf}
  \caption{Ergebnis auf dem Xiaomi Mi3}
  \label{fig:Ergebnis3}
 \end{figure}

@@ -16,7 +16,7 @@ toc;
 
 %% Differenzbild
 tic;
-diff = functions.creatDifferentbild(U2new);
+diff = functions.creatDifferentbild(V2new);
 Mal_num = 3;
 % Nofind = 0;
 % implay(mat2gray(gather(diff(:,:,:))));
@@ -67,6 +67,14 @@ end
 figure, imshow(Y2new(:,:,1),[]),title('Modelationsbereich'),hold on,axis normal;
 functions.plotResult(cr);
 
+
+A =diff(:,:,26);
+[a,b]= find(isnan(A));
+     for i = 1:size(a)
+        A(a(i),b(i))=0;
+     end
+A = imwarp(A, tformY, 'OutputView', imref2d(size(A)));
+figure, imshow(diff ,[]),title('V-Kanal'),hold on;
 
 Y = imwarp(Y2new(:,:,1), tformY, 'OutputView', imref2d(size(Y2new(:,:,1))));
 figure, imshow(Y,[]),title('Ergebnisse'),hold on;

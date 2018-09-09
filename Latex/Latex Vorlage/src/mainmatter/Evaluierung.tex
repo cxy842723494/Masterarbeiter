@@ -10,7 +10,7 @@ Hier wird das 1. Verfahren mit zusammen mit dessen Genauigkeit und Leistunsfähi
 Um die Leistung intuitiv auszudrücken, lassen sich einige Startparameter setzen. Die Modulationsamplitude beträgt 6, der Datenblock ist $ 4 \times 4 Pixel$ und die QR Muster Größe ist $ 72 \times 72 Pixel $.  In der Reihe von Bilder wird das erste Bild und das letzte Bild verglichen, wie in Abbildung \ref{fig:vorregistration} zu sehen ist. 
 \begin{figure}[H]
  \centering 
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/5_Implementirung/vorregistration.pdf}
+  \includegraphics[keepaspectratio,width=0.9\textwidth]{images/5_Implementirung/vorregistration.pdf}
  \caption{Verzerrung durch Handschütteln}
  \label{fig:vorregistration}
 \end{figure}
@@ -19,14 +19,14 @@ Aus der Abbildung ist deutlich zu erkennen, dass das Bild durch Handschütteln e
 
 \begin{figure}[H]
  \centering 
-  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/6_Auswertung/J8.pdf}
+  \includegraphics[keepaspectratio,width=0.9\textwidth]{images/6_Auswertung/J8.pdf}
  \caption{Konvergenzkurve von J}
  \label{fig:Konvergenzkurve}
 \end{figure}
 
 
 Die vertikale Koordinate repräsentiert den Fehlerwert J und die horizontale Koordinate repräsentiert die Anzahl der Iterationen des Algorithmus. Wie in der Abbildung zu sehen ist, wird J nach etwa 10 Iterationen konvergiert. Die detailliert gesammelten Daten sind in Tabelle \ref{tbl:Daten des Fehlers} Abgebildet.
-
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[htb]
 	\captionabove{Daten des Fehlers}
 	\label{tbl:Daten des Fehlers}
@@ -85,9 +85,10 @@ Der zu detektierende Modulationsbereich durch die 1. Methode wird in Abbildung \
  \label{fig:Ergebnis1}
 \end{figure}
 
-Die Zeitperformance bei Verwendung vom ersten Verfahren ist in Tabelle 6.2 aufgeführt, und die entsprechenden Detektionsergebnisse sind in Abbildung 6.3 dargestellt.
+Die Laufzeitleistung bei Verwendung vom ersten Verfahren ist in Tabelle 6.2 aufgeführt, und die entsprechenden Detektionsergebnisse sind in Abbildung 6.3 dargestellt. Der Parameter $ A9B6 $ in der Tabelle repräsentiert eine Modulationsamplitude von $ 9 $ und die Größe des Datenblocks von $ 6 \times 6 $Pixel. Alle Experimente wurden als ein Reihe von acht Bildern eingegeben. Aus der Tabelle beträgt die durchschnittliche Zeit der QR-Detektion etwa 0.07 Sekunden.
 
 
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
   \centering
   %\footnotesize
@@ -109,15 +110,6 @@ Die Zeitperformance bei Verwendung vom ersten Verfahren ist in Tabelle 6.2 aufge
     \hline 
     \end{tabular}
 \end{table}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -184,10 +176,12 @@ In diesem Abschnitt wird das 2. Verfahren evaluiert. Wie in Kapitel 4 vorgestell
 \begin{figure}[H]
  \centering 
   \includegraphics[keepaspectratio,width=1.00\textwidth]{images/6_Auswertung/Ergebnis2.pdf}
- \caption{Ergebnis 2}
+ \caption{Ergebnis vom zweiten Verfahren}
  \label{fig:Ergebnis2}
 \end{figure}
 
+Tabelle 6.2 zeigt die Zeitperformance bei Verwendung des zweiten Verfahrens. Die entsprechenden Detektionsergebnisse sind in Abbildung 6.3 zu sehen. Wie bei dem ersten Verfahren, repräsentiert $ A9 $
+die Modulationsamplitude von $ 9 $ und $ B6 $ die Größe des Datenblocks von $ 6 \times 6 $Pixel. Alle Experimente wurden als ein Reihe von acht Bildern eingegeben. Aus der Tabelle ist ersichtlich, dass die durchschnittliche Zeit der Radon Transformation etwa 0.3 Sekunden beträgt.
 
 \renewcommand{\arraystretch}{1.5} %¿ØÖÆ±í¸ñÐÐ¸ßµÄËõ·Å±ÈÀý
 \begin{table}[H]
@@ -200,7 +194,7 @@ In diesem Abschnitt wird das 2. Verfahren evaluiert. Wie in Kapitel 4 vorgestell
     \hline
     %\multicolumn{2}{c|}{\multirow{2}{*}{Method}}&
      %\multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
-    No.&Parameter&Display&Differenzbild Opt.$ [s] $&Bildverarbeitung$ [s] $&QR-Detektion$ [s] $\cr\hline
+    No.&Parameter&Display&Differenzbild Opt.$ [s] $&Bildverarbeitung$ [s] $&Radon$ [s] $\cr\hline
     \hline
     1&A9B6&ASUS&2.1544&0.1275&0.2792\cr\hline
     2&A9B6&OLED&2.3691&0.1283&0.2795\cr\hline
@@ -283,27 +277,27 @@ In diesem Abschnitt wird das 2. Verfahren evaluiert. Wie in Kapitel 4 vorgestell
 
 
 
-\renewcommand{\arraystretch}{1.5} %¿ØÖÆ±í¸ñÐÐ¸ßµÄËõ·Å±ÈÀý
-\begin{table}[tp]
- 
-  \centering
-  %\footnotesize
-  \fontsize{7.5}{10}\selectfont
-  \caption{Zeitperformance comparison by three evaluation metrics.}
-  \label{tab:performance_comparison}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    \hline
-    %\multicolumn{2}{c|}{\multirow{2}{*}{Method}}&
-     \multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
-    Parameter&Display&Differenzbild Opt.&Bildverarbietung&QR Detektion&Differenzbild Opt.&Bildverarbietung&Radon\cr
-    \hline
-    \hline
-    A9B6&ASUS&2.0524&0.0502&0.0709&2.1544&0.1275&0.2792\cr\hline
-    A9B6&OLED&2.1650&0.0489&0.0720&2.0369&0.1283&0.2842\cr\hline
-    A6B4&ASUS&2.1214&0.0512&0.0713&2.0939&0.1309&0.3086\cr\hline
-    A6B4&OLED&2.1593&0.0533&0.0789&2.0882&0.1293&0.2725\cr\hline
-    A4B4&ASUS&1.9985&0.0566&0.0717&2.0690&0.1284&0.3083\cr\hline
-    \multicolumn{2}{|c|}{Mittelwert}& 2.0993& 0.0520& 0.0730& 2.0885& 0.1289& 0.2906\cr
-    \hline
-    \end{tabular}
-\end{table}
+%\renewcommand{\arraystretch}{1.5} %¿ØÖÆ±í¸ñÐÐ¸ßµÄËõ·Å±ÈÀý
+%\begin{table}[tp]
+% 
+%  \centering
+%  %\footnotesize
+%  \fontsize{7.5}{10}\selectfont
+%  \caption{Zeitperformance comparison by three evaluation metrics.}
+%  \label{tab:performance_comparison}
+%    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+%    \hline
+%    %\multicolumn{2}{c|}{\multirow{2}{*}{Method}}&
+%     \multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
+%    Parameter&Display&Differenzbild Opt.&Bildverarbietung&QR Detektion&Differenzbild Opt.&Bildverarbietung&Radon\cr
+%    \hline
+%    \hline
+%    A9B6&ASUS&2.0524&0.0502&0.0709&2.1544&0.1275&0.2792\cr\hline
+%    A9B6&OLED&2.1650&0.0489&0.0720&2.0369&0.1283&0.2842\cr\hline
+%    A6B4&ASUS&2.1214&0.0512&0.0713&2.0939&0.1309&0.3086\cr\hline
+%    A6B4&OLED&2.1593&0.0533&0.0789&2.0882&0.1293&0.2725\cr\hline
+%    A4B4&ASUS&1.9985&0.0566&0.0717&2.0690&0.1284&0.3083\cr\hline
+%    \multicolumn{2}{|c|}{Mittelwert}& 2.0993& 0.0520& 0.0730& 2.0885& 0.1289& 0.2906\cr
+%    \hline
+%    \end{tabular}
+%\end{table}
