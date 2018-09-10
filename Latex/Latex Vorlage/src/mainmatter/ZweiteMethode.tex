@@ -56,7 +56,7 @@ In der Praxis ist das Histogramm aufgrund der Helligkeit und dem Inhalt des Bild
 
 \textbf{Grundlegende globale Schwelle Methode}
 
-Die grundlegende globale Schwellenmethode ist eine Erweiterung der festen Schwellenmethode, die vorher beschrieben wurde. Wenn die Histogrammspitzen und -täler des Bildes offensichtlich sind und Doppelpeaks aufweisen, ist diese Methode effektiver. Basierend auf der visuellen Überprüfung des Histogramms und der Erhaltung des Schwellenwerts durch eine iterative Methode. Die grundlegende Algorithmus\cite{global} ist wie folgt:
+Die grundlegende globale Schwellenmethode ist eine Erweiterung der festen Schwellenmethode, die vorher beschrieben wurde. Wenn die Histogrammspitzen und -täler des Bildes offensichtlich sind und Doppelpeaks aufweisen, ist diese Methode effektiver. Basierend auf der visuellen Überprüfung des Histogramms und der Erhaltung des Schwellenwerts durch eine iterative Methode. Die grundlegende Algorithmus \cite{global} ist wie folgt:
 
 1. Wahl eines Parameters t und einen anfänglichen Schwellenwert $ T_{0} $, wobei der Durchschnitt der maximalen Grauwerte $ l_{max} $ und minimalen Grauwerte  $ l_{min} $ verwendet wird. 
 \begin{equation}
@@ -96,7 +96,7 @@ Das Verfahren zum Unterteilen von Unterbildern wird auf das Bild angewendet. Hie
 
 \textbf{Otsu adaptive Schwellenmethode}
 
-Otsu\cite{Ostu}, auch bekannt als die maximale Interklassenvarianz, wurde 1979 vom japanischen Gelehrten Otsu entworfen und ist eine adaptive Schwellenwertbestimmungsmethode, die auch als Otsu bekannt ist.
+Otsu \cite{Ostu}, auch bekannt als die maximale Interklassenvarianz, wurde 1979 vom japanischen Gelehrten Otsu entworfen und ist eine adaptive Schwellenwertbestimmungsmethode, die auch als Otsu bekannt ist.
 
 Die Grundidee des Otsu-Algorithmus ist, das Histogramm des Bildes gemäß der Varianz zwischen dem Vordergrund und dem Hintergrund zu verwenden um den optimalen Schwellenwert dynamisch zu bestimmen. Die Anzahl der Pixel in einem Bild ist N und die Graustufen $ L(0,1,...,L-1) $. Die Anzahl der Pixel mit dem Grauwert i ist $ n_{i} $, dadurch ist die Wahrscheinlichkeit von i: $ p_{i} = \frac{n_{i}}{N} $. T stellt den Segmentierungsschwellenwert zwischen Vordergrund und Hintergrund dar für das Bild. Der Vordergrund entspricht den Grauwerten von 0 zu $ T-1 $, dagegen der Hintergrund den Grauwerten von T zu $ L -1 $.
 
@@ -163,7 +163,7 @@ Eine übliche Anwendung besteht darin, dass der Ursprung ungerader Dimensionen d
  \label{fig:Strukturelemente}
 \end{figure} 
 
-Zuerst werden die zwei grundlegenden Morphologie Operationen, Erosion und Dilatation, beschrieben. Anschließend werden die darauf basierenden Operationen, die als Öffnung und Schließung bekannt sind, vorgestellt.\cite{morpho}
+Zuerst werden die zwei grundlegenden Morphologie Operationen \cite{morpho}, Erosion und Dilatation, beschrieben. Anschließend werden die darauf basierenden Operationen, die als Öffnung und Schließung bekannt sind, vorgestellt.
 
 \textbf{Dilatation}
 
@@ -237,7 +237,7 @@ Die Grenze des geschlossenen Objekts sind die Punkte, wo das Strukturelement B, 
 
 \end{itemize}
 
-Das zu detektierende Bild aus Abbildung \ref{fig:binarisierungbild} nach einer morphologischen Operation wird in Abbildung \ref{fig:Bild nach einer morphologischen Operation} gezeigt.
+%Das zu detektierende Bild aus Abbildung \ref{fig:binarisierungbild} nach einer morphologischen Operation wird in Abbildung \ref{fig:Bild nach einer morphologischen Operation} gezeigt.
 
 %\begin{figure}[htb]
 % \centering 
@@ -248,8 +248,8 @@ Das zu detektierende Bild aus Abbildung \ref{fig:binarisierungbild} nach einer m
 
 \subsection{Kantendetektion}
 
-Nach der morphologischen Operation wird ein Binärbild erhalten, welches grob in zwei Teile geteilt werden kann. Ein Modulationsbereich mit dem Pixelwert 1 im mittleren Bereich und einen umgebenden Hintergrundbereich mit dem Pixelwert 0. Um die nächste Linie Detektion zu implementieren, wird eine Kanten Detektion, weil Kanten oft mit den Grenzen von Objekten in einer Szene verknüpft werden, durchgeführt. In anderen Worten, ist es die Grenze zwischen Modulationsbereich und Hintergrundbereich. \cite{canny}
-
+Nach der morphologischen Operation wird ein Binärbild erhalten, welches grob in zwei Teile geteilt werden kann. Ein Modulationsbereich mit dem Pixelwert 1 im mittleren Bereich und einen umgebenden Hintergrundbereich mit dem Pixelwert 0. Um die nächste Linie Detektion zu implementieren, wird eine Kanten Detektion \cite{canny}, weil Kanten oft mit den Grenzen von Objekten in einer Szene verknüpft werden, durchgeführt. In anderen Worten, ist es die Grenze zwischen Modulationsbereich und Hintergrundbereich. 
+\newpage
 \textbf{Canny Algorithmus}
 
 Es gibt immer einige gute Kantenextraktionsmethoden, wie Sobel, Canny, Laplacian, Prewitt, Roberts uvm. In dieser Arbeit wird die leistungsfähigste Kantenerkennungsmethode bzw. der Canny Algorithmus benutzt. Die Canny-Methode unterscheidet sich von den anderen Kantenerkennungsmethoden darin, dass sie zwei verschiedene Schwellenwerte verwendet (um starke und schwache Kanten zu erkennen) und die schwachen Kanten in der Ausgabe nur dann einschließt, wenn sie mit starken Kanten verbunden sind. Diese Methode kann daher im Vergleich zur anderen Methode weniger Wahrscheinlichkeit verfügen, durch Rauschen getäuscht zu werden, und mehr Wahrscheinlichkeit verfügen echte schwache Kanten zu erkennen. Abbildung \ref{fig:Binärbild nach der Canny detektion} zeigt ein Wirkung mit der Canny Kantenextraktion.
@@ -261,7 +261,7 @@ Es gibt immer einige gute Kantenextraktionsmethoden, wie Sobel, Canny, Laplacian
  \label{fig:Binärbild nach der Canny detektion}
 \end{figure} 
 
-Das Ziel vom Canny Algorithmus\cite{canny2}
+Das Ziel vom Canny Algorithmus \cite{canny2}
  ist es, einen optimalen Kantenextraktionsalgorithmus zu finden. Drei Kriterien für die optimale Kantendetektion werden vorgeschlagen:
 
 \begin{itemize}
@@ -324,7 +324,7 @@ Diese Operation erkennt Linien die Aufgrund von Kamera-Verzerrung nicht gerade a
 \begin{figure}[H]
  \centering 
   \includegraphics[keepaspectratio,width=0.35\textwidth]{images/4_ZweiteErfahrung/cd/cd2.pdf}
- \caption{Kamera-Verzerrung\cite{6005853}}
+ \caption{Kamera-Verzerrung \cite{6005853}}
  \label{Kamera Verzerrung}
 \end{figure}
 
@@ -343,7 +343,7 @@ Vom vorherigen Schritt wird ein Kantenbild erhalten, welches die Grenze des Modu
 
 \subsection{Hough Transformation}
 
-Hier werden die Grenzen des modulierten Rechtecks als Linien betrachtet. Um das Problem für eine Rechteck Detektion lösbar zu machen, müssen zunächst die Linien extrahiert werden. Um dies zu tun, müssen die Kanten die auf einer Linie im Bild liegen, erkannt werden. Die Hough Transformation\cite{hough} ist eine beliebte Methode zum Extrahieren von Linien aus einem Bild. Diese ist in der Lage die benötigten Informationen zu liefern, indem die Spitzen an den Punkten der geraden Linien denen des binären Bildes entsprechen. Der Aufwand einer Hough Transformation hängt von der Größe des Bildes und der Anzahl der analysierten Winkel ab. Da die Winkelauflösung für die weitere Verarbeitung wichtig ist, ist eine maximale Kameraneigung vorgeschrieben, welcher in dieser Arbeit $ \pm 10^{\circ} $ beträgt.
+Hier werden die Grenzen des modulierten Rechtecks als Linien betrachtet. Um das Problem für eine Rechteck Detektion lösbar zu machen, müssen zunächst die Linien extrahiert werden. Um dies zu tun, müssen die Kanten die auf einer Linie im Bild liegen, erkannt werden. Die Hough Transformation \cite{hough} ist eine beliebte Methode zum Extrahieren von Linien aus einem Bild. Diese ist in der Lage die benötigten Informationen zu liefern, indem die Spitzen an den Punkten der geraden Linien denen des binären Bildes entsprechen. Der Aufwand einer Hough Transformation hängt von der Größe des Bildes und der Anzahl der analysierten Winkel ab. Da die Winkelauflösung für die weitere Verarbeitung wichtig ist, ist eine maximale Kameraneigung vorgeschrieben, welcher in dieser Arbeit $ \pm 10^{\circ} $ beträgt.
 
 Um die Funktionsweise des HT Algorithmus zu beschreiben, müssen einige Definition eingefügt werden. In der Hough Transformation, kann jede Linie in der $ xy $ Ebene parametrisch beschreiben werden als:
 \begin{equation}
@@ -379,7 +379,7 @@ A(\rho,\theta) = 0
 
 
 \subsection{Radon Transformation}
-In diesem Abschnitt wird Radon\cite{radon} Transformation vorgestellt. Wie im vorherigen Abschnitt beschrieben, transformiert die Hough Transformation eine gegebene Kurve im Bildraum als ein Punkt im Parameterraum entsprechend dem Parameterausdruck der Kurve, wodurch mit dem Suchen nach Peaks in dem Parameterraum diese Kurven in dem Bildraum bestimmt werden können. Radon Transformation projiziert den Bildraum in den $ \rho \theta $-Raum in Form eines Linienintegrals (entspricht dem Parameterraum der Linie). Die Hough Transformation kann als eine diskrete Form der Radon Transformation betrachtet werden. Aufgrund der soliden mathematischen Basis ist die Radon Transformation im Gegensatz zu HT raffinierter und genauer.
+In diesem Abschnitt wird Radon \cite{radon} Transformation vorgestellt. Wie im vorherigen Abschnitt beschrieben, transformiert die Hough Transformation eine gegebene Kurve im Bildraum als ein Punkt im Parameterraum entsprechend dem Parameterausdruck der Kurve, wodurch mit dem Suchen nach Peaks in dem Parameterraum diese Kurven in dem Bildraum bestimmt werden können. Radon Transformation projiziert den Bildraum in den $ \rho \theta $-Raum in Form eines Linienintegrals (entspricht dem Parameterraum der Linie). Die Hough Transformation kann als eine diskrete Form der Radon Transformation betrachtet werden. Aufgrund der soliden mathematischen Basis ist die Radon Transformation im Gegensatz zu HT raffinierter und genauer.
 
 Die Idee der Radon Transformation besteht darin, die ursprüngliche Funktion räumlich zu transformieren, das heißt, die ursprünglichen Punkte aus der XY-Ebene werden auf die AB-Ebene abgebildet. Dadurch sind alle Punkte einer geraden Linie in der XY-Ebene an demselben Punkt in der AB-Ebene. Durch Zeichnen der akkumulierten Dicke der Punkte auf der AB-Ebene, kann die Existenz der Linien auf der XY-Ebene erkannt kennen.
 

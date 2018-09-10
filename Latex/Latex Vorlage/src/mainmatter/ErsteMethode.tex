@@ -41,7 +41,7 @@ Es wird angenommen, eine Reihe Bilder wird mit einer Handheld-Kamera aufgenommen
 Um die Bilder in gemeinsames Koordinatensystem zu transformieren, müssen die Merkmalspunkte des Bildes erkannt und analysiert werden. Deswegen ist es in diesem Verfahren besonders wichtig, die Merkmalspunkte eines Bildes zu definieren und zu finden. Um dieses Problem zu lösen, wird das Konzept der Merkmalserkennung eingeführt. Diese wird oft in Computer Vision und Bildverarbeitungsbereichen verwendet. Die Merkmalserkennung beinhaltet Verfahren zum Berechnen von Abstraktionen von Bildinformationen und zum Treffen lokaler Entscheidungen an jedem Bildpunkt, ob es an einem Punkt ein Bildmerkmal eines bestimmten Typs gibt oder nicht. Einige typische Merkmalserkennungen sind z.B. Kantenerkennung, Eckenerkennung, Tropfenerkennung und so weiter.
 
 In dieser Arbeit wird das \gls{surf} \cite{Surf} genutzt. 
-Dieser ist ein patentierter lokaler Merkmal-Detektor und Deskriptor und kann für Aufgaben wie Objekterkennung, Bildregistrierung, Klassifizierung oder 3D-Rekonstruktion angewandt werden. Diese Merkmalserkennung ist eine verbesserte Version von \gls{sift}\cite{SIFT} Merkmalserkennung, die Haar-Wavelet verwendet um die Gradientenoperation in der \gls{sift}-Methode zu ersetzen, und gleichzeitig eine Integralgraph-Technik für schnelle Berechnungen verwendet. Die Faltung bezieht sich nur auf das vorherige Bild. Durch die Vergrößerung des Bildkerns kann das Heruntertaktungsverfahren realisiert werden. Die Geschwindigkeit von \gls{surf} ist 3-7 mal schneller als die von \gls{sift} welche in den meisten Fällen der Leistung von \gls{sift} entspricht. Daher wird \gls{surf} in vielen Anwendungen eingesetzt, insbesondere in Anwendungen in denen die Laufzeitanforderungen hoch sind. 
+Dieser ist ein patentierter lokaler Merkmal-Detektor und Deskriptor und kann für Aufgaben wie Objekterkennung, Bildregistrierung, Klassifizierung oder 3D-Rekonstruktion angewandt werden. Diese Merkmalserkennung ist eine verbesserte Version von \gls{sift} Merkmalserkennung \cite{SIFT}, die Haar-Wavelet verwendet um die Gradientenoperation in der \gls{sift}-Methode zu ersetzen, und gleichzeitig eine Integralgraph-Technik für schnelle Berechnungen verwendet. Die Faltung bezieht sich nur auf das vorherige Bild. Durch die Vergrößerung des Bildkerns kann das Heruntertaktungsverfahren realisiert werden. Die Geschwindigkeit von \gls{surf} ist 3-7 mal schneller als die von \gls{sift} welche in den meisten Fällen der Leistung von \gls{sift} entspricht. Daher wird \gls{surf} in vielen Anwendungen eingesetzt, insbesondere in Anwendungen in denen die Laufzeitanforderungen hoch sind. 
 
 Der Verlauf einer \gls{surf} Merkmalserkennung ist wie folgend:
 
@@ -76,7 +76,7 @@ Der Wert der Determinante ist der Eigenwert der H-Matrix. Durch dessen positiven
 %\mathcal{H}
 
 Hier bedeutet $L_{xx}(\textbf{x},\sigma)$ die Faltung der zweiten Gaußschen Ableitung $G(\sigma)$ mit dem Bild I im Punkt $\textbf{x}$(x,y), das selbe für $L_{xy}(\textbf{x},\sigma)$ und $L_{yy}(\textbf{x},\sigma)$. Auf diese Weise kann der Wert der Determinante für jedes Pixel in dem Bild berechnet werden und dieser Wert kann verwendet werden um den Merkmalspunkt festzustellen.
-Zur einfacheren Anwendung schlägt Herbert Bay\cite{Surf} vor, L mit einer Approximation zu ersetzen. Um den Fehler zwischen dem genauen Wert und der Approximation auszugleichen, kann die H-Matrix-Determinante wie folgt ausgedrückt werden:
+Zur einfacheren Anwendung schlägt Herbert Bay \cite{Surf} vor, L mit einer Approximation zu ersetzen. Um den Fehler zwischen dem genauen Wert und der Approximation auszugleichen, kann die H-Matrix-Determinante wie folgt ausgedrückt werden:
 
 \begin{equation}
    \det(H_{Approx}) = D_{xx}D_{yy} - (0.9D_{xy})^2  
@@ -111,7 +111,7 @@ $\bullet$ \textbf{Hauptrichtungsermittlung}\\
 \begin{figure}[htb]
  \centering 
  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/3_Ersteverfahren/Dominante_Orientierung_Feststellen.pdf}
- \caption{Dominante Orientierung feststellen\cite{Surf}}
+ \caption{Dominante Orientierung feststellen \cite{Surf}}
  \label{fig:Dominante Orientierung Feststellen}
 \end{figure} 
 
@@ -198,7 +198,7 @@ Wie in dem vorherigen Abschnitt vorgestellt, kann durch Verwenden des \gls{surf}
 
 \textbf{Kamera Modell}
 
-Das Modell der Lochkamera ist in Abbildung \ref{fig:cameramodel} dargestellt. In dem Modell ist $O_C$ das optische Zentrum(Fokus) und f ist die Kamerabrennweite.
+Das Modell der Lochkamera ist in Abbildung \ref{fig:cameramodel} dargestellt. In dem Modell ist $O_C$ das optische Zentrum (Fokus) und f ist die Kamerabrennweite.
 
 \begin{figure}[htb]
  \centering 
@@ -317,7 +317,7 @@ In ähnlicher Weise dreht sich die x-Achse, y-Achse um $\varphi$ und $\omega$ Gr
 	\end{bmatrix}
 \end{equation}
 
-Schließlich kann die Rotationsmatrix\cite{Rotation} erhalten werden:
+Schließlich kann die Rotationsmatrix \cite{Rotation} erhalten werden:
 \begin{equation}
    R = R_1 \cdot R_2 \cdot R_3
 \end{equation}
@@ -574,7 +574,7 @@ Diese Gleichung zeigt, dass jeder Punkt in dem Bild i nach der Transformationsma
 \textbf{Transformationsoptimierung}
 
 In den letzten beiden Abschnitten wurde die Transformationsmatrix zwischen den beiden Bildern aus dem Kameramodell abgeleitet. Hier in diesem Abschnitt werden die Parameter der Transformationsmatrix berechnet, also wird nun die Transformationsmatrix bestimmt. Hier sind die entsprechenden Punkte von zwei benachbarten Bildern $x_i, x_j$ bekannt und die Umwandlungsbeziehung dazwischen wird als die Formel 3.26 dargestellt. Angesichts dieser Bedingung 
-kann die Berechnung der Transformationsmatrix als ein Optimierungsproblem betrachtet werden, wobei der Fehler J bei der Summenwertbildung im Quadrat aller Punktkorrespondenzen minimiert werden soll:
+kann die Berechnung der Transformationsmatrix \cite{Karpenko} als ein Optimierungsproblem betrachtet werden, wobei der Fehler J bei der Summenwertbildung im Quadrat aller Punktkorrespondenzen minimiert werden soll:
 
 \begin{equation}
    J = \sum_{(i,j)}\lVert x_j - Wx_i \rVert ^2
@@ -582,7 +582,7 @@ kann die Berechnung der Transformationsmatrix als ein Optimierungsproblem betrac
 
 Zu Beachten ist, dass dies ein nichtlineares Optimierungsproblem ist. Einige nichtlineare Optimierer können ebenfalls verwendet werden um diese Zielfunktion zu minimieren. In der Kapital Evaluierung wurde bewissen, dass der Koordinatenabstieg durch direkte objektive Funktionsbewertung schnell konvergiert. Jedes Mal, wenn ein Schritt gemacht wird bei dem die Zielfunktion J nicht abnimmt, wird die Schrittrichtung umgekehrt und verringert die Schrittweite des entsprechenden Parameters. Der Algorithmus endet, sobald die Schrittgröße für alle Parameter unter einen gewünschten Schwellenwert fällt (d.h. Wenn die Zielgenauigkeit erreicht ist). 
 
-Der detaillierte Algorithmus\cite{Karpenko} ist wie folgt dargestellt. Einige Definitionen werden hier eingeführt. $P_0$ ist der Vektor, der die Anfangswerte der Parameter speichert. Anschießend speichert er die Schrittgröße jedes Parameters in den Vektor $d_p$. $temp_dp$ ist der Vektor, in dem die gewünschten Schwellenwerte der Parameter gespeichert werden. D ist die Anzahl Unbekannter Parameter und W die Transformationsmatrix.
+Der detaillierte Algorithmus ist wie folgt dargestellt. Einige Definitionen werden hier eingeführt. $P_0$ ist der Vektor, der die Anfangswerte der Parameter speichert. Anschießend speichert er die Schrittgröße jedes Parameters in den Vektor $d_p$. $temp_{dp}$ ist der Vektor, in dem die gewünschten Schwellenwerte der Parameter gespeichert werden. D ist die Anzahl Unbekannter Parameter und W die Transformationsmatrix.
 
 \textbf{1}. Zuerst durch Anfangswert $P_0$ Berechnung des anfänglichen Fehlers $J_0$.
 
@@ -715,7 +715,7 @@ Mit öffnenden und schließenden Filtern können die Lücken zwischen Blöcken u
 
 \section{\gls{qr}-Muster-Detektion} 
 
-Nach der Bildverarbeitung wird nun die \gls{qr} Muster Detektion ausgeführt. Das Ziel einer \gls{qr} Muster Detektion\cite{QR} ist, das Zentrum des Musters im Bild zu lokalisieren um dadurch das Bild zu rekonstruieren. Abbildung \ref{fig:QRPattern} zeigt die geometrische Struktur eines \gls{qr} Musters. An jeder Ecke des Modulartionsbereichs gibt es ein solches \gls{qr} Muster.
+Nach der Bildverarbeitung wird nun die \gls{qr} Muster Detektion ausgeführt. Das Ziel einer \gls{qr} Muster Detektion \cite{QR} ist, das Zentrum des Musters im Bild zu lokalisieren um dadurch das Bild zu rekonstruieren. Abbildung \ref{fig:QRPattern} zeigt die geometrische Struktur eines \gls{qr} Musters. An jeder Ecke des Modulartionsbereichs gibt es ein solches \gls{qr} Muster.
 
 \begin{figure}[H]
  \centering 
