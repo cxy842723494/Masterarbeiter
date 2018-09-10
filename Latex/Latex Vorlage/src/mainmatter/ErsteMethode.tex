@@ -1,44 +1,47 @@
-\chapter{Untersuchung vom ersten Verfahren mittels Mustererkennung } 
+\chapter{Untersuchung der Modulationsbereich Detektion mittels Mustererkennung } 
 
-In diesem Kapitel wird auf die Realisierung des ersten Verfahrens eingegangen. Zuerst wird die Bildregistrierung im Detail besprochen. Anschließend läuft die Differenzbild Optimierung und die benötigte Bildverarbeitung. Schließlich wird die QR Mustererkennung erläutert. Zur Implementierung dieses Verfahrens wird Matlab unter der Lizenz der TU Dortmund verwendet.
+
+Unter Berücksichtigung der differentiellen Modulationsverfahren des \gls{david}-Systems wurde es versucht, einen Methode zu finden, den Modulationsbereich mit Mustererkennung in dem Differenzbild zu detektieren. In diesem Kapitel wird zuerst die allgemeine Struktur des Verfahrens vorgestellt. Anschließend wird die Bildregistrierung für Handschütteln im Detail besprochen. Darüber hinaus läuft die Differenzbild Optimierung und die Bildverarbeitung. Schließlich wird die \gls{qr} Mustererkennung erläutert. Zur Implementierung dieses Verfahrens wird Matlab verwendet.
 
 \section{Allgemeine Struktur} 
 
-Dieses Verfahren verwendet die Charakteristiken der Datenmodulation des \gls{david} Systems, d.h. an jeder Ecke der Datenebene wird ein QR Muster hinzugefügt und dann zusammen mit den Daten hinter dem Bild moduliert. Am Empfänger wird nach einigen Operationen das QR Muster mit den in diesem Kapitel vorgestellten Verfahren detektiert und schließlich der Modulationsbereich bestimmt. Diese Methode löst den unansehnlichen Effekt, dass das QR Muster direkt zum Bild hinzugefügt wird. Außerdem wird die Detektion mit der QR-Mustereigenschaft günstig und effektiv implementiert. Abbildung \ref{fig:Strukturdiagramm} zeigt das Strukturdiagramm dieses Verfahrens.
+Dieses Verfahren verwendet die Charakteristiken der Datenmodulation des \gls{david} Systems, d.h. an jeder Ecke der Datenebene wird ein \gls{qr} Muster hinzugefügt und dann zusammen mit den Daten hinter dem Bild moduliert. Am Empfänger wird nach einigen Operationen das \gls{qr} Muster mit den in diesem Kapitel vorgestellten Verfahren detektiert und schließlich der Modulationsbereich bestimmt. %Diese Methode löst den unansehnlichen Effekt, dass das \gls{qr} Muster direkt zum Bild hinzugefügt wird. Außerdem wird die Detektion mit der \gls{qr}-Mustereigenschaft effektiv implementiert. Abbildung \ref{fig:Strukturdiagramm} zeigt das Strukturdiagramm dieses Verfahrens.
+
+%\begin{figure}[H]
+% \centering 
+% \includegraphics[keepaspectratio,width=1.0\textwidth]{images/3_Ersteverfahren/Strukturdiagramm.pdf}
+% \caption{Strukturdiagramm}
+% \label{fig:Strukturdiagramm}
+%\end{figure}
+
+%Das Objekt, das mit dieser Methode bearbeitet wird, ist eine aus einer spezifischen Smartphone App $ ``VLCReceiver" $ gesammelte Bilderreihe. Diese App wurde speziell für das \gls{david}-System entwickelt und erstellt eine Reihe von Bildern bei jeder Aufnahme. 
+
+Eine Bilderreihe von Kamera wird in diesem Verfahren verarbeitet. Im Allgemeinen wird die Kamera bei der Aufnahme in der Hand gehalten. Aufgrund von Handschütteln während der Aufnahme entsteht eine leichte Verschiebung zwischen den Bildern. Um dieses Problem zu beheben, wird eine Bildregistrierungsoperation verwendet, die zwei Bilder einer Aufnahme in gemeinsames Koordinatensystem konvertiert. Zuerst werden durch \gls{surf} Merkmalserkennung Merkmale der Bilder verglichen. 
+Durch Merkmalsextraktion und Merkmalsanpassung werden die Korrespondenzpunkte zwischen den verglichenen Bildern erhalten. Der \gls{ransac} Algorithmus benötigt, um die irrelevanten Korrespondentenpunkte zu beseitigen und die Genauigkeit zu verbessern. Aus dem Kameramodell wird anschließend ein mathematisches Transformationsmodell zwischen den entsprechenden Punkten in den beiden Bildern erstellt. Es ist zu beachten, dass der Prozess zur Lösung des Transformationsmodells als ein nichtlineares Optimierungsproblem angesehen werden kann. Durch die Lösung dieses Problems kann die Transformationsmatrix erhalten werden. In dieser Arbeit wird immer das erste Bild als Referenzbild gewählt um eine Bildregistrierung mit folgenden Bildern vorzunehmen. Die von der Bildregistrierung enthaltenen Bilder werden in gemeinsames Koordinatensystem umgewandelt. Es werden je zwei Bilder subtrahiert, wodurch eine Reihe Differenzbilder entstehen. Um die folgende Detektion zu vereinfachen, wird eine Optimierungsoperation mit der Hilfe der geometrischen Eigenschaft des \gls{qr} Musters unternommen woraufhin ein zu detektierendes Bild erstellt wird. Anschließend werden eine Reihe von Bildverarbeitungen bzw. Binarisierung, Medianfilter, Morphologie Operation vorgenommen. Dadurch können vereinzelt Punkte und Lücken, die durch Rauschen und Fehler verursacht wurden, entfernt werden. Schließlich wird es durch die Charakteristik des \gls{qr} Musters, dessen Breiteverhältnis $1:1:3:1:1$ beträgt um \gls{qr} Muster zu detektieren. Dies bestimmt auch den Modulationsbereich. Das Flussdiagramm wird in Abbildung \ref{fig:Flussdiagramm der Methode} gezeigt. Die Details jedes Teils werden in den folgenden Abschnitten beschrieben.
 
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=1.0\textwidth]{images/3_Ersteverfahren/Strukturdiagramm.pdf}
- \caption{Strukturdiagramm}
- \label{fig:Strukturdiagramm}
-\end{figure}
-
-Das Objekt, das mit dieser Methode bearbeitet wird, ist eine aus einer spezifischen Smartphone App $ ``VLCReceiver" $ gesammelte Bilderreihe. Diese App wurde speziell für das \gls{david}-System entwickelt und erstellt eine Reihe von Bildern bei jeder Aufnahme. Im Allgemeinen wird die Kamera bei der Aufnahme in der Hand gehalten. Aufgrund von Handschütteln während der Aufnahme entsteht eine leichte Verschiebung zwischen den Bildern. Um dieses Problem zu beheben, wird eine Bildregistrierungsoperation verwendet, die zwei Bilder einer Aufnahme in dasselbe Koordinatensystem konvertiert. Zuerst werden durch \gls{surf} Merkmalserkennung Merkmale der Bilder verglichen. 
-Durch Merkmalsextraktion und Merkmalsanpassung werden die Korrespondenzpunkte zwischen den verglichenen Bildern erhalten. Der \gls{ransac} Algorithmus benötigt, um die irrelevanten Korrespondentenpunkte zu beseitigen und die Genauigkeit zu verbessern. Aus dem Kameramodell wird anschließend ein mathematisches Transformationsmodell zwischen den entsprechenden Punkten in den beiden Bildern erstellt. Es ist zu beachten, dass der Prozess zur Lösung des Transformationsmodells als ein nichtlineares Optimierungsproblem angesehen werden kann. Durch die Lösung dieses Problems kann die Transformationsmatrix erhalten werden. In dieser Arbeit wird immer das erste Bild als Referenzbild gewählt um eine Bildregistrierung mit folgenden Bildern vorzunehmen. Die von der Bildregistrierung enthaltenen Bilder werden in dasselbe Koordinatensystem umgewandelt. Es werden je zwei Bilder subtrahiert, wodurch eine Reihe Differenzbilder entstehen. Um die folgende Detektion zu vereinfachen, wird eine Optimierungsoperation mit der Hilfe der geometrischen Eigenschaft des QR Musters unternommen woraufhin ein zu detektierendes Bild erstellt wird. Anschließend werden eine Reihe von Bildverarbeitungen bzw. Binarisierung, Medianfilter, Morphologie Operation vorgenommen. Dadurch können vereinzelt Punkte und Lücken, die durch Rauschen und Fehler verursacht wurden, entfernt werden. Schließlich wird es durch die Charakteristik des QR Musters, dessen Breiteverhältnis $1:1:3:1:1$ beträgt um QR Muster zu detektieren. Dies bestimmt auch den Modulationsbereich. Das Flussdiagramm wird in Abbildung \ref{fig:Flussdiagramm der Methode} gezeigt. Die Details jedes Teils werden in den folgenden Abschnitten beschrieben.
-
-\begin{figure}[H]
- \centering 
- \includegraphics[keepaspectratio,width=1.0\textwidth]{images/3_Ersteverfahren/Flussdiagrammsum.pdf}
+ \includegraphics[keepaspectratio,width=0.70\textwidth]{images/3_Ersteverfahren/Flussdiagrammsum.pdf}
  \caption{Flussdiagramm der ersten Methode}
  \label{fig:Flussdiagramm der Methode}
 \end{figure}
 
 \section{Bildregistrierung} 
 
-Es wird angenommen, eine Reihe Bilder wird mit einer Handheld-Kamera aufgenommen. Es kommt aufgrund von Handbewegungen zu einer leichten Verschiebung zwischen den beiden benachbarten Bildern. Wenn diese Bilder subtrahiert werden, um die Differenzbilder zu erhalten, wird das Ergebnis sehr schlecht sein. Um dieses Problem zu lösen, wird hier Bildregistrierung eingeführt. Ein Flussdiagramm der Bildregistrierung wird in Abbildung 4.2 gezeigt. 
+Es wird angenommen, eine Reihe Bilder wird mit einer Handheld-Kamera aufgenommen. Es kommt aufgrund von Handbewegungen zu einer leichten Verschiebung zwischen den beiden benachbarten Bildern. Wenn diese Bilder subtrahiert werden, um die Differenzbilder zu erhalten, wird das Ergebnis sehr unscharf sein. Um dieses Problem zu lösen, wird hier Bildregistrierung eingeführt. Bildregistrierung ist ein wichtiger Prozess in der digitalen Bildverarbeitung und dient dazu, zwei oder mehrere Bilder derselben Szene, oder zumindest ähnlicher Szenen, bestmöglich in Übereinstimmung miteinander zu bringen. Dabei wird eines der Bilder als Referenzbild festgelegt, die anderen werden Objektbilder genannt. Um diese optimal an das Referenzbild anzupassen, wird eine ausgleichende Transformation berechnet. Ein Flussdiagramm der Bildregistrierung wird in Abbildung 4.2 gezeigt. 
 
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.6\textwidth]{images/3_Ersteverfahren/Bildregistration.pdf}
+ \includegraphics[keepaspectratio,width=0.5\textwidth]{images/3_Ersteverfahren/Bildregistration.pdf}
  \caption{Flussdiagramm der Bildregistrierung}
  \label{fig:Bildregistrierung}
 \end{figure}
 
 \subsection{\gls{surf}}
-In jedem Bild gibt es eindeutige Pixelwertpunkte, d.h. Merkmalspunkte des Bildes. Um die Bilder in dasselbe Koordinatensystem zu transformieren, müssen diese Merkmalspunkte erkannt und analysiert werden. Deswegen ist es in diesem Verfahren besonders wichtig, die Merkmalspunkte eines Bildes zu definieren und zu finden. Um dieses Problem zu lösen, wird das Konzept der Merkmalserkennung eingeführt. Diese wird oft in Computer Vision und Bildverarbeitungsbereichen verwendet. Die Merkmalserkennung beinhaltet Verfahren zum Berechnen von Abstraktionen von Bildinformationen und zum Treffen lokaler Entscheidungen an jedem Bildpunkt, ob es an einem Punkt ein Bildmerkmal eines bestimmten Typs gibt oder nicht. Einige typische Merkmalserkennungen sind z.B. Kantenerkennung, Eckenerkennung, Tropfenerkennung und so weiter.
+Um die Bilder in gemeinsames Koordinatensystem zu transformieren, müssen die Merkmalspunkte des Bildes erkannt und analysiert werden. Deswegen ist es in diesem Verfahren besonders wichtig, die Merkmalspunkte eines Bildes zu definieren und zu finden. Um dieses Problem zu lösen, wird das Konzept der Merkmalserkennung eingeführt. Diese wird oft in Computer Vision und Bildverarbeitungsbereichen verwendet. Die Merkmalserkennung beinhaltet Verfahren zum Berechnen von Abstraktionen von Bildinformationen und zum Treffen lokaler Entscheidungen an jedem Bildpunkt, ob es an einem Punkt ein Bildmerkmal eines bestimmten Typs gibt oder nicht. Einige typische Merkmalserkennungen sind z.B. Kantenerkennung, Eckenerkennung, Tropfenerkennung und so weiter.
 
 In dieser Arbeit wird das \gls{surf} \cite{Surf} genutzt. 
-Dieser ist ein patentierter lokaler Merkmal-Detektor und Deskriptor und kann für Aufgaben wie Objekterkennung, Bildregistrierung, Klassifizierung oder 3D-Rekonstruktion angewandt werden. Diese Merkmalserkennung ist eine verbesserte Version von \gls{sift} Merkmalserkennung, die Haar-Wavelet verwendet um die Gradientenoperation in der \gls{sift}-Methode zu ersetzen, und gleichzeitig eine Integralgraph-Technik für schnelle Berechnungen verwendet. Die Faltung bezieht sich nur auf das vorherige Bild. Durch die Vergrößerung des Bildkerns kann das Heruntertaktungsverfahren realisiert werden. Die Geschwindigkeit von \gls{surf} ist 3-7 mal schneller als die von \gls{sift} welche in den meisten Fällen der Leistung von \gls{sift} entspricht. Daher wird \gls{surf} in vielen Anwendungen eingesetzt, insbesondere in Anwendungen in denen die Laufzeitanforderungen hoch sind. 
+Dieser ist ein patentierter lokaler Merkmal-Detektor und Deskriptor und kann für Aufgaben wie Objekterkennung, Bildregistrierung, Klassifizierung oder 3D-Rekonstruktion angewandt werden. Diese Merkmalserkennung ist eine verbesserte Version von \gls{sift}\cite{SIFT} Merkmalserkennung, die Haar-Wavelet verwendet um die Gradientenoperation in der \gls{sift}-Methode zu ersetzen, und gleichzeitig eine Integralgraph-Technik für schnelle Berechnungen verwendet. Die Faltung bezieht sich nur auf das vorherige Bild. Durch die Vergrößerung des Bildkerns kann das Heruntertaktungsverfahren realisiert werden. Die Geschwindigkeit von \gls{surf} ist 3-7 mal schneller als die von \gls{sift} welche in den meisten Fällen der Leistung von \gls{sift} entspricht. Daher wird \gls{surf} in vielen Anwendungen eingesetzt, insbesondere in Anwendungen in denen die Laufzeitanforderungen hoch sind. 
 
 Der Verlauf einer \gls{surf} Merkmalserkennung ist wie folgend:
 
@@ -62,7 +65,7 @@ Der Wert der Determinante ist der Eigenwert der H-Matrix. Durch dessen positiven
 
 \begin{equation}
 \begin{split}
-   &\mathcal{H}(\textbf{x},\sigma) = \begin{bmatrix}
+   &H(\textbf{x},\sigma) = \begin{bmatrix}
    L_{xx}(\textbf{x},\sigma)\ L_{xy}(\textbf{x},\sigma) \\
    L_{xy}(\textbf{x},\sigma)\ L_{yy}(\textbf{x},\sigma)
    \end{bmatrix} \\   
@@ -70,13 +73,13 @@ Der Wert der Determinante ist der Eigenwert der H-Matrix. Durch dessen positiven
    &G(\sigma) = \frac{\partial^{2}g(\sigma)}{\partial x^{2}}      
 \end{split}
 \end{equation}
-
+%\mathcal{H}
 
 Hier bedeutet $L_{xx}(\textbf{x},\sigma)$ die Faltung der zweiten Gaußschen Ableitung $G(\sigma)$ mit dem Bild I im Punkt $\textbf{x}$(x,y), das selbe für $L_{xy}(\textbf{x},\sigma)$ und $L_{yy}(\textbf{x},\sigma)$. Auf diese Weise kann der Wert der Determinante für jedes Pixel in dem Bild berechnet werden und dieser Wert kann verwendet werden um den Merkmalspunkt festzustellen.
 Zur einfacheren Anwendung schlägt Herbert Bay\cite{Surf} vor, L mit einer Approximation zu ersetzen. Um den Fehler zwischen dem genauen Wert und der Approximation auszugleichen, kann die H-Matrix-Determinante wie folgt ausgedrückt werden:
 
 \begin{equation}
-   \det(\mathcal{H}_{Approx}) = D_{xx}D_{yy} - (0.9D_{xy})^2  
+   \det(H_{Approx}) = D_{xx}D_{yy} - (0.9D_{xy})^2  
 \end{equation}
 \\
 $\bullet$ \textbf{Erstellen des Maßstabraums}\\
@@ -86,7 +89,7 @@ Der Algorithmus ermöglicht, dass mehrere Bilder des Maßstabraums gleichzeitig 
 \begin{figure}[htb]
  \centering 
  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/3_Ersteverfahren/Scale_space.pdf}
- \caption{Scale space}
+ \caption{Scale space\cite{Surf}}
  \label{fig:Scale space}
 \end{figure} 
 
@@ -108,7 +111,7 @@ $\bullet$ \textbf{Hauptrichtungsermittlung}\\
 \begin{figure}[htb]
  \centering 
  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/3_Ersteverfahren/Dominante_Orientierung_Feststellen.pdf}
- \caption{Dominante Orientierung feststellen}
+ \caption{Dominante Orientierung feststellen\cite{Surf}}
  \label{fig:Dominante Orientierung Feststellen}
 \end{figure} 
 
@@ -191,7 +194,7 @@ Abbildung \ref{fig:OhneRANSAC} zeigt die passenden Punkte durch Merkmalübereins
 
 \subsection{Bildumwandlung}
 
-Wie in dem vorherigen Abschnitt vorgestellt, kann durch Verwenden des \gls{surf} übereinstimmende Punkte in aufeinanderfolgenden Bildern gefunden werden, anschließend lassen sich durch \gls{ransac} die Ausreißer ausschließen. Das Ziel dieses Abschnitts besteht darin, das Bild in dasselbe Koordinatensystem zu konvertieren. Der erste Schritt ist ein Kameramodell zu erstellen und anschließend die Umwandlungsbeziehung zwischen den entsprechenden Punkten in den zwei Bildern zu erhalten, um schließlich durch den Optimierungsalgorithmus die endgültige Transformationsmatrix zu erhalten. Die verschiedenen Schritte werden im Folgenden detailliert beschrieben.
+Wie in dem vorherigen Abschnitt vorgestellt, kann durch Verwenden des \gls{surf} übereinstimmende Punkte in aufeinanderfolgenden Bildern gefunden werden, anschließend lassen sich durch \gls{ransac} die Ausreißer ausschließen. Das Ziel dieses Abschnitts besteht darin, das Bild in gemeinsames Koordinatensystem zu konvertieren. Der erste Schritt ist ein Kameramodell zu erstellen und anschließend die Umwandlungsbeziehung zwischen den entsprechenden Punkten in den zwei Bildern zu erhalten, um schließlich durch den Optimierungsalgorithmus die endgültige Transformationsmatrix zu erhalten. Die verschiedenen Schritte werden im Folgenden detailliert beschrieben.
 
 \textbf{Kamera Modell}
 
@@ -314,7 +317,7 @@ In ähnlicher Weise dreht sich die x-Achse, y-Achse um $\varphi$ und $\omega$ Gr
 	\end{bmatrix}
 \end{equation}
 
-Schließlich kann die Rotationsmatrix erhalten werden:
+Schließlich kann die Rotationsmatrix\cite{Rotation} erhalten werden:
 \begin{equation}
    R = R_1 \cdot R_2 \cdot R_3
 \end{equation}
@@ -356,7 +359,7 @@ Die Transformation vom Kamerakoordinatensystem zum Bildkoordinatensystem gehört
 
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.4\textwidth]{images/3_Ersteverfahren/Kamera/Czuimage.pdf}
+ \includegraphics[keepaspectratio,width=0.5\textwidth]{images/3_Ersteverfahren/Kamera/Czuimage.pdf}
  \caption{Transformation vom Kamerakoordinatensystem zum Bildkoordinatensystem}
  \label{fig:Czuimage}
 \end{figure} 
@@ -401,14 +404,16 @@ Zu dieser Zeit ist die Einheit des Projektionspunkts p noch nicht Pixel, sondern
 
 (\textbf{3}). 2D-Bildabbildung Koordinatensystem zum 2D-Bildpixel Koordinatensystem.
 
-Das Pixelkoordinatensystem und das Bildkoordinatensystem befinden sich alle auf der Abbildungsebene, jedoch sind die jeweiligen Ursprünge und Maßeinheiten unterschiedlich. Der Ursprung des Bildkoordinatensystems ist der Schnittpunkt der optischen Achse der Kamera und der Abbildungsebene, üblicherweise der Mittelpunkt der Abbildungsebene oder der Hauptpunkt. Die Einheit des Bildkoordinatensystems ist Millimeter welche eine physikalische Einheit ist. Die Einheit des Pixelkoordinatensystems ist Pixel. Wie gewohnt wird beschrieben in welcher Zeile und Spalte ein Pixel ist. So ist der Übergang zwischen den beiden Koordinatensystem wie in Abbildung \ref{fig:Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem} dargestellt. 
-
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.5\textwidth]{images/3_Ersteverfahren/Kamera/imagezupixel.pdf}
+ \includegraphics[keepaspectratio,width=0.4\textwidth]{images/3_Ersteverfahren/Kamera/imagezupixel.pdf}
  \caption{Konvertierung vom Bildkoordinatensystem zum Pixelkoordinatensystem}
  \label{fig:Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem}
 \end{figure} 
+
+
+Das Pixelkoordinatensystem und das Bildkoordinatensystem befinden sich alle auf der Abbildungsebene, jedoch sind die jeweiligen Ursprünge und Maßeinheiten unterschiedlich. Der Ursprung des Bildkoordinatensystems ist der Schnittpunkt der optischen Achse der Kamera und der Abbildungsebene, üblicherweise der Mittelpunkt der Abbildungsebene oder der Hauptpunkt. Die Einheit des Bildkoordinatensystems ist Millimeter welche eine physikalische Einheit ist. Die Einheit des Pixelkoordinatensystems ist Pixel. Wie gewohnt wird beschrieben in welcher Zeile und Spalte ein Pixel ist. So ist der Übergang zwischen den beiden Koordinatensystem wie in Abbildung \ref{fig:Konvertierung von Pixelkoordinatensystem zu Bildkoordinatensystem} dargestellt. 
+
 
 $d_x$ und $d_y$ ist die Größe jedes Pixel in den X- und Y-Achsenrichtungen. Jedes Pixel des Bildes hat die folgende Beziehung zwischen den zwei Koordinatensystemen.
 
@@ -437,7 +442,7 @@ Im homogenen Koordinatensystem dargestellt:
 	\end{bmatrix}
 \end{equation}
 
-Es ist erwähnenswert, dass das Bildkoordinatensystem eine zweidimensionale Ebene(Bildebene), praktisch die Oberfläche des Kamera-CCD-Sensors ist. Jeder CCD-Sensor hat eine bestimmte Größe und Auflösung. Diese beiden Faktoren bestimmen die Konvertierungsbeziehung. Gegeben sei ein simples Beispiel: Eine Größe des CCD-Sensors ist $\SI{8}{\mm} \times \SI{6}{\mm}$, die Auflösung dafür ist $640~pixels \times 480~pixels$. Die Beziehung zwischen mm und Pixel ist $80~pixel/mm$. Ist die physikalische Größe jedes Pixels des CCD-Sensors $d_x \times d_y$, entspricht diese $d_x = d_y = \SI{1/80}{\mm}$.
+Es ist erwähnenswert, dass das Bildkoordinatensystem eine zweidimensionale Ebene(Bildebene), praktisch die Oberfläche des Kamera-\gls{ccd}-Sensors ist. Jeder \gls{ccd}-Sensor hat eine bestimmte Größe und Auflösung. Diese beiden Faktoren bestimmen die Konvertierungsbeziehung. Gegeben sei ein simples Beispiel: Eine Größe des \gls{ccd}-Sensors ist $\SI{8}{\mm} \times \SI{6}{\mm}$, die Auflösung dafür ist $640~pixels \times 480~pixels$. Die Beziehung zwischen mm und Pixel ist $80~pixel/mm$. Ist die physikalische Größe jedes Pixels des \gls{ccd}-Sensors $d_x \times d_y$, entspricht diese $d_x = d_y = \SI{1/80}{\mm}$.
  
 Durch die Umwandlung der obigen vier Koordinatensysteme kann ein Punkt vom Weltkoordinatensystem zum Pixelkoordinatensystem extrahiert werden.
 \begin{equation}
@@ -506,7 +511,7 @@ Wenn die internen und externen Parameter der Kamera bekannt sind, ist es möglic
 
 \textbf{Umwandlungsmodelle}
 
-Als nächstes wird die Umwandlungsbeziehung zwischen den entsprechenden Punkten in den beiden Bilder vorgenommen. Zuerst wird in dieser Arbeit eine vereinfachte Situation betrachtet, d.h. nur mit Rotationseinfluss. Abbildung \ref{fig:rotationsmodel} zeigt das 3D-Rotationsbewegungsmodell der Kamera. Die Position des optischen Zentrums ändert sich, während der Kamerabewegung im Drehbewegungsmodell der Kamera, nicht. Unter diesem Modell ist die Abbildungsbeziehung zwischen dem Punkt X im Weltkoordinatensystem und der Bildkoordinate x im homogenen Koordinatensystem dargestellt: 
+Als nächstes wird die Umwandlungsbeziehung zwischen den entsprechenden Punkten in den beiden Bilder vorgenommen. Zuerst wird in dieser Arbeit eine vereinfachte Situation betrachtet, d.h. nur mit Rotationseinfluss\cite{Rotation}. Abbildung \ref{fig:rotationsmodel} zeigt das 3D-Rotationsbewegungsmodell der Kamera. Die Position des optischen Zentrums ändert sich, während der Kamerabewegung im Drehbewegungsmodell der Kamera, nicht. Unter diesem Modell ist die Abbildungsbeziehung zwischen dem Punkt X im Weltkoordinatensystem und der Bildkoordinate x im homogenen Koordinatensystem dargestellt: 
 \begin{equation}
    x = KRX, X = \lambda  K^{-1} x
 \end{equation}
@@ -515,8 +520,8 @@ Wobei K der interne Parameter der Kamera ist, wie zuvor definiert. $\lambda$ ist
 
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.5\textwidth]{images/3_Ersteverfahren/Kamera/rotationsmodel.pdf}
- \caption{Rotationsbewegungsmodell}
+ \includegraphics[keepaspectratio,width=0.4\textwidth]{images/3_Ersteverfahren/Kamera/rotationsmodel.pdf}
+ \caption{Rotationsbewegungsmodell\cite{Karpenko}}
  \label{fig:rotationsmodel}
 \end{figure} 
 
@@ -577,7 +582,7 @@ kann die Berechnung der Transformationsmatrix als ein Optimierungsproblem betrac
 
 Zu Beachten ist, dass dies ein nichtlineares Optimierungsproblem ist. Einige nichtlineare Optimierer können ebenfalls verwendet werden um diese Zielfunktion zu minimieren. In der Kapital Evaluierung wurde bewissen, dass der Koordinatenabstieg durch direkte objektive Funktionsbewertung schnell konvergiert. Jedes Mal, wenn ein Schritt gemacht wird bei dem die Zielfunktion J nicht abnimmt, wird die Schrittrichtung umgekehrt und verringert die Schrittweite des entsprechenden Parameters. Der Algorithmus endet, sobald die Schrittgröße für alle Parameter unter einen gewünschten Schwellenwert fällt (d.h. Wenn die Zielgenauigkeit erreicht ist). 
 
-Der detaillierte Algorithmus ist wie folgt dargestellt. Einige Definitionen werden hier eingeführt. $P_0$ ist der Vektor, der die Anfangswerte der Parameter speichert. Anschießend speichert er die Schrittgröße jedes Parameters in den Vektor $d_p$. $temp_dp$ ist der Vektor, in dem die gewünschten Schwellenwerte der Parameter gespeichert werden. D ist die Anzahl Unbekannter Parameter und W die Transformationsmatrix.
+Der detaillierte Algorithmus\cite{Karpenko} ist wie folgt dargestellt. Einige Definitionen werden hier eingeführt. $P_0$ ist der Vektor, der die Anfangswerte der Parameter speichert. Anschießend speichert er die Schrittgröße jedes Parameters in den Vektor $d_p$. $temp_dp$ ist der Vektor, in dem die gewünschten Schwellenwerte der Parameter gespeichert werden. D ist die Anzahl Unbekannter Parameter und W die Transformationsmatrix.
 
 \textbf{1}. Zuerst durch Anfangswert $P_0$ Berechnung des anfänglichen Fehlers $J_0$.
 
@@ -610,7 +615,7 @@ Durch die Transformationsmatrix können die Koordinaten des zweiten Bildes in di
 
 
 \section{Differenzbild-Optimierung}
-Die Bildregistration liefert eine Reihe Bilder von der Kamera, deren Koordinaten in dasselbe Koordinatensystem umgewandelt wurden. Es werden je zwei Bilder ausgewählt und subtrahiert, um eine Reihe Differenzbilder zu erhalten. Das Ziel in diesem Abschnitt ist, von diesen Differenzbildern ein zu detektierendes Bild herzustellen, das die QR Muster Detektion vereinfacht. Es sollte hier beachtet werden, dass aufgrund der Zeitsynchronisation die QR Muster in den Differenzbildern einige unerwartete Effekte aufweisen könnten. Eine mögliche Formel der Differenzbilder wie folgt mit der Anhahme dass es in vertikaler Richtung ist.
+Die Bildregistrierung liefert eine Reihe Bilder von der Kamera, deren Koordinaten in gemeinsames Koordinatensystem umgewandelt wurden. Es werden je zwei Bilder ausgewählt und subtrahiert, um eine Reihe Differenzbilder zu erhalten. Das Ziel in diesem Abschnitt ist, von diesen Differenzbildern ein zu detektierendes Bild herzustellen, das die \gls{qr} Muster Detektion vereinfacht. Es sollte hier beachtet werden, dass aufgrund der Zeitsynchronisation die \gls{qr} Muster in den Differenzbildern einige unerwartete Effekte aufweisen könnten. Eine mögliche Formel der Differenzbilder wie folgt mit der Anhahme dass es in vertikaler Richtung ist.
 
 \begin{itemize}
 	\item total Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung.
@@ -642,7 +647,7 @@ Tabelle \ref{tbl:differenzbildformel} zeigt solche Situationen und listet auf, o
 \end{table} 
 
 
-Die Struktur eines QR Musters ist in Formel 3.29 aufgeführt. Die äußerste $``1"$ Schicht ist hier ein Trennmuster und der Zentralbereich repräsentiert das QR Muster. Aufgrund der Modulationseigenschaften des \gls{david} Systems werden nur die Pixelwerte der Punkte mit dem Element $``1"$ nach der Modulation verändert. Im Vergleich dazu werden die Pixelwerte der Punkte mit dem Element $``0"$ nur gering verändert. Deswegen werden durch eine Absolutwertoperation die QR Muster als Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung dargestellt. Dies ist die erwartete Modellstruktur die im nächsten Schritt operiert wird. Ein detailliertes Operieren wird im Abschnitt $ ``QR\,Muster\,Detektion" $ besprochen.
+Die Struktur eines \gls{qr} Musters ist in Formel 3.29 aufgeführt. Die äußerste $``1"$ Schicht ist hier ein Trennmuster und der Zentralbereich repräsentiert das \gls{qr} Muster. Aufgrund der Modulationseigenschaften des \gls{david} Systems werden nur die Pixelwerte der Punkte mit dem Element $``1"$ nach der Modulation verändert. Im Vergleich dazu werden die Pixelwerte der Punkte mit dem Element $``0"$ nur gering verändert. Deswegen werden durch eine Absolutwertoperation die \gls{qr} Muster als Schwarz-Weiß-Schwarz-Weiß-Schwarz Ordnung dargestellt. Dies ist die erwartete Modellstruktur die im nächsten Schritt operiert wird. Ein detailliertes Operieren wird im Abschnitt $ ``\gls{qr}\,Muster\,Detektion" $ besprochen.
 
 \begin{equation}
 QR_{base} = \begin{bmatrix}
@@ -658,7 +663,7 @@ QR_{base} = \begin{bmatrix}
 \end{bmatrix}
 \end{equation}
 
-Als nächstes wird der Begriff $``Energie"$ vorgestellt. Auf numerischer Ebene beschreibt dieser den Mittelwert des quadrierten Pixelwertes des Bildes. Es ist bekannt, dass die Pixelwerte in dem Gebiet rund um den Modulationsbereich sich durch Subtraktion der beiden Frames gegeneinander aufheben. In diesem Gebiet werden die Pixelwerte nur vom Rauschen beeinflußt und haben deshalb einen sehr kleinen Wert. Im Vergleich dazu betragen die Pixelwerte im Modulationbereich einen relativ großen Wert $\pm2A$, hier ist A die Modulationsamplitude des Systems. Der Einfluss von Zeitsynchronisation gleicht die Pixelwerte in einigen Teilen des Modulationsbereichs aufgrund von Synchronisation aus, und zwar durch aufheben der $ ``Energie" $. Die Größe der $``Energie"$ hängt hauptsächlich von den Pixelwerten im Modulationsbereich ab. Je größer die Pixelwerte sind, desto höher die $``Energie"$ des Bildes, und desto klarer kann das QR Muster werden. Gemäß dieser Regel wird die $``Energie"$ jedes Differenzbildes berechnet und in absteigender Reihenfolge angeordnet. Um die folgende Detektion zu vereinfachen, werden die ersten paar Bilder hinzugefügt. Dann wird ein zu detektierende Bilder erhaltet. %Aus dem Experiment hat bewiesen, dass es ausreicht die ersten drei Bilder zu nehmen.
+Als nächstes wird der Begriff $``Energie"$ vorgestellt. Auf numerischer Ebene beschreibt dieser den Mittelwert des quadrierten Pixelwertes des Bildes. Es ist bekannt, dass die Pixelwerte in dem Gebiet rund um den Modulationsbereich sich durch Subtraktion der beiden Frames gegeneinander aufheben. In diesem Gebiet werden die Pixelwerte nur vom Rauschen beeinflußt und haben deshalb einen sehr kleinen Wert. Im Vergleich dazu betragen die Pixelwerte im Modulationbereich einen relativ großen Wert $\pm2A$, hier ist A die Modulationsamplitude des Systems. Der Einfluss von Zeitsynchronisation gleicht die Pixelwerte in einigen Teilen des Modulationsbereichs aufgrund von Synchronisation aus, und zwar durch aufheben der $ ``Energie" $. Die Größe der $``Energie"$ hängt hauptsächlich von den Pixelwerten im Modulationsbereich ab. Je größer die Pixelwerte sind, desto höher die $``Energie"$ des Bildes, und desto klarer kann das \gls{qr} Muster werden. Gemäß dieser Regel wird die $``Energie"$ jedes Differenzbildes berechnet und in absteigender Reihenfolge angeordnet. Um die folgende Detektion zu vereinfachen, werden die ersten paar Bilder hinzugefügt. Dann wird ein zu detektierende Bilder erhaltet. %Aus dem Experiment hat bewiesen, dass es ausreicht die ersten drei Bilder zu nehmen.
 
 Die Formel der $``Energie"$ wird in Gleichung 3.30 dargestellt. Hier repräsentiert $ m,n $ die Anzahl der Zeilen und Spalten der Matrix. $diff(i,j)$ ist der Pixelwert des Punkts in der m-ten Zeile und n-ten Spalte der Matrix.
 
@@ -683,7 +688,7 @@ Dazu, das passende Flussdiagramm in Abbildung \ref{fig:DifferenzbildFlussigdiagr
  \label{fig:DifferenzbildFlussigdiagramm}
 \end{figure} 
 
-Ein Beispiel für ein zu detektierendes Bild wird in Abbildung \ref{fig:EindetektiertesBild} vorgeführt. Aus der Abbildung ist ersichtlich, dass der Modulationsbereich besser dargestellt ist und an den vier Ecken des Bereichs ein eindeutiges QR Muster vorhanden ist. Als nächstes wird die Bildverarbeitung vorgestellt.
+Ein Beispiel für ein zu detektierendes Bild wird in Abbildung \ref{fig:EindetektiertesBild} vorgeführt. Aus der Abbildung ist ersichtlich, dass der Modulationsbereich besser dargestellt ist und an den vier Ecken des Bereichs ein eindeutiges \gls{qr} Muster vorhanden ist. Als nächstes wird die Bildverarbeitung vorgestellt.
 
 \begin{figure}[H]
  \centering 
@@ -698,7 +703,7 @@ Durch die Differnzbild-Optimierung, wird ein zu detektierendes Bild erhalten. Ab
 
 \textbf{Bild Binarisierung}
 
-Für die Schwellenwertbildung und das Erstellen eines Binärbildes wurde eine Funktion namens $ ``imbinarize" $ in Matlab verwendet. Dieser Funktion wird das Bild übergeben, damit es einen anpassungsfähigen Schwellwert generiert um das Schwarz-Weiß-Bild zu erstellen. Dies ist ausreichend für die QR Muster Detektion, weil es nur schwarze und weiße Module enthält, die binär 1 bzw. 0 sind. 
+Für die Schwellenwertbildung und das Erstellen eines Binärbildes wurde eine Funktion namens $ ``imbinarize" $ in Matlab verwendet. Dieser Funktion wird das Bild übergeben, damit es einen anpassungsfähigen Schwellwert generiert um das Schwarz-Weiß-Bild zu erstellen. Dies ist ausreichend für die \gls{qr} Muster Detektion, weil es nur schwarze und weiße Module enthält, die binär 1 bzw. 0 sind. 
 
 %\textbf{Medianfilter}
 
@@ -706,25 +711,25 @@ Für die Schwellenwertbildung und das Erstellen eines Binärbildes wurde eine Fu
 
 \textbf{Morphologie}
 
-Mit öffnenden und schließenden Filtern können die Lücken zwischen Blöcken und die Punkte vom Rauschen stark reduziert werden, was das binär Bild zu einer guten Interpretation des QR Musters macht. 
+Mit öffnenden und schließenden Filtern können die Lücken zwischen Blöcken und die Punkte vom Rauschen stark reduziert werden, was das binär Bild zu einer guten Interpretation des \gls{qr} Musters macht. 
 
-\section{QR-Muster-Detektion} 
+\section{\gls{qr}-Muster-Detektion} 
 
-Nach der Bildverarbeitung wird nun die QR Muster Detektion ausgeführt. Das Ziel einer QR Muster Detektion ist, das Zentrum des Musters im Bild zu lokalisieren um dadurch das Bild zu rekonstruieren. Abbildung \ref{fig:QRPattern} zeigt die geometrische Struktur eines QR Musters. An jeder Ecke des Modulartionsbereichs gibt es ein solches QR Muster.
+Nach der Bildverarbeitung wird nun die \gls{qr} Muster Detektion ausgeführt. Das Ziel einer \gls{qr} Muster Detektion\cite{QR} ist, das Zentrum des Musters im Bild zu lokalisieren um dadurch das Bild zu rekonstruieren. Abbildung \ref{fig:QRPattern} zeigt die geometrische Struktur eines \gls{qr} Musters. An jeder Ecke des Modulartionsbereichs gibt es ein solches \gls{qr} Muster.
 
 \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.9\textwidth]{images/3_Ersteverfahren/QRMuster/QRPattern.pdf}
- \caption{QR Muster}
+ \includegraphics[keepaspectratio,width=0.65\textwidth]{images/3_Ersteverfahren/QRMuster/QRPattern.pdf}
+ \caption{\gls{qr} Muster}
  \label{fig:QRPattern}
 \end{figure}
 
-Aus der geometrischen Sicht kann jedes Muster als drei konzentrische Quadrate betrachtet werden und besteht aus einem schwarzen (dunklen) $7 \times 7$ Modul, einem weißen (hellen) $5 \times 5$ Modul und schließlich einem schwarzen (dunklen) $3 \times 3$ Modul. Von Kenntnissen der Geometrie ist bekannt, dass in jeder Richtung das Breiteverhältnis der alternativen Schwarz- und Weißmodul in einem Muster die Beziehung $1:1:3:1:1$ existiert, wie es in Abbildung \ref{fig:QRPatternRatio} vorgeführt ist. Diese wichtige Eigenschaft hilft uns, die Positionen der QR Muster zu finden. In der Praxis gibt es rund um die Muster noch ein Trennmuster, das ein Funktionsmuster aller weißen (hellen) Module (ein Modul breit) ist. Es dient als eine Grenze zwischen den Mustern und dem Datenbereich, um die Verwechslung zwischen Muster und Daten zu vermeiden.
+Aus der geometrischen Sicht kann jedes Muster als drei konzentrische Quadrate betrachtet werden und besteht aus einem schwarzen (dunklen) $7 \times 7$ Modul, einem weißen (hellen) $5 \times 5$ Modul und schließlich einem schwarzen (dunklen) $3 \times 3$ Modul. Von Kenntnissen der Geometrie ist bekannt, dass in jeder Richtung das Breiteverhältnis der alternativen Schwarz- und Weißmodul in einem Muster die Beziehung $1:1:3:1:1$ existiert, wie es in Abbildung \ref{fig:QRPatternRatio} vorgeführt ist. Diese wichtige Eigenschaft hilft uns, die Positionen der \gls{qr} Muster zu finden. In der Praxis gibt es rund um die Muster noch ein Trennmuster, das ein Funktionsmuster aller weißen (hellen) Module (ein Modul breit) ist. Es dient als eine Grenze zwischen den Mustern und dem Datenbereich, um die Verwechslung zwischen Muster und Daten zu vermeiden.
  
  \begin{figure}[H]
  \centering 
- \includegraphics[keepaspectratio,width=0.7\textwidth]{images/3_Ersteverfahren/QRMuster/QP_Patternratio.pdf}
- \caption{QR Muster Ratio}
+ \includegraphics[keepaspectratio,width=0.52\textwidth]{images/3_Ersteverfahren/QRMuster/QP_Patternratio.pdf}
+ \caption{\gls{qr} Muster Ratio}
  \label{fig:QRPatternRatio}
 \end{figure}
 
@@ -732,7 +737,7 @@ Als nächstes werden die detaillierten Schritte der Detektion aufgeführt welche
 
 \textbf{Schritt 1:}
 
-Zuerst wird der Berechnungsaufwand der Analyse des ganzen Bildes geschätzt, und anschließend wird der Modulationsbereich in kleine Bereiche unterteilt, die die QR Muster beinhalten.
+Zuerst wird der Berechnungsaufwand der Analyse des ganzen Bildes geschätzt, und anschließend wird der Modulationsbereich in kleine Bereiche unterteilt, die die \gls{qr} Muster beinhalten.
 
 \textbf{Schritt 2:}
 
@@ -756,20 +761,21 @@ Die Ausgabe des vorherigen Schritts wird verarbeitet. Falls mehrere potentielle 
 Durch die gefundenen Muster Zentren, wird eine projektive Transformation vorgenommen, um die Ecken des Bildes zu bestimmen.
 
 
-Die folgende Abbildung \ref{fig:FlussdiagrammQRMuster} zeigt ein Flussdiagramm einer Detektion für QR Muster.
+Die folgende Abbildung \ref{fig:FlussdiagrammQRMuster} zeigt ein Flussdiagramm einer Detektion für \gls{qr} Muster.
 
 \begin{figure}[htb]
  \centering 
- \includegraphics[keepaspectratio,width=1.0\textwidth]{images/3_Ersteverfahren/QRMuster/QR_flussdiagramm.pdf}
- \caption{Flussdiagramm der QR Muster Detektion}
+ \includegraphics[keepaspectratio,width=0.90\textwidth]{images/3_Ersteverfahren/QRMuster/QR_flussdiagramm.pdf}
+ \caption{Flussdiagramm der \gls{qr} Muster Detektion}
  \label{fig:FlussdiagrammQRMuster}
 \end{figure}
 
-Ein Beipiel für QR Muster Detektion wird in Abbildung \ref{fig:QRMusterBeispiel} vorgeführt:
+\newpage
+Ein Beipiel für \gls{qr} Muster Detektion wird in Abbildung \ref{fig:QRMusterBeispiel} vorgeführt:
 
 \begin{figure}[htb]
  \centering 
  \includegraphics[keepaspectratio,width=1.0\textwidth]{images/3_Ersteverfahren/QRMuster/QR_Patterndetektion.pdf}
- \caption{Beispiel einer QR Muster Detektion}
+ \caption{Beispiel einer \gls{qr} Muster Detektion}
  \label{fig:QRMusterBeispiel}
 \end{figure}

@@ -231,8 +231,8 @@
       \strng{authorbibnamehash}{9afe9914e5011f5c25fd0cb4f0443281}
       \strng{authornamehash}{9afe9914e5011f5c25fd0cb4f0443281}
       \strng{authorfullhash}{9afe9914e5011f5c25fd0cb4f0443281}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{DaViD : Data Transmission Using Video Devices-An Innovative System for Smart Media Applications}
@@ -252,8 +252,8 @@
       \strng{authorbibnamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
       \strng{authornamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
       \strng{authorfullhash}{a9e1d6f296fba589b41ae9e6cf3de34d}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2015 IEEE 5th International Conference on Consumer Electronics - Berlin (ICCE-Berlin)}
@@ -281,8 +281,8 @@
       \strng{authorbibnamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
       \strng{authornamehash}{a9e1d6f296fba589b41ae9e6cf3de34d}
       \strng{authorfullhash}{a9e1d6f296fba589b41ae9e6cf3de34d}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2015 IEEE International Conference on Consumer Electronics (ICCE)}
@@ -326,8 +326,8 @@
       \strng{authorbibnamehash}{4e255173d811465ee40ce3537c5d6c27}
       \strng{authornamehash}{d0078c61ec8e77311ede269a1a503d56}
       \strng{authorfullhash}{4e255173d811465ee40ce3537c5d6c27}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer Vision and Image Understanding (CVIU)}
@@ -336,6 +336,36 @@
       \field{year}{2008}
       \field{pages}{346\bibrangedash 359}
       \range{pages}{14}
+    \endentry
+    \entry{SIFT}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=8786576ab773be2fdc738251d3a76c84}{%
+           family={Daixian},
+           familyi={D\bibinitperiod},
+           given={Zhu},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{8786576ab773be2fdc738251d3a76c84}
+      \strng{fullhash}{8786576ab773be2fdc738251d3a76c84}
+      \strng{bibnamehash}{8786576ab773be2fdc738251d3a76c84}
+      \strng{authorbibnamehash}{8786576ab773be2fdc738251d3a76c84}
+      \strng{authornamehash}{8786576ab773be2fdc738251d3a76c84}
+      \strng{authorfullhash}{8786576ab773be2fdc738251d3a76c84}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2010 International Conference on Image Analysis and Signal Processing}
+      \field{issn}{2156-0110}
+      \field{month}{4}
+      \field{title}{SIFT algorithm analysis and optimization}
+      \field{year}{2010}
+      \field{pages}{415\bibrangedash 419}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/IASP.2010.5476084
+      \endverb
+      \keyw{feature extraction;image matching;optimisation;transforms;SIFT algorithm analysis;optimization;scale invariant feature transform;image matching;feature extraction;Chamfer distance;Algorithm design and analysis;Image matching;Feature extraction;Pixel;Image analysis;Lighting;Information analysis;Educational institutions;Data mining;Robustness;SIFT;analysis and optimization;Comparability measurement;Chamfer distance;image matching}
     \endentry
     \entry{ransac1}{article}{}
       \name{author}{2}{}{%
@@ -362,8 +392,8 @@
       \strng{authorbibnamehash}{fc26f22afcddeded198fab29d715e89a}
       \strng{authornamehash}{fc26f22afcddeded198fab29d715e89a}
       \strng{authorfullhash}{fc26f22afcddeded198fab29d715e89a}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0001-0782}
@@ -386,6 +416,51 @@
       \endverb
       \keyw{automated cartography,camera calibration,image matching,location determination,model fitting,scene analysis}
     \endentry
+    \entry{Rotation}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f8fda71c4acd77163c757d61187c87e0}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=edf497ff1530b03ff97bd5ed77ff8f48}{%
+           family={Chou},
+           familyi={C\bibinitperiod},
+           given={H.\bibnamedelimi P.},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=37517cd5ccdd67594b0bccd6bfd3d2c0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={S.\bibnamedelimi W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=58f600b031bda8c697ad2e2c86ebb5cf}{%
+           family={Fuh},
+           familyi={F\bibinitperiod},
+           given={C.\bibnamedelimi S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4a4fad18821708887cda7ffb9cc9ee4}
+      \strng{fullhash}{e088ad77de5fd8008a17eaf271fa8585}
+      \strng{bibnamehash}{e088ad77de5fd8008a17eaf271fa8585}
+      \strng{authorbibnamehash}{e088ad77de5fd8008a17eaf271fa8585}
+      \strng{authornamehash}{f4a4fad18821708887cda7ffb9cc9ee4}
+      \strng{authorfullhash}{e088ad77de5fd8008a17eaf271fa8585}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2009 16th IEEE International Conference on Image Processing (ICIP)}
+      \field{issn}{1522-4880}
+      \field{month}{11}
+      \field{title}{Video stabilization for a hand-held camera based on 3D motion model}
+      \field{year}{2009}
+      \field{pages}{3477\bibrangedash 3480}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICIP.2009.5413831
+      \endverb
+      \keyw{cameras;feature extraction;graph theory;image matching;image motion analysis;object detection;transforms;video signal processing;video stabilization technique;handheld camera;3D motion model;feature points extraction;Lowe scale invariant feature transform point detection technique;reproducing kernel Hilbert space graph matching technique;motion taxonomy method;Cameras;Motion estimation;Taxonomy;Feature extraction;Computer vision;Computer science;Video equipment;Optical computing;Information management;Data mining;SIFT detection;RKHS graph matching;3D motion;Motion taxonomy;Full-frame process}
+    \endentry
     \entry{zhangzhengyou}{article}{}
       \name{author}{1}{}{%
         {{hash=a21bd48f3051e7658e90961a9a30072b}{%
@@ -400,8 +475,8 @@
       \strng{authorbibnamehash}{a21bd48f3051e7658e90961a9a30072b}
       \strng{authornamehash}{a21bd48f3051e7658e90961a9a30072b}
       \strng{authorfullhash}{a21bd48f3051e7658e90961a9a30072b}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
@@ -411,6 +486,90 @@
       \field{year}{2000}
       \field{pages}{1330\bibrangedash 1334}
       \range{pages}{5}
+    \endentry
+    \entry{Karpenko}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=39e9c1e435352c29155ae9f237d1d1d3}{%
+           family={Karpenko},
+           familyi={K\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fc198b12ae6b63241304506270326f07}{%
+           family={Jacobs},
+           familyi={J\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=eab4519b3466c48c207e1e7c09b9810c}{%
+           family={Baek},
+           familyi={B\bibinitperiod},
+           given={Jongmin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1315bf00f5fa82534be18df443fc255c}{%
+           family={Levoy},
+           familyi={L\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2fa39fedecb7d6793d82a20ae321c92}
+      \strng{fullhash}{5f0542eb7ebc0a832eafc1fd29da65c7}
+      \strng{bibnamehash}{5f0542eb7ebc0a832eafc1fd29da65c7}
+      \strng{authorbibnamehash}{5f0542eb7ebc0a832eafc1fd29da65c7}
+      \strng{authornamehash}{f2fa39fedecb7d6793d82a20ae321c92}
+      \strng{authorfullhash}{5f0542eb7ebc0a832eafc1fd29da65c7}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Stanford University Computer Science Tech Report CSTR 2011-03}
+      \field{month}{9}
+      \field{title}{Digital Video Stabilization and Rolling Shutter Correction using Gyroscopes}
+      \field{year}{2011}
+    \endentry
+    \entry{QR}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=0ba61d3dc781118f94a0e09130f6d51c}{%
+           family={18004},
+           familyi={1\bibinitperiod},
+           given={ISO/IEC},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ba61d3dc781118f94a0e09130f6d51c}
+      \strng{fullhash}{0ba61d3dc781118f94a0e09130f6d51c}
+      \strng{bibnamehash}{0ba61d3dc781118f94a0e09130f6d51c}
+      \strng{authorbibnamehash}{0ba61d3dc781118f94a0e09130f6d51c}
+      \strng{authornamehash}{0ba61d3dc781118f94a0e09130f6d51c}
+      \strng{authorfullhash}{0ba61d3dc781118f94a0e09130f6d51c}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Standard,(Second Edition)}
+      \field{month}{9}
+      \field{title}{Information technology - Automatic identication and data capture techniques - QR code 2005 bar code symbology specication}
+      \field{year}{2006}
+    \endentry
+    \entry{global}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=2af9a87ab3a028f0648eedb98f353969}{%
+           family={Jähne},
+           familyi={J\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{2af9a87ab3a028f0648eedb98f353969}
+      \strng{fullhash}{2af9a87ab3a028f0648eedb98f353969}
+      \strng{bibnamehash}{2af9a87ab3a028f0648eedb98f353969}
+      \strng{authorbibnamehash}{2af9a87ab3a028f0648eedb98f353969}
+      \strng{authornamehash}{2af9a87ab3a028f0648eedb98f353969}
+      \strng{authorfullhash}{2af9a87ab3a028f0648eedb98f353969}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Springer Berlin}
+      \field{isbn}{3-540-41260-3}
+      \field{title}{Digitale Bildverarbeitung. 5. Auflage}
+      \field{year}{2002}
     \endentry
     \entry{Ostu}{article}{}
       \name{author}{1}{}{%
@@ -426,8 +585,8 @@
       \strng{authorbibnamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
       \strng{authornamehash}{4531dc3ea86ad7c21ff2c751725cbf58}
       \strng{authorfullhash}{4531dc3ea86ad7c21ff2c751725cbf58}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0018-9472}
@@ -444,6 +603,33 @@
       \endverb
       \keyw{Histograms;Marine vehicles;Radar tracking;Least squares approximation;Surveillance;Target tracking;Gaussian distribution;Displays;Q measurement;Sea measurements}
     \endentry
+    \entry{morpho}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=fd797977901a8dfd35854fe1749dda89}{%
+           family={Giardina},
+           familyi={G\bibinitperiod},
+           given={C.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=7ad3a03524f680b43a37216b78ff8131}{%
+           family={Dougherty},
+           familyi={D\bibinitperiod},
+           given={E.\bibnamedelimi R.},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b974207a44576ac3707917198e29b7b}
+      \strng{fullhash}{2b974207a44576ac3707917198e29b7b}
+      \strng{bibnamehash}{2b974207a44576ac3707917198e29b7b}
+      \strng{authorbibnamehash}{2b974207a44576ac3707917198e29b7b}
+      \strng{authornamehash}{2b974207a44576ac3707917198e29b7b}
+      \strng{authorfullhash}{2b974207a44576ac3707917198e29b7b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Prentice Hall, Englewood Cliffs}
+      \field{title}{Morphological Methods in Image and Signal Processing}
+      \field{year}{1988}
+    \endentry
     \entry{canny}{article}{}
       \name{author}{1}{}{%
         {{hash=2f780c34a67ad022b73f934e6290bd09}{%
@@ -458,8 +644,8 @@
       \strng{authorbibnamehash}{2f780c34a67ad022b73f934e6290bd09}
       \strng{authornamehash}{2f780c34a67ad022b73f934e6290bd09}
       \strng{authorfullhash}{2f780c34a67ad022b73f934e6290bd09}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0162-8828}
@@ -475,6 +661,141 @@
       \verb 10.1109/TPAMI.1986.4767851
       \endverb
       \keyw{Image edge detection;Detectors;Machine vision;Shape measurement;Performance analysis;Uncertainty;Gaussian approximation;Signal to noise ratio;Signal synthesis;Feature extraction;Edge detection;feature extraction;image processing;machine vision;multiscale image analysis}
+    \endentry
+    \entry{canny2}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=6f2f922d34e44c2ed58d4eeb12f5ec82}{%
+           family={Burger},
+           familyi={B\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5ed33c40a714bb8f0d9165ed1db26fa7}{%
+           family={Burge},
+           familyi={B\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c47651e73a7e01cbff41aa699bc985bb}
+      \strng{fullhash}{c47651e73a7e01cbff41aa699bc985bb}
+      \strng{bibnamehash}{c47651e73a7e01cbff41aa699bc985bb}
+      \strng{authorbibnamehash}{c47651e73a7e01cbff41aa699bc985bb}
+      \strng{authornamehash}{c47651e73a7e01cbff41aa699bc985bb}
+      \strng{authorfullhash}{c47651e73a7e01cbff41aa699bc985bb}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Springer}
+      \field{title}{Digitale Bildverarbeitung}
+      \field{year}{2005}
+    \endentry
+    \entry{6005853}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=e51bce17ac5567d1d32190e3cdd6a5aa}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=1098faa9a645ab28cfc5593a8f39719b}{%
+           family={Kong},
+           familyi={K\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=0f95ea035001073a52146b125eca4068}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=29bdd03a757ee4168cad6d145c3f26ac}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b4f59bf1a6b7129f2b9ea3fa530463f}
+      \strng{fullhash}{5513f89eb561fdd2b0b4335da3d23db8}
+      \strng{bibnamehash}{5513f89eb561fdd2b0b4335da3d23db8}
+      \strng{authorbibnamehash}{5513f89eb561fdd2b0b4335da3d23db8}
+      \strng{authornamehash}{5b4f59bf1a6b7129f2b9ea3fa530463f}
+      \strng{authorfullhash}{5513f89eb561fdd2b0b4335da3d23db8}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 Sixth International Conference on Image and Graphics}
+      \field{month}{8}
+      \field{title}{A Rectangle Detection Method for Real-Time Extraction of Large Panel Edge}
+      \field{year}{2011}
+      \field{pages}{382\bibrangedash 387}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICIG.2011.83
+      \endverb
+      \keyw{curve fitting;edge detection;feature extraction;Hough transforms;image resolution;image segmentation;object detection;probability;rectangle detection method;image resolution;panel production;line extraction;crossing dilation;progressive probabilistic;Hough transform;line segmentation;sparse binary image;rectangle fitting method;fake edges;Image edge detection;Image segmentation;Real time systems;Robustness;Transforms;Probabilistic logic;Detection algorithms;rectangle;detection;Hough;panel}
+    \endentry
+    \entry{hough}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f50ad54f93539c8cee8b439ba432564e}{%
+           family={Bräunl},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a1fb54a23598964052f7409c67d1b6ee}{%
+           family={Feyrer},
+           familyi={F\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=92bfbb4e6f9a6e2cc843b40a0421b198}{%
+           family={Rapf},
+           familyi={R\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=92bfbb4e6f9a6e2cc843b40a0421b198}{%
+           family={Rapf},
+           familyi={R\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{af3fbd051d4c75431136b66d250da3c5}
+      \strng{fullhash}{8bb4d766ff6af429e2ec99a837ea466a}
+      \strng{bibnamehash}{8bb4d766ff6af429e2ec99a837ea466a}
+      \strng{authorbibnamehash}{8bb4d766ff6af429e2ec99a837ea466a}
+      \strng{authornamehash}{af3fbd051d4c75431136b66d250da3c5}
+      \strng{authorfullhash}{8bb4d766ff6af429e2ec99a837ea466a}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Addison-Wesley}
+      \field{isbn}{ISBN 3-89319-951-9}
+      \field{title}{Parallele Bildverarbeitung}
+      \field{year}{1995}
+    \endentry
+    \entry{radon}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=af0343cee2e6a58971aaf6f8ab5d4812}{%
+           family={Bracewell},
+           familyi={B\bibinitperiod}}}%
+        {{hash=c197c5b34a3b6d6edaa7916bbace1164}{%
+           family={N},
+           familyi={N\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cddfe6f50ef16e2b13ef49b17d0596b}
+      \strng{fullhash}{1cddfe6f50ef16e2b13ef49b17d0596b}
+      \strng{bibnamehash}{1cddfe6f50ef16e2b13ef49b17d0596b}
+      \strng{authorbibnamehash}{1cddfe6f50ef16e2b13ef49b17d0596b}
+      \strng{authornamehash}{1cddfe6f50ef16e2b13ef49b17d0596b}
+      \strng{authorfullhash}{1cddfe6f50ef16e2b13ef49b17d0596b}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{NJ, Prentice Hall}
+      \field{number}{505-537}
+      \field{title}{Two-Dimensional Imaging, Englewood Cliffs}
+      \field{year}{1995}
     \endentry
   \enddatalist
 \endrefsection

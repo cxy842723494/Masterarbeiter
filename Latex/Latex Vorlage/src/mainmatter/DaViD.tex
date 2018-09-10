@@ -1,7 +1,7 @@
 \chapter{Optische Freiraum-Datenübertragung mittels Videodisplays und Kameras}
 
 
-Diesem Kapitel gibt einen Beschreibung über \gls{david} System. Zuerst wird eine Einführung vorgestellt. Das Systemmodell und Arbeitsprinzip des Systems werden im anschließenden Abschnitt erläutert. Schließlich folgen mögliche Anwendungsgebiete des Systems. \cite{Kays2017,Kays2016,Kays201501,Kays201502}
+Dieses Kapitel gibt eine Beschreibung über \gls{david} System. Zuerst wird dafür eine Einführung vorgestellt. Das Systemmodell und Arbeitsprinzip des Systems werden im anschließenden Abschnitt erläutert. Schließlich folgen mögliche Anwendungsgebiete des Systems. %\cite{Kays2017,Kays2016,Kays201501,Kays201502}
 
 
 
@@ -9,19 +9,22 @@ Diesem Kapitel gibt einen Beschreibung über \gls{david} System. Zuerst wird ein
 
 \section{Einführung des \gls{david}s} 
 
-\gls{david} ist ein neuartiges Verfahren zur optischen Freiraum-Datenübertragung zwischen einem Display als Sender und einem digitalen Kamera (Smartphone) als Empfänger. Ein grundlegendes Übertragungskonzept von \gls{david} wird in Abbildung \ref{fig:David1} gezeigt. Ein flaches Display, wie ein OLED- oder LCD-Bildschirm, zeigt ein Live-Video. Gleichzeitig werden die Daten hinter dem Bild auf die Pixel moduliert, während der Pixel auf dem Bild für menschliche Betrachter nahezu unsichtbar ist. Der Benutzer richtet eine hochauflösende Kamera beziehungsweise Smartphonekamera auf den Bildschirm um die Szene aufzunehmen. Durch den Smartphone Prozessor können die Signale  in Daten decodiert werden.
+\gls{david}\cite{Kays201501} ist ein neuartiges Verfahren zur optischen Freiraum-Datenübertragung zwischen einem Display als Sender und einem digitalen Kamera (Smartphone) als Empfänger. Ein grundlegendes Übertragungskonzept von \gls{david} wird in Abbildung \ref{fig:David1} gezeigt. Ein flaches Display, wie ein OLED- oder LCD-Bildschirm, zeigt ein Live-Video. Gleichzeitig werden die Daten hinter dem Bild auf die Pixel moduliert, während der Pixel auf dem Bild für menschliche Betrachter nahezu unsichtbar ist. Der Benutzer richtet eine hochauflösende Kamera beziehungsweise Smartphonekamera auf den Bildschirm um die Szene aufzunehmen. Durch den Smartphone Prozessor können die Signale  in Daten decodiert werden.
 
 \begin{figure}[htb]
  \centering 
  \includegraphics[keepaspectratio,width=0.8\textwidth]{images/2_DaViD/David1.pdf}
- \caption{Eine beispielhafte Implementierung des \gls{david}-Systems}
+ \caption{Eine beispielhafte Implementierung des \gls{david}-Systems\cite{Kays201502}}
  \label{fig:David1}
 \end{figure}
 
 
 \section{Systemmodell} 
-Das Display enthält eine große Anzahl von Pixel, die jeweils aus einer spezifischen Anordnung von Subpixel zur Darstellung des RGB-Farbraums bestehen. Jeder einzelne Frame des Videos wird durch eine Matrix von Subpixelwerten dargestellt. Das \gls{david}-System verwendet eine differentielle Modulationsmethode d.h. ein Teil der Videoinformationen wird wiederholt, sodass Daten als ein symmetrischer Manchester-Code moduliert und zu den Videosignalkomponenten hinzugefügt werden. Durch eine zeitliche Synchronisation der Empfängerseite kann die \gls{ISI} vermieden werden. Nach einer örtlichen Synchronisation mit dem modulierten Display, enthält der Empfänger ein Differenzbild. Da der Randbereich des Differenzbilds ungültig ist, wird das Gebiet durch das Verfahren dieser Arbeit beschränkt. Danach werden die überlagerten Datensequenz durch eine Reihe von Behandlungen, vom Videoinhalt getrennt. Abbildung \ref{fig:David2} zeigt die schematische Darstellung des \gls{david}-Systems. 
+Das Display enthält eine große Anzahl von Pixel, die jeweils aus einer spezifischen Anordnung von Subpixel zur Darstellung des RGB-Farbraums bestehen. Jeder einzelne Frame des Videos wird durch eine Matrix von Subpixelwerten dargestellt. Das \gls{david}-System verwendet eine differentielle Modulationsmethode d.h. die Videoinformationen wird wiederholt, sodass Daten als ein Manchester-Code moduliert und zu den Videosignalkomponenten hinzugefügt werden. Durch eine zeitliche Synchronisation der Empfängerseite kann die \gls{isi} vermieden werden. Nach einer örtlichen Synchronisation mit dem modulierten Display, enthält der Empfänger ein Differenzbild. In Anschluss kann der Modulationsbereich, der durch die optische Projektion verzerrt wird, mit Verwendung der Verfahren in dieser Arbeit wiederherzustellen. Danach werden die überlagerten Datensequenz durch eine Reihe von Behandlungen, vom Videoinhalt getrennt. Abbildung \ref{fig:David2} zeigt die schematische Darstellung des \gls{david}-Systems. 
 % Deshalb in zeitlicher oder örtlicher Richtung die Videoinhalt in paar Bildern werden gleich.
+
+
+
 \vspace{18pt}
 
 \begin{figure}[H]
@@ -42,16 +45,16 @@ Ein Modulationsverfahren, welches die Videoqualität nicht beträchtlich reduzie
 	\item Örtlich-differentielle Modulation der Chrominanz
 \end{itemize}
 
-Zeitlich-differentielle Modulationsverfahren lassen eine Reihe von Frames paarweise den gleichen Luminanz- bzw. Chrominanz-Videoinhalt anzeigen. Dagegen haben die benachbarten Pixel bei örtliche-differentielle Modulation die gleichen Videoamplituden. In dieser Arbeit wird nur zeitlich-differentielle Modulation der Chrominanz verwendet, d.h. durch Subtrahieren dieser Frames entsteht ein Datensequenz Differenzbild, welches die beiden Verfahren in dieser Arbeit darauf basiert. Abbildung \ref{fig:David3} zeigt ein Blockschaltbild einer typischen Senderimplementierung durch zeitlich-differentielle Modulation.
+Zeitlich-differentielle Modulationsverfahren lassen eine Reihe von Frames paarweise den gleichen Luminanz- bzw. Chrominanz-Videoinhalt anzeigen. Dagegen haben die benachbarten Pixel bei örtliche-differentielle Modulation die gleichen Videoamplituden. In dieser Arbeit wird nur zeitlich-differentielle Modulation der Chrominanz verwendet, d.h. durch Subtrahieren dieser Frames entsteht ein Datensequenz Differenzbild, welches die beiden Verfahren in dieser Arbeit darauf basiert. %Abbildung \ref{fig:David3} zeigt ein Blockschaltbild einer typischen Senderimplementierung durch zeitlich-differentielle Modulation.
 
-\begin{figure}[htb]
-	\centering 
-	\includegraphics[keepaspectratio,width=0.8\textwidth]{images/2_DaViD/2.pdf}
-	\caption{Blockschaltbild der Signalverarbeitung in zeitlich-differentieller Modulation}
-	\label{fig:David3}
-\end{figure}
+%\begin{figure}[htb]
+%	\centering 
+%	\includegraphics[keepaspectratio,width=0.8\textwidth]{images/2_DaViD/2.pdf}
+%	\caption{Blockschaltbild der Signalverarbeitung in zeitlich-differentieller Modulation}
+%	\label{fig:David3}
+%\end{figure}
 
-Eine Display enthält in horizontaler Richtung $N_x$ Pixel und in vertikaler Richtung $N_y$ Pixel. Ein Videoeingangssignal wird verarbeitet, um eine Anzeigeeingabe $s(i,j,k)$ auszusenden. Mit zeitlich-differentieller Modulation gleicht der Inhalt dieses Frames des darauf folgenden. Die Indizes i und j definieren die horizontale und vertikale Pixelposition auf dem Display, während k die Nummer des reproduzierten Frames ist. Indiz m symbolisiert den Zähler der Frames in einer Videosequenz. Der Amplitudenbereich des Videosignals sollte begrenzt sein um die Addition kleiner Datenamplituden A ohne Übersteuern zu ermöglichen.
+Es wird angenommen, eine Display enthält in horizontaler Richtung $N_x$ Pixel und in vertikaler Richtung $N_y$ Pixel. Ein Videoeingangssignal wird verarbeitet, um eine Anzeigeeingabe $s(i,j,k)$ auszusenden. Mit zeitlich-differentieller Modulation gleicht der Inhalt dieses Frames des darauf folgenden. Die Indizes i und j definieren die horizontale und vertikale Pixelposition auf dem Display, während k die Nummer des reproduzierten Frames ist. Indiz m symbolisiert den Zähler der Frames in einer Videosequenz. Der Amplitudenbereich des Videosignals sollte begrenzt sein um die Addition kleiner Datenamplituden A ohne Übersteuern zu ermöglichen.
 
 \begin{equation}
 \begin{split}
@@ -185,7 +188,7 @@ In dieser Arbeit ist der Datenblock quadratisch.
 \section{Anwendungsgebiete} 
 %\label{sec:Anwendungsbereiche}
 
-Die Datenübertragungsrate des \gls{david}-Systems beträgt voraussichtlich bis zu 100 Mbit/s. Es gehört zu einer Sichtlinienübertragung für kurze Strecken. Geeignete Abdeckungsbereiche hängen von der Größe des Displays und der Kameraoptik ab. Im Vergleich zu den letzten WLAN-Versionen des \gls{ieee} 802.11, erscheint die Leistung zunächst nicht attraktiv. Dieses spezielle Verfahren der Datenübertragung macht es jedoch zu einem Kandidaten für viele praktische Anwendungen. Außer den Hauptvorteilen von VLC liegt der Vorteil auch in der Option zur Wiederverwendung der bestehenden Hardware, die zum Anzeigen des Videos eingebaut wurde. Ein geeigneter praktischer Anwendungsbereich des \gls{david}-Systems ist ein öffentlicher Ort, wie eine U-Bahn-Station, ein großes Stadion und Ähnliches. Angenommen in einer Situation, wo Passanten auf eine U-Bahn warten und ihre Software mit Hilfe von Digitalen Werbetafeln aktualisieren können, indem sie ihre Kamera auf die Werbung richten.
+Die Datenübertragungsrate des \gls{david}-Systems beträgt voraussichtlich bis zu 100 Mbit/s. Es gehört zu einer Sichtlinienübertragung für kurze Strecken. Geeignete Abdeckungsbereiche hängen von der Größe des Displays und der Kameraoptik ab. Im Vergleich zu den letzten WLAN-Versionen des \gls{ieee} 802.11, erscheint die Leistung zunächst nicht attraktiv. Dieses spezielle Verfahren der Datenübertragung macht es jedoch zu einem Kandidaten für viele praktische Anwendungen. Außer den Hauptvorteilen von \gls{vlc} liegt der Vorteil auch in der Option zur Wiederverwendung der bestehenden Hardware, die zum Anzeigen des Videos eingebaut wurde. Ein geeigneter praktischer Anwendungsbereich des \gls{david}-Systems ist ein öffentlicher Ort, wie eine U-Bahn-Station, ein großes Stadion und Ähnliches. Angenommen in einer Situation, wo Passanten auf eine U-Bahn warten und ihre Software mit Hilfe von Digitalen Werbetafeln aktualisieren können, indem sie ihre Kamera auf die Werbung richten\cite{Kays201502}.
 
 Durch Berücksichtigung der Eigenschaften des \gls{david}s, z.B. Synchronisation von Anwendungen und Datenübertragung, können viele attraktive Anwendungszenarien in Betracht gezogen werden. Drei Hauptszenarien sind: 
 

@@ -7,7 +7,7 @@ In diesem Kapitel soll das zuvor implementierte Verfahren evaluiert werden. Es l
 
 Hier wird das 1. Verfahren mit zusammen mit dessen Genauigkeit und Leistunsfähigkeit evaluiert. Wie in Kapitel 3 vorgestellt, ist diese Methode häuptlich für den Fall der Aufnahme über das Smartphone aus der Hand vorgesehen. Anschließend wird eimente Bildregistrierungs Operation benötigt, um die Bilder in dasselbe Korordinatensystem zu transformieren. Die Funktion dieses Verfahrens wirkt sich direkt auf die Entstehung der Differenzbilder aus und hat einen wesentlichen Einfluss auf die spätere Erkennung. Deswegen wird zuerst eine Analyse durchgeführt.
 
-Um die Leistung intuitiv auszudrücken, lassen sich einige Startparameter setzen. Die Modulationsamplitude beträgt 6, der Datenblock ist $ 4 \times 4 Pixel$ und die QR Muster Größe ist $ 72 \times 72 Pixel $.  In der Reihe von Bilder wird das erste Bild und das letzte Bild verglichen, wie in Abbildung \ref{fig:vorregistration} zu sehen ist. 
+Um die Leistung intuitiv auszudrücken, lassen sich einige Startparameter setzen. Die Modulationsamplitude beträgt 6, der Datenblock ist $ 4 \times 4 Pixel$ und die \gls{qr} Muster Größe ist $ 72 \times 72 Pixel $.  In der Reihe von Bilder wird das erste Bild und das letzte Bild verglichen, wie in Abbildung \ref{fig:vorregistration} zu sehen ist. 
 \begin{figure}[H]
  \centering 
   \includegraphics[keepaspectratio,width=0.9\textwidth]{images/5_Implementirung/vorregistration.pdf}
@@ -85,7 +85,7 @@ Der zu detektierende Modulationsbereich durch die 1. Methode wird in Abbildung \
  \label{fig:Ergebnis1}
 \end{figure}
 
-Die Laufzeitleistung bei Verwendung vom ersten Verfahren ist in Tabelle 6.2 aufgeführt, und die entsprechenden Detektionsergebnisse sind in Abbildung 6.3 dargestellt. Der Parameter $ A9B6 $ in der Tabelle repräsentiert eine Modulationsamplitude von $ 9 $ und die Größe des Datenblocks von $ 6 \times 6 $Pixel. Alle Experimente wurden als ein Reihe von acht Bildern eingegeben. Aus der Tabelle beträgt die durchschnittliche Zeit der QR-Detektion etwa 0.07 Sekunden.
+Die Laufzeitleistung bei Verwendung vom ersten Verfahren ist in Tabelle 6.2 aufgeführt, und die entsprechenden Detektionsergebnisse sind in Abbildung 6.3 dargestellt. Der Parameter $ A9B6 $ in der Tabelle repräsentiert eine Modulationsamplitude von $ 9 $ und die Größe des Datenblocks von $ 6 \times 6 $Pixel. Alle Experimente wurden als ein Reihe von acht Bildern eingegeben. Aus der Tabelle beträgt die durchschnittliche Zeit der \gls{qr}-Detektion etwa 0.07 Sekunden.
 
 
 \renewcommand{\arraystretch}{1.5}
@@ -99,7 +99,7 @@ Die Laufzeitleistung bei Verwendung vom ersten Verfahren ist in Tabelle 6.2 aufg
     \hline
     %\multicolumn{2}{c|}{\multirow{2}{*}{Method}}&
      %\multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
-    No.&Parameter&Display&Bildregistrierung$ [s] $&Differenzbild Opt.$ [s] $&Bildverarbeitung$ [s] $&QR-Detektion$ [s] $\cr\hline
+    No.&Parameter&Display&Bildregistrierung$ [s] $&Differenzbild Opt.$ [s] $&Bildverarbeitung$ [s] $&\gls{qr}-Detektion$ [s] $\cr\hline
     \hline
     1&A9B6&ASUS&56.5812&2.0524&0.0502&0.0709\cr\hline
     2&A9B6&OLED&56.9922&2.1650&0.0489&0.0720\cr\hline
@@ -172,7 +172,7 @@ Als Nächst werden einige Ergebnisse der Verwendungen von den 2. Methode angegeb
 
 \section{Evaluierung vom zweiten Verfahren}
 
-In diesem Abschnitt wird das 2. Verfahren evaluiert. Wie in Kapitel 4 vorgestellt, ist diese Methode häuptlich für den Fall bei der Aufnahme der Bilder mit einem Smartphone auf einem Stativ. Infolgedessen wird hier die Bildregistrierungs Operation nicht mehr gebraucht. Die Gitterbilder aus dem vorherigen Abschnitt werden hier ebenfalls verwendet. Der Parameter ist eingestellt auf: Modulationsamplitude als 6, der Datenblock als $ 4 \times 4 Pixel$ und die QR Muster Größe als $ 72 \times 72 Pixel $. Die Ergebnisse nach Methode 2 sind in der Abbildung \ref{fig:Ergebnis2} dargestellt.Die berechnete durchschnittliche Abweichung beträgt 1.3468 Pixel. 
+In diesem Abschnitt wird das 2. Verfahren evaluiert. Wie in Kapitel 4 vorgestellt, ist diese Methode häuptlich für den Fall bei der Aufnahme der Bilder mit einem Smartphone auf einem Stativ. Infolgedessen wird hier die Bildregistrierungs Operation nicht mehr gebraucht. Die Gitterbilder aus dem vorherigen Abschnitt werden hier ebenfalls verwendet. Der Parameter ist eingestellt auf: Modulationsamplitude als 6, der Datenblock als $ 4 \times 4 Pixel$ und die \gls{qr} Muster Größe als $ 72 \times 72 Pixel $. Die Ergebnisse nach Methode 2 sind in der Abbildung \ref{fig:Ergebnis2} dargestellt.Die berechnete durchschnittliche Abweichung beträgt 1.3468 Pixel. 
 \begin{figure}[H]
  \centering 
   \includegraphics[keepaspectratio,width=1.00\textwidth]{images/6_Auswertung/Ergebnis2.pdf}
@@ -289,7 +289,7 @@ die Modulationsamplitude von $ 9 $ und $ B6 $ die Größe des Datenblocks von $ 
 %    \hline
 %    %\multicolumn{2}{c|}{\multirow{2}{*}{Method}}&
 %     \multicolumn{2}{|c|}{Bedingen}&\multicolumn{3}{c|}{Erstes Verfahren}&\multicolumn{3}{c|}{Zweites Verfahren}\cr\cline{1-8}
-%    Parameter&Display&Differenzbild Opt.&Bildverarbietung&QR Detektion&Differenzbild Opt.&Bildverarbietung&Radon\cr
+%    Parameter&Display&Differenzbild Opt.&Bildverarbietung&\gls{qr} Detektion&Differenzbild Opt.&Bildverarbietung&Radon\cr
 %    \hline
 %    \hline
 %    A9B6&ASUS&2.0524&0.0502&0.0709&2.1544&0.1275&0.2792\cr\hline
